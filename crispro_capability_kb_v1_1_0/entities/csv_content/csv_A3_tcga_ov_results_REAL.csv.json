@@ -1,0 +1,142 @@
+{
+  "id": "csv:A3_tcga_ov_results_REAL.csv",
+  "type": "csv_content",
+  "name": "A3_tcga_ov_results_REAL.csv",
+  "what_it_solves": "Parsed contents of A3_tcga_ov_results_REAL.csv: header + row count + column ranges.",
+  "how_it_solves": "csv.reader → header + row list; per column, if numeric ⇒ (n, min, max, mean); if categorical ⇒ top-3 values + unique count.",
+  "why_it_exists": "Deep pass: previous stream had file metadata only. This entity carries the actual data shape so downstream consumers can validate any claim about A1/A2/A3/… without re-parsing.",
+  "attributes": {
+    "header": [
+      "analysis",
+      "data_source",
+      "n_samples",
+      "wilcoxon_p",
+      "spearman_r",
+      "spearman_p",
+      "mbd4_low_median_rs",
+      "mbd4_high_median_rs",
+      "delta_median_rs",
+      "n_mbd4_deep_del",
+      "n_mbd4_mutation",
+      "verdict"
+    ],
+    "row_count": 1,
+    "sample_rows": [
+      [
+        "TCGA-OV RS score vs MBD4 expression",
+        "cBioPortal_ov_tcga_pan_can_atlas_2018_rna_seq_v2_mrna",
+        "300",
+        "0.016309426586258138",
+        "-0.1094985499838887",
+        "0.058178194974839226",
+        "0.15762886668459758",
+        "-0.02302073896474063",
+        "0.1806496056493382",
+        "0",
+        "1",
+        "MARGINAL - Wilcoxon p=0.016 but Spearman p=0.058; expression proxy limitation applies"
+      ]
+    ],
+    "column_ranges": {
+      "analysis": {
+        "categorical": true,
+        "top_values": [
+          [
+            "TCGA-OV RS score vs MBD4 expression",
+            1
+          ]
+        ],
+        "unique_count": 1
+      },
+      "data_source": {
+        "categorical": true,
+        "top_values": [
+          [
+            "cBioPortal_ov_tcga_pan_can_atlas_2018_rna_seq_v2_mrna",
+            1
+          ]
+        ],
+        "unique_count": 1
+      },
+      "n_samples": {
+        "n_numeric": 1,
+        "min": 300.0,
+        "max": 300.0,
+        "mean": 300.0
+      },
+      "wilcoxon_p": {
+        "n_numeric": 1,
+        "min": 0.016309426586258138,
+        "max": 0.016309426586258138,
+        "mean": 0.016309426586258138
+      },
+      "spearman_r": {
+        "n_numeric": 1,
+        "min": -0.1094985499838887,
+        "max": -0.1094985499838887,
+        "mean": -0.1094985499838887
+      },
+      "spearman_p": {
+        "n_numeric": 1,
+        "min": 0.058178194974839226,
+        "max": 0.058178194974839226,
+        "mean": 0.058178194974839226
+      },
+      "mbd4_low_median_rs": {
+        "n_numeric": 1,
+        "min": 0.15762886668459758,
+        "max": 0.15762886668459758,
+        "mean": 0.15762886668459758
+      },
+      "mbd4_high_median_rs": {
+        "n_numeric": 1,
+        "min": -0.02302073896474063,
+        "max": -0.02302073896474063,
+        "mean": -0.02302073896474063
+      },
+      "delta_median_rs": {
+        "n_numeric": 1,
+        "min": 0.1806496056493382,
+        "max": 0.1806496056493382,
+        "mean": 0.1806496056493382
+      },
+      "n_mbd4_deep_del": {
+        "n_numeric": 1,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      },
+      "n_mbd4_mutation": {
+        "n_numeric": 1,
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0
+      },
+      "verdict": {
+        "categorical": true,
+        "top_values": [
+          [
+            "MARGINAL - Wilcoxon p=0.016 but Spearman p=0.058; expression proxy limitation applies",
+            1
+          ]
+        ],
+        "unique_count": 1
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A3_tcga_ov_results_REAL.csv",
+      "exists": true,
+      "bytes": 465,
+      "sha256": "b06ab4c9dc72d6593961bd875daadee11de2c6aeb69b5115c23688d059011541",
+      "mtime_iso": "2026-04-25T07:23:59+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

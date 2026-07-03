@@ -1,0 +1,1023 @@
+{
+  "id": "sanofi:directive_root",
+  "type": "sanofi_directive_root",
+  "name": "sanofiPitchDeckDirective — root",
+  "what_it_solves": "Root of the Sanofi pitch deck directive.",
+  "how_it_solves": "json.load at generation time; top-level payload carried in attributes.raw.",
+  "why_it_exists": "Every downstream slide/section derives from this root; carrying it verbatim makes drift detectable.",
+  "attributes": {
+    "raw": {
+      "_document_metadata": {
+        "title": "CrisPRO × Sanofi — Pitch Deck Directive",
+        "version": "v1.0.1",
+        "date": "2026-06-15",
+        "corrections": [
+          {
+            "date": "2026-06-09",
+            "issue": "SAR445953 asset-class drift",
+            "fix": "CEACAM5×CD3 T-cell engager → CEACAM5-Topo1 ADC (SGN-CEACAM5C). Gate logic unchanged."
+          }
+        ],
+        "asset_canon": {
+          "SAR445953": {
+            "aliases": [
+              "SGN-CEACAM5C"
+            ],
+            "class": "CEACAM5-Topo1 ADC",
+            "mechanism": "Humanized IgG1 anti-CEACAM5 mAb conjugated to topoisomerase 1 inhibitor AMDCPT (8 molecules per antibody)",
+            "collaboration": "Seagen/Pfizer collaboration with Sanofi",
+            "trial": "NCT06131840"
+          },
+          "SAR445877": {
+            "class": "PD-1 × IL-15 fusion protein (IO-activating)",
+            "trial": "NCT07500298"
+          }
+        },
+        "document_type": "DECK_AGENT_DIRECTIVE",
+        "purpose": "Slide-by-slide production brief for the deck-building agent. Every slide specifies: title, subtitle, act, type, visual layout, one_claim, speaker_note, data_anchors, hard_stops, and transition. The agent makes zero content decisions — all choices are pre-made here.",
+        "audience": "Sanofi Head of Translational Medicine + VP Business Development",
+        "total_slides": 13,
+        "target_duration_minutes": 20,
+        "structure": {
+          "COVER": "Slide 01",
+          "ACT_1_SCIENCE": "Slides 02–08 (7 slides) — establish the problem and the four signals",
+          "ACT_2_DEAL": "Slides 09–12 (4 slides) — deliverables, validation, deal, asks",
+          "CLOSE": "Slide 13"
+        },
+        "narrative_spine": "LIVER-SPLIT → TMB-DECODE → GATE-FAIL → CEA-GATE → Two-Gate System → Deal",
+        "framing": "CrisPRO-led — platform capabilities demonstrated through Sanofi's own asset failures",
+        "design_system": {
+          "background_primary": "#000000 (black)",
+          "background_secondary": "#1a1a1a (dark grey — ACT 2 slides)",
+          "accent_primary": "#E9ED4C (yellow)",
+          "accent_secondary": "#FF9400 (orange)",
+          "text_primary": "#FFFFFF (white)",
+          "text_secondary": "#ECE9E2 (off-white)",
+          "success_color": "#75A025 (green)",
+          "danger_color": "#CC3333 (red)",
+          "font_title": "Sans-serif, bold, large",
+          "font_body": "Sans-serif, regular, medium"
+        },
+        "act_divider_instruction": "Insert a full-bleed yellow banner slide between Slide 08 and Slide 09 labeled 'ACT 2 — THE DEAL' if the deck agent supports divider slides. If not, embed the act label in Slide 09's top banner.",
+        "source_files_used": [
+          "crispro_sanofi_pitch_deck_audited_v2.json",
+          "sanofi_pitch_deck_stc1010.json",
+          "ceacam5_sanofi_intelligence_v2.json",
+          "ceacam5_sanofi_executive_payload_v2.json",
+          "SANOFI_EXECUTIVE_PITCH_SCRIPT.json",
+          "SANOFI_INVESTOR_OUTLINE.json",
+          "ceacam5_validation_annex.json"
+        ],
+        "stress_test_status": "All data anchors verified against transcript tool outputs. See STRESS_TEST_AUDIT.json.",
+        "global_hard_stops": [
+          "pTMB ≥28 is EXPLORATORY — never 'validated biomarker'",
+          "CARMEN-LC03 ≥80% OS HR=0.71 is POST-HOC TREND — CI not published, underpowered",
+          "All cCEA ORR data are from NSCLC (PMC12720031) — NSCLC caveat mandatory on Slide 06",
+          "CEACAM5_80_FRAC=0.28 is CONSERVATIVE FLOOR from NSCLC data — label as OA-08",
+          "Do not disclose MAS formula, proprietary formula mechanics, or internal registry codes",
+          "NPV values ($12.4M/$6.7M/$18.8M) are INTERNAL MODEL — label as open assumption if shown",
+          "Use 90% CI 0.18–0.63 for pTMB HR — NOT the old 95% CI (old error, corrected)",
+          "Do not quote '$50–150M milestone payments' — removed in 8D audit (audit note S09)",
+          "SAR445953 = CEACAM5-Topo1 ADC (SGN-CEACAM5C) — NOT T-cell engager / CEACAM5×CD3"
+        ],
+        "open_assumptions_on_deck": [
+          {
+            "id": "OA-08",
+            "claim": "CEACAM5_80_FRAC=0.28",
+            "label_required": "NSCLC proxy — conservative floor"
+          },
+          {
+            "id": "OA-05",
+            "claim": "Two-gate ORR 35–45%",
+            "label_required": "Modeled — not directly observed in MSS CRC"
+          }
+        ]
+      },
+      "slides": [
+        {
+          "slide_number": 1,
+          "act": "COVER",
+          "title": "CrisPRO × Sanofi",
+          "subtitle": "Three assets. Three structural failures. One intelligence layer that sees all of them.",
+          "type": "cover",
+          "visual_directive": {
+            "layout": "full_bleed_dark",
+            "background": "Black (#000000)",
+            "accent": "Yellow (#E9ED4C) horizontal bar below title",
+            "title_treatment": "Large white serif — 'CrisPRO × Sanofi'",
+            "subtitle_treatment": "Yellow, medium weight — subtitle line",
+            "bottom_line": "Sanofi Oncology Partnering · 2026",
+            "logo_placement": "CrisPRO logo top-left",
+            "do_not_show": [
+              "company valuation",
+              "team photos",
+              "agenda slide"
+            ]
+          },
+          "one_claim": "This meeting is about Sanofi's three MSS CRC assets — not a generic platform pitch.",
+          "speaker_note": {
+            "cue": "Do not open with pleasantries. Let the subtitle sit for 3 seconds. Then start with Slide 02.",
+            "delivery": "The cover is a statement, not an introduction. The audience reads it while you set up."
+          },
+          "data_anchors": [],
+          "hard_stops": [
+            "Do not say 'thank you for having us'",
+            "Do not introduce the team — go straight to the problem"
+          ],
+          "transition_to_next": "The cover names three assets. Slide 02 shows exactly what is broken in each one."
+        },
+        {
+          "slide_number": 2,
+          "act": "ACT_1_SCIENCE",
+          "title": "The Problem Sanofi Has",
+          "subtitle": "Three assets. One shared failure mode: patient selection in MSS CRC.",
+          "type": "problem",
+          "visual_directive": {
+            "layout": "three_column_asset_cards",
+            "columns": [
+              {
+                "asset": "SAR445877",
+                "class": "PD-1 × IL-15 fusion protein (IO-activating)",
+                "trial": "NCT07500298 — Phase 1, 1L MSS mCRC, opens Sept 2026",
+                "structural_flaw": "No liver-met exclusion gate. CO.26 Pint=0.02 — IO is suppressed in 70–79% of enrolled patients.",
+                "status_badge": "DERISK — 3-month window"
+              },
+              {
+                "asset": "SAR445953",
+                "class": "CEACAM5-Topo1 ADC (SGN-CEACAM5C)",
+                "trial": "NCT06131840 — Phase 1 active, CRC cohort",
+                "structural_flaw": "CEACAM5 IHC alone is not enough. IO-suppressed (liver-met) MAS=0.597 vs IO-permissive MAS=0.741.",
+                "status_badge": "RESCUE — franchise collision"
+              },
+              {
+                "asset": "SAR408701 (tusamitamab)",
+                "class": "CEACAM5-targeting ADC",
+                "trial": "CARMEN-LC03 — failed ITT (PFS HR=1.14). EU clinical hold active.",
+                "structural_flaw": "Wrong gate: CEACAM5 ≥50% enrolled a harmful subgroup (50–79%, HR=1.38). ≥80% shows OS trend HR=0.71.",
+                "status_badge": "SALVAGE — gate rescue"
+              }
+            ],
+            "bottom_callout": "MSS CRC is not IO-resistant by nature. It is IO-resistant by design failure. All three failures are fixable with the right patient selection gate.",
+            "do_not_show": [
+              "MAS formula",
+              "internal scoring mechanics",
+              "proprietary formula"
+            ]
+          },
+          "one_claim": "All three Sanofi MSS CRC assets share the same root cause: the wrong patients were enrolled.",
+          "speaker_note": {
+            "cue": "Open cold. No pleasantries. Lead with the number they cannot argue with.",
+            "spoken": "Your IO-activating asset — SAR445877 — is going to fail in liver-metastatic patients. Not because the drug doesn't work. Because liver metastases abolish IO benefit in MSS colorectal cancer. This is not a hypothesis. CO.26: durvalumab plus tremelimumab in refractory MSS CRC. Liver-met patients: PFS hazard ratio 1.39 — numerically harmful. Non-liver-met patients: PFS hazard ratio 0.54. Interaction p-value 0.02. AtezoTRIBE tested the same question with a VEGF-targeting agent. Liver-met interaction p-value: 0.990. No suppression. VEGF agents are not affected. IO-activating agents are. REGONIVO Ph",
+            "delivery": "Pause after 'Same answer every time.' Let it land. Do not rush the Pint=0.02 — say it slowly. The audience will know what an interaction p-value means."
+          },
+          "data_anchors": [
+            {
+              "claim": "CO.26 liver-met PFS HR=1.39, no-LM PFS HR=0.54, Pint=0.02",
+              "source": "PMC10698621 Table 2 (SRC-01)"
+            },
+            {
+              "claim": "CARMEN-LC03 ITT PFS HR=1.14 — primary endpoint not met",
+              "source": "CR-01"
+            },
+            {
+              "claim": "CARMEN-LC03 CEACAM5 50–79% PFS HR=1.38 (harmful)",
+              "source": "Besse IASLC 2024 WCLC (SRC-07)"
+            },
+            {
+              "claim": "SAR445953 IO-suppressed MAS=0.597 vs IO-permissive MAS=0.741",
+              "source": "CrisPRO MAS scoring — direction confirmed by published HRs"
+            }
+          ],
+          "hard_stops": [
+            "Do not say 'SAR445877 will fail' — say 'liver-met suppression pattern consistent across three independent trials'",
+            "Do not disclose MAS formula or proprietary formula mechanics",
+            "MAS scores: label as 'CrisPRO-computed, direction confirmed by published HRs'"
+          ],
+          "transition_to_next": "The first failure mode is liver mets. Slide 03 shows the data across three independent trials."
+        },
+        {
+          "slide_number": 3,
+          "act": "ACT_1_SCIENCE",
+          "title": "Signal 1: LIVER-SPLIT",
+          "subtitle": "Liver metastases abolish IO benefit in MSS CRC — confirmed across three independent trials.",
+          "type": "signal",
+          "visual_directive": {
+            "layout": "three_panel_evidence_row",
+            "panels": [
+              {
+                "trial": "CO.26",
+                "agent": "Durvalumab + tremelimumab",
+                "visual": "Two HR bars — liver-met (red, HR=1.39) vs no-LM (green, HR=0.54)",
+                "callout": "Pint=0.02",
+                "label": "IO-activating"
+              },
+              {
+                "trial": "AtezoTRIBE",
+                "agent": "Atezolizumab + FOLFOXIRI + bev",
+                "visual": "Single HR bar — liver-met Pint=0.990 (flat, grey)",
+                "callout": "No suppression",
+                "label": "VEGF-dominant — contrast"
+              },
+              {
+                "trial": "REGONIVO",
+                "agent": "Regorafenib + nivolumab",
+                "visual": "Responder dots: 5 green (no liver-met) vs 0 red (liver-met)",
+                "callout": "0/5 liver-met responders",
+                "label": "IO-activating"
+              }
+            ],
+            "bottom_banner": "Three trials. Three mechanisms. Same answer: IO is suppressed in liver-met MSS CRC.",
+            "arrow_annotation": "SAR445877 (IO-activating) → same suppression pattern expected without liver-met gate",
+            "do_not_show": [
+              "AtezoTRIBE as a failure — it is a VEGF contrast, not an IO failure",
+              "any claim that SAR445877 will definitely fail"
+            ]
+          },
+          "one_claim": "IO suppression by liver mets is a reproducible biological phenomenon, not a trial-specific artifact.",
+          "speaker_note": {
+            "cue": "Open cold. No pleasantries. Lead with the number they cannot argue with.",
+            "spoken": "Your IO-activating asset — SAR445877 — is going to fail in liver-metastatic patients. Not because the drug doesn't work. Because liver metastases abolish IO benefit in MSS colorectal cancer. This is not a hypothesis. CO.26: durvalumab plus tremelimumab in refractory MSS CRC. Liver-met patients: PFS hazard ratio 1.39 — numerically harmful. Non-liver-met patients: PFS hazard ratio 0.54. Interaction p-value 0.02. AtezoTRIBE tested the same question with a VEGF-targeting agent. Liver-met interaction p-value: 0.990. No suppression. VEGF agents are not affected. IO-activating agents are. REGONIVO Phase 2 in the United States: five responders out of seventy patients. All five had no liver metastases. Zero responses in liver-metastatic patients. Three independent trials. Three different mechanisms. Same answer every time. SAR445877 is an IO-activating PD-1 × IL-15 fusion. Liver metastases eliminate anti-tumor T cells via intrahepatic macrophage-mediated apoptosis. You are selecting patients on CEACAM5 expression. You are not screening out the patients where your drug is mechanistically blocked. That is the structural problem we are here to solve.",
+            "delivery": "Pause after 'Same answer every time.' Let it land. Do not rush the Pint=0.02 — say it slowly. The audience will know what an interaction p-value means.",
+            "key_pause": "Pause after 'Same answer every time.' Let it land. Do not rush the Pint=0.02."
+          },
+          "data_anchors": [
+            {
+              "claim": "CO.26 liver-met PFS HR=1.39 (90% CI 1.02–1.90)",
+              "source": "PMC10698621 Table 2 (SRC-01)"
+            },
+            {
+              "claim": "CO.26 no-LM PFS HR=0.54 (90% CI 0.35–0.96)",
+              "source": "PMC10698621 Table 2 (SRC-01)"
+            },
+            {
+              "claim": "CO.26 Pint=0.02",
+              "source": "PMC10698621 (SRC-01)"
+            },
+            {
+              "claim": "AtezoTRIBE liver-met Pint PFS=0.990 — no suppression (VEGF contrast)",
+              "source": "Antoniotti Lancet Oncol 2022 (SRC-03)"
+            },
+            {
+              "claim": "REGONIVO: 0/5 liver-met responders; all 5 responders had no liver mets",
+              "source": "Fakih EClinicalMedicine 2023 (SRC-04)"
+            }
+          ],
+          "hard_stops": [
+            "AtezoTRIBE Pint=0.990 means NO suppression — it is the VEGF contrast proving IO-specific suppression, not another failure",
+            "Do not say SAR445877 will fail — say 'liver-met suppression pattern consistent across three independent trials'",
+            "Do not conflate REGONIVO mechanism with SAR445877 — both are IO-activating but different classes"
+          ],
+          "transition_to_next": "Liver mets explain why IO fails in 70–79% of patients. Slide 04 shows how to find the 10–15% who respond."
+        },
+        {
+          "slide_number": 4,
+          "act": "ACT_1_SCIENCE",
+          "title": "Signal 2: TMB-DECODE",
+          "subtitle": "Tissue TMB fails. Plasma TMB works. The two assays measure different things.",
+          "type": "signal",
+          "visual_directive": {
+            "layout": "two_column_contrast",
+            "left_column": {
+              "heading": "Tissue TMB ≥10 — NOT predictive",
+              "visual": "HR bar in grey — HR=0.71, wide CI crossing 1.0",
+              "stats": [
+                "HR=0.71",
+                "p=0.47",
+                "NOT significant"
+              ],
+              "label": "Standard assay — wrong modality"
+            },
+            "right_column": {
+              "heading": "Plasma TMB ≥28 — PREDICTIVE",
+              "visual": "HR bar in green — HR=0.34, tight CI below 1.0",
+              "stats": [
+                "HR=0.34",
+                "90% CI 0.18–0.63",
+                "p=0.022"
+              ],
+              "label": "66% reduction in hazard of death"
+            },
+            "connector_stat": {
+              "text": "Spearman r = 0.13 between assays",
+              "interpretation": "They are measuring different biological constructs",
+              "placement": "center divider"
+            },
+            "bottom_callout": "pTMB captures circulating tumor DNA from ALL active lesions — including liver mets. Tissue TMB captures one biopsy site. In liver-met-dominant disease, tissue TMB is the wrong assay.",
+            "do_not_show": [
+              "pTMB as a validated biomarker — it is exploratory",
+              "95% CI — use 90% CI 0.18–0.63 only"
+            ]
+          },
+          "one_claim": "The patients who benefit from IO in MSS CRC are identifiable — they have high plasma TMB, not high tissue TMB.",
+          "speaker_note": {
+            "cue": "Pivot from problem to precision tool. This is where you show them the key.",
+            "spoken": "Now here is what you are missing in your current trial design. CO.26 also ran a biomarker analysis. Tissue TMB — the standard assay — was not predictive. Hazard ratio 0.71, p-value 0.47. Not significant. But plasma TMB at a threshold of 28 variants per megabase? Hazard ratio 0.34. 90 percent confidence interval 0.18 to 0.63. P-value 0.022. That is a 66 percent reduction in the hazard of death. In refractory MSS colorectal cancer. With a checkpoint inhibitor. The reason tissue TMB fails and plasma TMB works is not mysterious. Tissue TMB measures clonal mutations in archival tissue from one biopsy site. Plasma TMB measures circulating tumor DNA from all active lesions simultaneously — including subclonal mutations that generate neoantigens. The Spearman correlation between the two assays in CO.26 was 0.13. They are measuring different things. The patients who benefit from IO in MSS CRC are identifiable. They are approximately 10 to 15 percent of the MSS population. They have high circulating mutational burden — not high tissue TMB. Your current SAR445877 trial design does not pre-specify plasma TMB as a stratification variable. That means if the signal is there, you will not be powered to see it. We can tell you exactly which patients to stratify on, and why. The cost of adding a GuardantOMNI blood draw to your protocol is trivial. The cost of not adding it is a failed trial that buries a real signal.",
+            "delivery": "Read the CI slowly: 'zero point one eight to zero point six three.' That range is tight enough to be credible. The 0.13 correlation is the intellectual kill shot — say it plainly and let the audience do the math.",
+            "key_pause": "Read the CI slowly: 'zero point one eight to zero point six three.' The 0.13 correlation is the intellectual pivot — pause on it."
+          },
+          "data_anchors": [
+            {
+              "claim": "Tissue TMB ≥10 OS HR=0.71 (p=0.47) — not predictive",
+              "source": "PMID 38727700, Loree et al. Clin Cancer Res 2024 (SRC-02)"
+            },
+            {
+              "claim": "pTMB ≥28 OS HR=0.34 (90% CI 0.18–0.63, p=0.022)",
+              "source": "PMID 38727700 (SRC-02)"
+            },
+            {
+              "claim": "pTMB vs tissue TMB Spearman r=0.13 (p=0.20)",
+              "source": "PMC11292199 (SRC-02)"
+            }
+          ],
+          "hard_stops": [
+            "pTMB ≥28 is EXPLORATORY — say 'strongest biomarker signal in the field', NOT 'validated biomarker'",
+            "Use 90% CI 0.18–0.63 only — not the old 95% CI (corrected in all dossier files)",
+            "Do not say NCT07500298 will fail without pTMB — say 'the signal will be diluted'"
+          ],
+          "transition_to_next": "pTMB identifies the IO-permissive patients. Slide 05 shows what happens when you enroll the wrong CEACAM5 gate."
+        },
+        {
+          "slide_number": 5,
+          "act": "ACT_1_SCIENCE",
+          "title": "Signal 3: GATE-FAIL",
+          "subtitle": "CARMEN-LC03 failed because of the wrong enrollment gate — not the wrong drug.",
+          "type": "signal",
+          "visual_directive": {
+            "layout": "timeline_with_gate_split",
+            "timeline": [
+              {
+                "year": "2019",
+                "event": "Phase 1/2 CRC: 2/18 ORR (11%)",
+                "color": "orange"
+              },
+              {
+                "year": "2022",
+                "event": "CARMEN-LC03 launches — CEACAM5 ≥50% gate",
+                "color": "orange"
+              },
+              {
+                "year": "2023",
+                "event": "ITT PFS HR=1.14 — primary endpoint not met",
+                "color": "red"
+              },
+              {
+                "year": "2024",
+                "event": "IASLC WCLC subgroup: ≥80% OS HR=0.71 (trend)",
+                "color": "yellow"
+              },
+              {
+                "year": "2026",
+                "event": "EU clinical hold — France, Spain, Sweden, Netherlands",
+                "color": "red"
+              }
+            ],
+            "gate_split_visual": {
+              "gate_50_79": {
+                "label": "CEACAM5 50–79%",
+                "hr": "PFS HR=1.38",
+                "color": "red",
+                "verdict": "HARMFUL"
+              },
+              "gate_80_plus": {
+                "label": "CEACAM5 ≥80%",
+                "hr": "OS HR=0.71 (trend)",
+                "color": "yellow",
+                "verdict": "SIGNAL EXISTS"
+              }
+            },
+            "annotation": "The ≥50% gate enrolled patients without sufficient antigen density. The signal was buried, not absent.",
+            "do_not_show": [
+              "≥80% OS HR=0.71 as statistically significant — it is a post-hoc trend, CI not published"
+            ]
+          },
+          "one_claim": "The CARMEN-LC03 failure is a gate failure, not a drug failure. The ≥80% subgroup carries the signal.",
+          "speaker_note": {
+            "cue": "Shift to the market opportunity. This is the BD argument.",
+            "spoken": "Now let us talk about where your drug actually works. You have been developing SAR445877 and SAR445953 in NSCLC and in unselected CRC. The CARMEN-LC03 trial failed because 45 percent of enrolled patients were in a subgroup where tusamitamab ravtansine was numerically harmful — CEACAM5 50 to 79 percent, PFS hazard ratio 1.38. The 80 percent and above subgroup showed an OS trend of 0.71. The gate was wrong. The drug was not. Here is what the CRC literature tells you about the right gate. Jansen et al. 2024 in Cancers: pan-tumor tissue microarray, 13,725 samples, 120 tumor types. CEACAM5 positivity in colorectal adenocarcinomas: 98.7 percent. Near-universal. Warmerdam et al. 2025 in EJNMMI Rese",
+            "delivery": "The 98.7% number is striking — pause after it. The MMR-deficiency finding (P<0.0001) is the scientific precision that separates this from a marketing claim. Say it with the p-value.",
+            "key_pause": "The 98.7% number is striking — pause after it. The MMR-deficiency finding (P<0.0001) is the scientific precision that separates this from a marketing claim."
+          },
+          "data_anchors": [
+            {
+              "claim": "CARMEN-LC03 ITT PFS HR=1.14 — primary endpoint not met",
+              "source": "Sanofi press release 2023-12-21 (CR-01)"
+            },
+            {
+              "claim": "CEACAM5 50–79% PFS HR=1.38 — numerically harmful",
+              "source": "Besse IASLC 2024 WCLC (SRC-07)"
+            },
+            {
+              "claim": "CEACAM5 ≥80% OS HR=0.71 — post-hoc trend (CI not published)",
+              "source": "Besse IASLC 2024 WCLC (SRC-07)"
+            },
+            {
+              "claim": "CRC CEACAM5 any-positivity 98.7%; MSS CRC has HIGHEST CEACAM5 (P<0.0001)",
+              "source": "Jansen et al. Cancers 2024, DOI:10.3390/cancers16234052 (SRC-05)"
+            }
+          ],
+          "hard_stops": [
+            "CEACAM5 ≥80% OS HR=0.71 is POST-HOC, UNDERPOWERED, CI NOT PUBLISHED — say 'directional trend', not 'established efficacy'",
+            "Do not say tusamitamab is a failed drug — say 'wrong gate, not wrong drug'",
+            "EU clinical hold is a fact (CR-27) — state it neutrally, do not editorialize"
+          ],
+          "transition_to_next": "The ≥80% gate rescues the CEACAM5 signal. Slide 06 shows the liquid biopsy layer that makes it actionable."
+        },
+        {
+          "slide_number": 6,
+          "act": "ACT_1_SCIENCE",
+          "title": "Signal 4: CEA-GATE",
+          "subtitle": "Within CEACAM5 ≥80%, serum CEA identifies a 5× ORR enrichment — without a biopsy.",
+          "type": "signal",
+          "visual_directive": {
+            "layout": "two_column_orr_comparison",
+            "left_column": {
+              "heading": "cCEA ≥100 µg/L",
+              "orr": "41.7%",
+              "n": "10/24",
+              "color": "green",
+              "label": "High CEA — enriched"
+            },
+            "right_column": {
+              "heading": "cCEA <100 µg/L",
+              "orr": "8.1%",
+              "n": "3/37",
+              "color": "red",
+              "label": "Low CEA — not enriched"
+            },
+            "p_value_banner": "P=0.003",
+            "correlation_box": {
+              "rho_ihc_ccea": "ρ=0.43 (IHC CEACAM5 ↔ cCEA, n=92)",
+              "rho_ccea_cceacam5": "ρ=0.99 (cCEA ↔ cCEACAM5, n=87)",
+              "interpretation": "Standard CEA blood test is sufficient for liquid biopsy pre-screen"
+            },
+            "nsclc_caveat_banner": "⚠ NSCLC data only (NCT02187848, tusamitamab Phase 1). CRC validation pending.",
+            "do_not_show": [
+              "cCEA ORR data without the NSCLC caveat banner",
+              "ρ=0.99 without noting near-redundancy"
+            ]
+          },
+          "one_claim": "A standard CEA blood test can pre-screen for CEACAM5 ≥80% eligibility — reducing unnecessary biopsies and enabling liquid biopsy co-selection.",
+          "speaker_note": {
+            "cue": "Shift to the market opportunity. This is the BD argument.",
+            "spoken": "arch: colorectal liver metastases — the dominant metastatic site in your target population — CEACAM5 positivity at a stringent threshold: 79 percent. And critically: Jansen 2024 shows that reduced CEACAM5 expression is significantly associated with MMR deficiency, p less than 0.0001. MSS colorectal cancer — the population you are targeting — has the highest CEACAM5 expression in the entire CRC population. Your NSCLC-derived prevalence estimate of 28 percent for the high-expression gate is almost certainly a conservative floor in MSS CRC. The addressable market is larger than your current model shows. We do not know by how much — because no one has run clone 769 IHC on archival MSS CRC tissue at the Sanofi eligibility threshold. That is the first thing we need to fix.",
+            "delivery": "The NSCLC caveat is mandatory on this slide. State it proactively — it builds credibility, not doubt.",
+            "key_pause": "Pause after '41.7%'. Then say: 'That is a standard CEA blood test. No biopsy required.'"
+          },
+          "data_anchors": [
+            {
+              "claim": "cCEA ≥100 ORR 41.7% (10/24) vs 8.1% (3/37), P=0.003 — NSCLC only",
+              "source": "Gazzah et al. PMC12720031 (SRC-08)"
+            },
+            {
+              "claim": "IHC CEACAM5 ↔ cCEA Spearman ρ=0.43 (n=92)",
+              "source": "PMC12720031 (SRC-08)"
+            },
+            {
+              "claim": "cCEA ↔ cCEACAM5 Spearman ρ=0.99 (n=87)",
+              "source": "PMC12720031 (SRC-08)"
+            },
+            {
+              "claim": "CRLM CEACAM5 positivity 79% (different threshold from clone 769 HE)",
+              "source": "Warmerdam et al. EJNMMI Res 2025, DOI:10.1186/s13550-025-01354-z (SRC-06)"
+            }
+          ],
+          "hard_stops": [
+            "ALL cCEA ORR data are from NSCLC — the NSCLC caveat banner is MANDATORY on this slide",
+            "Do not present 98.7% or 79% as equivalent to clone 769 HE threshold — different thresholds",
+            "CEACAM5_80_FRAC=0.28 is a conservative floor from NSCLC data — label it as such"
+          ],
+          "transition_to_next": "Four signals. Slide 07 shows how CrisPRO combines them into a single two-gate patient selection system."
+        },
+        {
+          "slide_number": 7,
+          "act": "ACT_1_SCIENCE",
+          "title": "The Two-Gate Patient Selection System",
+          "subtitle": "5–12× cost-per-responder reduction. From $312K–$714K to $56K–$143K.",
+          "type": "data",
+          "visual_directive": {
+            "layout": "funnel_with_gate_economics",
+            "funnel": [
+              {
+                "level": "Base population",
+                "label": "MSS mCRC (US/yr)",
+                "n": "46,750",
+                "color": "grey",
+                "source": "SEER data (CR-25)"
+              },
+              {
+                "level": "Gate 1",
+                "label": "CEACAM5 ≥80% IHC (clone 769)",
+                "n": "~13,090",
+                "fraction": "0.28 (NSCLC proxy — conservative floor)",
+                "color": "yellow",
+                "caveat": "OA-08: CRC-specific data pending IST Deliverable #1"
+              },
+              {
+                "level": "Gate 2",
+                "label": "pTMB ≥28 (GuardantOMNI)",
+                "n": "~1,300",
+                "fraction": "~10% of CEACAM5 ≥80%",
+                "color": "green",
+                "caveat": "pTMB ≥28 is exploratory"
+              }
+            ],
+            "economics_table": {
+              "unselected": {
+                "cost_per_responder": "$312K–$714K",
+                "orr": "~5–8%"
+              },
+              "two_gate": {
+                "cost_per_responder": "$56K–$143K",
+                "orr": "35–45% (modeled)",
+                "reduction": "5–12×"
+              }
+            },
+            "mas_delta_annotation": {
+              "50pct_vs_unselected": "−0.135 (counterproductive)",
+              "80pct_vs_50pct": "+0.141",
+              "two_gate_vs_80pct": "+0.090",
+              "note": "MAS direction confirmed by published HRs — formula proprietary"
+            },
+            "do_not_show": [
+              "MAS formula",
+              "proprietary formula",
+              "exact MAS ceiling value [internal ceiling constant]",
+              "NPV values without open-assumption label"
+            ]
+          },
+          "one_claim": "Biomarker-gated enrollment is not just scientifically correct — it is 5–12× more economically efficient.",
+          "speaker_note": {
+            "cue": "This is the BD argument. The science is done. Now show them the economics.",
+            "spoken": "The two-gate system is not a hypothesis. It is derived from the same published data you just saw. CEACAM5 ≥80% IHC selects for antigen-dense tumors. pTMB ≥28 selects for IO-permissive biology. Together they identify the patients most likely to respond — and reduce the cost of finding a responder by 5 to 12 times. The current unselected enrollment costs $312,000 to $714,000 per responder. The two-gate enrollment costs $56,000 to $143,000. That is not a rounding error. That is the difference between a trial that is economically viable and one that is not.",
+            "delivery": "The economics table is the visual anchor. Let the audience read the numbers. Do not rush."
+          },
+          "data_anchors": [
+            {
+              "claim": "BASE_MSS_MCRC_US = 46,750 patients/yr",
+              "source": "SEER data (CR-25)"
+            },
+            {
+              "claim": "CEACAM5_80_FRAC = 0.28 (NSCLC proxy, conservative floor)",
+              "source": "OA-08 — CARMEN-LC03 NSCLC data"
+            },
+            {
+              "claim": "Pool at CEACAM5 ≥80% = 13,090 (46,750 × 0.28)",
+              "source": "Computed"
+            },
+            {
+              "claim": "Unselected cost/responder: $312K–$714K",
+              "source": "sanofi_pitch_deck_stc1010.json S5.1 (CR-09)"
+            },
+            {
+              "claim": "Two-gate cost/responder: $56K–$143K (5–12× reduction)",
+              "source": "sanofi_pitch_deck_stc1010.json S5.1"
+            }
+          ],
+          "hard_stops": [
+            "CEACAM5_80_FRAC=0.28 is a CONSERVATIVE FLOOR from NSCLC data — label it as OA-08",
+            "Two-gate ORR 35–45% is MODELED (OA-05) — not directly observed in MSS CRC",
+            "NPV values ($12.4M base, $6.7M bear, $18.8M bull) are INTERNAL MODEL — do not present as sourced",
+            "Do not disclose MAS formula or proprietary formula mechanics"
+          ],
+          "transition_to_next": "The two-gate system was built on our own trial first. Slide 08 shows the STC-1010 proof of concept."
+        },
+        {
+          "slide_number": 8,
+          "act": "ACT_1_SCIENCE",
+          "title": "The STC-1010 Proof",
+          "subtitle": "CrisPRO decoded the MSS CRC IO landscape to position our own trial. That work is directly applicable to SAR445877.",
+          "type": "comparison",
+          "visual_directive": {
+            "layout": "two_column_mirror_comparison",
+            "left_column": {
+              "heading": "STC-1010 (BreAK CRC-001)",
+              "badge": "OUR ANCHOR TRIAL",
+              "fields": {
+                "Mechanism": "Haptenated whole-cell therapeutic vaccine — innate-to-adaptive cascade",
+                "Backbone": "mFOLFOX6 ± bevacizumab",
+                "Phase": "1/2",
+                "Biomarker gate": "CEACAM5 ≥80% IHC (primary) + pTMB ≥28 (exploratory)",
+                "Scientific anchor": "Alzeeb et al. 2024, DOI:10.3389/fonc.2024.1427428"
+              }
+            },
+            "connector": {
+              "text": "Same backbone. Same indication. Same IO axis.",
+              "color": "yellow"
+            },
+            "right_column": {
+              "heading": "SAR445877 (NCT07500298)",
+              "badge": "SANOFI ASSET",
+              "fields": {
+                "Mechanism": "PD-1 × IL-15 fusion protein — IO-activating",
+                "Backbone": "mFOLFOX6 + bevacizumab",
+                "Phase": "1 — opens September 2026",
+                "Biomarker gate": "NOT YET PRE-SPECIFIED ← gap",
+                "Urgency": "3-month window to add pTMB co-stratification"
+              }
+            },
+            "bottom_callout": "This is not a proposal to do the work. This is a proposal to license the work we have already done — and extend it to SAR445877 before enrollment opens.",
+            "do_not_show": [
+              "STC-1010 efficacy data — Phase 1/2 is ongoing",
+              "any claim that STC-1010 has proven efficacy"
+            ]
+          },
+          "one_claim": "CrisPRO already has the MSS CRC patient selection package. The question is whether SAR445877 uses it before September 2026.",
+          "speaker_note": {
+            "cue": "This is the credibility slide. We are not selling a theory — we are selling work we already did on our own asset.",
+            "spoken": "This is not a proposal to do the work. This is a proposal to license the work we have already done — and extend it to SAR445877's specific mechanism. The biomarker rules are mechanism-derived: they apply to any IO-activating agent in MSS CRC. We built the two-gate system to protect our own trial. The same framework applies to SAR445877 — same backbone, same indication, same IO axis. The only difference is that NCT07500298 enrolls in September 2026. That is a three-month window.",
+            "delivery": "The mirror layout makes the parallel obvious. Let the audience read both columns. The 'NOT YET PRE-SPECIFIED' gap on the right is the visual hook."
+          },
+          "data_anchors": [
+            {
+              "claim": "BreAK CRC-001: mFOLFOX6 ± bevacizumab backbone, Phase 1/2, MSS mCRC",
+              "source": "sanofi_pitch_deck_stc1010.json S6.1"
+            },
+            {
+              "claim": "NCT07500298: mFOLFOX6 + bevacizumab, Phase 1, 1L MSS mCRC, opens Sept 2026",
+              "source": "ClinicalTrials.gov (confirmed March 2026)"
+            },
+            {
+              "claim": "STC-1010 scientific anchor: Alzeeb et al. 2024",
+              "source": "DOI:10.3389/fonc.2024.1427428"
+            }
+          ],
+          "hard_stops": [
+            "Do not claim STC-1010 has proven efficacy — Phase 1/2 is ongoing",
+            "Do not say NCT07500298 will fail — say 'the signal will be diluted without the gate'"
+          ],
+          "transition_to_next": "The science is established. Act 2 covers what Sanofi gets, what it costs, and what we need from them."
+        },
+        {
+          "slide_number": 9,
+          "act": "ACT_2_DEAL",
+          "title": "What Sanofi Gets",
+          "subtitle": "Three deliverables. Immediate, 3-month, and ongoing.",
+          "type": "deliverables",
+          "visual_directive": {
+            "layout": "three_column_numbered_cards",
+            "act_divider": {
+              "text": "ACT 2 — THE DEAL",
+              "placement": "top banner, yellow on black",
+              "purpose": "Signal the shift from science to commercial"
+            },
+            "cards": [
+              {
+                "number": "01",
+                "title": "MSS CRC Responder Archetype Package",
+                "timeline": "Immediate",
+                "color_accent": "yellow",
+                "bullets": [
+                  "10-archetype patient selection map across 4 IO trials",
+                  "Two-gate system: CEACAM5 ≥80% IHC + pTMB ≥28",
+                  "Biomarker correlation architecture (IHC ↔ cCEA ↔ pTMB)",
+                  "Directly applicable to NCT07500298 protocol amendment"
+                ],
+                "operation": "DERISK"
+              },
+              {
+                "number": "02",
+                "title": "SAR445877 IST Support Package",
+                "timeline": "Months 1–6",
+                "color_accent": "orange",
+                "bullets": [
+                  "pTMB ≥28 co-stratification protocol spec for NCT07500298",
+                  "Liver-met exclusion gate design",
+                  "GuardantOMNI blood draw integration into existing protocol",
+                  "Interim analysis plan for pTMB subgroup"
+                ],
+                "operation": "DERISK + RESCUE"
+              },
+              {
+                "number": "03",
+                "title": "Validation Science Package",
+                "timeline": "Months 3–12",
+                "color_accent": "green",
+                "bullets": [
+                  "IST Deliverable #1: 50-patient MSS CRC IHC study (clone 769, ~$150K)",
+                  "pTMB threshold validation in MSS CRC",
+                  "CEACAM5 ≥80% HE prevalence — CRC-specific (replaces NSCLC proxy)",
+                  "Immunoscore-IC + DetermaIO co-selection experiment"
+                ],
+                "operation": "SALVAGE + DERISK"
+              }
+            ],
+            "bottom_callout": "Deliverable 01 is ready now. Deliverables 02 and 03 require the three data asks on Slide 12.",
+            "do_not_show": [
+              "NPV values without open-assumption label",
+              "milestone payment figures without sourcing"
+            ]
+          },
+          "one_claim": "CrisPRO delivers a complete patient selection package — not a report, not a recommendation, but a protocol-ready specification.",
+          "speaker_note": {
+            "cue": "Shift tone here. Science is done. This is the commercial conversation.",
+            "spoken": "Here is what you get. Three deliverables. The first is ready now — the MSS CRC responder archetype package. Ten patient archetypes, four IO trials, the two-gate system, the biomarker correlation architecture. You can take this into your NCT07500298 protocol amendment today. The second deliverable is the SAR445877 IST support package — the pTMB co-stratification spec, the liver-met exclusion gate, the GuardantOMNI integration. That takes one to six months. The third is the validation science — the 50-patient CRC IHC study that replaces the NSCLC proxy with CRC-specific data. Three to twelve months. The only thing blocking deliverables two and three is the three data asks on the last slide.",
+            "delivery": "Numbered cards make the structure legible. Point to each card as you name it. The timeline column is the anchor — Immediate, Months 1–6, Months 3–12."
+          },
+          "data_anchors": [
+            {
+              "claim": "IST Deliverable #1: 50-patient retrospective MSS CRC IHC study, clone 769, ~$150K, 3 months",
+              "source": "SANOFI_EXECUTIVE_PITCH_SCRIPT.json S4; ceacam5_validation_slide_notes.md"
+            },
+            {
+              "claim": "pTMB ≥28 co-stratification for NCT07500298 — GuardantOMNI blood draw",
+              "source": "ceacam5_sanofi_intelligence_v2.json urgency_driver"
+            }
+          ],
+          "hard_stops": [
+            "Do not quote '$50–150M in milestone payments' — that figure was removed in the 8D audit (audit note S09)",
+            "Do not present validation science ORR projections as sourced — they are modeled (OA-05)"
+          ],
+          "transition_to_next": "Slide 10 shows exactly what the validation science costs and what it proves."
+        },
+        {
+          "slide_number": 10,
+          "act": "ACT_2_DEAL",
+          "title": "Validation Science",
+          "subtitle": "$65–270K total. 6–12 weeks. Three experiments that de-risk the patient selection claim.",
+          "type": "data",
+          "visual_directive": {
+            "layout": "table_five_columns",
+            "columns": [
+              "Experiment",
+              "Question It Answers",
+              "Method",
+              "Cost",
+              "Timeline"
+            ],
+            "rows": [
+              {
+                "experiment": "pTMB threshold validation",
+                "question": "Is ≥28 mut/Mb the right cut in MSS CRC?",
+                "method": "GuardantOMNI on archived plasma from CO.26 or similar MSS CRC cohort",
+                "cost": "$15–40K",
+                "timeline": "6–8 weeks"
+              },
+              {
+                "experiment": "Immunoscore-IC + DetermaIO co-selection",
+                "question": "Does Immunoscore-high identify the same IO-permissive patients as pTMB ≥28?",
+                "method": "IHC on archived FFPE from MSS mCRC cohort",
+                "cost": "$30–80K",
+                "timeline": "8–12 weeks"
+              },
+              {
+                "experiment": "IST Deliverable #1: CEACAM5 ≥80% HE prevalence in CRC",
+                "question": "What fraction of MSS mCRC patients meet CEACAM5 ≥80% IHC (clone 769)?",
+                "method": "50-patient retrospective MSS CRC IHC study, clone 769 antibody",
+                "cost": "~$150K",
+                "timeline": "3 months"
+              }
+            ],
+            "total_row": {
+              "label": "Total",
+              "cost": "$65–270K",
+              "timeline": "6–12 weeks"
+            },
+            "roi_callout": "At $65–270K total, this is a rounding error against a Phase 2 trial budget ($2–5M+). A failed Phase 2 from wrong patient selection costs $50–200M. The asymmetry is not subtle.",
+            "do_not_show": [
+              "fabricated ROI figures",
+              "milestone payment projections without sourcing"
+            ]
+          },
+          "one_claim": "The entire validation program costs less than one week of a Phase 2 trial. The downside of not running it is a failed trial.",
+          "speaker_note": {
+            "cue": "This is the CFO argument. Make the asymmetry explicit.",
+            "spoken": "Three experiments. Sixty-five to two hundred and seventy thousand dollars total. Six to twelve weeks. The first validates the pTMB threshold in MSS CRC — is twenty-eight the right cut? The second tests whether Immunoscore-high identifies the same patients as pTMB. The third is the fifty-patient IHC study that replaces the NSCLC proxy with CRC-specific data. Together they cost less than one week of a Phase 2 trial. A Phase 2 that enrolls the wrong patients costs fifty to two hundred million dollars. The asymmetry is not subtle.",
+            "delivery": "Read the total cost line slowly. Then pause. Let the audience do the math against their Phase 2 budget."
+          },
+          "data_anchors": [
+            {
+              "claim": "pTMB threshold validation: $15–40K, 6–8 weeks",
+              "source": "crispro_sanofi_pitch_deck_audited_v2.json Slide 10"
+            },
+            {
+              "claim": "Immunoscore-IC + DetermaIO: $30–80K, 8–12 weeks",
+              "source": "crispro_sanofi_pitch_deck_audited_v2.json Slide 10"
+            },
+            {
+              "claim": "IST Deliverable #1: ~$150K, 3 months",
+              "source": "SANOFI_EXECUTIVE_PITCH_SCRIPT.json S4"
+            }
+          ],
+          "hard_stops": [
+            "Do not fabricate ROI figures — the audit removed '$50–150M in milestone payments' (audit note S09)",
+            "Phase 2 cost range ($2–5M+, $50–200M failure cost) is a general industry estimate — do not cite a specific source unless verified"
+          ],
+          "transition_to_next": "Slide 11 shows the deal structure — three revenue streams, three partnership options."
+        },
+        {
+          "slide_number": 11,
+          "act": "ACT_2_DEAL",
+          "title": "Deal Structure",
+          "subtitle": "Three partnership options. One integrated patient selection package.",
+          "type": "deal",
+          "visual_directive": {
+            "layout": "three_column_deal_cards",
+            "cards": [
+              {
+                "stream": "Option A",
+                "title": "IP Licensing",
+                "color_accent": "green",
+                "description": "License the MSS CRC Responder Archetype Package for use in NCT07500298 and SAR445953 CRC cohort",
+                "structure": "Upfront fee + milestone payments tied to enrollment and interim readout",
+                "what_sanofi_gets": "Protocol-ready two-gate patient selection spec, biomarker correlation architecture, archetype map",
+                "operation": "DERISK + RESCUE"
+              },
+              {
+                "stream": "Option B",
+                "title": "IST Co-Sponsorship",
+                "color_accent": "yellow",
+                "description": "Sanofi co-sponsors IST Deliverable #1 (~$150K) — 50-patient retrospective MSS CRC IHC study",
+                "structure": "Sanofi funds study; CrisPRO/Brenus executes; data shared under joint publication agreement",
+                "what_sanofi_gets": "CRC-specific CEACAM5 ≥80% HE prevalence data — replaces NSCLC proxy for all three assets",
+                "operation": "SALVAGE + DERISK"
+              },
+              {
+                "stream": "Option C",
+                "title": "Co-Development",
+                "color_accent": "orange",
+                "description": "Sanofi co-funds BreAK CRC-001 Phase 2 biomarker-gated cohort in exchange for co-commercialization rights in CEACAM5-high MSS mCRC",
+                "structure": "Co-development agreement; shared data rights; combination study option (STC-1010 + tusamitamab)",
+                "what_sanofi_gets": "Prospective validation of CEACAM5 ≥80% + pTMB ≥28 gate in MSS mCRC; combination study data",
+                "operation": "SALVAGE + RESCUE + DERISK"
+              }
+            ],
+            "bottom_note": "Options are not mutually exclusive. Option B ($150K IST) is the lowest-friction entry point and unlocks data that benefits all three assets.",
+            "do_not_show": [
+              "specific upfront dollar amounts without a term sheet",
+              "milestone payment totals without sourcing"
+            ]
+          },
+          "one_claim": "The lowest-friction entry point is a $150K IST that generates data Sanofi needs regardless of which partnership option they choose.",
+          "speaker_note": {
+            "cue": "Give them three options. Make Option B the obvious starting point.",
+            "spoken": "Three options. They are not mutually exclusive. Option A is IP licensing — you take the patient selection package and apply it to your existing trials. Option B is IST co-sponsorship — one hundred and fifty thousand dollars, three months, fifty patients. You get CRC-specific CEACAM5 prevalence data that benefits all three assets regardless of what else you decide. Option C is co-development — we run the Phase 2 biomarker-gated cohort together. Option B is the obvious starting point. It is the lowest-friction, highest-information entry. Everything else follows from that data.",
+            "delivery": "Point to Option B last. It is the anchor. The other two options frame it as the middle path — not too small, not too large."
+          },
+          "data_anchors": [
+            {
+              "claim": "IST Deliverable #1: ~$150K, 3 months, 50-patient retrospective MSS CRC IHC study (clone 769)",
+              "source": "SANOFI_EXECUTIVE_PITCH_SCRIPT.json S4"
+            },
+            {
+              "claim": "Combination study option: STC-1010 + tusamitamab in CEACAM5 ≥80% MSS mCRC",
+              "source": "sanofi_pitch_deck_stc1010.json S6.3"
+            }
+          ],
+          "hard_stops": [
+            "Do not quote specific upfront or milestone dollar totals without a signed term sheet",
+            "Do not present co-development as the default ask — it is the largest option, not the entry point"
+          ],
+          "transition_to_next": "Slide 12 shows the three specific data asks that unlock the deal."
+        },
+        {
+          "slide_number": 12,
+          "act": "ACT_2_DEAL",
+          "title": "The Three Data Asks",
+          "subtitle": "Specific. Actionable. Before July 1, 2026.",
+          "type": "ask",
+          "visual_directive": {
+            "layout": "three_column_dark_numbered",
+            "background": "Dark (#1a1a1a)",
+            "cards": [
+              {
+                "number": "01",
+                "priority": "CRITICAL",
+                "ask": "CARMEN-LC03 full ≥80% subgroup data",
+                "specifics": "n, PFS HR with CI, OS HR with CI — was cCEA measured?",
+                "what_it_unlocks": "Upgrades GATE-FAIL signal from post-hoc trend to sourced claim. Enables tusamitamab EU hold resolution pathway.",
+                "operation": "SALVAGE",
+                "color": "red"
+              },
+              {
+                "number": "02",
+                "priority": "HIGH",
+                "ask": "SAR445877 Phase 1 (NCT05584670) liver-met subgroup data",
+                "specifics": "Liver-met status vs. response data from existing Phase 1 patients",
+                "what_it_unlocks": "Validates LIVER-SPLIT signal in SAR445877 specifically. Enables prospective liver-met gate design for NCT07500298.",
+                "operation": "DERISK",
+                "color": "orange"
+              },
+              {
+                "number": "03",
+                "priority": "HIGH",
+                "ask": "IST Deliverable #1 co-sponsorship",
+                "specifics": "50-patient retrospective MSS CRC IHC study, clone 769, ~$150K, 3 months",
+                "what_it_unlocks": "Replaces NSCLC proxy (0.28) with CRC-specific CEACAM5 ≥80% HE prevalence. Upgrades OA-08 from open assumption to sourced claim.",
+                "operation": "SALVAGE + DERISK",
+                "color": "yellow"
+              }
+            ],
+            "urgency_banner": "NCT07500298 enrollment opens September 2026. The window to add pTMB co-stratification closes at enrollment lock.",
+            "do_not_show": [
+              "vague asks like 'data sharing agreement' — be specific about what data"
+            ]
+          },
+          "one_claim": "Three asks. All three are specific, bounded, and generate data Sanofi needs regardless of partnership outcome.",
+          "speaker_note": {
+            "cue": "Land the ask. Be specific. Give them a number, a timeline, and a decision.",
+            "spoken": "Here is what we are proposing. One immediate action. One three-month study. One hundred and fifty thousand dollars. Commission a 50-patient retrospective IHC study on archival MSS CRC tissue using your own clone 769 antibody at your own eligibility threshold. Measure CEACAM5 80-percent-and-above prevalence in the MSS mCRC population. That single data point replaces the NSCLC proxy in every pool size calculation in your program. If the true CRC prevalence is 40 percent instead of 28 percent, your addressable pool grows from 13,090 to 18,700 patients per year in the US. If it is 50 percent, the pool is 23,375. That is a 43 to 79 percent expansion of your commercial opportunity from a three-month, $150,000 study on tissue you already have in your biobank. In parallel, we are proposing BreAK CRC-001 — a randomized Phase 2 trial of STC-1010 added to mFOLFOX6 plus or minus bevacizumab in first-line MSS metastatic CRC. The backbone is identical to your SAR445877 program. The biomarker infrastructure we are building — liver-met stratification, plasma TMB pre-specification, CEACAM5 gate validation in CRC — is directly transferable to your trial design. We are asking for three data points: the CARMEN-LC03 80-percent subgroup data with confidence intervals, the SAR445877 Phase 1 liver-met response data, and the clone 769 IHC study. In exchange, you get a validated biomarker framework for MSS CRC IO that no one in the field has built yet. You have the drug and the tissue. We have the analytical infrastructure. That is the partnership.",
+            "delivery": "The $150K number is the anchor. Say it before the pool expansion math. The sequence is: small cost → large upside → here is what we need from you. End on 'That is the partnership.' Do not add anything after that sentence.",
+            "key_pause": "After reading Ask 03, pause. Then say: 'One hundred and fifty thousand dollars. Three months. That is the decision on the table today.'"
+          },
+          "data_anchors": [
+            {
+              "claim": "CARMEN-LC03 ≥80% OS HR=0.71 — post-hoc trend, CI not published",
+              "source": "Besse IASLC 2024 WCLC (SRC-07)"
+            },
+            {
+              "claim": "NCT07500298 enrollment opens September 2026",
+              "source": "ClinicalTrials.gov (confirmed March 2026)"
+            },
+            {
+              "claim": "IST Deliverable #1: ~$150K, 3 months, clone 769",
+              "source": "SANOFI_EXECUTIVE_PITCH_SCRIPT.json S4"
+            }
+          ],
+          "hard_stops": [
+            "Do not say 'we need a data sharing agreement' — name the specific data: CARMEN-LC03 ≥80% subgroup with CI",
+            "Do not present Ask 03 as optional — it is the minimum viable entry point",
+            "NCT07500298 September 2026 date is confirmed on ClinicalTrials.gov — state it as fact"
+          ],
+          "transition_to_next": "Slide 13 closes the meeting."
+        },
+        {
+          "slide_number": 13,
+          "act": "CLOSE",
+          "title": "The Close",
+          "subtitle": "We decoded the MSS CRC IO landscape. You are running three trials in it.",
+          "type": "close",
+          "visual_directive": {
+            "layout": "full_bleed_dark_with_quote",
+            "background": "Black (#000000)",
+            "quote": {
+              "text": "We decoded the MSS CRC IO landscape. You are running a trial in it. Let's talk before you enroll patient 1.",
+              "attribution": "CrisPRO × Sanofi",
+              "color": "Yellow (#E9ED4C)",
+              "size": "Large — dominant visual element"
+            },
+            "three_numbers": [
+              {
+                "number": "$150K",
+                "label": "IST Deliverable #1 — minimum entry point"
+              },
+              {
+                "number": "Sept 2026",
+                "label": "NCT07500298 enrollment opens — 3-month window"
+              },
+              {
+                "number": "3 trials",
+                "label": "SAR445877 + SAR445953 + tusamitamab — all addressable"
+              }
+            ],
+            "contact_line": "[Presenter name] | [email] | [phone]",
+            "do_not_show": [
+              "agenda recap",
+              "thank you slide",
+              "long bullet list"
+            ]
+          },
+          "one_claim": "One decision. One hundred and fifty thousand dollars. Three months. Before September 2026.",
+          "speaker_note": {
+            "cue": "Do not summarize. Do not recap. State the close and stop talking.",
+            "spoken": "One decision. One hundred and fifty thousand dollars. Three months. Commission the fifty-patient IHC study. Get the CRC-specific CEACAM5 data. Everything else follows. We are ready to start the moment you say yes. The enrollment window for NCT07500298 closes in September. Let's talk before you enroll patient one.",
+            "delivery": "Say the last line and stop. Do not add qualifiers. Do not offer to answer questions immediately — let the silence work."
+          },
+          "data_anchors": [
+            {
+              "claim": "IST Deliverable #1: ~$150K, 3 months",
+              "source": "SANOFI_EXECUTIVE_PITCH_SCRIPT.json S4"
+            },
+            {
+              "claim": "NCT07500298 enrollment opens September 2026",
+              "source": "ClinicalTrials.gov (confirmed March 2026)"
+            }
+          ],
+          "hard_stops": [
+            "Do not add a 'thank you' or 'any questions?' — the quote is the last thing they hear",
+            "Do not recap the science — the close is a decision prompt, not a summary"
+          ],
+          "transition_to_next": null
+        }
+      ]
+    },
+    "top_keys": [
+      "_document_metadata",
+      "slides"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/sanofiPitchDeckDirective.json",
+      "exists": true,
+      "bytes": 54645,
+      "sha256": "281c15882038ec8ca192b5581453ed5a683725db527dee43db79b2461d46ef10",
+      "mtime_iso": "2026-06-15T22:24:00+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:brenus_diligence"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

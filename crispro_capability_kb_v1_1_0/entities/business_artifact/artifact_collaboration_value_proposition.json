@@ -1,0 +1,37 @@
+{
+  "id": "artifact:collaboration_value_proposition",
+  "type": "business_artifact",
+  "name": "Collaboration value proposition (9p21)",
+  "what_it_solves": "Business-side pitch for a 9p21 collaboration — what CrisPRO offers, what it asks in return.",
+  "how_it_solves": "collaboration_value_proposition.json turns the methodological moat into a partnership term sheet.",
+  "why_it_exists": "Translates scientific advantage into a defensible commercial ask; keeps R&D and BD aligned on the same evidence base.",
+  "attributes": {
+    "top_keys": [
+      "$schema_version",
+      "document_purpose",
+      "provenance",
+      "authorship_facts_from_paper",
+      "funding_facts_for_outreach_context",
+      "researcher_target_demichelis",
+      "researcher_target_kruithof_de_julio",
+      "researcher_target_faltas",
+      "verification_disclaimer",
+      "audit_corrections_2026_06_24"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/collaboration_value_proposition.json",
+      "exists": true,
+      "bytes": 25131,
+      "sha256": "bd343c4fd98b4b681a3294b8fedcbb4e07c021d2d974ce4a727ffd075c3d0b1f",
+      "mtime_iso": "2026-06-24T20:50:11+00:00"
+    }
+  ],
+  "cross_refs": [
+    "moat:aggregate"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:moat_and_governance"
+}

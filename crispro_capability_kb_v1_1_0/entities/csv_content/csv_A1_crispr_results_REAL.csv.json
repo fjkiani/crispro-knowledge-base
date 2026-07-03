@@ -1,0 +1,196 @@
+{
+  "id": "csv:A1_crispr_results_REAL.csv",
+  "type": "csv_content",
+  "name": "A1_crispr_results_REAL.csv",
+  "what_it_solves": "Parsed contents of A1_crispr_results_REAL.csv: header + row count + column ranges.",
+  "how_it_solves": "csv.reader → header + row list; per column, if numeric ⇒ (n, min, max, mean); if categorical ⇒ top-3 values + unique count.",
+  "why_it_exists": "Deep pass: previous stream had file metadata only. This entity carries the actual data shape so downstream consumers can validate any claim about A1/A2/A3/… without re-parsing.",
+  "attributes": {
+    "header": [
+      "gene",
+      "n_low",
+      "n_high",
+      "median_low",
+      "median_high",
+      "delta_median",
+      "p_value",
+      "cohens_d",
+      "p_adj_BH",
+      "data_source",
+      "expr_source",
+      "analysis",
+      "verdict"
+    ],
+    "row_count": 3,
+    "sample_rows": [
+      [
+        "ATR",
+        "209",
+        "203",
+        "-1.102814608461132",
+        "-1.090299384676772",
+        "-0.012515223784360208",
+        "0.19608544465995148",
+        "-0.07734313947652169",
+        "0.2941281669899272",
+        "DepMap_local:/mnt/datalake/depmap/crispr_screen/CRISPRGeneEffect.csv",
+        "DepMap_local:/mnt/datalake/depmap/expression/OmicsExpressionTPMLogp1HumanProteinCodingGenes.csv",
+        "Wilcoxon_MBD4_Q1_vs_Q5_pan_cancer_n1112",
+        "NULL - no significant difference (all BH-adj p > 0.29)"
+      ],
+      [
+        "CHEK1",
+        "209",
+        "203",
+        "-1.8131839851837612",
+        "-1.7724187048770796",
+        "-0.040765280306681584",
+        "0.18440099116578967",
+        "-0.08570764877638491",
+        "0.2941281669899272",
+        "DepMap_local:/mnt/datalake/depmap/crispr_screen/CRISPRGeneEffect.csv",
+        "DepMap_local:/mnt/datalake/depmap/expression/OmicsExpressionTPMLogp1HumanProteinCodingGenes.csv",
+        "Wilcoxon_MBD4_Q1_vs_Q5_pan_cancer_n1112",
+        "NULL - no significant difference (all BH-adj p > 0.29)"
+      ],
+      [
+        "WEE1",
+        "209",
+        "203",
+        "-2.8248063697312378",
+        "-2.8415895040471475",
+        "0.01678313431590972",
+        "0.6324947686535403",
+        "0.02867948505531262",
+        "0.6324947686535403",
+        "DepMap_local:/mnt/datalake/depmap/crispr_screen/CRISPRGeneEffect.csv",
+        "DepMap_local:/mnt/datalake/depmap/expression/OmicsExpressionTPMLogp1HumanProteinCodingGenes.csv",
+        "Wilcoxon_MBD4_Q1_vs_Q5_pan_cancer_n1112",
+        "NULL - no significant difference (all BH-adj p > 0.29)"
+      ]
+    ],
+    "column_ranges": {
+      "gene": {
+        "categorical": true,
+        "top_values": [
+          [
+            "ATR",
+            1
+          ],
+          [
+            "CHEK1",
+            1
+          ],
+          [
+            "WEE1",
+            1
+          ]
+        ],
+        "unique_count": 3
+      },
+      "n_low": {
+        "n_numeric": 3,
+        "min": 209.0,
+        "max": 209.0,
+        "mean": 209.0
+      },
+      "n_high": {
+        "n_numeric": 3,
+        "min": 203.0,
+        "max": 203.0,
+        "mean": 203.0
+      },
+      "median_low": {
+        "n_numeric": 3,
+        "min": -2.8248063697312378,
+        "max": -1.102814608461132,
+        "mean": -1.9136016544587104
+      },
+      "median_high": {
+        "n_numeric": 3,
+        "min": -2.8415895040471475,
+        "max": -1.090299384676772,
+        "mean": -1.9014358645336664
+      },
+      "delta_median": {
+        "n_numeric": 3,
+        "min": -0.040765280306681584,
+        "max": 0.01678313431590972,
+        "mean": -0.012165789925044024
+      },
+      "p_value": {
+        "n_numeric": 3,
+        "min": 0.18440099116578967,
+        "max": 0.6324947686535403,
+        "mean": 0.3376604014930938
+      },
+      "cohens_d": {
+        "n_numeric": 3,
+        "min": -0.08570764877638491,
+        "max": 0.02867948505531262,
+        "mean": -0.044790434399198
+      },
+      "p_adj_BH": {
+        "n_numeric": 3,
+        "min": 0.2941281669899272,
+        "max": 0.6324947686535403,
+        "mean": 0.4069170342111315
+      },
+      "data_source": {
+        "categorical": true,
+        "top_values": [
+          [
+            "DepMap_local:/mnt/datalake/depmap/crispr_screen/CRISPRGeneEffect.csv",
+            3
+          ]
+        ],
+        "unique_count": 1
+      },
+      "expr_source": {
+        "categorical": true,
+        "top_values": [
+          [
+            "DepMap_local:/mnt/datalake/depmap/expression/OmicsExpressionTPMLogp1HumanProteinCodingGenes.csv",
+            3
+          ]
+        ],
+        "unique_count": 1
+      },
+      "analysis": {
+        "categorical": true,
+        "top_values": [
+          [
+            "Wilcoxon_MBD4_Q1_vs_Q5_pan_cancer_n1112",
+            3
+          ]
+        ],
+        "unique_count": 1
+      },
+      "verdict": {
+        "categorical": true,
+        "top_values": [
+          [
+            "NULL - no significant difference (all BH-adj p > 0.29)",
+            3
+          ]
+        ],
+        "unique_count": 1
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1_crispr_results_REAL.csv",
+      "exists": true,
+      "bytes": 1300,
+      "sha256": "fff0a044318fc1c046348950c2db029651a915e91f72ec1350ea857a83847b04",
+      "mtime_iso": "2026-04-25T07:09:03+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

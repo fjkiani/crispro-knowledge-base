@@ -1,0 +1,41 @@
+{
+  "id": "governance:8d_remediation",
+  "type": "governance_decision",
+  "name": "8D remediation (approved 2026-04-28)",
+  "what_it_solves": "Structured 8-Discipline remediation applied to a batch of prior findings.",
+  "how_it_solves": "Immediate downgrades applied to: filing status, 4-published-trials, LATIFY preliminary label, LATIFY delta quarantine, NCT02264678 split, Claim 16 split, CT-06 §2.4 addendum, script reproducibility (permanent downgrade). Formula-dependent items (CT-01, CT-02, DL-03, DL-07, PC-05) were quarantined until PATH A vs PATH B was resolved.",
+  "why_it_exists": "Turns a batch of audit findings into a single tracked remediation with a shared timestamp and shared status field.",
+  "attributes": {
+    "approved_at": "2026-04-28",
+    "immediate_downgrades": [
+      "filing status",
+      "4-published-trials",
+      "LATIFY preliminary label",
+      "LATIFY delta quarantine",
+      "NCT02264678 split",
+      "Claim 16 split",
+      "CT-06 §2.4 addendum",
+      "script reproducibility (permanent)"
+    ],
+    "quarantined_pending_formula_decision": [
+      "CT-01",
+      "CT-02",
+      "DL-03",
+      "DL-07",
+      "PC-05"
+    ],
+    "pc_02_status": "permanently downgraded until retroactive_prediction_run.py --trial-vectors reproduces documented deltas cleanly"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "user_memory / governance decisions",
+      "note": "approved 2026-04-28"
+    }
+  ],
+  "cross_refs": [
+    "governance:path_a_formula"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:moat_and_governance"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "artifact:sl_repo_gauntlet_preflight",
+  "type": "repo_gauntlet",
+  "name": "SL repo gauntlet preflight",
+  "what_it_solves": "Preflight checklist run against the SL engine repo before allowing the MBD4/ATR receipt to be published as canon.",
+  "how_it_solves": "50KB checklist enumerating every invariant + evidence-cell status; a red row anywhere blocks canonisation.",
+  "why_it_exists": "Prevents 'publish first, discover the invariant regression later' failure mode.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/SL_REPO_GAUNTLET_PREFLIGHT.md",
+      "exists": true,
+      "bytes": 50603,
+      "sha256": "461e5d018c52073f5b96777a5f04dfe8ea0530a617341dc4cca0620798dde1f0",
+      "mtime_iso": "2026-05-02T18:03:56+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2",
+    "engine:synthetic_lethality",
+    "invariant:validated_never_auto",
+    "invariant:tier_clamp_no_clinical",
+    "invariant:pole_guard"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:evidence_and_receipts"
+}

@@ -1,0 +1,65 @@
+{
+  "id": "component:modality_fuser",
+  "type": "engine_component",
+  "name": "Multimodal Fuser",
+  "what_it_solves": "Computes the fused evidence score per (patient, axis) that the tier logic consumes.",
+  "how_it_solves": "Sums signed weight contributions across 7 modalities. Positive verdict → +weight, negative → -weight, null → 0. Distinct positive sources are counted for the STRONG threshold (≥ 2 distinct positives).",
+  "why_it_exists": "Encodes 'scientific hierarchy' explicitly: a positive clinical signal outweighs three positive CRISPR hits; cell-line data cannot override clinical.",
+  "attributes": {
+    "modality_weights": {
+      "clinical": 4,
+      "in_vivo": 3,
+      "in_vitro": 2,
+      "prism": 2,
+      "gdsc": 2,
+      "expression": 1,
+      "crispr": 1
+    },
+    "modalities": [
+      "clinical",
+      "in_vivo",
+      "in_vitro",
+      "prism",
+      "gdsc",
+      "expression",
+      "crispr"
+    ]
+  },
+  "verbatim_evidence": [
+    {
+      "quote": "\"clinical\": 4",
+      "file": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "line": 765,
+      "found": true
+    },
+    {
+      "quote": "\"in_vivo\": 3",
+      "file": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "line": 766,
+      "found": true
+    },
+    {
+      "quote": "\"expression\": 1",
+      "file": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "line": 770,
+      "found": true
+    }
+  ],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "Ch 3.4 — modality_fuser code block"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality",
+    "tier:STRONG",
+    "tier:VALIDATED"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:synthetic_lethality"
+}

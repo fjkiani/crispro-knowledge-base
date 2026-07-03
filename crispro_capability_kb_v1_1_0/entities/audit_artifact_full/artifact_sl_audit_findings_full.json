@@ -1,0 +1,960 @@
+{
+  "id": "artifact:sl_audit_findings_full",
+  "type": "audit_artifact_full",
+  "name": "crispro_sl_audit_findings.json — full contents",
+  "what_it_solves": "Full parsed contents of crispro_sl_audit_findings.json.",
+  "how_it_solves": "Parsed at generation time; raw payload retained.",
+  "why_it_exists": "Depth pass: previous stream only carried the file receipt; here we carry the payload so consumers can walk it without re-parsing.",
+  "attributes": {
+    "top_keys": [
+      "meta",
+      "architecture",
+      "pipeline",
+      "evidence_matrix",
+      "drug_recommendation_sources",
+      "evo2_role",
+      "case_studies",
+      "sl_therapy_bridge",
+      "drug_scorer",
+      "modality_weights",
+      "mbd4_live_matrix",
+      "literature_receipts",
+      "gaps",
+      "commits",
+      "schema_gaps",
+      "verified_claims",
+      "pending_items"
+    ],
+    "record_count": null,
+    "raw": {
+      "meta": {
+        "title": "CrisPRO Synthetic Lethality Engine — Full Audit Findings",
+        "audit_date": "2026-06-06",
+        "sessions": 3,
+        "auditor": "Fahad Kiani + Biomni",
+        "canonical_repo": "crispro-backend-v2",
+        "repo_heads": {
+          "crispro-backend-v2": "8311a270f084e5005221620f345e60f2318ae105",
+          "crispro-front-end": "d668b5e4626adebe1ddd2bdef94b6edb3a47a827",
+          "crispro-backend-v3": "a3e97c8"
+        },
+        "scope": "Full source-code archaeology of the SL engine pipeline, evidence matrix gating, drug scoring, SLTherapyBridge, Evo2 integration, and frontend consumption. Every claim traceable to a file + line range read in session. No inference, no fabrication.",
+        "primary_question": "When Evo2 sets synthetic_lethality_detected=True, what is the exact mechanism by which ceralasertib/ATR gets highlighted in the tumor board payload?"
+      },
+      "architecture": {
+        "summary": "Three independent systems produce drug-related outputs. They share no runtime state. Only System 1 (Efficacy Orchestrator) is fully consumed by the frontend. System 3 (SLTherapyBridge) produces a payload that is assembled into the bundle but never read by any frontend component.",
+        "systems": [
+          {
+            "id": "system_1",
+            "name": "Efficacy Orchestrator",
+            "entry_file": "api/services/efficacy_orchestrator/orchestrator.py",
+            "scoring_file": "api/services/efficacy_orchestrator/drug_scorer.py",
+            "loop_file": "api/services/efficacy_orchestrator/helpers/drug_scoring_loop.py",
+            "description": "Static drug panel scored for every patient regardless of mutation profile. Ceralasertib is always present in the panel. Scores are plain dicts with no matrix_axis field.",
+            "frontend_consumed": true,
+            "frontend_components": [
+              "AyeshaTherapyFit.jsx (reads bundle.levels.L1.efficacy.drugs)",
+              "EfficacyCard.jsx (reads rationale, efficacy_score, confidence, badges)",
+              "DrugCardHeader.jsx (reads evidence_tier, clinical_band, badges, sporadic_gates_provenance)"
+            ],
+            "sl_negative_gating": false,
+            "note": "matrix_negative_blocks_drug() is never called on efficacy panel drug dicts. They are plain dicts with no matrix_axis field — the function cannot operate on them even if called."
+          },
+          {
+            "id": "system_2",
+            "name": "Evo2-Based SL Engine (v3 contract)",
+            "entry_file": "api/services/synthetic_lethality/v3_contract/agent.py",
+            "translate_file": "api/services/synthetic_lethality/v3_contract/translate.py",
+            "finalize_file": "api/services/synthetic_lethality/v3_contract/wire_finalize.py",
+            "matrix_file": "api/services/synthetic_lethality/v3_contract/matrix.py",
+            "description": "Evidence-matrix-gated drug recommendation engine. Builds recommended_drugs from gene_drug_pairs filtered by matrix tier. Evo2 patient-variant deltas are merged AFTER recommended_drugs are built. The matrix is the sole authority for drug gating.",
+            "frontend_consumed": true,
+            "frontend_fields_consumed": [
+              "synthetic_lethality_detected",
+              "recommended_drugs[].drug_name",
+              "recommended_drugs[].drug_class",
+              "recommended_drugs[].confidence",
+              "double_hit_description"
+            ],
+            "frontend_fields_ignored": [
+              "evidence_matrix",
+              "recommended_drugs[].matrix_axis",
+              "bridge_recommended_drugs_policy",
+              "recommendation_tier",
+              "tier_fusion_rule_id",
+              "gating"
+            ]
+          },
+          {
+            "id": "system_3",
+            "name": "SLTherapyBridge",
+            "entry_file": "api/services/sl_therapy_bridge/bridge.py",
+            "policy_file": "api/services/sl_therapy_bridge/policy_engine.py",
+            "models_file": "api/services/sl_therapy_bridge/models.py",
+            "description": "Gene-to-therapy map lookup. Scans profile mutations and SL bundle for genes present in SL_THERAPY_MAP. Produces SLIndicatedDrug objects and policy overlays. Assembled into bundle as sl_therapy_bridge payload.",
+            "frontend_consumed": false,
+            "dead_payload": true,
+            "dead_payload_evidence": "grep -rn 'sl_therapy_bridge|sl_indicated|slTherapyBridge' /workspace/crispro-front-end/src/ returned zero results",
+            "note": "The sl_therapy_bridge payload is assembled in ayesha_therapy_fit.py bundle router and returned in the HTTP response, but no frontend component reads any field from it."
+          }
+        ],
+        "data_flow": {
+          "bundle_assembly": "api/routers/ayesha_therapy_fit.py",
+          "flow": [
+            "POST /api/ayesha/therapy-fit/bundle",
+            "run_therapy_fit_analysis() → EfficacyOrchestrator.predict() → System 1 output",
+            "_run_sl_bundle() → SyntheticLethalityAgent.analyze() → System 2 output",
+            "SLTherapyBridge.compute(sl_bundle, ranked_drugs, profile) → System 3 output",
+            "Bundle assembled: { efficacy, sl_payload, sl_bridge_payload, resistance_gate, ... }",
+            "Frontend reads: efficacy.drugs (System 1) + sl_payload.recommended_drugs (System 2)",
+            "Frontend ignores: sl_bridge_payload (System 3) entirely"
+          ]
+        }
+      },
+      "pipeline": {
+        "class": "SyntheticLethalityAgent",
+        "file": "api/services/synthetic_lethality/v3_contract/agent.py",
+        "method": "analyze(request: SyntheticLethalityRequest) -> SyntheticLethalityResult",
+        "steps": [
+          {
+            "step": 1,
+            "name": "resolve_primary_gene",
+            "file": "api/services/synthetic_lethality/v3_contract/request_parse.py",
+            "function": "resolve_primary_gene(request)",
+            "produces": "primary_gene string (e.g. 'MBD4', 'BRCA1')",
+            "note": "Single gene per request. First gene from mutations[] that resolves."
+          },
+          {
+            "step": 2,
+            "name": "v3_orchestrator_analyze",
+            "file": "api/services/synthetic_lethality/v3/core/orchestrator.py",
+            "function": "_v3.analyze(query, rs_features=rs_parsed)",
+            "produces": "r_dict: { gene_drug_pairs, sl_partners, evidence_matrix rows, combination_vulnerabilities }",
+            "note": "Builds evidence matrix from DepMap + literature receipts. Matrix tiers are set here. Evo2 does NOT run in this step."
+          },
+          {
+            "step": 3,
+            "name": "translate_to_v2_single",
+            "file": "api/services/synthetic_lethality/v3_contract/translate.py",
+            "function": "translate_to_v2_single(r_dict, request, primary_gene, cancer_type, elapsed_ms)",
+            "produces": "SyntheticLethalityResult with recommended_drugs built and matrix-gated",
+            "critical": true,
+            "note": "recommended_drugs are built and filtered HERE. Two sources: gene_drug_pairs loop (Source A) and matrix rows supplement (Source B). Both gated by tier_allows_drug_recommendation(). Final filter: matrix_negative_blocks_drug(). synthetic_lethality_detected is set to len(recommended_drugs) > 0 at end of this function."
+          },
+          {
+            "step": 4,
+            "name": "merge_patient_variant_essentiality",
+            "file": "api/services/synthetic_lethality/v3_contract/merge.py",
+            "function": "merge_patient_variant_essentiality(result, request, api_base)",
+            "produces": "Evo2 patient-variant deltas injected into result.essentiality_scores; result.evo2_used set to True",
+            "critical": true,
+            "note": "THIS IS WHERE EVO2 RUNS — AFTER recommended_drugs are already built and gated in step 3. Evo2 deltas feed essentiality_scores ONLY. They have zero influence on recommended_drugs, axis_tiers, or matrix tiers."
+          },
+          {
+            "step": 5,
+            "name": "finalize_synthetic_lethality_wire",
+            "file": "api/services/synthetic_lethality/v3_contract/wire_finalize.py",
+            "function": "finalize_synthetic_lethality_wire(result)",
+            "produces": "Second-pass matrix gating (safety net), provenance cleanup, synthetic_lethality_detected re-derived from recommended_drugs length",
+            "note": "Runs matrix_negative_blocks_drug() again as a defense against stale/bypassed paths. Also re-sets synthetic_lethality_detected = bool(recommended_drugs) and suggested_therapy = recommended_drugs[0].drug_name."
+          }
+        ],
+        "key_ordering_fact": "Evo2 runs at step 4. recommended_drugs are built and gated at step 3. synthetic_lethality_detected=True is a CONSEQUENCE of the matrix gating result, not a cause of ceralasertib appearing. The matrix is built from DepMap + literature receipts in step 2 — Evo2 is a downstream patient-variant overlay."
+      },
+      "evidence_matrix": {
+        "authority": "The evidence matrix is the sole authority for drug gating. No other signal overrides a negative matrix tier without an explicit override_reason.",
+        "positive_tiers": [
+          "Validated SL therapeutic lever",
+          "Strong candidate dependency axis",
+          "Mechanistic candidate only"
+        ],
+        "negative_tier": "Not supported / negative",
+        "confidence_map": {
+          "Validated SL therapeutic lever": {
+            "confidence": 0.88,
+            "evidence_tier_string": "Supported"
+          },
+          "Strong candidate dependency axis": {
+            "confidence": 0.74,
+            "evidence_tier_string": "Consider"
+          },
+          "Mechanistic candidate only": {
+            "confidence": 0.56,
+            "evidence_tier_string": "Mechanistic"
+          }
+        },
+        "gating_functions": {
+          "tier_allows_drug_recommendation": {
+            "file": "api/services/synthetic_lethality/v3_contract/matrix.py",
+            "lines": "302-303",
+            "logic": "return tier in MATRIX_POSITIVE_TIERS",
+            "called_at": "translate.py step 3 — Source A and Source B loops"
+          },
+          "matrix_negative_blocks_drug": {
+            "file": "api/services/synthetic_lethality/v3_contract/matrix.py",
+            "lines": "170-181",
+            "logic": "True if drug.matrix_axis tier is negative AND drug.override_reason is None",
+            "called_at": [
+              "translate.py line ~202 — first pass after both source loops",
+              "wire_finalize.py — second pass as safety net"
+            ]
+          },
+          "all_evidence_matrix_rows_negative": {
+            "file": "api/services/synthetic_lethality/v3_contract/matrix.py",
+            "lines": "183-189",
+            "logic": "True when every row with a resolvable axis is matrix-negative",
+            "effect": "If True, drops ALL recommended_drugs without override_reason"
+          }
+        },
+        "filter_chain": [
+          "Step 3 Source A: tier_allows_drug_recommendation(eff_tier) → continue if False",
+          "Step 3 Source B: tier not in MATRIX_POSITIVE_TIERS → continue if True",
+          "Step 3 final: matrix_negative_blocks_drug() filter on full list",
+          "Step 3 final: if all_matrix_rows_negative → keep only drugs with override_reason",
+          "Step 5 wire_finalize: matrix_negative_blocks_drug() filter again (safety net)"
+        ]
+      },
+      "drug_recommendation_sources": {
+        "file": "api/services/synthetic_lethality/v3_contract/translate.py",
+        "source_a": {
+          "name": "gene_drug_pairs loop",
+          "lines": "122-165",
+          "input": "r_dict.get('gene_drug_pairs')",
+          "axis_mapping": "pair_candidate_axis(pair) → normalize_axis_key() → looks up tier from axis_tiers",
+          "gate": "tier_allows_drug_recommendation(eff_tier) — hard skip if False",
+          "output_field": "DrugRecommendation with matrix_axis set",
+          "atr_axis_mapping": "drug_class containing 'atr inhibitor' → maps to 'atr_wee1' via axis_from_drug_class()"
+        },
+        "source_b": {
+          "name": "matrix rows supplement",
+          "lines": "167-200",
+          "input": "em.get('rows') — rows not already covered by gene_drug_pairs",
+          "gate": "tier not in MATRIX_POSITIVE_TIERS → skip",
+          "output_field": "DrugRecommendation with matrix_axis set to row axis_key",
+          "note": "Catches axes that have positive tiers but no corresponding gene_drug_pair entry"
+        },
+        "final_filter": {
+          "lines": "202-210",
+          "step_1": "matrix_negative_blocks_drug() removes any drug whose axis tier is negative",
+          "step_2": "if all_matrix_rows_negative: keep only drugs with override_reason set"
+        }
+      },
+      "evo2_role": {
+        "what_evo2_does": [
+          "Scores patient-specific variants (e.g. MBD4 chrom=3 pos=129433949 ref=AT alt=A)",
+          "Produces min_delta values per variant (MBD4: -0.026, TP53: -0.002)",
+          "Injects deltas into result.essentiality_scores",
+          "Sets result.evo2_used = True",
+          "Enriches provenance.evo2 block with patient_variant_scoring_attempts"
+        ],
+        "what_evo2_does_not_do": [
+          "Does NOT influence recommended_drugs (built before Evo2 runs)",
+          "Does NOT change matrix tiers or axis_tiers",
+          "Does NOT affect synthetic_lethality_detected (set at end of step 3, before Evo2)",
+          "Does NOT feed ceralasertib's efficacy panel score",
+          "Does NOT contribute to the atr_wee1 matrix axis evidence"
+        ],
+        "timing": "Step 4 of 5 in analyze() — AFTER recommended_drugs are built and gated in step 3",
+        "mbd4_deltas_verified": {
+          "MBD4": {
+            "chrom": 3,
+            "pos": 129433949,
+            "ref": "AT",
+            "alt": "A",
+            "model": "evo2_1b",
+            "min_delta": -0.026
+          },
+          "TP53": {
+            "chrom": 17,
+            "pos": 7577120,
+            "ref": "G",
+            "alt": "A",
+            "min_delta": -0.002
+          }
+        },
+        "evo2_contribution_to_ceralasertib": "ZERO. Evo2 feeds essentiality_scores only. Ceralasertib's panel score in System 1 is static. Ceralasertib's presence/absence in System 2 recommended_drugs is determined entirely by the atr_wee1 matrix tier."
+      },
+      "case_studies": {
+        "brca1_patient": {
+          "label": "BRCA1 — ATR/Ceralasertib IS highlighted",
+          "steps": [
+            {
+              "step": 1,
+              "location": "v3 orchestrator",
+              "action": "gene_drug_pairs includes ceralasertib with drug_class='ATR Inhibitor'"
+            },
+            {
+              "step": 2,
+              "location": "translate.py pair_candidate_axis()",
+              "action": "'atr inhibitor' in dc_l → maps to 'atr_wee1' axis"
+            },
+            {
+              "step": 3,
+              "location": "evidence matrix",
+              "action": "atr_wee1 row tier = 'Mechanistic candidate only' (BRCA1 HR deficiency → ATR dependency mechanistically supported)"
+            },
+            {
+              "step": 4,
+              "location": "tier_allows_drug_recommendation()",
+              "action": "'Mechanistic candidate only' in MATRIX_POSITIVE_TIERS → True → DrugRecommendation created"
+            },
+            {
+              "step": 5,
+              "location": "DrugRecommendation",
+              "action": "confidence=0.56, matrix_axis='atr_wee1', drug_class='ATR Inhibitor'"
+            },
+            {
+              "step": 6,
+              "location": "drug_scorer.py lines 211-244",
+              "action": "ATR class match: 'atr' in rec_class AND drug_name_lower == 'ceralasertib' → sl_match found"
+            },
+            {
+              "step": 7,
+              "location": "drug_scorer.py",
+              "action": "sl_boost = min(0.15, 0.56 * 0.2) = 0.112 added to confidence; badges.append('SL-Detected')"
+            },
+            {
+              "step": 8,
+              "location": "SL_THERAPY_MAP (bridge.py)",
+              "action": "BRCA1 in SL_THERAPY_MAP → ATR_INHIBITOR entry → ceralasertib → SLIndicatedDrug created (but frontend never reads this)"
+            }
+          ],
+          "result": "Ceralasertib appears in recommended_drugs with SL-Detected badge and boosted confidence"
+        },
+        "mbd4_patient": {
+          "label": "MBD4 — ATR/Ceralasertib is BLOCKED",
+          "steps": [
+            {
+              "step": 1,
+              "location": "v3 orchestrator",
+              "action": "gene_drug_pairs may include ceralasertib with drug_class='ATR Inhibitor'"
+            },
+            {
+              "step": 2,
+              "location": "translate.py pair_candidate_axis()",
+              "action": "'atr inhibitor' in dc_l → maps to 'atr_wee1' axis"
+            },
+            {
+              "step": 3,
+              "location": "evidence matrix",
+              "action": "atr_wee1 row tier = 'Not supported / negative' (MBD4 is BER pathway — no ATR dependency evidence)"
+            },
+            {
+              "step": 4,
+              "location": "tier_allows_drug_recommendation()",
+              "action": "'Not supported / negative' NOT in MATRIX_POSITIVE_TIERS → False → continue (drug skipped)"
+            },
+            {
+              "step": 5,
+              "location": "matrix_negative_blocks_drug() — second pass",
+              "action": "tier_is_negative('Not supported / negative') = True, override_reason = None → blocked"
+            },
+            {
+              "step": 6,
+              "location": "wire_finalize.py — third pass",
+              "action": "Same block applied again as safety net"
+            },
+            {
+              "step": 7,
+              "location": "drug_scorer.py",
+              "action": "recommended_drugs = [cytidine_analogs, parp_inhibitors, immunotherapy] — no ATR drug → no ATR class match → no SL-Detected badge"
+            },
+            {
+              "step": 8,
+              "location": "SL_THERAPY_MAP (bridge.py)",
+              "action": "MBD4 ABSENT from SL_THERAPY_MAP → _detect_vulnerability_genes() returns [] → no SLIndicatedDrug for ATR"
+            }
+          ],
+          "result": "Ceralasertib absent from recommended_drugs. Appears ONLY in System 1 static efficacy panel with no SL-Detected badge. confidence=0.49-0.53 (static, no boost)."
+        },
+        "key_contrast": "The only difference is the atr_wee1 matrix tier. BRCA1: 'Mechanistic candidate only' (positive). MBD4: 'Not supported / negative'. Everything downstream — badge, boost, bridge — follows from that single tier value."
+      },
+      "sl_therapy_bridge": {
+        "files": {
+          "bridge": "api/services/sl_therapy_bridge/bridge.py",
+          "policy": "api/services/sl_therapy_bridge/policy_engine.py",
+          "models": "api/services/sl_therapy_bridge/models.py"
+        },
+        "compute_logic": {
+          "step_1": "_detect_vulnerability_genes(profile, sl_bundle) — scans essentiality_scores, broken_pathways, essential_pathways, profile mutations for genes in SL_THERAPY_MAP",
+          "step_2": "For each vuln_gene: iterate SL_THERAPY_MAP[gene] entries → build SLIndicatedDrug objects",
+          "step_3": "Enrich explicit sl_result.recommended_drugs entries",
+          "step_4": "Per-drug policy overlays for ranked_drugs via policy.evaluate()"
+        },
+        "sl_therapy_map_complete": {
+          "BRCA1": [
+            {
+              "therapy_class": "PARP_INHIBITOR",
+              "drugs": [
+                "olaparib",
+                "niraparib",
+                "rucaparib",
+                "talazoparib"
+              ],
+              "actionability": "VALIDATED"
+            },
+            {
+              "therapy_class": "PLATINUM",
+              "drugs": [
+                "carboplatin",
+                "cisplatin"
+              ],
+              "actionability": "VALIDATED"
+            },
+            {
+              "therapy_class": "ATR_INHIBITOR",
+              "drugs": [
+                "ceralasertib",
+                "elimusertib"
+              ],
+              "actionability": "EMERGING"
+            }
+          ],
+          "BRCA2": [
+            {
+              "therapy_class": "PARP_INHIBITOR",
+              "drugs": [
+                "olaparib",
+                "niraparib",
+                "rucaparib",
+                "talazoparib"
+              ],
+              "actionability": "VALIDATED"
+            },
+            {
+              "therapy_class": "PLATINUM",
+              "drugs": [
+                "carboplatin",
+                "cisplatin"
+              ],
+              "actionability": "VALIDATED"
+            }
+          ],
+          "ATM": [
+            {
+              "therapy_class": "ATR_INHIBITOR",
+              "drugs": [
+                "ceralasertib",
+                "elimusertib"
+              ],
+              "actionability": "HYPOTHESIS"
+            }
+          ],
+          "ARID1A": [
+            {
+              "therapy_class": "EZH2_INHIBITOR",
+              "drugs": [
+                "tazemetostat"
+              ],
+              "actionability": "HYPOTHESIS"
+            }
+          ],
+          "SMARCA4": [
+            {
+              "therapy_class": "SMARCA2_INHIBITOR",
+              "drugs": [
+                "FHD-909"
+              ],
+              "actionability": "PRECLINICAL_ONLY"
+            }
+          ],
+          "CCNE1_AMP": [
+            {
+              "therapy_class": "CDK2_INHIBITOR",
+              "drugs": [
+                "ECI830"
+              ],
+              "actionability": "HYPOTHESIS"
+            }
+          ]
+        },
+        "mbd4_absence": "MBD4 is NOT in SL_THERAPY_MAP. No BER pathway entry. No MBD4 entry. _detect_vulnerability_genes() returns [] for MBD4 patient. No SLIndicatedDrug objects created for ATR.",
+        "dead_payload_finding": {
+          "status": "CONFIRMED DEAD",
+          "evidence": "grep -rn 'sl_therapy_bridge|sl_indicated|slTherapyBridge|SLIndicatedDrug|sl_bridge_payload' /workspace/crispro-front-end/src/ returned zero results",
+          "assembled_in": "api/routers/ayesha_therapy_fit.py bundle endpoint",
+          "consumed_by": "NOTHING — zero frontend components read any field from sl_therapy_bridge payload",
+          "impact": "System 3 is a backend-only computation. Its output is returned in the HTTP response but silently ignored by the frontend. Any ATR highlighting via SL_THERAPY_MAP is invisible to the user."
+        }
+      },
+      "drug_scorer": {
+        "file": "api/services/efficacy_orchestrator/drug_scorer.py",
+        "atr_boost_logic": {
+          "lines": "211-244",
+          "trigger": "sl_result and sl_result.get('synthetic_lethality_detected')",
+          "match_condition": "'atr' in rec_class AND ('atr' in moa_l OR drug_name_lower == 'ceralasertib')",
+          "boost_formula": "sl_boost = min(0.15, sl_confidence * 0.2)",
+          "max_boost": 0.15,
+          "badge": "SL-Detected",
+          "mbd4_outcome": "recommended_drugs = [cytidine_analogs, parp_inhibitors, immunotherapy] — no ATR drug → no match → no boost → no badge"
+        },
+        "brca1_fast_mode_boost": {
+          "lines": "~280-295",
+          "trigger": "primary_gene in {'BRCA1', 'BRCA2'}",
+          "condition": "is_parp = ('parp' in moa_l) OR drug_name_lower in {olaparib, niraparib, rucaparib, talazoparib}",
+          "boost": 0.15,
+          "badge": "SL-Detected",
+          "note": "Fires even without SL agent running. Equivalent to max SL boost."
+        },
+        "merge_contract": {
+          "sl_fields_consumed": [
+            "synthetic_lethality_detected",
+            "recommended_drugs[].drug_name",
+            "recommended_drugs[].drug_class",
+            "recommended_drugs[].confidence",
+            "double_hit_description"
+          ],
+          "sl_fields_ignored": [
+            "evidence_matrix",
+            "recommended_drugs[].matrix_axis",
+            "bridge_recommended_drugs_policy",
+            "recommendation_tier",
+            "tier_fusion_rule_id",
+            "gating"
+          ],
+          "response_assembler_gate": "confidence >= MIN_CONFIDENCE_THRESHOLD only — no SL-negative exclusion",
+          "drug_scoring_loop_gate": "No SL-negative exclusion. Feasibility gate deprecated."
+        }
+      },
+      "modality_weights": {
+        "file": "api/services/synthetic_lethality/v3/multimodal/modality_fuser.py",
+        "modality_weights": {
+          "clinical": 4,
+          "in_vivo": 3,
+          "in_vitro": 2,
+          "prism": 2,
+          "gdsc": 2,
+          "expression": 1,
+          "crispr": 1
+        },
+        "status_scores": {
+          "POSITIVE": 1.0,
+          "MIXED": 0.4,
+          "NEGATIVE": -0.5,
+          "CONFOUNDED": 0.0,
+          "MISSING": 0.0
+        },
+        "rs_weights": {
+          "ccne1_amplified": 0.3,
+          "myc_amplified": 0.2,
+          "arid1a_lof": 0.2,
+          "msi_h": 0.15,
+          "tp53_lof": 0.1,
+          "high_ploidy": 0.1,
+          "mbd4_lof": 0.05
+        },
+        "rs_thresholds": {
+          "_HIGH_THRESHOLD": 0.4,
+          "_MODERATE_THRESHOLD": 0.2
+        },
+        "rs_promotion_triple_block_for_mbd4_atr_wee1": {
+          "block_1": "rs_features=None (agents.py fix pending) → rs_score=None → RS branch never evaluated",
+          "block_2": "Even if wired: MBD4-LOF alone gives RS weight 0.05 < _HIGH_THRESHOLD 0.40 → rs_is_high() returns False",
+          "block_3": "Even if RS were high: has_independent_evidence = crispr_pos OR pharma_pos → both False for ATR/WEE1 → no promotion"
+        }
+      },
+      "mbd4_live_matrix": {
+        "source": "Verified live matrix results — crispro-backend-v2, no rs_features",
+        "axes": [
+          {
+            "axis": "cytidine_analogs",
+            "tier": "Validated SL therapeutic lever",
+            "rule_id": "base_validated_strong_clinical_n_pos_ge_3",
+            "drug_policy": "eligible",
+            "score": 10.0,
+            "n_positive": 4
+          },
+          {
+            "axis": "parp_inhibitors",
+            "tier": "Mechanistic candidate only",
+            "rule_id": "base_fallback_mechanistic_candidate_else_branch",
+            "drug_policy": "eligible",
+            "score": 1.2,
+            "n_positive": 0
+          },
+          {
+            "axis": "atr_wee1",
+            "tier": "Not supported / negative",
+            "rule_id": "base_zero_positive_modalities_and_non_positive_weighted_score",
+            "drug_policy": "excluded",
+            "score": -1.0,
+            "n_positive": 0
+          },
+          {
+            "axis": "immunotherapy",
+            "tier": "Mechanistic candidate only",
+            "rule_id": "base_mechanistic_expression_only_no_crispr_pharma_pos",
+            "drug_policy": "eligible",
+            "score": 2.6,
+            "n_positive": 1
+          },
+          {
+            "axis": "wrn",
+            "tier": "Not supported / negative",
+            "rule_id": "base_zero_positive_modalities_and_non_positive_weighted_score",
+            "drug_policy": "excluded",
+            "score": 0.0,
+            "n_positive": 0
+          },
+          {
+            "axis": "pkmyt1",
+            "tier": "Not supported / negative",
+            "rule_id": "base_zero_positive_modalities_and_non_positive_weighted_score",
+            "drug_policy": "excluded",
+            "score": 0.0,
+            "n_positive": 0
+          }
+        ]
+      },
+      "literature_receipts": {
+        "file": "api/services/synthetic_lethality/v3/multimodal/literature_receipts.py",
+        "atr_wee1_receipt_status": {
+          "in_vitro": "MISSING",
+          "in_vivo": "MISSING",
+          "clinical": "MISSING",
+          "calibration_narrative": "ATR/WEE1 inhibitors for MBD4 are mechanistically plausible but lack in vitro/in vivo receipts.",
+          "classification": "Mechanistic placeholder — not a manuscript claim"
+        },
+        "pathway_mechanism_field": {
+          "added_in_commit": "801f9860",
+          "added_date": "2026-06-05",
+          "reverted_in_commit": "a382081b",
+          "reverted_date": "2026-06-06",
+          "what_was_added": "pathway_mechanism=POSITIVE cell in ATR/WEE1 receipt + EvidenceRow.pathway_mechanism field + CandidateAxis.CCNE1_AMP/TP53_REPLICATION_STRESS enums + test_gap_closure.py (294 lines) + 6 DepMap OvCa CRISPR receipts",
+          "post_revert_state": "pathway_mechanism key NOT assigned anywhere. EvidenceRow.cells() returns exactly 7 keys: in_vitro, in_vivo, clinical, expression, prism, gdsc, crispr.",
+          "promotion_impact_if_restored": "NONE — even if pathway_mechanism=POSITIVE were restored, EvidenceRow.cells() excludes it. It would not contribute to the weighted score or change the tier."
+        }
+      },
+      "gaps": [
+        {
+          "id": "GAP-01",
+          "severity": "HIGH",
+          "title": "rs_features not wired from HTTP body into SyntheticLethalityRequest",
+          "file": "api/routers/agents.py",
+          "line": "~644",
+          "description": "SyntheticLethalityRequest is constructed without rs_features. The HTTP body may contain rs_features but it is never passed. This means RS promotion is permanently blocked at block_1 regardless of patient profile.",
+          "impact": "RS-driven tier promotion (e.g. CCNE1_AMP patient with high RS score) never fires. atr_wee1 tier cannot be promoted via RS pathway even for patients where it would be scientifically warranted.",
+          "fix": {
+            "type": "one_line",
+            "code": "rs_features=request.get('rs_features') or None,",
+            "location": "Inside SyntheticLethalityRequest(...) constructor call in agents.py ~line 644"
+          },
+          "status": "PENDING"
+        },
+        {
+          "id": "GAP-02",
+          "severity": "MEDIUM",
+          "title": "SLTherapyBridge produces dead payload — never consumed by frontend",
+          "files": [
+            "api/services/sl_therapy_bridge/bridge.py",
+            "api/routers/ayesha_therapy_fit.py"
+          ],
+          "description": "SLTherapyBridge.compute() runs on every bundle request and produces sl_therapy_bridge payload with SLIndicatedDrug objects and policy overlays. The bundle router assembles this into the HTTP response. Zero frontend components read any field from it.",
+          "impact": "Backend CPU wasted on every bundle call. More critically: the SL_THERAPY_MAP gene-to-therapy logic (BRCA1→ATR_INHIBITOR EMERGING, ATM→ATR_INHIBITOR HYPOTHESIS) is computed but invisible to the user. Any future frontend work that reads sl_therapy_bridge will surface these recommendations without additional backend changes.",
+          "options": [
+            "Remove SLTherapyBridge.compute() call from bundle router (reduce waste)",
+            "Wire sl_therapy_bridge payload into frontend (surface the recommendations)",
+            "Leave as-is (backend-only audit trail)"
+          ],
+          "status": "PENDING — decision required"
+        },
+        {
+          "id": "GAP-03",
+          "severity": "MEDIUM",
+          "title": "POSITIVE_TIERS policy decision pending in frontend",
+          "file": "crispro-front-end/src (exact file TBD)",
+          "description": "DISPLAY_TIERS filter in frontend controls which SL tiers are shown to the user. Policy decision on whether 'Mechanistic candidate only' should be displayed or suppressed has not been made.",
+          "current_display_tiers": [
+            "Validated SL therapeutic lever",
+            "Strong candidate dependency axis",
+            "Mechanistic candidate only"
+          ],
+          "impact": "If 'Mechanistic candidate only' is removed from DISPLAY_TIERS, parp_inhibitors and immunotherapy would be hidden for MBD4 patients. Only cytidine_analogs (Validated) would show.",
+          "status": "PENDING — policy decision required"
+        },
+        {
+          "id": "GAP-04",
+          "severity": "MEDIUM",
+          "title": "No matrix-negative suppression in efficacy panel (System 1)",
+          "files": [
+            "api/services/efficacy_orchestrator/helpers/drug_scoring_loop.py",
+            "api/services/efficacy_orchestrator/helpers/response_assembler.py"
+          ],
+          "description": "The efficacy panel (System 1) scores all drugs in the static panel regardless of their SL matrix tier. Ceralasertib receives confidence=0.49-0.53 for MBD4 patients even though the SL matrix says atr_wee1='Not supported / negative'. The panel drug dicts are plain dicts with no matrix_axis field — matrix_negative_blocks_drug() cannot operate on them.",
+          "impact": "Ceralasertib appears in the tumor board efficacy panel for MBD4 patients with a moderate confidence score and no negative signal. A clinician reading the panel has no indication that the SL engine explicitly rejected ATR/WEE1 for this patient.",
+          "fix": {
+            "type": "code_snippet",
+            "description": "Add matrix-negative suppression in drug_scoring_loop.py after drug_scorer.score_drug()",
+            "code": "if sl_result and sl_result.get('evidence_matrix'):\n    from api.services.synthetic_lethality.v3.multimodal.pharmacologic_analyzer import _DRUG_TO_AXIS\n    from api.services.synthetic_lethality.v3_contract.matrix import tier_allows_drug_recommendation\n    drug_name_lower = (drug.get('name') or '').lower()\n    drug_axis = _DRUG_TO_AXIS.get(drug_name_lower)\n    if drug_axis:\n        for row in sl_result['evidence_matrix'].get('rows', []):\n            if row.get('axis') == drug_axis:\n                if not tier_allows_drug_recommendation(row.get('recommendation_tier', '')):\n                    drug_result.confidence = 0.0\n                break"
+          },
+          "status": "PENDING — implementation decision required"
+        },
+        {
+          "id": "GAP-05",
+          "severity": "LOW",
+          "title": "TherapyHeroSection hardcodes 'Olaparib is highly effective'",
+          "file": "crispro-front-end/src (TherapyHeroSection.jsx)",
+          "description": "STATIC_BACKUP_EXPLANATION hardcodes 'Olaparib is highly effective' regardless of patient gene or disease context.",
+          "impact": "Misleading for non-BRCA patients. Shown as fallback when LLM explanation is unavailable.",
+          "status": "PENDING"
+        },
+        {
+          "id": "GAP-06",
+          "severity": "LOW",
+          "title": "IO pathway gate multipliers are hardcoded",
+          "file": "api/services/efficacy_orchestrator/io_pathway_gates.py",
+          "description": "TMB >= 20 → 1.35x multiplier, MSI-H → 1.30x, TMB >= 10 → 1.25x. No configuration surface.",
+          "status": "PENDING — review required"
+        },
+        {
+          "id": "GAP-07",
+          "severity": "LOW",
+          "title": "DNA_REPAIR_THRESHOLD and HIGH_RISK_PROBABILITY hardcoded",
+          "file": "api/services/efficacy_orchestrator (config or constants)",
+          "description": "DNA_REPAIR_THRESHOLD = 0.15, HIGH_RISK_PROBABILITY = 0.70. No configuration surface.",
+          "status": "PENDING — review required"
+        }
+      ],
+      "commits": [
+        {
+          "hash": "8311a270",
+          "date": "2026-06-06T15:43:37Z",
+          "message": "Revert 'feat: CEACAM5 Intelligence Demo — Brenus/STC-1010'",
+          "impact": "Removed CEACAM5 demo routes and frontend components"
+        },
+        {
+          "hash": "a382081b",
+          "date": "2026-06-06T15:43:23Z",
+          "message": "Revert 'feat: GAP_EXPLOIT_PROMPTS 1-5 — gene-aware SL engine + MBD4 therapy map + health endpoint'",
+          "impact": "CRITICAL REVERT. Removed: pathway_mechanism=POSITIVE from ATR/WEE1 receipt, EvidenceRow.pathway_mechanism field, CandidateAxis.CCNE1_AMP/TP53_REPLICATION_STRESS enums, test_gap_closure.py (294 lines), 6 DepMap OvCa CRISPR receipts. Post-revert: EvidenceRow.cells() returns exactly 7 keys, no pathway_mechanism."
+        },
+        {
+          "hash": "801f9860",
+          "date": "2026-06-05",
+          "message": "feat: GAP_EXPLOIT_PROMPTS 1-5 — gene-aware SL engine + MBD4 therapy map + health endpoint",
+          "impact": "Added pathway_mechanism=POSITIVE to ATR/WEE1 receipt. Reverted by a382081b. Even if restored, would not change tier — EvidenceRow.cells() excludes pathway_mechanism from weighted score."
+        },
+        {
+          "hash": "564e8b59",
+          "date": "2026-06-06T15:42:32Z",
+          "message": "Revert 'fix: GAP 2 — wire rs_features from HTTP body into SyntheticLethalityRequest'",
+          "impact": "Re-introduced GAP-01. rs_features wiring was implemented then reverted. agents.py is back to not passing rs_features."
+        },
+        {
+          "hash": "3a3e1b23",
+          "date": "2026-04-04",
+          "message": "feat(sl): v3 bridge contract, GDSC matrix wiring, serialization helper",
+          "impact": "Introduced the v3_contract layer: translate.py, wire_finalize.py, matrix.py, constants.py. Established MATRIX_POSITIVE_TIERS as the drug gating authority."
+        },
+        {
+          "hash": "d668b5e",
+          "date": "2026-06-06",
+          "repo": "crispro-front-end",
+          "message": "fix(digital-twin): remove LETHAL MUTATION CONTEXT box and canonical drug spine",
+          "impact": "Removed SlMutationContextCard and SlCanonicalRecommendations components. DISPLAY_TIERS filter committed. Frontend no longer shows the SL mutation context UI."
+        }
+      ],
+      "schema_gaps": {
+        "description": "Fields confirmed ABSENT from all model files read in session. These fields do not exist anywhere in the codebase.",
+        "absent_fields": [
+          {
+            "field": "manuscript_claim_type",
+            "searched_in": "EvidenceRow, ModalityEvidence, DrugRecommendation"
+          },
+          {
+            "field": "origin_system",
+            "searched_in": "ModalityEvidence, EvidenceRow"
+          },
+          {
+            "field": "recommendation_basis",
+            "searched_in": "DrugRecommendation, SyntheticLethalityResult"
+          },
+          {
+            "field": "display_source",
+            "searched_in": "all SL models"
+          },
+          {
+            "field": "falsified_mechanism",
+            "searched_in": "all SL models"
+          },
+          {
+            "field": "theoretical_only",
+            "searched_in": "all SL models"
+          }
+        ]
+      },
+      "verified_claims": [
+        {
+          "claim": "matrix_negative_blocks_drug() applies only to recommended_drugs, not efficacy panel",
+          "status": "PROVEN",
+          "evidence": "drug_scoring_loop.py — no call to matrix_negative_blocks_drug(); efficacy panel dicts have no matrix_axis field",
+          "session": 1
+        },
+        {
+          "claim": "Efficacy panel drug dicts have no matrix_axis field",
+          "status": "PROVEN",
+          "evidence": "drug_scoring_loop.py, response_assembler.py — plain dicts, no DrugRecommendation dataclass",
+          "session": 1
+        },
+        {
+          "claim": "ATR/WEE1 receipt is a mechanistic placeholder, not a manuscript claim",
+          "status": "PROVEN",
+          "evidence": "literature_receipts.py — all 3 modalities MISSING, calibration_narrative confirms",
+          "session": 1
+        },
+        {
+          "claim": "pathway_mechanism=POSITIVE was reverted in a382081b",
+          "status": "PROVEN",
+          "evidence": "git show a382081b — full diff confirms removal of pathway_mechanism cell, field, enums, test file",
+          "session": 1
+        },
+        {
+          "claim": "Even if pathway_mechanism restored, it would not promote the tier",
+          "status": "PROVEN",
+          "evidence": "EvidenceRow.cells() returns exactly 7 keys — pathway_mechanism excluded from weighted score",
+          "session": 1
+        },
+        {
+          "claim": "GDSC NEGATIVE is a label-only negative (null quantitative fields)",
+          "status": "PROVEN",
+          "evidence": "matrix_builder.py Step 4 — gdsc cell assigned from receipt status only",
+          "session": 1
+        },
+        {
+          "claim": "Evo2 contributes zero ATR-specific evidence to ceralasertib's score",
+          "status": "PROVEN",
+          "evidence": "merge.py runs after translate.py; Evo2 feeds essentiality_scores only",
+          "session": 2
+        },
+        {
+          "claim": "Frontend reads no matrix-negative field",
+          "status": "PROVEN",
+          "evidence": "AyeshaTherapyFit.jsx, DrugCardHeader.jsx, EfficacyCard.jsx, EfficacyPanel.jsx — all read confirmed",
+          "session": 1
+        },
+        {
+          "claim": "All manuscript/origin/falsified fields are absent from schema",
+          "status": "PROVEN",
+          "evidence": "models.py files read — none of the 6 fields exist",
+          "session": 1
+        },
+        {
+          "claim": "RS promotion is triple-blocked for MBD4/ATR_WEE1",
+          "status": "PROVEN",
+          "evidence": "agents.py (no rs_features), modality_fuser.py (mbd4_lof weight 0.05 < 0.40), modality_fuser.py (no crispr/pharma positive)",
+          "session": 1
+        },
+        {
+          "claim": "sl_therapy_bridge payload is never consumed by frontend",
+          "status": "PROVEN",
+          "evidence": "grep -rn across entire crispro-front-end/src/ returned zero results for all bridge field names",
+          "session": 2
+        },
+        {
+          "claim": "MBD4 is absent from SL_THERAPY_MAP",
+          "status": "PROVEN",
+          "evidence": "policy_engine.py — SL_THERAPY_MAP fully read, MBD4 not present",
+          "session": 2
+        },
+        {
+          "claim": "Evo2 runs AFTER recommended_drugs are built",
+          "status": "PROVEN",
+          "evidence": "agent.py — step 3 translate_to_v2_single() then step 4 merge_patient_variant_essentiality()",
+          "session": 3
+        },
+        {
+          "claim": "synthetic_lethality_detected=True is set at end of translate.py before Evo2 runs",
+          "status": "PROVEN",
+          "evidence": "translate.py line ~248: sl_detected = len(recommended_drugs) > 0",
+          "session": 3
+        },
+        {
+          "claim": "wire_finalize.py re-derives synthetic_lethality_detected from recommended_drugs length",
+          "status": "PROVEN",
+          "evidence": "wire_finalize.py final block: result.synthetic_lethality_detected = bool(result.recommended_drugs)",
+          "session": 3
+        },
+        {
+          "claim": "tier_allows_drug_recommendation() is the hard gate for all drug entries",
+          "status": "PROVEN",
+          "evidence": "translate.py Source A line ~135: if not tier_allows_drug_recommendation(eff_tier): continue; Source B line ~175: if tier not in MATRIX_POSITIVE_TIERS: continue",
+          "session": 3
+        },
+        {
+          "claim": "matrix_negative_blocks_drug() runs three times total for each drug",
+          "status": "PROVEN",
+          "evidence": "translate.py line ~202 (first pass), wire_finalize.py (second pass) — plus implicit skip in Source A/B loops",
+          "session": 3
+        },
+        {
+          "claim": "BRCA1/2 fast-mode pseudo-SL boost fires without SL agent",
+          "status": "PROVEN",
+          "evidence": "drug_scorer.py lines ~280-295 — primary_gene in {BRCA1, BRCA2} check independent of sl_result",
+          "session": 2
+        },
+        {
+          "claim": "Debug escape mode ATR detection only fires when AYESHA_THERAPY_FIT_DEBUG_ESCAPE=1",
+          "status": "PROVEN",
+          "evidence": "service.py — env var gate confirmed",
+          "session": 2
+        },
+        {
+          "claim": "rs_features wiring was implemented (564e8b59) then reverted",
+          "status": "PROVEN",
+          "evidence": "git log — 564e8b59 is a revert of the rs_features fix commit",
+          "session": 3
+        }
+      ],
+      "pending_items": [
+        {
+          "id": "PENDING-01",
+          "title": "Read v3_contract/merge.py",
+          "reason": "Confirm exact Evo2 delta injection mechanism and patient_variant_scoring_attempts structure",
+          "priority": "LOW — pipeline ordering already proven from agent.py"
+        },
+        {
+          "id": "PENDING-02",
+          "title": "POSITIVE_TIERS policy decision",
+          "reason": "Whether 'Mechanistic candidate only' should be shown in frontend DISPLAY_TIERS",
+          "priority": "MEDIUM — affects what MBD4 patients see"
+        },
+        {
+          "id": "PENDING-03",
+          "title": "Implement GAP-01 rs_features one-line fix",
+          "reason": "agents.py fix was reverted in 564e8b59 — needs to be re-applied and kept",
+          "priority": "HIGH",
+          "code": "rs_features=request.get('rs_features') or None,"
+        },
+        {
+          "id": "PENDING-04",
+          "title": "Decision on sl_therapy_bridge dead payload",
+          "reason": "Either wire to frontend or remove from bundle router to stop wasting compute",
+          "priority": "MEDIUM"
+        },
+        {
+          "id": "PENDING-05",
+          "title": "Decision on GAP-04 matrix-negative suppression in efficacy panel",
+          "reason": "Ceralasertib currently shows in panel for MBD4 patients with no negative signal despite SL matrix rejection",
+          "priority": "MEDIUM — clinical accuracy concern"
+        }
+      ]
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/crispro_sl_audit_findings.json",
+      "exists": true,
+      "bytes": 39934,
+      "sha256": "d088aa94b3035f814464f51aeaf5bec53c16d70b2dd1fd23e408ca111b6a32ad",
+      "mtime_iso": "2026-06-06T18:03:53+00:00"
+    }
+  ],
+  "cross_refs": [
+    "audit:agent_conduct_2026-06-06",
+    "audit:sl_full_commit_audit_v2",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:synthetic_lethality_deep"
+}

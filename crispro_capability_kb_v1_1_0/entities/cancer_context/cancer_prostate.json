@@ -1,0 +1,26 @@
+{
+  "id": "cancer:prostate",
+  "type": "cancer_context",
+  "name": "Cancer atlas: Prostate",
+  "what_it_solves": "Tumor type Prostate covered by the CrisPRO cancer atlas.",
+  "how_it_solves": "Each atlas entry lists driver mutations + which CandidateAxis members are supported.",
+  "why_it_exists": "PARP + AR-driven mechanisms.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "cancer atlas — 8 tumor types"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality",
+    "framework:rs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:moat_and_governance"
+}

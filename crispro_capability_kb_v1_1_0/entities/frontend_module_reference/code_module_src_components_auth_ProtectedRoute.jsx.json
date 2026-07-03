@@ -1,0 +1,34 @@
+{
+  "id": "code_module:src/components/auth/ProtectedRoute.jsx",
+  "type": "frontend_module_reference",
+  "name": "src/components/auth/ProtectedRoute.jsx",
+  "what_it_solves": "Frontend module 'src/components/auth/ProtectedRoute.jsx' referenced by the architecture / frontend audit corpus.",
+  "how_it_solves": "Extracted by regex for .ts/.tsx/.js/.jsx paths.",
+  "why_it_exists": "Enumerates the concrete frontend surface (crispro-front-end) so any SL/Ayesha UI claim can be traced to a real file.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 32,
+        "context": " `GET /api/auth/profile` on mount. 401 → `signOut()` + redirect to `/login`. | `src/components/auth/ProtectedRoute.jsx` |\n| Login spinner fix | `setLoading(false)` now in `finally` block — spinner n"
+      }
+    ],
+    "reference_count": 1
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-front-end",
+    "component:frontend_canonicalization"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

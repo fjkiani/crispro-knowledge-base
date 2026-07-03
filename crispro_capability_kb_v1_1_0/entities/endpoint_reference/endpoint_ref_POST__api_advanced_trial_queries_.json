@@ -1,0 +1,35 @@
+{
+  "id": "endpoint_ref:POST /api/advanced_trial_queries/",
+  "type": "endpoint_reference",
+  "name": "POST /api/advanced_trial_queries/",
+  "what_it_solves": "HTTP endpoint 'POST /api/advanced_trial_queries/' referenced in the architecture / hardening corpus.",
+  "how_it_solves": "Regex `(GET|POST|PUT|DELETE|PATCH)\\s+/…` captured with source_file + line + context.",
+  "why_it_exists": "Every route claim in an audit is testable; this enumerates them so consumers can diff against the live server.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+        "line": 271,
+        "context": "sier generator\n    │\n    └── Trial Matching\n            └── POST /api/advanced_trial_queries/\n                    └── 6-stage trial intelligence pipeline"
+      }
+    ],
+    "reference_count": 1
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+      "exists": true,
+      "bytes": 17877,
+      "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+      "mtime_iso": "2026-05-05T06:14:00+00:00"
+    }
+  ],
+  "cross_refs": [
+    "endpoint:sl",
+    "endpoint:bundle",
+    "layer:output"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

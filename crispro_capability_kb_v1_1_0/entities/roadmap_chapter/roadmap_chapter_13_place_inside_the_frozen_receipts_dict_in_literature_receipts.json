@@ -1,0 +1,32 @@
+{
+  "id": "roadmap_chapter:13_place_inside_the_frozen_receipts_dict_in_literature_receipts",
+  "type": "roadmap_chapter",
+  "name": "Ch 13 — Place inside the FROZEN_RECEIPTS dict in literature_receipts.py",
+  "what_it_solves": "CRISPRO_SL_PHD_ROADMAP chapter 'Place inside the FROZEN_RECEIPTS dict in literature_receipts.py' spanning lines 1876..1883.",
+  "how_it_solves": "Chapter body preview (first 2000 chars) attached; full content lives in the source file. Subheadings enumerated.",
+  "why_it_exists": "Chapter is the natural unit of the roadmap — one entity per chapter makes 'what does Ch 3.4 say about the fuser?' addressable.",
+  "attributes": {
+    "level": 1,
+    "start_line": 1876,
+    "end_line": 1883,
+    "byte_length": 290,
+    "subheadings": [],
+    "body_preview_2000c": "\t\n\n\t(\"GENE_SYMBOL\", CandidateAxis.AXIS_NAME): EvidenceReceipt(\n\t    gene=\"GENE_SYMBOL\",                    # HGNC-approved symbol, uppercase\n\t    axis=CandidateAxis.AXIS_NAME,          # Must exist in CandidateAxis enum\n\t\n"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "lines 1876..1883"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:synthetic_lethality_deep"
+}

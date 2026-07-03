@@ -1,0 +1,64 @@
+{
+  "id": "moat_dim:04_axis_taxonomy_and_target_class_mapping",
+  "type": "moat_dimension_deep",
+  "name": "Dim 04 — Axis taxonomy and target-class mapping",
+  "what_it_solves": "Full moat_comparison dimension #4: 'Axis taxonomy and target-class mapping' — Bev2026 approach vs CrisPRO approach with verbatim quote.",
+  "how_it_solves": "Extracted verbatim from moat_comparison.comparison_dimensions[i]; raw dict carried in attributes.raw.",
+  "why_it_exists": "Depth pass: previous stream flattened each dimension to a few fields. This entity carries every field the JSON contains for that dimension.",
+  "attributes": {
+    "index": 4,
+    "dimension": "Axis taxonomy and target-class mapping",
+    "Bev2026_approach_verbatim": "",
+    "Bev2026_approach_verbatim_source": null,
+    "Bev2026_implementation": null,
+    "CrisPRO_approach": "Formal enum CandidateAxis at api/services/synthetic_lethality/v3/multimodal/models.py:122 with 7 axes. Drug-to-axis mapping table at pharmacologic_analyzer.py:66.",
+    "moat_status": "Bev2026 ADVANTAGE on biology (correct axis assignment). CrisPRO has the framework but a fixable bug in the mapping.",
+    "verification_status": null,
+    "raw": {
+      "dimension": "Axis taxonomy and target-class mapping",
+      "Bev2026_approach": "Paper introduces 'rational drug combinations' across 4 mechanism axes: nucleoside analogs (cytarabine, gemcitabine), antifolates (MTX), PRMT5 inhibitors (MRTX1719) + MAT2A inhibitors (AG-270), ATR/CHK1/WEE1 inhibitors (VX970, AZD7762, MK-1775). No formal enum.",
+      "CrisPRO_approach": "Formal enum CandidateAxis at api/services/synthetic_lethality/v3/multimodal/models.py:122 with 7 axes. Drug-to-axis mapping table at pharmacologic_analyzer.py:66.",
+      "CrisPRO_known_gap": {
+        "bug_id": "PA-MRTX1719-WRN-MISMAP",
+        "location": "pharmacologic_analyzer.py:66 (at HEAD bfd6d11f, branch fix/mbd4-atr-strong-tier)",
+        "current_mapping_verbatim": "'mrtx1719': 'wrn'",
+        "correct_mapping_per_Bev2026_and_Engstrom_2023": "'mrtx1719': 'prmt5_mtap_cooperative' (a new axis that does not yet exist in the CandidateAxis enum)",
+        "evidence_strength": "TRIPLE-SOURCE: Bev2026 §Results + Methods (MRTX1719 = PRMT5 inhibitor); Engstrom 2023 Cancer Discov 13:2412-2431 (Bev2026 ref 7) is the originating paper defining MRTX1719 as MTA-cooperative PRMT5 inhibitor; Pettus 2025 J Med Chem 68:6932-6954 (Bev2026 ref 8) confirms MTA-cooperative PRMT5 axis for AMG 193.",
+        "remediation_required": "Add PRMT5_MTAP_COOPERATIVE to CandidateAxis enum; remap mrtx1719 and add AMG 193 / pemrametostat to same axis. Out of scope per user lock #4.",
+        "impact_on_demichelis_outreach": "Demichelis lab will immediately notice this bug if shown the current taxonomy. Pre-outreach fix recommended."
+      },
+      "moat_status": "Bev2026 ADVANTAGE on biology (correct axis assignment). CrisPRO has the framework but a fixable bug in the mapping.",
+      "Bev2026_evidence_verbatim": "First, we investigated the activity of the MAT2A inhibitor AG-270 and the PRMT5 inhibitor MRTX1719, which selectively binds to PRMT5 complexed with MTA, to define the ideal dose for a clear genotype-specific effect when administered alone in our cell models.",
+      "Bev2026_evidence_verbatim_source": "Bev2026 PDF, Results section header 'Cytarabine synergizes with PRMT5 and MAT2A inhibitors selectively in bladder cancer cells with MTAP loss' (page 5, first paragraph)",
+      "Engstrom_2023_verbatim": "Engstrom, L. D. et al. MRTX1719 is an MTA-cooperative PRMT5 inhibitor that exhibits synthetic lethality in preclinical models and patients with MTAP-deleted cancer. Cancer Discov. 13, 2412–2431 (2023).",
+      "Engstrom_2023_verbatim_source": "Bev2026 PDF Reference 7, page 15",
+      "Pettus_2025_verbatim": "Pettus, L. H. et al. Discovery of AMG 193, an MTA-cooperative PRMT5 inhibitor for the treatment of MTAP-deleted cancers. J. Med. Chem. 68, 6932–6954 (2025).",
+      "Pettus_2025_verbatim_source": "Bev2026 PDF Reference 8, page 15"
+    }
+  },
+  "verbatim_evidence": [
+    {
+      "quote": "",
+      "file": "/mnt/results/9p21_audit/moat_comparison.json",
+      "context": "comparison_dimensions[4].Bev2026_approach_verbatim",
+      "note": "verbatim quote from Bev2026 PDF as recorded at file creation time"
+    }
+  ],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00",
+      "span_extracted": "comparison_dimensions[4]"
+    }
+  ],
+  "cross_refs": [
+    "moat:aggregate",
+    "moat:definition_of_moat",
+    "external:bev2026_pdf"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:moat_and_governance_deep"
+}

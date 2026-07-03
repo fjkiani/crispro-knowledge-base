@@ -1,0 +1,93 @@
+{
+  "id": "access:gbm_access_ledger",
+  "type": "data_access_pack",
+  "name": "GBM data-access ledger (with GSE174554 single-cell EMT closure)",
+  "what_it_solves": "Full GBM data-access ledger + resolution artefacts, including the GSE174554 single-cell EMT bulk-vs-sc dilution analysis.",
+  "how_it_solves": "Files include: trial access ledger CSV, access-top memo, next-resolution scan CSV + status/target JSONs, and the sc EMT full CSV + escape final JSON + ZEB1 plot.",
+  "why_it_exists": "GBM datasets are the second cohort target after ovarian; the ledger centralises which datasets are accessible vs blocked and why.",
+  "attributes": {
+    "files": [
+      "gbm_access_top_memo.md",
+      "gbm_gse174554_bulk_vs_sc_dilution.json",
+      "gbm_gse174554_sc_emt_full.csv",
+      "gbm_gse174554_sc_escape_final.json",
+      "gbm_gse174554_sc_zeb1_plot.png",
+      "gbm_next_resolution_access_status.json",
+      "gbm_next_resolution_dataset_scan.csv",
+      "gbm_next_resolution_target.json",
+      "gbm_trial_access_ledger.csv"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/gbm_access_top_memo.md",
+      "exists": true,
+      "bytes": 5939,
+      "sha256": "1aebae8d716e02cba32e42238e7cbdc1b662b0a1879b44ea6c3842b16ae9b596",
+      "mtime_iso": "2026-05-13T02:33:47+00:00"
+    },
+    {
+      "path": "/mnt/results/gbm_gse174554_bulk_vs_sc_dilution.json",
+      "exists": true,
+      "bytes": 4898,
+      "sha256": "10516487afced3b159a0ca5947caa177c5c3bce72b83084c2fcae98c00f7bbaf",
+      "mtime_iso": "2026-05-13T10:16:42+00:00"
+    },
+    {
+      "path": "/mnt/results/gbm_gse174554_sc_emt_full.csv",
+      "exists": true,
+      "bytes": 6164,
+      "sha256": "3f91fc99ca2df1498d5c120f4daae767ebd9705b59b127131690f576aeac3962",
+      "mtime_iso": "2026-05-13T10:16:41+00:00"
+    },
+    {
+      "path": "/mnt/results/gbm_gse174554_sc_escape_final.json",
+      "exists": true,
+      "bytes": 4976,
+      "sha256": "ad20c1a1032f87bb4509f7f5417087ec7887dea1aa58ee040d33aa98d8fbd119",
+      "mtime_iso": "2026-05-13T10:16:42+00:00"
+    },
+    {
+      "path": "/mnt/results/gbm_gse174554_sc_zeb1_plot.png",
+      "exists": true,
+      "bytes": 252735,
+      "sha256": "8d715d0da84611ed77ff5e54a5078027b32b724783b775e3680f56ad3fd3dabb",
+      "mtime_iso": "2026-05-13T10:16:18+00:00"
+    },
+    {
+      "path": "/mnt/results/gbm_next_resolution_access_status.json",
+      "exists": true,
+      "bytes": 169,
+      "sha256": "3889f97ec850382c3a46f73992f6392a7fa6e95efd459e34298d0d74b173a0cb",
+      "mtime_iso": "2026-05-13T09:18:31+00:00"
+    },
+    {
+      "path": "/mnt/results/gbm_next_resolution_dataset_scan.csv",
+      "exists": true,
+      "bytes": 3350,
+      "sha256": "d23f0255b01a3105202abc4924781062c8425f132c74ece7f0d6dadeec8b9791",
+      "mtime_iso": "2026-05-13T09:18:30+00:00"
+    },
+    {
+      "path": "/mnt/results/gbm_next_resolution_target.json",
+      "exists": true,
+      "bytes": 872,
+      "sha256": "fdc2902e4ad85040b1f69774474791e4119114aedf7b33308bf5058fa39a0758",
+      "mtime_iso": "2026-05-13T09:18:30+00:00"
+    },
+    {
+      "path": "/mnt/results/gbm_trial_access_ledger.csv",
+      "exists": true,
+      "bytes": 9355,
+      "sha256": "181d36c75af44ea3d92d9eea64de78278c67f1bda12dcafd95a5b61f0bb8a9da",
+      "mtime_iso": "2026-05-13T02:33:45+00:00"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality",
+    "protocol:mars"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:operations_and_access"
+}

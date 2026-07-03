@@ -1,0 +1,57 @@
+{
+  "id": "moat_dim:05_patient_derived_organoid_pdo_deployment",
+  "type": "moat_dimension_deep",
+  "name": "Dim 05 — Patient-derived organoid (PDO) deployment",
+  "what_it_solves": "Full moat_comparison dimension #5: 'Patient-derived organoid (PDO) deployment' — Bev2026 approach vs CrisPRO approach with verbatim quote.",
+  "how_it_solves": "Extracted verbatim from moat_comparison.comparison_dimensions[i]; raw dict carried in attributes.raw.",
+  "why_it_exists": "Depth pass: previous stream flattened each dimension to a few fields. This entity carries every field the JSON contains for that dimension.",
+  "attributes": {
+    "index": 5,
+    "dimension": "Patient-derived organoid (PDO) deployment",
+    "Bev2026_approach_verbatim": "",
+    "Bev2026_approach_verbatim_source": null,
+    "Bev2026_implementation": null,
+    "CrisPRO_approach": "No primary PDO data — relies on DepMap CCLE cell lines (n=1186) + GDSC2 drug screens. Public-data dependent.",
+    "moat_status": "Bev2026 ADVANTAGE on translational relevance. CrisPRO can offer pre-screening prioritization to Demichelis/Kruithof-de Julio PDO biobanks before they commit organoid resource.",
+    "verification_status": null,
+    "raw": {
+      "dimension": "Patient-derived organoid (PDO) deployment",
+      "Bev2026_approach": "Two PDOs from Inselspital Bern (BlCa197) + Spitalzentrum Biel (TN-001), both high-grade MIBC mixed urothelial/sarcomatoid. Bi-directional editing: TN-001 doxycycline-inducible MTAP rescue + BlCa197 MTAP-KO induction. CellTiter-Glo 3D readout. n=3 biological replicates × 2 technical replicates per drug condition.",
+      "Bev2026_validation": "MTAP-OE in 3KO PDO RESCUES MRTX1719 activity; MTAP-KO in WT PDO INCREASES MRTX1719 activity. Bi-directional rescue is a powerful validation.",
+      "CrisPRO_approach": "No primary PDO data — relies on DepMap CCLE cell lines (n=1186) + GDSC2 drug screens. Public-data dependent.",
+      "moat_status": "Bev2026 ADVANTAGE on translational relevance. CrisPRO can offer pre-screening prioritization to Demichelis/Kruithof-de Julio PDO biobanks before they commit organoid resource.",
+      "complementary_value": "CrisPRO's biomarker-stratification triage + Kruithof-de Julio's TOR organoid bank = mutually beneficial pipeline.",
+      "Bev2026_PDO_clinical_history_verbatim": "PDO lines, TN-001 and BlCa197, were generated from specimens obtained from patients who underwent cystectomy at the Inselspital, University Hospital, in Bern, or Spitalzentrum Biel, respectively. Specifically, BlCa197 cells were isolated from a 54-year-old female patient with high-grade MIBC with mixed urothelial and sarcomatoid histology. This patient underwent neoadjuvant cisplatin/gemcitabine treatment followed by radical cystectomy. TN-001 was obtained from a 53-year-old male patient diagnosed with high-grade MIBC with mixed urothelial and sarcomatoid histology. This patient received MVAC combination followed by radical cystectomy.",
+      "Bev2026_PDO_clinical_history_source": "Bev2026 PDF, Methods section 'Clinical details of patient-derived organoid lines' (page 14)",
+      "Bev2026_bidirectional_editing_verbatim": "To obtain TN-001 PDOs with doxycycline-inducible MTAP overexpression, the MTAP gene was cloned into pCW57.1 (Addgene #41393), which was then used to transduce TN-001 cells. For MTAP knockout in BlCa197 PDOs, MTAP sgRNA sequence was cloned into a lentiCRISPR_v1 plasmid as previously described, which was then used to transduce BlCa197 cells.",
+      "Bev2026_bidirectional_editing_source": "Bev2026 PDF, Methods 'Patient-derived organoids (PDOs) establishment' (page 14)",
+      "Bev2026_PDO_rescue_finding_verbatim": "MTAP overexpression in TN-001 organoids rescues MRTX1719 activity, while MTAP KO selectively increases MRTX1719 activity in BlCa197 (Supplementary Fig. 7A).",
+      "Bev2026_PDO_rescue_finding_source": "Bev2026 PDF, Results 'Combination of cytarabine and VX970 with MRTX1719 is effective in BLCA patient-derived organoids' (page 8)"
+    }
+  },
+  "verbatim_evidence": [
+    {
+      "quote": "",
+      "file": "/mnt/results/9p21_audit/moat_comparison.json",
+      "context": "comparison_dimensions[5].Bev2026_approach_verbatim",
+      "note": "verbatim quote from Bev2026 PDF as recorded at file creation time"
+    }
+  ],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00",
+      "span_extracted": "comparison_dimensions[5]"
+    }
+  ],
+  "cross_refs": [
+    "moat:aggregate",
+    "moat:definition_of_moat",
+    "external:bev2026_pdf"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:moat_and_governance_deep"
+}

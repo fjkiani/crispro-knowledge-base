@@ -1,0 +1,176 @@
+{
+  "id": "section_index:/mnt/results/HANDOFF.md",
+  "type": "section_index",
+  "name": "Section index — HANDOFF.md",
+  "what_it_solves": "Section index of '/mnt/results/HANDOFF.md': every heading with its level and starting line.",
+  "how_it_solves": "Regex `^#{1,6}\\s+(.+)$` extracted at generation time; preserves navigation without duplicating body text.",
+  "why_it_exists": "Downstream ingestors can walk the document by section without re-parsing markdown; the KB stops being an opaque blob.",
+  "attributes": {
+    "heading_count": 30,
+    "headings": [
+      {
+        "level": 1,
+        "title": "CrisPRO Frontend + Backend Connection — Developer Handoff",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "1. What Is Done (Fully Complete)",
+        "line": 10
+      },
+      {
+        "level": 3,
+        "title": "1A. Frontend Hardening — `crispro-front-end` commit `4d8bc87`",
+        "line": 12
+      },
+      {
+        "level": 3,
+        "title": "1B. Frontend → Backend Wiring — `crispro-front-end` commits `f190530` → `238eea06`",
+        "line": 25
+      },
+      {
+        "level": 3,
+        "title": "1C. Backend CORS Fixes — `crispro-backend-v2` commits `19ca3ad0` → `429e3ac5`",
+        "line": 38
+      },
+      {
+        "level": 2,
+        "title": "2. What Is NOT Done — One Remaining Action",
+        "line": 44
+      },
+      {
+        "level": 3,
+        "title": "⚠️ Backend needs ONE manual deploy trigger",
+        "line": 46
+      },
+      {
+        "level": 1,
+        "title": "Must return: access-control-allow-origin: https://crispro-front-end.onrender.com",
+        "line": 62
+      },
+      {
+        "level": 1,
+        "title": "Must return JSON with \"https://crispro-front-end.onrender.com\" in allowed_origins list",
+        "line": 65
+      },
+      {
+        "level": 2,
+        "title": "3. What the Next Developer Needs to Know",
+        "line": 70
+      },
+      {
+        "level": 3,
+        "title": "3A. The actual entry point is `api/index.py`, NOT `main.py`",
+        "line": 72
+      },
+      {
+        "level": 3,
+        "title": "3B. CORS config lives in `api/config.py` → read by `api/index.py`",
+        "line": 84
+      },
+      {
+        "level": 1,
+        "title": "api/config.py",
+        "line": 87
+      },
+      {
+        "level": 3,
+        "title": "3C. Render auto-deploy is disabled for the backend",
+        "line": 99
+      },
+      {
+        "level": 3,
+        "title": "3D. The frontend auto-deploys correctly",
+        "line": 103
+      },
+      {
+        "level": 3,
+        "title": "3E. `VITE_API_ROOT` is a build-time variable",
+        "line": 107
+      },
+      {
+        "level": 3,
+        "title": "3F. The SL endpoint discrepancy",
+        "line": 111
+      },
+      {
+        "level": 3,
+        "title": "3G. Backend endpoints return 503 on cold start",
+        "line": 115
+      },
+      {
+        "level": 2,
+        "title": "4. What Was Sandbagged (Intentionally Deferred)",
+        "line": 121
+      },
+      {
+        "level": 3,
+        "title": "4A. 6 hooks still have inline `getAuthToken()` copies",
+        "line": 125
+      },
+      {
+        "level": 3,
+        "title": "4B. `index-*.js` bundle is 2.6MB",
+        "line": 136
+      },
+      {
+        "level": 3,
+        "title": "4C. Heavy unused dependencies in `package.json`",
+        "line": 139
+      },
+      {
+        "level": 3,
+        "title": "4D. Backend 502s on LLM-dependent endpoints",
+        "line": 142
+      },
+      {
+        "level": 3,
+        "title": "4E. `/debug/cors` endpoint needs to be removed",
+        "line": 145
+      },
+      {
+        "level": 3,
+        "title": "4F. Frontend retry logic for cold-start 503s",
+        "line": 148
+      },
+      {
+        "level": 2,
+        "title": "5. Commit Map",
+        "line": 153
+      },
+      {
+        "level": 3,
+        "title": "`fjkiani/crispro-backend-v2`",
+        "line": 155
+      },
+      {
+        "level": 3,
+        "title": "`fjkiani/crispro-front-end`",
+        "line": 165
+      },
+      {
+        "level": 2,
+        "title": "6. Architecture Facts (Learned the Hard Way)",
+        "line": 176
+      },
+      {
+        "level": 2,
+        "title": "7. One-Line Summary for the Next Developer",
+        "line": 196
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

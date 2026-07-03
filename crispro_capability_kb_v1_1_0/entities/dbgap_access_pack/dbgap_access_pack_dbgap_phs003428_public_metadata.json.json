@@ -1,0 +1,222 @@
+{
+  "id": "dbgap_access_pack:dbgap_phs003428_public_metadata.json",
+  "type": "dbgap_access_pack",
+  "name": "dbgap_phs003428_public_metadata.json",
+  "what_it_solves": "dbgap_access_pack artifact dbgap_phs003428_public_metadata.json",
+  "how_it_solves": "Auto-parsed by extension.",
+  "why_it_exists": "Every access pack / SL map / gap-lineage report is a durable operational asset — must be addressable.",
+  "attributes": {
+    "raw": {
+      "study_id": "phs003428.v1.p1",
+      "study_title": "CALGB/SWOG 80405: Genome-Wide Association Study of Patients with Advanced or Metastatic Colorectal Cancer Treated with First-Line Chemotherapy Combined with Cetuximab and/or Bevacizumab",
+      "nct_number": "NCT00265850",
+      "principal_investigator": {
+        "name": "Kouros Owzar",
+        "institution": "Duke University, Durham, North Carolina, USA"
+      },
+      "study_design": {
+        "type": [
+          "eQTL",
+          "GWAS",
+          "Multicenter",
+          "Phase III",
+          "Randomized Controlled Clinical Trial"
+        ],
+        "description": "CALGB/SWOG 80405 (NCT00265850) was a randomized phase III study of bevacizumab, cetuximab, or the combination of these two monoclonal antibodies, in addition to systemic chemotherapy for patients with untreated metastatic adenocarcinoma of the colon or rectum. We prospectively collected germline DNA and conducted genome-wide association studies using clinical outcomes and molecular features.",
+        "start_date": "September 2005",
+        "end_date": "March 2012",
+        "total_preregistered": 3058,
+        "total_randomized": 2334,
+        "sites": 396
+      },
+      "subjects": {
+        "total_consented": 1464,
+        "male": 857,
+        "female": 607,
+        "treatment_arms": {
+          "bevacizumab": 562,
+          "cetuximab": 556,
+          "bevacizumab_plus_cetuximab": 346
+        },
+        "os_events": 1208,
+        "os_censored": 256,
+        "pfs_events": 1367,
+        "pfs_censored": 97,
+        "os_time_months": {
+          "mean": 30.76,
+          "median": 26.91,
+          "min": 0,
+          "max": 100.9
+        },
+        "kras_wildtype": 968,
+        "kras_mutant": 280,
+        "race": {
+          "white": 1253,
+          "black_african_american": 148,
+          "asian": 31,
+          "other": 32
+        }
+      },
+      "consent_groups": [
+        {
+          "code": "c1",
+          "name": "DS-CA-COL",
+          "full_name": "Disease-Specific (Cancer, COL)",
+          "description": "Use of the data must be related to Cancer, COL."
+        }
+      ],
+      "datasets": {
+        "phenotype_tables": [
+          {
+            "table_id": "pht013849.v1",
+            "name": "CALGB_SWOG_80405_CRC_Subject",
+            "description": "Subject-level data including consent group and genetically estimated sex",
+            "variables": 3
+          },
+          {
+            "table_id": "pht013851.v1",
+            "name": "CALGB_SWOG_80405_CRC_Subject_Phenotypes",
+            "description": "Subject phenotypes including OS, PFS, treatment arm, clinical covariates, and circulating protein levels",
+            "variables": 57,
+            "key_variables": [
+              "dead",
+              "fu_time",
+              "pf_time",
+              "pf_stat",
+              "TREAT_ASSIGNED",
+              "KRASCONFIRM",
+              "MSI2",
+              "BRAF2",
+              "CMS",
+              "side",
+              "BMI",
+              "age",
+              "RACE_ID",
+              "SEX_ID"
+            ]
+          },
+          {
+            "table_id": "pht013850.v1",
+            "name": "CALGB_SWOG_80405_CRC_Sample",
+            "description": "Sample-level data linking subjects to samples",
+            "variables": 2
+          },
+          {
+            "table_id": "pht013852.v1",
+            "name": "CALGB_SWOG_80405_CRC_Sample_Attributes",
+            "description": "Sample attributes including body site, analyte type, and tumor status",
+            "variables": 4
+          }
+        ],
+        "molecular_data": "Germline DNA genotyping (GWAS); RNA-seq data available via linked GEO accession GSE196576"
+      },
+      "linked_publications": [
+        {
+          "pmid": "28632865",
+          "note": "Primary JAMA paper - main clinical outcomes"
+        },
+        {
+          "pmid": "29871907",
+          "note": "Correlative study - germline DNA genotyping"
+        },
+        {
+          "pmid": "32958699",
+          "note": "Correlative study - circulating protein markers"
+        },
+        {
+          "pmid": "34965954",
+          "note": "Correlative study"
+        },
+        {
+          "pmid": "34528705",
+          "note": "Correlative study"
+        },
+        {
+          "pmid": "35176136",
+          "note": "Innocenti et al. 2022 - Tumor immunogenomic features (M2 macrophage analysis)"
+        }
+      ],
+      "diseases_mesh": [
+        "Colorectal Neoplasms",
+        "Adenocarcinoma",
+        "Neoplasm Metastasis",
+        "Survival Analysis"
+      ],
+      "primary_phenotype": "Colorectal Neoplasms",
+      "access": {
+        "type": "controlled",
+        "dac": "NCI Data Access Committee (NCI DAC)",
+        "dac_url": "https://epi.grants.cancer.gov/dac/charter.html",
+        "dac_email": "ncidac@mail.nih.gov",
+        "ctep_notification_required": true,
+        "ctep_email": "NCICTEPDAR@mail.nih.gov",
+        "ctep_collaborator": "Bristol Myers Squibb",
+        "ctep_review_days": 14,
+        "dar_portal": "https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi",
+        "duc_url": "https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?view_pdf&stacc=phs003428.v1.p1",
+        "access_period_years": 1,
+        "renewal_required": true
+      },
+      "geo_linked": {
+        "accession": "GSE196576",
+        "title": "Tumor immunogenomic features determine outcomes in metastatic colorectal cancer patients treated with standard-of-care combinations of bevacizumab and cetuximab",
+        "samples": 579,
+        "platform": "Illumina HiSeq 4000",
+        "experiment_type": "Expression profiling by high throughput sequencing",
+        "public_date": "2022-02-16",
+        "contact": "Federico Innocenti, UNC Chapel Hill",
+        "supplementary_file": "GSE196576_CALGB_80405_RNAseq_Processed_data.csv.gz (22.4 MB)",
+        "bioproject": "PRJNA805525",
+        "sra": "SRP359396",
+        "relationship_to_dbgap": "GSE196576 contains the RNA-seq processed expression data (N=469-579 tumors) from the same CALGB/SWOG 80405 trial. The GEO data is PUBLICLY AVAILABLE and contains normalized expression values. The dbGaP controlled-access data (phs003428) contains the per-patient linked clinical outcomes (OS, PFS, treatment arm) and germline GWAS data. To link RNA-seq expression scores to individual patient OS/PFS outcomes, BOTH datasets are needed: GEO for expression + dbGaP for per-patient clinical linkage."
+      },
+      "public_files_downloaded": [
+        "GapExchange_phs003428.v1.p1.xml",
+        "Release_Notes.pdf",
+        "Study_Report.pdf",
+        "manifest_consent_c1.pdf",
+        "Subject_data_dict.xml",
+        "Subject_Phenotypes_data_dict.xml",
+        "Sample_Attributes_data_dict.xml",
+        "Sample_data_dict.xml",
+        "Subject_var_report.xml",
+        "Subject_Phenotypes_var_report.xml",
+        "Sample_Attributes_var_report.xml",
+        "Sample_var_report.xml"
+      ]
+    },
+    "top_keys": [
+      "study_id",
+      "study_title",
+      "nct_number",
+      "principal_investigator",
+      "study_design",
+      "subjects",
+      "consent_groups",
+      "datasets",
+      "linked_publications",
+      "diseases_mesh",
+      "primary_phenotype",
+      "access",
+      "geo_linked",
+      "public_files_downloaded"
+    ],
+    "bytes": 6227,
+    "note": "raw carried"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/dbgap_phs003428_public_metadata.json",
+      "exists": true,
+      "bytes": 6227,
+      "sha256": "e4d5cec69da47e926a77780054e50ae45719d00bb29e9792adc2b147b987d7ee",
+      "mtime_iso": "2026-05-13T07:20:22+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:access_packs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

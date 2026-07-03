@@ -1,0 +1,32 @@
+{
+  "id": "roadmap_chapter:00_in_multimodal_routes_py_get_api_v1_analyze_evidence_matrix",
+  "type": "roadmap_chapter",
+  "name": "Ch 00 — In multimodal_routes.py — GET /api/v1/analyze/evidence_matrix",
+  "what_it_solves": "CRISPRO_SL_PHD_ROADMAP chapter 'In multimodal_routes.py — GET /api/v1/analyze/evidence_matrix' spanning lines 956..978.",
+  "how_it_solves": "Chapter body preview (first 2000 chars) attached; full content lives in the source file. Subheadings enumerated.",
+  "why_it_exists": "Chapter is the natural unit of the roadmap — one entity per chapter makes 'what does Ch 3.4 say about the fuser?' addressable.",
+  "attributes": {
+    "level": 1,
+    "start_line": 956,
+    "end_line": 978,
+    "byte_length": 1058,
+    "subheadings": [],
+    "body_preview_2000c": "\t\n\n\t@router.get(\"/evidence_matrix\")\n\tasync def get_evidence_matrix(\n\t    gene: str = Query(..., description=\"Gene symbol to query\"),\n\t    rs_ccne1_amplified: bool = Query(False, description=\"CCNE1 amplification status\"),\n\t    rs_tp53_lof: bool = Query(False, description=\"TP53 loss-of-function status\"),\n\t    rs_mbd4_lof: bool = Query(False, description=\"MBD4 loss-of-function status\"),\n\t    rs_msi_h: bool = Query(False, description=\"Microsatellite instability high status\"),\n\t    rs_arid1a_lof: bool = Query(False, description=\"ARID1A loss-of-function status\"),\n\t    rs_myc_amplified: bool = Query(False, description=\"MYC amplification status\"),\n\t):\n\t    rs_features = RSFeatureSet(\n\t        ccne1_amplified=rs_ccne1_amplified,\n\t        tp53_lof=rs_tp53_lof,\n\t        mbd4_lof=rs_mbd4_lof,\n\t        msi_h=rs_msi_h,\n\t        arid1a_lof=rs_arid1a_lof,\n\t        myc_amplified=rs_myc_amplified,\n\t    )\n\t    return build_evidence_matrix(gene=gene, rs_features=rs_features)\n\t5.3 Test Specification"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "lines 956..978"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:synthetic_lethality_deep"
+}

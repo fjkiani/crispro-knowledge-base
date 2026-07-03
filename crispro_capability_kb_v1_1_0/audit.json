@@ -1,0 +1,55 @@
+{
+  "generated_at_utc": "2026-07-03T21:43:36+00:00",
+  "kb_version": "v1.1.0",
+  "streams_ingested": [
+    "v1:architecture",
+    "v1:brenus_and_deliverables",
+    "v1:evidence_and_receipts",
+    "v1:moat_and_governance",
+    "v1:operations_and_access",
+    "v1:synthetic_lethality",
+    "v2:architecture_deep",
+    "v2:brenus_and_operations_deep",
+    "v2:brenus_and_operations_deep_patch",
+    "v2:evidence_and_receipts_deep",
+    "v2:moat_and_governance_deep",
+    "v2:synthetic_lethality_deep"
+  ],
+  "entity_total": 422,
+  "files_audited_total": 233,
+  "checks": {
+    "A_receipt_existence": {
+      "pass": true,
+      "missing_receipts": [],
+      "missing_count": 0
+    },
+    "B_verbatim_lookups": {
+      "pass": true,
+      "failures": [],
+      "failure_count": 0
+    },
+    "C_duplicate_ids": {
+      "pass": true,
+      "duplicates": [],
+      "duplicate_count": 0
+    },
+    "D_correction_lock_traps": {
+      "pass": true,
+      "results": {
+        "D1_mbd4_receipt_canonical_state": true,
+        "D2_mrtx1719_bug_open_status": true
+      }
+    },
+    "E_cross_ref_integrity": {
+      "pass": true,
+      "dangling": [],
+      "dangling_count": 0
+    },
+    "F_what_how_why_present": {
+      "pass": true,
+      "missing": [],
+      "missing_count": 0
+    }
+  },
+  "overall_pass": true
+}

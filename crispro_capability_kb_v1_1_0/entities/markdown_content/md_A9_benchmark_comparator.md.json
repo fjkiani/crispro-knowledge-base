@@ -1,0 +1,60 @@
+{
+  "id": "md:A9_benchmark_comparator.md",
+  "type": "markdown_content",
+  "name": "A9_benchmark_comparator.md",
+  "what_it_solves": "Structured view of A9_benchmark_comparator.md: heading tree + first 2000 chars.",
+  "how_it_solves": "Regex heading extract + preview slice.",
+  "why_it_exists": "Turns evidence-narrative markdowns into a searchable heading index without duplicating the full body.",
+  "attributes": {
+    "byte_length": 4744,
+    "heading_count": 6,
+    "headings": [
+      {
+        "level": 2,
+        "title": "Analysis A9: GDSC2 Pharmacology Benchmark — ATM-LOF as Positive Control for ATRi Sensitivity",
+        "line": 2
+      },
+      {
+        "level": 3,
+        "title": "Key Results",
+        "line": 10
+      },
+      {
+        "level": 3,
+        "title": "MSI Enrichment (Confound Pass)",
+        "line": 25
+      },
+      {
+        "level": 3,
+        "title": "Benchmark-Comparator Paragraph",
+        "line": 30
+      },
+      {
+        "level": 3,
+        "title": "Gemcitabine Pharmacology",
+        "line": 40
+      },
+      {
+        "level": 3,
+        "title": "Verdict",
+        "line": 44
+      }
+    ],
+    "preview": "\n## Analysis A9: GDSC2 Pharmacology Benchmark — ATM-LOF as Positive Control for ATRi Sensitivity\n\n**Data source:** GDSC2 release 8.5 (Sanger Institute, Oct 2023), linked to DepMap 23Q4 via SangerModelID (967/969 lines matched).\n**Drugs tested:** AZD6738/ceralasertib (ATRi, n=958 lines), VE-822/berzosertib (ATRi, n=894), MK-1775/adavosertib (WEE1i, n=967), Gemcitabine (n=960).\n**Groups:** ATM-LOF (n=31 with AZD6738 data), MBD4-LOF (n=14 with AZD6738 data), respective WT comparators.\n**Strata:** All lines and MSS-only (MSIScore ≤ 10).\n**Statistics:** Mann-Whitney U on AUC and LN_IC50; Cohen's d; BH correction within gene × stratum.\n\n### Key Results\n\n| Gene | Drug | Stratum | n_LOF | n_WT | Δmedian AUC | padj | Cohen's d | Direction |\n|------|------|---------|-------|------|-------------|------|-----------|-----------|\n| ATM-LOF | AZD6738 | All lines | 31 | 925 | +0.005 | 0.773 | +0.121 | LOF LESS sensitive |\n| ATM-LOF | AZD6738 | MSS-only | 21 | 851 | +0.030 | 0.225 | +0.348 | LOF LESS sensitive |\n| MBD4-LOF | AZD6738 | All lines | 14 | 942 | −0.110 | 0.103 | −0.579 | LOF more sensitive |\n| MBD4-LOF | AZD6738 | MSS-only | 1 | 871 | — | — | — | INFEASIBLE (n=1) |\n| ATM-LOF | VE-822 | All lines | 27 | 865 | −0.018 | 0.773 | −0.156 | LOF more sensitive |\n| ATM-LOF | VE-822 | MSS-only | 19 | 792 | −0.026 | 0.794 | −0.032 | LOF more sensitive |\n| MBD4-LOF | VE-822 | All lines | 13 | 879 | −0.010 | 0.474 | −0.283 | LOF more sensitive |\n| ATM-LOF | Gemcitabine | All lines | 31 | 927 | +0.140 | 0.033* | +0.581 | LOF LESS sensitive |\n| ATM-LOF | Gemcitabine | MSS-only | 21 | 853 | +0.174 | 0.019* | +0.747 | LOF LESS sensitive |\n| MBD4-LOF | MK-1775 | All lines | 15 | 950 | −0.077 | 0.241 | −0.396 | LOF more sensitive |\n\n### MSI Enrichment (Confound Pass)\n- ATM-LOF lines: 32% MSI-H vs 7% in WT (AZD6738 dataset); TP53-LOF co-mutation 65%\n- MBD4-LOF lines: 93% MSI-H vs 7% in WT — near-complete MSI-H collinearity\n- MBD4-LOF MSS-only: n=1 line (SW1783, LGG) — MSS-restricted analysi"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A9_benchmark_comparator.md",
+      "exists": true,
+      "bytes": 4799,
+      "sha256": "fddf4d439db6e55a36d0ab7e86e88604fb275cc2999b09084b3d4b65e43289dc",
+      "mtime_iso": "2026-04-27T04:33:26+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

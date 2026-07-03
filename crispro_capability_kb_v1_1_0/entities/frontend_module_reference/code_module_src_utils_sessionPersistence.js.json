@@ -1,0 +1,46 @@
+{
+  "id": "code_module:src/utils/sessionPersistence.js",
+  "type": "frontend_module_reference",
+  "name": "src/utils/sessionPersistence.js",
+  "what_it_solves": "Frontend module 'src/utils/sessionPersistence.js' referenced by the architecture / frontend audit corpus.",
+  "how_it_solves": "Extracted by regex for .ts/.tsx/.js/.jsx paths.",
+  "why_it_exists": "Enumerates the concrete frontend surface (crispro-front-end) so any SL/Ayesha UI claim can be traced to a real file.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 22,
+        "context": "ebulkingMRD.jsx` |\n| Auth token centralization | `getAuthToken()` extracted to `src/utils/sessionPersistence.js`. | `useAyeshaTherapyFitBundle.js` |\n| Bundle splitting | `manualChunks` re-ena"
+      },
+      {
+        "source_file": "/mnt/results/CONFIG_NORMALIZATION_REPORT.md",
+        "line": 60,
+        "context": "plicated across 6+ hooks.\n\n**After:**\n\n- Shared `getAuthToken()` exported from `src/utils/sessionPersistence.js`\n- Uses `SESSION_KEYS.AUTH_SESSION` constant (`= 'mock_auth_session'`) instead "
+      }
+    ],
+    "reference_count": 2
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    },
+    {
+      "path": "/mnt/results/CONFIG_NORMALIZATION_REPORT.md",
+      "exists": true,
+      "bytes": 3342,
+      "sha256": "d068e515e4d22a53cc02f440946021fc7fdea1cc9f76914d06f42f4e1a0584f7",
+      "mtime_iso": "2026-05-05T07:04:43+00:00"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-front-end",
+    "component:frontend_canonicalization"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

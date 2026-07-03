@@ -1,0 +1,115 @@
+{
+  "id": "dbgap_access_pack:dbgap_phs003428_application_draft.md",
+  "type": "dbgap_access_pack",
+  "name": "dbgap_phs003428_application_draft.md",
+  "what_it_solves": "dbgap_access_pack artifact dbgap_phs003428_application_draft.md",
+  "how_it_solves": "Auto-parsed by extension.",
+  "why_it_exists": "Every access pack / SL map / gap-lineage report is a durable operational asset — must be addressable.",
+  "attributes": {
+    "byte_length": 11074,
+    "heading_count": 17,
+    "headings": [
+      {
+        "level": 1,
+        "title": "dbGaP Data Access Request — Pre-filled Draft",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "Study: phs003428.v1.p1 — CALGB/SWOG 80405",
+        "line": 2
+      },
+      {
+        "level": 2,
+        "title": "⚠️ CTEP PRE-NOTIFICATION REQUIRED (DO FIRST)",
+        "line": 11
+      },
+      {
+        "level": 3,
+        "title": "CTEP Notification Email Template",
+        "line": 20
+      },
+      {
+        "level": 2,
+        "title": "DATA ACCESS REQUEST (DAR) — COMPLETE FORM",
+        "line": 69
+      },
+      {
+        "level": 3,
+        "title": "Section 1: Project Information",
+        "line": 71
+      },
+      {
+        "level": 3,
+        "title": "Section 2: Datasets Requested",
+        "line": 95
+      },
+      {
+        "level": 3,
+        "title": "Section 3: Research Use Statement",
+        "line": 110
+      },
+      {
+        "level": 3,
+        "title": "Section 4: Non-Technical Summary",
+        "line": 122
+      },
+      {
+        "level": 3,
+        "title": "Section 5: Collaborators",
+        "line": 128
+      },
+      {
+        "level": 3,
+        "title": "Section 6: IRB",
+        "line": 143
+      },
+      {
+        "level": 3,
+        "title": "Section 7: Cloud Computing (if applicable)",
+        "line": 154
+      },
+      {
+        "level": 3,
+        "title": "Section 8: Data Security Certification",
+        "line": 161
+      },
+      {
+        "level": 3,
+        "title": "Section 9: Acknowledgment Statement",
+        "line": 173
+      },
+      {
+        "level": 3,
+        "title": "Section 10: Publication Review",
+        "line": 181
+      },
+      {
+        "level": 2,
+        "title": "SUBMISSION CHECKLIST",
+        "line": 189
+      },
+      {
+        "level": 2,
+        "title": "KEY CONTACTS",
+        "line": 207
+      }
+    ],
+    "preview": "# dbGaP Data Access Request — Pre-filled Draft\n## Study: phs003428.v1.p1 — CALGB/SWOG 80405\n\n**Prepared:** 2025  \n**Status:** READY TO SUBMIT (pending eRA Commons account and Institutional SO signature)  \n**DAC:** NCI Data Access Committee (NCI DAC)  \n**Submission portal:** https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi  \n\n---\n\n## ⚠️ CTEP PRE-NOTIFICATION REQUIRED (DO FIRST)\n\nBefore submitting the DAR, you MUST send a CTEP Notification email to:  \n**NCICTEPDAR@mail.nih.gov**\n\nThe CTEP Collaborator (Bristol Myers Squibb) has 14 calendar days to review.  \nYou may submit the DAR concurrently with sending the CTEP notification.  \nInclude a copy of the CTEP submission approval email with your DAR.\n\n### CTEP Notification Email Template\n\n```\nTo: NCICTEPDAR@mail.nih.gov\nSubject: CTEP Notification — dbGaP DAR for phs003428.v1.p1 (CALGB/SWOG 80405)\n\nDear CTEP,\n\nI am applying through the NIH database of Genotypes and Phenotypes (dbGaP) for access \nto data related to a NCI Cancer Therapy Evaluation Program (CTEP) clinical trial. I \nunderstand that this CTEP trial relates to a drug or agents provided by a CTEP \nCollaborator (Bristol Myers Squibb). I agree that I will allow the CTEP Collaborator a \n2-week review of the information related to my DAR so they will understand my intended \nuse of the data generated using their proprietary agent(s). I understand that this CTEP \nreview process takes place concurrently with my dbGaP project review, and that I can \nsubmit my dbGaP authorized access request as soon as I send this CTEP Notification. I \nwill submit a copy of this CTEP Notification with my dbGaP access request.\n\nFor this review, I provide the following information from my dbGaP application:\n\na. My institution and contact information:\n   [HUMAN_INPUT_REQUIRED: Full name, institution, street address, phone, email]\n\nb. dbGaP Dataset name and accession number:\n   CALGB/SWOG 80405 — phs003428.v1.p1\n\nc. Research Use Statement:\n   [See Research Use Statement below]\n\nd. Non-Technical Summary:\n   [See Non-Technical Summary below]\n\nI understand that:\n1. I will receive an acknowledgement of receipt from CTEP of this email.\n2. I may or may not receive any feedback from the CTEP Collaborator.\n3. If I do receive comments from the CTEP Collaborator, I will seriously consider them, \n   but they are not binding regarding my use of the CTEP data.\n4. As specified in the Data Use Certification (DUC) for the dbGaP dataset I am \n   requesting, any manuscripts resulting from the use of CTEP da"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/dbgap_phs003428_application_draft.md",
+      "exists": true,
+      "bytes": 11104,
+      "sha256": "8e1f41aa0f999e53cde0adbeeb7fdaba52802bb6e1b686a24ac1707159af42db",
+      "mtime_iso": "2026-05-13T07:25:43+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:access_packs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

@@ -1,0 +1,214 @@
+{
+  "id": "csv:depmap_mbd4_lof_cell_lines.csv",
+  "type": "csv_content",
+  "name": "depmap_mbd4_lof_cell_lines.csv",
+  "what_it_solves": "Parsed contents of depmap_mbd4_lof_cell_lines.csv: header + row count + column ranges.",
+  "how_it_solves": "csv.reader → header + row list; per column, if numeric ⇒ (n, min, max, mean); if categorical ⇒ top-3 values + unique count.",
+  "why_it_exists": "Deep pass: previous stream had file metadata only. This entity carries the actual data shape so downstream consumers can validate any claim about A1/A2/A3/… without re-parsing.",
+  "attributes": {
+    "header": [
+      "ModelID",
+      "MolecularConsequence",
+      "ProteinChange",
+      "VepImpact",
+      "AF",
+      "CellLineName",
+      "OncotreeLineage",
+      "OncotreePrimaryDisease"
+    ],
+    "row_count": 21,
+    "sample_rows": [
+      [
+        "ACH-000883",
+        "SO:0001587|nonsense,SO:0001624|3_prime_UTR_variant",
+        "p.L557Ter",
+        "HIGH",
+        "0.937",
+        "SW 1783",
+        "CNS/Brain",
+        "Diffuse Glioma"
+      ],
+      [
+        "ACH-001709",
+        "SO:0001589|frameshift_variant,SO:0001627|intron_variant",
+        "p.E314RfsTer13",
+        "HIGH",
+        "0.435",
+        "WSU-NHL",
+        "Lymphoid",
+        "Mature B-Cell Neoplasms"
+      ],
+      [
+        "ACH-000936",
+        "SO:0001589|frameshift_variant,SO:0001627|intron_variant",
+        "p.E314RfsTer13",
+        "HIGH",
+        "0.441",
+        "EFO-27",
+        "Ovary/Fallopian Tube",
+        "Ovarian Epithelial Tumor"
+      ],
+      [
+        "ACH-001669",
+        "",
+        "p.E314KfsTer4",
+        "HIGH",
+        "0.442",
+        "TANOUE",
+        "Lymphoid",
+        "B-Cell Acute Lymphoblastic Leukemia"
+      ],
+      [
+        "ACH-000985",
+        "",
+        "p.E314KfsTer4",
+        "HIGH",
+        "0.591",
+        "LS411N",
+        "Bowel",
+        "Colorectal Adenocarcinoma"
+      ]
+    ],
+    "column_ranges": {
+      "ModelID": {
+        "categorical": true,
+        "top_values": [
+          [
+            "ACH-000883",
+            1
+          ],
+          [
+            "ACH-001709",
+            1
+          ],
+          [
+            "ACH-000936",
+            1
+          ]
+        ],
+        "unique_count": 21
+      },
+      "MolecularConsequence": {
+        "categorical": true,
+        "top_values": [
+          [
+            "",
+            17
+          ],
+          [
+            "SO:0001589|frameshift_variant,SO:0001627|intron_variant",
+            3
+          ],
+          [
+            "SO:0001587|nonsense,SO:0001624|3_prime_UTR_variant",
+            1
+          ]
+        ],
+        "unique_count": 3
+      },
+      "ProteinChange": {
+        "categorical": true,
+        "top_values": [
+          [
+            "p.E314KfsTer4",
+            16
+          ],
+          [
+            "p.E314RfsTer13",
+            3
+          ],
+          [
+            "p.L557Ter",
+            1
+          ]
+        ],
+        "unique_count": 4
+      },
+      "VepImpact": {
+        "categorical": true,
+        "top_values": [
+          [
+            "HIGH",
+            21
+          ]
+        ],
+        "unique_count": 1
+      },
+      "AF": {
+        "n_numeric": 21,
+        "min": 0.399,
+        "max": 0.937,
+        "mean": 0.5186190476190476
+      },
+      "CellLineName": {
+        "categorical": true,
+        "top_values": [
+          [
+            "SW 1783",
+            1
+          ],
+          [
+            "WSU-NHL",
+            1
+          ],
+          [
+            "EFO-27",
+            1
+          ]
+        ],
+        "unique_count": 21
+      },
+      "OncotreeLineage": {
+        "categorical": true,
+        "top_values": [
+          [
+            "Bowel",
+            7
+          ],
+          [
+            "Lymphoid",
+            5
+          ],
+          [
+            "Ovary/Fallopian Tube",
+            3
+          ]
+        ],
+        "unique_count": 8
+      },
+      "OncotreePrimaryDisease": {
+        "categorical": true,
+        "top_values": [
+          [
+            "Colorectal Adenocarcinoma",
+            7
+          ],
+          [
+            "Ovarian Epithelial Tumor",
+            3
+          ],
+          [
+            "Mature B-Cell Neoplasms",
+            2
+          ]
+        ],
+        "unique_count": 10
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/depmap_mbd4_lof_cell_lines.csv",
+      "exists": true,
+      "bytes": 2013,
+      "sha256": "757d4741435ace860169ba497912b846a129025ce8245597691c78df2ab0f819",
+      "mtime_iso": "2026-04-25T08:05:50+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

@@ -1,0 +1,90 @@
+{
+  "id": "md:manuscript_diff_v2.md",
+  "type": "markdown_content",
+  "name": "manuscript_diff_v2.md",
+  "what_it_solves": "Structured view of manuscript_diff_v2.md: heading tree + first 2000 chars.",
+  "how_it_solves": "Regex heading extract + preview slice.",
+  "why_it_exists": "Turns evidence-narrative markdowns into a searchable heading index without duplicating the full body.",
+  "attributes": {
+    "byte_length": 6532,
+    "heading_count": 12,
+    "headings": [
+      {
+        "level": 1,
+        "title": "Manuscript Incremental Diff — Denominator Reconciliation Pass (v2 → v3)",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "Cohort Accounting Table (Single Source of Truth)",
+        "line": 9
+      },
+      {
+        "level": 2,
+        "title": "C-WT-1 — Abstract: 942 → 914",
+        "line": 33
+      },
+      {
+        "level": 2,
+        "title": "C-WT-2 — Results table header: 942 → 914",
+        "line": 43
+      },
+      {
+        "level": 2,
+        "title": "C-WT-3 — Results intro sentence: 942 → 914",
+        "line": 51
+      },
+      {
+        "level": 2,
+        "title": "C-WT-4 — Stress Test 1: 934 → 906; Δ −0.913 → −0.910",
+        "line": 59
+      },
+      {
+        "level": 2,
+        "title": "C-WT-5 — Stress Test 2: 625 → 619",
+        "line": 69
+      },
+      {
+        "level": 2,
+        "title": "C-WT-6 — Stress Test 4 non-Bowel: 900 → 873; Δ/d precision",
+        "line": 79
+      },
+      {
+        "level": 2,
+        "title": "C-WT-7 — Adavosertib sentence: 929 → 920",
+        "line": 89
+      },
+      {
+        "level": 2,
+        "title": "C-WT-8 — New Methods sentence (cohort-accounting footnote)",
+        "line": 99
+      },
+      {
+        "level": 2,
+        "title": "Unchanged (confirmed correct)",
+        "line": 109
+      },
+      {
+        "level": 2,
+        "title": "Summary",
+        "line": 122
+      }
+    ],
+    "preview": "# Manuscript Incremental Diff — Denominator Reconciliation Pass (v2 → v3)\n**Base:** `manuscript_v2.md`\n**Target:** `manuscript_v3.md`\n**Date:** 2026-04-27\n**Scope:** Denominator corrections only. Zero narrative changes. All corrections sourced from `canonical_atr_wee1_rerun.json` (2026-04-05).\n\n---\n\n## Cohort Accounting Table (Single Source of Truth)\n\nEvery WT count used anywhere in the manuscript must match one of these rows.\n\n| Stage | n_LOF | n_WT | Definition | Artifact entry |\n|---|---|---|---|---|\n| Primary (ceralasertib) | 14 | **914** | True-LOF vs no-somatic-MBD4 WT, post-GDSC2 ceralasertib intersection | `WT_rule=Methods_no_somatic_MBD4` |\n| MSI purge | 10 | **906** | 914 WT minus ModelSubtypeFeatures MSI-H lines | `Stress MSI purge` |\n| TP53 stratification | 11 | **619** | 914 WT intersected with TP53-mut | `Stress TP53` |\n| Lineage — Bowel | 5 | **41** | Bowel/Colorectal subset of 914 WT | `Stress Lineage Bowel` |\n| Lineage — non-Bowel | 9 | **873** | Complement of Bowel within 914 WT | `Stress Lineage non-Bowel` |\n| Alternate WT (sensitivity only) | 14 | **922** | Includes MBD4 non-LOF mutants; NOT primary comparator | `WT_rule=Alternate_non_LOF_only` |\n| Adavosertib (primary) | 15 | **920** | Same mutation rule, different drug intersection | adavosertib primary entry |\n\n**Retired numbers:**\n- **942** = pre-GDSC2-intersection mutation-filtered pool. Not a pharmacological comparator. Removed from all result statements.\n- **934** = stale, no artifact support. Replaced with 906.\n- **625** = stale, no artifact support. Replaced with 619.\n- **900** = stale, no artifact support. Replaced with 873.\n- **929** = alternate WT pool for adavosertib. Replaced with 920 (primary).\n- **42** (Bowel WT) = stale, no artifact support. Artifact gives n_wt=41 for Bowel lineage entry. Replaced with 41.\n\n---\n\n## C-WT-1 — Abstract: 942 → 914\n\n~~(LN_IC50 Δ=−0.73, p=0.021, Cohen's d=−0.50; n=14 True-LOF vs **942** WT; GDSC2)~~\n\n→ (LN_IC50 Δ=−0.73, p=0.021, Cohen's d=−0.50; n=14 T"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/manuscript_diff_v2.md",
+      "exists": true,
+      "bytes": 6683,
+      "sha256": "cbc891aa5b1d283dd4a39d9a150cfb6b2940fe9a5c340c2b7c0f5b4ff68be3b3",
+      "mtime_iso": "2026-04-27T06:44:04+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

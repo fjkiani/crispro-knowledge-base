@@ -1,0 +1,180 @@
+{
+  "id": "dbgap_access_pack:dbgap_phs003428_blocker_table.csv",
+  "type": "dbgap_access_pack",
+  "name": "dbgap_phs003428_blocker_table.csv",
+  "what_it_solves": "dbgap_access_pack artifact dbgap_phs003428_blocker_table.csv",
+  "how_it_solves": "Auto-parsed by extension.",
+  "why_it_exists": "Every access pack / SL map / gap-lineage report is a durable operational asset — must be addressable.",
+  "attributes": {
+    "header": [
+      "prerequisite",
+      "status",
+      "owner",
+      "dependency",
+      "time_to_clear_days",
+      "action_needed",
+      "url"
+    ],
+    "row_count": 12,
+    "sample_rows": [
+      [
+        "eRA Commons account (PI)",
+        "UNKNOWN",
+        "Fahad Kiani (PI)",
+        "None",
+        "1-3",
+        "Register at eRA Commons if not already registered. PI must be eligible to conduct independent research (not postdoc/student/trainee).",
+        "https://public.era.nih.gov/commons/"
+      ],
+      [
+        "eRA Commons account (Institutional SO)",
+        "UNKNOWN",
+        "Institution (Office of Sponsored Research)",
+        "None",
+        "1-3",
+        "Identify Institutional Signing Official (typically in Office of Sponsored Research). Confirm they have eRA Commons SO account.",
+        "https://public.era.nih.gov/commons/"
+      ],
+      [
+        "eRA Commons account (IT Director)",
+        "UNKNOWN",
+        "Institution (IT Department)",
+        "None",
+        "1-3",
+        "Identify senior IT official who can certify data security compliance. Must have eRA Commons account.",
+        "https://public.era.nih.gov/commons/"
+      ]
+    ],
+    "column_ranges": {
+      "prerequisite": {
+        "categorical": true,
+        "top_values": [
+          [
+            "eRA Commons account (PI)",
+            1
+          ],
+          [
+            "eRA Commons account (Institutional SO)",
+            1
+          ],
+          [
+            "eRA Commons account (IT Director)",
+            1
+          ]
+        ],
+        "unique_count": 12
+      },
+      "status": {
+        "categorical": true,
+        "top_values": [
+          [
+            "UNKNOWN",
+            6
+          ],
+          [
+            "PENDING",
+            3
+          ],
+          [
+            "READY_TO_SEND",
+            1
+          ]
+        ],
+        "unique_count": 5
+      },
+      "owner": {
+        "categorical": true,
+        "top_values": [
+          [
+            "Fahad Kiani (PI)",
+            4
+          ],
+          [
+            "Institution (Office of Sponsored Research)",
+            1
+          ],
+          [
+            "Institution (IT Department)",
+            1
+          ]
+        ],
+        "unique_count": 9
+      },
+      "dependency": {
+        "categorical": true,
+        "top_values": [
+          [
+            "None",
+            4
+          ],
+          [
+            "eRA Commons account (PI)",
+            2
+          ],
+          [
+            "CTEP pre-notification email",
+            1
+          ]
+        ],
+        "unique_count": 8
+      },
+      "time_to_clear_days": {
+        "n_numeric": 1,
+        "min": 14.0,
+        "max": 14.0,
+        "mean": 14.0
+      },
+      "action_needed": {
+        "categorical": true,
+        "top_values": [
+          [
+            "Register at eRA Commons if not already registered. PI must be eligible to conduct independent research (not postdoc/student/trainee).",
+            1
+          ],
+          [
+            "Identify Institutional Signing Official (typically in Office of Sponsored Research). Confirm they have eRA Commons SO account.",
+            1
+          ],
+          [
+            "Identify senior IT official who can certify data security compliance. Must have eRA Commons account.",
+            1
+          ]
+        ],
+        "unique_count": 12
+      },
+      "url": {
+        "categorical": true,
+        "top_values": [
+          [
+            "https://public.era.nih.gov/commons/",
+            4
+          ],
+          [
+            "https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi",
+            3
+          ],
+          [
+            "https://epi.grants.cancer.gov/dac/charter.html",
+            2
+          ]
+        ],
+        "unique_count": 6
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/dbgap_phs003428_blocker_table.csv",
+      "exists": true,
+      "bytes": 3562,
+      "sha256": "a99f974cb216d27fa0cc7d75269bcada429eaaf73cd550548e8f11f646fc250f",
+      "mtime_iso": "2026-05-13T07:24:40+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:access_packs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

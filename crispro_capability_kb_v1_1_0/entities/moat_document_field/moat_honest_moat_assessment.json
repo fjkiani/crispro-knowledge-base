@@ -1,0 +1,47 @@
+{
+  "id": "moat:honest_moat_assessment",
+  "type": "moat_document_field",
+  "name": "moat_comparison — honest_moat_assessment",
+  "what_it_solves": "Self-critical assessment paragraph naming where the moat is real vs where it is aspirational.",
+  "how_it_solves": "Extracted verbatim.",
+  "why_it_exists": "Anti-hype guard: the KB must carry the honest assessment, not only the winning dimensions.",
+  "attributes": {
+    "raw": {
+      "where_CrisPRO_genuinely_outperforms": [
+        "Computational falsification at scale (PARP1 axis in MBD4-LOF context demonstrated; methodology generalizable)",
+        "Systematic confound stress-testing within single dataset (MSI + TP53 + LOO + lineage)",
+        "Open code + artifact provenance with full-precision statistical values",
+        "Cross-axis evidence matrix that survives compaction (canonical artifact frozen 2026-04-05)"
+      ],
+      "where_Bev2026_outperforms": [
+        "Cellular validation in isogenic pairs + cross-tumor + PDOs (gold-standard biological evidence)",
+        "Bi-directional MTAP editing (rescue + KO) as in-cell falsification mechanism",
+        "PDO infrastructure (TOR Bern + clinical samples)",
+        "Wet-lab synergy measurement (SynergyFinder 3.1 HSA scores with 95% CI)"
+      ],
+      "complementarity_opportunity": "CrisPRO + Bev2026 lab = computational triage + cellular validation. CrisPRO ranks candidate PDOs by biomarker score → Demichelis/Kruithof-de Julio lab validates the top-N in wet lab. Each side does what it cannot do alone.",
+      "fix_required_before_outreach": [
+        "MRTX1719 axis-mapping bug in pharmacologic_analyzer.py:66 (PRMT5 vs WRN) — flagged in DH JSON and CVP JSON. Recommended pre-outreach fix.",
+        "PRMT5_MTAP_COOPERATIVE axis missing from CandidateAxis enum (currently 7 axes; this would be the 8th).",
+        "n=942 prose value (manuscript Abstract/Table/Fig 2 caption) does not reproduce from canonical_atr_wee1_rerun.json — user's own audit report flags this as an unresolved item; affects only internal CrisPRO manuscript, not outreach material."
+      ]
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00",
+      "span_extracted": "honest_moat_assessment"
+    }
+  ],
+  "cross_refs": [
+    "moat:aggregate",
+    "moat:moat_caveats"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:moat_and_governance_deep"
+}

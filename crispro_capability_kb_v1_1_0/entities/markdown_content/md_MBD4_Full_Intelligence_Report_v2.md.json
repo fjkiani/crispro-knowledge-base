@@ -1,0 +1,185 @@
+{
+  "id": "md:MBD4_Full_Intelligence_Report_v2.md",
+  "type": "markdown_content",
+  "name": "MBD4_Full_Intelligence_Report_v2.md",
+  "what_it_solves": "Structured view of MBD4_Full_Intelligence_Report_v2.md: heading tree + first 2000 chars.",
+  "how_it_solves": "Regex heading extract + preview slice.",
+  "why_it_exists": "Turns evidence-narrative markdowns into a searchable heading index without duplicating the full body.",
+  "attributes": {
+    "byte_length": 16949,
+    "heading_count": 31,
+    "headings": [
+      {
+        "level": 1,
+        "title": "MBD4 Full Intelligence Report — v2",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "Section 1: HAP1-MBD4-KO Cell Line Status",
+        "line": 9
+      },
+      {
+        "level": 3,
+        "title": "Cellosaurus-Confirmed Clones",
+        "line": 11
+      },
+      {
+        "level": 3,
+        "title": "Ordering Priority (Updated)",
+        "line": 21
+      },
+      {
+        "level": 3,
+        "title": "ATRi/WEE1i Data in HAP1-MBD4-KO",
+        "line": 29
+      },
+      {
+        "level": 2,
+        "title": "Section 2: DepMap MBD4-LOF Cell Line Inventory",
+        "line": 34
+      },
+      {
+        "level": 3,
+        "title": "Confirmed MBD4-LOF Cell Lines (n=21 unique models)",
+        "line": 39
+      },
+      {
+        "level": 2,
+        "title": "Section 3: Complete Analysis Results (A1–A8)",
+        "line": 68
+      },
+      {
+        "level": 3,
+        "title": "A1: CRISPR Co-dependency (Pan-cancer)",
+        "line": 70
+      },
+      {
+        "level": 3,
+        "title": "A1b: CRISPR Mutation-Stratified (ATR)",
+        "line": 76
+      },
+      {
+        "level": 3,
+        "title": "A2: PRISM Drug Sensitivity (ATRi/WEE1i)",
+        "line": 82
+      },
+      {
+        "level": 3,
+        "title": "A3: TCGA-OV Replication Stress Signature",
+        "line": 88
+      },
+      {
+        "level": 3,
+        "title": "A4: Pan-Cancer MBD4-LOF Frequency",
+        "line": 94
+      },
+      {
+        "level": 3,
+        "title": "A5: UCEC Survival (MBD4-LOF)",
+        "line": 100
+      },
+      {
+        "level": 3,
+        "title": "A6: MSI-Stratified ATR CRISPR (NEW)",
+        "line": 105
+      },
+      {
+        "level": 3,
+        "title": "A7: UCEC RS Signature (DepMap) (NEW)",
+        "line": 119
+      },
+      {
+        "level": 3,
+        "title": "A8: Dependency Probability Profile (NEW)",
+        "line": 126
+      },
+      {
+        "level": 2,
+        "title": "Section 4: In Silico Computational Evidence (Supplementary)",
+        "line": 141
+      },
+      {
+        "level": 3,
+        "title": "IS-1: DeepPurpose Drug-Target Interaction (5-model ensemble)",
+        "line": 143
+      },
+      {
+        "level": 3,
+        "title": "IS-2: LINCS Endometrial RS Enrichment",
+        "line": 152
+      },
+      {
+        "level": 2,
+        "title": "Section 5: Literature Verification (This Session)",
+        "line": 161
+      },
+      {
+        "level": 3,
+        "title": "Saxena 2024 (PMID 38688279, Mol Cell)",
+        "line": 163
+      },
+      {
+        "level": 3,
+        "title": "Chabot 2022 (PMID 36323843, PMC9630501)",
+        "line": 169
+      },
+      {
+        "level": 3,
+        "title": "Wang 2023 (PMID 37932012)",
+        "line": 178
+      },
+      {
+        "level": 2,
+        "title": "Section 6: Complete Evidence Matrix",
+        "line": 186
+      },
+      {
+        "level": 2,
+        "title": "Section 7: Fundamental Limitations",
+        "line": 207
+      },
+      {
+        "level": 2,
+        "title": "Section 8: Path to Upgrade",
+        "line": 221
+      },
+      {
+        "level": 3,
+        "title": "Wet Lab (Required — Cannot Be Replaced Computationally)",
+        "line": 223
+      },
+      {
+        "level": 3,
+        "title": "Data Access (Low Effort)",
+        "line": 231
+      },
+      {
+        "level": 3,
+        "title": "Next Computational Analyses (Low Priority — Diminishing Returns)",
+        "line": 238
+      },
+      {
+        "level": 2,
+        "title": "Section 9: Rodrigues Email (Ready to Send)",
+        "line": 248
+      }
+    ],
+    "preview": "# MBD4 Full Intelligence Report — v2\n**Generated:** 2026-04-26  \n**Scope:** ATR/WEE1 synthetic lethality axis + HAP1-MBD4-KO cell line status  \n**Analyses completed:** A1, A1b, A2, A3, A4, A5, A6, A7, A8 + In Silico (IS-1, IS-2)  \n**Data sources:** DepMap 23Q4 (local), PRISM 20Q2 (figshare), cBioPortal TCGA PanCancer Atlas 2018, PMC full-text (PATRIOT, NETc, berzosertib HGSOC trial, Saxena 2024, Chabot 2022, Wang 2023), LINCS1000 (local), DeepPurpose DAVIS\n\n---\n\n## Section 1: HAP1-MBD4-KO Cell Line Status\n\n### Cellosaurus-Confirmed Clones\n| Clone | RRID | Catalog | KO Method | Status |\n|-------|------|---------|-----------|--------|\n| HAP1 MBD4 (-) 1 | CVCL_SX48 | HZGHC000921c002 | CRISPR/Cas9, 2bp del | Discontinued (Revvity) |\n| HAP1 MBD4 (-) 2 | CVCL_SX49 | HZGHC000921c003 | CRISPR/Cas9 | Discontinued (Revvity) |\n| HAP1 MBD4 (-) 3 | CVCL_SX50 | HZGHC000921c009 | CRISPR/Cas9 | Discontinued (Revvity) |\n| HAP1 MBD4 (-) 4 | CVCL_SX51 | HZGHC000921c011 | CRISPR/Cas9, 404bp ins | Discontinued (Revvity) |\n\n**All 4 Revvity clones discontinued** as of Dec 2024.\n\n### Ordering Priority (Updated)\n| Priority | Source | Cell | Contact | Notes |\n|----------|--------|------|---------|-------|\n| **P1** | Rodrigues lab (Institut Curie) | HAP1-MBD4-KO (Chabot 2022 clone) | manuel.rodrigues@curie.fr | 2bp del exon 2; gemcitabine IC50 verified |\n| **P2** | Creative Biomart | CL-0108 | creativebiomart.net | Same clone as Chabot 2022; catalog available |\n| **P3** | In-house CRISPR | HAP1 parental (C631) + guide | — | 4–6 weeks; HAP1 available |\n| **P4** | Revvity Made-to-Order | Custom HAP1-MBD4-KO | — | 8–12 weeks; expensive |\n\n### ATRi/WEE1i Data in HAP1-MBD4-KO\n**NONE EXISTS.** No published IC50, AUC, or viability data for any ATRi, WEE1i, or CHK1i in any HAP1-MBD4-KO clone as of April 2026. Chabot 2022 tested gemcitabine and cytarabine only (Prestwick library — no DDR inhibitors).\n\n---\n\n## Section 2: DepMap MBD4-LOF Cell Line Inventory\n\n**Source:** DepMap 23Q4 OmicsSomaticMutations"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/MBD4_Full_Intelligence_Report_v2.md",
+      "exists": true,
+      "bytes": 17065,
+      "sha256": "67eb871bac84b41be4ac92ae215f8f042927e4dfdb892ced319c4fa9af9f18c2",
+      "mtime_iso": "2026-04-26T06:28:04+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

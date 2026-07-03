@@ -1,0 +1,50 @@
+{
+  "id": "component:tier_promotion",
+  "type": "engine_component",
+  "name": "RS-based Tier Promotion",
+  "what_it_solves": "Lifts MECHANISTIC axis results to STRONG when the tumor is RS_high AND the axis is RS-sensitive AND independent evidence exists.",
+  "how_it_solves": "See attributes.code_verbatim — canonical function from CRISPRO_SL_PHD_ROADMAP Ch 3 with explicit early-exits at every guard.",
+  "why_it_exists": "Encodes the domain claim 'in a high-replication-stress background, a mechanistic hint on an RS-sensitive checkpoint is worth more'. Guards prevent it from over-writing VALIDATED / STRONG or from firing on non-RS axes.",
+  "attributes": {
+    "code_verbatim": "def apply_rs_promotion(axis_result, rs_features, rs_score):\n    if rs_score < 0.40:\n        return axis_result\n    if not axis_result.is_rs_sensitive:\n        return axis_result\n    if axis_result.tier == \"VALIDATED\":\n        return axis_result\n    if axis_result.tier == \"STRONG\":\n        return axis_result\n    if has_independent_evidence(axis_result):\n        axis_result.tier = \"STRONG\"\n        axis_result.promotion_source = \"rs_promotion\"\n    return axis_result\n",
+    "guards": [
+      "rs_score >= 0.40",
+      "axis_result.is_rs_sensitive",
+      "current tier != VALIDATED",
+      "current tier != STRONG",
+      "has_independent_evidence(axis_result) is truthy"
+    ],
+    "promotion_source_tag": "rs_promotion"
+  },
+  "verbatim_evidence": [
+    {
+      "quote": "apply_rs_promotion",
+      "file": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "line": 783,
+      "found": true
+    },
+    {
+      "quote": "rs_promotion",
+      "file": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "line": 284,
+      "found": true
+    }
+  ],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "Ch 3 — apply_rs_promotion function block"
+    }
+  ],
+  "cross_refs": [
+    "framework:rs",
+    "tier:STRONG",
+    "tier:MECHANISTIC"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:synthetic_lethality"
+}

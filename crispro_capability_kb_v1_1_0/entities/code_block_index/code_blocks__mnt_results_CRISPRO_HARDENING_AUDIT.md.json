@@ -1,0 +1,62 @@
+{
+  "id": "code_blocks:/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+  "type": "code_block_index",
+  "name": "Code blocks — CRISPRO_HARDENING_AUDIT.md",
+  "what_it_solves": "Index of every fenced code block in '/mnt/results/CRISPRO_HARDENING_AUDIT.md'.",
+  "how_it_solves": "Extracted with `RE_CODE_BLOCK`; each block carries language, starting line, byte count, and a 400-char preview.",
+  "why_it_exists": "Reports embed code snippets that are load-bearing (e.g. class definitions, config JSON); this makes them addressable without re-reading the parent file.",
+  "attributes": {
+    "block_count": 6,
+    "blocks": [
+      {
+        "lang": "",
+        "line": 32,
+        "bytes": 452,
+        "preview": "complete_care_v2 backend orchestrator (sequential):\n  1. WIWFM drug efficacy service\n  2. PGx safety gate integration\n  3. IO selection\n  4. SAE mechanism vector extraction\n  5. Trials service (uses mechanism vector from step 4)\n  6. SOC service\n  7. CA-125 service\n  8. Food service\n  9. Resistance service\n  10. SAE Phase 1 (next_test_recommender, hint_tiles, mechanism_map)\n  11. SAE Phase 2 (sae_"
+      },
+      {
+        "lang": "js",
+        "line": 61,
+        "bytes": 143,
+        "preview": "useEffect(() => {\n  generatePlan(profile, requestBody);\n}, [profile, buildRequest, generatePlan, options.include_trials, options.include_soc]);"
+      },
+      {
+        "lang": "json",
+        "line": 190,
+        "bytes": 664,
+        "preview": "{\n  \"disease\": \"ovarian cancer\",\n  \"mutations\": [\n    {\n      \"gene\": \"MBD4\",\n      \"hgvs_p\": \"p.K431Nfs*54\",\n      \"hgvs_c\": null,\n      \"consequence\": \"frameshift_variant\",\n      \"chrom\": null,\n      \"pos\": null,\n      \"ref\": null,\n      \"alt\": null\n    },\n    {\n      \"gene\": \"TP53\",\n      \"hgvs_p\": \"p.R175H\",\n      \"hgvs_c\": \"c.524G>A\",\n      \"consequence\": \"missense_variant\",\n      \"chrom\": \"1"
+      },
+      {
+        "lang": "json",
+        "line": 227,
+        "bytes": 189,
+        "preview": "{\n  \"disease\": \"ovarian_cancer_hgs\",\n  \"mutations\": [\n    { \"gene\": \"MBD4\", \"hgvs_p\": \"p.K431Nfs*54\" },\n    { \"gene\": \"TP53\" }\n  ],\n  \"api_base\": \"https://crispro-backend-v3.onrender.com\"\n}"
+      },
+      {
+        "lang": "",
+        "line": 278,
+        "bytes": 585,
+        "preview": "synthetic_lethality_detected: true\ndouble_hit_description: \"MBD4 homozygous frameshift (p.K431Nfs*54) + TP53 hotspot (p.R175H) — DDR double-hit in HGSOC context\"\nbroken_pathways: [\"BER (MBD4 loss)\", \"p53 tumor suppression (TP53 R175H)\"]\nessential_pathways: [\"PARP1-mediated BER\", \"ATR-CHK1 replication stress response\"]\nrecommended_drugs:\n  - olaparib (PARP inhibitor, SL with MBD4/BER loss, Axis A/C"
+      },
+      {
+        "lang": "",
+        "line": 319,
+        "bytes": 1609,
+        "preview": "AyeshaPatientDashboard\n  └── useAyeshaCareData (auto-mount)\n        └── useCompleteCareOrchestrator.generatePlan()\n              ├── [PARALLEL] fetchVUSResults()\n              │     └── POST /api/vus/resolve (per gene: MBD4, PDGFRA, TP53)\n              ├── [PARALLEL] fetchEssentialityScores()\n              │     └── POST /api/insights/predict_gene_essentiality (per gene)\n              ├── [PARALLE"
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "exists": true,
+      "bytes": 19314,
+      "sha256": "4c29bc6cecf7bcc6ba7a1232e3fa3a19d50c02bc1a065ea95f1bafc6f1a9c326",
+      "mtime_iso": "2026-05-05T06:24:21+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

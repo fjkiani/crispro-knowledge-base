@@ -1,0 +1,135 @@
+{
+  "id": "md:MBD4_Full_Intelligence_Report.md",
+  "type": "markdown_content",
+  "name": "MBD4_Full_Intelligence_Report.md",
+  "what_it_solves": "Structured view of MBD4_Full_Intelligence_Report.md: heading tree + first 2000 chars.",
+  "how_it_solves": "Regex heading extract + preview slice.",
+  "why_it_exists": "Turns evidence-narrative markdowns into a searchable heading index without duplicating the full body.",
+  "attributes": {
+    "byte_length": 10744,
+    "heading_count": 21,
+    "headings": [
+      {
+        "level": 1,
+        "title": "MBD4 Full Intelligence Report",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "Section 1: HAP1-MBD4-KO Cell Line Status",
+        "line": 8
+      },
+      {
+        "level": 3,
+        "title": "Cellosaurus-Confirmed Clones",
+        "line": 10
+      },
+      {
+        "level": 3,
+        "title": "Only Published Use",
+        "line": 21
+      },
+      {
+        "level": 3,
+        "title": "ATRi/WEE1i Data in HAP1-MBD4-KO",
+        "line": 28
+      },
+      {
+        "level": 3,
+        "title": "Ordering Path",
+        "line": 31
+      },
+      {
+        "level": 2,
+        "title": "Section 2: DepMap MBD4-LOF Cell Line Inventory",
+        "line": 38
+      },
+      {
+        "level": 3,
+        "title": "Confirmed MBD4-LOF Cell Lines (n=21 unique models)",
+        "line": 43
+      },
+      {
+        "level": 3,
+        "title": "CRISPR ATR/CHEK1/WEE1 in MBD4-LOF Lines (n=12 with CRISPR data)",
+        "line": 70
+      },
+      {
+        "level": 2,
+        "title": "Section 3: PRISM Drug Sensitivity (ATRi/WEE1i)",
+        "line": 81
+      },
+      {
+        "level": 2,
+        "title": "Section 4: TCGA-OV Replication Stress Signature",
+        "line": 101
+      },
+      {
+        "level": 2,
+        "title": "Section 5: Pan-Cancer MBD4-LOF Frequency",
+        "line": 116
+      },
+      {
+        "level": 2,
+        "title": "Section 6: Clinical Trial Literature Mining",
+        "line": 137
+      },
+      {
+        "level": 3,
+        "title": "PATRIOT (ceralasertib, n=67 patients)",
+        "line": 141
+      },
+      {
+        "level": 3,
+        "title": "Berzosertib HGSOC Trial (Konstantinopoulos et al., n=~90)",
+        "line": 147
+      },
+      {
+        "level": 3,
+        "title": "NETc Paper (PMC11046577)",
+        "line": 151
+      },
+      {
+        "level": 2,
+        "title": "Section 7: Overall Evidence Matrix",
+        "line": 158
+      },
+      {
+        "level": 2,
+        "title": "Section 8: Path to Upgrade",
+        "line": 173
+      },
+      {
+        "level": 3,
+        "title": "Wet Lab (Required — Cannot Be Replaced Computationally)",
+        "line": 175
+      },
+      {
+        "level": 3,
+        "title": "Data Access (Low Effort)",
+        "line": 182
+      },
+      {
+        "level": 3,
+        "title": "Why Computation Cannot Close the Gap",
+        "line": 189
+      }
+    ],
+    "preview": "# MBD4 Full Intelligence Report\n**Generated:** 2026-04-25  \n**Scope:** ATR/WEE1 synthetic lethality axis + HAP1-MBD4-KO cell line status  \n**Data sources:** DepMap 23Q4 (local), PRISM 20Q2 (figshare), cBioPortal TCGA PanCancer Atlas 2018, PMC full-text (PATRIOT, NETc, berzosertib HGSOC trial), Cellosaurus, Revvity/Horizon Discovery\n\n---\n\n## Section 1: HAP1-MBD4-KO Cell Line Status\n\n### Cellosaurus-Confirmed Clones\n| Clone | RRID | Catalog | KO Method | Status |\n|-------|------|---------|-----------|--------|\n| HAP1 MBD4 (-) 1 | CVCL_SX48 | HZGHC000921c002 | CRISPR/Cas9, 2bp del | Discontinued |\n| HAP1 MBD4 (-) 2 | CVCL_SX49 | HZGHC000921c003 | CRISPR/Cas9 | Discontinued |\n| HAP1 MBD4 (-) 3 | CVCL_SX50 | HZGHC000921c009 | CRISPR/Cas9 | Discontinued |\n| HAP1 MBD4 (-) 4 | CVCL_SX51 | HZGHC000921c011 | CRISPR/Cas9, 404bp ins | Discontinued |\n\n**All 4 clones discontinued** from Revvity (formerly Horizon Discovery) as of Dec 2024.  \nParent line HAP1 (C631) remains available.\n\n### Only Published Use\n**Bortolini Silveira et al., Nat Commun 2024 (PMID 39543136, PMC11564873)**  \n- Clone used: HZGHC000921c002 (CVCL_SX48)  \n- Measured: CpG>TpG mutation rate by WGS after 120-day culture  \n- **No drugs tested** — purely mutational landscape study  \n- Contact: Marc-Henri Stern lab for cell sharing agreement\n\n### ATRi/WEE1i Data in HAP1-MBD4-KO\n**NONE EXISTS.** No published IC50, AUC, or viability data for any ATRi, WEE1i, or CHK1i in any HAP1-MBD4-KO clone as of April 2026.\n\n### Ordering Path\n1. **Revvity \"Made to Order\"**: Custom HAP1-MBD4-KO, ~8–12 weeks, ~2 clonal vials + WT control\n2. **In-house generation**: HAP1 parental (C631, available) + CRISPR/Cas9 targeting MBD4 exon 1/2\n3. **Cell sharing**: Contact Stern lab (Bortolini Silveira 2024) for HZGHC000921c002\n\n---\n\n## Section 2: DepMap MBD4-LOF Cell Line Inventory\n\n**Source:** DepMap 23Q4 OmicsSomaticMutations.csv (local datalake)  \n**Definition:** LikelyLoF=True, IsDefaultEntryForModel='Yes'\n\n### Confirmed MBD4-LOF Cell Lin"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/MBD4_Full_Intelligence_Report.md",
+      "exists": true,
+      "bytes": 10798,
+      "sha256": "62d8d6d80e3bac3f4fcb3f1bcb3c265ae4895556d85c7aacaaf3752dc3e1ed06",
+      "mtime_iso": "2026-04-25T08:09:26+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

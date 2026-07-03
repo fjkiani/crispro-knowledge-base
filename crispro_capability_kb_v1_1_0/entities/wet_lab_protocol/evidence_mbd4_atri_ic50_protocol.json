@@ -1,0 +1,27 @@
+{
+  "id": "evidence:mbd4_atri_ic50_protocol",
+  "type": "wet_lab_protocol",
+  "name": "MBD4 × ATRi IC50 protocol",
+  "what_it_solves": "Wet-lab protocol design for validating the MBD4/ATR SL axis in cell lines.",
+  "how_it_solves": "Step-by-step IC50 protocol targeting the specific MBD4-LOF vs WT contrast the computational evidence could not resolve.",
+  "why_it_exists": "The computational modality cells cannot deconfound MBD4 from MSI-H — wet-lab is the only path to STRONG tier for this axis.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/MBD4_ATRi_IC50_Protocol.md",
+      "exists": true,
+      "bytes": 12486,
+      "sha256": "6e956320f15798880c740c91966b82a8d8ab01bf6e23e282180394e1ec73f837",
+      "mtime_iso": "2026-04-27T04:59:54+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2",
+    "axis:ATR_WEE1"
+  ],
+  "gaps_still_open": [
+    "Protocol authored but not executed as of the receipt snapshot."
+  ],
+  "_stream": "v1:evidence_and_receipts"
+}

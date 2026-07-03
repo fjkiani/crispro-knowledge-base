@@ -1,0 +1,27 @@
+{
+  "id": "invariant:receipt_immutability",
+  "type": "invariant",
+  "name": "Receipt immutability (deepcopy on read)",
+  "what_it_solves": "Non-negotiable engine rule: 'Receipt immutability (deepcopy on read)'",
+  "how_it_solves": "All frozen-receipt reads deepcopy the KB row before returning to the caller.",
+  "why_it_exists": "Downstream mutation of a receipt can never propagate back into the KB or into other axes' results.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "Ch 3.5–3.7 — 8 Sprint 4S invariants"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality",
+    "component:tier_promotion",
+    "component:modality_fuser"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:synthetic_lethality"
+}

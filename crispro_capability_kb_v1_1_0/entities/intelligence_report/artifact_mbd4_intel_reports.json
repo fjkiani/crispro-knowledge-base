@@ -1,0 +1,39 @@
+{
+  "id": "artifact:mbd4_intel_reports",
+  "type": "intelligence_report",
+  "name": "MBD4 Full Intelligence Report (v1 → v3)",
+  "what_it_solves": "Narrative summary of the MBD4/ATR SL evidence for non-technical readers.",
+  "how_it_solves": "MBD4_Full_Intelligence_Report v1/v2/v3 — v3 is latest and reflects the NO-CHANGE tier verdict.",
+  "why_it_exists": "Bridge document from evidence matrix to stakeholders who won't read modality cells.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/MBD4_Full_Intelligence_Report.md",
+      "exists": true,
+      "bytes": 10798,
+      "sha256": "62d8d6d80e3bac3f4fcb3f1bcb3c265ae4895556d85c7aacaaf3752dc3e1ed06",
+      "mtime_iso": "2026-04-25T08:09:26+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/MBD4_Full_Intelligence_Report_v2.md",
+      "exists": true,
+      "bytes": 17065,
+      "sha256": "67eb871bac84b41be4ac92ae215f8f042927e4dfdb892ced319c4fa9af9f18c2",
+      "mtime_iso": "2026-04-26T06:28:04+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/MBD4_Full_Intelligence_Report_v3.md",
+      "exists": true,
+      "bytes": 24250,
+      "sha256": "fcd90cabbd317174c813ea8d81bd0400abb480b7d0e0a84aa5b253bfba723068",
+      "mtime_iso": "2026-04-27T04:58:26+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2",
+    "artifact:mbd4_manuscript_versions"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:evidence_and_receipts"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "code_blocks:/mnt/results/HANDOFF.md",
+  "type": "code_block_index",
+  "name": "Code blocks — HANDOFF.md",
+  "what_it_solves": "Index of every fenced code block in '/mnt/results/HANDOFF.md'.",
+  "how_it_solves": "Extracted with `RE_CODE_BLOCK`; each block carries language, starting line, byte count, and a 400-char preview.",
+  "why_it_exists": "Reports embed code snippets that are load-bearing (e.g. class definitions, config JSON); this makes them addressable without re-reading the parent file.",
+  "attributes": {
+    "block_count": 4,
+    "blocks": [
+      {
+        "lang": "bash",
+        "line": 58,
+        "bytes": 421,
+        "preview": "curl -I -X OPTIONS https://crispro-backend-v2.onrender.com/api/guidance/synthetic_lethality \\\n  -H \"Origin: https://crispro-front-end.onrender.com\" \\\n  -H \"Access-Control-Request-Method: POST\"\n# Must return: access-control-allow-origin: https://crispro-front-end.onrender.com\n\ncurl https://crispro-backend-v2.onrender.com/debug/cors\n# Must return JSON with \"https://crispro-front-end.onrender.com\" in"
+      },
+      {
+        "lang": "",
+        "line": 75,
+        "bytes": 21,
+        "preview": "uvicorn api.index:app"
+      },
+      {
+        "lang": "python",
+        "line": 86,
+        "bytes": 143,
+        "preview": "# api/config.py\nALLOWED_ORIGINS = [\n    o.strip()\n    for o in os.getenv(\"ALLOWED_ORIGINS\", \"...default list...\").split(\",\")\n    if o.strip()\n]"
+      },
+      {
+        "lang": "",
+        "line": 178,
+        "bytes": 707,
+        "preview": "crispro-front-end.onrender.com\n  └── React 18 + Vite static site\n  └── API_ROOT = https://crispro-backend-v2.onrender.com (baked at build time via .env.production)\n  └── Auth: Supabase (isSupabaseEnabled=true) + mock_auth_session localStorage fallback\n  └── Auto-deploy: YES (pushes to main trigger rebuild)\n\ncrispro-backend-v2.onrender.com\n  └── FastAPI (Python)\n  └── Entry point: api/index.py (NOT"
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

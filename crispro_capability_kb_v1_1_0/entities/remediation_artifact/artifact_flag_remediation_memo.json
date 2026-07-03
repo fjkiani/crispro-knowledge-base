@@ -1,0 +1,25 @@
+{
+  "id": "artifact:flag_remediation_memo",
+  "type": "remediation_artifact",
+  "name": "Flag remediation memo",
+  "what_it_solves": "Living memo enumerating flags raised by audits and their remediation status.",
+  "how_it_solves": "FLAG_REMEDIATION_MEMO.md tracks each flag → owner → status → target commit.",
+  "why_it_exists": "Central inbox for audit findings so no flag is silently absorbed without a written disposition.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/FLAG_REMEDIATION_MEMO.md",
+      "exists": true,
+      "bytes": 9799,
+      "sha256": "b4ed865261e35d1a8ed3e6f2cc63220b7332bdb1ead859823547aa8cd6ce7c10",
+      "mtime_iso": "2026-06-05T19:47:35+00:00"
+    }
+  ],
+  "cross_refs": [
+    "audit:agent_conduct_2026-06-06",
+    "audit:sl_full_commit_audit_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:synthetic_lethality"
+}

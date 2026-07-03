@@ -1,0 +1,310 @@
+{
+  "id": "csv:A9_gdsc2_pharmacology_benchmark.csv",
+  "type": "csv_content",
+  "name": "A9_gdsc2_pharmacology_benchmark.csv",
+  "what_it_solves": "Parsed contents of A9_gdsc2_pharmacology_benchmark.csv: header + row count + column ranges.",
+  "how_it_solves": "csv.reader → header + row list; per column, if numeric ⇒ (n, min, max, mean); if categorical ⇒ top-3 values + unique count.",
+  "why_it_exists": "Deep pass: previous stream had file metadata only. This entity carries the actual data shape so downstream consumers can validate any claim about A1/A2/A3/… without re-parsing.",
+  "attributes": {
+    "header": [
+      "gene",
+      "drug",
+      "mss_only",
+      "n_LOF",
+      "n_WT",
+      "median_AUC_LOF",
+      "median_AUC_WT",
+      "mean_AUC_LOF",
+      "mean_AUC_WT",
+      "delta_AUC",
+      "mw_p_AUC",
+      "cohens_d_AUC",
+      "median_LnIC50_LOF",
+      "median_LnIC50_WT",
+      "mw_p_IC50",
+      "cohens_d_IC50",
+      "direction_AUC",
+      "note",
+      "padj_AUC"
+    ],
+    "row_count": 12,
+    "sample_rows": [
+      [
+        "ATM-LOF",
+        "AZD6738",
+        "False",
+        "31",
+        "925",
+        "0.837221",
+        "0.831877",
+        "0.830480806451613",
+        "0.8188560021621623",
+        "0.005344000000000015",
+        "0.5794765212950722",
+        "0.12137913106521785",
+        "1.961014",
+        "1.976085",
+        "0.6194581163844077",
+        "0.09943181901008095",
+        "LOF_less_sensitive",
+        "",
+        "0.772635361726763"
+      ],
+      [
+        "MBD4-LOF",
+        "AZD6738",
+        "False",
+        "14",
+        "942",
+        "0.723114",
+        "0.833162",
+        "0.7644409285714285",
+        "0.8200472760084926",
+        "-0.11004799999999992",
+        "0.025712883681558208",
+        "-0.5794547379269919",
+        "0.773911",
+        "1.9761045",
+        "0.042590680201167",
+        "-0.5657337727594931",
+        "LOF_more_sensitive",
+        "",
+        "0.10285153472623283"
+      ],
+      [
+        "ATM-LOF",
+        "AZD6738",
+        "True",
+        "21",
+        "851",
+        "0.866933",
+        "0.836788",
+        "0.8554717142857144",
+        "0.8228955957696829",
+        "0.030144999999999977",
+        "0.112421023182629",
+        "0.34763207839853816",
+        "2.245897",
+        "2.034983",
+        "0.13391884908778603",
+        "0.3317703280267331",
+        "LOF_less_sensitive",
+        "",
+        "0.224842046365258"
+      ],
+      [
+        "ATM-LOF",
+        "VE-822",
+        "False",
+        "27",
+        "865",
+        "0.928433",
+        "0.946579",
+        "0.9047643703703705",
+        "0.9178008138728323",
+        "-0.018145999999999995",
+        "0.5250036897401862",
+        "-0.15637385531808254",
+        "2.601432",
+        "3.158447",
+        "0.8011699685038944",
+        "-0.05502234409454815",
+        "LOF_more_sensitive",
+        "",
+        "0.772635361726763"
+      ],
+      [
+        "MBD4-LOF",
+        "VE-822",
+        "False",
+        "13",
+        "879",
+        "0.936968",
+        "0.946557",
+        "0.8944702307692307",
+        "0.9177454254835041",
+        "-0.009588999999999959",
+        "0.3555235313984113",
+        "-0.2829187879900775",
+        "3.371837",
+        "3.125544",
+        "0.44649877096472623",
+        "-0.2374860142306642",
+        "LOF_more_sensitive",
+        "",
+        "0.47403137519788174"
+      ]
+    ],
+    "column_ranges": {
+      "gene": {
+        "categorical": true,
+        "top_values": [
+          [
+            "ATM-LOF",
+            8
+          ],
+          [
+            "MBD4-LOF",
+            4
+          ]
+        ],
+        "unique_count": 2
+      },
+      "drug": {
+        "categorical": true,
+        "top_values": [
+          [
+            "AZD6738",
+            3
+          ],
+          [
+            "VE-822",
+            3
+          ],
+          [
+            "Gemcitabine",
+            3
+          ]
+        ],
+        "unique_count": 4
+      },
+      "mss_only": {
+        "categorical": true,
+        "top_values": [
+          [
+            "False",
+            8
+          ],
+          [
+            "True",
+            4
+          ]
+        ],
+        "unique_count": 2
+      },
+      "n_LOF": {
+        "n_numeric": 12,
+        "min": 13.0,
+        "max": 31.0,
+        "mean": 21.5
+      },
+      "n_WT": {
+        "n_numeric": 12,
+        "min": 792.0,
+        "max": 950.0,
+        "mean": 893.4166666666666
+      },
+      "median_AUC_LOF": {
+        "n_numeric": 12,
+        "min": 0.594545,
+        "max": 0.936968,
+        "mean": 0.7879720833333334
+      },
+      "median_AUC_WT": {
+        "n_numeric": 12,
+        "min": 0.672933,
+        "max": 0.947335,
+        "mean": 0.7873857083333333
+      },
+      "mean_AUC_LOF": {
+        "n_numeric": 12,
+        "min": 0.6377778571428571,
+        "max": 0.9169904210526315,
+        "mean": 0.7850682452569308
+      },
+      "mean_AUC_WT": {
+        "n_numeric": 12,
+        "min": 0.6438729449838188,
+        "max": 0.9193987702020202,
+        "mean": 0.7689333882974494
+      },
+      "delta_AUC": {
+        "n_numeric": 12,
+        "min": -0.11004799999999992,
+        "max": 0.17419099999999998,
+        "mean": 0.0005863750000000186
+      },
+      "mw_p_AUC": {
+        "n_numeric": 12,
+        "min": 0.004710186664219138,
+        "max": 0.996602966065944,
+        "mean": 0.38545125348287396
+      },
+      "cohens_d_AUC": {
+        "n_numeric": 12,
+        "min": -0.5794547379269919,
+        "max": 0.746679173754142,
+        "mean": 0.04597202749702814
+      },
+      "median_LnIC50_LOF": {
+        "n_numeric": 12,
+        "min": -2.3372415,
+        "max": 3.371837,
+        "mean": 1.1874197083333333
+      },
+      "median_LnIC50_WT": {
+        "n_numeric": 12,
+        "min": -1.092172,
+        "max": 3.244159,
+        "mean": 1.1532531666666668
+      },
+      "mw_p_IC50": {
+        "n_numeric": 12,
+        "min": 0.009895302042225928,
+        "max": 0.9475143805209307,
+        "mean": 0.4091757725716904
+      },
+      "cohens_d_IC50": {
+        "n_numeric": 12,
+        "min": -0.5657337727594931,
+        "max": 0.5920667640947911,
+        "mean": 0.002335209327651441
+      },
+      "direction_AUC": {
+        "categorical": true,
+        "top_values": [
+          [
+            "LOF_more_sensitive",
+            8
+          ],
+          [
+            "LOF_less_sensitive",
+            4
+          ]
+        ],
+        "unique_count": 2
+      },
+      "note": {
+        "categorical": true,
+        "top_values": [
+          [
+            "",
+            12
+          ]
+        ],
+        "unique_count": 1
+      },
+      "padj_AUC": {
+        "n_numeric": 12,
+        "min": 0.01884074665687655,
+        "max": 0.996602966065944,
+        "mean": 0.4730928185637873
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A9_gdsc2_pharmacology_benchmark.csv",
+      "exists": true,
+      "bytes": 3119,
+      "sha256": "856810e67d2c3c5a609d939a764358a5301d235e5b5e4f34c3d3f151a71802a4",
+      "mtime_iso": "2026-04-27T04:30:45+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

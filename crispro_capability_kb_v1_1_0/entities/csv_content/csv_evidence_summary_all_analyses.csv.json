@@ -1,0 +1,210 @@
+{
+  "id": "csv:evidence_summary_all_analyses.csv",
+  "type": "csv_content",
+  "name": "evidence_summary_all_analyses.csv",
+  "what_it_solves": "Parsed contents of evidence_summary_all_analyses.csv: header + row count + column ranges.",
+  "how_it_solves": "csv.reader → header + row list; per column, if numeric ⇒ (n, min, max, mean); if categorical ⇒ top-3 values + unique count.",
+  "why_it_exists": "Deep pass: previous stream had file metadata only. This entity carries the actual data shape so downstream consumers can validate any claim about A1/A2/A3/… without re-parsing.",
+  "attributes": {
+    "header": [
+      "Analysis",
+      "Data Source",
+      "N",
+      "Key Result",
+      "BH-adj p",
+      "Verdict",
+      "Limitation"
+    ],
+    "row_count": 5,
+    "sample_rows": [
+      [
+        "A1: DepMap CRISPR co-dependency",
+        "DepMap 23Q4 (local)",
+        "1,112 cell lines",
+        "ATR r=0.013, CHEK1 r=0.005, WEE1 r=-0.031",
+        "All >0.86",
+        "NULL",
+        "Pan-essential floor effect; MBD4 expr ≠ LOF proxy"
+      ],
+      [
+        "A2: PRISM drug sensitivity (ATRi/WEE1i)",
+        "PRISM 20Q2 secondary screen (figshare)",
+        "VE-822 n=470; MK-1775 n=682",
+        "VE-822 r=0.024, MK-1775 r=0.027",
+        "All >0.71",
+        "NULL",
+        "MBD4-mutant n=9-12; underpowered"
+      ],
+      [
+        "A3: TCGA-OV RS signature",
+        "cBioPortal TCGA-OV PanCancer Atlas 2018",
+        "300 samples",
+        "Wilcoxon p=0.016 (MBD4-low RS > MBD4-high); Spearman r=-0.11 p=0.058",
+        "Wilcoxon p=0.016",
+        "MARGINAL",
+        "Expression proxy; no deep deletions in OV; borderline"
+      ],
+      [
+        "A4: Pan-cancer MBD4-LOF frequency",
+        "cBioPortal TCGA PanCancer Atlas 2018 (30 cohorts)",
+        "10,120 samples",
+        "Pan-cancer 0.19% (19/10,120); UCEC highest at 1.70% (9/529)",
+        "N/A (descriptive)",
+        "DESCRIPTIVE",
+        "Low absolute frequency limits powered analyses"
+      ],
+      [
+        "A5: UCEC OS by MBD4-LOF status",
+        "cBioPortal TCGA UCEC PanCancer Atlas 2018",
+        "LOF n=9, WT n=519",
+        "Log-rank p=0.102; 0/9 LOF patients deceased (all censored)",
+        "p=0.102",
+        "UNDERPOWERED",
+        "n=9 LOF; 0 events in LOF group; cannot draw conclusions"
+      ]
+    ],
+    "column_ranges": {
+      "Analysis": {
+        "categorical": true,
+        "top_values": [
+          [
+            "A1: DepMap CRISPR co-dependency",
+            1
+          ],
+          [
+            "A2: PRISM drug sensitivity (ATRi/WEE1i)",
+            1
+          ],
+          [
+            "A3: TCGA-OV RS signature",
+            1
+          ]
+        ],
+        "unique_count": 5
+      },
+      "Data Source": {
+        "categorical": true,
+        "top_values": [
+          [
+            "DepMap 23Q4 (local)",
+            1
+          ],
+          [
+            "PRISM 20Q2 secondary screen (figshare)",
+            1
+          ],
+          [
+            "cBioPortal TCGA-OV PanCancer Atlas 2018",
+            1
+          ]
+        ],
+        "unique_count": 5
+      },
+      "N": {
+        "categorical": true,
+        "top_values": [
+          [
+            "1,112 cell lines",
+            1
+          ],
+          [
+            "VE-822 n=470; MK-1775 n=682",
+            1
+          ],
+          [
+            "300 samples",
+            1
+          ]
+        ],
+        "unique_count": 5
+      },
+      "Key Result": {
+        "categorical": true,
+        "top_values": [
+          [
+            "ATR r=0.013, CHEK1 r=0.005, WEE1 r=-0.031",
+            1
+          ],
+          [
+            "VE-822 r=0.024, MK-1775 r=0.027",
+            1
+          ],
+          [
+            "Wilcoxon p=0.016 (MBD4-low RS > MBD4-high); Spearman r=-0.11 p=0.058",
+            1
+          ]
+        ],
+        "unique_count": 5
+      },
+      "BH-adj p": {
+        "categorical": true,
+        "top_values": [
+          [
+            "All >0.86",
+            1
+          ],
+          [
+            "All >0.71",
+            1
+          ],
+          [
+            "Wilcoxon p=0.016",
+            1
+          ]
+        ],
+        "unique_count": 5
+      },
+      "Verdict": {
+        "categorical": true,
+        "top_values": [
+          [
+            "NULL",
+            2
+          ],
+          [
+            "MARGINAL",
+            1
+          ],
+          [
+            "DESCRIPTIVE",
+            1
+          ]
+        ],
+        "unique_count": 4
+      },
+      "Limitation": {
+        "categorical": true,
+        "top_values": [
+          [
+            "Pan-essential floor effect; MBD4 expr ≠ LOF proxy",
+            1
+          ],
+          [
+            "MBD4-mutant n=9-12; underpowered",
+            1
+          ],
+          [
+            "Expression proxy; no deep deletions in OV; borderline",
+            1
+          ]
+        ],
+        "unique_count": 5
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/evidence_summary_all_analyses.csv",
+      "exists": true,
+      "bytes": 1128,
+      "sha256": "22147253eff5aa067e1b1cf59ae8cd02f4e0d57e1ba03a146f5887ca35d16bf6",
+      "mtime_iso": "2026-04-25T07:30:42+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

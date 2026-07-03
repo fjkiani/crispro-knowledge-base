@@ -1,0 +1,158 @@
+{
+  "id": "dbgap_access_pack:dbgap_phs003428_missing_fields.json",
+  "type": "dbgap_access_pack",
+  "name": "dbgap_phs003428_missing_fields.json",
+  "what_it_solves": "dbgap_access_pack artifact dbgap_phs003428_missing_fields.json",
+  "how_it_solves": "Auto-parsed by extension.",
+  "why_it_exists": "Every access pack / SL map / gap-lineage report is a durable operational asset — must be addressable.",
+  "attributes": {
+    "raw": {
+      "missing_fields": [
+        {
+          "field": "pi_era_commons_id",
+          "description": "Fahad Kiani's actual eRA Commons username string (account is CLEARED/active; only the username text needs to be inserted into the DAR form)",
+          "owner": "Fahad Kiani",
+          "how_to_obtain": "Log into https://public.era.nih.gov/commonsplus — username is displayed in the top-right corner of the dashboard. Insert into DAR form and CTEP email signature block.",
+          "blocks_step": "S08",
+          "urgency": "CRITICAL_PATH"
+        },
+        {
+          "field": "pi_email",
+          "description": "Fahad Kiani's institutional email address for DAR form and CTEP email contact block",
+          "owner": "Fahad Kiani",
+          "how_to_obtain": "Use institutional email associated with CrisPRO / Brenus Pharma eRA Commons account. Insert into CTEP email before sending and into DAR PI contact field.",
+          "blocks_step": "S01",
+          "urgency": "CRITICAL_PATH"
+        },
+        {
+          "field": "pi_phone",
+          "description": "Fahad Kiani's institutional phone number for CTEP email contact block",
+          "owner": "Fahad Kiani",
+          "how_to_obtain": "Use institutional phone number. Insert into CTEP email signature block before sending.",
+          "blocks_step": "S01",
+          "urgency": "CRITICAL_PATH"
+        },
+        {
+          "field": "pi_address",
+          "description": "Full institutional mailing address for CrisPRO / Brenus Pharma",
+          "owner": "Fahad Kiani",
+          "how_to_obtain": "Use the official registered address of CrisPRO / Brenus Pharma. Insert into CTEP email [INSTITUTION_NAME] placeholder and DAR form address field.",
+          "blocks_step": "S01",
+          "urgency": "CRITICAL_PATH"
+        },
+        {
+          "field": "computing_environment_details",
+          "description": "Specific name, type, and security specifications of the computing environment where phs003428.v1.p1 data will be stored and analyzed (server name, HPC cluster, cloud platform, or local secure workstation)",
+          "owner": "Fahad Kiani",
+          "how_to_obtain": "Coordinate with IT Director (S04) to document the specific computing infrastructure. Must confirm AES-256 encryption, access controls, audit logging, and NIH dbGaP security compliance. Provide server/system name in DAR computing environment field.",
+          "blocks_step": "S08",
+          "urgency": "CRITICAL_PATH"
+        },
+        {
+          "field": "institutional_so_name",
+          "description": "Full name of the Institutional Signing Official authorized to commit CrisPRO / Brenus Pharma to the Data Use Agreement",
+          "owner": "Institution (SO)",
+          "how_to_obtain": "Fahad contacts CrisPRO / Brenus Pharma leadership (CEO, VP Research, or Chief Compliance Officer) to identify the designated SO. Check institutional eRA Commons registration for existing SO designation.",
+          "blocks_step": "S09",
+          "urgency": "CRITICAL_PATH"
+        },
+        {
+          "field": "institutional_so_email",
+          "description": "Institutional email address of the Signing Official",
+          "owner": "Institution (SO)",
+          "how_to_obtain": "Obtain from SO directly once identified in S02. Must be institutional email matching eRA Commons account.",
+          "blocks_step": "S09",
+          "urgency": "CRITICAL_PATH"
+        },
+        {
+          "field": "institutional_so_era_commons_id",
+          "description": "eRA Commons username of the Institutional Signing Official (required to countersign DAR in eRA Commons)",
+          "owner": "Institution (SO)",
+          "how_to_obtain": "SO logs into https://public.era.nih.gov/commonsplus to confirm existing account or registers new account under institution. Registration takes 1-3 business days if new.",
+          "blocks_step": "S09",
+          "urgency": "CRITICAL_PATH"
+        },
+        {
+          "field": "it_director_name",
+          "description": "Full name of the IT Director or IT Security Officer who will attest to the data security plan",
+          "owner": "Institution (IT)",
+          "how_to_obtain": "Fahad contacts CrisPRO / Brenus Pharma IT department or administration to identify the IT Director or designated IT Security Officer.",
+          "blocks_step": "S08",
+          "urgency": "CRITICAL_PATH"
+        },
+        {
+          "field": "it_director_email",
+          "description": "Institutional email address of the IT Director",
+          "owner": "Institution (IT)",
+          "how_to_obtain": "Obtain from IT Director once identified in S04.",
+          "blocks_step": "S08",
+          "urgency": "CRITICAL_PATH"
+        },
+        {
+          "field": "it_director_era_commons_id",
+          "description": "eRA Commons username of the IT Director (required in current dbGaP DAR form for IT security attestation)",
+          "owner": "Institution (IT)",
+          "how_to_obtain": "IT Director registers at https://public.era.nih.gov/commonsplus if not already registered. Confirm current DAR form requirement at dbGaP portal.",
+          "blocks_step": "S08",
+          "urgency": "CRITICAL_PATH"
+        },
+        {
+          "field": "irb_status",
+          "description": "Formal IRB determination: exemption under 45 CFR 46.104(d)(4) or full IRB approval",
+          "owner": "Institution (IRB)",
+          "how_to_obtain": "Submit IRB application immediately (parallel to S01). Request expedited exemption determination for secondary research use of de-identified/coded data with no patient contact. Provide IRB with: study description, phs003428.v1.p1 dataset description, confirmation of no patient contact, and data security plan.",
+          "blocks_step": "S08",
+          "urgency": "CRITICAL_PATH"
+        },
+        {
+          "field": "irb_protocol_number",
+          "description": "IRB protocol number or exemption determination number issued by the institutional IRB",
+          "owner": "Institution (IRB)",
+          "how_to_obtain": "Obtained automatically upon IRB determination (S06). IRB issues written determination letter with protocol/exemption number.",
+          "blocks_step": "S08",
+          "urgency": "CRITICAL_PATH"
+        },
+        {
+          "field": "irb_approval_date",
+          "description": "Date of IRB approval or exemption determination",
+          "owner": "Institution (IRB)",
+          "how_to_obtain": "Obtained automatically upon IRB determination (S06).",
+          "blocks_step": "S08",
+          "urgency": "CRITICAL_PATH"
+        }
+      ],
+      "fields_pre_filled": 16,
+      "fields_requiring_human_input": 14,
+      "critical_path_blockers": 14,
+      "ready_to_send_today": [
+        "S01 — CTEP email to NCICTEPDAR@mail.nih.gov (insert PI email, phone, and [DATE] before sending)"
+      ],
+      "note": "eRA Commons PI account CLEARED. Send CTEP email today to start 14-day BMS clock. All 14 missing fields are institutional/personnel details that Fahad must collect in parallel — none require waiting for external approvals before collection begins. Critical path to data download: S01 (today) → S07 (14 days) || S06 (5-14 days) || S03/S05 (1-3 days) → S08 → S09 → S10 (28-56 days) → S11 (7-14 days) → S12."
+    },
+    "top_keys": [
+      "missing_fields",
+      "fields_pre_filled",
+      "fields_requiring_human_input",
+      "critical_path_blockers",
+      "ready_to_send_today",
+      "note"
+    ],
+    "bytes": 6811,
+    "note": "raw carried"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/dbgap_phs003428_missing_fields.json",
+      "exists": true,
+      "bytes": 6811,
+      "sha256": "738eca5ae01038e097074044a12ec7234f386500f056b3e13f5860e94fa71a1e",
+      "mtime_iso": "2026-05-13T08:22:56+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:access_packs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

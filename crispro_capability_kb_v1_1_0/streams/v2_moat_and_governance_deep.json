@@ -1,0 +1,2273 @@
+{
+  "stream_id": "moat_and_governance_deep",
+  "stream_name": "DEEP AUDIT — moat + governance: full-depth expansion of moat_comparison.json (every dimension, every audit correction, every caveat)",
+  "generated_at_utc": "2026-07-03T21:36:10.613812+00:00",
+  "files_audited": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00"
+    },
+    {
+      "path": "/mnt/results/9p21_audit/experimental_design.json",
+      "exists": true,
+      "bytes": 23457,
+      "sha256": "f4648d65cdca27146d457a3fd780381976f34ca5f0fd013945e1f6b11f7ea008",
+      "mtime_iso": "2026-06-24T20:41:23+00:00"
+    },
+    {
+      "path": "/mnt/results/9p21_audit/double_hit_vulnerabilities.json",
+      "exists": true,
+      "bytes": 24468,
+      "sha256": "8a47013bd7cedbb04e908c92aa277c31ea47be7ebdab523a6565509ba1d8c61c",
+      "mtime_iso": "2026-06-25T01:44:05+00:00"
+    },
+    {
+      "path": "/mnt/results/9p21_audit/collaboration_value_proposition.json",
+      "exists": true,
+      "bytes": 25131,
+      "sha256": "bd343c4fd98b4b681a3294b8fedcbb4e07c021d2d974ce4a727ffd075c3d0b1f",
+      "mtime_iso": "2026-06-24T20:50:11+00:00"
+    },
+    {
+      "path": "/mnt/results/9p21_audit/PROVENANCE_2026-06-24.md",
+      "exists": true,
+      "bytes": 18203,
+      "sha256": "33ca2c9594e871fba7b307a7d2dfaf7b2d18f06c1408503aab16f342368cdd0d",
+      "mtime_iso": "2026-06-25T03:41:42+00:00"
+    },
+    {
+      "path": "/mnt/results/FLAG_REMEDIATION_MEMO.md",
+      "exists": true,
+      "bytes": 9799,
+      "sha256": "b4ed865261e35d1a8ed3e6f2cc63220b7332bdb1ead859823547aa8cd6ce7c10",
+      "mtime_iso": "2026-06-05T19:47:35+00:00"
+    }
+  ],
+  "audit_method": {
+    "moat_expansion": "moat_comparison.json is now expanded to one entity per top-level key (document_purpose, provenance, definition_of_moat, each dimension, summary table, honest_assessment, competitor_scope, audit_corrections, moat_caveats).",
+    "verbatim_quotes": "For each dimension, Bev2026_approach_verbatim is preserved verbatim in attributes AND cross-referenced by verbatim_evidence (up to 400 chars) with its Bev2026_approach_verbatim_source.",
+    "no_summarisation": "Every top-level key is carried in raw form; no re-interpretation."
+  },
+  "entities": [
+    {
+      "id": "moat:document_purpose",
+      "type": "moat_document_field",
+      "name": "moat_comparison — document_purpose",
+      "what_it_solves": "The declared purpose of the moat_comparison.json artifact.",
+      "how_it_solves": "Extracted verbatim from moat_comparison.json['document_purpose'].",
+      "why_it_exists": "Governance requires an explicit purpose statement so the file is not silently repurposed; this entity carries it verbatim.",
+      "attributes": {
+        "raw": "Compare CrisPRO's methodological 'moat' against Bevilacqua 2026's published approach + adjacent literature, with every claim traceable to PDF, transcript receipts, or paper references."
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/moat_comparison.json",
+          "exists": true,
+          "bytes": 33172,
+          "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+          "mtime_iso": "2026-06-25T01:41:15+00:00",
+          "span_extracted": "document_purpose"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "moat:provenance",
+      "type": "moat_document_field",
+      "name": "moat_comparison — provenance",
+      "what_it_solves": "Provenance block of moat_comparison.json: source PDFs, transcript files, verification method.",
+      "how_it_solves": "Extracted verbatim.",
+      "why_it_exists": "Every moat claim must trace to a source PDF page; this block is the anchor point.",
+      "attributes": {
+        "raw": {
+          "audit_date_utc": "2026-06-24",
+          "primary_source": {
+            "paper": "Bevilacqua R, Gasperini P, Cantore T, et al. Therapeutic vulnerabilities exposed by the 9p21 loss identified through multiparametric drug screening inform rational combination strategies.",
+            "journal": "npj Precision Oncology",
+            "year": 2026,
+            "volume": "10",
+            "article_no": "232",
+            "doi": "10.1038/s41698-026-01434-w",
+            "received": "2025-09-01",
+            "accepted": "2026-04-07",
+            "published": "2026-04-18",
+            "retrieval_method": "Full PDF read (16 pages) via Read tool on /mnt/user-uploads/s41698-026-01434-w.pdf, 2026-06-24",
+            "data_deposition": "Zenodo 10.5281/zenodo.18957959",
+            "code_availability": "Not publicly available; available on reasonable request from corresponding authors per paper Code Availability statement",
+            "license": "CC-BY 4.0"
+          },
+          "verification_status": "Every leaf below is traceable to a specific page/figure/table of the source PDF or to a verifiable transcript receipt. No claim retained from prior generated JSONs unless re-verified.",
+          "audit_corrections_applied": [
+            "MTAP-loss prevalence in TCGA MIBC = 26% (paper text, Discussion §1, cBioPortal computation by the authors). 22% in PLAN.md was the older Robertson 2017 CDKN2A-alone figure for MIBC; both retained, distinguished.",
+            "Phenotypic features = 12 (verbatim, Results §Phenotype-based hit selection: 'For each object (i.e., cell or nucleus), 12 phenotypic features...'). PLAN.md had hedged this to 'feature count not in retrieved supplementary'; PDF resolves it definitively to 12.",
+            "SynergyFinder version = 3.1 (verbatim, Fig 3 legend). Reference 21 (Ianevski 2022) is the SynergyFinder 3.0 paper; the authors used the 3.1 release derived from the same software lineage.",
+            "ATR inhibitor name verbatim = VX970 (no hyphen, no 'berzosertib'). Paper uses VX970 throughout.",
+            "Compound library composition: 2,349 total = 349 (Selleck Anti-cancer) + 958 (MicroSource Spectrum known drugs in human therapy) + 629 (natural products) + 343 (biological activity at experimental level) + 70 (approved for agricultural use only). Numerical sum = 2,349.",
+            "PDO clinical context: BlCa197 = 54-year-old female, high-grade MIBC, mixed urothelial+sarcomatoid, neoadjuvant cisplatin/gemcitabine + radical cystectomy. TN-001 = 53-year-old male, high-grade MIBC, mixed urothelial+sarcomatoid, MVAC combination + radical cystectomy.",
+            "Ethical approvals: KEK 06/03 and 2017-02295.",
+            "AZD7762 and MK-1775 z-scores from primary screen now stated verbatim: AZD7762 WT z=-3.60 / 3KO z=-5.06; MK-1775 WT z=-1.12 / 3KO z=-2.06.",
+            "MRTX1719 axis bug in repo: pharmacologic_analyzer.py:66 maps 'mrtx1719' -> 'wrn'. Correct axis per Bev2026 §Methods +  Engstrom 2023 ref 7 = PRMT5 (MTA-cooperative). Flag in DH JSON; no code fix in this task per user lock #4."
+          ]
+        }
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/moat_comparison.json",
+          "exists": true,
+          "bytes": 33172,
+          "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+          "mtime_iso": "2026-06-25T01:41:15+00:00",
+          "span_extracted": "provenance"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate",
+        "external:bev2026_pdf"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "moat:definition_of_moat",
+      "type": "moat_document_field",
+      "name": "moat_comparison — definition_of_moat",
+      "what_it_solves": "Declared definition of 'moat' used to score each dimension.",
+      "how_it_solves": "Extracted verbatim.",
+      "why_it_exists": "Without an explicit definition, PARITY/EDGE/GAP labels are subjective; this makes them reproducible.",
+      "attributes": {
+        "raw": "Defensible methodological features that distinguish CrisPRO's approach from established or emerging competitors. Moat ≠ moral superiority; moat = features competitors cannot easily replicate without comparable infrastructure, expertise, or data access."
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/moat_comparison.json",
+          "exists": true,
+          "bytes": 33172,
+          "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+          "mtime_iso": "2026-06-25T01:41:15+00:00",
+          "span_extracted": "definition_of_moat"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "moat_dim:00_primary_discovery_design_multi_modal_vs_single_modal",
+      "type": "moat_dimension_deep",
+      "name": "Dim 00 — Primary discovery design — multi-modal vs single-modal",
+      "what_it_solves": "Full moat_comparison dimension #0: 'Primary discovery design — multi-modal vs single-modal' — Bev2026 approach vs CrisPRO approach with verbatim quote.",
+      "how_it_solves": "Extracted verbatim from moat_comparison.comparison_dimensions[i]; raw dict carried in attributes.raw.",
+      "why_it_exists": "Depth pass: previous stream flattened each dimension to a few fields. This entity carries every field the JSON contains for that dimension.",
+      "attributes": {
+        "index": 0,
+        "dimension": "Primary discovery design — multi-modal vs single-modal",
+        "Bev2026_approach_verbatim": "Unlike cell viability screenings that provide only binary outcomes (live or dead), multiparametric drug screenings can capture complex cellular responses, offering insights into drug mechanisms of action, types of cell death, and molecular responses.",
+        "Bev2026_approach_verbatim_source": "Bev2026 PDF, Introduction (page 2), final paragraph before Results",
+        "Bev2026_implementation": "Two parallel hit-selection axes from same screen — viability z-score (Fig 1E) AND morphology Pearson correlation (Fig 2B). Independent nomination paths catch gemcitabine which the viability axis missed.",
+        "CrisPRO_approach": "7-modality candidate axis enum at api/services/synthetic_lethality/v3/multimodal/models.py:122: CYTIDINE_ANALOGS, PARP_INHIBITORS, ATR_WEE1, WRN, IMMUNOTHERAPY, PKMYT1, CUSTOM. EvidenceRow combines GDSC pharmacology + DepMap CRISPR + literature receipt + expression + in vitro + in vivo + clinical cells.",
+        "moat_status": "PARITY (different dimensions, similar philosophy). Bev2026 axes are biological readouts within one screen; CrisPRO axes are evidence modalities across data types.",
+        "verification_status": "Verbatim quote confirmed by direct PDF read of pages 1-3, 2026-06-24. Originally from Introduction (not Discussion as the dimension framing might imply).",
+        "raw": {
+          "dimension": "Primary discovery design — multi-modal vs single-modal",
+          "Bev2026_approach_verbatim": "Unlike cell viability screenings that provide only binary outcomes (live or dead), multiparametric drug screenings can capture complex cellular responses, offering insights into drug mechanisms of action, types of cell death, and molecular responses.",
+          "Bev2026_implementation": "Two parallel hit-selection axes from same screen — viability z-score (Fig 1E) AND morphology Pearson correlation (Fig 2B). Independent nomination paths catch gemcitabine which the viability axis missed.",
+          "CrisPRO_approach": "7-modality candidate axis enum at api/services/synthetic_lethality/v3/multimodal/models.py:122: CYTIDINE_ANALOGS, PARP_INHIBITORS, ATR_WEE1, WRN, IMMUNOTHERAPY, PKMYT1, CUSTOM. EvidenceRow combines GDSC pharmacology + DepMap CRISPR + literature receipt + expression + in vitro + in vivo + clinical cells.",
+          "moat_status": "PARITY (different dimensions, similar philosophy). Bev2026 axes are biological readouts within one screen; CrisPRO axes are evidence modalities across data types.",
+          "verification_status": "Verbatim quote confirmed by direct PDF read of pages 1-3, 2026-06-24. Originally from Introduction (not Discussion as the dimension framing might imply).",
+          "Bev2026_approach_verbatim_source": "Bev2026 PDF, Introduction (page 2), final paragraph before Results"
+        }
+      },
+      "verbatim_evidence": [
+        {
+          "quote": "Unlike cell viability screenings that provide only binary outcomes (live or dead), multiparametric drug screenings can capture complex cellular responses, offering insights into drug mechanisms of action, types of cell death, and molecular responses.",
+          "file": "/mnt/results/9p21_audit/moat_comparison.json",
+          "context": "comparison_dimensions[0].Bev2026_approach_verbatim",
+          "note": "verbatim quote from Bev2026 PDF as recorded at file creation time"
+        }
+      ],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/moat_comparison.json",
+          "exists": true,
+          "bytes": 33172,
+          "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+          "mtime_iso": "2026-06-25T01:41:15+00:00",
+          "span_extracted": "comparison_dimensions[0]"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate",
+        "moat:definition_of_moat",
+        "external:bev2026_pdf"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "moat_dim:01_falsification_arm_methodology",
+      "type": "moat_dimension_deep",
+      "name": "Dim 01 — Falsification arm methodology",
+      "what_it_solves": "Full moat_comparison dimension #1: 'Falsification arm methodology' — Bev2026 approach vs CrisPRO approach with verbatim quote.",
+      "how_it_solves": "Extracted verbatim from moat_comparison.comparison_dimensions[i]; raw dict carried in attributes.raw.",
+      "why_it_exists": "Depth pass: previous stream flattened each dimension to a few fields. This entity carries every field the JSON contains for that dimension.",
+      "attributes": {
+        "index": 1,
+        "dimension": "Falsification arm methodology",
+        "Bev2026_approach_verbatim": "",
+        "Bev2026_approach_verbatim_source": null,
+        "Bev2026_implementation": null,
+        "CrisPRO_approach": "PARP1 expression Mann-Whitney falsification arm: MBD4-LOF vs comparator (n=19/1498), median LOF 6.770 vs comparator 6.656, p=0.605 (two-sided). Sanity check: pan-cancer PARP1×PARPi ρ=-0.416, p=1.36e-21, n=481. Verifies that PARP-trapping mechanism is NOT operative in MBD4-LOF and pivots toward ATR axis as recommended therapy.",
+        "moat_status": "COMPLEMENTARY. Bev2026's wet-lab 2KO falsification is gold-standard but constrained to one gene at a time. CrisPRO's in-silico Mann-Whitney falsification scales across 18,000+ genes × multiple axes.",
+        "verification_status": "Bev2026 from PDF §Results + Supp Fig 2D. CrisPRO from user-provided 'precise numbers' message transcript line 12288 (verbatim).",
+        "raw": {
+          "dimension": "Falsification arm methodology",
+          "Bev2026_approach": "2KO clones (CDKN2A/2B deleted, MTAP retained) used as in-cell falsification arm. If sensitivity is MTAP-driven, 2KO should NOT respond to PRMT5/MAT2A inhibitors → confirmed (Supp Fig 2B, 2D).",
+          "Bev2026_evidence_quality": "Strong - actual cellular falsification in same assay system.",
+          "CrisPRO_approach": "PARP1 expression Mann-Whitney falsification arm: MBD4-LOF vs comparator (n=19/1498), median LOF 6.770 vs comparator 6.656, p=0.605 (two-sided). Sanity check: pan-cancer PARP1×PARPi ρ=-0.416, p=1.36e-21, n=481. Verifies that PARP-trapping mechanism is NOT operative in MBD4-LOF and pivots toward ATR axis as recommended therapy.",
+          "CrisPRO_evidence_quality": "In-silico falsification using public DepMap expression data + pan-cancer pharmacology Spearman correlation. Differs from Bev2026 in being computational not cellular, but enables falsification of competing hypotheses at scale across the full gene-axis matrix.",
+          "moat_status": "COMPLEMENTARY. Bev2026's wet-lab 2KO falsification is gold-standard but constrained to one gene at a time. CrisPRO's in-silico Mann-Whitney falsification scales across 18,000+ genes × multiple axes.",
+          "verification_status": "Bev2026 from PDF §Results + Supp Fig 2D. CrisPRO from user-provided 'precise numbers' message transcript line 12288 (verbatim)."
+        }
+      },
+      "verbatim_evidence": [
+        {
+          "quote": "",
+          "file": "/mnt/results/9p21_audit/moat_comparison.json",
+          "context": "comparison_dimensions[1].Bev2026_approach_verbatim",
+          "note": "verbatim quote from Bev2026 PDF as recorded at file creation time"
+        }
+      ],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/moat_comparison.json",
+          "exists": true,
+          "bytes": 33172,
+          "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+          "mtime_iso": "2026-06-25T01:41:15+00:00",
+          "span_extracted": "comparison_dimensions[1]"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate",
+        "moat:definition_of_moat",
+        "external:bev2026_pdf"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "moat_dim:02_stress_testing_confound_robustness",
+      "type": "moat_dimension_deep",
+      "name": "Dim 02 — Stress testing / confound robustness",
+      "what_it_solves": "Full moat_comparison dimension #2: 'Stress testing / confound robustness' — Bev2026 approach vs CrisPRO approach with verbatim quote.",
+      "how_it_solves": "Extracted verbatim from moat_comparison.comparison_dimensions[i]; raw dict carried in attributes.raw.",
+      "why_it_exists": "Depth pass: previous stream flattened each dimension to a few fields. This entity carries every field the JSON contains for that dimension.",
+      "attributes": {
+        "index": 2,
+        "dimension": "Stress testing / confound robustness",
+        "Bev2026_approach_verbatim": "",
+        "Bev2026_approach_verbatim_source": null,
+        "Bev2026_implementation": null,
+        "CrisPRO_approach": null,
+        "moat_status": "CrisPRO ADVANTAGE for systematic confound testing across stratifiers. Bev2026 validates across systems; CrisPRO validates across statistical stratifiers within one dataset. Both are necessary, but CrisPRO's approach can be applied PRE-publication to triage hypotheses.",
+        "verification_status": "Bev2026 from PDF §Results + Supp Fig 1A, 1F, 6A. CrisPRO from canonical_atr_wee1_rerun.json frozen 2026-04-05, full-precision JSON in transcript indices 991/1010 + user-provided 'precise numbers' message line 12288.",
+        "raw": {
+          "dimension": "Stress testing / confound robustness",
+          "Bev2026_approach": "(a) Test in 2 independent isogenic clone pairs per cell line (Fig 1F, 1G) to exclude clone-selection artifact. (b) Test in T24 (second cell line) and PDOs (2 patient sources) to exclude cell-line artifact. (c) Test in pancreatic adenocarcinoma + mesothelioma to exclude lineage artifact.",
+          "Bev2026_evidence_quality": "Strong cellular validation across systems but no formal stratifier analysis with explicit n breakdowns.",
+          "CrisPRO_approach_with_receipts": [
+            "Stress #1 (MSI purge): exclude ModelSubtypeFeatures containing 'MSI' from both arms. Effect STRENGTHENS: n_LOF=10/n_WT=906, Δ=-0.9095277046357615, p=0.015328932966132268, d=-0.6227047947387747. Rules out: MSI-H as confounder.",
+            "Stress #2 (TP53 stratification): MBD4-LOF∩TP53-mut vs MBD4-WT(Methods)∩TP53-mut. Effect is LARGEST: n_LOF=11/n_WT=619, LN_IC50 Δ=-1.0692019443383756, p=0.003002668797799231, d=-0.7404782024497254. AUC Δ=-0.08694390659421358, p=0.0008734372333767206, d=-0.8888045345020856. Rules out: TP53 dependency; relevant because >95% of HGSOC is TP53-mutant.",
+            "Stress #3 (Leave-one-out × 14): Max p across 14 iterations = 0.045165724128583974. All 14/14 iterations p<0.05. Rules out: Single-line driver.",
+            "Stress #4 (Non-bowel lineage): n_LOF=9/n_WT=873, Δ=-0.8706814558991984, p=0.02533035508952329, d=-0.5988100454283156. Rules out: Bowel-lineage artifact (bowel-only n_LOF=5, p=0.12638007986845198 underpowered).",
+            "Primary endpoint (Methods_no_somatic_MBD4 rule, ceralasertib LN_IC50): n_LOF=14, n_WT=914, Δ=-0.7324529879649893, p=0.021484496737088882, d=-0.5032867186922607.",
+            "Primary endpoint AUC partner: Δ=-0.05564297952485164, p=0.012941267483990927, d=-0.5569455208182712."
+          ],
+          "moat_status": "CrisPRO ADVANTAGE for systematic confound testing across stratifiers. Bev2026 validates across systems; CrisPRO validates across statistical stratifiers within one dataset. Both are necessary, but CrisPRO's approach can be applied PRE-publication to triage hypotheses.",
+          "verification_status": "Bev2026 from PDF §Results + Supp Fig 1A, 1F, 6A. CrisPRO from canonical_atr_wee1_rerun.json frozen 2026-04-05, full-precision JSON in transcript indices 991/1010 + user-provided 'precise numbers' message line 12288.",
+          "CrisPRO_receipts_source": "canonical_atr_wee1_rerun.json frozen 2026-04-05. Full content retrievable from transcript indices 991/1010 (raw.githubusercontent.com/fjkiani/Synthetic-Lethality/feat/mbd4-rxiv-manuscript-942-baseline/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/canonical_atr_wee1_rerun.json) + user-provided 'precise numbers' message at transcript line 12288 (i=11560)."
+        }
+      },
+      "verbatim_evidence": [
+        {
+          "quote": "",
+          "file": "/mnt/results/9p21_audit/moat_comparison.json",
+          "context": "comparison_dimensions[2].Bev2026_approach_verbatim",
+          "note": "verbatim quote from Bev2026 PDF as recorded at file creation time"
+        }
+      ],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/moat_comparison.json",
+          "exists": true,
+          "bytes": 33172,
+          "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+          "mtime_iso": "2026-06-25T01:41:15+00:00",
+          "span_extracted": "comparison_dimensions[2]"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate",
+        "moat:definition_of_moat",
+        "external:bev2026_pdf"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "moat_dim:03_sample_size_and_statistical_power",
+      "type": "moat_dimension_deep",
+      "name": "Dim 03 — Sample size and statistical power",
+      "what_it_solves": "Full moat_comparison dimension #3: 'Sample size and statistical power' — Bev2026 approach vs CrisPRO approach with verbatim quote.",
+      "how_it_solves": "Extracted verbatim from moat_comparison.comparison_dimensions[i]; raw dict carried in attributes.raw.",
+      "why_it_exists": "Depth pass: previous stream flattened each dimension to a few fields. This entity carries every field the JSON contains for that dimension.",
+      "attributes": {
+        "index": 3,
+        "dimension": "Sample size and statistical power",
+        "Bev2026_approach_verbatim": "",
+        "Bev2026_approach_verbatim_source": null,
+        "Bev2026_implementation": null,
+        "CrisPRO_approach": null,
+        "moat_status": "DIFFERENT KIND OF STATISTICAL POWER. Bev2026 has high biological replicate quality (n=6 per condition, paired isogenic) with low N. CrisPRO has high N (1000+ cell lines) with single-readout pharmacology. Best practice combines both.",
+        "verification_status": "Bev2026 from PDF figure legends. CrisPRO from canonical receipts.",
+        "raw": {
+          "dimension": "Sample size and statistical power",
+          "Bev2026_n": "2 isogenic clone pairs (HT1197 + T24) + 2 PDOs (TN-001 + BlCa197) + 2 cross-tumor models (SW1990 + SPC111). Total isogenic readout systems: 4 cell line pairs + 2 PDO pairs = 6 paired systems.",
+          "CrisPRO_n_for_MBD4_ATR_axis": "n_LOF=14, n_WT=914 (Methods rule). Plus DepMap CRISPR n=1186 lines for gene-effect dependency.",
+          "CrisPRO_comparator_pool_for_PARP1_expression": "n=19/1498 (broader because expression data covers more lines than drug-screen data)",
+          "moat_status": "DIFFERENT KIND OF STATISTICAL POWER. Bev2026 has high biological replicate quality (n=6 per condition, paired isogenic) with low N. CrisPRO has high N (1000+ cell lines) with single-readout pharmacology. Best practice combines both.",
+          "verification_status": "Bev2026 from PDF figure legends. CrisPRO from canonical receipts."
+        }
+      },
+      "verbatim_evidence": [
+        {
+          "quote": "",
+          "file": "/mnt/results/9p21_audit/moat_comparison.json",
+          "context": "comparison_dimensions[3].Bev2026_approach_verbatim",
+          "note": "verbatim quote from Bev2026 PDF as recorded at file creation time"
+        }
+      ],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/moat_comparison.json",
+          "exists": true,
+          "bytes": 33172,
+          "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+          "mtime_iso": "2026-06-25T01:41:15+00:00",
+          "span_extracted": "comparison_dimensions[3]"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate",
+        "moat:definition_of_moat",
+        "external:bev2026_pdf"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "moat_dim:04_axis_taxonomy_and_target_class_mapping",
+      "type": "moat_dimension_deep",
+      "name": "Dim 04 — Axis taxonomy and target-class mapping",
+      "what_it_solves": "Full moat_comparison dimension #4: 'Axis taxonomy and target-class mapping' — Bev2026 approach vs CrisPRO approach with verbatim quote.",
+      "how_it_solves": "Extracted verbatim from moat_comparison.comparison_dimensions[i]; raw dict carried in attributes.raw.",
+      "why_it_exists": "Depth pass: previous stream flattened each dimension to a few fields. This entity carries every field the JSON contains for that dimension.",
+      "attributes": {
+        "index": 4,
+        "dimension": "Axis taxonomy and target-class mapping",
+        "Bev2026_approach_verbatim": "",
+        "Bev2026_approach_verbatim_source": null,
+        "Bev2026_implementation": null,
+        "CrisPRO_approach": "Formal enum CandidateAxis at api/services/synthetic_lethality/v3/multimodal/models.py:122 with 7 axes. Drug-to-axis mapping table at pharmacologic_analyzer.py:66.",
+        "moat_status": "Bev2026 ADVANTAGE on biology (correct axis assignment). CrisPRO has the framework but a fixable bug in the mapping.",
+        "verification_status": null,
+        "raw": {
+          "dimension": "Axis taxonomy and target-class mapping",
+          "Bev2026_approach": "Paper introduces 'rational drug combinations' across 4 mechanism axes: nucleoside analogs (cytarabine, gemcitabine), antifolates (MTX), PRMT5 inhibitors (MRTX1719) + MAT2A inhibitors (AG-270), ATR/CHK1/WEE1 inhibitors (VX970, AZD7762, MK-1775). No formal enum.",
+          "CrisPRO_approach": "Formal enum CandidateAxis at api/services/synthetic_lethality/v3/multimodal/models.py:122 with 7 axes. Drug-to-axis mapping table at pharmacologic_analyzer.py:66.",
+          "CrisPRO_known_gap": {
+            "bug_id": "PA-MRTX1719-WRN-MISMAP",
+            "location": "pharmacologic_analyzer.py:66 (at HEAD bfd6d11f, branch fix/mbd4-atr-strong-tier)",
+            "current_mapping_verbatim": "'mrtx1719': 'wrn'",
+            "correct_mapping_per_Bev2026_and_Engstrom_2023": "'mrtx1719': 'prmt5_mtap_cooperative' (a new axis that does not yet exist in the CandidateAxis enum)",
+            "evidence_strength": "TRIPLE-SOURCE: Bev2026 §Results + Methods (MRTX1719 = PRMT5 inhibitor); Engstrom 2023 Cancer Discov 13:2412-2431 (Bev2026 ref 7) is the originating paper defining MRTX1719 as MTA-cooperative PRMT5 inhibitor; Pettus 2025 J Med Chem 68:6932-6954 (Bev2026 ref 8) confirms MTA-cooperative PRMT5 axis for AMG 193.",
+            "remediation_required": "Add PRMT5_MTAP_COOPERATIVE to CandidateAxis enum; remap mrtx1719 and add AMG 193 / pemrametostat to same axis. Out of scope per user lock #4.",
+            "impact_on_demichelis_outreach": "Demichelis lab will immediately notice this bug if shown the current taxonomy. Pre-outreach fix recommended."
+          },
+          "moat_status": "Bev2026 ADVANTAGE on biology (correct axis assignment). CrisPRO has the framework but a fixable bug in the mapping.",
+          "Bev2026_evidence_verbatim": "First, we investigated the activity of the MAT2A inhibitor AG-270 and the PRMT5 inhibitor MRTX1719, which selectively binds to PRMT5 complexed with MTA, to define the ideal dose for a clear genotype-specific effect when administered alone in our cell models.",
+          "Bev2026_evidence_verbatim_source": "Bev2026 PDF, Results section header 'Cytarabine synergizes with PRMT5 and MAT2A inhibitors selectively in bladder cancer cells with MTAP loss' (page 5, first paragraph)",
+          "Engstrom_2023_verbatim": "Engstrom, L. D. et al. MRTX1719 is an MTA-cooperative PRMT5 inhibitor that exhibits synthetic lethality in preclinical models and patients with MTAP-deleted cancer. Cancer Discov. 13, 2412–2431 (2023).",
+          "Engstrom_2023_verbatim_source": "Bev2026 PDF Reference 7, page 15",
+          "Pettus_2025_verbatim": "Pettus, L. H. et al. Discovery of AMG 193, an MTA-cooperative PRMT5 inhibitor for the treatment of MTAP-deleted cancers. J. Med. Chem. 68, 6932–6954 (2025).",
+          "Pettus_2025_verbatim_source": "Bev2026 PDF Reference 8, page 15"
+        }
+      },
+      "verbatim_evidence": [
+        {
+          "quote": "",
+          "file": "/mnt/results/9p21_audit/moat_comparison.json",
+          "context": "comparison_dimensions[4].Bev2026_approach_verbatim",
+          "note": "verbatim quote from Bev2026 PDF as recorded at file creation time"
+        }
+      ],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/moat_comparison.json",
+          "exists": true,
+          "bytes": 33172,
+          "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+          "mtime_iso": "2026-06-25T01:41:15+00:00",
+          "span_extracted": "comparison_dimensions[4]"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate",
+        "moat:definition_of_moat",
+        "external:bev2026_pdf"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "moat_dim:05_patient_derived_organoid_pdo_deployment",
+      "type": "moat_dimension_deep",
+      "name": "Dim 05 — Patient-derived organoid (PDO) deployment",
+      "what_it_solves": "Full moat_comparison dimension #5: 'Patient-derived organoid (PDO) deployment' — Bev2026 approach vs CrisPRO approach with verbatim quote.",
+      "how_it_solves": "Extracted verbatim from moat_comparison.comparison_dimensions[i]; raw dict carried in attributes.raw.",
+      "why_it_exists": "Depth pass: previous stream flattened each dimension to a few fields. This entity carries every field the JSON contains for that dimension.",
+      "attributes": {
+        "index": 5,
+        "dimension": "Patient-derived organoid (PDO) deployment",
+        "Bev2026_approach_verbatim": "",
+        "Bev2026_approach_verbatim_source": null,
+        "Bev2026_implementation": null,
+        "CrisPRO_approach": "No primary PDO data — relies on DepMap CCLE cell lines (n=1186) + GDSC2 drug screens. Public-data dependent.",
+        "moat_status": "Bev2026 ADVANTAGE on translational relevance. CrisPRO can offer pre-screening prioritization to Demichelis/Kruithof-de Julio PDO biobanks before they commit organoid resource.",
+        "verification_status": null,
+        "raw": {
+          "dimension": "Patient-derived organoid (PDO) deployment",
+          "Bev2026_approach": "Two PDOs from Inselspital Bern (BlCa197) + Spitalzentrum Biel (TN-001), both high-grade MIBC mixed urothelial/sarcomatoid. Bi-directional editing: TN-001 doxycycline-inducible MTAP rescue + BlCa197 MTAP-KO induction. CellTiter-Glo 3D readout. n=3 biological replicates × 2 technical replicates per drug condition.",
+          "Bev2026_validation": "MTAP-OE in 3KO PDO RESCUES MRTX1719 activity; MTAP-KO in WT PDO INCREASES MRTX1719 activity. Bi-directional rescue is a powerful validation.",
+          "CrisPRO_approach": "No primary PDO data — relies on DepMap CCLE cell lines (n=1186) + GDSC2 drug screens. Public-data dependent.",
+          "moat_status": "Bev2026 ADVANTAGE on translational relevance. CrisPRO can offer pre-screening prioritization to Demichelis/Kruithof-de Julio PDO biobanks before they commit organoid resource.",
+          "complementary_value": "CrisPRO's biomarker-stratification triage + Kruithof-de Julio's TOR organoid bank = mutually beneficial pipeline.",
+          "Bev2026_PDO_clinical_history_verbatim": "PDO lines, TN-001 and BlCa197, were generated from specimens obtained from patients who underwent cystectomy at the Inselspital, University Hospital, in Bern, or Spitalzentrum Biel, respectively. Specifically, BlCa197 cells were isolated from a 54-year-old female patient with high-grade MIBC with mixed urothelial and sarcomatoid histology. This patient underwent neoadjuvant cisplatin/gemcitabine treatment followed by radical cystectomy. TN-001 was obtained from a 53-year-old male patient diagnosed with high-grade MIBC with mixed urothelial and sarcomatoid histology. This patient received MVAC combination followed by radical cystectomy.",
+          "Bev2026_PDO_clinical_history_source": "Bev2026 PDF, Methods section 'Clinical details of patient-derived organoid lines' (page 14)",
+          "Bev2026_bidirectional_editing_verbatim": "To obtain TN-001 PDOs with doxycycline-inducible MTAP overexpression, the MTAP gene was cloned into pCW57.1 (Addgene #41393), which was then used to transduce TN-001 cells. For MTAP knockout in BlCa197 PDOs, MTAP sgRNA sequence was cloned into a lentiCRISPR_v1 plasmid as previously described, which was then used to transduce BlCa197 cells.",
+          "Bev2026_bidirectional_editing_source": "Bev2026 PDF, Methods 'Patient-derived organoids (PDOs) establishment' (page 14)",
+          "Bev2026_PDO_rescue_finding_verbatim": "MTAP overexpression in TN-001 organoids rescues MRTX1719 activity, while MTAP KO selectively increases MRTX1719 activity in BlCa197 (Supplementary Fig. 7A).",
+          "Bev2026_PDO_rescue_finding_source": "Bev2026 PDF, Results 'Combination of cytarabine and VX970 with MRTX1719 is effective in BLCA patient-derived organoids' (page 8)"
+        }
+      },
+      "verbatim_evidence": [
+        {
+          "quote": "",
+          "file": "/mnt/results/9p21_audit/moat_comparison.json",
+          "context": "comparison_dimensions[5].Bev2026_approach_verbatim",
+          "note": "verbatim quote from Bev2026 PDF as recorded at file creation time"
+        }
+      ],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/moat_comparison.json",
+          "exists": true,
+          "bytes": 33172,
+          "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+          "mtime_iso": "2026-06-25T01:41:15+00:00",
+          "span_extracted": "comparison_dimensions[5]"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate",
+        "moat:definition_of_moat",
+        "external:bev2026_pdf"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "moat_dim:06_reproducibility_infrastructure",
+      "type": "moat_dimension_deep",
+      "name": "Dim 06 — Reproducibility infrastructure",
+      "what_it_solves": "Full moat_comparison dimension #6: 'Reproducibility infrastructure' — Bev2026 approach vs CrisPRO approach with verbatim quote.",
+      "how_it_solves": "Extracted verbatim from moat_comparison.comparison_dimensions[i]; raw dict carried in attributes.raw.",
+      "why_it_exists": "Depth pass: previous stream flattened each dimension to a few fields. This entity carries every field the JSON contains for that dimension.",
+      "attributes": {
+        "index": 6,
+        "dimension": "Reproducibility infrastructure",
+        "Bev2026_approach_verbatim": "",
+        "Bev2026_approach_verbatim_source": null,
+        "Bev2026_implementation": null,
+        "CrisPRO_approach": "Repo crispro-backend-v2 + Synthetic-Lethality (public on GitHub). Canonical artifact provenance documented at e.g., 'github.com/fjkiani/crispro@d33f640:publications/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/canonical_atr_wee1_rerun.json'. Test coverage 10 unit tests at tests/synthetic_lethality/v3/multimodal/test_mbd4_atr_promotion.py at HEAD bfd6d11f.",
+        "moat_status": "CrisPRO ADVANTAGE on code/artifact transparency. Bev2026's data deposition is strong; code withhold is a published limitation.",
+        "verification_status": "Bev2026 Code Availability verbatim from PDF page 15. CrisPRO repo content from user-provided audit report transcript line 12288 + earlier worker-mounted verification.",
+        "raw": {
+          "dimension": "Reproducibility infrastructure",
+          "Bev2026_approach": "Raw drug-screen data deposited to Zenodo 10.5281/zenodo.18957959. Code statement (verbatim): 'The underlying code for this study to pre-process drug screening image data is not publicly available but may be made available to qualified researchers on reasonable request from the corresponding authors.'",
+          "Bev2026_score": "DATA SHARED, CODE WITHHELD. Partial reproducibility.",
+          "CrisPRO_approach": "Repo crispro-backend-v2 + Synthetic-Lethality (public on GitHub). Canonical artifact provenance documented at e.g., 'github.com/fjkiani/crispro@d33f640:publications/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/canonical_atr_wee1_rerun.json'. Test coverage 10 unit tests at tests/synthetic_lethality/v3/multimodal/test_mbd4_atr_promotion.py at HEAD bfd6d11f.",
+          "CrisPRO_score": "OPEN CODE + CANONICAL ARTIFACT PROVENANCE. Higher reproducibility surface.",
+          "moat_status": "CrisPRO ADVANTAGE on code/artifact transparency. Bev2026's data deposition is strong; code withhold is a published limitation.",
+          "verification_status": "Bev2026 Code Availability verbatim from PDF page 15. CrisPRO repo content from user-provided audit report transcript line 12288 + earlier worker-mounted verification."
+        }
+      },
+      "verbatim_evidence": [
+        {
+          "quote": "",
+          "file": "/mnt/results/9p21_audit/moat_comparison.json",
+          "context": "comparison_dimensions[6].Bev2026_approach_verbatim",
+          "note": "verbatim quote from Bev2026 PDF as recorded at file creation time"
+        }
+      ],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/moat_comparison.json",
+          "exists": true,
+          "bytes": 33172,
+          "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+          "mtime_iso": "2026-06-25T01:41:15+00:00",
+          "span_extracted": "comparison_dimensions[6]"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate",
+        "moat:definition_of_moat",
+        "external:bev2026_pdf"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "moat_dim:07_synergy_quantification_methodology",
+      "type": "moat_dimension_deep",
+      "name": "Dim 07 — Synergy quantification methodology",
+      "what_it_solves": "Full moat_comparison dimension #7: 'Synergy quantification methodology' — Bev2026 approach vs CrisPRO approach with verbatim quote.",
+      "how_it_solves": "Extracted verbatim from moat_comparison.comparison_dimensions[i]; raw dict carried in attributes.raw.",
+      "why_it_exists": "Depth pass: previous stream flattened each dimension to a few fields. This entity carries every field the JSON contains for that dimension.",
+      "attributes": {
+        "index": 7,
+        "dimension": "Synergy quantification methodology",
+        "Bev2026_approach_verbatim": "Synergy was calculated with two models (HSA and Bliss) using SynergyFinder 3.1, and HSA synergy scores and summary synergy scores with 95% confidence interval for the CCK-8 experiments are shown.",
+        "Bev2026_approach_verbatim_source": "Bev2026 PDF, Fig 3 caption (page 7)",
+        "Bev2026_implementation": null,
+        "CrisPRO_approach": "CrisPRO does not currently perform wet-lab synergy quantification — relies on GDSC2 single-agent IC50 / AUC + DepMap CRISPR dependency for axis ranking.",
+        "moat_status": "Bev2026 ADVANTAGE on wet-lab synergy measurement methodology. CrisPRO can offer in-silico drug-combination ranking via GDSC2 axis pairing (e.g., ATR-inhibitor × cytidine-analog combination predictions for MBD4-LOF), but does not generate primary synergy scores.",
+        "verification_status": null,
+        "raw": {
+          "dimension": "Synergy quantification methodology",
+          "Bev2026_approach_verbatim": "Synergy was calculated with two models (HSA and Bliss) using SynergyFinder 3.1, and HSA synergy scores and summary synergy scores with 95% confidence interval for the CCK-8 experiments are shown.",
+          "Bev2026_approach_verbatim_source": "Bev2026 PDF, Fig 3 caption (page 7)",
+          "Bev2026_software_note": "Paper uses SynergyFinder 3.1, but cites reference 21 (Ianevski et al. 2022 Nucleic Acids Res 50:W739-W743) which is the SynergyFinder 3.0 publication. The 3.1 release apparently postdates the original publication and is referenced by version number only in the figure caption.",
+          "CrisPRO_approach": "CrisPRO does not currently perform wet-lab synergy quantification — relies on GDSC2 single-agent IC50 / AUC + DepMap CRISPR dependency for axis ranking.",
+          "moat_status": "Bev2026 ADVANTAGE on wet-lab synergy measurement methodology. CrisPRO can offer in-silico drug-combination ranking via GDSC2 axis pairing (e.g., ATR-inhibitor × cytidine-analog combination predictions for MBD4-LOF), but does not generate primary synergy scores.",
+          "complementary_value": "If CrisPRO computational ranking nominates a combination, Bev2026's published HSA/Bliss methodology with 95% CI is the reproducible gold-standard for wet-lab validation."
+        }
+      },
+      "verbatim_evidence": [
+        {
+          "quote": "Synergy was calculated with two models (HSA and Bliss) using SynergyFinder 3.1, and HSA synergy scores and summary synergy scores with 95% confidence interval for the CCK-8 experiments are shown.",
+          "file": "/mnt/results/9p21_audit/moat_comparison.json",
+          "context": "comparison_dimensions[7].Bev2026_approach_verbatim",
+          "note": "verbatim quote from Bev2026 PDF as recorded at file creation time"
+        }
+      ],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/moat_comparison.json",
+          "exists": true,
+          "bytes": 33172,
+          "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+          "mtime_iso": "2026-06-25T01:41:15+00:00",
+          "span_extracted": "comparison_dimensions[7]"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate",
+        "moat:definition_of_moat",
+        "external:bev2026_pdf"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "moat_dim:08_source_of_mtap_loss_mibc_prevalence_statistic",
+      "type": "moat_dimension_deep",
+      "name": "Dim 08 — Source of MTAP-loss MIBC prevalence statistic",
+      "what_it_solves": "Full moat_comparison dimension #8: 'Source of MTAP-loss MIBC prevalence statistic' — Bev2026 approach vs CrisPRO approach with verbatim quote.",
+      "how_it_solves": "Extracted verbatim from moat_comparison.comparison_dimensions[i]; raw dict carried in attributes.raw.",
+      "why_it_exists": "Depth pass: previous stream flattened each dimension to a few fields. This entity carries every field the JSON contains for that dimension.",
+      "attributes": {
+        "index": 8,
+        "dimension": "Source of MTAP-loss MIBC prevalence statistic",
+        "Bev2026_approach_verbatim": "",
+        "Bev2026_approach_verbatim_source": null,
+        "Bev2026_implementation": null,
+        "CrisPRO_approach": "Reproduces and cites Bev2026's 26% figure for MTAP/CDKN2A/CDKN2B co-deletion. The 22% figure (CDKN2A-alone in MIBC, Robertson 2017) is also cited as a complementary endpoint when MTAP-status is not specified. CrisPRO has NOT independently reproduced either number — both are taken from external citations.",
+        "moat_status": "NEUTRAL — both numbers are Bev2026 + Robertson/Lindskrog original findings. CrisPRO cites them appropriately.",
+        "verification_status": "All three verbatim quotes confirmed by direct PDF read 2026-06-24 (pages 2, 12 of PDF). Specific pages cited per quote.",
+        "raw": {
+          "dimension": "Source of MTAP-loss MIBC prevalence statistic",
+          "Bev2026_approach_verbatim_1": "Our analysis of the TCGA MIBC cohort showed that approximately 26% of patients harbor homozygous deletion of CDKN2A/CDKN2B/MTAP, while only a minority (approximately 5%) harbor homozygous deletions of only CDKN2A/2B.",
+          "Bev2026_approach_verbatim_source_1": "Bev2026 PDF, Results section (page 2)",
+          "Bev2026_approach_verbatim_2": "Co-occurrence of CDKN2A/2B and MTAP deletions interests 26% of TCGA MIBC patients (p value < 0.001 based on...",
+          "Bev2026_approach_verbatim_source_2": "Bev2026 PDF, Discussion section (page 12)",
+          "Bev2026_approach_verbatim_3": "Several studies have investigated the molecular landscape of NMIBC and MIBC, revealing that CDKN2A loss at chromosome 9p21 is the most common copy number alteration in BLCA, occurring in approximately 42 and 22% of NMIBC and MIBC, respectively13,14.",
+          "Bev2026_approach_verbatim_source_3": "Bev2026 PDF, Introduction (page 2), refs 13 (Lindskrog 2021) and 14 (Robertson 2017)",
+          "CrisPRO_approach": "Reproduces and cites Bev2026's 26% figure for MTAP/CDKN2A/CDKN2B co-deletion. The 22% figure (CDKN2A-alone in MIBC, Robertson 2017) is also cited as a complementary endpoint when MTAP-status is not specified. CrisPRO has NOT independently reproduced either number — both are taken from external citations.",
+          "moat_status": "NEUTRAL — both numbers are Bev2026 + Robertson/Lindskrog original findings. CrisPRO cites them appropriately.",
+          "attribution_clarity": "Important: 26% (Bev2026 = MTAP+CDKN2A/B co-deletion) ≠ 22% (Robertson 2017 = CDKN2A loss alone, MTAP status not specified). Conflating them would be a methodological error.",
+          "verification_status": "All three verbatim quotes confirmed by direct PDF read 2026-06-24 (pages 2, 12 of PDF). Specific pages cited per quote."
+        }
+      },
+      "verbatim_evidence": [
+        {
+          "quote": "",
+          "file": "/mnt/results/9p21_audit/moat_comparison.json",
+          "context": "comparison_dimensions[8].Bev2026_approach_verbatim",
+          "note": "verbatim quote from Bev2026 PDF as recorded at file creation time"
+        }
+      ],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/moat_comparison.json",
+          "exists": true,
+          "bytes": 33172,
+          "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+          "mtime_iso": "2026-06-25T01:41:15+00:00",
+          "span_extracted": "comparison_dimensions[8]"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate",
+        "moat:definition_of_moat",
+        "external:bev2026_pdf"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "moat:comparative_summary_table",
+      "type": "moat_document_field",
+      "name": "moat_comparison — comparative_summary_table",
+      "what_it_solves": "Structured summary table of moat labels across all dimensions.",
+      "how_it_solves": "Extracted verbatim; row/column shape recorded.",
+      "why_it_exists": "Downstream consumers can render the table without re-reading the JSON.",
+      "attributes": {
+        "raw": [
+          {
+            "dimension": "Multi-modal discovery",
+            "Bev2026": "Strong (viability + morphology)",
+            "CrisPRO": "Strong (7-axis evidence matrix)",
+            "winner": "PARITY"
+          },
+          {
+            "dimension": "Falsification arm",
+            "Bev2026": "Cellular 2KO (gold-standard, low N)",
+            "CrisPRO": "In-silico PARP1 Mann-Whitney (scaleable)",
+            "winner": "COMPLEMENTARY"
+          },
+          {
+            "dimension": "Confound stress tests",
+            "Bev2026": "Cross-system (clones+cell lines+PDOs+tumor types)",
+            "CrisPRO": "Cross-stratifier (MSI, TP53, LOO, lineage)",
+            "winner": "COMPLEMENTARY"
+          },
+          {
+            "dimension": "Statistical N",
+            "Bev2026": "Low N high quality (paired isogenic n=6)",
+            "CrisPRO": "High N (n=914 WT, n=14 LOF, n=1498 comparator)",
+            "winner": "COMPLEMENTARY"
+          },
+          {
+            "dimension": "Axis taxonomy",
+            "Bev2026": "Biologically correct, no enum",
+            "CrisPRO": "Formal enum, MRTX1719 bug at HEAD bfd6d11f",
+            "winner": "Bev2026 (biology); CrisPRO (framework)"
+          },
+          {
+            "dimension": "PDO deployment",
+            "Bev2026": "Bi-directional MTAP editing in 2 PDOs",
+            "CrisPRO": "No primary PDO; in-silico triage offer",
+            "winner": "Bev2026"
+          },
+          {
+            "dimension": "Reproducibility",
+            "Bev2026": "Data on Zenodo; code withheld",
+            "CrisPRO": "Open code + artifact provenance + 10 unit tests",
+            "winner": "CrisPRO"
+          },
+          {
+            "dimension": "Synergy quantification",
+            "Bev2026": "HSA + Bliss w/ SynergyFinder 3.1, 95% CI",
+            "CrisPRO": "Not currently performed; offers axis pairing ranking only",
+            "winner": "Bev2026"
+          }
+        ],
+        "row_count": 8,
+        "top_keys": null
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/moat_comparison.json",
+          "exists": true,
+          "bytes": 33172,
+          "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+          "mtime_iso": "2026-06-25T01:41:15+00:00",
+          "span_extracted": "comparative_summary_table"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate",
+        "moat_dim:00_primary_discovery_design_multi_modal_vs_single_modal",
+        "moat_dim:01_falsification_arm_methodology",
+        "moat_dim:02_stress_testing_confound_robustness",
+        "moat_dim:03_sample_size_and_statistical_power",
+        "moat_dim:04_axis_taxonomy_and_target_class_mapping",
+        "moat_dim:05_patient_derived_organoid_pdo_deployment",
+        "moat_dim:06_reproducibility_infrastructure",
+        "moat_dim:07_synergy_quantification_methodology",
+        "moat_dim:08_source_of_mtap_loss_mibc_prevalence_statistic"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "moat:honest_moat_assessment",
+      "type": "moat_document_field",
+      "name": "moat_comparison — honest_moat_assessment",
+      "what_it_solves": "Self-critical assessment paragraph naming where the moat is real vs where it is aspirational.",
+      "how_it_solves": "Extracted verbatim.",
+      "why_it_exists": "Anti-hype guard: the KB must carry the honest assessment, not only the winning dimensions.",
+      "attributes": {
+        "raw": {
+          "where_CrisPRO_genuinely_outperforms": [
+            "Computational falsification at scale (PARP1 axis in MBD4-LOF context demonstrated; methodology generalizable)",
+            "Systematic confound stress-testing within single dataset (MSI + TP53 + LOO + lineage)",
+            "Open code + artifact provenance with full-precision statistical values",
+            "Cross-axis evidence matrix that survives compaction (canonical artifact frozen 2026-04-05)"
+          ],
+          "where_Bev2026_outperforms": [
+            "Cellular validation in isogenic pairs + cross-tumor + PDOs (gold-standard biological evidence)",
+            "Bi-directional MTAP editing (rescue + KO) as in-cell falsification mechanism",
+            "PDO infrastructure (TOR Bern + clinical samples)",
+            "Wet-lab synergy measurement (SynergyFinder 3.1 HSA scores with 95% CI)"
+          ],
+          "complementarity_opportunity": "CrisPRO + Bev2026 lab = computational triage + cellular validation. CrisPRO ranks candidate PDOs by biomarker score → Demichelis/Kruithof-de Julio lab validates the top-N in wet lab. Each side does what it cannot do alone.",
+          "fix_required_before_outreach": [
+            "MRTX1719 axis-mapping bug in pharmacologic_analyzer.py:66 (PRMT5 vs WRN) — flagged in DH JSON and CVP JSON. Recommended pre-outreach fix.",
+            "PRMT5_MTAP_COOPERATIVE axis missing from CandidateAxis enum (currently 7 axes; this would be the 8th).",
+            "n=942 prose value (manuscript Abstract/Table/Fig 2 caption) does not reproduce from canonical_atr_wee1_rerun.json — user's own audit report flags this as an unresolved item; affects only internal CrisPRO manuscript, not outreach material."
+          ]
+        }
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/moat_comparison.json",
+          "exists": true,
+          "bytes": 33172,
+          "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+          "mtime_iso": "2026-06-25T01:41:15+00:00",
+          "span_extracted": "honest_moat_assessment"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate",
+        "moat:moat_caveats"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "moat:competitor_landscape_not_assessed_this_session",
+      "type": "moat_document_field",
+      "name": "moat_comparison — competitor_landscape_not_assessed_this_session",
+      "what_it_solves": "Explicit list of competitors NOT scored in this session (scope limit).",
+      "how_it_solves": "Extracted verbatim.",
+      "why_it_exists": "Scope discipline: the KB must state what it did not do, not only what it did.",
+      "attributes": {
+        "raw": {
+          "items_not_retrieved": [
+            "Alhalabi 2022 (Nat Commun 13:1797, ref 17) — MTAP-loss + pemetrexed in BLCA; not retrieved this session",
+            "Lindskrog 2021 (Nat Commun 12:2301, ref 13) — NMIBC molecular subtyping; not retrieved",
+            "Garioni 2023 (npj Precis Oncol 7:112, ref 34) — sarcomatoid urothelial PDOs; not retrieved",
+            "Papadimitriou 2024 (Mol Ther Oncol 32:200818, ref 36) — CDKN2A copy-number + gemcitabine in BLCA PDX; not retrieved",
+            "Other companies with bladder cancer + 9p21 programs (e.g., Mirati MRTX1719 trial sponsor, Agios Pharmaceuticals AG-270 trial sponsor) — not assessed"
+          ],
+          "implication": "This moat comparison covers CrisPRO vs Bev2026 specifically. Competitive positioning against industry programs (Mirati Phase II, Agios Phase I, etc.) requires additional retrieval and is NOT in scope for this audit."
+        }
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/moat_comparison.json",
+          "exists": true,
+          "bytes": 33172,
+          "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+          "mtime_iso": "2026-06-25T01:41:15+00:00",
+          "span_extracted": "competitor_landscape_not_assessed_this_session"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "moat:audit_corrections_2026_06_24",
+      "type": "moat_document_field",
+      "name": "moat_comparison — audit_corrections_2026_06_24",
+      "what_it_solves": "Corrections applied on 2026-06-24 to earlier drafts of moat_comparison.json.",
+      "how_it_solves": "Extracted verbatim.",
+      "why_it_exists": "Correction lock: every edit that changed a moat_status is inspectable so nothing quietly flips PARITY→EDGE.",
+      "attributes": {
+        "raw": {
+          "issues_found_by_post_generation_audit": 8,
+          "issues_resolved": 8,
+          "corrections_applied": [
+            "Dim 1: Added 'PDF Introduction page 2' source location for 'Unlike cell viability screenings' verbatim quote.",
+            "Dim 3: Restored full-precision values for all 4 stress tests + primary endpoint (Δ to 16 sig figs, p-values exact, Cohen's d exact) — matches canonical_atr_wee1_rerun.json frozen 2026-04-05.",
+            "Dim 5: Added 3 verbatim Bev2026 quotes with page citations: Results page 5 header, Ref 7 Engstrom 2023, Ref 8 Pettus 2025.",
+            "Dim 6: Added 3 verbatim Bev2026 quotes with page citations: Methods page 14 PDO clinical history, Methods page 14 bi-directional editing, Results page 8 rescue finding.",
+            "Dim 8 (NEW): Synergy quantification — added Fig 3 caption verbatim with page 7 source. SynergyFinder 3.1 vs ref 21 (3.0) distinction noted.",
+            "Dim 9 (NEW): MTAP-loss prevalence attribution — 3 verbatim quotes (Intro p.2, Results p.2, Discussion p.12) explicitly disambiguating 26% (Bev2026 MTAP-codeletion) vs 22% (Robertson 2017 CDKN2A-alone).",
+            "Removed any implicit claim that CrisPRO 'verified' or 'reproduced' the 26% figure — it is Bev2026's own analysis.",
+            "Audit checked attribution drift: 0 concerns. All quantitative claims trace to verified transcript receipts or verified PDF text. Repo state qualified with 'HEAD bfd6d11f'."
+          ],
+          "claims_remaining_in_quarantine": [
+            "None in moat_comparison.json. All quantitative claims either cite verbatim verbatim or are explicitly labeled as inferences."
+          ],
+          "claims_NOT_made_in_this_document": [
+            "Wet-lab competitor comparisons (Mirati Phase II, Agios Phase I, etc.) — explicitly out of scope per competitor_landscape_not_assessed_this_session block.",
+            "Specific resolution recommendation for MRTX1719 bug — only the bug location and correct mapping per Bev2026 are stated; whether to fix or not remains the user's call per lock #4."
+          ],
+          "full_precision_audit_pass": "All canonical receipt values present at full precision: 0.7324529879649893 (delta), 0.05564297952485164 (AUC delta), 1.0692019443383756 (TP53 delta), 0.045165724128583974 (LOO max p), n=619 (TP53 strat WT).",
+          "caveat_blocks_added": [
+            "MOAT-CAV-001 (reproducibility-as-moat contingent on PC-02 + n=942/n=914 + repo-state-temporal qualification)"
+          ],
+          "caveat_added_at": "2026-06-24 (after worker-0 termination + recreation)"
+        }
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/moat_comparison.json",
+          "exists": true,
+          "bytes": 33172,
+          "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+          "mtime_iso": "2026-06-25T01:41:15+00:00",
+          "span_extracted": "audit_corrections_2026_06_24"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "moat:moat_caveats",
+      "type": "moat_document_field",
+      "name": "moat_comparison — moat_caveats",
+      "what_it_solves": "Enumerated caveats that qualify each moat claim.",
+      "how_it_solves": "Extracted verbatim.",
+      "why_it_exists": "Every EDGE/PARITY label carries a caveat; surfacing them prevents downstream over-claiming.",
+      "attributes": {
+        "raw": {
+          "caveat_id": "MOAT-CAV-001",
+          "caveat_title": "Reproducibility-as-moat is contingent on unresolved governance items",
+          "added_on": "2026-06-24",
+          "scope": "Applies to all 'CrisPRO ADVANTAGE on reproducibility / code transparency' claims in this document (Dimensions 3, 7, and the honest_moat_assessment block).",
+          "issue_1_pc02_quarantine": {
+            "claim_at_risk": "honest_moat_assessment.where_CrisPRO_genuinely_outperforms includes: 'Open code + artifact provenance with full-precision statistical values'",
+            "provenance_status": "PARTIALLY VERIFIED — the existence of PC-02 as a quarantined item is confirmed in /mnt/results/execution_trace/NOTES.md verbatim line: 'QUARANTINED: DL-07 Figure 2 (DDR 0.983), LATIFY deltas, PC-02'. The full expansion of what PC-02 means ('permanently downgraded until retroactive_prediction_run.py --trial-vectors reproduces documented deltas cleanly') is sourced from AI Notes memory only, not from a tool output in this session's transcript.",
+            "downgrade_to_apply": "The 'reproducibility' moat claim in Dimension 7 is degraded until PC-02 is resolved. The statement 'Open code + artifact provenance' remains true at the file-existence level, but the assertion that those artifacts represent verified-reproducible work is not yet substantiated.",
+            "what_this_means_for_outreach": "Demichelis/Kruithof-de Julio outreach should NOT lead with 'reproducible canonical artifacts' as a differentiator until the project's own retroactive reproduction passes. Lead with the falsification methodology (PARP1 Mann-Whitney) and stress-test structure (MSI/TP53/LOO/lineage) — those are confirmed by full-precision values in transcript indices 991/1010."
+          },
+          "issue_2_n942_vs_n914_discrepancy": {
+            "claim_at_risk": "moat_comparison.json Dimension 3 stress-test breakdown uses n_WT=914 (canonical_atr_wee1_rerun.json 2026-04-05 Methods_no_somatic_MBD4 rule).",
+            "provenance_status": "VERIFIED that the MBD4 manuscript branch is named 'feat/mbd4-rxiv-manuscript-942-baseline' — see transcript index 970 user message verbatim: 'https://github.com/fjkiani/Synthetic-Lethality/tree/feat/mbd4-rxiv-manuscript-942-baseline/00-mbd4-manuscript/mbd4_parp_response'. The branch name implies the manuscript prose was anchored on n=942, while the canonical artifact frozen 2026-04-05 yields n=914 under Methods_no_somatic_MBD4 rule. The 28-line discrepancy is real and unresolved at the project level.",
+            "specific_uncertainty": "(a) Whether n=942 is the alternate rule (includes MBD4 non-LOF somatic mutants → reaches n=922 per WT_rule_canonical alternate path, not 942 — so n=942 may be yet a third rule). (b) Which N is the manuscript source-of-truth. (c) Whether downstream deltas/p-values change materially under the different rule.",
+            "downgrade_to_apply": "The Dimension 3 framing 'n=914 (Methods rule)' is correct for what we cite, but moat-comparison should NOT claim 'CrisPRO has reconciled sample-size definitions across the canonical pipeline' — that reconciliation has not been demonstrated.",
+            "what_this_means_for_outreach": "If a reviewer asks 'why does your branch say 942 but your audit values use 914?', the project lead needs a one-sentence answer before that conversation happens."
+          },
+          "issue_3_repo_state_temporal_qualification": {
+            "claim_at_risk": "MRTX1719 bug at pharmacologic_analyzer.py:66 (at HEAD bfd6d11f, branch fix/mbd4-atr-strong-tier).",
+            "provenance_status": "VERIFIED at last inspection — HEAD bfd6d11f confirmed in transcript via earlier worker-mounted git operations. However, the worker that performed that inspection has been terminated. Current live state of the bug is UNKNOWN.",
+            "downgrade_to_apply": "Bug claim must be qualified with 'as of last verified commit bfd6d11f' — not 'current production state'.",
+            "what_this_means_for_outreach": "If MRTX1719 bug is referenced in any external-facing communication, it should be qualified as 'at the time of audit' to allow the user to address the bug between audit and outreach without invalidating the comparison."
+          },
+          "what_this_caveat_block_does_NOT_change": [
+            "The 4 stress tests + PARP1 falsification arm with full-precision values remain unaffected — those numbers exist in canonical_atr_wee1_rerun.json and were quoted verbatim from transcript indices 991/1010 + user message line 12288 (i=11560).",
+            "Bev2026 verbatim quotes with PDF page citations remain unaffected.",
+            "The methodological framing (computational falsification + stress-test stratification) is the strongest part of the moat and is independently verifiable from the canonical receipts."
+          ],
+          "what_this_caveat_block_DOES_change": [
+            "Tone of Dimension 7 (Reproducibility infrastructure): the CrisPRO ADVANTAGE label remains structurally accurate (open code vs Bev2026's code-withheld) but the IMPLEMENTATION advantage is degraded.",
+            "honest_moat_assessment.where_CrisPRO_genuinely_outperforms: the 4th bullet ('Cross-axis evidence matrix that survives compaction') is unaffected; the 1st-3rd bullets remain accurate.",
+            "fix_required_before_outreach: added PC-02 resolution + n=942/n=914 reconciliation alongside existing items."
+          ],
+          "memory_vs_transcript_provenance_principle": "Following 2026-06-24 system reminder: claims sourced from AI Notes memory only are tagged as 'MEMORY-SOURCED' here; claims confirmed by direct tool output in /mnt/results/execution_trace/transcript.jsonl are tagged 'TRANSCRIPT-VERIFIED'. PC-02 existence = TRANSCRIPT-VERIFIED (NOTES.md). PC-02 expansion = MEMORY-SOURCED (no transcript confirmation found via rg -F 'PC-02' /mnt/results/execution_trace/transcript.jsonl in this session)."
+        }
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/moat_comparison.json",
+          "exists": true,
+          "bytes": 33172,
+          "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+          "mtime_iso": "2026-06-25T01:41:15+00:00",
+          "span_extracted": "moat_caveats"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate",
+        "moat:honest_moat_assessment"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "artifact:experimental_design_full",
+      "type": "9p21_artifact_full",
+      "name": "experimental_design.json",
+      "what_it_solves": "Full parsed contents of experimental_design.json.",
+      "how_it_solves": "json.load at generation time; raw payload carried.",
+      "why_it_exists": "Deep pass carries the full payload so consumers don't need a second read.",
+      "attributes": {
+        "raw": {
+          "$schema_version": "2026-06-24-v1",
+          "document_purpose": "Reconstruct the Bevilacqua et al. 2026 experimental design from primary sources (full PDF + canonical repo receipts) for CrisPRO fit-gap analysis. No claim retained without verifiable receipt.",
+          "provenance": {
+            "audit_date_utc": "2026-06-24",
+            "primary_source": {
+              "paper": "Bevilacqua R, Gasperini P, Cantore T, et al. Therapeutic vulnerabilities exposed by the 9p21 loss identified through multiparametric drug screening inform rational combination strategies.",
+              "journal": "npj Precision Oncology",
+              "year": 2026,
+              "volume": "10",
+              "article_no": "232",
+              "doi": "10.1038/s41698-026-01434-w",
+              "received": "2025-09-01",
+              "accepted": "2026-04-07",
+              "published": "2026-04-18",
+              "retrieval_method": "Full PDF read (16 pages) via Read tool on /mnt/user-uploads/s41698-026-01434-w.pdf, 2026-06-24",
+              "data_deposition": "Zenodo 10.5281/zenodo.18957959",
+              "code_availability": "Not publicly available; available on reasonable request from corresponding authors per paper Code Availability statement",
+              "license": "CC-BY 4.0"
+            },
+            "verification_status": "Every leaf below is traceable to a specific page/figure/table of the source PDF or to a verifiable transcript receipt. No claim retained from prior generated JSONs unless re-verified.",
+            "audit_corrections_applied": [
+              "MTAP-loss prevalence in TCGA MIBC = 26% (paper text, Discussion §1, cBioPortal computation by the authors). 22% in PLAN.md was the older Robertson 2017 CDKN2A-alone figure for MIBC; both retained, distinguished.",
+              "Phenotypic features = 12 (verbatim, Results §Phenotype-based hit selection: 'For each object (i.e., cell or nucleus), 12 phenotypic features...'). PLAN.md had hedged this to 'feature count not in retrieved supplementary'; PDF resolves it definitively to 12.",
+              "SynergyFinder version = 3.1 (verbatim, Fig 3 legend). Reference 21 (Ianevski 2022) is the SynergyFinder 3.0 paper; the authors used the 3.1 release derived from the same software lineage.",
+              "ATR inhibitor name verbatim = VX970 (no hyphen, no 'berzosertib'). Paper uses VX970 throughout.",
+              "Compound library composition: 2,349 total = 349 (Selleck Anti-cancer) + 958 (MicroSource Spectrum known drugs in human therapy) + 629 (natural products) + 343 (biological activity at experimental level) + 70 (approved for agricultural use only). Numerical sum = 2,349.",
+              "PDO clinical context: BlCa197 = 54-year-old female, high-grade MIBC, mixed urothelial+sarcomatoid, neoadjuvant cisplatin/gemcitabine + radical cystectomy. TN-001 = 53-year-old male, high-grade MIBC, mixed urothelial+sarcomatoid, MVAC combination + radical cystectomy.",
+              "Ethical approvals: KEK 06/03 and 2017-02295.",
+              "AZD7762 and MK-1775 z-scores from primary screen now stated verbatim: AZD7762 WT z=-3.60 / 3KO z=-5.06; MK-1775 WT z=-1.12 / 3KO z=-2.06.",
+              "MRTX1719 axis bug in repo: pharmacologic_analyzer.py:66 maps 'mrtx1719' -> 'wrn'. Correct axis per Bev2026 §Methods +  Engstrom 2023 ref 7 = PRMT5 (MTA-cooperative). Flag in DH JSON; no code fix in this task per user lock #4."
+            ]
+          },
+          "study_title_verbatim": "Therapeutic vulnerabilities exposed by the 9p21 loss identified through multiparametric drug screening inform rational combination strategies",
+          "study_design_overview": {
+            "experimental_paradigm": "9p21 locus isogenic CRISPR/Cas9 deletion in bladder cancer cell lines + multiparametric high-content drug screen + mechanistic dissection + cross-tumor-type validation + PDO translational validation",
+            "isogenic_strategy_rationale_verbatim": "The use of an isogenic pair, WT and 3KO, with an identical genetic background, excludes inter-sample variability and ensures that observed drug response differences relate to the pharmacological intervention specific for the 9p21 loss.",
+            "primary_endpoints": [
+              "Nuclei-count viability z-score (hit selection for 3KO-selective drugs)",
+              "12-feature morphological signature (CellProfiler 4) for phenotype-based hit nomination",
+              "HSA + Bliss synergy scores via SynergyFinder 3.1 (combinations)",
+              "gamma-H2AX foci per nucleus (DSBs)",
+              "p-CHK1 (Ser345) by Western blot (replication stress)",
+              "Annexin V / PI FACS (apoptosis)",
+              "Cleaved Caspase-3 + cleaved PARP by Western blot (apoptosis confirmation)",
+              "Crystal violet and CCK-8 cell viability assays",
+              "CellTiter-Glo 3D for PDO viability"
+            ]
+          },
+          "cell_models": {
+            "primary_bladder_isogenic_pair": {
+              "parental_cell_lines": [
+                {
+                  "name": "HT1197",
+                  "RRID": "CVCL_1291",
+                  "source": "ATCC",
+                  "medium": "MEM + 10% FBS + 1X MEM-NEAA + 1 mM sodium pyruvate + 1% P/S"
+                },
+                {
+                  "name": "T24",
+                  "RRID": "CVCL_2728",
+                  "source": "ECACC",
+                  "medium": "McCoy's 5A + 10% FBS + 1% P/S"
+                }
+              ],
+              "selection_criteria": "Intact 9p21 locus (WT) and WT RB1 status; 2 of 6 candidate BLCA lines from DepMap CCLE satisfying these criteria.",
+              "rationale_verbatim": "to evaluate the effects of CDKN2A/2B deletion on the cell cycle since these two genes encode for proteins that prevent RB1 phosphorylation via CDK4/6 interaction",
+              "engineering": "CRISPR/Cas9 (lentiCas9-Blast, Addgene #52962). ~210 kb deletion encompassing CDKN2A, CDKN2B, MTAP (3KO). Separate ~140 kb deletion encompassing only CDKN2A/CDKN2B (2KO) used in HT1197 for MTAP-vs-cell-cycle dissection.",
+              "validation": "Genotype by PCR + Sanger sequencing; protein loss by Western blot (p14, p15, p16, MTAP) — Fig 1B + Supp Fig 1A. SDMA decrease in 3KO vs WT confirms PRMT5 partial impairment — Supp Fig 1D.",
+              "growth_phenotype": {
+                "HT1197_3KO_vs_WT": "3KO outcompetes WT after ~3 weeks of co-culture (P<0.0001, unpaired t-test) (Fig 1C)",
+                "T24_3KO_vs_WT": "Proportions remain similar over time, attributed to T24 lacking p16 expression (Supp Fig 1A,B)"
+              }
+            },
+            "secondary_models_other_tumor_types": [
+              {
+                "cell_line": "SW1990",
+                "tumor_type": "Pancreatic adenocarcinoma",
+                "RRID": "CVCL_1723",
+                "source_verbatim": "kind donation of Prof. Alessandro Provenzani laboratory",
+                "MTAP_status_modification": "WT MTAP parental; transduced with lentiviral sgRNA to induce MTAP KO (sgMTAP) vs sgNT (Fig 6B, Supp Fig 6A)"
+              },
+              {
+                "cell_line": "SPC111",
+                "tumor_type": "Pleural mesothelioma",
+                "RRID": "CVCL_D311",
+                "source_verbatim": "kind donation of Dr. Nadia Zaffaroni laboratory",
+                "MTAP_status_modification": "WT MTAP parental; transduced with lentiviral sgRNA to induce MTAP KO (sgMTAP) vs sgNT"
+              }
+            ],
+            "patient_derived_organoids": [
+              {
+                "PDO_id": "TN-001",
+                "patient_demographics_verbatim": "53-year-old male patient diagnosed with high-grade MIBC with mixed urothelial and sarcomatoid histology",
+                "treatment_history_verbatim": "received MVAC combination followed by radical cystectomy",
+                "9p21_status": "9p21 locus deletion (no expression of p14, p15, p16, MTAP) — Fig 7B",
+                "engineering_for_drug_test": "Transduced with pCW57.1 (Addgene #41393) lentiviral vector encoding doxycycline-inducible MTAP overexpression. Treated with Dox 1 µg/ml for MTAP-OE arm; EtOH vehicle for MTAP-loss arm.",
+                "source_hospital": "Inselspital, University Hospital, Bern"
+              },
+              {
+                "PDO_id": "BlCa197",
+                "patient_demographics_verbatim": "54-year-old female patient with high-grade MIBC with mixed urothelial and sarcomatoid histology",
+                "treatment_history_verbatim": "underwent neoadjuvant cisplatin/gemcitabine treatment followed by radical cystectomy",
+                "9p21_status": "9p21 WT (expression of p14, p15, p16, MTAP confirmed)",
+                "engineering_for_drug_test": "Transduced with lentiCRISPR_v1 + MTAP sgRNA for MTAP KO arm vs sgNT control arm.",
+                "source_hospital": "Spitalzentrum Biel"
+              }
+            ],
+            "PDO_ethical_approval_verbatim": "Cantonal Ethical approval KEK 06/03 and 2017-02295",
+            "PDO_consent_status_verbatim": "Patients included in this study provided written informed consent. The research has been performed in accordance with the Declaration of Helsinki."
+          },
+          "primary_drug_screen": {
+            "screen_format": {
+              "platform": "Freedom EVO platform (Tecan) with 96-channel pipetting head; 384-well plates",
+              "imaging": "Operetta High Content Imaging System (Revvity), 10x widefield, 2 fields per well",
+              "staining": "Hoechst 33342 (nuclei) + Alexa Fluor 555 phalloidin (actin) via EL406 (BioTek) plate washer-dispenser",
+              "fixation": "4% PFA"
+            },
+            "cell_lines_screened": "HT1197 WT clone + HT1197 3KO clone (isogenic pair). T24 used in validation only, NOT in primary screen.",
+            "compound_library": {
+              "total_compounds": 2349,
+              "concentration": "1 µM single concentration",
+              "treatment_duration": "48 h",
+              "replicate_structure": "Duplicate technical replicates per compound per genotype",
+              "library_composition_verbatim": [
+                {
+                  "collection": "Selleck Anti-cancer compounds",
+                  "count": 349,
+                  "description_verbatim": "anti-cancer small molecules in clinical use or in clinical trials"
+                },
+                {
+                  "collection": "MicroSource Spectrum Collection - known drugs",
+                  "count": 958,
+                  "description_verbatim": "known drugs that have been used in human therapy"
+                },
+                {
+                  "collection": "MicroSource Spectrum Collection - natural products",
+                  "count": 629,
+                  "description_verbatim": "natural products, and derivatives with undetermined biological activities"
+                },
+                {
+                  "collection": "MicroSource Spectrum Collection - bioactive at experimental level",
+                  "count": 343,
+                  "description_verbatim": "compounds with reported biological activity at the experimental level"
+                },
+                {
+                  "collection": "MicroSource Spectrum Collection - agricultural use",
+                  "count": 70,
+                  "description_verbatim": "compounds approved for, and restricted to, agricultural use"
+                }
+              ],
+              "library_composition_arithmetic_check": "349 + 958 + 629 + 343 + 70 = 2349 (matches paper's stated total)"
+            },
+            "image_analysis": {
+              "software_verbatim": "CellProfiler44 (CellProfiler 4, Stirling 2021 BMC Bioinform. 22:433)",
+              "features_per_object_verbatim_count": 12,
+              "feature_categories_verbatim": [
+                "Nucleus-level: area, compactness, formfactor, perimeter, DNA intensity, phalloidin intensity",
+                "Cell-level: area, compactness, formfactor, perimeter, DNA intensity, phalloidin intensity"
+              ],
+              "z_score_formula_verbatim": "(X_S - X_V) / SD_V; where X_S is the mean signal from technical replicates for each drug treatment, X_V is the mean of technical replicates of the vehicle, and SD_V the standard deviation of the technical replicates of the vehicle"
+            },
+            "hit_selection_thresholds_verbatim": {
+              "viability_based_3KO_selective": "z-score <= -2.5 in 3KO clone AND -1.5 <= z-score <= 1.5 in WT clone (Fig 1E)",
+              "morphology_based_outliers": "drugs scoring within the interquartile range (IQR) for WT cells and outliers for 3KO cells, defined as below Q1 - 1.5*IQR or above Q3 + 1.5*IQR"
+            },
+            "primary_hits_verbatim_count": 18,
+            "primary_hits_named_in_paper": [
+              {
+                "drug": "methotrexate (MTX)",
+                "role_verbatim": "antifolate agent worked as a positive control based on Alhalabi et al.17, who recently demonstrated increased sensitivity of MTAP-deficient BLCA cells to the antifolate agent pemetrexed"
+              },
+              {
+                "drug": "cytarabine",
+                "role_verbatim": "novel pharmacological vulnerability identified in 9p21-loss BLCA"
+              }
+            ],
+            "drugs_excluded_from_hit_list_but_directional": {
+              "AZD7762": {
+                "WT_z_score": -3.6,
+                "3KO_z_score": -5.06,
+                "exclusion_reason_verbatim": "viability z-scores were out of the considered range (i.e., z-scores <= -2.5 for 3KO and -1.5 <= z-score <= 1.5 for WT)"
+              },
+              "MK-1775": {
+                "WT_z_score": -1.12,
+                "3KO_z_score": -2.06,
+                "exclusion_reason": "3KO z-score did not cross the -2.5 threshold despite being more negative than WT"
+              }
+            },
+            "morphology_correlation_analysis": {
+              "method_verbatim": "Pearson correlation coefficient between cytarabine-induced morphological features and those induced by other drugs in the screening (Supplementary Table 8)",
+              "top_morphology_nominated_drug": "gemcitabine (nucleoside analog similar to cytarabine; standard-of-care for MIBC in combination with cisplatin)"
+            }
+          },
+          "validation_experiments": {
+            "validation_cell_lines_added": [
+              "T24 (added beyond HT1197 primary screen)",
+              "HT1197 2KO clones (CDKN2A/2B-only deletion, MTAP retained)"
+            ],
+            "validation_assays": [
+              {
+                "assay": "Crystal violet survival",
+                "format_verbatim": "2 WT and 2 3KO clones per cell line, mean ± SD, n=6, 3 biological replicates per clone; HT1197 treated 7 days, T24 treated 3 days"
+              },
+              {
+                "assay": "CCK-8 viability",
+                "purpose": "Dose-response for synergy calculations"
+              },
+              {
+                "assay": "Gemcitabine dose-response in HT1197 and T24 3KO vs WT",
+                "concentration_range_verbatim": "0.1-50 nM"
+              },
+              {
+                "assay": "2KO control assay",
+                "outcome_verbatim": "WT and 2KO clones were equally sensitive to the tested drugs, suggesting that MTAP deletion - but not CDKN2A/2B deletion - is required to increase sensitivity to the drugs (P > 0.05, unpaired t-test)"
+              }
+            ]
+          },
+          "combination_experiments": {
+            "sequential_dosing_rationale_verbatim": "Since AG-270 and MRTX1719 target an epigenetic pathway (i.e., PRMT5-mediated symmetric di-methylation of arginine marks), it has been reported that several days of treatment are required to observe a potent anti-tumor activity. Therefore, we reasoned that a sequential administration protocol with AG-270 or MRTX1719 pre-treatment followed by chemotherapy was preferential to reduce toxicity mediated by long treatment with cytarabine, gemcitabine, or MTX.",
+            "synergy_calculation": {
+              "software_verbatim": "SynergyFinder 3.1",
+              "models_verbatim": [
+                "HSA (Highest Single Agent)",
+                "Bliss"
+              ],
+              "reporting": "HSA synergy scores AND summary synergy scores with 95% CI for CCK-8 experiments",
+              "synergy_threshold_verbatim": "synergy score > 10 = synergistic interaction (per ref 21, Ianevski 2022)"
+            },
+            "combination_dosing_schedules": [
+              {
+                "combo": "MRTX1719 + gemcitabine",
+                "HT1197_schedule_verbatim": "MRTX1719 for 2 days, followed by combined MRTX1719 and gemcitabine treatment for 5 days",
+                "T24_schedule_verbatim": "MRTX1719 for 2 days, followed by combined MRTX1719 and gemcitabine treatment for 3 days",
+                "outcome": "Synergy at only a few concentrations; limited 3KO selectivity in both cell lines (Fig 3A)"
+              },
+              {
+                "combo": "AG-270 + cytarabine",
+                "HT1197_schedule_verbatim": "AG-270 for 6 days, followed by combined AG-270 and cytarabine treatment for 7 days",
+                "T24_schedule_verbatim": "AG-270 for 2 days, followed by combined AG-270 and cytarabine treatment for 3 days",
+                "HT1197_doses_in_Fig3B": "AG-270 50 nM (representative); cytarabine 80 nM (representative). Full matrix: AG-270 0/50/100 nM x cytarabine 0/40/80/160 nM",
+                "T24_doses_in_Fig3B": "AG-270 25 nM (representative); cytarabine 200 nM (representative). Full matrix: AG-270 0/12.5/25 nM x cytarabine 0/50/100/200 nM",
+                "outcome": "HT1197 3KO CCK-8 synergy 29.0 ± 18.8; WT 10.7 ± 12.4. T24 3KO CCK-8 synergy 32.3 ± 10.4; WT -4.4 ± 7.6. (Fig 3B)"
+              },
+              {
+                "combo": "MRTX1719 + cytarabine",
+                "HT1197_schedule_verbatim": "MRTX1719 for 2 days, followed by combined MRTX1719 and cytarabine treatment for 5 days",
+                "T24_schedule_verbatim": "MRTX1719 for 2 days, followed by combined MRTX1719 and cytarabine treatment for 3 days",
+                "HT1197_doses_in_Fig3C": "MRTX1719 50 nM (representative); cytarabine 80 nM (representative). Full matrix: MRTX1719 0/50/100 nM x cytarabine 0/40/80/160 nM",
+                "T24_doses_in_Fig3C": "MRTX1719 10 nM (representative); cytarabine 200 nM (representative). Full matrix: MRTX1719 0/5/10 nM x cytarabine 0/50/100/200 nM",
+                "outcome": "HT1197 3KO CCK-8 synergy 18.7 ± 4.7; WT 7.2 ± 5.3. T24 3KO CCK-8 synergy 30.5 ± 7.7; WT 2.8 ± 4.7. (Fig 3C)"
+              },
+              {
+                "combo": "MRTX1719 + cytarabine: mechanistic readout (T24, gamma-H2AX foci IF)",
+                "doses_verbatim": "AG-270 (25 nM) or MRTX1719 (10 nM) for 2 days, followed by combination with cytarabine (200 nM) for 3 days",
+                "readout_verbatim": "Data represents the proportion of cells with >5 foci/nucleus",
+                "imaging": "ImageXpress Micro Confocal 20x; minimum 300 cells per condition; nuclei area minimum 100 μm²"
+              },
+              {
+                "combo": "MRTX1719 + VX970 (ATR inhibitor)",
+                "HT1197_schedule_verbatim": "MRTX1719 for 2 days, followed by combination with VX970 for 5 days",
+                "T24_schedule_verbatim": "MRTX1719 for 2 days, followed by combination with VX970 for 4 days",
+                "HT1197_doses_in_Fig5B": "VX970 200 nM; MRTX1719 50 nM and 100 nM",
+                "T24_doses_in_Fig5B": "VX970 200 nM; MRTX1719 5 nM and 10 nM",
+                "outcome": "Significant cell viability reduction selectively in HT1197 and T24 3KO cells (P < 0.01, unpaired t-test)"
+              },
+              {
+                "combo": "MRTX1719 + AZD7762 (CHK1 inhibitor)",
+                "context_verbatim": "Similar effect observed for the combination of the CHK1 inhibitor AZD7762 with MRTX1719 in T24 3KO cells (Supplementary Fig. 5C)",
+                "note": "Pathway-equivalent backup to VX970; demonstrates ATR/CHK1 axis dependency"
+              }
+            ]
+          },
+          "mechanistic_readouts": {
+            "DNA_damage": {
+              "marker": "gamma-H2AX",
+              "method": "IF foci/nucleus + Western blot",
+              "threshold_verbatim": ">5 foci/nucleus"
+            },
+            "replication_stress": {
+              "markers": [
+                "p-CHK1 Ser345",
+                "CHK1 total"
+              ],
+              "method": "Western blot",
+              "interpretation_verbatim": "marker of replication stress"
+            },
+            "apoptosis": {
+              "method_1": "Annexin V (APC) + PI (Propidium Iodide) FACS",
+              "FACS_instrument": "BD FACSymphony A1 Cell Analyzer",
+              "events_per_sample_verbatim": "10,000 events",
+              "method_2": "Cleaved Caspase-3 + cleaved PARP by Western blot"
+            },
+            "genomic_instability": {
+              "marker": "Micronuclei (gamma-H2AX-positive subset)",
+              "method": "IF on 300 nuclei per condition"
+            }
+          },
+          "translational_validation": {
+            "MTAP_loss_prevalence_panels": {
+              "TCGA_pancancer_atlas_2018_source": "Ref 45 (Liu et al. Cell 173:400-416.e11 2018) via Fig 6A oncoprint",
+              "top10_tumor_types_by_CDKN2A_deletion_frequency_verbatim": [
+                {
+                  "tumor": "GBM (n=585)",
+                  "MTAP_pct": 42,
+                  "CDKN2A_pct": 55,
+                  "CDKN2B_pct": 54
+                },
+                {
+                  "tumor": "MESO (n=87)",
+                  "MTAP_pct": 32,
+                  "CDKN2A_pct": 40,
+                  "CDKN2B_pct": 43
+                },
+                {
+                  "tumor": "ESCA (n=182)",
+                  "MTAP_pct": 21,
+                  "CDKN2A_pct": 39,
+                  "CDKN2B_pct": 35
+                },
+                {
+                  "tumor": "BLCA (n=411)",
+                  "MTAP_pct": 26,
+                  "CDKN2A_pct": 32,
+                  "CDKN2B_pct": 31
+                },
+                {
+                  "tumor": "HNSC (n=523)",
+                  "MTAP_pct": 14,
+                  "CDKN2A_pct": 30,
+                  "CDKN2B_pct": 28
+                },
+                {
+                  "tumor": "PAAD (n=184)",
+                  "MTAP_pct": 22,
+                  "CDKN2A_pct": 32,
+                  "CDKN2B_pct": 27
+                },
+                {
+                  "tumor": "DLBC (n=48)",
+                  "MTAP_pct": 15,
+                  "CDKN2A_pct": 25,
+                  "CDKN2B_pct": 21
+                },
+                {
+                  "tumor": "LUSC (n=487)",
+                  "MTAP_pct": 20,
+                  "CDKN2A_pct": 26,
+                  "CDKN2B_pct": 26
+                },
+                {
+                  "tumor": "SKCM (n=442)",
+                  "MTAP_pct": 16,
+                  "CDKN2A_pct": 25,
+                  "CDKN2B_pct": 24
+                },
+                {
+                  "tumor": "LUAD (n=566)",
+                  "MTAP_pct": 11,
+                  "CDKN2A_pct": 15,
+                  "CDKN2B_pct": 15
+                }
+              ],
+              "MIBC_specific_prevalence": {
+                "26_pct_value_verbatim": "Co-occurrence of CDKN2A/2B and MTAP deletions interests 26% of TCGA MIBC patients (p value < 0.001 based on cBioPortal two-sided Fisher Exact Test), while deletions affecting CDKN2A/2B are comparatively infrequent (5.6%), and CDKN2A focal loss is rare (0.5%).",
+                "22_pct_alternative_reference": "Robertson AG et al. Cell 2017; 171:540-556.e25 reports CDKN2A 'homozygous deletions (22%) were common' in TCGA MIBC n=412. Both numbers valid: paper's 26% counts CDKN2A/2B/MTAP co-deletion; Robertson 22% counts CDKN2A focal-deletion alone.",
+                "NMIBC_prevalence_verbatim": "CDKN2A loss at chromosome 9p21 ... occurring in approximately 42% [...] of NMIBC (ref 13: Lindskrog et al. Nat Commun 12:2301, 2021)"
+              }
+            },
+            "PDO_drug_response_protocol_verbatim": {
+              "dissociation": "TrypLE Express at 37°C for 10 min, single-cell suspension",
+              "seeding": "Resuspended in Matrigel (Corning) at 2000 cells per 10 μl Matrigel per well in white 96-multiwell plate (Revvity)",
+              "drug_start": "Three days post-seeding, medium replaced with organoid medium containing drugs at specified concentrations (2 technical replicates per condition)",
+              "medium_changes": "Every 2-3 days",
+              "viability_readout": "CellTiter-Glo 3D (Promega) at 1:3 dilution with culture medium; luminescence on Varioskan LUX",
+              "treatment_schedule_verbatim": "DMSO (as control), or MRTX1719 for 2 days, followed by combination with cytarabine or VX970 for 5 days"
+            },
+            "PDO_marker_panel_verbatim": [
+              "Basal: cytokeratin 5 (KRT5), p63",
+              "Luminal: cytokeratin 8 (KRT8), GATA3, uroplakin II (UPKII)",
+              "Adhesion/epithelial: E-cadherin (E-CAD)",
+              "Mesenchymal: alpha smooth muscle actin (αSMA), vimentin (VIM)",
+              "Proliferation: Ki-67",
+              "Differentiation: cytokeratin 20 (KRT20) - 'absent or only residual in both samples'"
+            ]
+          },
+          "what_paper_does_NOT_quantitatively_report": {
+            "context": "These are gaps where the published paper either reports qualitatively, defers to supplementary, or omits an item that would matter for CrisPRO benchmarking.",
+            "items": [
+              "Quantitative DepMap CDKN2A/MTAP × cytarabine effect size (refs internal DepMap analysis in passing - Discussion §4 - without numerical Δ, p-value, or n).",
+              "Within-figure quantitative IC50 / GI50 values for cytarabine, MTX, gemcitabine in the 3KO clones (figures show bar/dose-response plots; numerical IC50 table not provided in retrievable supplementary text via this PDF).",
+              "Per-clone (rather than per-genotype) variability statistics for the 4 clone-pair design.",
+              "MTAP IHC concordance with genomic MTAP loss (paper validates by Western blot only). Cross-paper concordance with Gorbokon et al. 2025 not retrieved this session."
+            ]
+          }
+        },
+        "top_keys": [
+          "$schema_version",
+          "document_purpose",
+          "provenance",
+          "study_title_verbatim",
+          "study_design_overview",
+          "cell_models",
+          "primary_drug_screen",
+          "validation_experiments",
+          "combination_experiments",
+          "mechanistic_readouts",
+          "translational_validation",
+          "what_paper_does_NOT_quantitatively_report"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/experimental_design.json",
+          "exists": true,
+          "bytes": 23457,
+          "sha256": "f4648d65cdca27146d457a3fd780381976f34ca5f0fd013945e1f6b11f7ea008",
+          "mtime_iso": "2026-06-24T20:41:23+00:00"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "artifact:double_hit_vulnerabilities_full",
+      "type": "9p21_artifact_full",
+      "name": "double_hit_vulnerabilities.json",
+      "what_it_solves": "Full parsed contents of double_hit_vulnerabilities.json.",
+      "how_it_solves": "json.load at generation time; raw payload carried.",
+      "why_it_exists": "Deep pass carries the full payload so consumers don't need a second read.",
+      "attributes": {
+        "raw": {
+          "$schema_version": "2026-06-24-v1",
+          "document_purpose": "Map the 9p21-loss synthetic-lethal vulnerability landscape from Bevilacqua 2026 + supporting receipts (MBD4-LOF×ATR/WEE1, CDKN2A/MTAP combinatorial). Used by CrisPRO to position double-hit candidates for the Demichelis lab outreach.",
+          "provenance": {
+            "audit_date_utc": "2026-06-24",
+            "primary_source": {
+              "paper": "Bevilacqua R, Gasperini P, Cantore T, et al. Therapeutic vulnerabilities exposed by the 9p21 loss identified through multiparametric drug screening inform rational combination strategies.",
+              "journal": "npj Precision Oncology",
+              "year": 2026,
+              "volume": "10",
+              "article_no": "232",
+              "doi": "10.1038/s41698-026-01434-w",
+              "received": "2025-09-01",
+              "accepted": "2026-04-07",
+              "published": "2026-04-18",
+              "retrieval_method": "Full PDF read (16 pages) via Read tool on /mnt/user-uploads/s41698-026-01434-w.pdf, 2026-06-24",
+              "data_deposition": "Zenodo 10.5281/zenodo.18957959",
+              "code_availability": "Not publicly available; available on reasonable request from corresponding authors per paper Code Availability statement",
+              "license": "CC-BY 4.0"
+            },
+            "verification_status": "Every leaf below is traceable to a specific page/figure/table of the source PDF or to a verifiable transcript receipt. No claim retained from prior generated JSONs unless re-verified.",
+            "audit_corrections_applied": [
+              "MTAP-loss prevalence in TCGA MIBC = 26% (paper text, Discussion §1, cBioPortal computation by the authors). 22% in PLAN.md was the older Robertson 2017 CDKN2A-alone figure for MIBC; both retained, distinguished.",
+              "Phenotypic features = 12 (verbatim, Results §Phenotype-based hit selection: 'For each object (i.e., cell or nucleus), 12 phenotypic features...'). PLAN.md had hedged this to 'feature count not in retrieved supplementary'; PDF resolves it definitively to 12.",
+              "SynergyFinder version = 3.1 (verbatim, Fig 3 legend). Reference 21 (Ianevski 2022) is the SynergyFinder 3.0 paper; the authors used the 3.1 release derived from the same software lineage.",
+              "ATR inhibitor name verbatim = VX970 (no hyphen, no 'berzosertib'). Paper uses VX970 throughout.",
+              "Compound library composition: 2,349 total = 349 (Selleck Anti-cancer) + 958 (MicroSource Spectrum known drugs in human therapy) + 629 (natural products) + 343 (biological activity at experimental level) + 70 (approved for agricultural use only). Numerical sum = 2,349.",
+              "PDO clinical context: BlCa197 = 54-year-old female, high-grade MIBC, mixed urothelial+sarcomatoid, neoadjuvant cisplatin/gemcitabine + radical cystectomy. TN-001 = 53-year-old male, high-grade MIBC, mixed urothelial+sarcomatoid, MVAC combination + radical cystectomy.",
+              "Ethical approvals: KEK 06/03 and 2017-02295.",
+              "AZD7762 and MK-1775 z-scores from primary screen now stated verbatim: AZD7762 WT z=-3.60 / 3KO z=-5.06; MK-1775 WT z=-1.12 / 3KO z=-2.06.",
+              "MRTX1719 axis bug in repo: pharmacologic_analyzer.py:66 maps 'mrtx1719' -> 'wrn'. Correct axis per Bev2026 §Methods +  Engstrom 2023 ref 7 = PRMT5 (MTA-cooperative). Flag in DH JSON; no code fix in this task per user lock #4."
+            ]
+          },
+          "scope_and_definitions": {
+            "double_hit_definition": "A genotype-defined cellular state in which two genetic alterations jointly create a therapeutic vulnerability — either co-deletion within one locus (CDKN2A/2B + MTAP, 9p21) or a primary defect combined with an acquired/contextual second hit (MBD4-LOF + TP53-mut, or MBD4-LOF + ATR/WEE1 pathway pressure).",
+            "scope": "Three families documented in this file. (1) 9p21 multi-gene loss + pharmacological second hits from Bevilacqua 2026 (primary); (2) MBD4-LOF × ATR/WEE1 pathway from CrisPRO repo canonical receipts (sibling axis); (3) MBD4-LOF × TP53 stratification subtype (within-genotype effect amplifier)."
+          },
+          "family_1_9p21_loss_pharmacological_double_hits": {
+            "primary_genotype": {
+              "locus": "Chr9 20,900,000-23,900,000 (hg19) — approximately 210 kb in 3KO model",
+              "co_deleted_genes": [
+                "CDKN2A (p16INK4a, p14ARF)",
+                "CDKN2B (p15INK4b)",
+                "MTAP"
+              ],
+              "MTAP_function_verbatim": "methylthioadenosine phosphorylase, involved in the salvage pathway for adenine and methionine",
+              "MTAP_codeletion_with_CDKN2A_verbatim": "co-deleted in about 80-90% of cancers with CDKN2A loss",
+              "MIBC_prevalence_paper_computation": "26% of TCGA MIBC patients (p < 0.001, cBioPortal two-sided Fisher Exact Test)",
+              "MIBC_CDKN2A_alone_alternative": "22% (Robertson 2017 TCGA MIBC, ref 14)",
+              "NMIBC_prevalence": "~42% (Lindskrog 2021 Nat Commun, ref 13)"
+            },
+            "vulnerability_hits": [
+              {
+                "hit_id": "DH-9p21-01",
+                "category": "PRIMARY_18_VIABILITY_HIT",
+                "second_hit_compound": "cytarabine",
+                "mechanism_verbatim": "competes with cytidine for DNA incorporation, causing termination of DNA chain elongation",
+                "selectivity_evidence": "Crystal violet survival assays in 2 HT1197 WT + 2 HT1197 3KO clones (HT1197 7d, T24 3d treatment). P < 0.05 unpaired t-test. CCK-8 dose-response confirms 3KO selectivity at 40-200 nM (HT1197) and 50-500 nM (T24).",
+                "novelty_claim_verbatim": "a nucleoside analog not previously associated with 9p21 loss in BLCA",
+                "clinical_status": "FDA-approved for AML and other hematological malignancies; novel application context",
+                "source": "Bev2026 Fig 1F, 1G + primary screen Supp Fig 1E"
+              },
+              {
+                "hit_id": "DH-9p21-02",
+                "category": "PRIMARY_18_VIABILITY_HIT",
+                "second_hit_compound": "methotrexate (MTX)",
+                "mechanism_verbatim": "antifolate agent",
+                "selectivity_evidence": "Positive control based on Alhalabi et al. 2022 (ref 17, Nat Commun 13:1797) demonstrating MTAP-deficient BLCA sensitivity to pemetrexed.",
+                "selectivity_caveat": "MTX induced limited morphological alterations vs cytarabine (Fig 2A)",
+                "source": "Bev2026 Fig 1F, 1G"
+              },
+              {
+                "hit_id": "DH-9p21-03",
+                "category": "MORPHOLOGY_NOMINATED",
+                "second_hit_compound": "gemcitabine",
+                "mechanism_verbatim": "an analog of cytarabine with unique properties, including the inhibition of the ribonucleotide reductase, the cytidine triphosphate synthetase, and the deoxycytidylate deaminase",
+                "selectivity_evidence": "Pearson correlation with cytarabine morphological signature ranked gemcitabine among top hits. Dose-response 0.1-50 nM confirmed higher 3KO activity in HT1197 + T24 (P < 0.05).",
+                "selectivity_caveat_verbatim": "reduced genotype selectivity compared to cytarabine",
+                "clinical_status": "Standard-of-care for MIBC in combination with cisplatin (ref 18, Lopez-Beltran 2024)",
+                "source": "Bev2026 Fig 2B, 2C, 2D + ref 36 (Papadimitriou 2024 DepMap support)"
+              },
+              {
+                "hit_id": "DH-9p21-04",
+                "category": "MECHANISTIC_FOLLOWUP_COMBINATION",
+                "second_hit_compound": "MRTX1719 (PRMT5 inhibitor, MTA-cooperative)",
+                "mechanism_verbatim": "selectively binds to PRMT5 complexed with MTA",
+                "axis": "PRMT5 (MTA-cooperative)",
+                "monotherapy_status": "Phase I; partial responses across multiple tumor types per ref 7 (Engstrom 2023 Cancer Discov 13:2412-2431)",
+                "synergy_with_cytarabine": {
+                  "HT1197_3KO_CCK8_HSA_score": "18.7 ± 4.7 (vs WT 7.2 ± 5.3)",
+                  "T24_3KO_CCK8_HSA_score": "30.5 ± 7.7 (vs WT 2.8 ± 4.7)",
+                  "schedule_HT1197": "MRTX1719 2 d pre, then combination 5 d. Doses: MRTX1719 0/50/100 nM × cytarabine 0/40/80/160 nM",
+                  "schedule_T24": "MRTX1719 2 d pre, then combination 3 d. Doses: MRTX1719 0/5/10 nM × cytarabine 0/50/100/200 nM",
+                  "threshold_verbatim": "synergy score > 10 = synergistic interaction"
+                },
+                "synergy_with_gemcitabine_negative_control": {
+                  "HT1197_3KO_CCK8_HSA_score": "10.6 ± 10.7 (vs WT 7.3 ± 5.9)",
+                  "T24_3KO_CCK8_HSA_score": "12.6 ± 8.3 (vs WT 10.8 ± 10.8)",
+                  "interpretation_verbatim": "Synergy at only a few concentrations and limited specificity for 3KO clones compared to WT in both cell lines"
+                },
+                "synergy_with_MTX_negative_control_verbatim": "MRTX1719 did not display any synergistic interaction for both HT1197 and T24 3KO clones at the concentrations tested (synergy score < 10) (Supplementary Fig. 3C)",
+                "repo_axis_bug": {
+                  "location": "api/services/synthetic_lethality/v3/multimodal/pharmacologic_analyzer.py line 66",
+                  "current_mapping_verbatim": "'mrtx1719': 'wrn'",
+                  "correct_axis": "prmt5_mtap_cooperative (separate from WRN)",
+                  "evidence": "Engstrom 2023 (Bev2026 ref 7) establishes MRTX1719 as MTA-cooperative PRMT5 inhibitor for MTAP-deleted cancers. Bev2026 confirms PRMT5 mechanism (Results §Cytarabine synergizes with PRMT5 and MAT2A inhibitors).",
+                  "remediation_status": "Flagged in this audit per user lock #4. No code fix in this task. Repo HEAD bfd6d11f on branch fix/mbd4-atr-strong-tier still has the bug."
+                }
+              },
+              {
+                "hit_id": "DH-9p21-05",
+                "category": "MECHANISTIC_FOLLOWUP_COMBINATION",
+                "second_hit_compound": "AG-270 (MAT2A inhibitor; also called S095033)",
+                "mechanism_verbatim": "indirect inactivation of the primary SAM-producing enzyme, methionine adenosyltransferase 2A (MAT2A)",
+                "axis": "MAT2A (upstream of PRMT5)",
+                "monotherapy_status": "Phase I (Gounder et al. 2025 Nat Commun 16:423 - ref 42) confirmed MAT2A inhibition and PRMT5 activity suppression but 'only modest anti-tumor activity'",
+                "synergy_with_cytarabine": {
+                  "HT1197_3KO_CCK8_HSA_score": "29.0 ± 18.8 (vs WT 10.7 ± 12.4)",
+                  "T24_3KO_CCK8_HSA_score": "32.3 ± 10.4 (vs WT -4.4 ± 7.6)",
+                  "schedule_HT1197": "AG-270 6 d pre, then combination 7 d. Doses: AG-270 0/50/100 nM × cytarabine 0/40/80/160 nM",
+                  "schedule_T24": "AG-270 2 d pre, then combination 3 d. Doses: AG-270 0/12.5/25 nM × cytarabine 0/50/100/200 nM"
+                },
+                "selectivity_control": "2KO clones (CDKN2A/2B deleted, MTAP retained) show NO sensitivity to AG-270 (Supp Fig 3B), confirming MTAP-loss is the driver. 2KO + cytarabine + AG-270 combo also shows no activity (Supp Fig 2D)."
+              },
+              {
+                "hit_id": "DH-9p21-06",
+                "category": "MECHANISTIC_FOLLOWUP_COMBINATION_TRIPLE_AXIS",
+                "second_hit_compound": "VX970 (ATR inhibitor)",
+                "mechanism_verbatim": "ATR acts upstream in the signaling pathway and has a broader function in the replication stress response than CHK1 and WEE1",
+                "axis": "ATR (replication stress response)",
+                "rationale_verbatim": "cytarabine and PRMT5 inhibition, alone and in combination, could increase the dependency of 3KO cells on the ATR/CHK1 pathway, which is central in the cellular response to replication stress",
+                "synergy_with_MRTX1719": {
+                  "HT1197_doses": "VX970 200 nM × MRTX1719 50 nM or 100 nM. HT1197 3KO viability ~25-30% at 50 nM combo, ~15% at 100 nM combo (Fig 5B)",
+                  "T24_doses": "VX970 200 nM × MRTX1719 5 nM or 10 nM. T24 3KO viability ~30% at 5 nM combo, ~15% at 10 nM combo (Fig 5B)",
+                  "statistical_test": "P < 0.01 (unpaired t-test), 3KO vs WT, both cell lines, both MRTX1719 doses"
+                },
+                "synergy_with_cytarabine": {
+                  "context_verbatim": "increased sensitivity of HT1197 3KO cells to the combination of cytarabine and VX970 compared to WT cells (Supplementary Fig. 5D)"
+                },
+                "synergy_with_AG-270": {
+                  "context_verbatim": "VX970 combined with MRTX1719 or AG-270 significantly reduced cell viability selectively in HT1197 and T24 3KO cells (P < 0.01, unpaired t-test)"
+                },
+                "AZD7762_backup_axis_verbatim": "Similar effect was observed for the combination of the CHK1 inhibitor AZD7762 with MRTX1719 in T24 3KO cells (Supplementary Fig. 5C)",
+                "axis_replicability_note": "AZD7762 + MRTX1719 result demonstrates that the replication-stress axis dependency is not specific to ATR — CHK1 inhibition produces a similar effect. Pathway-level vulnerability, not single-target."
+              }
+            ],
+            "mechanistic_pathway_verbatim": {
+              "ATR_CHK1_function": "induces cell cycle arrest in S-G2 phase and prevents mitotic entry of the cells with excessive DNA damage, thereby limiting genomic instability (ref 27, Saldivar 2017)",
+              "PRMT5_DDX5_R-loop_pathway_verbatim": "PRMT5 inhibition in MTAP-deficient cells leads to the accumulation of R-loops, possibly because of reduced PRMT5-mediated methylation of DDX5, a crucial helicase for R-loops resolution, resulting in replication stress due to collisions between the replication and transcription machineries",
+              "ATR_VX970_speculation_verbatim": "ATR inhibition prevents 9p21-deleted cells from arresting in the S-G2 phase and repairing the DNA damage induced by the treatments, thus leading to mitotic catastrophe",
+              "G2M_amplification_verbatim": "downregulation of genes involved in the G2/M checkpoint induced by AG-270/MRTX1719 could further increase the efficacy of ATR inhibitors"
+            },
+            "translational_validation_across_tumor_types": {
+              "additional_models": [
+                {
+                  "cell_line": "SPC111 (mesothelioma)",
+                  "MTAP_loss_panel_prevalence": "32% of MESO (Fig 6A, n=87)",
+                  "result_verbatim": "MTAP KO confers higher sensitivity to MRTX1719; combinations with cytarabine or VX970 significantly more effective than single treatments in MTAP-deficient cells, with limited toxicity for WT cells (P < 0.05, unpaired t-test) (Fig 6D)"
+                },
+                {
+                  "cell_line": "SW1990 (pancreatic adenocarcinoma)",
+                  "MTAP_loss_panel_prevalence": "22% of PAAD (Fig 6A, n=184)",
+                  "result_verbatim": "MTAP KO confers higher sensitivity to MRTX1719; combinations with cytarabine or VX970 significantly more effective than single treatments (P < 0.05)"
+                }
+              ],
+              "PDO_translational_validation": {
+                "PDOs_tested": [
+                  "TN-001 (MTAP-OE rescue)",
+                  "BlCa197 (MTAP-KO induction)"
+                ],
+                "result_verbatim": "MTAP overexpression in TN-001 organoids rescues MRTX1719 activity, while MTAP KO selectively increases MRTX1719 activity in BlCa197 (Supplementary Fig. 7A). [...] combinations were significantly more effective than the administration of single drugs for both models and that, this effect was more pronounced in MTAP-deficient PDOs compared to MTAP-proficient PDOs (Fig. 7D)"
+              }
+            },
+            "synergy_quantification_methodology": {
+              "software_used_verbatim": "SynergyFinder 3.1",
+              "source": "Bev2026 PDF Fig 3 caption (page 7)",
+              "models": "HSA (Highest Single Agent) and Bliss",
+              "threshold_for_synergy_verbatim": "synergy score > 10 = synergistic interaction (per Ianevski 2022, ref 21)",
+              "reporting_format_verbatim": "HSA synergy scores AND summary synergy scores with 95% confidence interval for the CCK-8 experiments",
+              "software_version_note": "Paper used SynergyFinder 3.1; cited ref 21 (Ianevski 2022, Nucleic Acids Res 50:W739-W743) is the SynergyFinder 3.0 publication. The 3.1 release apparently postdates the original publication."
+            }
+          },
+          "family_2_MBD4_LOF_x_ATR_WEE1_axis": {
+            "context_for_inclusion": "Sibling double-hit family for CrisPRO benchmarking. Discovered by Brenus/Phylo team via canonical_atr_wee1_rerun (HEAD bfd6d11f, branch fix/mbd4-atr-strong-tier). Not part of Bev2026 paper.",
+            "primary_genotype": "MBD4 LikelyLoF=True (DepMap OmicsSomaticMutations)",
+            "second_hit_pharmacological": "ATR pathway inhibitors (ceralasertib AZD6738 primary; adavosertib MK-1775 axis partner)",
+            "primary_drug_ceralasertib_GDSC2": {
+              "metric": "LN_IC50",
+              "n_LOF": 14,
+              "n_WT": 914,
+              "delta_ln_ic50": -0.7324529879649893,
+              "p_value": 0.021484496737088882,
+              "cohens_d": -0.5032867186922607,
+              "cohort_definition_verbatim": "MBD4 True-LOF (LikelyLoF=True) vs WT; primary drug screen rows; WT_rule=Methods_no_somatic_MBD4",
+              "AUC_delta": -0.05564297952485164,
+              "AUC_p": 0.012941267483990927,
+              "AUC_cohens_d": -0.5569455208182712,
+              "depmap_release": "24Q2",
+              "gdsc_release": "GDSC2",
+              "source_repo_file": "rxiv/scripts/canonical_atr_wee1_rerun.py + literature_receipts.py:170-195",
+              "source_artifacts": "canonical_atr_wee1_rerun.csv + canonical_atr_wee1_rerun.json frozen 2026-04-05",
+              "transcript_verification": "Full-precision JSON dump confirmed in /mnt/results/execution_trace/transcript.jsonl at message indices 991-1010"
+            },
+            "stress_test_MSI_purge": {
+              "stratifier_verbatim": "exclude ModelSubtypeFeatures containing 'MSI' from both arms; Methods WT",
+              "n_LOF": 10,
+              "n_WT": 906,
+              "delta_ln_ic50": -0.9095277046357615,
+              "p_value": 0.015328932966132268,
+              "cohens_d": -0.6227047947387747,
+              "purpose": "Falsify alternative hypothesis that MBD4-LOF signal is driven by MSI-co-segregation. Effect size LARGER after MSI exclusion."
+            },
+            "stress_test_TP53_stratification": {
+              "stratifier_verbatim": "MBD4-LOF∩TP53-mut vs MBD4-WT(Methods)∩TP53-mut; TP53-mut = any somatic TP53 in OmicsSomaticMutations",
+              "n_LOF": 11,
+              "n_WT": 619,
+              "LN_IC50_delta": -1.0692019443383756,
+              "LN_IC50_p": 0.003002668797799231,
+              "LN_IC50_cohens_d": -0.7404782024497254,
+              "AUC_delta": -0.08694390659421358,
+              "AUC_p": 0.0008734372333767206,
+              "AUC_cohens_d": -0.8888045345020856,
+              "interpretation": "Effect size LARGEST in TP53-mutant subpopulation. Relevant to HGSOC (>95% TP53-mutant) as priority indication.",
+              "double_hit_classification": "MBD4-LOF × TP53-mut → ATR/WEE1 vulnerability with d=-0.74 (LN_IC50) and d=-0.89 (AUC); both stronger than primary single-feature MBD4 result"
+            },
+            "stress_test_leave_one_out": {
+              "max_p_verbatim": 0.045165724128583974,
+              "interpretation_verbatim": "Leave-one-out over 14 LOF cosmids with LN_IC50; reported p=max iteration p (one-sided MWU LOF). All 14 iterations p < 0.05."
+            },
+            "stress_test_non_bowel_lineage": {
+              "n_LOF": 9,
+              "n_WT": 873,
+              "delta_ln_ic50": -0.8706814558991984,
+              "p_value": 0.02533035508952329,
+              "cohens_d": -0.5988100454283156,
+              "interpretation": "Effect not driven by bowel/colorectal lineage. Bowel-only subset n_LOF=5 underpowered (p=0.126)."
+            },
+            "axis_partner_adavosertib_WEE1": {
+              "drug_verbatim": "adavosertib = MK-1775 in GDSC2",
+              "n_LOF": 15,
+              "n_WT": 920,
+              "delta_ln_ic50": -0.5080370851449276,
+              "p_value": 0.07445705343975263,
+              "cohens_d": -0.3594348912682576,
+              "status": "MIXED - directionally consistent, sub-threshold",
+              "honest_framing": "Same effect direction as ATR axis but does not reach p < 0.05. Supports pathway-level (ATR/CHK1/WEE1) rather than single-target dependency."
+            },
+            "falsification_arm_PARP1": {
+              "purpose": "Falsify the competing PARP-trapping hypothesis for MBD4-LOF tumors. If MBD4-LOF tumors were PARP-sensitive via base excision repair (BER) deficiency, PARP1 should be a competing axis. CrisPRO's Mann-Whitney test rejects this.",
+              "test_design": "Mann-Whitney U test of PARP1 expression between MBD4-LOF (n=19) and comparator pool (n=1498) in DepMap CCLE.",
+              "result_full_precision": {
+                "n_LOF": 19,
+                "n_comparator": 1498,
+                "median_PARP1_expression_LOF": 6.77,
+                "median_PARP1_expression_comparator": 6.656,
+                "mann_whitney_p_two_sided": 0.605
+              },
+              "interpretation": "p=0.605 (n.s.) rules out elevated PARP1 expression in MBD4-LOF — PARP1 is NOT differentially expressed in MBD4-LOF tumors, so PARP-trapping is not the operative mechanism.",
+              "sanity_check_pan_cancer": {
+                "purpose": "Verify the negative result by checking whether PARP1 expression correlates with PARPi sensitivity at all in the broader pan-cancer dataset.",
+                "test": "Spearman correlation of PARP1 expression vs olaparib LN_IC50 across all available CCLE × GDSC2 lines",
+                "result": {
+                  "spearman_rho": -0.416,
+                  "spearman_p": 1.36e-21,
+                  "n": 481
+                },
+                "interpretation": "PARP1 expression × PARPi sensitivity IS strongly correlated pan-cancer (ρ=-0.416, p=1.36e-21, n=481) — this validates that PARP1 expression IS the right marker to test. The fact that it shows NO MBD4-LOF effect (p=0.605) is a meaningful falsification."
+              },
+              "what_this_falsification_supports": "Pivots therapeutic recommendation from PARP-trapping (olaparib, niraparib, etc.) → ATR axis (ceralasertib, MK-1775). This is the methodologically critical move that distinguishes CrisPRO's MBD4-LOF nomination from a naive 'BER-deficiency → PARP' inference.",
+              "provenance": "User-provided 'precise numbers' message at transcript line 12288 (i=11560). Verbatim from CrisPRO MBD4×ATR/WEE1 Tier Promotion Audit Report 2026."
+            }
+          },
+          "family_3_MBD4_LOF_x_TP53_within_genotype_amplifier": {
+            "context": "Within-MBD4-LOF stratifier rather than independent second hit; included to document the largest effect size observed in the canonical rerun.",
+            "rationale_for_HGSOC_relevance": "TCGA HGSOC carries TP53 mutation in >95% of cases. If MBD4-LOF × TP53-mut amplifies the ATR axis effect to d=-0.74 (LN_IC50) and d=-0.89 (AUC), HGSOC is the priority indication for clinical translation of the MBD4-LOF biomarker.",
+            "evidence": "See family_2.stress_test_TP53_stratification for full numbers."
+          },
+          "cross_family_observations": {
+            "shared_mechanism": "All three families converge on ATR/CHK1 replication-stress dependency. Bev2026 9p21 family activates ATR/CHK1 via PRMT5-loss-induced R-loops + cytarabine-induced fork stall. MBD4-LOF family activates ATR/CHK1 via accumulation of unrepaired G:T mismatches (Hashimoto 2014 catalytic mechanism, Pidugu 2021 D560G 2700-fold activity reduction).",
+            "shared_target_class": "ATR inhibitors (ceralasertib, VX970), WEE1 inhibitors (adavosertib/MK-1775), CHK1 inhibitors (AZD7762) all relevant.",
+            "differentiation": "9p21 family: pharmacological double-hit (cytarabine + MRTX1719/AG-270/VX970). MBD4-LOF family: genetic double-hit (MBD4-LOF + TP53-mut) with ATR/WEE1 as single-agent target."
+          },
+          "what_paper_does_NOT_quantify_for_double_hit_landscape": {
+            "items": [
+              "Quantitative IC50/GI50 for each of the 18 primary screen hits (only z-scores reported)",
+              "Top-10 of the 18 hits with their z-scores (paper lists only the 2 named: cytarabine + MTX)",
+              "Pharmacokinetic/PD parameters needed to triage MRTX1719 + AG-270 + VX970 combinations for clinical translation",
+              "Whether the MRTX1719/AG-270/VX970 combinations have been tested in vivo (paper is cell line + PDO only)",
+              "Toxicity profiling — the paper's Discussion §last paragraph explicitly notes: 'future work should focus on potential resistance mechanisms and toxic side effects that could arise from drug combinations'"
+            ]
+          },
+          "post_consistency_check_patches_2026_06_24": [
+            {
+              "patch_id": "DH-PATCH-001",
+              "what_was_added": "family_2_MBD4_LOF_x_ATR_WEE1_axis.falsification_arm_PARP1 — full PARP1 falsification arm with Mann-Whitney p=0.605 (n=19/1498), pan-cancer sanity check (ρ=-0.416, p=1.36e-21, n=481), and ATR-axis pivot interpretation.",
+              "why": "Cross-file consistency check 2026-06-24 found that DH family_2 was missing the falsification arm even though it's documented in moat_comparison.json. The falsification arm is methodologically critical for MBD4-LOF nomination (rules out PARP-trapping mechanism).",
+              "source": "User-provided 'precise numbers' message at transcript line 12288 (i=11560)"
+            },
+            {
+              "patch_id": "DH-PATCH-002",
+              "what_was_added": "family_1.synergy_quantification_methodology block + per-hit synergy_quantification_method field where applicable.",
+              "why": "Cross-file consistency check 2026-06-24 found DH had HSA synergy scores but didn't name SynergyFinder 3.1 as the software. ED and MOAT both name it; DH should be consistent.",
+              "source": "Bev2026 PDF Fig 3 caption (page 7)"
+            }
+          ]
+        },
+        "top_keys": [
+          "$schema_version",
+          "document_purpose",
+          "provenance",
+          "scope_and_definitions",
+          "family_1_9p21_loss_pharmacological_double_hits",
+          "family_2_MBD4_LOF_x_ATR_WEE1_axis",
+          "family_3_MBD4_LOF_x_TP53_within_genotype_amplifier",
+          "cross_family_observations",
+          "what_paper_does_NOT_quantify_for_double_hit_landscape",
+          "post_consistency_check_patches_2026_06_24"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/double_hit_vulnerabilities.json",
+          "exists": true,
+          "bytes": 24468,
+          "sha256": "8a47013bd7cedbb04e908c92aa277c31ea47be7ebdab523a6565509ba1d8c61c",
+          "mtime_iso": "2026-06-25T01:44:05+00:00"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "artifact:collaboration_value_proposition_full",
+      "type": "9p21_artifact_full",
+      "name": "collaboration_value_proposition.json",
+      "what_it_solves": "Full parsed contents of collaboration_value_proposition.json.",
+      "how_it_solves": "json.load at generation time; raw payload carried.",
+      "why_it_exists": "Deep pass carries the full payload so consumers don't need a second read.",
+      "attributes": {
+        "raw": {
+          "$schema_version": "2026-06-24-v1",
+          "document_purpose": "Researcher-specific collaboration value propositions for the Bevilacqua 2026 author team, grounded in actual paper attribution (corresponding/senior/contribution roles), affiliations, and publicly-disclosed competing interests. Targets: Demichelis (corresponding, senior), Kruithof-de Julio (corresponding), Faltas (conceptualization only). Each deliverable must trace to a CrisPRO capability with a verifiable receipt.",
+          "provenance": {
+            "audit_date_utc": "2026-06-24",
+            "primary_source": {
+              "paper": "Bevilacqua R, Gasperini P, Cantore T, et al. Therapeutic vulnerabilities exposed by the 9p21 loss identified through multiparametric drug screening inform rational combination strategies.",
+              "journal": "npj Precision Oncology",
+              "year": 2026,
+              "volume": "10",
+              "article_no": "232",
+              "doi": "10.1038/s41698-026-01434-w",
+              "received": "2025-09-01",
+              "accepted": "2026-04-07",
+              "published": "2026-04-18",
+              "retrieval_method": "Full PDF read (16 pages) via Read tool on /mnt/user-uploads/s41698-026-01434-w.pdf, 2026-06-24",
+              "data_deposition": "Zenodo 10.5281/zenodo.18957959",
+              "code_availability": "Not publicly available; available on reasonable request from corresponding authors per paper Code Availability statement",
+              "license": "CC-BY 4.0"
+            },
+            "verification_status": "Every leaf below is traceable to a specific page/figure/table of the source PDF or to a verifiable transcript receipt. No claim retained from prior generated JSONs unless re-verified.",
+            "audit_corrections_applied": [
+              "MTAP-loss prevalence in TCGA MIBC = 26% (paper text, Discussion §1, cBioPortal computation by the authors). 22% in PLAN.md was the older Robertson 2017 CDKN2A-alone figure for MIBC; both retained, distinguished.",
+              "Phenotypic features = 12 (verbatim, Results §Phenotype-based hit selection: 'For each object (i.e., cell or nucleus), 12 phenotypic features...'). PLAN.md had hedged this to 'feature count not in retrieved supplementary'; PDF resolves it definitively to 12.",
+              "SynergyFinder version = 3.1 (verbatim, Fig 3 legend). Reference 21 (Ianevski 2022) is the SynergyFinder 3.0 paper; the authors used the 3.1 release derived from the same software lineage.",
+              "ATR inhibitor name verbatim = VX970 (no hyphen, no 'berzosertib'). Paper uses VX970 throughout.",
+              "Compound library composition: 2,349 total = 349 (Selleck Anti-cancer) + 958 (MicroSource Spectrum known drugs in human therapy) + 629 (natural products) + 343 (biological activity at experimental level) + 70 (approved for agricultural use only). Numerical sum = 2,349.",
+              "PDO clinical context: BlCa197 = 54-year-old female, high-grade MIBC, mixed urothelial+sarcomatoid, neoadjuvant cisplatin/gemcitabine + radical cystectomy. TN-001 = 53-year-old male, high-grade MIBC, mixed urothelial+sarcomatoid, MVAC combination + radical cystectomy.",
+              "Ethical approvals: KEK 06/03 and 2017-02295.",
+              "AZD7762 and MK-1775 z-scores from primary screen now stated verbatim: AZD7762 WT z=-3.60 / 3KO z=-5.06; MK-1775 WT z=-1.12 / 3KO z=-2.06.",
+              "MRTX1719 axis bug in repo: pharmacologic_analyzer.py:66 maps 'mrtx1719' -> 'wrn'. Correct axis per Bev2026 §Methods +  Engstrom 2023 ref 7 = PRMT5 (MTA-cooperative). Flag in DH JSON; no code fix in this task per user lock #4."
+            ]
+          },
+          "authorship_facts_from_paper": {
+            "title_verbatim": "Therapeutic vulnerabilities exposed by the 9p21 loss identified through multiparametric drug screening inform rational combination strategies",
+            "equal_first_authors_verbatim": "These authors contributed equally: Riccardo Bevilacqua, Paola Gasperini",
+            "corresponding_authors_verbatim": "Correspondence and requests for materials should be addressed to Marianna Kruithof-de Julio or Francesca Demichelis.",
+            "corresponding_emails_verbatim": [
+              "marianna.kruithofdejulio@unibe.ch",
+              "f.demichelis@unitn.it"
+            ],
+            "senior_author_verbatim": "Supervision: F.D. (Francesca Demichelis only)",
+            "funding_acquisition_verbatim": "F.D., B.K., M.K.d.J. (Demichelis, Kiss, Kruithof-de Julio)",
+            "contributions_full_verbatim": "Conceptualization: R.B., P. Gasperini, B.M.F., and F.D.; formal analysis: R.B., P. Gasperini, T.C., M.P., T.F., P. Gatto, V.A.; investigation: R.B., P. Gasperini, T.C., C.M.S., H.Y., M.P., O.Q., P. Gatto, V.A. and F.L.; data curation: T.C., M.P., T.F., P. Gatto, V.A.; resources: H.Y., M.R., R.S., B.K., M.K.d.J.; methodology; R.B., P. Gasperini, T.C.; validation: R.B., P. Gasperini; visualization: R.B., P. Gasperini, T.C.; software: T.C., M.P., T.F.; supervision: F.D.; funding acquisition: F.D., B.K., M.K.d.J.; writing–original draft: R.B., P. Gasperini, and F.D.",
+            "Faltas_role_verbatim": "Conceptualization: R.B., P. Gasperini, B.M.F., and F.D. — Faltas appears ONLY in conceptualization. NOT in formal analysis, investigation, data curation, resources, methodology, validation, visualization, software, supervision, funding acquisition, or writing-original draft.",
+            "all_authors_in_order_verbatim": [
+              "Riccardo Bevilacqua (equal first; CIBIO Trento)",
+              "Paola Gasperini (equal first; CIBIO Trento)",
+              "Thomas Cantore (CIBIO Trento; software lead)",
+              "Catarina Macedo-Silva (Urology Research Lab, DBMR Bern; investigation)",
+              "Michael Pancher (CIBIO Trento; data curation, software)",
+              "Martina Radić (Urology Research Lab DBMR Bern; resources)",
+              "Haiyan Yue (Urology Research Lab DBMR Bern; resources)",
+              "Orsetta Quaini (CIBIO Trento; investigation)",
+              "Tarcisio Fedrizzi (CIBIO Trento; data curation, software)",
+              "Pamela Gatto (CIBIO Trento; formal analysis, data curation, investigation)",
+              "Roland Seiler (Urology DBMR Bern / Hospital Biel / Inselspital; resources)",
+              "Bernhard Kiss (Urology Inselspital / DBMR Bern; resources, funding)",
+              "Valentina Adami (CIBIO Trento; formal analysis, investigation, data curation)",
+              "Francesca Lorenzin (CIBIO Trento; investigation)",
+              "Marianna Kruithof-de Julio (CORRESPONDING; DBMR/TOR Bern; resources, funding)",
+              "Bishoy Morris Faltas (CONCEPTUALIZATION ONLY; Weill Cornell Medicine NY)",
+              "Francesca Demichelis (CORRESPONDING + SUPERVISION + FUNDING; CIBIO Trento)"
+            ],
+            "Faltas_competing_interests_verbatim": "B.M.F. participated in advisory boards or consulted for Astrin Bioscience, Natera, Guardant, Janssen, Gilead, Merck, Immunomedics, and QED Therapeutics, and obtained patent royalties from Immunomedics and Gilead, honoraria from Urotoday, Axiom Healthcare Strategies, and research support from Eli Lilly. Other authors declare no potential conflicts of interest.",
+            "Demichelis_KdJ_competing_interests_verbatim": "Other authors declare no potential conflicts of interest. — Demichelis and Kruithof-de Julio have NO disclosed conflicts in the paper."
+          },
+          "funding_facts_for_outreach_context": {
+            "Demichelis_funding_verbatim": [
+              "ERC Horizon 2020 grant agreement no. 648670; SPICE (to F.D.)",
+              "Samuel and Barbara Sternberg Foundation (to F.D.)",
+              "CIBIO Department Core Facilities (IRBIO) supported by ERDF 2014-2020 and 2021-2027"
+            ],
+            "Kruithof_de_Julio_funding_verbatim": [
+              "ISREC Foundation TANDEM grant awarded to M.K.d.J. and B.K. (supports M.R., H.Y., C.M.S.)",
+              "Wilhelm Sander Stiftung (Grant 2022.136.1) awarded to M.K.d.J."
+            ]
+          },
+          "researcher_target_demichelis": {
+            "name": "Francesca Demichelis",
+            "title": "Co-corresponding author + sole supervisor of Bevilacqua 2026",
+            "affiliation": "Department of Cellular, Computational and Integrative Biology (CIBIO), University of Trento, Italy",
+            "email_paper_verbatim": "f.demichelis@unitn.it",
+            "role_in_bev2026": "Corresponding author + SOLE supervision lead + funding acquisition. Co-conceptualization + writing-original draft.",
+            "scientific_strength": "Computational/integrative oncology with proven translation track record. Lab generates the 9p21 isogenic models, runs the multiparametric screen, performs phenotype-correlation analysis, and supervises the project end-to-end.",
+            "deliverables_proposed": [
+              {
+                "id": "CVP-DEM-01",
+                "deliverable": "CrisPRO ATR/CHK1 axis double-check on the 9p21-loss findings",
+                "specific_offer": "Apply CrisPRO's MBD4-LOF × ATR/WEE1 canonical pipeline (HEAD bfd6d11f at last verification, fix/mbd4-atr-strong-tier branch) to the 9p21 isogenic models. Test whether the same ceralasertib effect (n_LOF=14, n_WT=914, d=-0.50 LN_IC50, d=-0.56 AUC) holds against an isogenic 9p21 background using DepMap CCLE bladder cell lines + GDSC2 drug screen as the comparator.",
+                "anchor_in_paper": "Paper §Results — VX970 + MRTX1719 combination depends on ATR/CHK1 pathway. Paper §Discussion — 'the correlation [of ATR inhibition + cytarabine synergism] to 9p21 status has never been reported before.' CrisPRO's MBD4-LOF axis falsified the PARP-trapping competing hypothesis (Mann-Whitney U p=0.6048, n=19/1498, ρ=-0.416 pan-cancer); same falsification scaffolding could test 9p21 × ATR axis against confounders.",
+                "value_to_demichelis_lab": "Independent validation of ATR axis dependency via in-silico/canonical-rerun pipeline before committing in-vivo or PDO follow-on resource.",
+                "value_to_crispro": "Reference dataset from a published precision oncology lab; demonstration that CrisPRO's stress-test methodology generalizes beyond MBD4-LOF."
+              },
+              {
+                "id": "CVP-DEM-02",
+                "deliverable": "Pharmacological-vulnerability ranking for the residual 16 of 18 primary hits",
+                "specific_offer": "Paper names only 2 of the 18 primary screen hits (cytarabine + MTX). Apply CrisPRO's literature_receipts axis-mapping over the full 18-drug list (recoverable from Supp Fig 1E if shared) to rank the other 16 by: (a) clinical maturity, (b) overlap with ATR/CHK1/PRMT5/MAT2A axes, (c) DepMap-CCLE×GDSC2 effect signal in CDKN2A-deleted cell lines.",
+                "anchor_in_paper": "Paper §Discussion — 'a primary limitation of our screening approach is that all compounds were tested, in replicate, at a fixed concentration (of 1 μM), therefore likely missing compounds with genotype-specific response at different concentrations'. Ranking the residual 16 + flagging dose-response-sensitive candidates is a natural extension.",
+                "value_to_demichelis_lab": "Augmented hit triage without re-running the wet screen; identifies candidates for follow-on combinations.",
+                "verification_status": "Offer is conditional on receiving Supp Fig 1E hit list. Not assumed."
+              },
+              {
+                "id": "CVP-DEM-03",
+                "deliverable": "Repo MRTX1719 axis-mapping fix (PRMT5 vs WRN)",
+                "specific_offer": "Repo currently maps 'mrtx1719' to 'wrn' axis (pharmacologic_analyzer.py:66 at HEAD bfd6d11f). Bev2026 + Engstrom 2023 establish MRTX1719 as PRMT5 MTA-cooperative inhibitor. We commit to a single-PR fix that adds prmt5_mtap_cooperative to the CandidateAxis enum (currently 7 axes per models.py:122) and remaps MRTX1719. This brings CrisPRO's axis taxonomy in line with the Bev2026 mechanism.",
+                "anchor_in_paper": "Paper § entire Results + Methods — MRTX1719 is the PRMT5 inhibitor (introduced first paragraph of Discussion via ref 7 Engstrom 2023).",
+                "value_to_demichelis_lab": "Demonstrates that CrisPRO's taxonomy can be corrected against published mechanism without losing the existing 7-axis structure.",
+                "verification_status": "Confirmed bug per repo HEAD bfd6d11f. Code fix is OUT OF SCOPE for this audit per user lock #4 but is part of the outreach value proposition."
+              },
+              {
+                "id": "CVP-DEM-04",
+                "deliverable": "Joint-publication target: pan-cancer MTAP-loss × ATR replication stress vulnerability",
+                "specific_offer": "Co-author opportunity. Bev2026 validates MRTX1719 + cytarabine + VX970 combinations in BLCA + pleural mesothelioma (SPC111) + pancreatic adeno (SW1990) + 2 PDOs. Paper's Discussion §last paragraph: 'Given the high prevalence of 9p21 loss in multiple cancer types, these combinations may offer new precision medicine opportunities across a wide spectrum of malignancies.' CrisPRO can run pan-cancer DepMap analysis (similar to MBD4 axis: n=1498 cell lines, 481 with PARP1×PARPi pairs) to identify candidate tissue/lineage × MTAP-loss × ATR-inhibitor effect sizes.",
+                "anchor_in_paper": "Verbatim Discussion sentence above.",
+                "value_to_both_parties": "Standard scientific collaboration with clear authorship norms (CrisPRO contributes computational analysis; Demichelis lab provides biology and additional experimental validation)."
+              },
+              {
+                "id": "CVP-DEM-05",
+                "deliverable": "TP53 stratifier overlay onto 9p21-loss model",
+                "specific_offer": "CrisPRO's TP53-stratification stress test in the MBD4-LOF context found the LARGEST effect size (d=-0.74 LN_IC50, d=-0.89 AUC, n_LOF=11 / n_WT=619 of TP53-mutant subpopulation). HGSOC is >95% TP53-mutant. Apply the same TP53 stratifier to the 9p21-loss × ceralasertib axis to test whether TP53-mut subpopulation similarly amplifies the 9p21 ATR-axis effect.",
+                "anchor_in_paper": "Paper §Discussion — speculates 9p21-deletion drives basal replication stress (p-CHK1 elevated in untreated 3KO T24 cells, Fig 4C). TP53 is upstream regulator of replication stress response. Mechanistic prior supports an interaction.",
+                "scientific_question": "Does 9p21-loss × TP53-mut amplify ceralasertib response analogously to MBD4-LOF × TP53-mut?",
+                "verification_status": "Hypothesis-generating; no experimental claim. Effect size from MBD4 family is verified canonical (d=-0.7405 LN_IC50, p=0.003003)."
+              },
+              {
+                "id": "CVP-DEM-06",
+                "deliverable": "Negative-control / falsification arm methodology",
+                "specific_offer": "Bev2026 deploys 2KO clones (CDKN2A/2B deleted, MTAP retained) as a falsification arm for MTAP-driven sensitivity. CrisPRO's PARP1 expression Mann-Whitney falsification (p=0.6048, median LOF 6.770 vs comparator 6.656, n=19/1498) is a structurally equivalent approach using publicly available DepMap data. Joint methodology paper / methods-section appendix opportunity.",
+                "anchor_in_paper": "Bev2026 ref 17 Alhalabi 2022 + ref 13 Lindskrog 2021 + ref 14 Robertson 2017 — none of these have an analogous in-silico falsification arm. Methodological gap.",
+                "value_proposition": "Establishes CrisPRO's stress-test/falsification scaffolding as a publishable methodology rather than internal QC."
+              }
+            ],
+            "title_caveat": "Academic rank (e.g., Professor, Associate Professor) NOT retrieved this session and not stated in the paper. PDF lists 'Department of Cellular, Computational and Integrative Biology, University of Trento' as her affiliation; specific academic title to be confirmed before outreach if relevant."
+          },
+          "researcher_target_kruithof_de_julio": {
+            "name": "Marianna Kruithof-de Julio",
+            "title": "Co-corresponding author + resources lead (PDO infrastructure)",
+            "affiliation": "Department for BioMedical Research (DBMR), University of Bern + Department of Urology, Inselspital, Bern University Hospital + Translational Organoid Resource (TOR), Bern",
+            "email_paper_verbatim": "marianna.kruithofdejulio@unibe.ch",
+            "role_in_bev2026": "Co-corresponding author. Resources lead (provides PDO infrastructure via TOR). Funding acquisition (ISREC TANDEM grant + Wilhelm Sander Stiftung 2022.136.1).",
+            "scientific_strength": "Bladder cancer PDO platform via TOR. Provides primary patient material + organoid culture know-how + clinical translation pathway.",
+            "deliverables_proposed": [
+              {
+                "id": "CVP-MKJ-01",
+                "deliverable": "PDO panel expansion + CrisPRO biomarker scoring",
+                "specific_offer": "Paper §Discussion §last-but-one: 'additional studies with a larger panel of PDOs will be critical to offer deeper insight into the therapeutic potential of these combination strategies.' CrisPRO offers to triage TOR's PDO library by 9p21-loss + MTAP-loss + TP53-mut combinatorial biomarker score to identify candidates for the MRTX1719+VX970+cytarabine combination test. Output: ranked PDO list with predicted response.",
+                "anchor_in_paper": "Verbatim quote above + Fig 7D demonstrating 2-PDO model is informative but underpowered.",
+                "value_to_kdj_lab": "Avoids burning organoid resource on PDOs predicted to be MTAP-proficient or otherwise non-responsive.",
+                "value_to_crispro": "PDO-validated predictions extend CrisPRO's validation framework beyond cell-line × DepMap-GDSC2."
+              },
+              {
+                "id": "CVP-MKJ-02",
+                "deliverable": "Cisplatin-resistant MIBC subgroup analysis",
+                "specific_offer": "BlCa197 PDO is from a 54yo female with cisplatin/gemcitabine-pretreated MIBC (verbatim from paper). This is a resistant-disease context. Apply CrisPRO biomarker stratification to identify how MTAP-loss + prior platinum exposure interact in determining response to the MRTX1719 + VX970 axis.",
+                "anchor_in_paper": "Verbatim from paper PDO §Clinical details — BlCa197 patient demographics.",
+                "scientific_question": "Does post-cisplatin platinum-resistance state alter the MTAP-loss-driven ATR axis dependency?",
+                "value_proposition": "Targets a specific unmet-need patient subgroup with high translational impact."
+              },
+              {
+                "id": "CVP-MKJ-03",
+                "deliverable": "Sarcomatoid urothelial subtype biomarker",
+                "specific_offer": "Both PDOs (TN-001 + BlCa197) are mixed urothelial/sarcomatoid histology — a high-grade subtype previously characterized by Garioni et al. 2023 (ref 34 in Bev2026, npj Precision Oncology 7:112). Apply CrisPRO's MBD4-LOF × TP53 stratifier (d=-0.89 AUC) to sarcomatoid urothelial samples to test whether the histological subtype enriches for the genotypes that drive the ATR-axis response.",
+                "anchor_in_paper": "Ref 34 Garioni 2023 + Bev2026 §PDO clinical details specifying mixed urothelial/sarcomatoid histology for both PDOs.",
+                "value_proposition": "Subtype-specific biomarker for an aggressive disease subgroup."
+              },
+              {
+                "id": "CVP-MKJ-04",
+                "deliverable": "Methodology audit of MTAP-loss-induction protocols",
+                "specific_offer": "Paper uses two opposite engineering approaches: (a) TN-001 doxycycline-inducible MTAP overexpression (rescue) and (b) BlCa197 lentiCRISPR MTAP KO (loss-of-function). These bi-directional manipulations are a useful control. CrisPRO can write a methods-paper appendix documenting the bi-directional editing strategy + quantitative criteria for distinguishing MTAP-induced sensitivity vs background MTAP-independent toxicity.",
+                "anchor_in_paper": "Paper §PDO §editing — verbatim description of pCW57.1 + lentiCRISPR_v1 + MTAP sgRNA protocols.",
+                "value_proposition": "Codifies a transferable methodology pattern."
+              }
+            ],
+            "title_caveat": "Academic rank not retrieved this session and not stated in the paper. Affiliations span DBMR Bern, Inselspital Department of Urology, and TOR Bern."
+          },
+          "researcher_target_faltas": {
+            "name": "Bishoy Morris Faltas",
+            "title": "Conceptualization-only co-author of Bevilacqua 2026",
+            "affiliation": "Department of Medicine, Weill Cornell Medicine, New York, NY, USA",
+            "role_in_bev2026": "CONCEPTUALIZATION ONLY (not corresponding, not senior, not supervision, not funding, not data curation, not investigation, not validation, not writing-original draft).",
+            "outreach_caveat_required": "Faltas's role in this specific paper is limited to conceptualization. Outreach must reflect that he is NOT the primary scientific contact for the 9p21 dataset itself. Demichelis (CIBIO) and Kruithof-de Julio (Bern/TOR) are the operational/data contacts.",
+            "competing_interests_to_disclose_in_outreach": "Per the paper's Competing Interests section, Faltas has disclosed advisory/consulting relationships with Astrin Bioscience, Natera, Guardant, Janssen, Gilead, Merck, Immunomedics, QED Therapeutics; patent royalties from Immunomedics and Gilead; honoraria from Urotoday and Axiom Healthcare Strategies; and research support from Eli Lilly. Brenus/Phylo should ensure their outreach is consistent with Faltas's disclosed engagements (no overlapping potential COI).",
+            "scientific_strength": "Faltas is a clonal-evolution / chemotherapy-resistance researcher (cited as ref 12 in Bev2026 for Nat Genet 2016 paper on clonal evolution of chemotherapy-resistant urothelial carcinoma). MIBC-focused.",
+            "deliverables_proposed": [
+              {
+                "id": "CVP-FAL-01",
+                "deliverable": "Clonal evolution + 9p21-loss longitudinal biomarker",
+                "specific_offer": "Faltas's 2016 paper (Nat Genet 48:1490-1499) shows clonal evolution in chemotherapy-resistant urothelial carcinoma. Bev2026 paper raises the question of whether 9p21-loss + MTAP-loss are evolutionarily stable through cisplatin/gemcitabine pressure. CrisPRO offers to compute a longitudinal clonality score using public WGS/WES data from Faltas's published cohorts to test biomarker stability.",
+                "anchor_in_paper": "Bev2026 ref 12 (Faltas 2016) + Bev2026 BlCa197 PDO §clinical details (post-cisplatin/gemcitabine).",
+                "scientific_question": "Is 9p21-loss enriched, depleted, or stable in post-treatment samples relative to pre-treatment?",
+                "value_proposition": "Independent biomarker question that intersects Faltas's clonal-evolution focus AND Bev2026 mechanism."
+              },
+              {
+                "id": "CVP-FAL-02",
+                "deliverable": "MIBC PDX/clinical trial cohort biomarker enrichment analysis",
+                "specific_offer": "If Weill Cornell maintains MIBC PDX models or BLCA clinical-trial infrastructure (not verified this session — to be confirmed), CrisPRO offers to apply the 9p21 + MTAP + TP53 + replication-stress composite biomarker score for trial enrollment criteria for MRTX1719/VX970 combinations.",
+                "anchor": "Inferential — based on Faltas's published clonal-evolution work (Nat Genet 2016, ref 12) and Weill Cornell Medicine affiliation. Specific PDX/trial resources NOT verified this session.",
+                "verification_status": "OFFER IS HYPOTHETICAL pending verification of Weill Cornell BLCA PDX/trial infrastructure. Do not assert as fact in outreach.",
+                "pre_outreach_required_verification": "Search clinicaltrials.gov for Faltas as Principal Investigator on BLCA trials; check Weill Cornell Englander Institute / Caryl & Israel Englander Institute of Precision Medicine for stated PDX resources; confirm overlap with Faltas's disclosed industry COI (especially Janssen, Gilead, Merck for ATR-pathway competing assets)."
+              }
+            ],
+            "title_caveat": "Academic rank not retrieved this session. PDF affiliation: 'Department of Medicine, Weill Cornell Medicine, New York, NY, USA'. Title (e.g., Associate Professor, Professor) to be confirmed before outreach."
+          },
+          "verification_disclaimer": {
+            "what_we_did_NOT_retrieve_this_session": [
+              "Demichelis full CV / Google Scholar h-index",
+              "Kruithof-de Julio TOR organoid bank size / IRB scope",
+              "Faltas active clinical trial portfolio (clinicaltrials.gov was NOT queried this session)",
+              "Lab-specific RNA-seq/WGS resources beyond what Bev2026 explicitly cites"
+            ],
+            "what_we_did_NOT_assume": [
+              "We did NOT assume any prior outreach has occurred. Every deliverable is a first-contact value proposition.",
+              "We did NOT assume Demichelis or Kruithof-de Julio have shared raw data beyond Zenodo deposition (10.5281/zenodo.18957959).",
+              "We did NOT assume Faltas is a primary scientific contact for this dataset (paper attribution confirms he is conceptualization-only).",
+              "We did NOT assume the repo MRTX1719 axis-mapping fix has been merged. Repo HEAD bfd6d11f on fix/mbd4-atr-strong-tier branch still has the bug at last verification before worker termination."
+            ]
+          },
+          "audit_corrections_2026_06_24": {
+            "fix_1_titles_stripped": "Removed 'Professor' from Demichelis and 'Associate Professor' from Faltas. Neither title appears in the paper. Roles now stated from contributions section only (corresponding, conceptualization, supervision, funding).",
+            "fix_2_FAL_02_softened": "CVP-FAL-02 'Weill Cornell maintains MIBC PDX models + clinical trial infrastructure' was an unverified inference. Reclassified as hypothetical offer requiring pre-outreach verification of Faltas's specific institutional resources.",
+            "general_principle": "Every researcher-specific claim now traces either to the paper's published contributions/competing interests/affiliations (verifiable) or is explicitly flagged as inference requiring verification before outreach."
+          }
+        },
+        "top_keys": [
+          "$schema_version",
+          "document_purpose",
+          "provenance",
+          "authorship_facts_from_paper",
+          "funding_facts_for_outreach_context",
+          "researcher_target_demichelis",
+          "researcher_target_kruithof_de_julio",
+          "researcher_target_faltas",
+          "verification_disclaimer",
+          "audit_corrections_2026_06_24"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/collaboration_value_proposition.json",
+          "exists": true,
+          "bytes": 25131,
+          "sha256": "bd343c4fd98b4b681a3294b8fedcbb4e07c021d2d974ce4a727ffd075c3d0b1f",
+          "mtime_iso": "2026-06-24T20:50:11+00:00"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "artifact:PROVENANCE_2026_06_24",
+      "type": "9p21_provenance_md",
+      "name": "PROVENANCE_2026-06-24.md",
+      "what_it_solves": "Structured view of the 9p21 provenance report.",
+      "how_it_solves": "Heading extract + 3000-char preview.",
+      "why_it_exists": "Anchors moat claims to the specific dated provenance document.",
+      "attributes": {
+        "byte_length": 18134,
+        "heading_count": 25,
+        "headings": [
+          {
+            "level": 1,
+            "title": "PROVENANCE MANIFEST — 9p21/Bev2026 JSON Regeneration",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "title": "File Inventory",
+            "line": 10
+          },
+          {
+            "level": 2,
+            "title": "Source Tier System",
+            "line": 23
+          },
+          {
+            "level": 2,
+            "title": "Critical Verbatim PDF Anchors (Tier 1)",
+            "line": 45
+          },
+          {
+            "level": 2,
+            "title": "Canonical Transcript Receipts (Tier 2)",
+            "line": 72
+          },
+          {
+            "level": 3,
+            "title": "Primary Discovery Endpoint (Ceralasertib × MBD4-LOF)",
+            "line": 78
+          },
+          {
+            "level": 3,
+            "title": "4 Confound Stress Tests",
+            "line": 87
+          },
+          {
+            "level": 3,
+            "title": "Adavosertib WEE1 Axis Partner (MIXED)",
+            "line": 100
+          },
+          {
+            "level": 3,
+            "title": "PARP1 Falsification Arm (Source: User Message Line 12288 / i=11560)",
+            "line": 109
+          },
+          {
+            "level": 3,
+            "title": "Pan-Cancer PARP1 × PARPi Sanity Check",
+            "line": 119
+          },
+          {
+            "level": 2,
+            "title": "WT Rule Disambiguation (Critical for Reproducibility)",
+            "line": 132
+          },
+          {
+            "level": 2,
+            "title": "Repo State Qualification (Tier 2, with temporal caveat)",
+            "line": 142
+          },
+          {
+            "level": 2,
+            "title": "Inferences Explicitly Tagged (Tier 3)",
+            "line": 155
+          },
+          {
+            "level": 2,
+            "title": "Audit Trail",
+            "line": 168
+          },
+          {
+            "level": 3,
+            "title": "Post-Generation Audits Run",
+            "line": 170
+          },
+          {
+            "level": 3,
+            "title": "Caveat Blocks",
+            "line": 178
+          },
+          {
+            "level": 3,
+            "title": "Manifest Self-Audit Correction 2026-06-24",
+            "line": 183
+          },
+          {
+            "level": 2,
+            "title": "Scoped vs Universal Consistency (Methodological Note)",
+            "line": 192
+          },
+          {
+            "level": 2,
+            "title": "File-by-File Top-Level Key Map",
+            "line": 206
+          },
+          {
+            "level": 3,
+            "title": "experimental_design.json (12 keys)",
+            "line": 208
+          },
+          {
+            "level": 3,
+            "title": "double_hit_vulnerabilities.json (10 keys)",
+            "line": 216
+          },
+          {
+            "level": 3,
+            "title": "collaboration_value_proposition.json (10 keys)",
+            "line": 226
+          },
+          {
+            "level": 3,
+            "title": "moat_comparison.json (10 keys)",
+            "line": 240
+          },
+          {
+            "level": 2,
+            "title": "Pre-Outreach Items REQUIRED for Resolution",
+            "line": 250
+          },
+          {
+            "level": 2,
+            "title": "Code Availability External Sweep (added 2026-06-24, post-step-7)",
+            "line": 267
+          }
+        ],
+        "preview": "# PROVENANCE MANIFEST — 9p21/Bev2026 JSON Regeneration\n\n**Generated:** 2026-06-24\n**Scope:** Full regeneration of 4 outreach JSONs after compaction. Every leaf claim must trace to (1) a verbatim PDF page citation, (2) a canonical transcript receipt, or (3) be explicitly tagged as inference/hypothesis.\n**Source PDF:** `s41698-026-01434-w.pdf` (uploaded by user this session, 4,747,485 bytes, 16 pages)\n**Paper:** Bevilacqua, Gasperini, Cantore et al. \"Therapeutic vulnerabilities exposed by the 9p21 loss identified through multiparametric drug screening inform rational combination strategies\" npj Precision Oncology (2026) DOI: 10.1038/s41698-026-01434-w\n\n---\n\n## File Inventory\n\n| ID | File | Size | Top-level Keys | Purpose |\n|----|------|------|-------|---------|\n| ED | `experimental_design.json` | 23,457 bytes | 12 | Full PDF-grounded Methods + Results: cell lines, library, screens, isogenic design, PDO histories |\n| DH | `double_hit_vulnerabilities.json` | 24,468 bytes | 10 | 3 families of drug-combination vulnerabilities + MBD4 stress-test + PARP1 falsification |\n| CVP | `collaboration_value_proposition.json` | 25,131 bytes | 10 | Per-researcher outreach blocks: 6 Demichelis + 4 Kruithof-de Julio + 2 Faltas = 12 deliverables total |\n| MOAT | `moat_comparison.json` | 33,172 bytes | 10 | 9 dimensions comparing CrisPRO methodology vs Bev2026, with moat_caveats block |\n\n**Total:** 4 files / 106,228 bytes\n\n---\n\n## Source Tier System\n\nEvery leaf claim in these JSONs is grounded in one of three tiers:\n\n**TIER 1 — Verbatim PDF (highest confidence)**\n- Direct quotes from the Bev2026 PDF, with page number citation\n- Examples: \"12 phenotypic features\" (Methods), \"Co-occurrence of CDKN2A/2B and MTAP deletions interests 26% of TCGA MIBC patients\" (Discussion page 12)\n- Verification method: Direct PDF read via `Read` tool 2026-06-24\n\n**TIER 2 — Canonical Transcript Receipts (verified via tool output)**\n- Numerical values from canonical_atr_wee1_rerun.json frozen 2026-04-05\n- Verified via transcript indices 991/1010 (WebFetch retrieval)\n- User-provided \"precise numbers\" message at transcript line 12288 (i=11560)\n- Examples: Δ=-0.7324529879649893, p=0.021484496737088882, n_LOF=14/n_WT=914\n\n**TIER 3 — Inference/Hypothesis (explicitly tagged)**\n- Claims that are reasonable extrapolations but not verbatim-sourced\n- All such claims include `verification_status` or `pre_outreach_required_verification` fields\n- Examples: CVP-FAL-02 Weill Cornell PDX infrastructure (flagged as hypothetical)\n\n---\n\n## Critical Verbatim PDF Anchors (Tier 1)\n\n| Claim | Verbatim Source | Used In |\n|-------|---------|---------|\n| Title: \"Therapeutic vulnerabilities exposed by the 9p21 loss...\" | PDF page 1 | ED, DH, CVP, MOAT |\n| TCGA MIBC 26% MTAP/CDKN2A/CDKN2B co-deletion | PDF page 2 (Results) AND page 12 (Discussion) | ED, DH, MOAT |\n| Robertson 2017 22% CDKN2A-alone MIBC | PDF Introduction page 2 (refs 13, 14) | DH, MOAT |\n| 2,349 compound library (349 + 958 + 629 + 343 + 70) | PDF Metho"
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/9p21_audit/PROVENANCE_2026-06-24.md",
+          "exists": true,
+          "bytes": 18203,
+          "sha256": "33ca2c9594e871fba7b307a7d2dfaf7b2d18f06c1408503aab16f342368cdd0d",
+          "mtime_iso": "2026-06-25T03:41:42+00:00"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate",
+        "moat:audit_corrections_2026_06_24"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "remediation:FLAG_REMEDIATION_MEMO.md",
+      "type": "8d_remediation_artifact",
+      "name": "FLAG_REMEDIATION_MEMO.md",
+      "what_it_solves": "8D remediation memo at /mnt/results/FLAG_REMEDIATION_MEMO.md.",
+      "how_it_solves": "Heading extract + preview.",
+      "why_it_exists": "Anchors the 2026-04-28 8D remediation (filing status, LATIFY quarantine, NCT02264678 split, PC-02 downgrade) to a concrete file.",
+      "attributes": {
+        "byte_length": 9721,
+        "heading_count": 23,
+        "headings": [
+          {
+            "level": 1,
+            "title": "FLAG Remediation Memo — Archival Grade",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "title": "Executive Summary",
+            "line": 10
+          },
+          {
+            "level": 2,
+            "title": "FLAG 1 — pathway_mechanism removed from RS promotion gate",
+            "line": 22
+          },
+          {
+            "level": 3,
+            "title": "Problem",
+            "line": 24
+          },
+          {
+            "level": 3,
+            "title": "Exact diff (commit `1e5d91c`)",
+            "line": 28
+          },
+          {
+            "level": 1,
+            "title": "BEFORE (incorrect — pathway_mech_pos included):",
+            "line": 33
+          },
+          {
+            "level": 1,
+            "title": "AFTER (correct — pathway_mech_pos removed entirely):",
+            "line": 40
+          },
+          {
+            "level": 3,
+            "title": "PMID attribution — corrected",
+            "line": 66
+          },
+          {
+            "level": 3,
+            "title": "Scientific basis for the fix",
+            "line": 81
+          },
+          {
+            "level": 3,
+            "title": "Test changes (commit `1e5d91c`)",
+            "line": 85
+          },
+          {
+            "level": 3,
+            "title": "Test results",
+            "line": 102
+          },
+          {
+            "level": 2,
+            "title": "FLAG 2 — ATR_INHIBITOR actionability = EMERGING (no change)",
+            "line": 115
+          },
+          {
+            "level": 3,
+            "title": "Claim under review",
+            "line": 117
+          },
+          {
+            "level": 3,
+            "title": "Finding",
+            "line": 121
+          },
+          {
+            "level": 2,
+            "title": "FLAG 3 — PARP surfacing audit (no change)",
+            "line": 136
+          },
+          {
+            "level": 3,
+            "title": "Claim under review",
+            "line": 138
+          },
+          {
+            "level": 3,
+            "title": "Raw grep evidence",
+            "line": 142
+          },
+          {
+            "level": 3,
+            "title": "Engine-side audit",
+            "line": 154
+          },
+          {
+            "level": 3,
+            "title": "Finding",
+            "line": 163
+          },
+          {
+            "level": 2,
+            "title": "Frontend changes (this commit)",
+            "line": 173
+          },
+          {
+            "level": 3,
+            "title": "Tier color mapping",
+            "line": 182
+          },
+          {
+            "level": 2,
+            "title": "Pre-existing issue noted (not in scope)",
+            "line": 195
+          },
+          {
+            "level": 2,
+            "title": "Files changed",
+            "line": 201
+          }
+        ],
+        "preview": "# FLAG Remediation Memo — Archival Grade\n**Date:** 2026-06-05  \n**Author:** Fahad Kiani  \n**Repo:** fjkiani/crispro-backend-v2  \n**Commit:** `1e5d91c`  \n**Reviewer posture:** FLAG 1 — implement; FLAG 2 — accept as taxonomy; FLAG 3 — accept operationally, documentation caveat noted.\n\n---\n\n## Executive Summary\n\nThree flags were raised against the CrisPRO SL engine's MBD4/ATR_WEE1 handling.\n\n| Flag | Description | Resolution | Commit |\n|------|-------------|------------|--------|\n| FLAG 1 | `pathway_mechanism` incorrectly counted as independent evidence for RS promotion | **Fixed** — removed from `has_independent_evidence` | `1e5d91c` |\n| FLAG 2 | ATR_INHIBITOR actionability = EMERGING vs HYPOTHESIS | **No change** — EMERGING accepted as product taxonomy | — |\n| FLAG 3 | PARP surfacing bypass for MBD4 outside SL tier gate | **No change** — no bypass exists; raw grep evidence below | — |\n\n---\n\n## FLAG 1 — pathway_mechanism removed from RS promotion gate\n\n### Problem\n\n`modality_fuser.py` included `pathway_mech_pos` in `has_independent_evidence`, allowing a literature-derived mechanistic inference to satisfy the RS promotion rule and elevate MBD4/ATR_WEE1 to `\"Strong candidate dependency axis\"` when RS score was high.\n\n### Exact diff (commit `1e5d91c`)\n\nThe file was committed fresh (new file in this commit), so the relevant lines in the final state are:\n\n```python\n# BEFORE (incorrect — pathway_mech_pos included):\npathway_mech_pos = (\n    cells.get(\"pathway_mechanism\")\n    and cells[\"pathway_mechanism\"].status == ModalityStatus.POSITIVE\n)\nhas_independent_evidence = crispr_pos or pharma_pos or pathway_mech_pos\n\n# AFTER (correct — pathway_mech_pos removed entirely):\nhas_independent_evidence = crispr_pos or pharma_pos\n```\n\nThe `pathway_mech_pos` local variable was removed entirely. The RS promotion block in the committed file reads:\n\n```python\nif (\n    rs_score is not None\n    and row.axis in _RS_SENSITIVE_AXES\n    and base_tier == \"Mechanistic candidate only\"\n):\n    has_independent_evidence = crispr_pos or pharma_pos\n    if rs_is_high(rs_score) and has_independent_evidence:\n        return (\n            \"Strong candidate dependency axis\",\n            \"rs_high_promote_mechanistic_to_strong_atr_pkmyt\",\n            base_detail\n            + \" RS modulation: high replication stress + independent CRISPR/pharmacologic screen evidence → promote to Strong.\",\n        )\n    base_detail += (\n        f\" RS modulation (ATR_WEE1/PKMYT1): no promotion — \"\n        f\"rs_high={rs_is_high(rs_score)}, has_independent_crispr_or_pharma={has_independent_evidence}.\"\n    )\n```\n\n### PMID attribution — corrected\n\nThe memo previously misattributed PMID 35428381 to Degasperi et al. 2022. This is incorrect.\n\n**PMID 35428381 = Chabot et al. 2022, NPJ Precision Oncology**  \nDOI: 10.1038/s41698-022-00326-z  \n**Establishes:** Cytidine analog (gemcitabine / decitabine) synthetic lethality in MBD4-LOF uveal melanoma — isogenic MBD4-KO models and patient-derived xenograft. Clinical exceptiona"
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/FLAG_REMEDIATION_MEMO.md",
+          "exists": true,
+          "bytes": 9799,
+          "sha256": "b4ed865261e35d1a8ed3e6f2cc63220b7332bdb1ead859823547aa8cd6ce7c10",
+          "mtime_iso": "2026-06-05T19:47:35+00:00"
+        }
+      ],
+      "cross_refs": [
+        "moat:audit_corrections_2026_06_24"
+      ],
+      "gaps_still_open": []
+    }
+  ],
+  "gaps_still_open_stream_level": [
+    "Bev2026 PDF itself is not in /mnt/results; verbatim quotes are trusted only as far as the moat_comparison.json record.",
+    "Some dimensions may not have a verbatim quote — flagged by empty Bev2026_approach_verbatim."
+  ],
+  "cross_stream_refs": [
+    "See stream_evidence_deep for the receipts moat governance is built on.",
+    "See stream_sl_deep for the code that PATH A formula gates."
+  ]
+}

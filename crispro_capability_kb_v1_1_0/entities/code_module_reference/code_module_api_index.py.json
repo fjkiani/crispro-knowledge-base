@@ -1,0 +1,107 @@
+{
+  "id": "code_module:api/index.py",
+  "type": "code_module_reference",
+  "name": "api/index.py",
+  "what_it_solves": "Python module 'api/index.py' referenced by the architecture / hardening audit corpus.",
+  "how_it_solves": "Extracted by regex `[/\\w._-]+\\.py(?::\\d+)?` — every mention captured with source_file + line + context window.",
+  "why_it_exists": "Enumerates the concrete code surface the architecture reports point at, so downstream consumers can walk from a claim to an actual file:line without re-reading the whole report.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 40,
+        "context": "mitted and correct in the repo. The key fix is commit `7c5026c7` which patches `api/index.py` (the actual entry point — see §3 for why this matters).\n\n---\n\n## 2. What Is NO"
+      },
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 48,
+        "context": "** for `crispro-backend-v2`. The service is running stale code from before our `api/index.py` fix.\n\n**Evidence:** `/debug/cors` returns 404 (endpoint added in commit `429e3"
+      },
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 72,
+        "context": "## 3. What the Next Developer Needs to Know\n\n### 3A. The actual entry point is `api/index.py`, NOT `main.py`\n\nThis cost ~3 hours of debugging. The Render service runs:\n```\n"
+      },
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 80,
+        "context": "m/docs` → title is `\"CrisPRO Oncology Backend v2\"`. That string only exists in `api/index.py`. `main.py` has title `\"MOAT Orchestration API\"`.\n\n**Implication:** Any backend"
+      },
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 82,
+        "context": "Implication:** Any backend change that matters for the live service must go in `api/index.py` or files it imports (`api/config.py`, `api/routers/`). Changes to `main.py` ar"
+      },
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 84,
+        "context": "elevant to production.\n\n### 3B. CORS config lives in `api/config.py` → read by `api/index.py`\n\n```python\n# api/config.py\nALLOWED_ORIGINS = [\n    o.strip()\n    for o in os.g"
+      },
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 97,
+        "context": "`), which is why CORS failed even after code fixes.\n\n**Our fix** (`7c5026c7`): `api/index.py` now has a `_PRODUCTION_ORIGINS` list that is **always merged first**, before `"
+      },
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 146,
+        "context": " for debugging, should be removed before any public launch. One-line delete in `api/index.py`.\n\n### 4F. Frontend retry logic for cold-start 503s\nThe backend hibernates on R"
+      },
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 162,
+        "context": "rd overrides it) | Deployed but overridden |\n| `7c5026c7` | **THE REAL FIX** — `api/index.py` `_PRODUCTION_ORIGINS` hardcoded, env var can only add | **NOT YET DEPLOYED** |"
+      },
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 187,
+        "context": "ild)\n\ncrispro-backend-v2.onrender.com\n  └── FastAPI (Python)\n  └── Entry point: api/index.py (NOT main.py, NOT Procfile)\n  └── startCommand in Render dashboard: uvicorn api"
+      }
+    ],
+    "reference_count": 10
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    },
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    },
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    },
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    },
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    }
+  ],
+  "cross_refs": [
+    "layer:engines",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

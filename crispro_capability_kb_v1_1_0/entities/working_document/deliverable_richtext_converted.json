@@ -1,0 +1,24 @@
+{
+  "id": "deliverable:richtext_converted",
+  "type": "working_document",
+  "name": "Rich-text converted to markdown (working doc)",
+  "what_it_solves": "Rich-text-source document converted to markdown — carries additional context (~141 KB).",
+  "how_it_solves": "richtext_converted_to_markdown.md preserves the original content for further audit.",
+  "why_it_exists": "Keeps the source of prior deliverables auditable rather than lost in a proprietary format.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/richtext_converted_to_markdown.md",
+      "exists": true,
+      "bytes": 141553,
+      "sha256": "ca62fb70cffecfe064bb5a5d019fc22d263e7ad85d9ad6bdef48fa79caaf7992",
+      "mtime_iso": "2026-06-16T23:32:32+00:00"
+    }
+  ],
+  "cross_refs": [
+    "deliverable:coin_toss_oncology_manuscript"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:brenus_and_deliverables"
+}

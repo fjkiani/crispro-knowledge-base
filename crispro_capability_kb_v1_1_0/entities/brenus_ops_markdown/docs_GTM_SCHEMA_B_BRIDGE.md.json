@@ -1,0 +1,136 @@
+{
+  "id": "docs:GTM_SCHEMA_B_BRIDGE.md",
+  "type": "brenus_ops_markdown",
+  "name": "GTM_SCHEMA_B_BRIDGE.md",
+  "what_it_solves": "Structured view of GTM_SCHEMA_B_BRIDGE.md: heading tree + 2500-char preview.",
+  "how_it_solves": "Regex heading extract + preview slice.",
+  "why_it_exists": "Ties the AACR session index / GTM bridge / faceted-filtering rules into the KB as first-class docs.",
+  "attributes": {
+    "byte_length": 9848,
+    "heading_count": 21,
+    "headings": [
+      {
+        "level": 1,
+        "title": "GTM ↔ Schema B Bridge — Gap Analysis & Fix Plan",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "What the user sees today",
+        "line": 10
+      },
+      {
+        "level": 3,
+        "title": "GTM / Tracker Intel panel (top) — empty narrative",
+        "line": 14
+      },
+      {
+        "level": 3,
+        "title": "Competitive Intel panel (below, when `source_ref_id` resolves) — rich Schema B data",
+        "line": 28
+      },
+      {
+        "level": 2,
+        "title": "Root cause (verified in code — not assumed)",
+        "line": 40
+      },
+      {
+        "level": 3,
+        "title": "1. Two separate data layers, one UI stack",
+        "line": 42
+      },
+      {
+        "level": 3,
+        "title": "2. GTM schema is CRM Lead fields only",
+        "line": 63
+      },
+      {
+        "level": 3,
+        "title": "3. No scoring bridge",
+        "line": 81
+      },
+      {
+        "level": 3,
+        "title": "4. Schema B exists in Frappe/Supabase but not on the lead record",
+        "line": 91
+      },
+      {
+        "level": 3,
+        "title": "5. Tracker ID vs canonical UID (related gap)",
+        "line": 101
+      },
+      {
+        "level": 2,
+        "title": "Data flow today vs target",
+        "line": 109
+      },
+      {
+        "level": 2,
+        "title": "Fix plan",
+        "line": 131
+      },
+      {
+        "level": 3,
+        "title": "Phase A: `synthesize_gtm_from_intel(lead_id)` pipeline",
+        "line": 133
+      },
+      {
+        "level": 4,
+        "title": "Proposed field mapping (Schema B → GTM)",
+        "line": 146
+      },
+      {
+        "level": 4,
+        "title": "Proposed scoring rules (v1 — tunable)",
+        "line": 158
+      },
+      {
+        "level": 3,
+        "title": "Phase B: Triggers — when to run synthesis",
+        "line": 172
+      },
+      {
+        "level": 3,
+        "title": "Phase C: UI improvements (after data bridge)",
+        "line": 181
+      },
+      {
+        "level": 3,
+        "title": "Phase D: Do not duplicate Schema B tables inside GTM",
+        "line": 188
+      },
+      {
+        "level": 2,
+        "title": "Backfill",
+        "line": 199
+      },
+      {
+        "level": 2,
+        "title": "Files to touch (implementation)",
+        "line": 211
+      },
+      {
+        "level": 2,
+        "title": "Acceptance criteria",
+        "line": 227
+      }
+    ],
+    "preview": "# GTM ↔ Schema B Bridge — Gap Analysis & Fix Plan\n\n> **Status:** Documented gap (not yet implemented)  \n> **Example lead:** Jen Woyach — `CRM-LEAD-2026-00393`  \n> **Canonical talk UID:** `hematological-malignancies-undruggable-targets-and-new-frontiers::woyach::2`  \n> **Related:** [INTEL_FACETED_FILTERING.md](./INTEL_FACETED_FILTERING.md), [AACR_SUPABASE_CONNECTION.md](./AACR_SUPABASE_CONNECTION.md)\n\n---\n\n## What the user sees today\n\nOn the **GTM Intel** tab for Jen Woyach:\n\n### GTM / Tracker Intel panel (top) — empty narrative\n\n| Field | Value shown |\n|-------|-------------|\n| Lead Score | `0.00` |\n| Tier | `Tier 3` |\n| Priority Rank | `0` |\n| Source Reference ID | `hematological-malignancies-undruggable-targets-and-new-frontiers::woyach::2` |\n| AACR 2026 Topic | *(empty — placeholder)* |\n| Current Focus | *(empty)* |\n| Pain Points | *(empty)* |\n| CrisPRO Fit | *(empty)* |\n| Fit Rationale | *(empty)* |\n\n### Competitive Intel panel (below, when `source_ref_id` resolves) — rich Schema B data\n\n**Why they are beatable → Vulnerabilities** (example row):\n\n| Failure type | Evidence strength | Failing compound / target | Mechanistic blindspot | Ghost-responder admission |\n|--------------|-------------------|---------------------------|----------------------|---------------------------|\n| `primary_resistance` | `explicit_admission` | Covalent BTK inhibitors (ibrutinib, acalabrutinib, zanubrutinib) | Reliance on C481 cysteine binding; mutations at C481S, T474I, L528W prevent irreversible covalent attachment | some patients achieve long PFS but eventually progress due to mutations |\n\nPlus: 5 CrisPRO opportunities, moat weaknesses, trial risks, competitors cited, watchlist signals.\n\n---\n\n## Root cause (verified in code — not assumed)\n\n### 1. Two separate data layers, one UI stack\n\n`TrackerIntel.vue` renders **three independent panels** stacked vertically:\n\n```vue\n<!-- Panel 1: CRM Lead doc fields only -->\n<IntelPanel :schema=\"gtmSchema\" :record=\"doc\" />\n\n<!-- Panel 2: Schema B — separate API call -->\n<IntelPanel v-if=\"intel\" :schema=\"aacrIntelSchema\" :record=\"intel\" />\n\n<!-- Panel 3: Schema A — separate API call -->\n<IntelPanel v-if=\"talk\" :schema=\"aacr2026Schema\" :record=\"talk\" />\n```\n\nSource: `crm-deployment/frontend/src/components/TrackerIntel.vue`\n\n- **GTM panel** reads `gtmSchema` fields directly off the CRM Lead `doc`.\n- **Schema B panel** loads via `get_aacr_intel({ talk_id: doc.source_ref_id })`.\n- There is **no code path** that writes Schema B content into G"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/GTM_SCHEMA_B_BRIDGE.md",
+      "exists": true,
+      "bytes": 9902,
+      "sha256": "8248a6f0f2b0301cc0d031efc9280e61aeb98509233d0355d483818790494693",
+      "mtime_iso": "2026-07-02T15:29:52+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:aacr_tracker",
+    "module:brenus_diligence"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

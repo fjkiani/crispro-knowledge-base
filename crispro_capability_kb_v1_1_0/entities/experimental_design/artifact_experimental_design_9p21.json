@@ -1,0 +1,40 @@
+{
+  "id": "artifact:experimental_design_9p21",
+  "type": "experimental_design",
+  "name": "9p21 experimental design",
+  "what_it_solves": "PDF-grounded experimental design covering the 9p21 vulnerability axis for the Brenus collaboration.",
+  "how_it_solves": "experimental_design.json captures each experimental arm, endpoints, sample sizes, and rationale.",
+  "why_it_exists": "Turns 9p21 literature into an actionable pilot: what wet-lab or trial arm would move the axis from Mechanistic to Strong?",
+  "attributes": {
+    "top_keys": [
+      "$schema_version",
+      "document_purpose",
+      "provenance",
+      "study_title_verbatim",
+      "study_design_overview",
+      "cell_models",
+      "primary_drug_screen",
+      "validation_experiments",
+      "combination_experiments",
+      "mechanistic_readouts",
+      "translational_validation",
+      "what_paper_does_NOT_quantitatively_report"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/experimental_design.json",
+      "exists": true,
+      "bytes": 23457,
+      "sha256": "f4648d65cdca27146d457a3fd780381976f34ca5f0fd013945e1f6b11f7ea008",
+      "mtime_iso": "2026-06-24T20:41:23+00:00"
+    }
+  ],
+  "cross_refs": [
+    "moat:aggregate",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:moat_and_governance"
+}

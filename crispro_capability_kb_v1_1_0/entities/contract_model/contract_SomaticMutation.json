@@ -1,0 +1,34 @@
+{
+  "id": "contract:SomaticMutation",
+  "type": "contract_model",
+  "name": "SomaticMutation",
+  "what_it_solves": "Layer-0 Pydantic/dataclass contract carried by every engine boundary that references SomaticMutation.",
+  "how_it_solves": "Fields (canonical set): ['gene', 'hgvs_p', 'consequence', 'allele_frequency', 'zygosity']. See CRISPRO_SL_PHD_ROADMAP.txt Ch 3.2 for the exact schema.",
+  "why_it_exists": "Typed representation prevents an engine from silently accepting free-text mutation notes.",
+  "attributes": {
+    "fields": [
+      "gene",
+      "hgvs_p",
+      "consequence",
+      "allele_frequency",
+      "zygosity"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "Ch 3.2 — Contract Models"
+    }
+  ],
+  "cross_refs": [
+    "layer:contracts",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:synthetic_lethality"
+}

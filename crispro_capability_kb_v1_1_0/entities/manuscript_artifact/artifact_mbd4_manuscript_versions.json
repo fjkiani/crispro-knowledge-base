@@ -1,0 +1,70 @@
+{
+  "id": "artifact:mbd4_manuscript_versions",
+  "type": "manuscript_artifact",
+  "name": "MBD4/ATR manuscript versions (v2 → v4)",
+  "what_it_solves": "Version chain of the MBD4/ATR manuscript, with paired diff files.",
+  "how_it_solves": "manuscript_v2 → v3 → v4 (latest); manuscript_diff_v1 and _v2 capture the reasoning behind each revision.",
+  "why_it_exists": "Living document tracking how the tier claim evolved as evidence accumulated (or failed to).",
+  "attributes": {
+    "latest": "manuscript_v4.md",
+    "version_chain": [
+      "manuscript_diff_v1.md",
+      "manuscript_diff_v2.md",
+      "manuscript_v2.md",
+      "manuscript_v2_plain.md",
+      "manuscript_v3.md",
+      "manuscript_v4.md"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/manuscript_diff_v1.md",
+      "exists": true,
+      "bytes": 12463,
+      "sha256": "928b305949bbe7fd3a5f8012627e0469b5384c45e73c04f0287d41a75a2f6056",
+      "mtime_iso": "2026-04-27T06:07:12+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/manuscript_diff_v2.md",
+      "exists": true,
+      "bytes": 6683,
+      "sha256": "cbc891aa5b1d283dd4a39d9a150cfb6b2940fe9a5c340c2b7c0f5b4ff68be3b3",
+      "mtime_iso": "2026-04-27T06:44:04+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/manuscript_v2.md",
+      "exists": true,
+      "bytes": 33167,
+      "sha256": "77d21d05bfe5a901b6a2de0b16262801a4301b19d98bc98ad14b2d266011000e",
+      "mtime_iso": "2026-04-27T06:10:55+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/manuscript_v2_plain.md",
+      "exists": true,
+      "bytes": 36863,
+      "sha256": "15db7957bc399b2eed5c9c32c39fa31556e563c21f66f24c6dd76ec45381784e",
+      "mtime_iso": "2026-05-20T03:28:35+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/manuscript_v3.md",
+      "exists": true,
+      "bytes": 33555,
+      "sha256": "3382a71a9d7d48c921163cd7056afb23aecdfc7ca5fa4f425583d8697da4bf82",
+      "mtime_iso": "2026-04-27T06:41:11+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/manuscript_v4.md",
+      "exists": true,
+      "bytes": 34247,
+      "sha256": "6d6ba103ddea1422211fcaad4515ddb7f3a793ee691c0112b334c9eb467e672b",
+      "mtime_iso": "2026-05-07T05:00:37+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2",
+    "evidence:patient_ak_case"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:evidence_and_receipts"
+}

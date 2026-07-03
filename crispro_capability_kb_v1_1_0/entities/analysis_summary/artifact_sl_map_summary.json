@@ -1,0 +1,24 @@
+{
+  "id": "artifact:sl_map_summary",
+  "type": "analysis_summary",
+  "name": "SL map summary",
+  "what_it_solves": "Human-readable summary of the SL vulnerability→countermeasure map.",
+  "how_it_solves": "sl_map_summary.md interprets sl_countermeasure_map.csv for stakeholders who won't read the CSV.",
+  "why_it_exists": "Bridge from the machine-readable map to the narrative documents (manuscripts, pitch deck).",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/sl_map_summary.md",
+      "exists": true,
+      "bytes": 13041,
+      "sha256": "d5bccd158dc72a7908f70fc6885cff8a86327711f1807091f358764b6fc56798",
+      "mtime_iso": "2026-05-12T17:49:08+00:00"
+    }
+  ],
+  "cross_refs": [
+    "artifact:sl_countermeasure_map"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:operations_and_access"
+}

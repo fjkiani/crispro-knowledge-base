@@ -1,0 +1,53 @@
+{
+  "id": "component:frontend_canonicalization",
+  "type": "frontend_component",
+  "name": "SL frontend canonicalization + Ayesha page merge",
+  "what_it_solves": "Merges duplicated SL/Ayesha pages into a single canonical view backed by typed engine output; removes call-path duplicates.",
+  "how_it_solves": "Enumerated in SL_FRONTEND_CANONICALIZATION.md, AYESHA_PAGE_MERGE_REPORT.md, CALL_PATH_DEDUP_REPORT.md, CONFIG_NORMALIZATION_REPORT.md, HYGIENE_DELETE_PROOF.md — each report lists deleted files with reasons.",
+  "why_it_exists": "Prior clinician UI had drifted copies of the SL flow; a single canonical page consumes the Ayesha bundle contract directly.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/SL_FRONTEND_CANONICALIZATION.md",
+      "exists": true,
+      "bytes": 2195,
+      "sha256": "24c2c4ddaaa99557ee18e4ded3803d4dff35bf20fb16480fcefbe3658230a098",
+      "mtime_iso": "2026-05-05T07:04:43+00:00"
+    },
+    {
+      "path": "/mnt/results/AYESHA_PAGE_MERGE_REPORT.md",
+      "exists": true,
+      "bytes": 3844,
+      "sha256": "548e39ad9cda1c24fc5de8d047255a9da4096d7436ba78a445831a786bfc448f",
+      "mtime_iso": "2026-05-05T07:04:41+00:00"
+    },
+    {
+      "path": "/mnt/results/CALL_PATH_DEDUP_REPORT.md",
+      "exists": true,
+      "bytes": 1938,
+      "sha256": "9c11c6709af9e07b862809842b719640b034a049eddf27d7df718467e67219f2",
+      "mtime_iso": "2026-05-05T07:04:42+00:00"
+    },
+    {
+      "path": "/mnt/results/CONFIG_NORMALIZATION_REPORT.md",
+      "exists": true,
+      "bytes": 3342,
+      "sha256": "d068e515e4d22a53cc02f440946021fc7fdea1cc9f76914d06f42f4e1a0584f7",
+      "mtime_iso": "2026-05-05T07:04:43+00:00"
+    },
+    {
+      "path": "/mnt/results/HYGIENE_DELETE_PROOF.md",
+      "exists": true,
+      "bytes": 2502,
+      "sha256": "ed17f55f8fa1bcbb522f6aacbb089c4562339a994ae85413d20b41e162e3ad11",
+      "mtime_iso": "2026-05-05T07:04:40+00:00"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-front-end",
+    "layer:output"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:architecture"
+}

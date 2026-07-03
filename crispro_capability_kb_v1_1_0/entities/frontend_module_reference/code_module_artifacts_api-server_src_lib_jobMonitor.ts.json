@@ -1,0 +1,46 @@
+{
+  "id": "code_module:artifacts/api-server/src/lib/jobMonitor.ts",
+  "type": "frontend_module_reference",
+  "name": "artifacts/api-server/src/lib/jobMonitor.ts",
+  "what_it_solves": "Frontend module 'artifacts/api-server/src/lib/jobMonitor.ts' referenced by the architecture / frontend audit corpus.",
+  "how_it_solves": "Extracted by regex for .ts/.tsx/.js/.jsx paths.",
+  "why_it_exists": "Enumerates the concrete frontend surface (crispro-front-end) so any SL/Ayesha UI claim can be traced to a real file.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+        "line": 140,
+        "context": "d?, tenantId?)` → paginated run list\n\n### 1.7 Job Monitor (alpha, in-process)\n\n`artifacts/api-server/src/lib/jobMonitor.ts` — polls Kairos every 30s for active training jobs.\n**Known limitation:** in-pr"
+      },
+      {
+        "source_file": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+        "line": 341,
+        "context": "irosClient.ts` | Model Forge | Typed Kairos client — extend, don't replace |\n| `artifacts/api-server/src/lib/jobMonitor.ts` | Model Forge | Alpha polling — replace with workflowEngine, but coordinate |\n"
+      }
+    ],
+    "reference_count": 2
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+      "exists": true,
+      "bytes": 24575,
+      "sha256": "8c06c5f6092feaaf9680b60bd45bc6797d140fb43132233f3a5d03e21a621aa0",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+      "exists": true,
+      "bytes": 24575,
+      "sha256": "8c06c5f6092feaaf9680b60bd45bc6797d140fb43132233f3a5d03e21a621aa0",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-front-end",
+    "component:frontend_canonicalization"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

@@ -1,0 +1,200 @@
+{
+  "id": "sl_countermeasure_map:sl_countermeasure_map.csv",
+  "type": "sl_countermeasure_map",
+  "name": "sl_countermeasure_map.csv",
+  "what_it_solves": "sl_countermeasure_map artifact sl_countermeasure_map.csv",
+  "how_it_solves": "Auto-parsed by extension.",
+  "why_it_exists": "Every access pack / SL map / gap-lineage report is a durable operational asset — must be addressable.",
+  "attributes": {
+    "header": [
+      "escape_marker",
+      "sl_gene",
+      "delta_dependency",
+      "pval_mannwhitney",
+      "fdr_bh",
+      "n_q75_lines",
+      "n_q25_lines",
+      "drug_annotation_api",
+      "upstream_phase1_status",
+      "lineage_confound_flag",
+      "drug_annotation_note"
+    ],
+    "row_count": 758,
+    "sample_rows": [
+      [
+        "ABCB1",
+        "HNF1B",
+        "-0.2057417913348126",
+        "6.769071290275355e-06",
+        "0.0131126613557193",
+        "276",
+        "286",
+        "no_known_drug",
+        "HYPOTHESIS_TARGET_PENDING_PHASE1",
+        "LOW_CONCERN: Tissue-specific expression (30% lines near-zero). Q25 threshold=0.070 (near-zero). Sparse hits (n=7) may reflect tissue-specific biology.",
+        "API_FAILED: DGIdb rate-limited; OncoKB 401. Manual annotation required."
+      ],
+      [
+        "ABCB1",
+        "ITGAV",
+        "-0.154486571834177",
+        "6.044167606268123e-07",
+        "0.0027071826708474",
+        "276",
+        "286",
+        "no_known_drug",
+        "HYPOTHESIS_TARGET_PENDING_PHASE1",
+        "LOW_CONCERN: Tissue-specific expression (30% lines near-zero). Q25 threshold=0.070 (near-zero). Sparse hits (n=7) may reflect tissue-specific biology.",
+        "API_FAILED: DGIdb rate-limited; OncoKB 401 (API key required). Known inhibitors exist for ITGAV (cilengitide), PTK2 (defactinib), GPX4 (RSL3/ML162), EP300 (A-485), VHL (VHL ligands), BCL2 (venetoclax). Consult DGIdb/OncoKB manually."
+      ],
+      [
+        "ABCB1",
+        "PTK2",
+        "-0.1502176419969151",
+        "4.806689602034259e-06",
+        "0.0117392562444729",
+        "276",
+        "286",
+        "no_known_drug",
+        "HYPOTHESIS_TARGET_PENDING_PHASE1",
+        "LOW_CONCERN: Tissue-specific expression (30% lines near-zero). Q25 threshold=0.070 (near-zero). Sparse hits (n=7) may reflect tissue-specific biology.",
+        "API_FAILED: DGIdb rate-limited; OncoKB 401 (API key required). Known inhibitors exist for ITGAV (cilengitide), PTK2 (defactinib), GPX4 (RSL3/ML162), EP300 (A-485), VHL (VHL ligands), BCL2 (venetoclax). Consult DGIdb/OncoKB manually."
+      ]
+    ],
+    "column_ranges": {
+      "escape_marker": {
+        "categorical": true,
+        "top_values": [
+          [
+            "BCL2",
+            222
+          ],
+          [
+            "VEGFC",
+            206
+          ],
+          [
+            "HIF1A",
+            157
+          ]
+        ],
+        "unique_count": 6
+      },
+      "sl_gene": {
+        "categorical": true,
+        "top_values": [
+          [
+            "ITGAV",
+            4
+          ],
+          [
+            "PTK2",
+            4
+          ],
+          [
+            "NHLRC2",
+            4
+          ]
+        ],
+        "unique_count": 513
+      },
+      "delta_dependency": {
+        "n_numeric": 758,
+        "min": -0.741148175256586,
+        "max": -0.1000144141563262,
+        "mean": -0.15320459826404473
+      },
+      "pval_mannwhitney": {
+        "n_numeric": 758,
+        "min": 6.938757343534002e-54,
+        "max": 0.0205087783038657,
+        "mean": 0.0004442500827860201
+      },
+      "fdr_bh": {
+        "n_numeric": 758,
+        "min": 1.2431477656675516e-49,
+        "max": 0.0938367109339942,
+        "mean": 0.004068787854427168
+      },
+      "n_q75_lines": {
+        "n_numeric": 758,
+        "min": 276.0,
+        "max": 278.0,
+        "mean": 276.08179419525067
+      },
+      "n_q25_lines": {
+        "n_numeric": 758,
+        "min": 276.0,
+        "max": 324.0,
+        "mean": 282.7598944591029
+      },
+      "drug_annotation_api": {
+        "categorical": true,
+        "top_values": [
+          [
+            "no_known_drug",
+            758
+          ]
+        ],
+        "unique_count": 1
+      },
+      "upstream_phase1_status": {
+        "categorical": true,
+        "top_values": [
+          [
+            "HYPOTHESIS_TARGET_PENDING_PHASE1",
+            758
+          ]
+        ],
+        "unique_count": 1
+      },
+      "lineage_confound_flag": {
+        "categorical": true,
+        "top_values": [
+          [
+            "SEVERE_LINEAGE_CONFOUND: Q75 group is 37% lymphoid/myeloid vs solid-tumor-dominated Q25. Hits likely reflect hematologic lineage essentialities, not BCL2-driven resistance biology.",
+            222
+          ],
+          [
+            "LOW_CONCERN: No major lineage confound identified. High hit count (n=206) warrants lineage audit if used in downstream analysis.",
+            206
+          ],
+          [
+            "MODERATE_EXPRESSION_CAVEAT: HIF1A IQR=1.64 log2TPM+1; 84.7% of lines express >5.0. Q75 vs Q25 split (7.03 vs 5.39) is narrow. HIF1A activity is post-translationally regulated by O2 tension absent in standard culture.",
+            157
+          ]
+        ],
+        "unique_count": 6
+      },
+      "drug_annotation_note": {
+        "categorical": true,
+        "top_values": [
+          [
+            "API_FAILED: DGIdb rate-limited; OncoKB 401. Manual annotation required.",
+            740
+          ],
+          [
+            "API_FAILED: DGIdb rate-limited; OncoKB 401 (API key required). Known inhibitors exist for ITGAV (cilengitide), PTK2 (defactinib), GPX4 (RSL3/ML162), EP300 (A-485), VHL (VHL ligands), BCL2 (venetoclax). Consult DGIdb/OncoKB manually.",
+            18
+          ]
+        ],
+        "unique_count": 2
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/sl_countermeasure_map.csv",
+      "exists": true,
+      "bytes": 280652,
+      "sha256": "e8b810f6990a166414e7a871387cc90d6cfa7df2a4b4b68e319f8316131eecda",
+      "mtime_iso": "2026-05-12T17:45:54+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:sl_maps"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

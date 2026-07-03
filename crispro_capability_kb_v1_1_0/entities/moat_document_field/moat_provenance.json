@@ -1,0 +1,57 @@
+{
+  "id": "moat:provenance",
+  "type": "moat_document_field",
+  "name": "moat_comparison — provenance",
+  "what_it_solves": "Provenance block of moat_comparison.json: source PDFs, transcript files, verification method.",
+  "how_it_solves": "Extracted verbatim.",
+  "why_it_exists": "Every moat claim must trace to a source PDF page; this block is the anchor point.",
+  "attributes": {
+    "raw": {
+      "audit_date_utc": "2026-06-24",
+      "primary_source": {
+        "paper": "Bevilacqua R, Gasperini P, Cantore T, et al. Therapeutic vulnerabilities exposed by the 9p21 loss identified through multiparametric drug screening inform rational combination strategies.",
+        "journal": "npj Precision Oncology",
+        "year": 2026,
+        "volume": "10",
+        "article_no": "232",
+        "doi": "10.1038/s41698-026-01434-w",
+        "received": "2025-09-01",
+        "accepted": "2026-04-07",
+        "published": "2026-04-18",
+        "retrieval_method": "Full PDF read (16 pages) via Read tool on /mnt/user-uploads/s41698-026-01434-w.pdf, 2026-06-24",
+        "data_deposition": "Zenodo 10.5281/zenodo.18957959",
+        "code_availability": "Not publicly available; available on reasonable request from corresponding authors per paper Code Availability statement",
+        "license": "CC-BY 4.0"
+      },
+      "verification_status": "Every leaf below is traceable to a specific page/figure/table of the source PDF or to a verifiable transcript receipt. No claim retained from prior generated JSONs unless re-verified.",
+      "audit_corrections_applied": [
+        "MTAP-loss prevalence in TCGA MIBC = 26% (paper text, Discussion §1, cBioPortal computation by the authors). 22% in PLAN.md was the older Robertson 2017 CDKN2A-alone figure for MIBC; both retained, distinguished.",
+        "Phenotypic features = 12 (verbatim, Results §Phenotype-based hit selection: 'For each object (i.e., cell or nucleus), 12 phenotypic features...'). PLAN.md had hedged this to 'feature count not in retrieved supplementary'; PDF resolves it definitively to 12.",
+        "SynergyFinder version = 3.1 (verbatim, Fig 3 legend). Reference 21 (Ianevski 2022) is the SynergyFinder 3.0 paper; the authors used the 3.1 release derived from the same software lineage.",
+        "ATR inhibitor name verbatim = VX970 (no hyphen, no 'berzosertib'). Paper uses VX970 throughout.",
+        "Compound library composition: 2,349 total = 349 (Selleck Anti-cancer) + 958 (MicroSource Spectrum known drugs in human therapy) + 629 (natural products) + 343 (biological activity at experimental level) + 70 (approved for agricultural use only). Numerical sum = 2,349.",
+        "PDO clinical context: BlCa197 = 54-year-old female, high-grade MIBC, mixed urothelial+sarcomatoid, neoadjuvant cisplatin/gemcitabine + radical cystectomy. TN-001 = 53-year-old male, high-grade MIBC, mixed urothelial+sarcomatoid, MVAC combination + radical cystectomy.",
+        "Ethical approvals: KEK 06/03 and 2017-02295.",
+        "AZD7762 and MK-1775 z-scores from primary screen now stated verbatim: AZD7762 WT z=-3.60 / 3KO z=-5.06; MK-1775 WT z=-1.12 / 3KO z=-2.06.",
+        "MRTX1719 axis bug in repo: pharmacologic_analyzer.py:66 maps 'mrtx1719' -> 'wrn'. Correct axis per Bev2026 §Methods +  Engstrom 2023 ref 7 = PRMT5 (MTA-cooperative). Flag in DH JSON; no code fix in this task per user lock #4."
+      ]
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00",
+      "span_extracted": "provenance"
+    }
+  ],
+  "cross_refs": [
+    "moat:aggregate",
+    "external:bev2026_pdf"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:moat_and_governance_deep"
+}

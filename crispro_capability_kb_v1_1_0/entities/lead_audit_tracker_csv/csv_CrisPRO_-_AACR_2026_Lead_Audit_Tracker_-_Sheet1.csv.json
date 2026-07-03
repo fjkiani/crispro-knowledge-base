@@ -1,0 +1,427 @@
+{
+  "id": "csv:CrisPRO - AACR 2026 Lead Audit Tracker - Sheet1.csv",
+  "type": "lead_audit_tracker_csv",
+  "name": "CrisPRO - AACR 2026 Lead Audit Tracker - Sheet1.csv",
+  "what_it_solves": "Parsed contents of CrisPRO - AACR 2026 Lead Audit Tracker - Sheet1.csv: header + row count + column ranges + 5 sample rows.",
+  "how_it_solves": "csv.reader; per-column numeric range or categorical top-3.",
+  "why_it_exists": "Depth pass: the tracker is the ground truth for outreach status; carrying its shape + samples makes it queryable without re-parsing.",
+  "attributes": {
+    "header": [
+      "#",
+      "Lead Name",
+      "Title",
+      "Company/Institution",
+      "Location",
+      "Score (/10)",
+      "Priority",
+      "LinkedIn",
+      "Email",
+      "AACR 2026 Topic",
+      "Current Focus",
+      "Pain Points",
+      "CrisPRO Fit",
+      "Fit Rationale",
+      "Draft Email Status",
+      "Next Action",
+      "Phone",
+      "Mailing Address"
+    ],
+    "row_count": 51,
+    "sample_rows": [
+      [
+        "1",
+        "Kevan M. Shokat, PhD",
+        "Prof. of Cellular & Molecular Pharmacology",
+        "UCSF / Genentech",
+        "San Francisco, CA",
+        "9.5",
+        "1",
+        "linkedin.com/in/kevan-shokat",
+        "Kevan.Shokat@ucsf.edu",
+        "KRAS degraders in humans; RAS(ON) inhibitors; ED07 session chair",
+        "KRAS resistance mechanisms; degrader target ID; combination strategy",
+        "KRAS resistance prediction; degrader target identification; combo strategy; patient stratification",
+        "SL kinase targeting; resistance prediction; degrader target ID",
+        "King of drugging undruggable; CrisPRO does same computationally for SL targets",
+        "READY",
+        "Send email + LinkedIn connect within 48hrs",
+        "415-514-0472",
+        "600 16th Street, Genentech Hall N512D, San Francisco, CA 94158"
+      ],
+      [
+        "2",
+        "Peter J. O'Dwyer, MBBCh, MD",
+        "Group Co-Chair; Prof. Medicine",
+        "ECOG-ACRIN / UPenn Abramson Cancer Center",
+        "Philadelphia, PA",
+        "9",
+        "2",
+        "linkedin.com/in/peter-odwyer-123456",
+        "peter.odwyer@uphs.upenn.edu",
+        "NCI-MATCH precision medicine; ComboMATCH; RWE clinical trial design",
+        "Precision oncology; GI cancers (pancreatic/colorectal); NCI-MATCH/EAY131; ComboMATCH",
+        "Computational combo prediction; SL for KRAS-mutant PDAC; precision medicine trial enrichment",
+        "Textbook precision oncology leader; ComboMATCH needs SL/combo prediction; CrisPRO fills his biggest gap",
+        "READY",
+        "Send email within 48hrs; reference NCI-MATCH lessons and ComboMATCH",
+        "",
+        "617-632-2080",
+        "450 Brookline Ave, HIM 243, Boston, MA 02215"
+      ],
+      [
+        "3",
+        "Rachel S. Perkin, PhD",
+        "Asst Prof, Dept of OBGYN",
+        "University of Tennessee",
+        "Knoxville, TN",
+        "7.5",
+        "3",
+        "—",
+        "rstarker@uthsc.edu",
+        "Ovarian cancer stem cells (CSCs); isoform-level vulnerabilities",
+        "Ovarian CSC biology; patient-derived models; therapy resistance",
+        "No specific CSC target after 20+ years; therapy resistance mechanisms",
+        "SL prediction for CSC-selective targets; isoform-level SL mapping",
+        "CSCs drive resistance; CrisPRO predicts SL targets that kill CSCs selectively",
+        "READY",
+        "Email + LinkedIn connect",
+        "901-448-5500",
+        "University of Tennessee Health Science Center, Memphis, TN 38163"
+      ],
+      [
+        "4",
+        "Anne-Sophie Casagrande, PhD",
+        "Head of DDR Drug Discovery",
+        "Evotec",
+        "Hamburg, Germany",
+        "7.5",
+        "4",
+        "—",
+        "anne-sophie.casagrande@evotec.com",
+        "DDR drug discovery poster; integrated DDR platform",
+        "DDR target validation; biochemical to in vivo pipeline",
+        "DDR target prioritization; pipeline expansion; computational tools gap",
+        "Genome-wide SL prediction for DDR targets",
+        "DDR platform head; needs computational SL to complement wet lab",
+        "READY",
+        "Email referencing Evotec DDR poster",
+        "-586",
+        "Campus Curie, 195 route d'Espagne, 31036 Toulouse, France"
+      ],
+      [
+        "5",
+        "Francisco Cruzalegui, PhD",
+        "SVP In Vitro Biology",
+        "Evotec",
+        "Hamburg, Germany",
+        "8",
+        "5",
+        "—",
+        "francisco.cruzalegui@evotec.com",
+        "DDR platform; integrated toolkit from biochemical to in vivo models",
+        "Full DDR pipeline from computational to experimental validation",
+        "Computational SL prediction gap; target prioritization at scale",
+        "SL prediction for DDR targets; in vitro validation pipeline integration",
+        "SVP level decision-maker; open to partnerships; Evotec competitor concern",
+        "READY",
+        "Email: frame as partnership not competition",
+        "-586",
+        "Campus Curie, 195 route d'Espagne, 31036 Toulouse, France"
+      ]
+    ],
+    "column_ranges": {
+      "#": {
+        "n_numeric": 11,
+        "min": 1.0,
+        "max": 12.0,
+        "mean": 6.090909090909091
+      },
+      "Lead Name": {
+        "categorical": true,
+        "top_values": [
+          [
+            "—",
+            5
+          ],
+          [
+            "",
+            4
+          ],
+          [
+            "Kevan M. Shokat, PhD",
+            1
+          ]
+        ],
+        "unique_count": 44
+      },
+      "Title": {
+        "categorical": true,
+        "top_values": [
+          [
+            "CMO",
+            11
+          ],
+          [
+            "—",
+            5
+          ],
+          [
+            "GP",
+            5
+          ]
+        ],
+        "unique_count": 30
+      },
+      "Company/Institution": {
+        "categorical": true,
+        "top_values": [
+          [
+            "",
+            4
+          ],
+          [
+            "AstraZeneca",
+            3
+          ],
+          [
+            "Additional B-Tier",
+            3
+          ]
+        ],
+        "unique_count": 41
+      },
+      "Location": {
+        "categorical": true,
+        "top_values": [
+          [
+            "Boston, MA",
+            26
+          ],
+          [
+            "San Francisco, CA",
+            4
+          ],
+          [
+            "",
+            4
+          ]
+        ],
+        "unique_count": 15
+      },
+      "Score (/10)": {
+        "n_numeric": 47,
+        "min": 6.5,
+        "max": 9.5,
+        "mean": 7.819148936170213
+      },
+      "Priority": {
+        "n_numeric": 47,
+        "min": 1.0,
+        "max": 48.0,
+        "mean": 24.78723404255319
+      },
+      "LinkedIn": {
+        "categorical": true,
+        "top_values": [
+          [
+            "—",
+            18
+          ],
+          [
+            "",
+            4
+          ],
+          [
+            "linkedin.com/in/kevan-shokat",
+            1
+          ]
+        ],
+        "unique_count": 31
+      },
+      "Email": {
+        "categorical": true,
+        "top_values": [
+          [
+            "",
+            11
+          ],
+          [
+            "Kevan.Shokat@ucsf.edu",
+            1
+          ],
+          [
+            "peter.odwyer@uphs.upenn.edu",
+            1
+          ]
+        ],
+        "unique_count": 41
+      },
+      "AACR 2026 Topic": {
+        "categorical": true,
+        "top_values": [
+          [
+            "",
+            29
+          ],
+          [
+            "CMO Summit 360 S-Tier",
+            11
+          ],
+          [
+            "KRAS degraders in humans; RAS(ON) inhibitors; ED07 session chair",
+            1
+          ]
+        ],
+        "unique_count": 13
+      },
+      "Current Focus": {
+        "categorical": true,
+        "top_values": [
+          [
+            "",
+            29
+          ],
+          [
+            "KRAS resistance mechanisms; degrader target ID; combination strategy",
+            1
+          ],
+          [
+            "Precision oncology; GI cancers (pancreatic/colorectal); NCI-MATCH/EAY131; ComboMATCH",
+            1
+          ]
+        ],
+        "unique_count": 23
+      },
+      "Pain Points": {
+        "categorical": true,
+        "top_values": [
+          [
+            "",
+            29
+          ],
+          [
+            "KRAS resistance prediction; degrader target identification; combo strategy; patient stratification",
+            1
+          ],
+          [
+            "Computational combo prediction; SL for KRAS-mutant PDAC; precision medicine trial enrichment",
+            1
+          ]
+        ],
+        "unique_count": 23
+      },
+      "CrisPRO Fit": {
+        "categorical": true,
+        "top_values": [
+          [
+            "",
+            29
+          ],
+          [
+            "SL kinase targeting; resistance prediction; degrader target ID",
+            1
+          ],
+          [
+            "Textbook precision oncology leader; ComboMATCH needs SL/combo prediction; CrisPRO fills his biggest gap",
+            1
+          ]
+        ],
+        "unique_count": 23
+      },
+      "Fit Rationale": {
+        "categorical": true,
+        "top_values": [
+          [
+            "",
+            29
+          ],
+          [
+            "CMO Summit 360; S-Tier; Boston conference",
+            11
+          ],
+          [
+            "King of drugging undruggable; CrisPRO does same computationally for SL targets",
+            1
+          ]
+        ],
+        "unique_count": 13
+      },
+      "Draft Email Status": {
+        "categorical": true,
+        "top_values": [
+          [
+            "",
+            40
+          ],
+          [
+            "READY",
+            10
+          ],
+          [
+            "Send email within 48hrs; reference NCI-MATCH lessons and ComboMATCH",
+            1
+          ]
+        ],
+        "unique_count": 3
+      },
+      "Next Action": {
+        "categorical": true,
+        "top_values": [
+          [
+            "",
+            41
+          ],
+          [
+            "Send email + LinkedIn connect within 48hrs",
+            1
+          ],
+          [
+            "Email + LinkedIn connect",
+            1
+          ]
+        ],
+        "unique_count": 11
+      },
+      "Phone": {
+        "n_numeric": 5,
+        "min": -6320.0,
+        "max": -586.0,
+        "mean": -3859.6
+      },
+      "Mailing Address": {
+        "categorical": true,
+        "top_values": [
+          [
+            "",
+            11
+          ],
+          [
+            "450 Brookline Ave, HIM 243, Boston, MA 02215",
+            2
+          ],
+          [
+            "Campus Curie, 195 route d'Espagne, 31036 Toulouse, France",
+            2
+          ]
+        ],
+        "unique_count": 36
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CrisPRO - AACR 2026 Lead Audit Tracker - Sheet1.csv",
+      "exists": true,
+      "bytes": 15556,
+      "sha256": "7693ac7623086e428428fcea40aa1ba8744cf5b8fce980f0f50ff9da8fe2d15c",
+      "mtime_iso": "2026-05-09T05:07:59+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:aacr_tracker",
+    "module:brenus_diligence"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

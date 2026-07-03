@@ -1,0 +1,41 @@
+{
+  "id": "deliverable:aacr2026_lead_audit_tracker",
+  "type": "lead_tracker",
+  "name": "AACR 2026 Lead Audit Tracker (50 leads, 18 columns)",
+  "what_it_solves": "Structured tracker of 50 AACR 2026 leads with 18 audit columns.",
+  "how_it_solves": "Sheet1 CSV holds the working data; the .xlsx duplicates the sheet for legacy tooling.",
+  "why_it_exists": "Turns AACR outreach into a testable pipeline (per-lead audit status + assignment) rather than an unstructured funnel.",
+  "attributes": {
+    "lead_count_reported": 50,
+    "column_count_reported": 18
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CrisPRO - AACR 2026 Lead Audit Tracker - Sheet1.csv",
+      "exists": true,
+      "bytes": 15556,
+      "sha256": "7693ac7623086e428428fcea40aa1ba8744cf5b8fce980f0f50ff9da8fe2d15c",
+      "mtime_iso": "2026-05-09T05:07:59+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/CrisPRO - AACR 2026 Lead Audit Tracker (2).xlsx",
+      "exists": true,
+      "bytes": 23442,
+      "sha256": "500ab2d78b2e2e8967f7a7cb803793df994923a304a748fdce3c435e2ae925d2",
+      "mtime_iso": "2026-06-28T21:02:05+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/CrisPRO - AACR 2026 Lead Audit Tracker.xlsx",
+      "exists": true,
+      "bytes": 23442,
+      "sha256": "389f01dd9a033f8f9025b2bb45025ca92b5421e526909f7ddb071d8fad9ea5c8",
+      "mtime_iso": "2026-05-02T17:18:19+00:00"
+    }
+  ],
+  "cross_refs": [
+    "deliverable:sanofi_pitch_deck_directive"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:brenus_and_deliverables"
+}

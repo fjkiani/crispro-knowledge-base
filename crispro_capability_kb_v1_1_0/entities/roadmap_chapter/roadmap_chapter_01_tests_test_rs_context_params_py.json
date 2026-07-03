@@ -1,0 +1,32 @@
+{
+  "id": "roadmap_chapter:01_tests_test_rs_context_params_py",
+  "type": "roadmap_chapter",
+  "name": "Ch 01 — tests/test_rs_context_params.py",
+  "what_it_solves": "CRISPRO_SL_PHD_ROADMAP chapter 'tests/test_rs_context_params.py' spanning lines 979..1058.",
+  "how_it_solves": "Chapter body preview (first 2000 chars) attached; full content lives in the source file. Subheadings enumerated.",
+  "why_it_exists": "Chapter is the natural unit of the roadmap — one entity per chapter makes 'what does Ch 3.4 say about the fuser?' addressable.",
+  "attributes": {
+    "level": 1,
+    "start_line": 979,
+    "end_line": 1058,
+    "byte_length": 3438,
+    "subheadings": [],
+    "body_preview_2000c": "\t\n\n\tdef test_cdk2_strong_with_ccne1_context():\n\t    \"\"\"CDK2 should reach Strong tier when CCNE1 is amplified.\"\"\"\n\t    response = client.get(\n\t        \"/api/v1/analyze/evidence_matrix\",\n\t        params={\"gene\": \"CDK2\", \"rs_ccne1_amplified\": True}\n\t    )\n\t    assert response.status_code == 200\n\t    axes = response.json()[\"axes\"]\n\t    ccne1_axis = next(a for a in axes if a[\"axis\"] == \"ccne1_amp\")\n\t    assert ccne1_axis[\"recommendation_tier\"] == \"Strong candidate dependency axis\"\n\t\n\n\tdef test_cdk2_mechanistic_without_context():\n\t    \"\"\"CDK2 should remain Mechanistic without RS context.\"\"\"\n\t    response = client.get(\n\t        \"/api/v1/analyze/evidence_matrix\",\n\t        params={\"gene\": \"CDK2\"}\n\t    )\n\t    assert response.status_code == 200\n\t    axes = response.json()[\"axes\"]\n\t    ccne1_axis = next(a for a in axes if a[\"axis\"] == \"ccne1_amp\")\n\t    assert \"Mechanistic\" in ccne1_axis[\"recommendation_tier\"]\n\t5.4 Merge Gate\npytest tests/test_ayesha_e2e.py tests/test_rs_context_params.py -x\n\tgit add .\n\tgit commit -m \"feat(sl): wire RS context into evidence_matrix endpoint\"\n\tgit push origin main\n\t________________\n\n\nChapter 6: The Patient SL Report (Sprint B)\n\n\nSPRINT B — CLAUDE CODE SPEC FILE\nTarget repo: crispro-backend-v3\nTarget: layer4_output/ + new route file\nGoal: POST /api/v1/patient/sl_report — single endpoint for complete patient SL analysis\nExpected result: Ayesha (MBD4+TP53) → VALIDATED cytidine_analogs + Mechanistic ATR/WEE1\n\t6.1 Problem Statement\nCurrently, getting a complete SL picture for a patient requires multiple API calls: one per gene to the evidence_matrix endpoint, manual aggregation of results, and no structured data gap analysis. The tumor board needs a single endpoint that accepts a patient's mutation profile and returns a comprehensive SL report with ranked axes, data gaps, and next-best-test recommendations.\n6.2 Request Model\nclass PatientSLReportRequest(BaseModel):\n\t    patient_id: str\n\t    mutations: List[SomaticMutation]\n\t    cancer_type: str\n\t    rs"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "lines 979..1058"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:synthetic_lethality_deep"
+}

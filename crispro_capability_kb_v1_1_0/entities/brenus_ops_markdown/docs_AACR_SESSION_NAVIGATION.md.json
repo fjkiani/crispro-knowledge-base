@@ -1,0 +1,151 @@
+{
+  "id": "docs:AACR_SESSION_NAVIGATION.md",
+  "type": "brenus_ops_markdown",
+  "name": "AACR_SESSION_NAVIGATION.md",
+  "what_it_solves": "Structured view of AACR_SESSION_NAVIGATION.md: heading tree + 2500-char preview.",
+  "how_it_solves": "Regex heading extract + preview slice.",
+  "why_it_exists": "Ties the AACR session index / GTM bridge / faceted-filtering rules into the KB as first-class docs.",
+  "attributes": {
+    "byte_length": 10528,
+    "heading_count": 24,
+    "headings": [
+      {
+        "level": 1,
+        "title": "AACR Session Slug Navigation — Gap Analysis & Fix Plan",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "What the user expects",
+        "line": 10
+      },
+      {
+        "level": 2,
+        "title": "What exists today (verified — not assumed)",
+        "line": 22
+      },
+      {
+        "level": 3,
+        "title": "Talk UID format",
+        "line": 24
+      },
+      {
+        "level": 3,
+        "title": "Supabase session index",
+        "line": 52
+      },
+      {
+        "level": 3,
+        "title": "CRM frontend routes (no session route)",
+        "line": 65
+      },
+      {
+        "level": 3,
+        "title": "Where session slug appears but is not clickable",
+        "line": 77
+      },
+      {
+        "level": 3,
+        "title": "`list_aacr_intel` API (deployed on alpha-crm)",
+        "line": 88
+      },
+      {
+        "level": 3,
+        "title": "CRM Lead linkage",
+        "line": 99
+      },
+      {
+        "level": 2,
+        "title": "Gap summary",
+        "line": 105
+      },
+      {
+        "level": 2,
+        "title": "Fix plan",
+        "line": 119
+      },
+      {
+        "level": 3,
+        "title": "Phase A: Session metadata in CRM",
+        "line": 121
+      },
+      {
+        "level": 3,
+        "title": "Phase B: List talks by session API",
+        "line": 144
+      },
+      {
+        "level": 3,
+        "title": "Phase C: Session browse page (frontend)",
+        "line": 176
+      },
+      {
+        "level": 3,
+        "title": "Phase D: Clickable slugs everywhere",
+        "line": 196
+      },
+      {
+        "level": 3,
+        "title": "Phase E: Leads list session filter",
+        "line": 228
+      },
+      {
+        "level": 3,
+        "title": "Phase F: Sidebar navigation",
+        "line": 235
+      },
+      {
+        "level": 2,
+        "title": "URL design",
+        "line": 244
+      },
+      {
+        "level": 2,
+        "title": "Data verification queries",
+        "line": 257
+      },
+      {
+        "level": 3,
+        "title": "Supabase — talks in session",
+        "line": 259
+      },
+      {
+        "level": 3,
+        "title": "Supabase — session metadata",
+        "line": 268
+      },
+      {
+        "level": 3,
+        "title": "CRM — leads in session (after facet backfill)",
+        "line": 277
+      },
+      {
+        "level": 2,
+        "title": "Files to touch (implementation)",
+        "line": 287
+      },
+      {
+        "level": 2,
+        "title": "Acceptance criteria",
+        "line": 304
+      }
+    ],
+    "preview": "# AACR Session Slug Navigation — Gap Analysis & Fix Plan\n\n> **Status:** Documented gap (not yet implemented)  \n> **Example session slug:** `hematological-malignancies-undruggable-targets-and-new-frontiers`  \n> **Example talk UID:** `hematological-malignancies-undruggable-targets-and-new-frontiers::woyach::2`  \n> **Related:** [AACR_SUPABASE_CONNECTION.md](./AACR_SUPABASE_CONNECTION.md), [INTEL_FACETED_FILTERING.md](./INTEL_FACETED_FILTERING.md)\n\n---\n\n## What the user expects\n\nClick a session identifier (e.g. `hematological-malignancies-undruggable-targets-and-new-frontiers`) and see:\n\n- Session title and metadata\n- All speakers / talks in that session\n- Links to each lead, Schema A talk, and Schema B intel record\n\n**This does not exist today.**\n\n---\n\n## What exists today (verified — not assumed)\n\n### Talk UID format\n\nCanonical talk IDs are three-part strings:\n\n```\n{session_slug}::{speaker_slug}::{index}\n```\n\nExample:\n\n```\nhematological-malignancies-undruggable-targets-and-new-frontiers::woyach::2\n│                                                                      │      │\n└─ session_slug                                                        │      └─ talk index within session/speaker\n                                                                       └─ speaker slug\n```\n\nSlug extraction is already implemented for crosswalk logic:\n\n```python\ndef slug_from_talk_id(talk_id: str) -> str | None:\n    if not talk_id:\n        return None\n    return talk_id.split(\"::\", 1)[0] or None\n```\n\nSource: `scripts/aacr_supabase_load.py`\n\n### Supabase session index\n\nPer `docs/AACR_SUPABASE_CONNECTION.md`:\n\n| Table | Rows | Role |\n|-------|-----:|------|\n| `aacr_sessions` | 287 | Session index (**slug as primary key**) |\n| `aacr_session_metadata` | 287 | Full session JSON from `sessions.jsonl` |\n| `aacr_speakers` | 862 | Schema A — includes `session_slug` column |\n| `aacr_competitive_intel` | 926 | Schema B — `talk_id` embeds session slug as first segment |\n\nSource data: `sessions.jsonl` / `sessions.csv` in [aacr-2026 repo](https://github.com/fjkiani/aacr-2026) → `data/master/`\n\n### CRM frontend routes (no session route)\n\nCurrent router (`crm-deployment/frontend/src/router.js`):\n\n| Route | Page |\n|-------|------|\n| `/crm/leads` | Leads list |\n| `/crm/leads/:leadId` | Lead detail (GTM Intel tab) |\n| `/crm/competitive-intel` | Schema B corpus browser |\n\n**Missing:** `/crm/sessions/:sessionSlug` or `/crm/aacr/sessions/:sessionSlug`\n\n### Where session slug appears but is not"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/AACR_SESSION_NAVIGATION.md",
+      "exists": true,
+      "bytes": 10606,
+      "sha256": "e343b30476e25e01ddfdfac8e1fd429bc12562f035405edcf41750887ff493f6",
+      "mtime_iso": "2026-07-02T15:30:14+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:aacr_tracker",
+    "module:brenus_diligence"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

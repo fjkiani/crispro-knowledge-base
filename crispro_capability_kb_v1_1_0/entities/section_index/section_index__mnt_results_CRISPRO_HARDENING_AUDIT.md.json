@@ -1,0 +1,161 @@
+{
+  "id": "section_index:/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+  "type": "section_index",
+  "name": "Section index — CRISPRO_HARDENING_AUDIT.md",
+  "what_it_solves": "Section index of '/mnt/results/CRISPRO_HARDENING_AUDIT.md': every heading with its level and starting line.",
+  "how_it_solves": "Regex `^#{1,6}\\s+(.+)$` extracted at generation time; preserves navigation without duplicating body text.",
+  "why_it_exists": "Downstream ingestors can walk the document by section without re-parsing markdown; the KB stops being an opaque blob.",
+  "attributes": {
+    "heading_count": 27,
+    "headings": [
+      {
+        "level": 1,
+        "title": "CrisPRO Hardening Audit",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "1. Load Time Audit",
+        "line": 9
+      },
+      {
+        "level": 3,
+        "title": "Root Cause: Render Cold Starts",
+        "line": 11
+      },
+      {
+        "level": 3,
+        "title": "Secondary: Waterfall API Calls on AK Dashboard",
+        "line": 19
+      },
+      {
+        "level": 3,
+        "title": "Tertiary: Duplicate SL Calls",
+        "line": 50
+      },
+      {
+        "level": 3,
+        "title": "Quaternary: `useAyeshaCareData` Options Dependency Bug",
+        "line": 59
+      },
+      {
+        "level": 3,
+        "title": "Load Time Fixes — Priority Order",
+        "line": 69
+      },
+      {
+        "level": 2,
+        "title": "2. Full API Surface Audit",
+        "line": 83
+      },
+      {
+        "level": 3,
+        "title": "Frontend → Backend API Calls (All Endpoints)",
+        "line": 85
+      },
+      {
+        "level": 4,
+        "title": "AK Dashboard / Ayesha Persona",
+        "line": 87
+      },
+      {
+        "level": 4,
+        "title": "Orchestrator (General Pipeline)",
+        "line": 104
+      },
+      {
+        "level": 4,
+        "title": "Research Intelligence",
+        "line": 115
+      },
+      {
+        "level": 4,
+        "title": "Genomic Analysis",
+        "line": 121
+      },
+      {
+        "level": 4,
+        "title": "Auth / User",
+        "line": 128
+      },
+      {
+        "level": 3,
+        "title": "Backend Router → Service Map",
+        "line": 135
+      },
+      {
+        "level": 3,
+        "title": "Hardening Issues Found",
+        "line": 148
+      },
+      {
+        "level": 2,
+        "title": "3. SL Audit for AK (Patient AK / Ayesha)",
+        "line": 160
+      },
+      {
+        "level": 3,
+        "title": "AK's Mutation Profile",
+        "line": 162
+      },
+      {
+        "level": 3,
+        "title": "What the SL Engine Receives for AK",
+        "line": 186
+      },
+      {
+        "level": 3,
+        "title": "SL Logic for MBD4 + TP53 (HGSOC)",
+        "line": 240
+      },
+      {
+        "level": 3,
+        "title": "SL Hardening Issues for AK",
+        "line": 264
+      },
+      {
+        "level": 3,
+        "title": "Expected SL Output for AK (Correct Behavior)",
+        "line": 276
+      },
+      {
+        "level": 2,
+        "title": "4. Hardening Checklist",
+        "line": 292
+      },
+      {
+        "level": 3,
+        "title": "Immediate (< 1 day)",
+        "line": 294
+      },
+      {
+        "level": 3,
+        "title": "Short-term (< 1 week)",
+        "line": 301
+      },
+      {
+        "level": 3,
+        "title": "Medium-term (< 1 month)",
+        "line": 309
+      },
+      {
+        "level": 2,
+        "title": "5. AK SL Data Flow Diagram",
+        "line": 317
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "exists": true,
+      "bytes": 19314,
+      "sha256": "4c29bc6cecf7bcc6ba7a1232e3fa3a19d50c02bc1a065ea95f1bafc6f1a9c326",
+      "mtime_iso": "2026-05-05T06:24:21+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

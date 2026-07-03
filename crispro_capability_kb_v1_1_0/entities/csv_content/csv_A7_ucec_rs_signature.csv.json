@@ -1,0 +1,206 @@
+{
+  "id": "csv:A7_ucec_rs_signature.csv",
+  "type": "csv_content",
+  "name": "A7_ucec_rs_signature.csv",
+  "what_it_solves": "Parsed contents of A7_ucec_rs_signature.csv: header + row count + column ranges.",
+  "how_it_solves": "csv.reader → header + row list; per column, if numeric ⇒ (n, min, max, mean); if categorical ⇒ top-3 values + unique count.",
+  "why_it_exists": "Deep pass: previous stream had file metadata only. This entity carries the actual data shape so downstream consumers can validate any claim about A1/A2/A3/… without re-parsing.",
+  "attributes": {
+    "header": [
+      "ModelID",
+      "MBD4",
+      "RS_score",
+      "MBD4_LOF",
+      "NAT10",
+      "DDX27",
+      "ZNF48",
+      "C8orf33",
+      "MOCS3",
+      "CellLineName",
+      "RS_percentile_endometrial"
+    ],
+    "row_count": 36,
+    "sample_rows": [
+      [
+        "ACH-000984",
+        "4.894046503368012",
+        "4.850380844893188",
+        "False",
+        "5.423494134573392",
+        "5.277850882786697",
+        "3.5095185024077105",
+        "6.443795595024689",
+        "3.597245109673453",
+        "HEC-6",
+        "100.0"
+      ],
+      [
+        "ACH-000941",
+        "4.647026632654853",
+        "4.0510636774976545",
+        "False",
+        "4.814247907712203",
+        "5.187569822056225",
+        "2.7203901110605706",
+        "5.495109908309191",
+        "2.038000638350085",
+        "HEC-1-B",
+        "33.33333333333333"
+      ],
+      [
+        "ACH-000946",
+        "4.6203518068184",
+        "4.047104269864844",
+        "False",
+        "5.412107432872372",
+        "4.55042050705207",
+        "2.7636452763864128",
+        "5.0452026763221856",
+        "2.464145456691186",
+        "HEC-265",
+        "30.555555555555554"
+      ],
+      [
+        "ACH-000978",
+        "4.856896078611587",
+        "4.745350657846818",
+        "True",
+        "5.55484667200807",
+        "5.63659272140617",
+        "3.94224236158383",
+        "5.447050155457187",
+        "3.1460213787788343",
+        "EN",
+        "94.44444444444444"
+      ],
+      [
+        "ACH-001517",
+        "4.478861819604319",
+        "4.100323945033819",
+        "False",
+        "5.533423183208891",
+        "5.97072023568364",
+        "3.179194132117374",
+        "3.927773222214052",
+        "1.890508951945135",
+        "HEC-1",
+        "41.666666666666664"
+      ]
+    ],
+    "column_ranges": {
+      "ModelID": {
+        "categorical": true,
+        "top_values": [
+          [
+            "ACH-000984",
+            1
+          ],
+          [
+            "ACH-000941",
+            1
+          ],
+          [
+            "ACH-000946",
+            1
+          ]
+        ],
+        "unique_count": 36
+      },
+      "MBD4": {
+        "n_numeric": 36,
+        "min": 2.9846476767150696,
+        "max": 6.023590256462185,
+        "mean": 4.496628468749269
+      },
+      "RS_score": {
+        "n_numeric": 36,
+        "min": 3.4074438589224245,
+        "max": 4.850380844893188,
+        "mean": 4.171763114640524
+      },
+      "MBD4_LOF": {
+        "categorical": true,
+        "top_values": [
+          [
+            "False",
+            34
+          ],
+          [
+            "True",
+            2
+          ]
+        ],
+        "unique_count": 2
+      },
+      "NAT10": {
+        "n_numeric": 36,
+        "min": 3.1509998913389103,
+        "max": 5.922761588379634,
+        "mean": 4.83669795983221
+      },
+      "DDX27": {
+        "n_numeric": 36,
+        "min": 4.057034300137224,
+        "max": 6.39829905962317,
+        "mean": 5.06354762570323
+      },
+      "ZNF48": {
+        "n_numeric": 36,
+        "min": 1.923232867671648,
+        "max": 4.148925972062376,
+        "mean": 3.078484105109141
+      },
+      "C8orf33": {
+        "n_numeric": 36,
+        "min": 3.8445664305281366,
+        "max": 6.531886705217268,
+        "mean": 5.379571746548659
+      },
+      "MOCS3": {
+        "n_numeric": 36,
+        "min": 1.733167754453084,
+        "max": 3.597245109673453,
+        "mean": 2.5005141360093814
+      },
+      "CellLineName": {
+        "categorical": true,
+        "top_values": [
+          [
+            "HEC-6",
+            1
+          ],
+          [
+            "HEC-1-B",
+            1
+          ],
+          [
+            "HEC-265",
+            1
+          ]
+        ],
+        "unique_count": 36
+      },
+      "RS_percentile_endometrial": {
+        "n_numeric": 36,
+        "min": 2.7777777777777777,
+        "max": 100.0,
+        "mean": 51.388888888888886
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A7_ucec_rs_signature.csv",
+      "exists": true,
+      "bytes": 6155,
+      "sha256": "6397dc9094f9982d17a2faec09be282a72e5f8fe14223db669857d2ad02fbc2d",
+      "mtime_iso": "2026-04-26T06:24:36+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

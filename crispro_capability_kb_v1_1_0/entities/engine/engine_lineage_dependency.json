@@ -1,0 +1,31 @@
+{
+  "id": "engine:lineage_dependency",
+  "type": "engine",
+  "name": "Lineage Dependency Engine (PLANNED, Sprint C)",
+  "what_it_solves": "Second Layer-1 engine that will score tissue-lineage-specific dependencies as a peer to synthetic lethality.",
+  "how_it_solves": "Not yet implemented; roadmap Sprint C reserves the module path and contract slot.",
+  "why_it_exists": "Some axes (e.g. WRN, RB1-cyclin dependencies) are better framed lineage-first than SL-first — this engine will carry that logic separately from the SL fuser.",
+  "attributes": {
+    "status": "PLANNED",
+    "target_sprint": "C"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "Ch 3 — Layer 1 engines (SL + Lineage)"
+    }
+  ],
+  "cross_refs": [
+    "layer:engines",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [
+    "Not built. No code path exists in crispro-backend-v3 as of roadmap snapshot."
+  ],
+  "_stream": "v1:synthetic_lethality"
+}

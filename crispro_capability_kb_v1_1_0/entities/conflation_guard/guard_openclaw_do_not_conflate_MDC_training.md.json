@@ -1,0 +1,28 @@
+{
+  "id": "guard:openclaw_do_not_conflate:MDC_training.md",
+  "type": "conflation_guard",
+  "name": "OpenClaw guard — MDC_training.md",
+  "what_it_solves": "'/mnt/user-uploads/MDC_training.md' is the OpenClaw project's MDC documentation — NOT CrisPRO. It appears in /mnt/user-uploads because the user uploaded it for a different program.",
+  "how_it_solves": "Guard entity: any downstream ingestor that iterates /mnt/user-uploads and sees MDC_* files MUST NOT treat them as CrisPRO architecture.",
+  "why_it_exists": "Previous sessions conflated MDC architecture with CrisPRO layer stack — this guard entity prevents recurrence.",
+  "attributes": {
+    "project": "OpenClaw",
+    "not_crispro": true,
+    "path": "/mnt/user-uploads/MDC_training.md"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/MDC_training.md",
+      "exists": true,
+      "bytes": 20732,
+      "sha256": "61b7f30af3d482a2fab6f246d06540918af339e6c97ed89f072842b131d79ae8",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [
+    "This file remains in /mnt/user-uploads; keep guard active until the user removes it or explicitly maps it."
+  ],
+  "_stream": "v2:architecture_deep"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "code_module:Q2CRouter/intents.js",
+  "type": "frontend_module_reference",
+  "name": "Q2CRouter/intents.js",
+  "what_it_solves": "Frontend module 'Q2CRouter/intents.js' referenced by the architecture / frontend audit corpus.",
+  "how_it_solves": "Extracted by regex for .ts/.tsx/.js/.jsx paths.",
+  "why_it_exists": "Enumerates the concrete frontend surface (crispro-front-end) so any SL/Ayesha UI claim can be traced to a real file.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+        "line": 220,
+        "context": "isease context in the SL UI.**\n\n### 3.3 CoPilot (`src/components/CoPilot/`)\n\n- `Q2CRouter/intents.js` — Intent routing (20 KB — large intent map)\n- `CoPilotLogic.jsx` — Core CoPilo"
+      }
+    ],
+    "reference_count": 1
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+      "exists": true,
+      "bytes": 17877,
+      "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+      "mtime_iso": "2026-05-05T06:14:00+00:00"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-front-end",
+    "component:frontend_canonicalization"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

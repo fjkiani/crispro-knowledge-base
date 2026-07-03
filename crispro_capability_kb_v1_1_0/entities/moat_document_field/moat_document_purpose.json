@@ -1,0 +1,27 @@
+{
+  "id": "moat:document_purpose",
+  "type": "moat_document_field",
+  "name": "moat_comparison — document_purpose",
+  "what_it_solves": "The declared purpose of the moat_comparison.json artifact.",
+  "how_it_solves": "Extracted verbatim from moat_comparison.json['document_purpose'].",
+  "why_it_exists": "Governance requires an explicit purpose statement so the file is not silently repurposed; this entity carries it verbatim.",
+  "attributes": {
+    "raw": "Compare CrisPRO's methodological 'moat' against Bevilacqua 2026's published approach + adjacent literature, with every claim traceable to PDF, transcript receipts, or paper references."
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00",
+      "span_extracted": "document_purpose"
+    }
+  ],
+  "cross_refs": [
+    "moat:aggregate"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:moat_and_governance_deep"
+}

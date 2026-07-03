@@ -1,0 +1,36 @@
+{
+  "id": "moat:competitor_landscape_not_assessed_this_session",
+  "type": "moat_document_field",
+  "name": "moat_comparison — competitor_landscape_not_assessed_this_session",
+  "what_it_solves": "Explicit list of competitors NOT scored in this session (scope limit).",
+  "how_it_solves": "Extracted verbatim.",
+  "why_it_exists": "Scope discipline: the KB must state what it did not do, not only what it did.",
+  "attributes": {
+    "raw": {
+      "items_not_retrieved": [
+        "Alhalabi 2022 (Nat Commun 13:1797, ref 17) — MTAP-loss + pemetrexed in BLCA; not retrieved this session",
+        "Lindskrog 2021 (Nat Commun 12:2301, ref 13) — NMIBC molecular subtyping; not retrieved",
+        "Garioni 2023 (npj Precis Oncol 7:112, ref 34) — sarcomatoid urothelial PDOs; not retrieved",
+        "Papadimitriou 2024 (Mol Ther Oncol 32:200818, ref 36) — CDKN2A copy-number + gemcitabine in BLCA PDX; not retrieved",
+        "Other companies with bladder cancer + 9p21 programs (e.g., Mirati MRTX1719 trial sponsor, Agios Pharmaceuticals AG-270 trial sponsor) — not assessed"
+      ],
+      "implication": "This moat comparison covers CrisPRO vs Bev2026 specifically. Competitive positioning against industry programs (Mirati Phase II, Agios Phase I, etc.) requires additional retrieval and is NOT in scope for this audit."
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00",
+      "span_extracted": "competitor_landscape_not_assessed_this_session"
+    }
+  ],
+  "cross_refs": [
+    "moat:aggregate"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:moat_and_governance_deep"
+}

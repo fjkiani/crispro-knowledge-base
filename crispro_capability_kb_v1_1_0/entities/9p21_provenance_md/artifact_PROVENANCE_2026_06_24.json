@@ -1,0 +1,156 @@
+{
+  "id": "artifact:PROVENANCE_2026_06_24",
+  "type": "9p21_provenance_md",
+  "name": "PROVENANCE_2026-06-24.md",
+  "what_it_solves": "Structured view of the 9p21 provenance report.",
+  "how_it_solves": "Heading extract + 3000-char preview.",
+  "why_it_exists": "Anchors moat claims to the specific dated provenance document.",
+  "attributes": {
+    "byte_length": 18134,
+    "heading_count": 25,
+    "headings": [
+      {
+        "level": 1,
+        "title": "PROVENANCE MANIFEST — 9p21/Bev2026 JSON Regeneration",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "File Inventory",
+        "line": 10
+      },
+      {
+        "level": 2,
+        "title": "Source Tier System",
+        "line": 23
+      },
+      {
+        "level": 2,
+        "title": "Critical Verbatim PDF Anchors (Tier 1)",
+        "line": 45
+      },
+      {
+        "level": 2,
+        "title": "Canonical Transcript Receipts (Tier 2)",
+        "line": 72
+      },
+      {
+        "level": 3,
+        "title": "Primary Discovery Endpoint (Ceralasertib × MBD4-LOF)",
+        "line": 78
+      },
+      {
+        "level": 3,
+        "title": "4 Confound Stress Tests",
+        "line": 87
+      },
+      {
+        "level": 3,
+        "title": "Adavosertib WEE1 Axis Partner (MIXED)",
+        "line": 100
+      },
+      {
+        "level": 3,
+        "title": "PARP1 Falsification Arm (Source: User Message Line 12288 / i=11560)",
+        "line": 109
+      },
+      {
+        "level": 3,
+        "title": "Pan-Cancer PARP1 × PARPi Sanity Check",
+        "line": 119
+      },
+      {
+        "level": 2,
+        "title": "WT Rule Disambiguation (Critical for Reproducibility)",
+        "line": 132
+      },
+      {
+        "level": 2,
+        "title": "Repo State Qualification (Tier 2, with temporal caveat)",
+        "line": 142
+      },
+      {
+        "level": 2,
+        "title": "Inferences Explicitly Tagged (Tier 3)",
+        "line": 155
+      },
+      {
+        "level": 2,
+        "title": "Audit Trail",
+        "line": 168
+      },
+      {
+        "level": 3,
+        "title": "Post-Generation Audits Run",
+        "line": 170
+      },
+      {
+        "level": 3,
+        "title": "Caveat Blocks",
+        "line": 178
+      },
+      {
+        "level": 3,
+        "title": "Manifest Self-Audit Correction 2026-06-24",
+        "line": 183
+      },
+      {
+        "level": 2,
+        "title": "Scoped vs Universal Consistency (Methodological Note)",
+        "line": 192
+      },
+      {
+        "level": 2,
+        "title": "File-by-File Top-Level Key Map",
+        "line": 206
+      },
+      {
+        "level": 3,
+        "title": "experimental_design.json (12 keys)",
+        "line": 208
+      },
+      {
+        "level": 3,
+        "title": "double_hit_vulnerabilities.json (10 keys)",
+        "line": 216
+      },
+      {
+        "level": 3,
+        "title": "collaboration_value_proposition.json (10 keys)",
+        "line": 226
+      },
+      {
+        "level": 3,
+        "title": "moat_comparison.json (10 keys)",
+        "line": 240
+      },
+      {
+        "level": 2,
+        "title": "Pre-Outreach Items REQUIRED for Resolution",
+        "line": 250
+      },
+      {
+        "level": 2,
+        "title": "Code Availability External Sweep (added 2026-06-24, post-step-7)",
+        "line": 267
+      }
+    ],
+    "preview": "# PROVENANCE MANIFEST — 9p21/Bev2026 JSON Regeneration\n\n**Generated:** 2026-06-24\n**Scope:** Full regeneration of 4 outreach JSONs after compaction. Every leaf claim must trace to (1) a verbatim PDF page citation, (2) a canonical transcript receipt, or (3) be explicitly tagged as inference/hypothesis.\n**Source PDF:** `s41698-026-01434-w.pdf` (uploaded by user this session, 4,747,485 bytes, 16 pages)\n**Paper:** Bevilacqua, Gasperini, Cantore et al. \"Therapeutic vulnerabilities exposed by the 9p21 loss identified through multiparametric drug screening inform rational combination strategies\" npj Precision Oncology (2026) DOI: 10.1038/s41698-026-01434-w\n\n---\n\n## File Inventory\n\n| ID | File | Size | Top-level Keys | Purpose |\n|----|------|------|-------|---------|\n| ED | `experimental_design.json` | 23,457 bytes | 12 | Full PDF-grounded Methods + Results: cell lines, library, screens, isogenic design, PDO histories |\n| DH | `double_hit_vulnerabilities.json` | 24,468 bytes | 10 | 3 families of drug-combination vulnerabilities + MBD4 stress-test + PARP1 falsification |\n| CVP | `collaboration_value_proposition.json` | 25,131 bytes | 10 | Per-researcher outreach blocks: 6 Demichelis + 4 Kruithof-de Julio + 2 Faltas = 12 deliverables total |\n| MOAT | `moat_comparison.json` | 33,172 bytes | 10 | 9 dimensions comparing CrisPRO methodology vs Bev2026, with moat_caveats block |\n\n**Total:** 4 files / 106,228 bytes\n\n---\n\n## Source Tier System\n\nEvery leaf claim in these JSONs is grounded in one of three tiers:\n\n**TIER 1 — Verbatim PDF (highest confidence)**\n- Direct quotes from the Bev2026 PDF, with page number citation\n- Examples: \"12 phenotypic features\" (Methods), \"Co-occurrence of CDKN2A/2B and MTAP deletions interests 26% of TCGA MIBC patients\" (Discussion page 12)\n- Verification method: Direct PDF read via `Read` tool 2026-06-24\n\n**TIER 2 — Canonical Transcript Receipts (verified via tool output)**\n- Numerical values from canonical_atr_wee1_rerun.json frozen 2026-04-05\n- Verified via transcript indices 991/1010 (WebFetch retrieval)\n- User-provided \"precise numbers\" message at transcript line 12288 (i=11560)\n- Examples: Δ=-0.7324529879649893, p=0.021484496737088882, n_LOF=14/n_WT=914\n\n**TIER 3 — Inference/Hypothesis (explicitly tagged)**\n- Claims that are reasonable extrapolations but not verbatim-sourced\n- All such claims include `verification_status` or `pre_outreach_required_verification` fields\n- Examples: CVP-FAL-02 Weill Cornell PDX infrastructure (flagged as hypothetical)\n\n---\n\n## Critical Verbatim PDF Anchors (Tier 1)\n\n| Claim | Verbatim Source | Used In |\n|-------|---------|---------|\n| Title: \"Therapeutic vulnerabilities exposed by the 9p21 loss...\" | PDF page 1 | ED, DH, CVP, MOAT |\n| TCGA MIBC 26% MTAP/CDKN2A/CDKN2B co-deletion | PDF page 2 (Results) AND page 12 (Discussion) | ED, DH, MOAT |\n| Robertson 2017 22% CDKN2A-alone MIBC | PDF Introduction page 2 (refs 13, 14) | DH, MOAT |\n| 2,349 compound library (349 + 958 + 629 + 343 + 70) | PDF Metho"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/PROVENANCE_2026-06-24.md",
+      "exists": true,
+      "bytes": 18203,
+      "sha256": "33ca2c9594e871fba7b307a7d2dfaf7b2d18f06c1408503aab16f342368cdd0d",
+      "mtime_iso": "2026-06-25T03:41:42+00:00"
+    }
+  ],
+  "cross_refs": [
+    "moat:aggregate",
+    "moat:audit_corrections_2026_06_24"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:moat_and_governance_deep"
+}

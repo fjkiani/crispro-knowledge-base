@@ -1,0 +1,87 @@
+{
+  "id": "moat:comparative_summary_table",
+  "type": "moat_document_field",
+  "name": "moat_comparison — comparative_summary_table",
+  "what_it_solves": "Structured summary table of moat labels across all dimensions.",
+  "how_it_solves": "Extracted verbatim; row/column shape recorded.",
+  "why_it_exists": "Downstream consumers can render the table without re-reading the JSON.",
+  "attributes": {
+    "raw": [
+      {
+        "dimension": "Multi-modal discovery",
+        "Bev2026": "Strong (viability + morphology)",
+        "CrisPRO": "Strong (7-axis evidence matrix)",
+        "winner": "PARITY"
+      },
+      {
+        "dimension": "Falsification arm",
+        "Bev2026": "Cellular 2KO (gold-standard, low N)",
+        "CrisPRO": "In-silico PARP1 Mann-Whitney (scaleable)",
+        "winner": "COMPLEMENTARY"
+      },
+      {
+        "dimension": "Confound stress tests",
+        "Bev2026": "Cross-system (clones+cell lines+PDOs+tumor types)",
+        "CrisPRO": "Cross-stratifier (MSI, TP53, LOO, lineage)",
+        "winner": "COMPLEMENTARY"
+      },
+      {
+        "dimension": "Statistical N",
+        "Bev2026": "Low N high quality (paired isogenic n=6)",
+        "CrisPRO": "High N (n=914 WT, n=14 LOF, n=1498 comparator)",
+        "winner": "COMPLEMENTARY"
+      },
+      {
+        "dimension": "Axis taxonomy",
+        "Bev2026": "Biologically correct, no enum",
+        "CrisPRO": "Formal enum, MRTX1719 bug at HEAD bfd6d11f",
+        "winner": "Bev2026 (biology); CrisPRO (framework)"
+      },
+      {
+        "dimension": "PDO deployment",
+        "Bev2026": "Bi-directional MTAP editing in 2 PDOs",
+        "CrisPRO": "No primary PDO; in-silico triage offer",
+        "winner": "Bev2026"
+      },
+      {
+        "dimension": "Reproducibility",
+        "Bev2026": "Data on Zenodo; code withheld",
+        "CrisPRO": "Open code + artifact provenance + 10 unit tests",
+        "winner": "CrisPRO"
+      },
+      {
+        "dimension": "Synergy quantification",
+        "Bev2026": "HSA + Bliss w/ SynergyFinder 3.1, 95% CI",
+        "CrisPRO": "Not currently performed; offers axis pairing ranking only",
+        "winner": "Bev2026"
+      }
+    ],
+    "row_count": 8,
+    "top_keys": null
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00",
+      "span_extracted": "comparative_summary_table"
+    }
+  ],
+  "cross_refs": [
+    "moat:aggregate",
+    "moat_dim:00_primary_discovery_design_multi_modal_vs_single_modal",
+    "moat_dim:01_falsification_arm_methodology",
+    "moat_dim:02_stress_testing_confound_robustness",
+    "moat_dim:03_sample_size_and_statistical_power",
+    "moat_dim:04_axis_taxonomy_and_target_class_mapping",
+    "moat_dim:05_patient_derived_organoid_pdo_deployment",
+    "moat_dim:06_reproducibility_infrastructure",
+    "moat_dim:07_synergy_quantification_methodology",
+    "moat_dim:08_source_of_mtap_loss_mibc_prevalence_statistic"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:moat_and_governance_deep"
+}

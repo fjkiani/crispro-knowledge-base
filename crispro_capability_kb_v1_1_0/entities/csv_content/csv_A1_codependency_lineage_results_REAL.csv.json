@@ -1,0 +1,138 @@
+{
+  "id": "csv:A1_codependency_lineage_results_REAL.csv",
+  "type": "csv_content",
+  "name": "A1_codependency_lineage_results_REAL.csv",
+  "what_it_solves": "Parsed contents of A1_codependency_lineage_results_REAL.csv: header + row count + column ranges.",
+  "how_it_solves": "csv.reader → header + row list; per column, if numeric ⇒ (n, min, max, mean); if categorical ⇒ top-3 values + unique count.",
+  "why_it_exists": "Deep pass: previous stream had file metadata only. This entity carries the actual data shape so downstream consumers can validate any claim about A1/A2/A3/… without re-parsing.",
+  "attributes": {
+    "header": [
+      "lineage",
+      "gene",
+      "n",
+      "spearman_r",
+      "p_value",
+      "p_adj_BH"
+    ],
+    "row_count": 66,
+    "sample_rows": [
+      [
+        "Lung",
+        "ATR",
+        "123",
+        "-0.04066760392617147",
+        "0.6551601288755151",
+        "0.9799850442821868"
+      ],
+      [
+        "Lung",
+        "CHEK1",
+        "123",
+        "0.053075543975958005",
+        "0.5598682524568144",
+        "0.9799850442821868"
+      ],
+      [
+        "Lung",
+        "WEE1",
+        "123",
+        "-0.0450787426964698",
+        "0.6205333701940043",
+        "0.9799850442821868"
+      ],
+      [
+        "Lymphoid",
+        "ATR",
+        "91",
+        "0.025481764612199396",
+        "0.8105169792613556",
+        "0.9799850442821868"
+      ],
+      [
+        "Lymphoid",
+        "CHEK1",
+        "91",
+        "0.08735467431119605",
+        "0.41029961422004024",
+        "0.921982868329802"
+      ]
+    ],
+    "column_ranges": {
+      "lineage": {
+        "categorical": true,
+        "top_values": [
+          [
+            "Lung",
+            3
+          ],
+          [
+            "Lymphoid",
+            3
+          ],
+          [
+            "CNS/Brain",
+            3
+          ]
+        ],
+        "unique_count": 22
+      },
+      "gene": {
+        "categorical": true,
+        "top_values": [
+          [
+            "ATR",
+            22
+          ],
+          [
+            "CHEK1",
+            22
+          ],
+          [
+            "WEE1",
+            22
+          ]
+        ],
+        "unique_count": 3
+      },
+      "n": {
+        "n_numeric": 66,
+        "min": 15.0,
+        "max": 123.0,
+        "mean": 49.0
+      },
+      "spearman_r": {
+        "n_numeric": 66,
+        "min": -0.3806754221388368,
+        "max": 0.5178571428571428,
+        "mean": -0.007520218855887004
+      },
+      "p_value": {
+        "n_numeric": 66,
+        "min": 0.015213474663346252,
+        "max": 0.9872284538532065,
+        "mean": 0.4855353767913457
+      },
+      "p_adj_BH": {
+        "n_numeric": 66,
+        "min": 0.3290441188889373,
+        "max": 0.9872284538532065,
+        "mean": 0.8171773010963063
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1_codependency_lineage_results_REAL.csv",
+      "exists": true,
+      "bytes": 5150,
+      "sha256": "d774850782e3da43a9ebb43d4b6493695b85baa1c43740da6bc3df0d1a2596bd",
+      "mtime_iso": "2026-04-25T07:17:07+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

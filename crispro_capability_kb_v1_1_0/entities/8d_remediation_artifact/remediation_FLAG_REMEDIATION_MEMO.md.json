@@ -1,0 +1,145 @@
+{
+  "id": "remediation:FLAG_REMEDIATION_MEMO.md",
+  "type": "8d_remediation_artifact",
+  "name": "FLAG_REMEDIATION_MEMO.md",
+  "what_it_solves": "8D remediation memo at /mnt/results/FLAG_REMEDIATION_MEMO.md.",
+  "how_it_solves": "Heading extract + preview.",
+  "why_it_exists": "Anchors the 2026-04-28 8D remediation (filing status, LATIFY quarantine, NCT02264678 split, PC-02 downgrade) to a concrete file.",
+  "attributes": {
+    "byte_length": 9721,
+    "heading_count": 23,
+    "headings": [
+      {
+        "level": 1,
+        "title": "FLAG Remediation Memo — Archival Grade",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "Executive Summary",
+        "line": 10
+      },
+      {
+        "level": 2,
+        "title": "FLAG 1 — pathway_mechanism removed from RS promotion gate",
+        "line": 22
+      },
+      {
+        "level": 3,
+        "title": "Problem",
+        "line": 24
+      },
+      {
+        "level": 3,
+        "title": "Exact diff (commit `1e5d91c`)",
+        "line": 28
+      },
+      {
+        "level": 1,
+        "title": "BEFORE (incorrect — pathway_mech_pos included):",
+        "line": 33
+      },
+      {
+        "level": 1,
+        "title": "AFTER (correct — pathway_mech_pos removed entirely):",
+        "line": 40
+      },
+      {
+        "level": 3,
+        "title": "PMID attribution — corrected",
+        "line": 66
+      },
+      {
+        "level": 3,
+        "title": "Scientific basis for the fix",
+        "line": 81
+      },
+      {
+        "level": 3,
+        "title": "Test changes (commit `1e5d91c`)",
+        "line": 85
+      },
+      {
+        "level": 3,
+        "title": "Test results",
+        "line": 102
+      },
+      {
+        "level": 2,
+        "title": "FLAG 2 — ATR_INHIBITOR actionability = EMERGING (no change)",
+        "line": 115
+      },
+      {
+        "level": 3,
+        "title": "Claim under review",
+        "line": 117
+      },
+      {
+        "level": 3,
+        "title": "Finding",
+        "line": 121
+      },
+      {
+        "level": 2,
+        "title": "FLAG 3 — PARP surfacing audit (no change)",
+        "line": 136
+      },
+      {
+        "level": 3,
+        "title": "Claim under review",
+        "line": 138
+      },
+      {
+        "level": 3,
+        "title": "Raw grep evidence",
+        "line": 142
+      },
+      {
+        "level": 3,
+        "title": "Engine-side audit",
+        "line": 154
+      },
+      {
+        "level": 3,
+        "title": "Finding",
+        "line": 163
+      },
+      {
+        "level": 2,
+        "title": "Frontend changes (this commit)",
+        "line": 173
+      },
+      {
+        "level": 3,
+        "title": "Tier color mapping",
+        "line": 182
+      },
+      {
+        "level": 2,
+        "title": "Pre-existing issue noted (not in scope)",
+        "line": 195
+      },
+      {
+        "level": 2,
+        "title": "Files changed",
+        "line": 201
+      }
+    ],
+    "preview": "# FLAG Remediation Memo — Archival Grade\n**Date:** 2026-06-05  \n**Author:** Fahad Kiani  \n**Repo:** fjkiani/crispro-backend-v2  \n**Commit:** `1e5d91c`  \n**Reviewer posture:** FLAG 1 — implement; FLAG 2 — accept as taxonomy; FLAG 3 — accept operationally, documentation caveat noted.\n\n---\n\n## Executive Summary\n\nThree flags were raised against the CrisPRO SL engine's MBD4/ATR_WEE1 handling.\n\n| Flag | Description | Resolution | Commit |\n|------|-------------|------------|--------|\n| FLAG 1 | `pathway_mechanism` incorrectly counted as independent evidence for RS promotion | **Fixed** — removed from `has_independent_evidence` | `1e5d91c` |\n| FLAG 2 | ATR_INHIBITOR actionability = EMERGING vs HYPOTHESIS | **No change** — EMERGING accepted as product taxonomy | — |\n| FLAG 3 | PARP surfacing bypass for MBD4 outside SL tier gate | **No change** — no bypass exists; raw grep evidence below | — |\n\n---\n\n## FLAG 1 — pathway_mechanism removed from RS promotion gate\n\n### Problem\n\n`modality_fuser.py` included `pathway_mech_pos` in `has_independent_evidence`, allowing a literature-derived mechanistic inference to satisfy the RS promotion rule and elevate MBD4/ATR_WEE1 to `\"Strong candidate dependency axis\"` when RS score was high.\n\n### Exact diff (commit `1e5d91c`)\n\nThe file was committed fresh (new file in this commit), so the relevant lines in the final state are:\n\n```python\n# BEFORE (incorrect — pathway_mech_pos included):\npathway_mech_pos = (\n    cells.get(\"pathway_mechanism\")\n    and cells[\"pathway_mechanism\"].status == ModalityStatus.POSITIVE\n)\nhas_independent_evidence = crispr_pos or pharma_pos or pathway_mech_pos\n\n# AFTER (correct — pathway_mech_pos removed entirely):\nhas_independent_evidence = crispr_pos or pharma_pos\n```\n\nThe `pathway_mech_pos` local variable was removed entirely. The RS promotion block in the committed file reads:\n\n```python\nif (\n    rs_score is not None\n    and row.axis in _RS_SENSITIVE_AXES\n    and base_tier == \"Mechanistic candidate only\"\n):\n    has_independent_evidence = crispr_pos or pharma_pos\n    if rs_is_high(rs_score) and has_independent_evidence:\n        return (\n            \"Strong candidate dependency axis\",\n            \"rs_high_promote_mechanistic_to_strong_atr_pkmyt\",\n            base_detail\n            + \" RS modulation: high replication stress + independent CRISPR/pharmacologic screen evidence → promote to Strong.\",\n        )\n    base_detail += (\n        f\" RS modulation (ATR_WEE1/PKMYT1): no promotion — \"\n        f\"rs_high={rs_is_high(rs_score)}, has_independent_crispr_or_pharma={has_independent_evidence}.\"\n    )\n```\n\n### PMID attribution — corrected\n\nThe memo previously misattributed PMID 35428381 to Degasperi et al. 2022. This is incorrect.\n\n**PMID 35428381 = Chabot et al. 2022, NPJ Precision Oncology**  \nDOI: 10.1038/s41698-022-00326-z  \n**Establishes:** Cytidine analog (gemcitabine / decitabine) synthetic lethality in MBD4-LOF uveal melanoma — isogenic MBD4-KO models and patient-derived xenograft. Clinical exceptiona"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/FLAG_REMEDIATION_MEMO.md",
+      "exists": true,
+      "bytes": 9799,
+      "sha256": "b4ed865261e35d1a8ed3e6f2cc63220b7332bdb1ead859823547aa8cd6ce7c10",
+      "mtime_iso": "2026-06-05T19:47:35+00:00"
+    }
+  ],
+  "cross_refs": [
+    "moat:audit_corrections_2026_06_24"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:moat_and_governance_deep"
+}

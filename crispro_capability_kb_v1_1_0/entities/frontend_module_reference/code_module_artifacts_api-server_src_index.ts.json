@@ -1,0 +1,70 @@
+{
+  "id": "code_module:artifacts/api-server/src/index.ts",
+  "type": "frontend_module_reference",
+  "name": "artifacts/api-server/src/index.ts",
+  "what_it_solves": "Frontend module 'artifacts/api-server/src/index.ts' referenced by the architecture / frontend audit corpus.",
+  "how_it_solves": "Extracted by regex for .ts/.tsx/.js/.jsx paths.",
+  "why_it_exists": "Enumerates the concrete frontend surface (crispro-front-end) so any SL/Ayesha UI claim can be traced to a real file.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+        "line": 24,
+        "context": ", live)\n\nAll tables are created via idempotent `CREATE TABLE IF NOT EXISTS` in `artifacts/api-server/src/index.ts`.\n\n**Platform tables (pre-existing):**\n- `tenants` — one row per customer org; "
+      },
+      {
+        "source_file": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+        "line": 187,
+        "context": "-scoped workflows.\"\n\n### 3.1 Shared Business Object Layer\n\nAdd these tables to `artifacts/api-server/src/index.ts` (idempotent migrations):\n\n```sql\n-- Shared business objects (tenant-scoped)\nCR"
+      },
+      {
+        "source_file": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+        "line": 293,
+        "context": "pi/objects/:id                    — update object data/status\n```\n\nRegister in `artifacts/api-server/src/index.ts` alongside existing routers.\n\n### 3.4 Skills Page Refactor\n\nTransform `artifact"
+      },
+      {
+        "source_file": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+        "line": 406,
+        "context": "d change to catch INSERT/migration mismatches:\n\n```python\nimport re\n\nwith open(\"artifacts/api-server/src/index.ts\") as f:\n    migration_src = f.read()\n\nwith open(\"artifacts/api-server/src/seed."
+      }
+    ],
+    "reference_count": 4
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+      "exists": true,
+      "bytes": 24575,
+      "sha256": "8c06c5f6092feaaf9680b60bd45bc6797d140fb43132233f3a5d03e21a621aa0",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+      "exists": true,
+      "bytes": 24575,
+      "sha256": "8c06c5f6092feaaf9680b60bd45bc6797d140fb43132233f3a5d03e21a621aa0",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+      "exists": true,
+      "bytes": 24575,
+      "sha256": "8c06c5f6092feaaf9680b60bd45bc6797d140fb43132233f3a5d03e21a621aa0",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+      "exists": true,
+      "bytes": 24575,
+      "sha256": "8c06c5f6092feaaf9680b60bd45bc6797d140fb43132233f3a5d03e21a621aa0",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-front-end",
+    "component:frontend_canonicalization"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

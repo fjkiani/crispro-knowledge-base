@@ -1,0 +1,32 @@
+{
+  "id": "code_blocks:/mnt/results/HYGIENE_DELETE_PROOF.md",
+  "type": "code_block_index",
+  "name": "Code blocks — HYGIENE_DELETE_PROOF.md",
+  "what_it_solves": "Index of every fenced code block in '/mnt/results/HYGIENE_DELETE_PROOF.md'.",
+  "how_it_solves": "Extracted with `RE_CODE_BLOCK`; each block carries language, starting line, byte count, and a 400-char preview.",
+  "why_it_exists": "Reports embed code snippets that are load-bearing (e.g. class definitions, config JSON); this makes them addressable without re-reading the parent file.",
+  "attributes": {
+    "block_count": 1,
+    "blocks": [
+      {
+        "lang": "gitignore",
+        "line": 24,
+        "bytes": 105,
+        "preview": "# backend code belongs in oncology-backend\n*.py\n\n*.backup\n\n# place docs in /docs at repo root\nsrc/**/*.md"
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/HYGIENE_DELETE_PROOF.md",
+      "exists": true,
+      "bytes": 2502,
+      "sha256": "ed17f55f8fa1bcbb522f6aacbb089c4562339a994ae85413d20b41e162e3ad11",
+      "mtime_iso": "2026-05-05T07:04:40+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

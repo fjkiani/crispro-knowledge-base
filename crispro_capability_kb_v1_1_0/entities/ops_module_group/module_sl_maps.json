@@ -1,0 +1,26 @@
+{
+  "id": "module:sl_maps",
+  "type": "ops_module_group",
+  "name": "Module — SL countermeasure maps",
+  "what_it_solves": "Group entity for the SL countermeasure map family: sl_countermeasure_map.csv + sl_map_summary.md and any successor variants.",
+  "how_it_solves": "Declared as a grouper.",
+  "why_it_exists": "Prevents dangling cross_refs and makes the SL-map family addressable in one entity.",
+  "attributes": {
+    "member_families": [
+      "sl_countermeasure_map:*",
+      "sl_map_summary:*"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "user_memory:sl_maps",
+      "note": "grouper — not backed by a single file"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep_patch"
+}

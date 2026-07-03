@@ -1,0 +1,232 @@
+{
+  "id": "dbgap_access_pack:dbgap_phs003428_variable_dictionary.csv",
+  "type": "dbgap_access_pack",
+  "name": "dbgap_phs003428_variable_dictionary.csv",
+  "what_it_solves": "dbgap_access_pack artifact dbgap_phs003428_variable_dictionary.csv",
+  "how_it_solves": "Auto-parsed by extension.",
+  "why_it_exists": "Every access pack / SL map / gap-lineage report is a durable operational asset — must be addressable.",
+  "attributes": {
+    "header": [
+      "table",
+      "table_id",
+      "var_id",
+      "var_name",
+      "description",
+      "type",
+      "unit",
+      "encoded_values",
+      "is_key_outcome"
+    ],
+    "row_count": 66,
+    "sample_rows": [
+      [
+        "Subject",
+        "pht013849.v1",
+        "phv00532544.v1",
+        "SUBJECT_ID",
+        "Subject ID",
+        "string",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Subject",
+        "pht013849.v1",
+        "phv00532545.v1",
+        "CONSENT",
+        "Consent group as determined by DAC",
+        "encoded value",
+        "",
+        "1=Disease-Specific (Cancer, COL) (DS-CA-COL)",
+        ""
+      ],
+      [
+        "Subject",
+        "pht013849.v1",
+        "phv00532546.v1",
+        "SEX",
+        "Genetically estimated sex (via PLINK)",
+        "encoded value",
+        "",
+        "1=Male; 2=Female; UNK=Unknown",
+        ""
+      ]
+    ],
+    "column_ranges": {
+      "table": {
+        "categorical": true,
+        "top_values": [
+          [
+            "Subject_Phenotypes",
+            57
+          ],
+          [
+            "Sample_Attributes",
+            4
+          ],
+          [
+            "Subject",
+            3
+          ]
+        ],
+        "unique_count": 4
+      },
+      "table_id": {
+        "categorical": true,
+        "top_values": [
+          [
+            "pht013851.v1",
+            57
+          ],
+          [
+            "pht013852.v1",
+            4
+          ],
+          [
+            "pht013849.v1",
+            3
+          ]
+        ],
+        "unique_count": 4
+      },
+      "var_id": {
+        "categorical": true,
+        "top_values": [
+          [
+            "phv00532544.v1",
+            1
+          ],
+          [
+            "phv00532545.v1",
+            1
+          ],
+          [
+            "phv00532546.v1",
+            1
+          ]
+        ],
+        "unique_count": 66
+      },
+      "var_name": {
+        "categorical": true,
+        "top_values": [
+          [
+            "SUBJECT_ID",
+            3
+          ],
+          [
+            "SAMPLE_ID",
+            2
+          ],
+          [
+            "CONSENT",
+            1
+          ]
+        ],
+        "unique_count": 63
+      },
+      "description": {
+        "categorical": true,
+        "top_values": [
+          [
+            "Subject ID",
+            3
+          ],
+          [
+            "Sample ID",
+            2
+          ],
+          [
+            "Consent group as determined by DAC",
+            1
+          ]
+        ],
+        "unique_count": 63
+      },
+      "type": {
+        "categorical": true,
+        "top_values": [
+          [
+            "encoded value",
+            28
+          ],
+          [
+            "decimal",
+            27
+          ],
+          [
+            "string",
+            11
+          ]
+        ],
+        "unique_count": 3
+      },
+      "unit": {
+        "categorical": true,
+        "top_values": [
+          [
+            "",
+            39
+          ],
+          [
+            "pg/mL",
+            12
+          ],
+          [
+            "ng/mL",
+            10
+          ]
+        ],
+        "unique_count": 7
+      },
+      "encoded_values": {
+        "categorical": true,
+        "top_values": [
+          [
+            "NA=Missing",
+            25
+          ],
+          [
+            "",
+            10
+          ],
+          [
+            "0=No; 1=Yes; NA=Missing",
+            6
+          ]
+        ],
+        "unique_count": 24
+      },
+      "is_key_outcome": {
+        "categorical": true,
+        "top_values": [
+          [
+            "",
+            57
+          ],
+          [
+            "YES",
+            9
+          ]
+        ],
+        "unique_count": 2
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/dbgap_phs003428_variable_dictionary.csv",
+      "exists": true,
+      "bytes": 8888,
+      "sha256": "ff71b476794aa6c4e2e117b26409f3ac11a67c8fb80276c2dd80d49e972b523e",
+      "mtime_iso": "2026-05-13T07:20:46+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:access_packs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

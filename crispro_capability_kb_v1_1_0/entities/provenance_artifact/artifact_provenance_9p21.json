@@ -1,0 +1,26 @@
+{
+  "id": "artifact:provenance_9p21",
+  "type": "provenance_artifact",
+  "name": "9p21 provenance memo (2026-06-24)",
+  "what_it_solves": "Provenance memo capturing which sources justify each 9p21 claim.",
+  "how_it_solves": "PROVENANCE_2026-06-24.md lists PDF/citation → derived value → downstream consumer.",
+  "why_it_exists": "Enforces the same 'no free-text tier assertion' rule at the audit-artefact level.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/PROVENANCE_2026-06-24.md",
+      "exists": true,
+      "bytes": 18203,
+      "sha256": "33ca2c9594e871fba7b307a7d2dfaf7b2d18f06c1408503aab16f342368cdd0d",
+      "mtime_iso": "2026-06-25T03:41:42+00:00"
+    }
+  ],
+  "cross_refs": [
+    "artifact:experimental_design_9p21",
+    "artifact:double_hit_vulnerabilities",
+    "artifact:collaboration_value_proposition"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:moat_and_governance"
+}

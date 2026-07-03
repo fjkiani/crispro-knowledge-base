@@ -1,0 +1,47 @@
+{
+  "id": "endpoint_ref:POST /api/skills/:id/benchmark",
+  "type": "endpoint_reference",
+  "name": "POST /api/skills/:id/benchmark",
+  "what_it_solves": "HTTP endpoint 'POST /api/skills/:id/benchmark' referenced in the architecture / hardening corpus.",
+  "how_it_solves": "Regex `(GET|POST|PUT|DELETE|PATCH)\\s+/…` captured with source_file + line + context.",
+  "why_it_exists": "Every route claim in an audit is testable; this enumerates them so consumers can diff against the live server.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+        "line": 154,
+        "context": "lls to tenant, no workflow context)\n- \"Benchmark\" button → `POST /api/skills/:id/benchmark` (isolated benchmark, no shared rubric)\n- Category tag (Fin"
+      },
+      {
+        "source_file": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+        "line": 326,
+        "context": "d skill categories.\n// Called by: POST /api/workflows/runs, POST /api/skills/:id/benchmark (when invoked, not just benchmarked)\n```\n\nThis is the missi"
+      }
+    ],
+    "reference_count": 2
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+      "exists": true,
+      "bytes": 24575,
+      "sha256": "8c06c5f6092feaaf9680b60bd45bc6797d140fb43132233f3a5d03e21a621aa0",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+      "exists": true,
+      "bytes": 24575,
+      "sha256": "8c06c5f6092feaaf9680b60bd45bc6797d140fb43132233f3a5d03e21a621aa0",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    }
+  ],
+  "cross_refs": [
+    "endpoint:sl",
+    "endpoint:bundle",
+    "layer:output"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

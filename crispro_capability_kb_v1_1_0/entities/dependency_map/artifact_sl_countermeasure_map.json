@@ -1,0 +1,25 @@
+{
+  "id": "artifact:sl_countermeasure_map",
+  "type": "dependency_map",
+  "name": "SL countermeasure map (CSV)",
+  "what_it_solves": "Table mapping each SL vulnerability to the countermeasure(s) available (drug/mechanism/development stage).",
+  "how_it_solves": "sl_countermeasure_map.csv — CSV consumed by the SL engine's kb/ and by the Ayesha bundle for 'what could we do' outputs.",
+  "why_it_exists": "Explicit vulnerability→drug map avoids re-deriving countermeasures per case at request time.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/sl_countermeasure_map.csv",
+      "exists": true,
+      "bytes": 280652,
+      "sha256": "e8b810f6990a166414e7a871387cc90d6cfa7df2a4b4b68e319f8316131eecda",
+      "mtime_iso": "2026-05-12T17:45:54+00:00"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality",
+    "component:ayesha_bundle_waterfall"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:operations_and_access"
+}

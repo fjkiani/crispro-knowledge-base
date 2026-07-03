@@ -1,0 +1,166 @@
+{
+  "id": "dbgap_access_pack:dbgap_phs003428_institution_intake_minimal.csv",
+  "type": "dbgap_access_pack",
+  "name": "dbgap_phs003428_institution_intake_minimal.csv",
+  "what_it_solves": "dbgap_access_pack artifact dbgap_phs003428_institution_intake_minimal.csv",
+  "how_it_solves": "Auto-parsed by extension.",
+  "why_it_exists": "Every access pack / SL map / gap-lineage report is a durable operational asset — must be addressable.",
+  "attributes": {
+    "header": [
+      "item_id",
+      "item",
+      "collect_from",
+      "needed_for",
+      "days_to_collect",
+      "parallel_with_ctep_review"
+    ],
+    "row_count": 9,
+    "sample_rows": [
+      [
+        "SO_NAME",
+        "Institutional Signing Official full name",
+        "CrisPRO/Brenus leadership",
+        "DAR countersignature",
+        "1-2",
+        "YES"
+      ],
+      [
+        "SO_EMAIL",
+        "SO institutional email",
+        "SO directly",
+        "DAR countersignature",
+        "1-2",
+        "YES"
+      ],
+      [
+        "SO_ERA_ID",
+        "SO eRA Commons username",
+        "SO directly (register at https://public.era.nih.gov/commonsplus if needed)",
+        "DAR countersignature",
+        "1-3",
+        "YES"
+      ]
+    ],
+    "column_ranges": {
+      "item_id": {
+        "categorical": true,
+        "top_values": [
+          [
+            "SO_NAME",
+            1
+          ],
+          [
+            "SO_EMAIL",
+            1
+          ],
+          [
+            "SO_ERA_ID",
+            1
+          ]
+        ],
+        "unique_count": 9
+      },
+      "item": {
+        "categorical": true,
+        "top_values": [
+          [
+            "Institutional Signing Official full name",
+            1
+          ],
+          [
+            "SO institutional email",
+            1
+          ],
+          [
+            "SO eRA Commons username",
+            1
+          ]
+        ],
+        "unique_count": 9
+      },
+      "collect_from": {
+        "categorical": true,
+        "top_values": [
+          [
+            "IT Director",
+            3
+          ],
+          [
+            "CrisPRO/Brenus leadership",
+            1
+          ],
+          [
+            "SO directly",
+            1
+          ]
+        ],
+        "unique_count": 7
+      },
+      "needed_for": {
+        "categorical": true,
+        "top_values": [
+          [
+            "DAR countersignature",
+            3
+          ],
+          [
+            "DAR security attestation",
+            3
+          ],
+          [
+            "DAR IRB field",
+            2
+          ]
+        ],
+        "unique_count": 4
+      },
+      "days_to_collect": {
+        "categorical": true,
+        "top_values": [
+          [
+            "1-2",
+            4
+          ],
+          [
+            "1-3",
+            2
+          ],
+          [
+            "2-5",
+            1
+          ]
+        ],
+        "unique_count": 5
+      },
+      "parallel_with_ctep_review": {
+        "categorical": true,
+        "top_values": [
+          [
+            "YES",
+            8
+          ],
+          [
+            "YES (submit today)",
+            1
+          ]
+        ],
+        "unique_count": 2
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/dbgap_phs003428_institution_intake_minimal.csv",
+      "exists": true,
+      "bytes": 1015,
+      "sha256": "ee1c0c68c8b7ef6665e57f98f2cc5e51707f167e98447d8b444a05b53ac845c2",
+      "mtime_iso": "2026-05-13T09:17:36+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:access_packs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

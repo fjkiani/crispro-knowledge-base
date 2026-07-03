@@ -1,0 +1,116 @@
+{
+  "id": "code_blocks:/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+  "type": "code_block_index",
+  "name": "Code blocks — FRONTEND_AUDIT_AND_FIX_PLAN.md",
+  "what_it_solves": "Index of every fenced code block in '/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md'.",
+  "how_it_solves": "Extracted with `RE_CODE_BLOCK`; each block carries language, starting line, byte count, and a 400-char preview.",
+  "why_it_exists": "Reports embed code snippets that are load-bearing (e.g. class definitions, config JSON); this makes them addressable without re-reading the parent file.",
+  "attributes": {
+    "block_count": 15,
+    "blocks": [
+      {
+        "lang": "",
+        "line": 22,
+        "bytes": 589,
+        "preview": "sl_agent/           ← Full FastAPI backend (app.py, routes.py, kb_routes.py, multimodal_routes.py)\nsl_agent/core/      ← sl_engine.py, drug_mapper.py, pathway_annotator.py, orchestrator.py\nsl_agent/kb/        ← CIViC, ClinVar, JAX, CGI clients\nsl_agent/multimodal/ ← literature_receipts.py, matrix_builder.py, modality_fuser.py, pharmacologic_analyzer.py, replication_stress.py\nsl_patch/           ← "
+      },
+      {
+        "lang": "js",
+        "line": 138,
+        "bytes": 129,
+        "preview": "const requestBody = buildRequest({ ...options, include_io_selection: true, max_trials: 50 });\ngeneratePlan(profile, requestBody);"
+      },
+      {
+        "lang": "js",
+        "line": 143,
+        "bytes": 51,
+        "preview": "const requestBody = { ...baseRequest, ...options };"
+      },
+      {
+        "lang": "js",
+        "line": 150,
+        "bytes": 77,
+        "preview": "const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';"
+      },
+      {
+        "lang": "js",
+        "line": 160,
+        "bytes": 124,
+        "preview": "const sessionStr = localStorage.getItem('mock_auth_session');\n// ...\nconst t2 = localStorage.getItem('supabase_auth_token');"
+      },
+      {
+        "lang": "js",
+        "line": 173,
+        "bytes": 56,
+        "preview": "rollupOptions: {\n  output: { manualChunks: undefined }\n}"
+      },
+      {
+        "lang": "",
+        "line": 226,
+        "bytes": 504,
+        "preview": "src/components/orchestrator/Analysis/SyntheticLethality/sl_agent/   (entire dir)\nsrc/components/orchestrator/Analysis/SyntheticLethality/sl_patch/    (entire dir)\nsrc/components/orchestrator/Analysis/SyntheticLethality/sl_patch_rs/ (entire dir)\nsrc/components/orchestrator/Analysis/SyntheticLethality/sl_patch_rs_2/ (entire dir)\nsrc/components/research/__init__.py\nsrc/pages/ResearchPortal/__init__.p"
+      },
+      {
+        "lang": "",
+        "line": 244,
+        "bytes": 258,
+        "preview": "src/components/ayesha/DrugRankingPanel.jsx.backup\nsrc/components/vus/EfficacyModal.jsx.backup\nsrc/pages/AyeshaCompleteCare.jsx.bak2\nsrc/pages/AyeshaTherapyFit.jsx.bak_legacy\nsrc/pages/OrchestratorDashboard.jsx.backup\nsrc/pages/PatientHomeDashboard.jsx.backup"
+      },
+      {
+        "lang": "yaml",
+        "line": 279,
+        "bytes": 94,
+        "preview": "rootDir: oncology-coPilot\nbuildCommand: npm install && npm run build\nstaticPublishPath: ./dist"
+      },
+      {
+        "lang": "yaml",
+        "line": 286,
+        "bytes": 282,
+        "preview": "services:\n  - type: web\n    name: crispro-frontend\n    env: static\n    buildCommand: npm install && npm run build\n    staticPublishPath: dist\n    envVars:\n      - key: NODE_VERSION\n        value: 18.x\n      - key: VITE_API_ROOT\n        value: https://crispro-backend-v3.onrender.com"
+      },
+      {
+        "lang": "js",
+        "line": 320,
+        "bytes": 77,
+        "preview": "const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';"
+      },
+      {
+        "lang": "js",
+        "line": 325,
+        "bytes": 141,
+        "preview": "import { API_ROOT } from '../../../lib/apiConfig';\n// Remove the const API_BASE_URL line\n// Replace all API_BASE_URL references with API_ROOT"
+      },
+      {
+        "lang": "js",
+        "line": 339,
+        "bytes": 199,
+        "preview": "import { supabase } from '../services/supabaseClient';\n\nconst getAuthToken = async () => {\n  const { data: { session } } = await supabase.auth.getSession();\n  return session?.access_token || null;\n};"
+      },
+      {
+        "lang": "js",
+        "line": 368,
+        "bytes": 142,
+        "preview": "export function getSyntheticLethalityUrl() {\n  return `${API_ROOT}/api/agents/synthetic_lethality`; // was /api/guidance/synthetic_lethality\n}"
+      },
+      {
+        "lang": "js",
+        "line": 395,
+        "bytes": 428,
+        "preview": "manualChunks: {\n  'vendor-react': ['react', 'react-dom', 'react-router-dom'],\n  'vendor-mui': ['@mui/material', '@mui/icons-material', '@mui/lab', '@mui/system'],\n  'vendor-charts': ['recharts', '@mui/x-charts'],\n  'vendor-pdf': ['@react-pdf/renderer'],\n  'vendor-ai': ['openai', '@google/generative-ai'],\n  'vendor-web3': ['@thirdweb-dev/react', '@thirdweb-dev/sdk', 'ethers'],\n  'vendor-supabase': "
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+      "exists": true,
+      "bytes": 24805,
+      "sha256": "f31945d7d1d131535769da391ab19546f2829f86263b1f5e49c49af1619166c4",
+      "mtime_iso": "2026-05-05T06:38:41+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

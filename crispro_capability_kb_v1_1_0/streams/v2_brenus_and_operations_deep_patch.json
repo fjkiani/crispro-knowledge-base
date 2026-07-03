@@ -1,0 +1,93 @@
+{
+  "stream_id": "brenus_and_operations_deep_patch",
+  "stream_name": "PATCH — deep_brenus grouper modules (aacr_tracker, sl_maps, access_packs)",
+  "generated_at_utc": "2026-07-03T21:43:23.338718+00:00",
+  "files_audited": [],
+  "audit_method": {
+    "grouper_purpose": "These are governance-level umbrella entities to prevent dangling cross_refs; they don't add new content, they add graph structure."
+  },
+  "entities": [
+    {
+      "id": "module:aacr_tracker",
+      "type": "ops_module_group",
+      "name": "Module — AACR tracker",
+      "what_it_solves": "Group entity for the AACR 2026 lead-tracker family: session navigation, GTM bridge, faceted filtering, schema-A master JSON, and lead audit tracker CSV.",
+      "how_it_solves": "Declared as a grouper so per-file entities in the AACR family can cross-reference a single owner.",
+      "why_it_exists": "Prevents 19 dangling cross_refs across v2 brenus stream; makes 'the AACR tracker' addressable as one entity.",
+      "attributes": {
+        "member_families": [
+          "aacr:schema_a_root",
+          "aacr:sessions:*",
+          "docs:AACR_SESSION_NAVIGATION.md",
+          "docs:GTM_SCHEMA_B_BRIDGE.md",
+          "docs:INTEL_FACETED_FILTERING.md",
+          "csv:CrisPRO - AACR 2026 Lead Audit Tracker - Sheet1.csv"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "user_memory:aacr_tracker",
+          "note": "grouper — not backed by a single file"
+        }
+      ],
+      "cross_refs": [
+        "module:brenus_diligence"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "module:sl_maps",
+      "type": "ops_module_group",
+      "name": "Module — SL countermeasure maps",
+      "what_it_solves": "Group entity for the SL countermeasure map family: sl_countermeasure_map.csv + sl_map_summary.md and any successor variants.",
+      "how_it_solves": "Declared as a grouper.",
+      "why_it_exists": "Prevents dangling cross_refs and makes the SL-map family addressable in one entity.",
+      "attributes": {
+        "member_families": [
+          "sl_countermeasure_map:*",
+          "sl_map_summary:*"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "user_memory:sl_maps",
+          "note": "grouper — not backed by a single file"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "module:access_packs",
+      "type": "ops_module_group",
+      "name": "Module — access packs",
+      "what_it_solves": "Group entity for the dataset access-request packs: dbGaP phs003428 (application draft, blocker table, DAR checklist, dependency graph, email, missing fields, public metadata, variable dictionary) and the GBM/CRC/GEO/GLASS equivalents.",
+      "how_it_solves": "Declared as a grouper.",
+      "why_it_exists": "Access packs are recurring operational assets; one grouper keeps them findable and closes 12 dangling cross_refs from the deep audit.",
+      "attributes": {
+        "member_families": [
+          "dbgap_access_pack:*",
+          "gbm_access_pack:*",
+          "crc_access_pack:*",
+          "geo_access_pack:*",
+          "glass_access_pack:*"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "user_memory:access_packs",
+          "note": "grouper — not backed by a single file"
+        }
+      ],
+      "cross_refs": [],
+      "gaps_still_open": []
+    }
+  ],
+  "gaps_still_open_stream_level": [],
+  "cross_stream_refs": []
+}

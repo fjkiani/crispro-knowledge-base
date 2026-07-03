@@ -1,0 +1,34 @@
+{
+  "id": "code_module:ayesha_trials/routes.py",
+  "type": "code_module_reference",
+  "name": "ayesha_trials/routes.py",
+  "what_it_solves": "Python module 'ayesha_trials/routes.py' referenced by the architecture / hardening audit corpus.",
+  "how_it_solves": "Extracted by regex `[/\\w._-]+\\.py(?::\\d+)?` — every mention captured with source_file + line + context window.",
+  "why_it_exists": "Enumerates the concrete code surface the architecture reports point at, so downstream consumers can walk from a claim to an actual file:line without re-reading the whole report.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+        "line": 141,
+        "context": "e` |\n| `ayesha_l1.py` | `/api/ayesha` | `complete_care_v2`, L1 therapy fit |\n| `ayesha_trials/routes.py` | `/api/ayesha/trials` | `match_orchestrator`, `scoring_engine`, `reasoning_ge"
+      }
+    ],
+    "reference_count": 1
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "exists": true,
+      "bytes": 19314,
+      "sha256": "4c29bc6cecf7bcc6ba7a1232e3fa3a19d50c02bc1a065ea95f1bafc6f1a9c326",
+      "mtime_iso": "2026-05-05T06:24:21+00:00"
+    }
+  ],
+  "cross_refs": [
+    "layer:engines",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "code_module:src/components/SyntheticLethality/hooks/useSyntheticLethality.js",
+  "type": "frontend_module_reference",
+  "name": "src/components/SyntheticLethality/hooks/useSyntheticLethality.js",
+  "what_it_solves": "Frontend module 'src/components/SyntheticLethality/hooks/useSyntheticLethality.js' referenced by the architecture / frontend audit corpus.",
+  "how_it_solves": "Extracted by regex for .ts/.tsx/.js/.jsx paths.",
+  "why_it_exists": "Enumerates the concrete frontend surface (crispro-front-end) so any SL/Ayesha UI claim can be traced to a real file.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/SL_FRONTEND_CANONICALIZATION.md",
+        "line": 64,
+        "context": "rl()` (imported from `ayeshaApi`) — already correct after fix #1.\n\n---\n\n### 5. `src/components/SyntheticLethality/hooks/useSyntheticLethality.js`\n\n```js\n// Before (JSDoc comment)\n// 1. /api/guidance/synthetic_lethality - Mai"
+      }
+    ],
+    "reference_count": 1
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/SL_FRONTEND_CANONICALIZATION.md",
+      "exists": true,
+      "bytes": 2195,
+      "sha256": "24c2c4ddaaa99557ee18e4ded3803d4dff35bf20fb16480fcefbe3658230a098",
+      "mtime_iso": "2026-05-05T07:04:43+00:00"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-front-end",
+    "component:frontend_canonicalization"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

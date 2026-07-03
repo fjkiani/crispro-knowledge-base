@@ -1,0 +1,28 @@
+{
+  "id": "module:brenus_diligence",
+  "type": "diligence_module",
+  "name": "Brenus diligence module (BreAK CRC-001 / STC-1010)",
+  "what_it_solves": "Hard-coded diligence guardrails + canon-frozen blocker registry for the Brenus BreAK CRC-001 program (anchor: STC-1010 haptenated whole-cell vaccine).",
+  "how_it_solves": "Module holds: (1) canon-frozen blocker registry preventing silent rewrites of prior downgrades/quarantines, (2) hard-coded guardrails for BreAK CRC-001 protocol claims, (3) diligence checkpoints reconciled against the 8D remediation state and PATH A formula lock.",
+  "why_it_exists": "CRISPRO_REPO_ARCHITECTURE_REPORT calls the diligence module 'the most important discovery' — it isolates the Brenus-specific rules from the general SL engine so protocol drift (mFOLFOX6 ± bevacizumab backbone, STC-1010 vaccine details) can't leak into other cases.",
+  "attributes": {
+    "anchor_program": "STC-1010 (haptenated whole-cell therapeutic vaccine, MSS CRC)",
+    "trial_name": "BreAK CRC-001",
+    "backbone": "mFOLFOX6 +/- bevacizumab",
+    "scientific_anchor": "Alzeeb et al. 2024 (DOI: 10.3389/fonc.2024.1427428)"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+      "note": "'most important discovery' anchor"
+    }
+  ],
+  "cross_refs": [
+    "governance:8d_remediation",
+    "governance:path_a_formula",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:brenus_and_deliverables"
+}

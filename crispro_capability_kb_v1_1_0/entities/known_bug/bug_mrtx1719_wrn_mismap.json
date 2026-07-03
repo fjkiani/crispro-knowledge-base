@@ -1,0 +1,36 @@
+{
+  "id": "bug:mrtx1719_wrn_mismap",
+  "type": "known_bug",
+  "name": "MRTX1719 → WRN axis mismap (OPEN)",
+  "what_it_solves": "pharmacologic_analyzer maps MRTX1719 to the WRN axis, but MRTX1719 is a PRMT5/MTAP-cooperative agent — the WRN axis is wrong.",
+  "how_it_solves": "Current code: `'mrtx1719': 'wrn'` at pharmacologic_analyzer.py:66. Correct mapping per Bev2026 + Engstrom 2023 (Cancer Discov 13:2412-2431) + Pettus 2025 (J Med Chem 68:6932-6954): `'mrtx1719': 'prmt5_mtap_cooperative'` — but that axis does not exist yet in the CandidateAxis enum.",
+  "why_it_exists": "Silent axis mislabelling propagates through the SL engine's pharmacology contribution; any downstream tier decision referencing MRTX1719 for WRN is currently wrong.",
+  "attributes": {
+    "location": "pharmacologic_analyzer.py:66",
+    "current_mapping": "'mrtx1719': 'wrn'",
+    "correct_mapping": "'mrtx1719': 'prmt5_mtap_cooperative'",
+    "target_axis_status": "NOT_YET_IN_ENUM",
+    "status": "OPEN",
+    "evidence_sources": [
+      "Bev2026",
+      "Engstrom 2023 Cancer Discov 13:2412-2431",
+      "Pettus 2025 J Med Chem 68:6932-6954"
+    ],
+    "no_fix_commit_as_of": "2026-06"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "fjkiani/Brenus or crispro-backend-v2:pharmacologic_analyzer.py:66",
+      "note": "bug location — not in this KB corpus"
+    }
+  ],
+  "cross_refs": [
+    "axis:WRN",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [
+    "Fix requires (1) adding PRMT5_MTAP_COOPERATIVE axis to the enum, (2) re-tiering, (3) regression tests, (4) canonical receipt for the new axis."
+  ],
+  "_stream": "v1:brenus_and_deliverables"
+}

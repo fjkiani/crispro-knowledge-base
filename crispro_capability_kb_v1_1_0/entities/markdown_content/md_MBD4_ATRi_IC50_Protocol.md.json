@@ -1,0 +1,190 @@
+{
+  "id": "md:MBD4_ATRi_IC50_Protocol.md",
+  "type": "markdown_content",
+  "name": "MBD4_ATRi_IC50_Protocol.md",
+  "what_it_solves": "Structured view of MBD4_ATRi_IC50_Protocol.md: heading tree + first 2000 chars.",
+  "how_it_solves": "Regex heading extract + preview slice.",
+  "why_it_exists": "Turns evidence-narrative markdowns into a searchable heading index without duplicating the full body.",
+  "attributes": {
+    "byte_length": 12254,
+    "heading_count": 32,
+    "headings": [
+      {
+        "level": 1,
+        "title": "Isogenic ATRi IC50 Assay Protocol",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "MBD4-LOF × ATR Inhibitor Synthetic Lethality — Decisive Experiment",
+        "line": 2
+      },
+      {
+        "level": 2,
+        "title": "1. Scientific Rationale",
+        "line": 10
+      },
+      {
+        "level": 3,
+        "title": "Why this experiment is decisive",
+        "line": 12
+      },
+      {
+        "level": 3,
+        "title": "Biological hypothesis being tested",
+        "line": 20
+      },
+      {
+        "level": 2,
+        "title": "2. Cell Lines",
+        "line": 27
+      },
+      {
+        "level": 3,
+        "title": "Primary comparison",
+        "line": 29
+      },
+      {
+        "level": 3,
+        "title": "Cell line acquisition priority",
+        "line": 35
+      },
+      {
+        "level": 3,
+        "title": "Cell line validation before assay",
+        "line": 40
+      },
+      {
+        "level": 2,
+        "title": "3. Compounds",
+        "line": 49
+      },
+      {
+        "level": 3,
+        "title": "Primary arms (monotherapy)",
+        "line": 51
+      },
+      {
+        "level": 3,
+        "title": "Follow-on arm (combination — Arm B, planned after monotherapy readout)",
+        "line": 65
+      },
+      {
+        "level": 2,
+        "title": "4. Assay Design",
+        "line": 75
+      },
+      {
+        "level": 3,
+        "title": "Format",
+        "line": 77
+      },
+      {
+        "level": 3,
+        "title": "Dose-response design",
+        "line": 84
+      },
+      {
+        "level": 3,
+        "title": "Plate layout (96-well)",
+        "line": 98
+      },
+      {
+        "level": 2,
+        "title": "5. Protocol",
+        "line": 109
+      },
+      {
+        "level": 3,
+        "title": "Day −1: Cell seeding",
+        "line": 111
+      },
+      {
+        "level": 3,
+        "title": "Day 0: Compound addition",
+        "line": 117
+      },
+      {
+        "level": 3,
+        "title": "Day 5: Readout",
+        "line": 123
+      },
+      {
+        "level": 3,
+        "title": "Data processing",
+        "line": 129
+      },
+      {
+        "level": 2,
+        "title": "6. Controls and Quality Criteria",
+        "line": 140
+      },
+      {
+        "level": 3,
+        "title": "Assay quality gates (must pass before interpreting IC50 data)",
+        "line": 142
+      },
+      {
+        "level": 3,
+        "title": "Interpretation thresholds",
+        "line": 151
+      },
+      {
+        "level": 2,
+        "title": "7. Follow-On Experiments (Conditional on Monotherapy Result)",
+        "line": 161
+      },
+      {
+        "level": 3,
+        "title": "If monotherapy shows ≥2x sensitization:",
+        "line": 163
+      },
+      {
+        "level": 3,
+        "title": "If monotherapy is null:",
+        "line": 182
+      },
+      {
+        "level": 2,
+        "title": "8. Timeline",
+        "line": 190
+      },
+      {
+        "level": 2,
+        "title": "9. Reporting Standards",
+        "line": 206
+      },
+      {
+        "level": 3,
+        "title": "Minimum reporting requirements for any publication or presentation",
+        "line": 208
+      },
+      {
+        "level": 3,
+        "title": "What NOT to report",
+        "line": 217
+      },
+      {
+        "level": 2,
+        "title": "10. Decision Framework",
+        "line": 224
+      }
+    ],
+    "preview": "# Isogenic ATRi IC50 Assay Protocol\n## MBD4-LOF × ATR Inhibitor Synthetic Lethality — Decisive Experiment\n\n**Document version:** 1.0  \n**Date:** 2026-04-27  \n**Context:** This protocol is the decisive next experiment for the MBD4 × ATR synthetic lethality hypothesis. All public-data analyses (A1–A9) are structurally non-resolving due to MSI-H collinearity and lineage-composition confounding. This isogenic assay removes both confounds.\n\n---\n\n## 1. Scientific Rationale\n\n### Why this experiment is decisive\nPublic pharmacogenomic benchmarking (A9, GDSC2) cannot resolve the ATRi SL question for MBD4-LOF because:\n- 20/21 MBD4-LOF cell lines in DepMap are MSI-H — ATRi sensitivity in these lines reflects MMR deficiency (Wang 2023), not MBD4-LOF\n- The single MSS MBD4-LOF line (SW 1783) is a glioma — lineage-mismatched and n=1\n- ATM-LOF, the published positive-control SL partner for ATRi, is also non-detectable in pan-cancer GDSC2 data (d=+0.121, wrong direction), confirming that context-specific SL findings do not generalize across lineages in public datasets\n\nAn isogenic HAP1 WT vs MBD4-KO comparison eliminates both confounds: HAP1 is near-haploid, MSS, and the KO is the only genetic difference between the two conditions.\n\n### Biological hypothesis being tested\nMBD4 loss → accumulation of unrepaired G:T mismatches → elevated replication stress → increased dependence on ATR-mediated replication fork stabilization → selective sensitivity to ATR inhibition.\n\n**Positive control for the assay:** Gemcitabine IC50 in HAP1-MBD4-KO vs WT (Chabot 2022: ~8.7x sensitization). This must be reproduced before ATRi data are interpreted.\n\n---\n\n## 2. Cell Lines\n\n### Primary comparison\n| Line | Source | Genotype | Catalog/RRID | Notes |\n|------|--------|----------|-------------|-------|\n| HAP1 parental | Horizon Discovery | WT (C631) | HZGHC000921c000 | Near-haploid CML; MSS |\n| HAP1-MBD4-KO | Creative Biomart (P1) or Rodrigues lab (P1) | 2bp del exon 2 (p.E314KfsTer4) | CL-0108 / CVCL_SX48 |"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/MBD4_ATRi_IC50_Protocol.md",
+      "exists": true,
+      "bytes": 12486,
+      "sha256": "6e956320f15798880c740c91966b82a8d8ab01bf6e23e282180394e1ec73f837",
+      "mtime_iso": "2026-04-27T04:59:54+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

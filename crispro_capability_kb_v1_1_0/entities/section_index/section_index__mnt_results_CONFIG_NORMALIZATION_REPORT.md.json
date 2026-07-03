@@ -1,0 +1,66 @@
+{
+  "id": "section_index:/mnt/results/CONFIG_NORMALIZATION_REPORT.md",
+  "type": "section_index",
+  "name": "Section index — CONFIG_NORMALIZATION_REPORT.md",
+  "what_it_solves": "Section index of '/mnt/results/CONFIG_NORMALIZATION_REPORT.md': every heading with its level and starting line.",
+  "how_it_solves": "Regex `^#{1,6}\\s+(.+)$` extracted at generation time; preserves navigation without duplicating body text.",
+  "why_it_exists": "Downstream ingestors can walk the document by section without re-parsing markdown; the KB stops being an opaque blob.",
+  "attributes": {
+    "heading_count": 8,
+    "headings": [
+      {
+        "level": 1,
+        "title": "Config / Env / Auth Normalization Report",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "Section A — Env Var Normalization",
+        "line": 3
+      },
+      {
+        "level": 3,
+        "title": "Canonical Env Var Reference",
+        "line": 23
+      },
+      {
+        "level": 2,
+        "title": "Section B — render.yaml Fix",
+        "line": 34
+      },
+      {
+        "level": 1,
+        "title": "Root Directory: leave EMPTY in the Render dashboard (repo root).",
+        "line": 43
+      },
+      {
+        "level": 1,
+        "title": "package.json and vite.config.js are at the repo root.",
+        "line": 44
+      },
+      {
+        "level": 2,
+        "title": "Section C — Auth Token Normalization",
+        "line": 54
+      },
+      {
+        "level": 3,
+        "title": "Hooks Still Using Inline localStorage Reads (Not Changed in This Pass)",
+        "line": 71
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CONFIG_NORMALIZATION_REPORT.md",
+      "exists": true,
+      "bytes": 3342,
+      "sha256": "d068e515e4d22a53cc02f440946021fc7fdea1cc9f76914d06f42f4e1a0584f7",
+      "mtime_iso": "2026-05-05T07:04:43+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

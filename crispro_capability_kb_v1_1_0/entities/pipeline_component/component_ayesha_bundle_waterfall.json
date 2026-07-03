@@ -1,0 +1,54 @@
+{
+  "id": "component:ayesha_bundle_waterfall",
+  "type": "pipeline_component",
+  "name": "Ayesha bundle backend waterfall (7 stages)",
+  "what_it_solves": "Composes an end-to-end therapy-fit bundle for the front-end by chaining safety, efficacy, IO, trials, SOC, biomarker services.",
+  "how_it_solves": "Sequential waterfall: each stage reads the accumulated bundle, gates on prior outputs (e.g. PGx safety before IO recommendation), and appends its own typed subsection.",
+  "why_it_exists": "Removes duplicated cross-service logic from Layer 4 routes and centralises the ordering rules (safety-before-efficacy, mechanism-before-trial-match) that CRISPRO_HARDENING_AUDIT flagged as leaky in v2.",
+  "attributes": {
+    "stages_in_order": [
+      "WIWFM drug efficacy service",
+      "PGx safety gate integration",
+      "IO selection",
+      "SAE mechanism vector extraction",
+      "Trials service",
+      "SOC service",
+      "CA-125 service"
+    ]
+  },
+  "verbatim_evidence": [
+    {
+      "quote": "WIWFM",
+      "file": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "line": 34,
+      "found": true
+    },
+    {
+      "quote": "PGx",
+      "file": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "line": 35,
+      "found": true
+    },
+    {
+      "quote": "SAE",
+      "file": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "line": 37,
+      "found": true
+    }
+  ],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "exists": true,
+      "bytes": 19314,
+      "sha256": "4c29bc6cecf7bcc6ba7a1232e3fa3a19d50c02bc1a065ea95f1bafc6f1a9c326",
+      "mtime_iso": "2026-05-05T06:24:21+00:00"
+    }
+  ],
+  "cross_refs": [
+    "layer:output",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:architecture"
+}

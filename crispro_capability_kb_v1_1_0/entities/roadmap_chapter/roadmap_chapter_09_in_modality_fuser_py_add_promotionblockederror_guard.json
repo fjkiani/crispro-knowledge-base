@@ -1,0 +1,32 @@
+{
+  "id": "roadmap_chapter:09_in_modality_fuser_py_add_promotionblockederror_guard",
+  "type": "roadmap_chapter",
+  "name": "Ch 09 — In modality_fuser.py — add PromotionBlockedError guard",
+  "what_it_solves": "CRISPRO_SL_PHD_ROADMAP chapter 'In modality_fuser.py — add PromotionBlockedError guard' spanning lines 1250..1391.",
+  "how_it_solves": "Chapter body preview (first 2000 chars) attached; full content lives in the source file. Subheadings enumerated.",
+  "why_it_exists": "Chapter is the natural unit of the roadmap — one entity per chapter makes 'what does Ch 3.4 say about the fuser?' addressable.",
+  "attributes": {
+    "level": 1,
+    "start_line": 1250,
+    "end_line": 1391,
+    "byte_length": 5411,
+    "subheadings": [],
+    "body_preview_2000c": "\t\n\n\tclass PromotionBlockedError(Exception):\n\t    pass\n\t\n\n\tdef check_promotion_eligibility(receipt):\n\t    if receipt.powered is False and receipt.n_mut < 15:\n\t        raise PromotionBlockedError(\n\t            f\"{receipt.gene}/{receipt.axis}: promotion blocked — \"\n\t            f\"underpowered cohort (n={receipt.n_mut} < 15)\"\n\t        )\n\t9.4 Test Specification\ndef test_fancm_pending_review():\n\t    receipt = get_candidate_receipt(\"FANCM\", \"parp_inhibitors\")\n\t    assert receipt.status == \"PENDING_REVIEW\"\n\t    assert receipt.powered is False\n\t\n\n\tdef test_fancm_promotion_blocked():\n\t    \"\"\"Fuser CANNOT promote FANCM above Mechanistic.\"\"\"\n\t    result = fuser.compute_tier(\"FANCM\", CandidateAxis.PARP_INHIBITORS)\n\t    assert \"Mechanistic\" in result.tier or \"Not supported\" in result.tier\n\t    assert result.tier != \"Strong\"\n\t\n\n\tdef test_audit_queue_underpowered():\n\t    response = client.get(\"/api/v1/audit/queue\", params={\"filter\": \"underpowered\"})\n\t    genes = [e[\"gene\"] for e in response.json()[\"entries\"]]\n\t    assert \"FANCM\" in genes\n\t    assert \"FANCC\" in genes\n\t    assert \"H2AFX\" in genes\n\t________________\n\n\nChapter 10: Pancreatic + Breast Expansion (Sprint F)\n\n\nSPRINT F — CLAUDE CODE SPEC FILE\nTarget repo: crispro-backend-v3\nTarget files: literature_receipts.py + lineage_dependency/panels.py\nGoal: PDAC + TNBC frozen receipts and lineage panels\n\t10.1 PDAC Receipts\n(\"BRCA2\", CandidateAxis.PARP_INHIBITORS): EvidenceReceipt(\n\t    gene=\"BRCA2\", axis=CandidateAxis.PARP_INHIBITORS,\n\t    clinical=\"POSITIVE\",  # POLO trial, PMID 31986208\n\t    in_vitro=\"POSITIVE\",\n\t    in_vivo=\"POSITIVE\",\n\t    pmids=[\"31986208\"],\n\t    drugs=[\"olaparib\"],\n\t    mechanism=\"BRCA2 LOF → HR deficiency → PARP trapping lethality\",\n\t),\n\t\n\n\t(\"PALB2\", CandidateAxis.PARP_INHIBITORS): EvidenceReceipt(\n\t    gene=\"PALB2\", axis=CandidateAxis.PARP_INHIBITORS,\n\t    clinical=\"MIXED\",     # Case reports, no Phase III\n\t    in_vitro=\"POSITIVE\",\n\t    pmids=[\"29726975\"],\n\t    drugs=[\"olaparib\", \"rucaparib\"],\n\t    mechanism=\""
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "lines 1250..1391"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:synthetic_lethality_deep"
+}

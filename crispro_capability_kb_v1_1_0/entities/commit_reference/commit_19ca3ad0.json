@@ -1,0 +1,31 @@
+{
+  "id": "commit:19ca3ad0",
+  "type": "commit_reference",
+  "name": "Commit 19ca3ad0",
+  "what_it_solves": "Git commit SHA '19ca3ad0' referenced in the architecture / hardening / handoff corpus.",
+  "how_it_solves": "Regex-detected hex tokens filtered by neighbour keywords (commit / sha / hash / sprint).",
+  "why_it_exists": "Turns 'closed at commit 474b812' style claims into a searchable enumeration; downstream consumers can join this back to a real repo.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 38,
+        "context": "\n### 1C. Backend CORS Fixes — `crispro-backend-v2` commits `19ca3ad0` → `429e3ac5`\n\nAll fixes are committed and correct in the r"
+      }
+    ],
+    "reference_count": 1
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

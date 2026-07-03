@@ -1,0 +1,162 @@
+{
+  "id": "csv:A2_prism_results_REAL.csv",
+  "type": "csv_content",
+  "name": "A2_prism_results_REAL.csv",
+  "what_it_solves": "Parsed contents of A2_prism_results_REAL.csv: header + row count + column ranges.",
+  "how_it_solves": "csv.reader → header + row list; per column, if numeric ⇒ (n, min, max, mean); if categorical ⇒ top-3 values + unique count.",
+  "why_it_exists": "Deep pass: previous stream had file metadata only. This entity carries the actual data shape so downstream consumers can validate any claim about A1/A2/A3/… without re-parsing.",
+  "attributes": {
+    "header": [
+      "compound",
+      "n_cell_lines",
+      "spearman_r",
+      "p_value",
+      "median_auc_all",
+      "direction",
+      "p_adj_BH",
+      "data_source"
+    ],
+    "row_count": 7,
+    "sample_rows": [
+      [
+        "VE-822",
+        "470",
+        "0.024420249374203742",
+        "0.5974386788621624",
+        "0.5444004894669265",
+        "lower AUC in MBD4-low",
+        "0.7187515839358177",
+        "PRISM_Repurposing_20Q2_figshare_20564034"
+      ],
+      [
+        "MK-1775",
+        "682",
+        "0.026639685249841356",
+        "0.4873399155376896",
+        "0.735368500530514",
+        "lower AUC in MBD4-low",
+        "0.7187515839358177",
+        "PRISM_Repurposing_20Q2_figshare_20564034"
+      ],
+      [
+        "ETP-46464",
+        "465",
+        "0.03416618232723361",
+        "0.46234780561968425",
+        "0.829883857162036",
+        "lower AUC in MBD4-low",
+        "0.7187515839358177",
+        "PRISM_Repurposing_20Q2_figshare_20564034"
+      ],
+      [
+        "AZ20",
+        "458",
+        "0.024377543751264885",
+        "0.6028169336389968",
+        "0.824924431083733",
+        "lower AUC in MBD4-low",
+        "0.7187515839358177",
+        "PRISM_Repurposing_20Q2_figshare_20564034"
+      ],
+      [
+        "SCH-900776",
+        "670",
+        "-0.042287463748742704",
+        "0.27438109659682636",
+        "0.7717137381537965",
+        "higher AUC in MBD4-low",
+        "0.7187515839358177",
+        "PRISM_Repurposing_20Q2_figshare_20564034"
+      ]
+    ],
+    "column_ranges": {
+      "compound": {
+        "categorical": true,
+        "top_values": [
+          [
+            "VE-822",
+            1
+          ],
+          [
+            "MK-1775",
+            1
+          ],
+          [
+            "ETP-46464",
+            1
+          ]
+        ],
+        "unique_count": 7
+      },
+      "n_cell_lines": {
+        "n_numeric": 7,
+        "min": 458.0,
+        "max": 682.0,
+        "mean": 555.7142857142857
+      },
+      "spearman_r": {
+        "n_numeric": 7,
+        "min": -0.042287463748742704,
+        "max": 0.03416618232723361,
+        "mean": 0.005890105091743583
+      },
+      "p_value": {
+        "n_numeric": 7,
+        "min": 0.27438109659682636,
+        "max": 0.8834558457506352,
+        "mean": 0.5605504374623851
+      },
+      "median_auc_all": {
+        "n_numeric": 7,
+        "min": 0.5444004894669265,
+        "max": 0.8591448626689971,
+        "mean": 0.7325157786839823
+      },
+      "direction": {
+        "categorical": true,
+        "top_values": [
+          [
+            "lower AUC in MBD4-low",
+            4
+          ],
+          [
+            "higher AUC in MBD4-low",
+            3
+          ]
+        ],
+        "unique_count": 2
+      },
+      "p_adj_BH": {
+        "n_numeric": 7,
+        "min": 0.7187515839358177,
+        "max": 0.8834558457506352,
+        "mean": 0.7422807641950774
+      },
+      "data_source": {
+        "categorical": true,
+        "top_values": [
+          [
+            "PRISM_Repurposing_20Q2_figshare_20564034",
+            7
+          ]
+        ],
+        "unique_count": 1
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A2_prism_results_REAL.csv",
+      "exists": true,
+      "bytes": 1164,
+      "sha256": "6da76477cd1791dc3bed8806a390659b7db771ac30aafb42b2bceac254e36248",
+      "mtime_iso": "2026-04-25T07:20:57+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

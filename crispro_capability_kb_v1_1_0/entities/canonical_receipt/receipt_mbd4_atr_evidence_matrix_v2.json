@@ -1,0 +1,85 @@
+{
+  "id": "receipt:mbd4_atr_evidence_matrix_v2",
+  "type": "canonical_receipt",
+  "name": "MBD4 × ATR/WEE1 evidence matrix (v2)",
+  "what_it_solves": "The canonical evidence receipt for the MBD4 × ATR/WEE1 axis — the highest-stakes claim CrisPRO makes for this bundle.",
+  "how_it_solves": "Structured JSON with one modality_cell per evidence source (CRISPR co-dependency, CRISPR MSI-stratified, PRISM, GDSC2, TCGA-OV, UCEC survival, pan-cancer LOF, dependency probability). Each cell has a verdict + why-it-does-not-support-STRONG. The overall_verdict block is the ground truth for the tier statement.",
+  "why_it_exists": "Prevents any downstream summariser from silently upgrading MBD4 × ATR/WEE1 to STRONG. Every module reads the receipt, not memory.",
+  "attributes": {
+    "canonical_state": {
+      "gene": "MBD4",
+      "therapeutic_axis": "ATR/WEE1 (replication stress checkpoint)",
+      "current_tier": "Mechanistic candidate only",
+      "target_tier": "Strong candidate dependency axis",
+      "overall_verdict": {
+        "tier_change": "NO CHANGE",
+        "current_tier": "Mechanistic candidate only",
+        "justification": "All 5 computational modalities return NULL or MISSING. The one marginal signal (TCGA-OV RS score Wilcoxon p=0.016) uses expression as a proxy and does not survive Spearman correlation. MBD4-LOF is too rare in all public datasets (0.19% pan-cancer, 1.02% in DepMap) to power any statistical test. No published clinical trial has tested ATRi/WEE1i in MBD4-LOF patients.",
+        "fundamental_limitation": "MBD4 is a DNA repair gene — its LOF cannot be reliably proxied by expression level. The correct experimental model (isogenic MBD4-KO) is not represented in any public dataset.",
+        "path_to_upgrade": [
+          "HAP1-MBD4-KO isogenic ATRi/WEE1i IC50 assay (ceralasertib + berzosertib vs parental)",
+          "γH2AX + pCHK1 western blot at baseline in HAP1-MBD4-KO (RS marker confirmation)",
+          "MBD4-KO organoid ATRi dose-response (patient-derived, UCEC preferred)",
+          "PATRIOT data access request to query MBD4 status in responders",
+          "Prospective UCEC trial with MBD4-LOF enrichment arm"
+        ]
+      },
+      "tier_upgrade_assessment": {
+        "upgrade_rule": "BH-adjusted p < 0.05 AND Cohen's d < -0.5 for A6 Group A vs Group B (ATR)",
+        "a6_padj_AvB": 0.229,
+        "a6_cohens_d_AvB": -0.129,
+        "criterion_padj_met": false,
+        "criterion_cohens_d_met": false,
+        "upgrade_criterion_met": false,
+        "tier_after_A6_A7_A8": "Mechanistic candidate only",
+        "rationale": "Upgrade criterion NOT met. A6 ATR A vs B: padj=0.229 (>0.05), Cohen's d=-0.129 (>-0.5). A7 is DESCRIPTIVE (n=2 LOF, no inferential test, inconsistent RS direction). A8 is NEGATIVE (pan-essentiality ceiling effect, CHEK1/WEE1 wrong direction). Overall tier remains: Mechanistic candidate only."
+      },
+      "modality_cell_count": 9
+    },
+    "CORRECTION_LOCK": {
+      "prior_session_claim": "STRONG-tier upgrade",
+      "actual_from_file": "NO CHANGE",
+      "canonical_current_tier": "Mechanistic candidate only",
+      "canonical_target_tier": "Strong candidate dependency axis"
+    }
+  },
+  "verbatim_evidence": [
+    {
+      "quote": "NO CHANGE",
+      "file": "/mnt/results/mbd4_atr_evidence/evidence_matrix_final_v2.json",
+      "context": "overall_verdict.tier_change value — canonical answer to 'did the tier change?'"
+    },
+    {
+      "quote": "Mechanistic candidate only",
+      "file": "/mnt/results/mbd4_atr_evidence/evidence_matrix_final_v2.json",
+      "context": "current_tier top-level field"
+    },
+    {
+      "quote": "Strong candidate dependency axis",
+      "file": "/mnt/results/mbd4_atr_evidence/evidence_matrix_final_v2.json",
+      "context": "target_tier top-level field — what upgrade WOULD be, not what is."
+    }
+  ],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/evidence_matrix_final_v2.json",
+      "exists": true,
+      "bytes": 11865,
+      "sha256": "34d08da92f2928ea016fceb1fb16cb1d675c69173da2caa30eecbe58064779ef",
+      "mtime_iso": "2026-04-26T06:24:39+00:00",
+      "span_extracted": "overall_verdict + modality_cells"
+    }
+  ],
+  "cross_refs": [
+    "axis:ATR_WEE1",
+    "tier:MECHANISTIC",
+    "tier:STRONG",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [
+    "MBD4-LOF cannot be reliably proxied by expression level (fundamental limitation noted in overall_verdict).",
+    "No clinical readout: no ATRi/WEE1i trial has published MBD4-LOF stratified data.",
+    "CRISPR MBD4-LOF vs WT contrast is confounded by MSI-H collinearity."
+  ],
+  "_stream": "v1:evidence_and_receipts"
+}

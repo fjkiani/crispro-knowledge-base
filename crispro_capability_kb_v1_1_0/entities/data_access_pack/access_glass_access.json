@@ -1,0 +1,61 @@
+{
+  "id": "access:glass_access",
+  "type": "data_access_pack",
+  "name": "GLASS bulk recurrence closure + access status",
+  "what_it_solves": "GLASS consortium access status + bulk recurrence dataset closure record.",
+  "how_it_solves": "glass_access_status.json + glass_bulk_recurrence_closure.md capture what was pulled, what remains blocked, and the closure justification.",
+  "why_it_exists": "Closes the loop on GLASS — accessible dataset or not, the disposition is written down.",
+  "attributes": {
+    "files": [
+      "glass_access_status.json",
+      "glass_bulk_recurrence_closure.md",
+      "glass_emt_shift_summary.csv",
+      "glass_entity_manifest_post_tou.csv",
+      "glass_firstpass_verdict.json",
+      "glass_matrix_header_probe.txt",
+      "glass_nextlane_data_requirements.md",
+      "glass_post_tou_access_check.json",
+      "glass_primary_recurrent_pairs.csv",
+      "glass_synapse_manifest.csv",
+      "glass_zeb1_delta_plot.png",
+      "glass_zeb1_sox2_delta.csv"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/glass_access_status.json",
+      "exists": true,
+      "bytes": 3741,
+      "sha256": "39700f938515ef96518848f1904285f44a74e8aee951e658e97f7e24b902f8a5",
+      "mtime_iso": "2026-05-13T07:28:51+00:00"
+    },
+    {
+      "path": "/mnt/results/glass_bulk_recurrence_closure.md",
+      "exists": true,
+      "bytes": 5451,
+      "sha256": "31cbab0e08e9ea946190582856adb1f1cc0a221ea64f8a1c47d28a3dc3af1b3d",
+      "mtime_iso": "2026-05-13T09:05:09+00:00"
+    },
+    {
+      "path": "/mnt/results/glass_emt_shift_summary.csv",
+      "exists": true,
+      "bytes": 520,
+      "sha256": "55386e2fbcf967b777548ee4cf69a8bfb3723c106d039cb44b96dfb4a1189bbb",
+      "mtime_iso": "2026-05-13T08:24:41+00:00"
+    },
+    {
+      "path": "/mnt/results/glass_entity_manifest_post_tou.csv",
+      "exists": true,
+      "bytes": 1188,
+      "sha256": "d685fc7f76f92dba382ab45e8f8c01d2287caede0c13737147f0789a438f56f6",
+      "mtime_iso": "2026-05-13T08:25:49+00:00"
+    }
+  ],
+  "cross_refs": [
+    "access:gbm_access_ledger",
+    "protocol:mars"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:operations_and_access"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "commit:238eea06",
+  "type": "commit_reference",
+  "name": "Commit 238eea06",
+  "what_it_solves": "Git commit SHA '238eea06' referenced in the architecture / hardening / handoff corpus.",
+  "how_it_solves": "Regex-detected hex tokens filtered by neighbour keywords (commit / sha / hash / sprint).",
+  "why_it_exists": "Turns 'closed at commit 474b812' style claims into a searchable enumeration; downstream consumers can join this back to a real repo.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 25,
+        "context": "→ Backend Wiring — `crispro-front-end` commits `f190530` → `238eea06`\n\n| Fix | What changed | File(s) |\n|-----|-------------|---"
+      }
+    ],
+    "reference_count": 1
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

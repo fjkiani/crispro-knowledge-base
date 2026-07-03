@@ -1,0 +1,220 @@
+{
+  "id": "crispro_docs:COMPUTATIONAL_CANCER_CURE_ROADMAP.md",
+  "type": "crispro_doc_full",
+  "name": "COMPUTATIONAL_CANCER_CURE_ROADMAP.md",
+  "what_it_solves": "crispro_docs artifact — COMPUTATIONAL_CANCER_CURE_ROADMAP.md",
+  "how_it_solves": "Parsed as JSON (if <300 KB carry raw, else shape-only) or markdown (heading tree + 3000-char preview).",
+  "why_it_exists": "crispro_docs is the roadmap + frontend-agent-prompt seed; every doc in it is a first-class KB entity.",
+  "attributes": {
+    "byte_length": 31975,
+    "heading_count": 38,
+    "headings": [
+      {
+        "level": 1,
+        "title": "CRISPRO: THE COMPUTATIONAL CANCER CURE ROADMAP",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "From SL Engine to Universal Vulnerability Atlas",
+        "line": 2
+      },
+      {
+        "level": 2,
+        "title": "PART I: WHERE WE ARE",
+        "line": 17
+      },
+      {
+        "level": 3,
+        "title": "What's Real (as of April 2026)",
+        "line": 19
+      },
+      {
+        "level": 3,
+        "title": "What's Missing (The Gaps That Matter)",
+        "line": 31
+      },
+      {
+        "level": 2,
+        "title": "PART II: THE COMPUTATIONAL CANCER CURE THESIS",
+        "line": 46
+      },
+      {
+        "level": 3,
+        "title": "The Core Insight",
+        "line": 48
+      },
+      {
+        "level": 2,
+        "title": "PART III: THE SPRINT EXECUTION PLAN",
+        "line": 65
+      },
+      {
+        "level": 3,
+        "title": "Sprint A — Wire RS Context into HTTP Endpoint",
+        "line": 67
+      },
+      {
+        "level": 3,
+        "title": "Sprint B — Patient SL Report Endpoint",
+        "line": 127
+      },
+      {
+        "level": 3,
+        "title": "Sprint C — Lineage Dependency Engine",
+        "line": 192
+      },
+      {
+        "level": 3,
+        "title": "Sprint D — CRC / WRN / MSI-H",
+        "line": 254
+      },
+      {
+        "level": 3,
+        "title": "Sprint E — BRCA/FA Audit Queue",
+        "line": 334
+      },
+      {
+        "level": 3,
+        "title": "Sprint F — PDAC + TNBC Expansion",
+        "line": 401
+      },
+      {
+        "level": 1,
+        "title": "PDAC — POLO trial (PMID 31986208)",
+        "line": 409
+      },
+      {
+        "level": 1,
+        "title": "TNBC — OlympiAD trial (PMID 28578601)",
+        "line": 425
+      },
+      {
+        "level": 1,
+        "title": "TNBC — MYC/ATR-WEE1 (PMID 29625050)",
+        "line": 440
+      },
+      {
+        "level": 3,
+        "title": "Sprint G — Prostate + Heme Expansion",
+        "line": 461
+      },
+      {
+        "level": 1,
+        "title": "Prostate — PROfound trial (PMID 31774946)",
+        "line": 468
+      },
+      {
+        "level": 1,
+        "title": "Prostate — CDK12/IO (PMID 32167171)",
+        "line": 480
+      },
+      {
+        "level": 1,
+        "title": "AML — IDH1/PARP (PMID 28106843, Sulkowski Science 2017)",
+        "line": 496
+      },
+      {
+        "level": 1,
+        "title": "AML — MBD4 cross-lineage (same biology as ovarian, different lineage)",
+        "line": 512
+      },
+      {
+        "level": 1,
+        "title": "MBD4 receipt already exists for ovarian — this extends to AML context",
+        "line": 513
+      },
+      {
+        "level": 1,
+        "title": "No new receipt needed if cancer_type-agnostic lookup is used",
+        "line": 514
+      },
+      {
+        "level": 3,
+        "title": "Sprint H — Universal SL Report (The Endgame)",
+        "line": 522
+      },
+      {
+        "level": 2,
+        "title": "PART IV: THE FUTURE AXES (Sprints I-L)",
+        "line": 595
+      },
+      {
+        "level": 3,
+        "title": "Sprint I — EZH2 Dependency (ARID1A/SMARCB1 Loss)",
+        "line": 599
+      },
+      {
+        "level": 3,
+        "title": "Sprint J — SOS1/RAF (KRAS G12C Context)",
+        "line": 607
+      },
+      {
+        "level": 3,
+        "title": "Sprint K — PRMT5/MTA Dependency (MTAP Deletion)",
+        "line": 615
+      },
+      {
+        "level": 3,
+        "title": "Sprint L — STAG1 Paralog (STAG2 Loss)",
+        "line": 623
+      },
+      {
+        "level": 2,
+        "title": "PART V: THE COMPUTATIONAL CURE THESIS — FULL ARTICULATION",
+        "line": 633
+      },
+      {
+        "level": 3,
+        "title": "What \"Curing Cancer Computationally\" Actually Means",
+        "line": 635
+      },
+      {
+        "level": 3,
+        "title": "The Gap We Are Closing",
+        "line": 651
+      },
+      {
+        "level": 3,
+        "title": "The Moat Is the Evidence Engine",
+        "line": 664
+      },
+      {
+        "level": 3,
+        "title": "The Execution Principle",
+        "line": 674
+      },
+      {
+        "level": 2,
+        "title": "PART VI: THE SPRINT EXECUTION CHECKLIST",
+        "line": 684
+      },
+      {
+        "level": 2,
+        "title": "PART VII: SPRINT PROGRESS TRACKER",
+        "line": 701
+      },
+      {
+        "level": 2,
+        "title": "APPENDIX: EVIDENCE QUALITY CHECKLIST",
+        "line": 721
+      }
+    ],
+    "preview": "# CRISPRO: THE COMPUTATIONAL CANCER CURE ROADMAP\n## From SL Engine to Universal Vulnerability Atlas\n\n**Classification**: RESEARCH USE ONLY — Not for Clinical Decision Making  \n**Author**: Fahad Kiani | CrisPRO.ai  \n**Version**: v2.0 — April 2026  \n**Status**: ACTIVE EXECUTION — No mercy. No pauses. No vapor.\n\n---\n\n> \"The goal is not to build a better search engine for cancer papers.  \n> The goal is to computationally enumerate every exploitable vulnerability  \n> in every cancer genome — and make that knowledge actionable at the tumor board.\"\n\n---\n\n## PART I: WHERE WE ARE\n\n### What's Real (as of April 2026)\n\nThe engine is not a prototype. It is a production system with:\n\n- **43/43 tests passing** on the full merge gate\n- **8 CandidateAxis values** with gene-aware mechanism strings\n- **VALIDATED tier** for MBD4/gemcitabine (PMID 35428381) — the only axis that deserves it\n- **RS framework** computing patient-specific replication stress scores from somatic mutation profiles\n- **Frozen receipts** for CDK2/CCNE1_AMP (d=-0.72), POLR2K/TP53_RS (d=-1.25), WTAP/TP53_RS (d=-1.08), CDT1/TP53_RS (d=-1.00)\n- **Stub mode** — no 503s on cold start\n- **RUO invariant** — enforced at every layer, tested, non-negotiable\n\n### What's Missing (The Gaps That Matter)\n\n| Gap | Impact | Sprint |\n|-----|--------|--------|\n| RS context not wired into HTTP endpoint | CDK2/CCNE1_AMP shows Mechanistic instead of Strong for CCNE1-amp patients | A |\n| No patient-level SL report endpoint | Tumor board has to make multiple API calls | B |\n| No lineage dependency engine | PAX8, PARD3 (ovarian) not surfaced | C |\n| WRN/MSI-H receipts missing | MLH1/MSH2 queries return \"Not supported\" | D |\n| BRCA/FA audit queue not wired | FANCM, FANCC, H2AFX lost | E |\n| PDAC/TNBC receipts missing | BRCA2/olaparib (POLO trial) not in engine | F |\n| Prostate/AML receipts missing | CDK12/IO, IDH1/PARP not in engine | G |\n| No universal SL report endpoint | The endgame doesn't exist yet | H |\n\n---\n\n## PART II: THE COMPUTATIONAL CANCER CURE THESIS\n\n### The Core Insight\n\nCancer is not one disease. It is a collection of genomic states, each with a unique vulnerability profile. The computational cure is not a single drug — it is a **complete enumeration of exploitable vulnerabilities** for every genomic state, delivered to the clinician at the moment of decision.\n\nThe thesis has three pillars:\n\n**Pillar 1: Synthetic Lethality is the mechanism.**  \nEvery cancer genome has already acquired its first hit. The tumor's own mutations define its vulnerabilities. We don't need to find new drugs — we need to match existing drugs to the right genomic contexts. The SL engine does this.\n\n**Pillar 2: Multi-modal evidence is the standard.**  \nA CRISPR hit alone is not enough. A clinical receipt alone is not enough. The convergence of CRISPR + pharmacologic + in vitro + in vivo + clinical evidence is what makes a recommendation trustworthy. The multimodal fuser enforces this.\n\n**Pillar 3: The pan-cancer atlas is the endg"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/crispro_docs/COMPUTATIONAL_CANCER_CURE_ROADMAP.md",
+      "exists": true,
+      "bytes": 32179,
+      "sha256": "c9a2919408cc22cefb9d5d079682e6df9b4e91706e6c2f79ef40f236451a88f6",
+      "mtime_iso": "2026-04-13T20:11:12+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:brenus_diligence"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

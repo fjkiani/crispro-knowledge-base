@@ -1,0 +1,32 @@
+{
+  "id": "brenus:break_crc_001_anchor",
+  "type": "brenus_program_anchor",
+  "name": "BreAK CRC-001 program anchor",
+  "what_it_solves": "Brenus program anchor: STC-1010 haptenated whole-cell therapeutic vaccine for MSS colorectal cancer, tested in BreAK CRC-001 on top of mFOLFOX6 ± bevacizumab.",
+  "how_it_solves": "Sourced from user_memory / canonical Brenus use-case notes; not extracted from a repo file.",
+  "why_it_exists": "Every downstream Brenus deliverable (positioning, comparator trials, biomarker biology, fit-gap, outreach) must anchor here.",
+  "attributes": {
+    "program": "STC-1010",
+    "modality": "haptenated whole-cell therapeutic vaccine",
+    "indication": "MSS colorectal cancer",
+    "trial_name": "BreAK CRC-001",
+    "backbone": "mFOLFOX6 +/- bevacizumab",
+    "scientific_anchor_doi": "10.3389/fonc.2024.1427428",
+    "scientific_anchor_citation": "Alzeeb et al. Frontiers in Oncology, 2024.",
+    "note_provenance": "This is a memory-anchored entity — the DOI is Alzeeb et al. 2024; users must verify against source when citing."
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "user_memory:brenus_use_case",
+      "note": "session-level memory anchor, not a repo file"
+    }
+  ],
+  "cross_refs": [
+    "module:brenus_diligence"
+  ],
+  "gaps_still_open": [
+    "No local PDF or markdown of the Alzeeb 2024 paper is currently in /mnt/results; add a receipt when one is captured."
+  ],
+  "_stream": "v2:brenus_and_operations_deep"
+}

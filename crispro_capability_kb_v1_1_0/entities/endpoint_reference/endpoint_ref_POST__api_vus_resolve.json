@@ -1,0 +1,47 @@
+{
+  "id": "endpoint_ref:POST /api/vus/resolve",
+  "type": "endpoint_reference",
+  "name": "POST /api/vus/resolve",
+  "what_it_solves": "HTTP endpoint 'POST /api/vus/resolve' referenced in the architecture / hardening corpus.",
+  "how_it_solves": "Regex `(GET|POST|PUT|DELETE|PATCH)\\s+/…` captured with source_file + line + context.",
+  "why_it_exists": "Every route claim in an audit is testable; this enumerates them so consumers can diff against the live server.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+        "line": 25,
+        "context": "\n|---|---------|----------|-------|\n| 1 | VUS Resolution | `POST /api/vus/resolve` (per-gene loop) | One call per VUS gene |\n| 2 | Essentiali"
+      },
+      {
+        "source_file": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+        "line": 324,
+        "context": "   ├── [PARALLEL] fetchVUSResults()\n              │     └── POST /api/vus/resolve (per gene: MBD4, PDGFRA, TP53)\n              ├── [PARALLEL]"
+      }
+    ],
+    "reference_count": 2
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "exists": true,
+      "bytes": 19314,
+      "sha256": "4c29bc6cecf7bcc6ba7a1232e3fa3a19d50c02bc1a065ea95f1bafc6f1a9c326",
+      "mtime_iso": "2026-05-05T06:24:21+00:00"
+    },
+    {
+      "path": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "exists": true,
+      "bytes": 19314,
+      "sha256": "4c29bc6cecf7bcc6ba7a1232e3fa3a19d50c02bc1a065ea95f1bafc6f1a9c326",
+      "mtime_iso": "2026-05-05T06:24:21+00:00"
+    }
+  ],
+  "cross_refs": [
+    "endpoint:sl",
+    "endpoint:bundle",
+    "layer:output"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

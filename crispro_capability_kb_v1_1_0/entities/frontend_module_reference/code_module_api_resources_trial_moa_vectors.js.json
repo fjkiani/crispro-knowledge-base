@@ -1,0 +1,46 @@
+{
+  "id": "code_module:api/resources/trial_moa_vectors.js",
+  "type": "frontend_module_reference",
+  "name": "api/resources/trial_moa_vectors.js",
+  "what_it_solves": "Frontend module 'api/resources/trial_moa_vectors.js' referenced by the architecture / frontend audit corpus.",
+  "how_it_solves": "Extracted by regex for .ts/.tsx/.js/.jsx paths.",
+  "why_it_exists": "Enumerates the concrete frontend surface (crispro-front-end) so any SL/Ayesha UI claim can be traced to a real file.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+        "line": 163,
+        "context": " Resource Files\n\n| File | Size | Description |\n|------|------|-------------|\n| `api/resources/trial_moa_vectors.json` | 457 KB | Trial MoA vectors (PATH A formula input) |\n| `api/resources/disea"
+      },
+      {
+        "source_file": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+        "line": 322,
+        "context": "vices/trial_intelligence_universal/`, `api/routers/advanced_trial_queries.py`, `api/resources/trial_moa_vectors.json` |\n| Formula governance | `governance/formula_decision/`, `api/resources/rank"
+      }
+    ],
+    "reference_count": 2
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+      "exists": true,
+      "bytes": 17877,
+      "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+      "mtime_iso": "2026-05-05T06:14:00+00:00"
+    },
+    {
+      "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+      "exists": true,
+      "bytes": 17877,
+      "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+      "mtime_iso": "2026-05-05T06:14:00+00:00"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-front-end",
+    "component:frontend_canonicalization"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

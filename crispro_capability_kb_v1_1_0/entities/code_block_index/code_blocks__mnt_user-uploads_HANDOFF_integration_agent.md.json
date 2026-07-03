@@ -1,0 +1,86 @@
+{
+  "id": "code_blocks:/mnt/user-uploads/HANDOFF_integration_agent.md",
+  "type": "code_block_index",
+  "name": "Code blocks — HANDOFF_integration_agent.md",
+  "what_it_solves": "Index of every fenced code block in '/mnt/user-uploads/HANDOFF_integration_agent.md'.",
+  "how_it_solves": "Extracted with `RE_CODE_BLOCK`; each block carries language, starting line, byte count, and a 400-char preview.",
+  "why_it_exists": "Reports embed code snippets that are load-bearing (e.g. class definitions, config JSON); this makes them addressable without re-reading the parent file.",
+  "attributes": {
+    "block_count": 10,
+    "blocks": [
+      {
+        "lang": "",
+        "line": 66,
+        "bytes": 1120,
+        "preview": "GET    /api/forge/workspaces\nPOST   /api/forge/workspaces\nGET    /api/forge/workspaces/:wid\nGET    /api/forge/workspaces/:wid/datasets\nPOST   /api/forge/workspaces/:wid/datasets\nGET    /api/forge/workspaces/:wid/datasets/:did\nPOST   /api/forge/workspaces/:wid/datasets/:did/documents\nDELETE /api/forge/workspaces/:wid/datasets/:did/documents/:docId\nPOST   /api/forge/workspaces/:wid/datasets/:did/ver"
+      },
+      {
+        "lang": "",
+        "line": 100,
+        "bytes": 359,
+        "preview": "POST /api/v1/zoa/kairos/run          — start a Kairos run, returns run_id\nGET  /api/v1/zoa/kairos/run/{id}     — poll run status + result\nGET  /api/v1/zoa/kairos/run/{id}/stream — SSE event stream (with replay)\nGET  /api/v1/zoa/events/dashboard    — recent events (fixed CORS, commit f69e4bb)\nGET  /api/v1/zoa/events/{agent_id}   — events for a specific agent"
+      },
+      {
+        "lang": "",
+        "line": 120,
+        "bytes": 348,
+        "preview": "/                  → landing.tsx\n/dashboard         → dashboard.tsx\n/skills            → skills.tsx        ← THE SILO PROBLEM LIVES HERE\n/zoa               → zoa.tsx\n/billing           → billing.tsx\n/forge             → forge/index.tsx   ← workspace list\n/forge/:wid        → forge/workspace.tsx (5 tabs: Overview, Datasets, Jobs, Registry, Policy)"
+      },
+      {
+        "lang": "sql",
+        "line": 189,
+        "bytes": 2451,
+        "preview": "-- Shared business objects (tenant-scoped)\nCREATE TABLE IF NOT EXISTS \"business_objects\" (\n  \"id\"          serial PRIMARY KEY,\n  \"tenant_id\"   text NOT NULL REFERENCES \"tenants\"(\"id\"),\n  \"object_type\" text NOT NULL,   -- 'invoice' | 'employee' | 'contract' | 'vendor' | 'alert'\n  \"external_id\" text,            -- source system ID\n  \"status\"      text NOT NULL DEFAULT 'active',\n  \"data\"        jsonb"
+      },
+      {
+        "lang": "typescript",
+        "line": 255,
+        "bytes": 519,
+        "preview": "// workflowEngine.ts — orchestrates multi-step skill workflows via Kairos\n//\n// Each step in a workflow definition maps to a Kairos run.\n// The engine passes shared context between steps via workflow_runs.context.\n// Steps can reference business object fields via JSONPath in input_mapping.\n//\n// Interface:\n//   workflowEngine.start(definitionId, objectId, tenantId) → workflowRunId\n//   workflowEng"
+      },
+      {
+        "lang": "",
+        "line": 278,
+        "bytes": 927,
+        "preview": "POST   /api/workflows/definitions          — create workflow definition\nGET    /api/workflows/definitions          — list definitions for tenant\nGET    /api/workflows/definitions/:id      — get definition + steps\nPOST   /api/workflows/runs                 — start a workflow run (triggers step 0)\nGET    /api/workflows/runs                 — list runs for tenant\nGET    /api/workflows/runs/:id       "
+      },
+      {
+        "lang": "typescript",
+        "line": 323,
+        "bytes": 263,
+        "preview": "// Checks platform_policies for the tenant before allowing a skill invocation.\n// Enforces: budget limits, approval requirements, blocked skill categories.\n// Called by: POST /api/workflows/runs, POST /api/skills/:id/benchmark (when invoked, not just benchmarked)"
+      },
+      {
+        "lang": "python",
+        "line": 403,
+        "bytes": 1181,
+        "preview": "import re\n\nwith open(\"artifacts/api-server/src/index.ts\") as f:\n    migration_src = f.read()\n\nwith open(\"artifacts/api-server/src/seed.ts\") as f:\n    seed_src = f.read()\n\n# Parse CREATE TABLE blocks\ntable_cols = {}\nfor m in re.finditer(r'CREATE TABLE IF NOT EXISTS \"(\\w+)\"\\s*\\(([^;]+?)\\);', migration_src, re.DOTALL):\n    table = m.group(1)\n    body = m.group(2)\n    cols = [c.strip().strip('\"').spli"
+      },
+      {
+        "lang": "bash",
+        "line": 453,
+        "bytes": 416,
+        "preview": "# Clone\ngit clone https://github.com/fjkiani/openclaw-saas\ncd openclaw-saas\n\n# Push (PAT already configured)\ngit push https://fjkiani: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@github.com/fjkiani/openclaw-saas.git main\n\n# Benchmark service\ngit clone https://github.com/fjkiani/mcp-universe-benchmarks\ngit push https://fjkiani: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@github.com/fjkiani/mcp-universe-ben"
+      },
+      {
+        "lang": "bash",
+        "line": 467,
+        "bytes": 268,
+        "preview": "curl -s -H \"Authorization: Bearer rnd_F9aLmYhZNMLNRMC6EkBbpU28ISGp\" \\\n  \"https://api.render.com/v1/services/srv-d82i5q83kofs73crbjj0/deploys?limit=1\" \\\n  | python3 -c \"import sys,json; d=json.load(sys.stdin)[0]; print(d['deploy']['status'], d['deploy']['finishedAt'])\""
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+      "exists": true,
+      "bytes": 24575,
+      "sha256": "8c06c5f6092feaaf9680b60bd45bc6797d140fb43132233f3a5d03e21a621aa0",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

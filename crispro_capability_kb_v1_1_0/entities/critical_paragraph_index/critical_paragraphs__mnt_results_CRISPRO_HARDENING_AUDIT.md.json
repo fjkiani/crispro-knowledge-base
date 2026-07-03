@@ -1,0 +1,43 @@
+{
+  "id": "critical_paragraphs:/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+  "type": "critical_paragraph_index",
+  "name": "Critical paragraphs — CRISPRO_HARDENING_AUDIT.md",
+  "what_it_solves": "Paragraphs from '/mnt/results/CRISPRO_HARDENING_AUDIT.md' matching critical/discovery/gap/hardcoded/bug/blocker keywords.",
+  "how_it_solves": "Paragraph-split then filtered by `(critical|most important|discovery|gap|finding|bug|blocker|hardcoded)` case-insensitive.",
+  "why_it_exists": "The 'most important discovery' paragraphs in the audit reports carry disproportionate weight — surfacing them as an index makes them searchable.",
+  "attributes": {
+    "hit_count": 3,
+    "hits": [
+      {
+        "line": 154,
+        "bytes": 449,
+        "text": "3. **`useAyeshaCareData` passes `options` to `generatePlan` as a merged object** — the `buildRequest` function in `useAyeshaProfile` merges options, but `generatePlan` then does `{ ...baseRequest, ...options }` which means the options object (which includes `include_*` flags) **overwrites** the base request's flags. If `options` is missing a flag, it won't be set to `true` even if `buildRequestFromProfile` set it. This is a silent data loss bug."
+      },
+      {
+        "line": 238,
+        "bytes": 255,
+        "text": "**Critical difference:** The orchestrator's SL call omits `hgvs_p` for TP53 (IHC-only evidence) and sends a minimal payload. The `useSyntheticLethality` hook sends full coordinates for TP53 (the RUO proxy hotspot). These will produce different SL results."
+      },
+      {
+        "line": 303,
+        "bytes": 566,
+        "text": "- [ ] **Parallelize `complete_care_v2` backend** — wrap independent services (SOC, CA-125, food, resistance) in `asyncio.gather`\n- [ ] **Add timeout guards** — `asyncio.wait_for(service_call(), timeout=10.0)` on each service in orchestrator\n- [ ] **Axis B gate in UI** — show \"Pending NGS\" badge on IO/hypermutator SL outputs when TMB is null\n- [ ] **Batch essentiality endpoint** — replace per-gene loop with single batch call\n- [ ] **Fix `useAyeshaCareData` options merge bug** — ensure `include_*` flags from `buildRequestFromProfile` are not silently overwritten"
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "exists": true,
+      "bytes": 19314,
+      "sha256": "4c29bc6cecf7bcc6ba7a1232e3fa3a19d50c02bc1a065ea95f1bafc6f1a9c326",
+      "mtime_iso": "2026-05-05T06:24:21+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:brenus_diligence"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

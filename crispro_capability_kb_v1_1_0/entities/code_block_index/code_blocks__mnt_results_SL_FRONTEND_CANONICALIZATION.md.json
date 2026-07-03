@@ -1,0 +1,62 @@
+{
+  "id": "code_blocks:/mnt/results/SL_FRONTEND_CANONICALIZATION.md",
+  "type": "code_block_index",
+  "name": "Code blocks — SL_FRONTEND_CANONICALIZATION.md",
+  "what_it_solves": "Index of every fenced code block in '/mnt/results/SL_FRONTEND_CANONICALIZATION.md'.",
+  "how_it_solves": "Extracted with `RE_CODE_BLOCK`; each block carries language, starting line, byte count, and a 400-char preview.",
+  "why_it_exists": "Reports embed code snippets that are load-bearing (e.g. class definitions, config JSON); this makes them addressable without re-reading the parent file.",
+  "attributes": {
+    "block_count": 6,
+    "blocks": [
+      {
+        "lang": "js",
+        "line": 11,
+        "bytes": 127,
+        "preview": "// Before\nreturn `${API_ROOT}/api/guidance/synthetic_lethality`;\n\n// After\nreturn `${API_ROOT}/api/agents/synthetic_lethality`;"
+      },
+      {
+        "lang": "js",
+        "line": 25,
+        "bytes": 117,
+        "preview": "// Before\nfetch(`${API_ROOT}/api/guidance/synthetic_lethality`, ...)\n\n// After\nfetch(getSyntheticLethalityUrl(), ...)"
+      },
+      {
+        "lang": "js",
+        "line": 39,
+        "bytes": 109,
+        "preview": "// Before\nendpoint: '/api/guidance/synthetic_lethality'\n\n// After\nendpoint: '/api/agents/synthetic_lethality'"
+      },
+      {
+        "lang": "js",
+        "line": 51,
+        "bytes": 261,
+        "preview": "// Before\nconsole.log('[useCompleteCareOrchestrator] Using parallel /api/guidance/synthetic_lethality result')\n/** True if parallel /api/guidance/synthetic_lethality returned real fields... */\n\n// After\n// Both strings updated to /api/agents/synthetic_lethality"
+      },
+      {
+        "lang": "js",
+        "line": 66,
+        "bytes": 175,
+        "preview": "// Before (JSDoc comment)\n// 1. /api/guidance/synthetic_lethality - Main analysis endpoint\n\n// After\n// 1. /api/agents/synthetic_lethality - Main analysis endpoint (canonical)"
+      },
+      {
+        "lang": "bash",
+        "line": 80,
+        "bytes": 79,
+        "preview": "grep -rn \"guidance/synthetic_lethality\" src/ --include=\"*.jsx\" --include=\"*.js\""
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/SL_FRONTEND_CANONICALIZATION.md",
+      "exists": true,
+      "bytes": 2195,
+      "sha256": "24c2c4ddaaa99557ee18e4ded3803d4dff35bf20fb16480fcefbe3658230a098",
+      "mtime_iso": "2026-05-05T07:04:43+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

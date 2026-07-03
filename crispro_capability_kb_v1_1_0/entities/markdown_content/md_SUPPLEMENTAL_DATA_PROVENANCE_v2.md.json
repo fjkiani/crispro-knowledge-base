@@ -1,0 +1,60 @@
+{
+  "id": "md:SUPPLEMENTAL_DATA_PROVENANCE_v2.md",
+  "type": "markdown_content",
+  "name": "SUPPLEMENTAL_DATA_PROVENANCE_v2.md",
+  "what_it_solves": "Structured view of SUPPLEMENTAL_DATA_PROVENANCE_v2.md: heading tree + first 2000 chars.",
+  "how_it_solves": "Regex heading extract + preview slice.",
+  "why_it_exists": "Turns evidence-narrative markdowns into a searchable heading index without duplicating the full body.",
+  "attributes": {
+    "byte_length": 8524,
+    "heading_count": 6,
+    "headings": [
+      {
+        "level": 2,
+        "title": "MBD4 → PARP inhibitor response — Data Provenance (receipt-only)",
+        "line": 1
+      },
+      {
+        "level": 3,
+        "title": "Cross-check rule (MANDATORY before \"Verified\")",
+        "line": 3
+      },
+      {
+        "level": 3,
+        "title": "1) Axis A receipts (MBD4 cytidine-analog synthetic lethality)",
+        "line": 13
+      },
+      {
+        "level": 3,
+        "title": "2) Axis B receipts (MBD4 hypermutator / ICI outcomes)",
+        "line": 23
+      },
+      {
+        "level": 3,
+        "title": "3) Axis C receipts (MBD4 / RNF144A / PARP1 → PARPi response)",
+        "line": 35
+      },
+      {
+        "level": 3,
+        "title": "4) A9 GDSC2 Pan-Cancer Benchmark (ATM-LOF vs MBD4-LOF comparator)",
+        "line": 78
+      }
+    ],
+    "preview": "## MBD4 → PARP inhibitor response — Data Provenance (receipt-only)\n\n### Cross-check rule (MANDATORY before \"Verified\")\n\n- **Verified**: Any live or extracted receipt MUST include:\n  - a raw minimized excerpt copied from the underlying record(s), and\n  - a path→value table derived from that same excerpt.\n\nIf the path→value table contradicts the raw excerpt for the same request identity, the section is **FAIL** and must be regenerated.\n\n---\n\n### 1) Axis A receipts (MBD4 cytidine-analog synthetic lethality)\n\n**Verified** artifacts:\n- `oncology-coPilot/oncology-backend-minimal/data/literature_mbd4/out/axis_a/axis_a_ic50_receipts_frozen.csv`\n- `oncology-coPilot/oncology-backend-minimal/data/literature_mbd4/out/axis_a/axis_a_ic50_fold_change_summary.csv`\n- `oncology-coPilot/oncology-backend-minimal/data/literature_mbd4/out/npj_2022_mbd4_cytidine_sl_receipts.json`\n- Decision rule: `oncology-coPilot/oncology-backend-minimal/data/literature_mbd4/out/axis_a/AXIS_A_DECISION_RULE.md`\n\n---\n\n### 2) Axis B receipts (MBD4 hypermutator / ICI outcomes)\n\n**Verified** artifacts (hypermutator signature):\n- `oncology-coPilot/oncology-backend-minimal/data/literature_mbd4/out/hypermutator/hypermutator_signature_moesm4_clean.csv`\n- `oncology-coPilot/oncology-backend-minimal/data/literature_mbd4/out/hypermutator/hypermutator_signature_summary.json`\n\n**Partial** (case-level ICI receipt only; not a cohort table yet):\n- `oncology-coPilot/oncology-backend-minimal/data/literature_mbd4/out/axis_b_ici/axis_b_ici_patient_level_receipts.csv`\n- `oncology-coPilot/oncology-backend-minimal/data/literature_mbd4/out/axis_b_ici/axis_b_ici_extraction_summary.json`\n\n---\n\n### 3) Axis C receipts (MBD4 / RNF144A / PARP1 → PARPi response)\n\n**Current status**: **Hardened Submission Metadata** (GDSC2/DepMap 24Q2)\n\n**1. PARP1-PARPi Pan-Cancer Correlation (Axis 1 Context)**\n- **Sample Size**: n=481 cell lines\n- **Spearman Correlation**: ρ=−0.416\n- **Significance**: p=1.36×10⁻²¹\n- **Source**: DepMap 24Q2 Logp1TPM vs G"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/SUPPLEMENTAL_DATA_PROVENANCE_v2.md",
+      "exists": true,
+      "bytes": 8609,
+      "sha256": "1dd7b34ea07436423d7a8114e36a0242647a83b9635e93c00c84ec524df326a0",
+      "mtime_iso": "2026-04-27T06:12:43+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

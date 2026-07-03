@@ -1,0 +1,255 @@
+{
+  "id": "md:SL_REPO_GAUNTLET_PREFLIGHT.md",
+  "type": "markdown_content",
+  "name": "SL_REPO_GAUNTLET_PREFLIGHT.md",
+  "what_it_solves": "Structured view of SL_REPO_GAUNTLET_PREFLIGHT.md: heading tree + first 2000 chars.",
+  "how_it_solves": "Regex heading extract + preview slice.",
+  "why_it_exists": "Turns evidence-narrative markdowns into a searchable heading index without duplicating the full body.",
+  "attributes": {
+    "byte_length": 50235,
+    "heading_count": 45,
+    "headings": [
+      {
+        "level": 1,
+        "title": "SL Repo Gauntlet — Preflight Package",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "1. Repo Scope",
+        "line": 11
+      },
+      {
+        "level": 2,
+        "title": "2. Capability Matrix",
+        "line": 36
+      },
+      {
+        "level": 2,
+        "title": "3. Evidence Tier Audit",
+        "line": 61
+      },
+      {
+        "level": 3,
+        "title": "Tier definitions (from evidence_fuser.py and audit/queue.py)",
+        "line": 63
+      },
+      {
+        "level": 3,
+        "title": "Hard immutability constraints (verified in queue.py)",
+        "line": 76
+      },
+      {
+        "level": 2,
+        "title": "4. Input/Output Contract Audit",
+        "line": 85
+      },
+      {
+        "level": 3,
+        "title": "4A. Machine-readable contract table",
+        "line": 87
+      },
+      {
+        "level": 3,
+        "title": "4B. Hidden assumptions",
+        "line": 101
+      },
+      {
+        "level": 3,
+        "title": "4C. Ways a downstream agent could misuse this interface",
+        "line": 116
+      },
+      {
+        "level": 2,
+        "title": "5. Gene-Class Coverage Audit",
+        "line": 131
+      },
+      {
+        "level": 3,
+        "title": "Context matrix",
+        "line": 133
+      },
+      {
+        "level": 3,
+        "title": "Readiness ranking",
+        "line": 145
+      },
+      {
+        "level": 2,
+        "title": "6. Off-Label Readiness",
+        "line": 159
+      },
+      {
+        "level": 2,
+        "title": "7. WIWFM Readiness",
+        "line": 181
+      },
+      {
+        "level": 2,
+        "title": "8. Handoff Risks",
+        "line": 204
+      },
+      {
+        "level": 2,
+        "title": "9. Preflight Table",
+        "line": 221
+      },
+      {
+        "level": 2,
+        "title": "10. Gauntlet Test 1 — Scientific Admissibility",
+        "line": 246
+      },
+      {
+        "level": 3,
+        "title": "Output admissibility table",
+        "line": 248
+      },
+      {
+        "level": 3,
+        "title": "Hard boundaries on external claims",
+        "line": 263
+      },
+      {
+        "level": 2,
+        "title": "11. Gauntlet Test 2 — Four-Lane Exploitation Readiness",
+        "line": 282
+      },
+      {
+        "level": 3,
+        "title": "Lane A: Synthetic Lethality",
+        "line": 284
+      },
+      {
+        "level": 3,
+        "title": "Lane B: Off-Label / Repurposing",
+        "line": 296
+      },
+      {
+        "level": 3,
+        "title": "Lane C: WIWFM / Translational Positioning",
+        "line": 308
+      },
+      {
+        "level": 3,
+        "title": "Lane D: Comparator / Evidence-Wall Support",
+        "line": 320
+      },
+      {
+        "level": 3,
+        "title": "Cross-lane summary",
+        "line": 332
+      },
+      {
+        "level": 2,
+        "title": "12. Gauntlet Test 5 — Evidence Tier and Promotion Audit",
+        "line": 343
+      },
+      {
+        "level": 3,
+        "title": "Tier decision tree",
+        "line": 345
+      },
+      {
+        "level": 3,
+        "title": "Contradiction-handling policy",
+        "line": 371
+      },
+      {
+        "level": 3,
+        "title": "Quarantine policy for weak/off-label outputs",
+        "line": 381
+      },
+      {
+        "level": 3,
+        "title": "Situations where the repo should refuse to answer",
+        "line": 392
+      },
+      {
+        "level": 3,
+        "title": "Situations where the repo may answer only with caveats",
+        "line": 401
+      },
+      {
+        "level": 2,
+        "title": "13. Gauntlet Test 6 — Handoff Artifact Schema",
+        "line": 413
+      },
+      {
+        "level": 3,
+        "title": "Safe handoff artifacts",
+        "line": 415
+      },
+      {
+        "level": 3,
+        "title": "Unsafe handoff artifacts (never pass raw)",
+        "line": 432
+      },
+      {
+        "level": 3,
+        "title": "Minimal handoff schema",
+        "line": 444
+      },
+      {
+        "level": 3,
+        "title": "Claim-boundary annotations (required on every row/output)",
+        "line": 468
+      },
+      {
+        "level": 3,
+        "title": "Do not pass downstream",
+        "line": 483
+      },
+      {
+        "level": 2,
+        "title": "14. Final Preflight and Decision",
+        "line": 495
+      },
+      {
+        "level": 3,
+        "title": "Preflight table",
+        "line": 497
+      },
+      {
+        "level": 2,
+        "title": "GO / NO-GO FOR HANDOFF:",
+        "line": 520
+      },
+      {
+        "level": 3,
+        "title": "REASONS:",
+        "line": 524
+      },
+      {
+        "level": 3,
+        "title": "REQUIRED BEFORE HANDOFF:",
+        "line": 529
+      },
+      {
+        "level": 3,
+        "title": "OPTIONAL BUT HIGH-LEVERAGE:",
+        "line": 534
+      },
+      {
+        "level": 3,
+        "title": "PERMANENT BOUNDARIES:",
+        "line": 539
+      }
+    ],
+    "preview": "# SL Repo Gauntlet — Preflight Package\n**Branch:** `feat/mbd4-rxiv-manuscript-942-baseline`  \n**Repo:** `fjkiani/Synthetic-Lethality`  \n**Audit date:** 2026-05-02  \n**Auditor:** Biomni / Fahad Kiani  \n**Scope:** Handoff readiness to downstream CrisPRO brain metastasis exploitation agent  \n**Status of remote HEAD:** STALE — manuscript.md and SUPPLEMENTAL_DATA_PROVENANCE.md not yet updated to v3\n\n---\n\n## 1. Repo Scope\n\n**What this repo is:**  \nA single-gene, MBD4-centric multimodal SL analysis stack. It contains:\n- A runnable SL computation engine (DepMap CRISPR stratification, Wilcoxon + BH FDR, Cohen's d)\n- A pharmacologic analyzer (PRISM + GDSC stratification, MSI confound testing)\n- A multimodal evidence matrix builder (7 modalities × 6 axes)\n- A replication stress (RS) scorer (7 binary features, documented weights)\n- A KB evidence fuser (CIViC + CGI + JAX, tier A–D, consensus boost)\n- An audit queue (SQLite-backed, human-decision immutability, snippet-only promotion)\n- A frozen artifact set for MBD4 (canonical_atr_wee1_rerun, cBioPortal, GDSC2 receipts)\n- A manuscript (rxiv/manuscript.md) — currently STALE on remote HEAD\n\n**What this repo is NOT:**\n- A general-purpose SL engine for arbitrary genes without data loading\n- A clinical decision support tool\n- A validated off-label recommendation system\n- A brain metastasis (BrM) specific analysis engine\n- A WIWFM engine (no positioning logic, no comparator framing natively)\n\n**Gene coverage with frozen artifacts:** MBD4 only (on this branch)  \n**DDR panel v1 defines:** 50 genes across 6 sub-panels (ddr_hr, cell_cycle, ber_chromatin, replication, parp_axis, replication_stress) — code-ready but no frozen receipts for non-MBD4 genes on this branch\n\n---\n\n## 2. Capability Matrix\n\n| Capability | Status | Source | Notes |\n|---|---|---|---|\n| CRISPR SL stratification (any gene) | RUNNABLE | sl_engine.py | Requires DepMap CRISPR matrix loaded at runtime |\n| Wilcoxon + BH FDR + Cohen's d | VERIFIED | sl_engine.py L97–L120 | Det"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/SL_REPO_GAUNTLET_PREFLIGHT.md",
+      "exists": true,
+      "bytes": 50603,
+      "sha256": "461e5d018c52073f5b96777a5f04dfe8ea0530a617341dc4cca0620798dde1f0",
+      "mtime_iso": "2026-05-02T18:03:56+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

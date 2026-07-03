@@ -1,0 +1,46 @@
+{
+  "id": "code_module:src/lib/apiConfig.js",
+  "type": "frontend_module_reference",
+  "name": "src/lib/apiConfig.js",
+  "what_it_solves": "Frontend module 'src/lib/apiConfig.js' referenced by the architecture / frontend audit corpus.",
+  "how_it_solves": "Extracted by regex for .ts/.tsx/.js/.jsx paths.",
+  "why_it_exists": "Enumerates the concrete frontend surface (crispro-front-end) so any SL/Ayesha UI claim can be traced to a real file.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+        "line": 153,
+        "context": "ll simulator API calls silently fail. All other components use `API_ROOT` from `src/lib/apiConfig.js`.\n\n#### 1.4.4 render.yaml rootDir Points to Non-Existent Directory\n**Severity: "
+      },
+      {
+        "source_file": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+        "line": 466,
+        "context": "ased access control is correctly applied to all MOAT routes\n- **API config** — `src/lib/apiConfig.js` correctly handles DEV proxy vs production URL\n- **QueryClient config** — `stal"
+      }
+    ],
+    "reference_count": 2
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+      "exists": true,
+      "bytes": 24805,
+      "sha256": "f31945d7d1d131535769da391ab19546f2829f86263b1f5e49c49af1619166c4",
+      "mtime_iso": "2026-05-05T06:38:41+00:00"
+    },
+    {
+      "path": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+      "exists": true,
+      "bytes": 24805,
+      "sha256": "f31945d7d1d131535769da391ab19546f2829f86263b1f5e49c49af1619166c4",
+      "mtime_iso": "2026-05-05T06:38:41+00:00"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-front-end",
+    "component:frontend_canonicalization"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "code_module:brenus_diligence/guardrails/brenus_flags.py",
+  "type": "code_module_reference",
+  "name": "brenus_diligence/guardrails/brenus_flags.py",
+  "what_it_solves": "Python module 'brenus_diligence/guardrails/brenus_flags.py' referenced by the architecture / hardening audit corpus.",
+  "how_it_solves": "Extracted by regex `[/\\w._-]+\\.py(?::\\d+)?` — every mention captured with source_file + line + context window.",
+  "why_it_exists": "Enumerates the concrete code surface the architecture reports point at, so downstream consumers can walk from a claim to an actual file:line without re-reading the whole report.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+        "line": 286,
+        "context": "zer.py` + COADREAD cohort |\n| Brenus guardrails + flag enforcement | ✅ Built | `brenus_diligence/guardrails/brenus_flags.py` |\n| Brenus receipt generation | ✅ Built | `brenus_diligence/receipts/receipt_b"
+      }
+    ],
+    "reference_count": 1
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+      "exists": true,
+      "bytes": 17877,
+      "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+      "mtime_iso": "2026-05-05T06:14:00+00:00"
+    }
+  ],
+  "cross_refs": [
+    "layer:engines",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

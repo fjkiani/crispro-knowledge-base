@@ -1,0 +1,69 @@
+{
+  "id": "endpoint_ref:POST /api/agents/synthetic_lethality",
+  "type": "endpoint_reference",
+  "name": "POST /api/agents/synthetic_lethality",
+  "what_it_solves": "HTTP endpoint 'POST /api/agents/synthetic_lethality' referenced in the architecture / hardening corpus.",
+  "how_it_solves": "Regex `(GET|POST|PUT|DELETE|PATCH)\\s+/…` captured with source_file + line + context.",
+  "why_it_exists": "Every route claim in an audit is testable; this enumerates them so consumers can diff against the live server.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+        "line": 257,
+        "context": "I)\n    │\n    ├── useSyntheticLethality hook\n    │       └── POST /api/agents/synthetic_lethality\n    │               └── SyntheticLethalityAgent (v3_contrac"
+      },
+      {
+        "source_file": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+        "line": 55,
+        "context": " also mounted in some pages) → `useSyntheticLethality()` → `POST /api/agents/synthetic_lethality`\n\nThese hit **different endpoints** (`/api/guidance/synthet"
+      },
+      {
+        "source_file": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+        "line": 348,
+        "context": "    └── useSyntheticLethality.analyzeSL()\n              └── POST /api/agents/synthetic_lethality  ← THIRD SL call\n                    payload: {disease: \"ov"
+      },
+      {
+        "source_file": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+        "line": 131,
+        "context": "aCarePlan` (if also mounted) → `useSyntheticLethality()` → `POST /api/agents/synthetic_lethality`\n3. WIWFM provenance SL (inside `complete_care_v2`)\n\nTwo di"
+      },
+      {
+        "source_file": "/mnt/results/SL_FRONTEND_CANONICALIZATION.md",
+        "line": 3,
+        "context": "nd Canonicalization Report\n\n**Canonical endpoint chosen:** `POST /api/agents/synthetic_lethality`\n\n**Reason:** This is the endpoint used by `src/hooks/useSy"
+      }
+    ],
+    "reference_count": 5
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+      "exists": true,
+      "bytes": 17877,
+      "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+      "mtime_iso": "2026-05-05T06:14:00+00:00"
+    },
+    {
+      "path": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "exists": true,
+      "bytes": 19314,
+      "sha256": "4c29bc6cecf7bcc6ba7a1232e3fa3a19d50c02bc1a065ea95f1bafc6f1a9c326",
+      "mtime_iso": "2026-05-05T06:24:21+00:00"
+    },
+    {
+      "path": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "exists": true,
+      "bytes": 19314,
+      "sha256": "4c29bc6cecf7bcc6ba7a1232e3fa3a19d50c02bc1a065ea95f1bafc6f1a9c326",
+      "mtime_iso": "2026-05-05T06:24:21+00:00"
+    }
+  ],
+  "cross_refs": [
+    "endpoint:sl",
+    "endpoint:bundle",
+    "layer:output"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

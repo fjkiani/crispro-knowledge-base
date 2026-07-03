@@ -1,0 +1,58 @@
+{
+  "id": "critical_paragraphs:/mnt/results/HANDOFF.md",
+  "type": "critical_paragraph_index",
+  "name": "Critical paragraphs — HANDOFF.md",
+  "what_it_solves": "Paragraphs from '/mnt/results/HANDOFF.md' matching critical/discovery/gap/hardcoded/bug/blocker keywords.",
+  "how_it_solves": "Paragraph-split then filtered by `(critical|most important|discovery|gap|finding|bug|blocker|hardcoded)` case-insensitive.",
+  "why_it_exists": "The 'most important discovery' paragraphs in the audit reports carry disproportionate weight — surfacing them as an index makes them searchable.",
+  "attributes": {
+    "hit_count": 6,
+    "hits": [
+      {
+        "line": 50,
+        "bytes": 152,
+        "text": "**Evidence:** `/debug/cors` returns 404 (endpoint added in commit `429e3ac5` — not deployed). CORS preflight still returns `400 Disallowed CORS origin`."
+      },
+      {
+        "line": 64,
+        "bytes": 148,
+        "text": "curl https://crispro-backend-v2.onrender.com/debug/cors\n# Must return JSON with \"https://crispro-front-end.onrender.com\" in allowed_origins list\n```"
+      },
+      {
+        "line": 74,
+        "bytes": 203,
+        "text": "This cost ~3 hours of debugging. The Render service runs:\n```\nuvicorn api.index:app\n```\nNOT `uvicorn main:app` (what `Procfile` and `render.yaml` say). The Render dashboard `startCommand` overrides both."
+      },
+      {
+        "line": 117,
+        "bytes": 258,
+        "text": "The backend is on Render's starter plan and hibernates. First request after hibernation returns `503` with header `x-render-routing: hibernate-wake-error`. This is not a code bug — retry after 5-10 seconds. The frontend should implement retry logic for this."
+      },
+      {
+        "line": 145,
+        "bytes": 237,
+        "text": "### 4E. `/debug/cors` endpoint needs to be removed\nCommit `429e3ac5` added a `/debug/cors` endpoint that exposes the allowed origins list. Fine for debugging, should be removed before any public launch. One-line delete in `api/index.py`."
+      },
+      {
+        "line": 155,
+        "bytes": 778,
+        "text": "### `fjkiani/crispro-backend-v2`\n| Commit | What it does | Status |\n|--------|-------------|--------|\n| `19ca3ad0` | Fix CORS in `main.py` (wrong file — irrelevant to prod) | Deployed but irrelevant |\n| `b5a6f9f7` | Fix CORS in `main.py` with `_ALWAYS_ALLOWED` (still wrong file) | Deployed but irrelevant |\n| `272d4351` | Set `ALLOWED_ORIGINS` in `render.yaml` (render.yaml env vars don't update existing services) | Deployed but ineffective |\n| `b17ee064` | Fix `api/config.py` default list (right file, but env var in dashboard overrides it) | Deployed but overridden |\n| `7c5026c7` | **THE REAL FIX** — `api/index.py` `_PRODUCTION_ORIGINS` hardcoded, env var can only add | **NOT YET DEPLOYED** |\n| `429e3ac5` | Add `/debug/cors` diagnostic endpoint | **NOT YET DEPLOYED** |"
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:brenus_diligence"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

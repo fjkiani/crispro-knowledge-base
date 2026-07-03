@@ -1,0 +1,41 @@
+{
+  "id": "moat:sample_size_and_statistical_power",
+  "type": "moat_dimension",
+  "name": "Sample size and statistical power",
+  "what_it_solves": "Sample size and statistical power",
+  "how_it_solves": "See moat_comparison.json for the full crispro-vs-comparator table.",
+  "why_it_exists": "Encoded gap between CrisPRO methodology and Bev2026.",
+  "attributes": {
+    "moat_status": "DIFFERENT KIND OF STATISTICAL POWER. Bev2026 has high biological replicate quality (n=6 per condition, paired isogenic) with low N. CrisPRO has high N (1000+ cell lines) with single-readout pharmacology. Best practice combines both.",
+    "Bev2026_implementation": null,
+    "Bev2026_approach_verbatim": null,
+    "Bev2026_approach_verbatim_source": "",
+    "verification_status": "Bev2026 from PDF figure legends. CrisPRO from canonical receipts.",
+    "raw_dimension_record": {
+      "dimension": "Sample size and statistical power",
+      "Bev2026_n": "2 isogenic clone pairs (HT1197 + T24) + 2 PDOs (TN-001 + BlCa197) + 2 cross-tumor models (SW1990 + SPC111). Total isogenic readout systems: 4 cell line pairs + 2 PDO pairs = 6 paired systems.",
+      "CrisPRO_n_for_MBD4_ATR_axis": "n_LOF=14, n_WT=914 (Methods rule). Plus DepMap CRISPR n=1186 lines for gene-effect dependency.",
+      "CrisPRO_comparator_pool_for_PARP1_expression": "n=19/1498 (broader because expression data covers more lines than drug-screen data)",
+      "moat_status": "DIFFERENT KIND OF STATISTICAL POWER. Bev2026 has high biological replicate quality (n=6 per condition, paired isogenic) with low N. CrisPRO has high N (1000+ cell lines) with single-readout pharmacology. Best practice combines both.",
+      "verification_status": "Bev2026 from PDF figure legends. CrisPRO from canonical receipts."
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00",
+      "span_extracted": "comparison_dimensions[3]"
+    }
+  ],
+  "cross_refs": [
+    "governance:8d_remediation",
+    "governance:path_a_formula",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:moat_and_governance"
+}

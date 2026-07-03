@@ -1,0 +1,151 @@
+{
+  "id": "json:evidence_matrix_final_v2.json",
+  "type": "json_content",
+  "name": "evidence_matrix_final_v2.json",
+  "what_it_solves": "Full parsed contents of evidence_matrix_final_v2.json.",
+  "how_it_solves": "json.load at generation time; raw payload carried in attributes.raw.",
+  "why_it_exists": "Deep pass: previous stream did not open these files. Downstream consumers can now walk the structure without a second read.",
+  "attributes": {
+    "top_keys": [
+      "gene",
+      "therapeutic_axis",
+      "current_tier",
+      "target_tier",
+      "analysis_date",
+      "data_sources",
+      "modality_cells",
+      "overall_verdict",
+      "tier_upgrade_assessment"
+    ],
+    "raw": {
+      "gene": "MBD4",
+      "therapeutic_axis": "ATR/WEE1 (replication stress checkpoint)",
+      "current_tier": "Mechanistic candidate only",
+      "target_tier": "Strong candidate dependency axis",
+      "analysis_date": "2026-04-26",
+      "data_sources": [
+        "DepMap 23Q4 (local datalake)",
+        "PRISM 20Q2 secondary screen (figshare)",
+        "cBioPortal TCGA PanCancer Atlas 2018",
+        "PMC10786692 (PATRIOT trial, JCI 2024)",
+        "PMC11046577 (NETc, PNAS 2024)",
+        "PMID 32553118 (berzosertib HGSOC, Lancet Oncol 2020)"
+      ],
+      "modality_cells": {
+        "CRISPR_functional_genomics": {
+          "status": "MISSING",
+          "test": "Spearman co-dependency (MBD4 expr vs ATR/CHEK1/WEE1 CRISPR effect)",
+          "n": "1,112 cell lines",
+          "result": "ATR r=0.013 p_adj=0.86 | CHEK1 r=0.005 p_adj=0.86 | WEE1 r=-0.031 p_adj=0.86",
+          "verdict": "NULL — no co-dependency signal",
+          "root_cause": "ATR/CHEK1/WEE1 are pan-essential (median effects -1.10, -1.81, -2.83); floor effect masks any MBD4-specific signal. MBD4 expression is a poor LOF proxy for a DNA repair gene. Only 12 cell lines have confirmed MBD4 damaging mutations — insufficient for mutation-stratified analysis.",
+          "what_would_fill_it": "Isogenic HAP1-MBD4-KO CRISPR viability screen (not in DepMap)"
+        },
+        "drug_sensitivity_PRISM": {
+          "status": "MISSING",
+          "test": "Spearman (MBD4 expr vs AUC) + Wilcoxon (MBD4-mut vs WT)",
+          "n": "VE-822 n=470 | MK-1775 n=682 | MBD4-mutant n=9-12",
+          "result": "VE-822 r=0.024 p_adj=0.72 | MK-1775 r=0.027 p_adj=0.72 | All 7 compounds BH-adj p>0.71 | Mutation-stratified VE-822 p=0.39",
+          "verdict": "NULL — no ATRi/WEE1i sensitivity signal",
+          "root_cause": "Same expression proxy limitation; mutation-stratified n=9-12 is severely underpowered. PRISM does not contain berzosertib or ceralasertib (only older ATRi: VE-822, ETP-46464, AZ20).",
+          "what_would_fill_it": "ATRi dose-response in MBD4-KO organoids or isogenic cell lines"
+        },
+        "transcriptomic_RS_signature": {
+          "status": "MARGINAL",
+          "test": "Wilcoxon (MBD4-low vs MBD4-high tertile RS score) + Spearman",
+          "n": "300 TCGA-OV samples",
+          "result": "Wilcoxon p=0.016 (MBD4-low RS > MBD4-high) | Spearman r=-0.11 p=0.058",
+          "verdict": "DIRECTIONAL but not confirmed positive — Wilcoxon significant, Spearman borderline. Expression proxy limitation. No deep deletions of MBD4 in TCGA-OV (0/585 in pan-cancer OV cohort).",
+          "root_cause": "MBD4-LOF is not a feature of HGSOC/OV. The RS signal in OV is driven by CCNE1/TP53/MYC, not MBD4. Berzosertib HGSOC trial (Konstantinopoulos 2020) confirms this — MBD4 not mentioned.",
+          "what_would_fill_it": "RS signature analysis in UCEC (highest MBD4-LOF at 1.70%) with confirmed MBD4-LOF samples (n=9 — still underpowered)"
+        },
+        "pan_cancer_epidemiology": {
+          "status": "DESCRIPTIVE",
+          "test": "MBD4-LOF frequency across 30 TCGA PanCancer Atlas 2018 cohorts",
+          "n": "10,120 samples across 30 cancer types",
+          "result": "Pan-cancer: 0.19% (19/10,120) | UCEC: 1.70% (9/529) | MESO: 1.15% (1/87) | LGG: 0.58% (3/514) | 22/30 cohorts = 0%",
+          "verdict": "DESCRIPTIVE — confirms MBD4-LOF is rare across TCGA. UCEC is the highest-frequency cancer type. Absolute numbers too small to power any stratified analysis.",
+          "note": "Previous session reported 4.9% (26/529) for UCEC — this was fabricated. Real figure is 1.70% (9/529), verified against individual mutation records."
+        },
+        "clinical_ATRi_WEE1i": {
+          "status": "MISSING",
+          "test": "Literature mining: PATRIOT (ceralasertib), berzosertib HGSOC trial, NETc paper",
+          "result": "MBD4 = 0 mentions in PATRIOT full text (67 patients, 173-gene panel). MBD4 not in PATRIOT sequencing panel (Supp Table 3). MBD4 = 0 mentions in berzosertib HGSOC trial abstract. NETc paper: MBD4-signature in 34% of NETc, but ATRi (elimusertib) activity attributed to ERBB2/PI3K/ATR pathway, NOT MBD4 deficiency.",
+          "verdict": "MISSING — no clinical trial has tested ATRi/WEE1i in MBD4-LOF patients. No responder in any published ATRi trial is annotated as MBD4-LOF.",
+          "what_would_fill_it": "PATRIOT subgroup analysis by MBD4 status (requires data access) or prospective ATRi trial with MBD4-LOF enrichment"
+        },
+        "alternative_signal_ICI": {
+          "status": "PARTIAL — DIFFERENT AXIS",
+          "test": "Literature: MBD4-LOF + ICI response",
+          "result": "Johansson 2019: prolonged SD in uveal melanoma with germline MBD4 nonsense mutation on pembrolizumab+ipilimumab. Rodrigues 2018 (Nat Commun): outlier anti-PD1 response in uveal melanoma with germline MBD4 mutations in hypermutated tumors. NETc (PMC11046577): MBD4-signature → high TMB → ICI sensitivity hypothesis.",
+          "verdict": "MBD4-LOF → ICI sensitivity (via hypermutation/TMB) has case-level support. This is a DIFFERENT therapeutic axis from ATR/WEE1. Not relevant to the ATR/WEE1 evidence package."
+        },
+        "msi_stratified_atr_crispr": {
+          "status": "CONFOUNDED",
+          "test": "Kruskal-Wallis (A/B/C) + pairwise Mann-Whitney with BH correction + Cohen's d",
+          "n": "Group A (MBD4-LOF+MSI-H): n=12 | Group B (MBD4-WT+MSI-H): n=226 | Group C (MBD4-WT+MSS): n=948",
+          "result": "ATR: KW H=6.09, p=0.048 | A vs B: MW padj=0.229 (ns), Cohen's d=-0.129 | A vs C: padj=0.136 (ns), d=-0.291 | B vs C: padj=0.049 (*). CHEK1: A vs B d=+0.394 (wrong direction). WEE1: A vs B d=+0.052 (wrong direction). CRITICAL: All 12 MBD4-LOF lines with CRISPR data are MSI-H (MSIScore 30.5-93.2). No MBD4-LOF+MSS group exists in this dataset.",
+          "verdict": "CONFOUNDED — MBD4-LOF and MSI-H are completely collinear in the available CRISPR dataset. The A vs B contrast (MBD4-specific signal beyond MSI) is non-significant (padj=0.229) with a small effect size (d=-0.129). CHEK1 and WEE1 show effects in the wrong direction. Upgrade criterion NOT met (requires padj<0.05 AND d<-0.5 for A vs B ATR).",
+          "root_cause_if_null": "Complete collinearity of MBD4-LOF and MSI-H in DepMap CRISPR dataset: all 12 analyzable MBD4-LOF lines are MSI-H. MSI-H status is the dominant driver of any ATR dependency signal. n=12 in Group A provides ~20-30% power to detect a medium effect. An MBD4-LOF+MSS internal control group does not exist in this dataset.",
+          "what_would_fill_it": "Isogenic MBD4-KO in MSS background (e.g., HCT116-MBD4-KO vs HCT116-WT, both MSS) with ATRi dose-response. This would decouple MBD4-LOF from MSI-H confound."
+        },
+        "ucec_rs_signature_depmap": {
+          "status": "DESCRIPTIVE",
+          "test": "Spearman correlation (MBD4 expression vs 5-gene RS score) in endometrial lines; descriptive percentile comparison for MBD4-LOF lines (n=2, no inferential test)",
+          "n": "Endometrial carcinoma lines: n=36 (of 37 with expression data). MBD4-LOF endometrial: n=2 (EN=ACH-000978, HEC-151=ACH-000972). RS genes available: 5/6 (MPP6 absent from expression matrix).",
+          "result": "Spearman rho=0.190, p=0.266 (ns) in endometrial lines. Pan-cancer reference: rho=0.316, p<0.001 (n=1699). EN RS score: 4.745 (94th percentile within endometrial). HEC-151 RS score: 4.157 (50th percentile within endometrial). Endometrial median RS: 4.192. The two MBD4-LOF lines show inconsistent RS scores (one high, one median).",
+          "verdict": "DESCRIPTIVE — no inferential test possible with n=2 MBD4-LOF endometrial lines. MBD4 expression does not significantly correlate with RS score in endometrial lines (p=0.27). EN shows elevated RS (94th pct) but HEC-151 is at median (50th pct) — inconsistent with a uniform MBD4-LOF→elevated RS hypothesis. Pan-cancer correlation (rho=0.32) likely reflects proliferation co-regulation, not a mechanistic MBD4→RS link.",
+          "root_cause_if_null": "n=2 MBD4-LOF endometrial lines is insufficient for any inferential test. The RS signature (NAT10/DDX27/ZNF48/C8orf33/MOCS3) is a proliferation-associated signature, not ATR-pathway specific. MBD4 expression is a poor proxy for MBD4-LOF functional status. The two LOF lines show opposite RS directions.",
+          "what_would_fill_it": "RS signature analysis in isogenic MBD4-KO endometrial lines (e.g., Ishikawa-MBD4-KO) with ATR-specific gene set (not proliferation proxy). Alternatively, TCGA UCEC RNA-seq in confirmed MBD4-LOF cases (n=9) vs WT."
+        },
+        "dependency_probability_profile": {
+          "status": "NEGATIVE",
+          "test": "Fisher's exact test (fraction >0.5 dependency probability, LOF vs WT) + Mann-Whitney (continuous mean probability, LOF vs WT)",
+          "n": "MBD4-LOF: n=12 | MBD4-WT: n=1174",
+          "result": "ATR: LOF 100% vs WT 97.2% >0.5; Fisher p=0.711 (ns); mean prob LOF=0.965 vs WT=0.933; MW p=0.303 (ns). CHEK1: LOF 100% vs WT 99.9% >0.5; Fisher p=0.990 (ns); mean prob LOF=0.980 vs WT=0.994 (LOF LOWER); MW p=0.970 (ns). WEE1: LOF 100% vs WT 100% >0.5; Fisher p=1.000 (ns); mean prob LOF=0.997 vs WT=1.000 (LOF LOWER); MW p=0.680 (ns).",
+          "verdict": "NEGATIVE — ATR/CHEK1/WEE1 are near-universally essential (97-100% of all lines >0.5). Ceiling effect renders binary >0.5 threshold non-discriminating. CHEK1 and WEE1 mean dependency probability is LOWER in MBD4-LOF than WT (wrong direction). ATR shows numerically higher mean in LOF (0.965 vs 0.933) but non-significant (p=0.303) and confounded by MSI-H collinearity (A6). No enrichment of ATR/CHEK1/WEE1 dependency in MBD4-LOF lines detectable by this metric.",
+          "root_cause_if_null": "Pan-essentiality ceiling effect: ATR/CHEK1/WEE1 are required for replication in all dividing cells. The dependency probability metric cannot detect selective sensitization when baseline dependency is already >97%. This is a fundamental limitation of the metric for pan-essential genes, not a sample size issue.",
+          "what_would_fill_it": "Continuous CRISPR effect score comparison (already done in A1/A1b/A6 — all null). Drug sensitivity assay (A2 — null). The dependency probability metric is not the right tool for pan-essential genes."
+        }
+      },
+      "overall_verdict": {
+        "tier_change": "NO CHANGE",
+        "current_tier": "Mechanistic candidate only",
+        "justification": "All 5 computational modalities return NULL or MISSING. The one marginal signal (TCGA-OV RS score Wilcoxon p=0.016) uses expression as a proxy and does not survive Spearman correlation. MBD4-LOF is too rare in all public datasets (0.19% pan-cancer, 1.02% in DepMap) to power any statistical test. No published clinical trial has tested ATRi/WEE1i in MBD4-LOF patients.",
+        "fundamental_limitation": "MBD4 is a DNA repair gene — its LOF cannot be reliably proxied by expression level. The correct experimental model (isogenic MBD4-KO) is not represented in any public dataset.",
+        "path_to_upgrade": [
+          "HAP1-MBD4-KO isogenic ATRi/WEE1i IC50 assay (ceralasertib + berzosertib vs parental)",
+          "γH2AX + pCHK1 western blot at baseline in HAP1-MBD4-KO (RS marker confirmation)",
+          "MBD4-KO organoid ATRi dose-response (patient-derived, UCEC preferred)",
+          "PATRIOT data access request to query MBD4 status in responders",
+          "Prospective UCEC trial with MBD4-LOF enrichment arm"
+        ]
+      },
+      "tier_upgrade_assessment": {
+        "upgrade_rule": "BH-adjusted p < 0.05 AND Cohen's d < -0.5 for A6 Group A vs Group B (ATR)",
+        "a6_padj_AvB": 0.229,
+        "a6_cohens_d_AvB": -0.129,
+        "criterion_padj_met": false,
+        "criterion_cohens_d_met": false,
+        "upgrade_criterion_met": false,
+        "tier_after_A6_A7_A8": "Mechanistic candidate only",
+        "rationale": "Upgrade criterion NOT met. A6 ATR A vs B: padj=0.229 (>0.05), Cohen's d=-0.129 (>-0.5). A7 is DESCRIPTIVE (n=2 LOF, no inferential test, inconsistent RS direction). A8 is NEGATIVE (pan-essentiality ceiling effect, CHEK1/WEE1 wrong direction). Overall tier remains: Mechanistic candidate only."
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/evidence_matrix_final_v2.json",
+      "exists": true,
+      "bytes": 11865,
+      "sha256": "34d08da92f2928ea016fceb1fb16cb1d675c69173da2caa30eecbe58064779ef",
+      "mtime_iso": "2026-04-26T06:24:39+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

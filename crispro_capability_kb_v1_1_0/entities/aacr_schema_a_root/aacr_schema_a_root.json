@@ -1,0 +1,30 @@
+{
+  "id": "aacr:schema_a_root",
+  "type": "aacr_schema_a_root",
+  "name": "aacr2026_schema_a_master — root shape",
+  "what_it_solves": "Root shape of the AACR 2026 Schema A master JSON (top-level keys, list lengths, first-item keys).",
+  "how_it_solves": "Structural summarisation only — the file is ~4 MB and raw payload not carried at root (see per-key entities below).",
+  "why_it_exists": "Avoids blowing the KB up while still making the schema addressable.",
+  "attributes": {
+    "top_summary": {
+      "note": "AACR schema is not a dict at root",
+      "type": "list"
+    },
+    "bytes": 4038664
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/aacr2026_schema_a_master.json",
+      "exists": true,
+      "bytes": 4038664,
+      "sha256": "c6be802f87bf5b730a05fd67531aa9db7ae0ae21f066bb9695438b9d7adef588",
+      "mtime_iso": "2026-06-14T22:02:43+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:aacr_tracker"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

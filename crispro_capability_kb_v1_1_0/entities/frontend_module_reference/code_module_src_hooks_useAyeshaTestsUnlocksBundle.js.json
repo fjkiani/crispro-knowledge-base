@@ -1,0 +1,34 @@
+{
+  "id": "code_module:src/hooks/useAyeshaTestsUnlocksBundle.js",
+  "type": "frontend_module_reference",
+  "name": "src/hooks/useAyeshaTestsUnlocksBundle.js",
+  "what_it_solves": "Frontend module 'src/hooks/useAyeshaTestsUnlocksBundle.js' referenced by the architecture / frontend audit corpus.",
+  "how_it_solves": "Extracted by regex for .ts/.tsx/.js/.jsx paths.",
+  "why_it_exists": "Enumerates the concrete frontend surface (crispro-front-end) so any SL/Ayesha UI claim can be traced to a real file.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 127,
+        "context": "rated to the shared `sessionPersistence.js`. These still have inline copies:\n- `src/hooks/useAyeshaTestsUnlocksBundle.js`\n- `src/hooks/useDrugDetail.js`\n- `src/hooks/useTumorBoardBundle.js`\n- `src/hoo"
+      }
+    ],
+    "reference_count": 1
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-front-end",
+    "component:frontend_canonicalization"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

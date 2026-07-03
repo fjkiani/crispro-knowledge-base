@@ -1,0 +1,27 @@
+{
+  "id": "module:access_packs",
+  "type": "ops_module_group",
+  "name": "Module — access packs",
+  "what_it_solves": "Group entity for the dataset access-request packs: dbGaP phs003428 (application draft, blocker table, DAR checklist, dependency graph, email, missing fields, public metadata, variable dictionary) and the GBM/CRC/GEO/GLASS equivalents.",
+  "how_it_solves": "Declared as a grouper.",
+  "why_it_exists": "Access packs are recurring operational assets; one grouper keeps them findable and closes 12 dangling cross_refs from the deep audit.",
+  "attributes": {
+    "member_families": [
+      "dbgap_access_pack:*",
+      "gbm_access_pack:*",
+      "crc_access_pack:*",
+      "geo_access_pack:*",
+      "glass_access_pack:*"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "user_memory:access_packs",
+      "note": "grouper — not backed by a single file"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep_patch"
+}

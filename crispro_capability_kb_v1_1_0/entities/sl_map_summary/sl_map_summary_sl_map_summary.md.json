@@ -1,0 +1,115 @@
+{
+  "id": "sl_map_summary:sl_map_summary.md",
+  "type": "sl_map_summary",
+  "name": "sl_map_summary.md",
+  "what_it_solves": "sl_map_summary artifact sl_map_summary.md",
+  "how_it_solves": "Auto-parsed by extension.",
+  "why_it_exists": "Every access pack / SL map / gap-lineage report is a durable operational asset — must be addressable.",
+  "attributes": {
+    "byte_length": 12974,
+    "heading_count": 17,
+    "headings": [
+      {
+        "level": 1,
+        "title": "DepMap 24Q4 Synthetic Lethal Map — Resistance-State Analysis",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "IMPORTANT DISCLAIMERS",
+        "line": 3
+      },
+      {
+        "level": 2,
+        "title": "CRITICAL REVIEW FLAGS — READ BEFORE USING ANY RESULTS",
+        "line": 12
+      },
+      {
+        "level": 2,
+        "title": "Dataset Summary",
+        "line": 29
+      },
+      {
+        "level": 2,
+        "title": "Results by Escape Marker",
+        "line": 39
+      },
+      {
+        "level": 3,
+        "title": "ABCB1 — LOW CONCERN (7 hits)",
+        "line": 41
+      },
+      {
+        "level": 3,
+        "title": "BCL2 — SEVERE LINEAGE CONFOUND — DO NOT USE WITHOUT LINEAGE CORRECTION (222 hits)",
+        "line": 56
+      },
+      {
+        "level": 3,
+        "title": "ZEB1 — MODERATE LINEAGE CONFOUND (135 hits)",
+        "line": 74
+      },
+      {
+        "level": 3,
+        "title": "HIF1A — MODERATE EXPRESSION CAVEAT (157 hits)",
+        "line": 92
+      },
+      {
+        "level": 3,
+        "title": "MMP9 — LOW CONCERN (31 hits)",
+        "line": 112
+      },
+      {
+        "level": 3,
+        "title": "VEGFC — LOW CONCERN (206 hits)",
+        "line": 130
+      },
+      {
+        "level": 2,
+        "title": "Overall Summary",
+        "line": 148
+      },
+      {
+        "level": 2,
+        "title": "Cross-Marker Recurrence (LOW/MODERATE confound markers only — BCL2 excluded)",
+        "line": 162
+      },
+      {
+        "level": 2,
+        "title": "Priority Hypothesis Targets (LOW/MODERATE confound markers only)",
+        "line": 177
+      },
+      {
+        "level": 2,
+        "title": "Recommended Next Steps",
+        "line": 189
+      },
+      {
+        "level": 2,
+        "title": "Caveats and Limitations",
+        "line": 199
+      },
+      {
+        "level": 2,
+        "title": "Claim Status",
+        "line": 212
+      }
+    ],
+    "preview": "# DepMap 24Q4 Synthetic Lethal Map — Resistance-State Analysis\n\n## IMPORTANT DISCLAIMERS\n- **ALL results are tagged: `HYPOTHESIS_TARGET_PENDING_PHASE1`**\n- This is a **cell-line-based computational analysis only**\n- Results are **NOT validated** in clinical data\n- Do **NOT** claim clinical actionability from these findings\n- SL interactions require experimental validation before clinical translation\n\n---\n\n## CRITICAL REVIEW FLAGS — READ BEFORE USING ANY RESULTS\n\nPost-analysis scientific review identified the following issues. They affect interpretation of specific markers and must be disclosed in any downstream use.\n\n| Marker | Severity | Issue |\n|--------|----------|-------|\n| **BCL2** | **SEVERE** | **Lineage confound**: BCL2 Q75 group is 37% lymphoid/myeloid (72 lymphoid + 29 myeloid / 276 lines) vs solid-tumor-dominated Q25 (Lung, Head/Neck, Bowel, Ovary). The 222 BCL2 hits likely reflect hematologic lineage essentialities, not BCL2-driven resistance biology in solid tumors. BCL2 is a lineage marker for lymphoid cells in DepMap, not a resistance marker. **BCL2 hits must not be used without lineage-corrected reanalysis restricted to solid tumor lines.** |\n| **ZEB1** | **MODERATE** | **Lineage confound**: Q75 enriched for CNS/Brain (44/276), Peripheral Nervous System (32/276), Soft Tissue (32/276). Mesenchymal/neural lineage bias may inflate hit count. CHMP4B delta of -0.741 is numerically real but may reflect CNS/PNS-specific essentiality rather than ZEB1-driven EMT resistance. |\n| **HIF1A** | **MODERATE** | **Expression range caveat**: HIF1A IQR = 1.64 log2 TPM+1; 84.7% of lines express above 5.0. Q75 vs Q25 split (7.03 vs 5.39) compares \"moderately high\" vs \"moderate\" expression — not high vs low HIF1A activity. HIF1A protein activity is regulated post-translationally by oxygen tension, absent in standard DepMap culture. VHL and EGLN1 appearing as hits confirms biologically coherent signal, but the narrow expression range limits confidence. |\n| **ABCB1** | LOW | Tissue-specific expression; 30% of lines near-zero. Q25 threshold = 0.070 (near-zero). Sparse hits (n=7) may reflect tissue-specific biology. |\n| **MMP9** | LOW | No major lineage confound identified. |\n| **VEGFC** | LOW | No major lineage confound identified. High hit count (n=206) warrants lineage audit if used in downstream analysis. |\n\n**Drug annotation failure (all markers):** DGIdb was rate-limited; OncoKB returned HTTP 401 (API key required). All 758 rows show `no_known_drug` in the `dr"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/sl_map_summary.md",
+      "exists": true,
+      "bytes": 13041,
+      "sha256": "d5bccd158dc72a7908f70fc6885cff8a86327711f1807091f358764b6fc56798",
+      "mtime_iso": "2026-05-12T17:49:08+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:sl_maps"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

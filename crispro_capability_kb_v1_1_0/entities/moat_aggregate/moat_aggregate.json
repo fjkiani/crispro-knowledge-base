@@ -1,0 +1,203 @@
+{
+  "id": "moat:aggregate",
+  "type": "moat_aggregate",
+  "name": "Methodological moat — full comparison record (anchor)",
+  "what_it_solves": "Aggregate anchor for the full moat_comparison.json record; sibling to the per-dimension entities.",
+  "how_it_solves": "Preserves top-level keys of moat_comparison.json + the full document_purpose + provenance + honest_moat_assessment blocks so consumers can walk them without re-summarising.",
+  "why_it_exists": "The moat comparison is CrisPRO's positioning artefact; cross-refs to the moat 'as a whole' land here rather than picking an arbitrary dimension.",
+  "attributes": {
+    "top_level_keys": [
+      "$schema_version",
+      "document_purpose",
+      "provenance",
+      "definition_of_moat",
+      "comparison_dimensions",
+      "comparative_summary_table",
+      "honest_moat_assessment",
+      "competitor_landscape_not_assessed_this_session",
+      "audit_corrections_2026_06_24",
+      "moat_caveats"
+    ],
+    "document_purpose": "Compare CrisPRO's methodological 'moat' against Bevilacqua 2026's published approach + adjacent literature, with every claim traceable to PDF, transcript receipts, or paper references.",
+    "provenance": {
+      "audit_date_utc": "2026-06-24",
+      "primary_source": {
+        "paper": "Bevilacqua R, Gasperini P, Cantore T, et al. Therapeutic vulnerabilities exposed by the 9p21 loss identified through multiparametric drug screening inform rational combination strategies.",
+        "journal": "npj Precision Oncology",
+        "year": 2026,
+        "volume": "10",
+        "article_no": "232",
+        "doi": "10.1038/s41698-026-01434-w",
+        "received": "2025-09-01",
+        "accepted": "2026-04-07",
+        "published": "2026-04-18",
+        "retrieval_method": "Full PDF read (16 pages) via Read tool on /mnt/user-uploads/s41698-026-01434-w.pdf, 2026-06-24",
+        "data_deposition": "Zenodo 10.5281/zenodo.18957959",
+        "code_availability": "Not publicly available; available on reasonable request from corresponding authors per paper Code Availability statement",
+        "license": "CC-BY 4.0"
+      },
+      "verification_status": "Every leaf below is traceable to a specific page/figure/table of the source PDF or to a verifiable transcript receipt. No claim retained from prior generated JSONs unless re-verified.",
+      "audit_corrections_applied": [
+        "MTAP-loss prevalence in TCGA MIBC = 26% (paper text, Discussion §1, cBioPortal computation by the authors). 22% in PLAN.md was the older Robertson 2017 CDKN2A-alone figure for MIBC; both retained, distinguished.",
+        "Phenotypic features = 12 (verbatim, Results §Phenotype-based hit selection: 'For each object (i.e., cell or nucleus), 12 phenotypic features...'). PLAN.md had hedged this to 'feature count not in retrieved supplementary'; PDF resolves it definitively to 12.",
+        "SynergyFinder version = 3.1 (verbatim, Fig 3 legend). Reference 21 (Ianevski 2022) is the SynergyFinder 3.0 paper; the authors used the 3.1 release derived from the same software lineage.",
+        "ATR inhibitor name verbatim = VX970 (no hyphen, no 'berzosertib'). Paper uses VX970 throughout.",
+        "Compound library composition: 2,349 total = 349 (Selleck Anti-cancer) + 958 (MicroSource Spectrum known drugs in human therapy) + 629 (natural products) + 343 (biological activity at experimental level) + 70 (approved for agricultural use only). Numerical sum = 2,349.",
+        "PDO clinical context: BlCa197 = 54-year-old female, high-grade MIBC, mixed urothelial+sarcomatoid, neoadjuvant cisplatin/gemcitabine + radical cystectomy. TN-001 = 53-year-old male, high-grade MIBC, mixed urothelial+sarcomatoid, MVAC combination + radical cystectomy.",
+        "Ethical approvals: KEK 06/03 and 2017-02295.",
+        "AZD7762 and MK-1775 z-scores from primary screen now stated verbatim: AZD7762 WT z=-3.60 / 3KO z=-5.06; MK-1775 WT z=-1.12 / 3KO z=-2.06.",
+        "MRTX1719 axis bug in repo: pharmacologic_analyzer.py:66 maps 'mrtx1719' -> 'wrn'. Correct axis per Bev2026 §Methods +  Engstrom 2023 ref 7 = PRMT5 (MTA-cooperative). Flag in DH JSON; no code fix in this task per user lock #4."
+      ]
+    },
+    "definition_of_moat": "Defensible methodological features that distinguish CrisPRO's approach from established or emerging competitors. Moat ≠ moral superiority; moat = features competitors cannot easily replicate without comparable infrastructure, expertise, or data access.",
+    "honest_moat_assessment": {
+      "where_CrisPRO_genuinely_outperforms": [
+        "Computational falsification at scale (PARP1 axis in MBD4-LOF context demonstrated; methodology generalizable)",
+        "Systematic confound stress-testing within single dataset (MSI + TP53 + LOO + lineage)",
+        "Open code + artifact provenance with full-precision statistical values",
+        "Cross-axis evidence matrix that survives compaction (canonical artifact frozen 2026-04-05)"
+      ],
+      "where_Bev2026_outperforms": [
+        "Cellular validation in isogenic pairs + cross-tumor + PDOs (gold-standard biological evidence)",
+        "Bi-directional MTAP editing (rescue + KO) as in-cell falsification mechanism",
+        "PDO infrastructure (TOR Bern + clinical samples)",
+        "Wet-lab synergy measurement (SynergyFinder 3.1 HSA scores with 95% CI)"
+      ],
+      "complementarity_opportunity": "CrisPRO + Bev2026 lab = computational triage + cellular validation. CrisPRO ranks candidate PDOs by biomarker score → Demichelis/Kruithof-de Julio lab validates the top-N in wet lab. Each side does what it cannot do alone.",
+      "fix_required_before_outreach": [
+        "MRTX1719 axis-mapping bug in pharmacologic_analyzer.py:66 (PRMT5 vs WRN) — flagged in DH JSON and CVP JSON. Recommended pre-outreach fix.",
+        "PRMT5_MTAP_COOPERATIVE axis missing from CandidateAxis enum (currently 7 axes; this would be the 8th).",
+        "n=942 prose value (manuscript Abstract/Table/Fig 2 caption) does not reproduce from canonical_atr_wee1_rerun.json — user's own audit report flags this as an unresolved item; affects only internal CrisPRO manuscript, not outreach material."
+      ]
+    },
+    "comparative_summary_table": [
+      {
+        "dimension": "Multi-modal discovery",
+        "Bev2026": "Strong (viability + morphology)",
+        "CrisPRO": "Strong (7-axis evidence matrix)",
+        "winner": "PARITY"
+      },
+      {
+        "dimension": "Falsification arm",
+        "Bev2026": "Cellular 2KO (gold-standard, low N)",
+        "CrisPRO": "In-silico PARP1 Mann-Whitney (scaleable)",
+        "winner": "COMPLEMENTARY"
+      },
+      {
+        "dimension": "Confound stress tests",
+        "Bev2026": "Cross-system (clones+cell lines+PDOs+tumor types)",
+        "CrisPRO": "Cross-stratifier (MSI, TP53, LOO, lineage)",
+        "winner": "COMPLEMENTARY"
+      },
+      {
+        "dimension": "Statistical N",
+        "Bev2026": "Low N high quality (paired isogenic n=6)",
+        "CrisPRO": "High N (n=914 WT, n=14 LOF, n=1498 comparator)",
+        "winner": "COMPLEMENTARY"
+      },
+      {
+        "dimension": "Axis taxonomy",
+        "Bev2026": "Biologically correct, no enum",
+        "CrisPRO": "Formal enum, MRTX1719 bug at HEAD bfd6d11f",
+        "winner": "Bev2026 (biology); CrisPRO (framework)"
+      },
+      {
+        "dimension": "PDO deployment",
+        "Bev2026": "Bi-directional MTAP editing in 2 PDOs",
+        "CrisPRO": "No primary PDO; in-silico triage offer",
+        "winner": "Bev2026"
+      },
+      {
+        "dimension": "Reproducibility",
+        "Bev2026": "Data on Zenodo; code withheld",
+        "CrisPRO": "Open code + artifact provenance + 10 unit tests",
+        "winner": "CrisPRO"
+      },
+      {
+        "dimension": "Synergy quantification",
+        "Bev2026": "HSA + Bliss w/ SynergyFinder 3.1, 95% CI",
+        "CrisPRO": "Not currently performed; offers axis pairing ranking only",
+        "winner": "Bev2026"
+      }
+    ],
+    "moat_caveats": {
+      "caveat_id": "MOAT-CAV-001",
+      "caveat_title": "Reproducibility-as-moat is contingent on unresolved governance items",
+      "added_on": "2026-06-24",
+      "scope": "Applies to all 'CrisPRO ADVANTAGE on reproducibility / code transparency' claims in this document (Dimensions 3, 7, and the honest_moat_assessment block).",
+      "issue_1_pc02_quarantine": {
+        "claim_at_risk": "honest_moat_assessment.where_CrisPRO_genuinely_outperforms includes: 'Open code + artifact provenance with full-precision statistical values'",
+        "provenance_status": "PARTIALLY VERIFIED — the existence of PC-02 as a quarantined item is confirmed in /mnt/results/execution_trace/NOTES.md verbatim line: 'QUARANTINED: DL-07 Figure 2 (DDR 0.983), LATIFY deltas, PC-02'. The full expansion of what PC-02 means ('permanently downgraded until retroactive_prediction_run.py --trial-vectors reproduces documented deltas cleanly') is sourced from AI Notes memory only, not from a tool output in this session's transcript.",
+        "downgrade_to_apply": "The 'reproducibility' moat claim in Dimension 7 is degraded until PC-02 is resolved. The statement 'Open code + artifact provenance' remains true at the file-existence level, but the assertion that those artifacts represent verified-reproducible work is not yet substantiated.",
+        "what_this_means_for_outreach": "Demichelis/Kruithof-de Julio outreach should NOT lead with 'reproducible canonical artifacts' as a differentiator until the project's own retroactive reproduction passes. Lead with the falsification methodology (PARP1 Mann-Whitney) and stress-test structure (MSI/TP53/LOO/lineage) — those are confirmed by full-precision values in transcript indices 991/1010."
+      },
+      "issue_2_n942_vs_n914_discrepancy": {
+        "claim_at_risk": "moat_comparison.json Dimension 3 stress-test breakdown uses n_WT=914 (canonical_atr_wee1_rerun.json 2026-04-05 Methods_no_somatic_MBD4 rule).",
+        "provenance_status": "VERIFIED that the MBD4 manuscript branch is named 'feat/mbd4-rxiv-manuscript-942-baseline' — see transcript index 970 user message verbatim: 'https://github.com/fjkiani/Synthetic-Lethality/tree/feat/mbd4-rxiv-manuscript-942-baseline/00-mbd4-manuscript/mbd4_parp_response'. The branch name implies the manuscript prose was anchored on n=942, while the canonical artifact frozen 2026-04-05 yields n=914 under Methods_no_somatic_MBD4 rule. The 28-line discrepancy is real and unresolved at the project level.",
+        "specific_uncertainty": "(a) Whether n=942 is the alternate rule (includes MBD4 non-LOF somatic mutants → reaches n=922 per WT_rule_canonical alternate path, not 942 — so n=942 may be yet a third rule). (b) Which N is the manuscript source-of-truth. (c) Whether downstream deltas/p-values change materially under the different rule.",
+        "downgrade_to_apply": "The Dimension 3 framing 'n=914 (Methods rule)' is correct for what we cite, but moat-comparison should NOT claim 'CrisPRO has reconciled sample-size definitions across the canonical pipeline' — that reconciliation has not been demonstrated.",
+        "what_this_means_for_outreach": "If a reviewer asks 'why does your branch say 942 but your audit values use 914?', the project lead needs a one-sentence answer before that conversation happens."
+      },
+      "issue_3_repo_state_temporal_qualification": {
+        "claim_at_risk": "MRTX1719 bug at pharmacologic_analyzer.py:66 (at HEAD bfd6d11f, branch fix/mbd4-atr-strong-tier).",
+        "provenance_status": "VERIFIED at last inspection — HEAD bfd6d11f confirmed in transcript via earlier worker-mounted git operations. However, the worker that performed that inspection has been terminated. Current live state of the bug is UNKNOWN.",
+        "downgrade_to_apply": "Bug claim must be qualified with 'as of last verified commit bfd6d11f' — not 'current production state'.",
+        "what_this_means_for_outreach": "If MRTX1719 bug is referenced in any external-facing communication, it should be qualified as 'at the time of audit' to allow the user to address the bug between audit and outreach without invalidating the comparison."
+      },
+      "what_this_caveat_block_does_NOT_change": [
+        "The 4 stress tests + PARP1 falsification arm with full-precision values remain unaffected — those numbers exist in canonical_atr_wee1_rerun.json and were quoted verbatim from transcript indices 991/1010 + user message line 12288 (i=11560).",
+        "Bev2026 verbatim quotes with PDF page citations remain unaffected.",
+        "The methodological framing (computational falsification + stress-test stratification) is the strongest part of the moat and is independently verifiable from the canonical receipts."
+      ],
+      "what_this_caveat_block_DOES_change": [
+        "Tone of Dimension 7 (Reproducibility infrastructure): the CrisPRO ADVANTAGE label remains structurally accurate (open code vs Bev2026's code-withheld) but the IMPLEMENTATION advantage is degraded.",
+        "honest_moat_assessment.where_CrisPRO_genuinely_outperforms: the 4th bullet ('Cross-axis evidence matrix that survives compaction') is unaffected; the 1st-3rd bullets remain accurate.",
+        "fix_required_before_outreach: added PC-02 resolution + n=942/n=914 reconciliation alongside existing items."
+      ],
+      "memory_vs_transcript_provenance_principle": "Following 2026-06-24 system reminder: claims sourced from AI Notes memory only are tagged as 'MEMORY-SOURCED' here; claims confirmed by direct tool output in /mnt/results/execution_trace/transcript.jsonl are tagged 'TRANSCRIPT-VERIFIED'. PC-02 existence = TRANSCRIPT-VERIFIED (NOTES.md). PC-02 expansion = MEMORY-SOURCED (no transcript confirmation found via rg -F 'PC-02' /mnt/results/execution_trace/transcript.jsonl in this session)."
+    },
+    "audit_corrections_2026_06_24": {
+      "issues_found_by_post_generation_audit": 8,
+      "issues_resolved": 8,
+      "corrections_applied": [
+        "Dim 1: Added 'PDF Introduction page 2' source location for 'Unlike cell viability screenings' verbatim quote.",
+        "Dim 3: Restored full-precision values for all 4 stress tests + primary endpoint (Δ to 16 sig figs, p-values exact, Cohen's d exact) — matches canonical_atr_wee1_rerun.json frozen 2026-04-05.",
+        "Dim 5: Added 3 verbatim Bev2026 quotes with page citations: Results page 5 header, Ref 7 Engstrom 2023, Ref 8 Pettus 2025.",
+        "Dim 6: Added 3 verbatim Bev2026 quotes with page citations: Methods page 14 PDO clinical history, Methods page 14 bi-directional editing, Results page 8 rescue finding.",
+        "Dim 8 (NEW): Synergy quantification — added Fig 3 caption verbatim with page 7 source. SynergyFinder 3.1 vs ref 21 (3.0) distinction noted.",
+        "Dim 9 (NEW): MTAP-loss prevalence attribution — 3 verbatim quotes (Intro p.2, Results p.2, Discussion p.12) explicitly disambiguating 26% (Bev2026 MTAP-codeletion) vs 22% (Robertson 2017 CDKN2A-alone).",
+        "Removed any implicit claim that CrisPRO 'verified' or 'reproduced' the 26% figure — it is Bev2026's own analysis.",
+        "Audit checked attribution drift: 0 concerns. All quantitative claims trace to verified transcript receipts or verified PDF text. Repo state qualified with 'HEAD bfd6d11f'."
+      ],
+      "claims_remaining_in_quarantine": [
+        "None in moat_comparison.json. All quantitative claims either cite verbatim verbatim or are explicitly labeled as inferences."
+      ],
+      "claims_NOT_made_in_this_document": [
+        "Wet-lab competitor comparisons (Mirati Phase II, Agios Phase I, etc.) — explicitly out of scope per competitor_landscape_not_assessed_this_session block.",
+        "Specific resolution recommendation for MRTX1719 bug — only the bug location and correct mapping per Bev2026 are stated; whether to fix or not remains the user's call per lock #4."
+      ],
+      "full_precision_audit_pass": "All canonical receipt values present at full precision: 0.7324529879649893 (delta), 0.05564297952485164 (AUC delta), 1.0692019443383756 (TP53 delta), 0.045165724128583974 (LOO max p), n=619 (TP53 strat WT).",
+      "caveat_blocks_added": [
+        "MOAT-CAV-001 (reproducibility-as-moat contingent on PC-02 + n=942/n=914 + repo-state-temporal qualification)"
+      ],
+      "caveat_added_at": "2026-06-24 (after worker-0 termination + recreation)"
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00"
+    }
+  ],
+  "cross_refs": [
+    "governance:path_a_formula",
+    "governance:8d_remediation",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:moat_and_governance"
+}

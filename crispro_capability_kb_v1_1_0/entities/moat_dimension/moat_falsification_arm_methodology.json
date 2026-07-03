@@ -1,0 +1,42 @@
+{
+  "id": "moat:falsification_arm_methodology",
+  "type": "moat_dimension",
+  "name": "Falsification arm methodology",
+  "what_it_solves": "Falsification arm methodology",
+  "how_it_solves": "PARP1 expression Mann-Whitney falsification arm: MBD4-LOF vs comparator (n=19/1498), median LOF 6.770 vs comparator 6.656, p=0.605 (two-sided). Sanity check: pan-cancer PARP1×PARPi ρ=-0.416, p=1.36e-21, n=481. Verifies that PARP-trapping mechanism is NOT operative in MBD4-LOF and pivots toward ATR axis as recommended therapy.",
+  "why_it_exists": "Encoded gap between CrisPRO methodology and Bev2026.",
+  "attributes": {
+    "moat_status": "COMPLEMENTARY. Bev2026's wet-lab 2KO falsification is gold-standard but constrained to one gene at a time. CrisPRO's in-silico Mann-Whitney falsification scales across 18,000+ genes × multiple axes.",
+    "Bev2026_implementation": null,
+    "Bev2026_approach_verbatim": null,
+    "Bev2026_approach_verbatim_source": "",
+    "verification_status": "Bev2026 from PDF §Results + Supp Fig 2D. CrisPRO from user-provided 'precise numbers' message transcript line 12288 (verbatim).",
+    "raw_dimension_record": {
+      "dimension": "Falsification arm methodology",
+      "Bev2026_approach": "2KO clones (CDKN2A/2B deleted, MTAP retained) used as in-cell falsification arm. If sensitivity is MTAP-driven, 2KO should NOT respond to PRMT5/MAT2A inhibitors → confirmed (Supp Fig 2B, 2D).",
+      "Bev2026_evidence_quality": "Strong - actual cellular falsification in same assay system.",
+      "CrisPRO_approach": "PARP1 expression Mann-Whitney falsification arm: MBD4-LOF vs comparator (n=19/1498), median LOF 6.770 vs comparator 6.656, p=0.605 (two-sided). Sanity check: pan-cancer PARP1×PARPi ρ=-0.416, p=1.36e-21, n=481. Verifies that PARP-trapping mechanism is NOT operative in MBD4-LOF and pivots toward ATR axis as recommended therapy.",
+      "CrisPRO_evidence_quality": "In-silico falsification using public DepMap expression data + pan-cancer pharmacology Spearman correlation. Differs from Bev2026 in being computational not cellular, but enables falsification of competing hypotheses at scale across the full gene-axis matrix.",
+      "moat_status": "COMPLEMENTARY. Bev2026's wet-lab 2KO falsification is gold-standard but constrained to one gene at a time. CrisPRO's in-silico Mann-Whitney falsification scales across 18,000+ genes × multiple axes.",
+      "verification_status": "Bev2026 from PDF §Results + Supp Fig 2D. CrisPRO from user-provided 'precise numbers' message transcript line 12288 (verbatim)."
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00",
+      "span_extracted": "comparison_dimensions[1]"
+    }
+  ],
+  "cross_refs": [
+    "governance:8d_remediation",
+    "governance:path_a_formula",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:moat_and_governance"
+}

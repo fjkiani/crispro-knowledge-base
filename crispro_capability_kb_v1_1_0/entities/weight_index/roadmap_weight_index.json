@@ -1,0 +1,64 @@
+{
+  "id": "roadmap:weight_index",
+  "type": "weight_index",
+  "name": "Roadmap weight index",
+  "what_it_solves": "Enumeration of every `\"key\": number` construct in the roadmap.",
+  "how_it_solves": "Regex `\"([a-z_]+)\"\\s*:\\s*([-\\d.]+)`.",
+  "why_it_exists": "Captures modality weights, RS feature weights, and any other JSON-style scalar mappings without depending on chapter positions.",
+  "attributes": {
+    "count": 7,
+    "weights": [
+      {
+        "key": "clinical",
+        "value": "4",
+        "line": 765
+      },
+      {
+        "key": "in_vivo",
+        "value": "3",
+        "line": 766
+      },
+      {
+        "key": "in_vitro",
+        "value": "2",
+        "line": 767
+      },
+      {
+        "key": "prism",
+        "value": "2",
+        "line": 768
+      },
+      {
+        "key": "gdsc",
+        "value": "2",
+        "line": 769
+      },
+      {
+        "key": "expression",
+        "value": "1",
+        "line": 770
+      },
+      {
+        "key": "crispr",
+        "value": "1",
+        "line": 771
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00"
+    }
+  ],
+  "cross_refs": [
+    "component:modality_fuser",
+    "framework:rs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:synthetic_lethality_deep"
+}

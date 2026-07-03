@@ -1,0 +1,886 @@
+{
+  "stream_id": "operations_and_access",
+  "stream_name": "Operations, data access, and additional CrisPRO evidence artefacts",
+  "generated_at_utc": "2026-07-03T21:06:19.479950+00:00",
+  "files_audited": [
+    {
+      "path": "/mnt/results/crispro_docs/COMPUTATIONAL_CANCER_CURE_ROADMAP.md",
+      "exists": true,
+      "bytes": 32179,
+      "sha256": "c9a2919408cc22cefb9d5d079682e6df9b4e91706e6c2f79ef40f236451a88f6",
+      "mtime_iso": "2026-04-13T20:11:12+00:00"
+    },
+    {
+      "path": "/mnt/results/crispro_docs/FRONTEND_AGENT_PROMPT.md",
+      "exists": true,
+      "bytes": 17060,
+      "sha256": "87f522c8c861f1ba9a3efab157d6e8146d8f377319569c0aa2b0e7736b1e3600",
+      "mtime_iso": "2026-04-13T20:08:21+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_access_status.json",
+      "exists": true,
+      "bytes": 4925,
+      "sha256": "5b438e0d453184a4c08cf87076adf36d4d32c1d27c36ef005355a0496aa0876b",
+      "mtime_iso": "2026-05-13T07:25:24+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_application_draft.md",
+      "exists": true,
+      "bytes": 11104,
+      "sha256": "8e1f41aa0f999e53cde0adbeeb7fdaba52802bb6e1b686a24ac1707159af42db",
+      "mtime_iso": "2026-05-13T07:25:43+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_blocker_table.csv",
+      "exists": true,
+      "bytes": 3562,
+      "sha256": "a99f974cb216d27fa0cc7d75269bcada429eaaf73cd550548e8f11f646fc250f",
+      "mtime_iso": "2026-05-13T07:24:40+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_ctep_email_final.md",
+      "exists": true,
+      "bytes": 7241,
+      "sha256": "5c6c39b94bcf5a33ccdff816a05ee2655f564ce5d1c1300cc575809634f74e04",
+      "mtime_iso": "2026-05-13T09:04:38+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_dar_checklist.csv",
+      "exists": true,
+      "bytes": 10891,
+      "sha256": "1941c5ef4540b22e81455d9b0d05956dcf2f82271da4861a390928687ed75876",
+      "mtime_iso": "2026-05-13T08:22:55+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_dependency_graph.json",
+      "exists": true,
+      "bytes": 7674,
+      "sha256": "49a7164f8c9cae87f40dc4c4fd16abed47fa47f655a132523dda26021d8cfaa7",
+      "mtime_iso": "2026-05-13T08:22:55+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_fahad_fields_only.json",
+      "exists": true,
+      "bytes": 2104,
+      "sha256": "36d267f2da703948b25fc23276552d9ba01a1690a7975def8270476d4f4bbdee",
+      "mtime_iso": "2026-05-13T09:17:35+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_institution_intake_minimal.csv",
+      "exists": true,
+      "bytes": 1015,
+      "sha256": "ee1c0c68c8b7ef6665e57f98f2cc5e51707f167e98447d8b444a05b53ac845c2",
+      "mtime_iso": "2026-05-13T09:17:36+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_missing_fields.json",
+      "exists": true,
+      "bytes": 6811,
+      "sha256": "738eca5ae01038e097074044a12ec7234f386500f056b3e13f5860e94fa71a1e",
+      "mtime_iso": "2026-05-13T08:22:56+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_public_metadata.json",
+      "exists": true,
+      "bytes": 6227,
+      "sha256": "e4d5cec69da47e926a77780054e50ae45719d00bb29e9792adc2b147b987d7ee",
+      "mtime_iso": "2026-05-13T07:20:22+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_variable_dictionary.csv",
+      "exists": true,
+      "bytes": 8888,
+      "sha256": "ff71b476794aa6c4e2e117b26409f3ac11a67c8fb80276c2dd80d49e972b523e",
+      "mtime_iso": "2026-05-13T07:20:46+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_access_request_draft.md",
+      "exists": true,
+      "bytes": 14716,
+      "sha256": "855aa4444ed87f5d74c6fe38e5ee5eb05d634a7721763cf66261c781af95929d",
+      "mtime_iso": "2026-05-12T17:38:36+00:00"
+    },
+    {
+      "path": "/mnt/results/gbm_access_top_memo.md",
+      "exists": true,
+      "bytes": 5939,
+      "sha256": "1aebae8d716e02cba32e42238e7cbdc1b662b0a1879b44ea6c3842b16ae9b596",
+      "mtime_iso": "2026-05-13T02:33:47+00:00"
+    },
+    {
+      "path": "/mnt/results/gbm_gse174554_bulk_vs_sc_dilution.json",
+      "exists": true,
+      "bytes": 4898,
+      "sha256": "10516487afced3b159a0ca5947caa177c5c3bce72b83084c2fcae98c00f7bbaf",
+      "mtime_iso": "2026-05-13T10:16:42+00:00"
+    },
+    {
+      "path": "/mnt/results/gbm_gse174554_sc_emt_full.csv",
+      "exists": true,
+      "bytes": 6164,
+      "sha256": "3f91fc99ca2df1498d5c120f4daae767ebd9705b59b127131690f576aeac3962",
+      "mtime_iso": "2026-05-13T10:16:41+00:00"
+    },
+    {
+      "path": "/mnt/results/gbm_gse174554_sc_escape_final.json",
+      "exists": true,
+      "bytes": 4976,
+      "sha256": "ad20c1a1032f87bb4509f7f5417087ec7887dea1aa58ee040d33aa98d8fbd119",
+      "mtime_iso": "2026-05-13T10:16:42+00:00"
+    },
+    {
+      "path": "/mnt/results/gbm_gse174554_sc_zeb1_plot.png",
+      "exists": true,
+      "bytes": 252735,
+      "sha256": "8d715d0da84611ed77ff5e54a5078027b32b724783b775e3680f56ad3fd3dabb",
+      "mtime_iso": "2026-05-13T10:16:18+00:00"
+    },
+    {
+      "path": "/mnt/results/gbm_next_resolution_access_status.json",
+      "exists": true,
+      "bytes": 169,
+      "sha256": "3889f97ec850382c3a46f73992f6392a7fa6e95efd459e34298d0d74b173a0cb",
+      "mtime_iso": "2026-05-13T09:18:31+00:00"
+    },
+    {
+      "path": "/mnt/results/gbm_next_resolution_dataset_scan.csv",
+      "exists": true,
+      "bytes": 3350,
+      "sha256": "d23f0255b01a3105202abc4924781062c8425f132c74ece7f0d6dadeec8b9791",
+      "mtime_iso": "2026-05-13T09:18:30+00:00"
+    },
+    {
+      "path": "/mnt/results/gbm_next_resolution_target.json",
+      "exists": true,
+      "bytes": 872,
+      "sha256": "fdc2902e4ad85040b1f69774474791e4119114aedf7b33308bf5058fa39a0758",
+      "mtime_iso": "2026-05-13T09:18:30+00:00"
+    },
+    {
+      "path": "/mnt/results/gbm_trial_access_ledger.csv",
+      "exists": true,
+      "bytes": 9355,
+      "sha256": "181d36c75af44ea3d92d9eea64de78278c67f1bda12dcafd95a5b61f0bb8a9da",
+      "mtime_iso": "2026-05-13T02:33:45+00:00"
+    },
+    {
+      "path": "/mnt/results/glass_access_status.json",
+      "exists": true,
+      "bytes": 3741,
+      "sha256": "39700f938515ef96518848f1904285f44a74e8aee951e658e97f7e24b902f8a5",
+      "mtime_iso": "2026-05-13T07:28:51+00:00"
+    },
+    {
+      "path": "/mnt/results/glass_bulk_recurrence_closure.md",
+      "exists": true,
+      "bytes": 5451,
+      "sha256": "31cbab0e08e9ea946190582856adb1f1cc0a221ea64f8a1c47d28a3dc3af1b3d",
+      "mtime_iso": "2026-05-13T09:05:09+00:00"
+    },
+    {
+      "path": "/mnt/results/glass_emt_shift_summary.csv",
+      "exists": true,
+      "bytes": 520,
+      "sha256": "55386e2fbcf967b777548ee4cf69a8bfb3723c106d039cb44b96dfb4a1189bbb",
+      "mtime_iso": "2026-05-13T08:24:41+00:00"
+    },
+    {
+      "path": "/mnt/results/glass_entity_manifest_post_tou.csv",
+      "exists": true,
+      "bytes": 1188,
+      "sha256": "d685fc7f76f92dba382ab45e8f8c01d2287caede0c13737147f0789a438f56f6",
+      "mtime_iso": "2026-05-13T08:25:49+00:00"
+    },
+    {
+      "path": "/mnt/results/glass_firstpass_verdict.json",
+      "exists": true,
+      "bytes": 561,
+      "sha256": "3007ca9a0eea4fa81307760b4c71642aceb6dfc0207d6b5e8542e8c289e00b5f",
+      "mtime_iso": "2026-05-13T08:25:05+00:00"
+    },
+    {
+      "path": "/mnt/results/glass_matrix_header_probe.txt",
+      "exists": true,
+      "bytes": 587,
+      "sha256": "a3b78f8d53476ca1c77dc161848001fe5ff8e9f396ff9cb7b9d4d3815e5f4a96",
+      "mtime_iso": "2026-05-13T08:25:59+00:00"
+    },
+    {
+      "path": "/mnt/results/glass_nextlane_data_requirements.md",
+      "exists": true,
+      "bytes": 5242,
+      "sha256": "069a4bb2bfb603468a6c21cfd769e8c8657c91344f4fde41ec901f6bc939a306",
+      "mtime_iso": "2026-05-13T09:05:26+00:00"
+    },
+    {
+      "path": "/mnt/results/glass_post_tou_access_check.json",
+      "exists": true,
+      "bytes": 285,
+      "sha256": "0217a2ac4cbbd5faaa85de20bdec6d77a95ceac048d3df425828c650b93338c8",
+      "mtime_iso": "2026-05-13T08:25:34+00:00"
+    },
+    {
+      "path": "/mnt/results/glass_primary_recurrent_pairs.csv",
+      "exists": true,
+      "bytes": 19269,
+      "sha256": "357f71854b186db4bd885e495d8e57d334682acc5d61892c5276a86564083509",
+      "mtime_iso": "2026-05-13T08:23:44+00:00"
+    },
+    {
+      "path": "/mnt/results/glass_synapse_manifest.csv",
+      "exists": true,
+      "bytes": 6430,
+      "sha256": "73aba14b843a0d3f67743fba18bfb5fb16cbc165c67e2ad7e30e43c995c5eda4",
+      "mtime_iso": "2026-05-13T07:28:15+00:00"
+    },
+    {
+      "path": "/mnt/results/glass_zeb1_delta_plot.png",
+      "exists": true,
+      "bytes": 297087,
+      "sha256": "780f3922760c160ae5476af14cdfc2927674d8564529626a892f5c079eed919c",
+      "mtime_iso": "2026-05-13T08:25:22+00:00"
+    },
+    {
+      "path": "/mnt/results/glass_zeb1_sox2_delta.csv",
+      "exists": true,
+      "bytes": 23074,
+      "sha256": "765c1ad65b2c1d9fd18f254c740a6483e0116f7d9a69ecb8b51822d7970a6098",
+      "mtime_iso": "2026-05-13T08:24:25+00:00"
+    },
+    {
+      "path": "/mnt/results/geo_discovery_expansion_report.md",
+      "exists": true,
+      "bytes": 7431,
+      "sha256": "0957d559fd6bf17c8fd0e91b2ac12455917aefbaa178490082c3bca36d9c8cac",
+      "mtime_iso": "2026-05-12T17:47:50+00:00"
+    },
+    {
+      "path": "/mnt/results/geo_discovery_results.csv",
+      "exists": true,
+      "bytes": 35191,
+      "sha256": "c178e6deacfffe29cd01b70af354899bcaa6075284d5b8685481e53329c9994f",
+      "mtime_iso": "2026-05-12T17:43:29+00:00"
+    },
+    {
+      "path": "/mnt/results/geo_search_trace.json",
+      "exists": true,
+      "bytes": 45443,
+      "sha256": "4d4497f7a0dc6b4afcc88b456b3f70fe2a3e864729853ad33b5deeb7dcb7b727",
+      "mtime_iso": "2026-05-11T15:56:42+00:00"
+    },
+    {
+      "path": "/mnt/results/crc_access_top_memo.md",
+      "exists": true,
+      "bytes": 7040,
+      "sha256": "8a3f45537e1449db84a3a6897f90265253dd8596e2c0c54da70085d39df737d3",
+      "mtime_iso": "2026-05-13T02:33:26+00:00"
+    },
+    {
+      "path": "/mnt/results/crc_controlled_access_ledger.csv",
+      "exists": true,
+      "bytes": 6120,
+      "sha256": "2b8922b9c7005124c8ace62d7fedbb616f585833c3be10b454cd58488e269569",
+      "mtime_iso": "2026-05-13T02:33:25+00:00"
+    },
+    {
+      "path": "/mnt/results/sl_countermeasure_map.csv",
+      "exists": true,
+      "bytes": 280652,
+      "sha256": "e8b810f6990a166414e7a871387cc90d6cfa7df2a4b4b68e319f8316131eecda",
+      "mtime_iso": "2026-05-12T17:45:54+00:00"
+    },
+    {
+      "path": "/mnt/results/sl_map_summary.md",
+      "exists": true,
+      "bytes": 13041,
+      "sha256": "d5bccd158dc72a7908f70fc6885cff8a86327711f1807091f358764b6fc56798",
+      "mtime_iso": "2026-05-12T17:49:08+00:00"
+    },
+    {
+      "path": "/mnt/results/heatmap_ovarian_sl_genes.png",
+      "exists": true,
+      "bytes": 220207,
+      "sha256": "2bbeda48b7638da636f065e97dfe6f2aed29aee54d5400ea83e8d7c07214bcd8",
+      "mtime_iso": "2026-04-13T03:54:31+00:00"
+    },
+    {
+      "path": "/mnt/results/boxplots_sl_pairs.png",
+      "exists": true,
+      "bytes": 130787,
+      "sha256": "6ba16b091936d58700e9005cf0433c17a7ba0303758aaa27a173c86c9a68d3c2",
+      "mtime_iso": "2026-04-13T03:55:45+00:00"
+    },
+    {
+      "path": "/mnt/results/report_gap_lineage.md",
+      "exists": true,
+      "bytes": 19836,
+      "sha256": "9ba37aa4d614b8686a5203c00fdc666008996b1ce358b847fca0fec66c3c2556",
+      "mtime_iso": "2026-06-05T16:15:56+00:00"
+    },
+    {
+      "path": "/mnt/results/report_prompt7_sl_wiring_verdict.md",
+      "exists": true,
+      "bytes": 11847,
+      "sha256": "18ea7729e52c0242f721f8a114fc673286226b6c73bfdffd6b38f37947bce875",
+      "mtime_iso": "2026-05-09T17:01:20+00:00"
+    }
+  ],
+  "audit_method": {
+    "approach": "Sweep of every remaining crispro-adjacent artefact in /mnt/results (and /mnt/results/crispro_docs) not already claimed by streams arch/sl/evidence/moat/brenus.",
+    "grouping_rule": "Similar artefacts (dbGaP, GBM, CRC, GEO, GLASS) are grouped into one 'data_access_pack' entity each so the file list carries the full audit trail without exploding the entity graph."
+  },
+  "entities": [
+    {
+      "id": "doc:computational_cancer_cure_roadmap",
+      "type": "strategic_roadmap",
+      "name": "Computational Cancer Cure roadmap",
+      "what_it_solves": "Strategic-level roadmap situating the SL engine + RS framework within a longer-horizon 'computational cancer cure' program.",
+      "how_it_solves": "32KB narrative anchored in the CRISPRO_SL_PHD_ROADMAP; connects sprint-level engine work to multi-year outcomes.",
+      "why_it_exists": "Prevents the SL engine from being read as a point tool — it's positioned as one leg of a broader capability build.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/crispro_docs/COMPUTATIONAL_CANCER_CURE_ROADMAP.md",
+          "exists": true,
+          "bytes": 32179,
+          "sha256": "c9a2919408cc22cefb9d5d079682e6df9b4e91706e6c2f79ef40f236451a88f6",
+          "mtime_iso": "2026-04-13T20:11:12+00:00"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "framework:rs",
+        "moat:aggregate"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "doc:frontend_agent_prompt",
+      "type": "agent_prompt",
+      "name": "Frontend agent prompt (CrisPRO clinician UI)",
+      "what_it_solves": "System prompt / behavioural spec for the frontend agent that mediates the clinician UI.",
+      "how_it_solves": "17KB prompt document defining the agent's persona, tool access, invariants (RUO stamping, no free-text tier claims), and error handling.",
+      "why_it_exists": "Makes the clinician-facing agent's behaviour a versioned artefact rather than an implicit convention.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/crispro_docs/FRONTEND_AGENT_PROMPT.md",
+          "exists": true,
+          "bytes": 17060,
+          "sha256": "87f522c8c861f1ba9a3efab157d6e8146d8f377319569c0aa2b0e7736b1e3600",
+          "mtime_iso": "2026-04-13T20:08:21+00:00"
+        }
+      ],
+      "cross_refs": [
+        "repo:crispro-front-end",
+        "invariant:ruo_middleware",
+        "component:frontend_canonicalization"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "artifact:sl_countermeasure_map",
+      "type": "dependency_map",
+      "name": "SL countermeasure map (CSV)",
+      "what_it_solves": "Table mapping each SL vulnerability to the countermeasure(s) available (drug/mechanism/development stage).",
+      "how_it_solves": "sl_countermeasure_map.csv — CSV consumed by the SL engine's kb/ and by the Ayesha bundle for 'what could we do' outputs.",
+      "why_it_exists": "Explicit vulnerability→drug map avoids re-deriving countermeasures per case at request time.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/sl_countermeasure_map.csv",
+          "exists": true,
+          "bytes": 280652,
+          "sha256": "e8b810f6990a166414e7a871387cc90d6cfa7df2a4b4b68e319f8316131eecda",
+          "mtime_iso": "2026-05-12T17:45:54+00:00"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "component:ayesha_bundle_waterfall"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "artifact:sl_map_summary",
+      "type": "analysis_summary",
+      "name": "SL map summary",
+      "what_it_solves": "Human-readable summary of the SL vulnerability→countermeasure map.",
+      "how_it_solves": "sl_map_summary.md interprets sl_countermeasure_map.csv for stakeholders who won't read the CSV.",
+      "why_it_exists": "Bridge from the machine-readable map to the narrative documents (manuscripts, pitch deck).",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/sl_map_summary.md",
+          "exists": true,
+          "bytes": 13041,
+          "sha256": "d5bccd158dc72a7908f70fc6885cff8a86327711f1807091f358764b6fc56798",
+          "mtime_iso": "2026-05-12T17:49:08+00:00"
+        }
+      ],
+      "cross_refs": [
+        "artifact:sl_countermeasure_map"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "figure:heatmap_ovarian_sl_genes",
+      "type": "figure",
+      "name": "Heatmap: ovarian SL genes",
+      "what_it_solves": "Heatmap visualising SL gene profile across the ovarian cohort.",
+      "how_it_solves": "Rendered from DepMap + TCGA-OV data; complements the A3/A7 analyses in the MBD4/ATR bundle.",
+      "why_it_exists": "Fast-look visualisation for the ovarian seed cancer — used in slide decks and manuscript figures.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/heatmap_ovarian_sl_genes.png",
+          "exists": true,
+          "bytes": 220207,
+          "sha256": "2bbeda48b7638da636f065e97dfe6f2aed29aee54d5400ea83e8d7c07214bcd8",
+          "mtime_iso": "2026-04-13T03:54:31+00:00"
+        }
+      ],
+      "cross_refs": [
+        "evidence:a3",
+        "evidence:a7",
+        "cancer:ovarian"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "figure:boxplots_sl_pairs",
+      "type": "figure",
+      "name": "Boxplots: SL pairs",
+      "what_it_solves": "Boxplot visualisation of SL gene-pair dependency distributions.",
+      "how_it_solves": "One box per SL pair, capturing effect distribution across the pan-cancer lineage.",
+      "why_it_exists": "Effect-size sanity check across all SL pairs — flags outlier pairs for follow-up.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/boxplots_sl_pairs.png",
+          "exists": true,
+          "bytes": 130787,
+          "sha256": "6ba16b091936d58700e9005cf0433c17a7ba0303758aaa27a173c86c9a68d3c2",
+          "mtime_iso": "2026-04-13T03:55:45+00:00"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "report:gap_lineage",
+      "type": "audit_report",
+      "name": "Gap lineage report",
+      "what_it_solves": "Report tracing how each identified gap in the SL engine maps back to the originating exploit or audit.",
+      "how_it_solves": "Structured markdown: gap ID → source audit → status → owner.",
+      "why_it_exists": "Answers 'where did this gap come from?' in one place — prevents duplicate gaps from re-appearing under new IDs.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/report_gap_lineage.md",
+          "exists": true,
+          "bytes": 19836,
+          "sha256": "9ba37aa4d614b8686a5203c00fdc666008996b1ce358b847fca0fec66c3c2556",
+          "mtime_iso": "2026-06-05T16:15:56+00:00"
+        }
+      ],
+      "cross_refs": [
+        "audit:gap_exploit_prompts",
+        "artifact:flag_remediation_memo"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "report:prompt7_sl_wiring_verdict",
+      "type": "audit_report",
+      "name": "Prompt-7 SL wiring verdict",
+      "what_it_solves": "Verdict report on whether the SL engine is wired correctly end-to-end (prompt 7 in the gap-exploit suite).",
+      "how_it_solves": "Traces a real request through orchestrator → SL engine → fuser → tier → response and grades each hop.",
+      "why_it_exists": "Answers 'is the pipeline actually wired the way the roadmap claims?' — one report per prompt keeps the answer surgical.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/report_prompt7_sl_wiring_verdict.md",
+          "exists": true,
+          "bytes": 11847,
+          "sha256": "18ea7729e52c0242f721f8a114fc673286226b6c73bfdffd6b38f37947bce875",
+          "mtime_iso": "2026-05-09T17:01:20+00:00"
+        }
+      ],
+      "cross_refs": [
+        "audit:gap_exploit_prompts",
+        "engine:synthetic_lethality",
+        "component:orchestrator"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "access:dbgap_phs003428",
+      "type": "data_access_pack",
+      "name": "dbGaP phs003428 access pack (12 files)",
+      "what_it_solves": "Complete access-application pack for dbGaP study phs003428 (metadata, dependency graph, missing-field ledger, CTEP email).",
+      "how_it_solves": "Files include: application draft, DAR checklist, dependency graph JSON, variable dictionary, blocker table, missing-fields, institution intake, fahad-fields-only, public metadata, access status, CTEP email final.",
+      "why_it_exists": "dbGaP applications repeatedly stall because of scattered required fields; consolidating into one access pack turns a multi-week ping-pong into an audit-able single artefact.",
+      "attributes": {
+        "files": [
+          "dbgap_access_request_draft.md",
+          "dbgap_phs003428_access_status.json",
+          "dbgap_phs003428_application_draft.md",
+          "dbgap_phs003428_blocker_table.csv",
+          "dbgap_phs003428_ctep_email_final.md",
+          "dbgap_phs003428_dar_checklist.csv",
+          "dbgap_phs003428_dependency_graph.json",
+          "dbgap_phs003428_fahad_fields_only.json",
+          "dbgap_phs003428_institution_intake_minimal.csv",
+          "dbgap_phs003428_missing_fields.json",
+          "dbgap_phs003428_public_metadata.json",
+          "dbgap_phs003428_variable_dictionary.csv"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/dbgap_phs003428_access_status.json",
+          "exists": true,
+          "bytes": 4925,
+          "sha256": "5b438e0d453184a4c08cf87076adf36d4d32c1d27c36ef005355a0496aa0876b",
+          "mtime_iso": "2026-05-13T07:25:24+00:00"
+        },
+        {
+          "path": "/mnt/results/dbgap_phs003428_application_draft.md",
+          "exists": true,
+          "bytes": 11104,
+          "sha256": "8e1f41aa0f999e53cde0adbeeb7fdaba52802bb6e1b686a24ac1707159af42db",
+          "mtime_iso": "2026-05-13T07:25:43+00:00"
+        },
+        {
+          "path": "/mnt/results/dbgap_phs003428_blocker_table.csv",
+          "exists": true,
+          "bytes": 3562,
+          "sha256": "a99f974cb216d27fa0cc7d75269bcada429eaaf73cd550548e8f11f646fc250f",
+          "mtime_iso": "2026-05-13T07:24:40+00:00"
+        },
+        {
+          "path": "/mnt/results/dbgap_phs003428_ctep_email_final.md",
+          "exists": true,
+          "bytes": 7241,
+          "sha256": "5c6c39b94bcf5a33ccdff816a05ee2655f564ce5d1c1300cc575809634f74e04",
+          "mtime_iso": "2026-05-13T09:04:38+00:00"
+        },
+        {
+          "path": "/mnt/results/dbgap_phs003428_dar_checklist.csv",
+          "exists": true,
+          "bytes": 10891,
+          "sha256": "1941c5ef4540b22e81455d9b0d05956dcf2f82271da4861a390928687ed75876",
+          "mtime_iso": "2026-05-13T08:22:55+00:00"
+        },
+        {
+          "path": "/mnt/results/dbgap_phs003428_dependency_graph.json",
+          "exists": true,
+          "bytes": 7674,
+          "sha256": "49a7164f8c9cae87f40dc4c4fd16abed47fa47f655a132523dda26021d8cfaa7",
+          "mtime_iso": "2026-05-13T08:22:55+00:00"
+        },
+        {
+          "path": "/mnt/results/dbgap_phs003428_fahad_fields_only.json",
+          "exists": true,
+          "bytes": 2104,
+          "sha256": "36d267f2da703948b25fc23276552d9ba01a1690a7975def8270476d4f4bbdee",
+          "mtime_iso": "2026-05-13T09:17:35+00:00"
+        },
+        {
+          "path": "/mnt/results/dbgap_phs003428_institution_intake_minimal.csv",
+          "exists": true,
+          "bytes": 1015,
+          "sha256": "ee1c0c68c8b7ef6665e57f98f2cc5e51707f167e98447d8b444a05b53ac845c2",
+          "mtime_iso": "2026-05-13T09:17:36+00:00"
+        },
+        {
+          "path": "/mnt/results/dbgap_phs003428_missing_fields.json",
+          "exists": true,
+          "bytes": 6811,
+          "sha256": "738eca5ae01038e097074044a12ec7234f386500f056b3e13f5860e94fa71a1e",
+          "mtime_iso": "2026-05-13T08:22:56+00:00"
+        },
+        {
+          "path": "/mnt/results/dbgap_phs003428_public_metadata.json",
+          "exists": true,
+          "bytes": 6227,
+          "sha256": "e4d5cec69da47e926a77780054e50ae45719d00bb29e9792adc2b147b987d7ee",
+          "mtime_iso": "2026-05-13T07:20:22+00:00"
+        },
+        {
+          "path": "/mnt/results/dbgap_phs003428_variable_dictionary.csv",
+          "exists": true,
+          "bytes": 8888,
+          "sha256": "ff71b476794aa6c4e2e117b26409f3ac11a67c8fb80276c2dd80d49e972b523e",
+          "mtime_iso": "2026-05-13T07:20:46+00:00"
+        },
+        {
+          "path": "/mnt/results/dbgap_access_request_draft.md",
+          "exists": true,
+          "bytes": 14716,
+          "sha256": "855aa4444ed87f5d74c6fe38e5ee5eb05d634a7721763cf66261c781af95929d",
+          "mtime_iso": "2026-05-12T17:38:36+00:00"
+        }
+      ],
+      "cross_refs": [
+        "protocol:mars",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "access:gbm_access_ledger",
+      "type": "data_access_pack",
+      "name": "GBM data-access ledger (with GSE174554 single-cell EMT closure)",
+      "what_it_solves": "Full GBM data-access ledger + resolution artefacts, including the GSE174554 single-cell EMT bulk-vs-sc dilution analysis.",
+      "how_it_solves": "Files include: trial access ledger CSV, access-top memo, next-resolution scan CSV + status/target JSONs, and the sc EMT full CSV + escape final JSON + ZEB1 plot.",
+      "why_it_exists": "GBM datasets are the second cohort target after ovarian; the ledger centralises which datasets are accessible vs blocked and why.",
+      "attributes": {
+        "files": [
+          "gbm_access_top_memo.md",
+          "gbm_gse174554_bulk_vs_sc_dilution.json",
+          "gbm_gse174554_sc_emt_full.csv",
+          "gbm_gse174554_sc_escape_final.json",
+          "gbm_gse174554_sc_zeb1_plot.png",
+          "gbm_next_resolution_access_status.json",
+          "gbm_next_resolution_dataset_scan.csv",
+          "gbm_next_resolution_target.json",
+          "gbm_trial_access_ledger.csv"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/gbm_access_top_memo.md",
+          "exists": true,
+          "bytes": 5939,
+          "sha256": "1aebae8d716e02cba32e42238e7cbdc1b662b0a1879b44ea6c3842b16ae9b596",
+          "mtime_iso": "2026-05-13T02:33:47+00:00"
+        },
+        {
+          "path": "/mnt/results/gbm_gse174554_bulk_vs_sc_dilution.json",
+          "exists": true,
+          "bytes": 4898,
+          "sha256": "10516487afced3b159a0ca5947caa177c5c3bce72b83084c2fcae98c00f7bbaf",
+          "mtime_iso": "2026-05-13T10:16:42+00:00"
+        },
+        {
+          "path": "/mnt/results/gbm_gse174554_sc_emt_full.csv",
+          "exists": true,
+          "bytes": 6164,
+          "sha256": "3f91fc99ca2df1498d5c120f4daae767ebd9705b59b127131690f576aeac3962",
+          "mtime_iso": "2026-05-13T10:16:41+00:00"
+        },
+        {
+          "path": "/mnt/results/gbm_gse174554_sc_escape_final.json",
+          "exists": true,
+          "bytes": 4976,
+          "sha256": "ad20c1a1032f87bb4509f7f5417087ec7887dea1aa58ee040d33aa98d8fbd119",
+          "mtime_iso": "2026-05-13T10:16:42+00:00"
+        },
+        {
+          "path": "/mnt/results/gbm_gse174554_sc_zeb1_plot.png",
+          "exists": true,
+          "bytes": 252735,
+          "sha256": "8d715d0da84611ed77ff5e54a5078027b32b724783b775e3680f56ad3fd3dabb",
+          "mtime_iso": "2026-05-13T10:16:18+00:00"
+        },
+        {
+          "path": "/mnt/results/gbm_next_resolution_access_status.json",
+          "exists": true,
+          "bytes": 169,
+          "sha256": "3889f97ec850382c3a46f73992f6392a7fa6e95efd459e34298d0d74b173a0cb",
+          "mtime_iso": "2026-05-13T09:18:31+00:00"
+        },
+        {
+          "path": "/mnt/results/gbm_next_resolution_dataset_scan.csv",
+          "exists": true,
+          "bytes": 3350,
+          "sha256": "d23f0255b01a3105202abc4924781062c8425f132c74ece7f0d6dadeec8b9791",
+          "mtime_iso": "2026-05-13T09:18:30+00:00"
+        },
+        {
+          "path": "/mnt/results/gbm_next_resolution_target.json",
+          "exists": true,
+          "bytes": 872,
+          "sha256": "fdc2902e4ad85040b1f69774474791e4119114aedf7b33308bf5058fa39a0758",
+          "mtime_iso": "2026-05-13T09:18:30+00:00"
+        },
+        {
+          "path": "/mnt/results/gbm_trial_access_ledger.csv",
+          "exists": true,
+          "bytes": 9355,
+          "sha256": "181d36c75af44ea3d92d9eea64de78278c67f1bda12dcafd95a5b61f0bb8a9da",
+          "mtime_iso": "2026-05-13T02:33:45+00:00"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "protocol:mars"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "access:crc_access_ledger",
+      "type": "data_access_pack",
+      "name": "CRC controlled-access ledger",
+      "what_it_solves": "Access ledger for CRC datasets relevant to BreAK CRC-001 diligence.",
+      "how_it_solves": "crc_access_top_memo + crc_controlled_access_ledger.csv track which CRC datasets can be pulled and which are blocked.",
+      "why_it_exists": "Feeds the Brenus diligence module with a testable data-availability status — no more 'we could probably get that data' claims.",
+      "attributes": {
+        "files": [
+          "crc_access_top_memo.md",
+          "crc_controlled_access_ledger.csv"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/crc_access_top_memo.md",
+          "exists": true,
+          "bytes": 7040,
+          "sha256": "8a3f45537e1449db84a3a6897f90265253dd8596e2c0c54da70085d39df737d3",
+          "mtime_iso": "2026-05-13T02:33:26+00:00"
+        },
+        {
+          "path": "/mnt/results/crc_controlled_access_ledger.csv",
+          "exists": true,
+          "bytes": 6120,
+          "sha256": "2b8922b9c7005124c8ace62d7fedbb616f585833c3be10b454cd58488e269569",
+          "mtime_iso": "2026-05-13T02:33:25+00:00"
+        }
+      ],
+      "cross_refs": [
+        "module:brenus_diligence",
+        "cancer:crc"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "access:geo_discovery_pack",
+      "type": "data_discovery_pack",
+      "name": "GEO discovery pack",
+      "what_it_solves": "GEO-wide discovery scan + expansion report identifying candidate datasets for the SL evidence pipeline.",
+      "how_it_solves": "geo_search_trace.json + geo_discovery_results.csv + geo_discovery_expansion_report.md capture the search parameters, hits, and expansion rationale.",
+      "why_it_exists": "Turns 'search GEO for relevant datasets' into a reproducible, auditable step with the exact query trace preserved.",
+      "attributes": {
+        "files": [
+          "geo_discovery_expansion_report.md",
+          "geo_discovery_results.csv",
+          "geo_search_trace.json"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/geo_discovery_expansion_report.md",
+          "exists": true,
+          "bytes": 7431,
+          "sha256": "0957d559fd6bf17c8fd0e91b2ac12455917aefbaa178490082c3bca36d9c8cac",
+          "mtime_iso": "2026-05-12T17:47:50+00:00"
+        },
+        {
+          "path": "/mnt/results/geo_discovery_results.csv",
+          "exists": true,
+          "bytes": 35191,
+          "sha256": "c178e6deacfffe29cd01b70af354899bcaa6075284d5b8685481e53329c9994f",
+          "mtime_iso": "2026-05-12T17:43:29+00:00"
+        },
+        {
+          "path": "/mnt/results/geo_search_trace.json",
+          "exists": true,
+          "bytes": 45443,
+          "sha256": "4d4497f7a0dc6b4afcc88b456b3f70fe2a3e864729853ad33b5deeb7dcb7b727",
+          "mtime_iso": "2026-05-11T15:56:42+00:00"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "protocol:mars"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "access:glass_access",
+      "type": "data_access_pack",
+      "name": "GLASS bulk recurrence closure + access status",
+      "what_it_solves": "GLASS consortium access status + bulk recurrence dataset closure record.",
+      "how_it_solves": "glass_access_status.json + glass_bulk_recurrence_closure.md capture what was pulled, what remains blocked, and the closure justification.",
+      "why_it_exists": "Closes the loop on GLASS — accessible dataset or not, the disposition is written down.",
+      "attributes": {
+        "files": [
+          "glass_access_status.json",
+          "glass_bulk_recurrence_closure.md",
+          "glass_emt_shift_summary.csv",
+          "glass_entity_manifest_post_tou.csv",
+          "glass_firstpass_verdict.json",
+          "glass_matrix_header_probe.txt",
+          "glass_nextlane_data_requirements.md",
+          "glass_post_tou_access_check.json",
+          "glass_primary_recurrent_pairs.csv",
+          "glass_synapse_manifest.csv",
+          "glass_zeb1_delta_plot.png",
+          "glass_zeb1_sox2_delta.csv"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/glass_access_status.json",
+          "exists": true,
+          "bytes": 3741,
+          "sha256": "39700f938515ef96518848f1904285f44a74e8aee951e658e97f7e24b902f8a5",
+          "mtime_iso": "2026-05-13T07:28:51+00:00"
+        },
+        {
+          "path": "/mnt/results/glass_bulk_recurrence_closure.md",
+          "exists": true,
+          "bytes": 5451,
+          "sha256": "31cbab0e08e9ea946190582856adb1f1cc0a221ea64f8a1c47d28a3dc3af1b3d",
+          "mtime_iso": "2026-05-13T09:05:09+00:00"
+        },
+        {
+          "path": "/mnt/results/glass_emt_shift_summary.csv",
+          "exists": true,
+          "bytes": 520,
+          "sha256": "55386e2fbcf967b777548ee4cf69a8bfb3723c106d039cb44b96dfb4a1189bbb",
+          "mtime_iso": "2026-05-13T08:24:41+00:00"
+        },
+        {
+          "path": "/mnt/results/glass_entity_manifest_post_tou.csv",
+          "exists": true,
+          "bytes": 1188,
+          "sha256": "d685fc7f76f92dba382ab45e8f8c01d2287caede0c13737147f0789a438f56f6",
+          "mtime_iso": "2026-05-13T08:25:49+00:00"
+        }
+      ],
+      "cross_refs": [
+        "access:gbm_access_ledger",
+        "protocol:mars"
+      ],
+      "gaps_still_open": []
+    }
+  ],
+  "gaps_still_open_stream_level": [
+    "dbGaP phs003428 has an OPEN missing-fields ledger — access is not yet granted; check dbgap_phs003428_access_status.json for latest.",
+    "GLASS consortium closure captured but does not necessarily mean granted access — see closure memo for reasoning."
+  ],
+  "cross_stream_refs": [
+    "See stream_evidence.json for the receipts these access packs are trying to feed.",
+    "See stream_brenus.json for the Brenus diligence module that consumes the CRC access ledger.",
+    "See stream_moat.json for the Mars Protocol that constrains which of these accesses are canon."
+  ]
+}

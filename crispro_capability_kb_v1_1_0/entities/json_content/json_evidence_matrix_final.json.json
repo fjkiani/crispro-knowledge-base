@@ -1,0 +1,113 @@
+{
+  "id": "json:evidence_matrix_final.json",
+  "type": "json_content",
+  "name": "evidence_matrix_final.json",
+  "what_it_solves": "Full parsed contents of evidence_matrix_final.json.",
+  "how_it_solves": "json.load at generation time; raw payload carried in attributes.raw.",
+  "why_it_exists": "Deep pass: previous stream did not open these files. Downstream consumers can now walk the structure without a second read.",
+  "attributes": {
+    "top_keys": [
+      "gene",
+      "therapeutic_axis",
+      "current_tier",
+      "target_tier",
+      "analysis_date",
+      "data_sources",
+      "modality_cells",
+      "overall_verdict"
+    ],
+    "raw": {
+      "gene": "MBD4",
+      "therapeutic_axis": "ATR/WEE1 (replication stress checkpoint)",
+      "current_tier": "Mechanistic candidate only",
+      "target_tier": "Strong candidate dependency axis",
+      "analysis_date": "2026-04-25",
+      "data_sources": [
+        "DepMap 23Q4 (local datalake)",
+        "PRISM 20Q2 secondary screen (figshare)",
+        "cBioPortal TCGA PanCancer Atlas 2018",
+        "PMC10786692 (PATRIOT trial, JCI 2024)",
+        "PMC11046577 (NETc, PNAS 2024)",
+        "PMID 32553118 (berzosertib HGSOC, Lancet Oncol 2020)"
+      ],
+      "modality_cells": {
+        "CRISPR_functional_genomics": {
+          "status": "MISSING",
+          "test": "Spearman co-dependency (MBD4 expr vs ATR/CHEK1/WEE1 CRISPR effect)",
+          "n": "1,112 cell lines",
+          "result": "ATR r=0.013 p_adj=0.86 | CHEK1 r=0.005 p_adj=0.86 | WEE1 r=-0.031 p_adj=0.86",
+          "verdict": "NULL — no co-dependency signal",
+          "root_cause": "ATR/CHEK1/WEE1 are pan-essential (median effects -1.10, -1.81, -2.83); floor effect masks any MBD4-specific signal. MBD4 expression is a poor LOF proxy for a DNA repair gene. Only 12 cell lines have confirmed MBD4 damaging mutations — insufficient for mutation-stratified analysis.",
+          "what_would_fill_it": "Isogenic HAP1-MBD4-KO CRISPR viability screen (not in DepMap)"
+        },
+        "drug_sensitivity_PRISM": {
+          "status": "MISSING",
+          "test": "Spearman (MBD4 expr vs AUC) + Wilcoxon (MBD4-mut vs WT)",
+          "n": "VE-822 n=470 | MK-1775 n=682 | MBD4-mutant n=9-12",
+          "result": "VE-822 r=0.024 p_adj=0.72 | MK-1775 r=0.027 p_adj=0.72 | All 7 compounds BH-adj p>0.71 | Mutation-stratified VE-822 p=0.39",
+          "verdict": "NULL — no ATRi/WEE1i sensitivity signal",
+          "root_cause": "Same expression proxy limitation; mutation-stratified n=9-12 is severely underpowered. PRISM does not contain berzosertib or ceralasertib (only older ATRi: VE-822, ETP-46464, AZ20).",
+          "what_would_fill_it": "ATRi dose-response in MBD4-KO organoids or isogenic cell lines"
+        },
+        "transcriptomic_RS_signature": {
+          "status": "MARGINAL",
+          "test": "Wilcoxon (MBD4-low vs MBD4-high tertile RS score) + Spearman",
+          "n": "300 TCGA-OV samples",
+          "result": "Wilcoxon p=0.016 (MBD4-low RS > MBD4-high) | Spearman r=-0.11 p=0.058",
+          "verdict": "DIRECTIONAL but not confirmed positive — Wilcoxon significant, Spearman borderline. Expression proxy limitation. No deep deletions of MBD4 in TCGA-OV (0/585 in pan-cancer OV cohort).",
+          "root_cause": "MBD4-LOF is not a feature of HGSOC/OV. The RS signal in OV is driven by CCNE1/TP53/MYC, not MBD4. Berzosertib HGSOC trial (Konstantinopoulos 2020) confirms this — MBD4 not mentioned.",
+          "what_would_fill_it": "RS signature analysis in UCEC (highest MBD4-LOF at 1.70%) with confirmed MBD4-LOF samples (n=9 — still underpowered)"
+        },
+        "pan_cancer_epidemiology": {
+          "status": "DESCRIPTIVE",
+          "test": "MBD4-LOF frequency across 30 TCGA PanCancer Atlas 2018 cohorts",
+          "n": "10,120 samples across 30 cancer types",
+          "result": "Pan-cancer: 0.19% (19/10,120) | UCEC: 1.70% (9/529) | MESO: 1.15% (1/87) | LGG: 0.58% (3/514) | 22/30 cohorts = 0%",
+          "verdict": "DESCRIPTIVE — confirms MBD4-LOF is rare across TCGA. UCEC is the highest-frequency cancer type. Absolute numbers too small to power any stratified analysis.",
+          "note": "Previous session reported 4.9% (26/529) for UCEC — this was fabricated. Real figure is 1.70% (9/529), verified against individual mutation records."
+        },
+        "clinical_ATRi_WEE1i": {
+          "status": "MISSING",
+          "test": "Literature mining: PATRIOT (ceralasertib), berzosertib HGSOC trial, NETc paper",
+          "result": "MBD4 = 0 mentions in PATRIOT full text (67 patients, 173-gene panel). MBD4 not in PATRIOT sequencing panel (Supp Table 3). MBD4 = 0 mentions in berzosertib HGSOC trial abstract. NETc paper: MBD4-signature in 34% of NETc, but ATRi (elimusertib) activity attributed to ERBB2/PI3K/ATR pathway, NOT MBD4 deficiency.",
+          "verdict": "MISSING — no clinical trial has tested ATRi/WEE1i in MBD4-LOF patients. No responder in any published ATRi trial is annotated as MBD4-LOF.",
+          "what_would_fill_it": "PATRIOT subgroup analysis by MBD4 status (requires data access) or prospective ATRi trial with MBD4-LOF enrichment"
+        },
+        "alternative_signal_ICI": {
+          "status": "PARTIAL — DIFFERENT AXIS",
+          "test": "Literature: MBD4-LOF + ICI response",
+          "result": "Johansson 2019: prolonged SD in uveal melanoma with germline MBD4 nonsense mutation on pembrolizumab+ipilimumab. Rodrigues 2018 (Nat Commun): outlier anti-PD1 response in uveal melanoma with germline MBD4 mutations in hypermutated tumors. NETc (PMC11046577): MBD4-signature → high TMB → ICI sensitivity hypothesis.",
+          "verdict": "MBD4-LOF → ICI sensitivity (via hypermutation/TMB) has case-level support. This is a DIFFERENT therapeutic axis from ATR/WEE1. Not relevant to the ATR/WEE1 evidence package."
+        }
+      },
+      "overall_verdict": {
+        "tier_change": "NO CHANGE",
+        "current_tier": "Mechanistic candidate only",
+        "justification": "All 5 computational modalities return NULL or MISSING. The one marginal signal (TCGA-OV RS score Wilcoxon p=0.016) uses expression as a proxy and does not survive Spearman correlation. MBD4-LOF is too rare in all public datasets (0.19% pan-cancer, 1.02% in DepMap) to power any statistical test. No published clinical trial has tested ATRi/WEE1i in MBD4-LOF patients.",
+        "fundamental_limitation": "MBD4 is a DNA repair gene — its LOF cannot be reliably proxied by expression level. The correct experimental model (isogenic MBD4-KO) is not represented in any public dataset.",
+        "path_to_upgrade": [
+          "HAP1-MBD4-KO isogenic ATRi/WEE1i IC50 assay (ceralasertib + berzosertib vs parental)",
+          "γH2AX + pCHK1 western blot at baseline in HAP1-MBD4-KO (RS marker confirmation)",
+          "MBD4-KO organoid ATRi dose-response (patient-derived, UCEC preferred)",
+          "PATRIOT data access request to query MBD4 status in responders",
+          "Prospective UCEC trial with MBD4-LOF enrichment arm"
+        ]
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/evidence_matrix_final.json",
+      "exists": true,
+      "bytes": 6145,
+      "sha256": "2bd9ffd2fac0754926744fe472d6ce42b4676e96b18ffb6d1ca636d1b7ade168",
+      "mtime_iso": "2026-04-25T07:58:33+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

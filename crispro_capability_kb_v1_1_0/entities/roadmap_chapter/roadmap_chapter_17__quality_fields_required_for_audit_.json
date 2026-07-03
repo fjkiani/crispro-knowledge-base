@@ -1,0 +1,32 @@
+{
+  "id": "roadmap_chapter:17__quality_fields_required_for_audit_",
+  "type": "roadmap_chapter",
+  "name": "Ch 17 — ── Quality fields (required for audit) ──",
+  "what_it_solves": "CRISPRO_SL_PHD_ROADMAP chapter '── Quality fields (required for audit) ──' spanning lines 1902..2000.",
+  "how_it_solves": "Chapter body preview (first 2000 chars) attached; full content lives in the source file. Subheadings enumerated.",
+  "why_it_exists": "Chapter is the natural unit of the roadmap — one entity per chapter makes 'what does Ch 3.4 say about the fuser?' addressable.",
+  "attributes": {
+    "level": 1,
+    "start_line": 1902,
+    "end_line": 2000,
+    "byte_length": 2309,
+    "subheadings": [],
+    "body_preview_2000c": "\t    powered=True,                          # False if n_mut < 15\n\t    n_mut=0,                               # Number of mutant lines (DepMap)\n\t    n_wt=0,                                # Number of wildtype lines (DepMap)\n\t    cohens_d=0.0,                          # Effect size (DepMap)\n\t    fdr=1.0,                               # FDR-corrected p-value (DepMap)\n\t),\n\t\n\nAcceptable Modality Values\nValue\n\tMeaning\n\tWhen to Use\n\tPOSITIVE\n\tEvidence meets the threshold for this modality\n\tIC50 ratio ≥ 3, Cohen's d ≥ 0.5, clinical response confirmed\n\tNEGATIVE\n\tTested but did not meet threshold\n\tExperiment performed but no effect observed\n\tMISSING\n\tNo data available for this modality\n\tModality has not been tested for this gene-axis pair\n\tNOT_APPLICABLE\n\tModality does not apply\n\te.g., PRISM for a gene that has no drug inhibitor available\n\t________________\n\n\nAppendix E: Sprint Progress Tracker\n\n\nSprint\n\tName\n\tGoal\n\tTarget Files\n\tStatus\n\tCommit\n\tA\n\tOvarian Completion\n\tWire RS context into evidence_matrix endpoint\n\tmultimodal_routes.py\n\tPLANNED\n\t—\n\tB\n\tPatient SL Report\n\tPOST /api/v1/patient/sl_report endpoint\n\tlayer4_output/ (new route)\n\tPLANNED\n\t—\n\tC\n\tLineage Dependency\n\tNew lineage_dependency engine module\n\tlayer1_engines/lineage_dependency/\n\tPLANNED\n\t—\n\tD\n\tCRC / WRN\n\tWRN axis receipts for MSI-H CRC\n\tliterature_receipts.py, panels.py\n\tPLANNED\n\t—\n\tE\n\tBRCA/FA Audit\n\tAudit queue for underpowered FANCM/FANCC/H2AFX\n\taudit/receipt_miner.py, modality_fuser.py\n\tPLANNED\n\t—\n\tF\n\tPDAC + Breast\n\tFrozen receipts for PDAC/TNBC + lineage panels\n\tliterature_receipts.py, panels.py\n\tPLANNED\n\t—\n\tG\n\tProstate + Heme\n\tCDK12/IO, BRCA2/PARP, IDH1/PARP, MBD4 cross-lineage\n\tliterature_receipts.py\n\tPLANNED\n\t—\n\tH\n\tUniversal SL Report\n\tPOST /api/v1/universal/sl_report — the endgame\n\tMultiple files\n\tPLANNED\n\t—\n\t\n\nSPRINT COMPLETION CRITERIA\n1. Merge gate (test_ayesha_e2e.py) passes — no exceptions\n2. Live endpoint returns expected tier assignments\n3. RUO invariant verified on all new routes\n4. This documen"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "lines 1902..2000"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:synthetic_lethality_deep"
+}

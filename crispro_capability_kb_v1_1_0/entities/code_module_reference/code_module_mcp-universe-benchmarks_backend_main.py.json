@@ -1,0 +1,34 @@
+{
+  "id": "code_module:mcp-universe-benchmarks/backend/main.py",
+  "type": "code_module_reference",
+  "name": "mcp-universe-benchmarks/backend/main.py",
+  "what_it_solves": "Python module 'mcp-universe-benchmarks/backend/main.py' referenced by the architecture / hardening audit corpus.",
+  "how_it_solves": "Extracted by regex `[/\\w._-]+\\.py(?::\\d+)?` — every mention captured with source_file + line + context window.",
+  "why_it_exists": "Enumerates the concrete code surface the architecture reports point at, so downstream consumers can walk from a claim to an actual file:line without re-reading the whole report.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+        "line": 393,
+        "context": "saas.onrender.com`. Do not add new origins without updating the CORS config in `mcp-universe-benchmarks/backend/main.py`.\n6. **TypeScript strict** — `tsc --noEmit` must pass before every commit. The "
+      }
+    ],
+    "reference_count": 1
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+      "exists": true,
+      "bytes": 24575,
+      "sha256": "8c06c5f6092feaaf9680b60bd45bc6797d140fb43132233f3a5d03e21a621aa0",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    }
+  ],
+  "cross_refs": [
+    "layer:engines",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "section_index:/mnt/results/HYGIENE_DELETE_PROOF.md",
+  "type": "section_index",
+  "name": "Section index — HYGIENE_DELETE_PROOF.md",
+  "what_it_solves": "Section index of '/mnt/results/HYGIENE_DELETE_PROOF.md': every heading with its level and starting line.",
+  "how_it_solves": "Regex `^#{1,6}\\s+(.+)$` extracted at generation time; preserves navigation without duplicating body text.",
+  "why_it_exists": "Downstream ingestors can walk the document by section without re-parsing markdown; the KB stops being an opaque blob.",
+  "attributes": {
+    "heading_count": 5,
+    "headings": [
+      {
+        "level": 1,
+        "title": "Repo Hygiene — Safe Deletion Proof",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "Deleted Artifacts",
+        "line": 5
+      },
+      {
+        "level": 2,
+        "title": ".gitignore Additions to Prevent Recurrence",
+        "line": 22
+      },
+      {
+        "level": 1,
+        "title": "backend code belongs in oncology-backend",
+        "line": 25
+      },
+      {
+        "level": 1,
+        "title": "place docs in /docs at repo root",
+        "line": 30
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/HYGIENE_DELETE_PROOF.md",
+      "exists": true,
+      "bytes": 2502,
+      "sha256": "ed17f55f8fa1bcbb522f6aacbb089c4562339a994ae85413d20b41e162e3ad11",
+      "mtime_iso": "2026-05-05T07:04:40+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "section_index:/mnt/results/SL_FRONTEND_CANONICALIZATION.md",
+  "type": "section_index",
+  "name": "Section index — SL_FRONTEND_CANONICALIZATION.md",
+  "what_it_solves": "Section index of '/mnt/results/SL_FRONTEND_CANONICALIZATION.md': every heading with its level and starting line.",
+  "how_it_solves": "Regex `^#{1,6}\\s+(.+)$` extracted at generation time; preserves navigation without duplicating body text.",
+  "why_it_exists": "Downstream ingestors can walk the document by section without re-parsing markdown; the KB stops being an opaque blob.",
+  "attributes": {
+    "heading_count": 8,
+    "headings": [
+      {
+        "level": 1,
+        "title": "SL Frontend Canonicalization Report",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "Files Changed",
+        "line": 7
+      },
+      {
+        "level": 3,
+        "title": "1. `src/utils/ayeshaApi.js` — `getSyntheticLethalityUrl()`",
+        "line": 9
+      },
+      {
+        "level": 3,
+        "title": "2. `src/components/SyntheticLethalityDetective.jsx`",
+        "line": 23
+      },
+      {
+        "level": 3,
+        "title": "3. `src/components/CoPilot/Q2CRouter/intents.js`",
+        "line": 37
+      },
+      {
+        "level": 3,
+        "title": "4. `src/hooks/useCompleteCareOrchestrator.js`",
+        "line": 49
+      },
+      {
+        "level": 3,
+        "title": "5. `src/components/SyntheticLethality/hooks/useSyntheticLethality.js`",
+        "line": 64
+      },
+      {
+        "level": 2,
+        "title": "Post-Fix Grep Proof",
+        "line": 78
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/SL_FRONTEND_CANONICALIZATION.md",
+      "exists": true,
+      "bytes": 2195,
+      "sha256": "24c2c4ddaaa99557ee18e4ded3803d4dff35bf20fb16480fcefbe3658230a098",
+      "mtime_iso": "2026-05-05T07:04:43+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

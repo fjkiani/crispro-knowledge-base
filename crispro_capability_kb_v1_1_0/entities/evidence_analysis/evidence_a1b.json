@@ -1,0 +1,39 @@
+{
+  "id": "evidence:a1b",
+  "type": "evidence_analysis",
+  "name": "MBD4/ATR analysis A1b — MBD4-LOF stratified CRISPR (violin)",
+  "what_it_solves": "Analysis 'A1b' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+  "how_it_solves": "Violin plot + CSV of ATR/CHEK1/WEE1 CRISPR score in MBD4-LOF vs WT lines.",
+  "why_it_exists": "Directly tests 'is checkpoint machinery MORE essential when MBD4 is LOF?'",
+  "attributes": {
+    "files": [
+      "A1b_depmap_mbd4_lof_crispr_violin.png",
+      "A1b_mbd4_lof_crispr_results.csv"
+    ],
+    "file_count": 2
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1b_depmap_mbd4_lof_crispr_violin.png",
+      "exists": true,
+      "bytes": 155949,
+      "sha256": "34b7865f75f123c44fbc7a14eeac1e8e6947b3b154ea286eca128bc7770aeb32",
+      "mtime_iso": "2026-04-25T08:07:09+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1b_mbd4_lof_crispr_results.csv",
+      "exists": true,
+      "bytes": 289,
+      "sha256": "7c19334c2fef48030de6a9f41e86a2bce5d5127eaeda7d2364c4c7c2f2a5bb53",
+      "mtime_iso": "2026-04-25T08:07:11+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2",
+    "axis:ATR_WEE1",
+    "framework:rs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:evidence_and_receipts"
+}

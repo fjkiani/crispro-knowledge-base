@@ -1,0 +1,55 @@
+{
+  "id": "commit:4d8bc87",
+  "type": "commit_reference",
+  "name": "Commit 4d8bc87",
+  "what_it_solves": "Git commit SHA '4d8bc87' referenced in the architecture / hardening / handoff corpus.",
+  "how_it_solves": "Regex-detected hex tokens filtered by neighbour keywords (commit / sha / hash / sprint).",
+  "why_it_exists": "Turns 'closed at commit 474b812' style claims into a searchable enumeration; downstream consumers can join this back to a real repo.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 12,
+        "context": ")\n\n### 1A. Frontend Hardening — `crispro-front-end` commit `4d8bc87`\n125 files changed, 29,007 deletions, 320 insertions.\n\n| Fi"
+      },
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 113,
+        "context": "icalized to call `/api/agents/synthetic_lethality` (commit `4d8bc87`). The backend has **both** `/api/guidance/synthetic_lethal"
+      },
+      {
+        "source_file": "/mnt/results/HYGIENE_DELETE_PROOF.md",
+        "line": 3,
+        "context": "# Repo Hygiene — Safe Deletion Proof\n\nCommit `4d8bc87` on `main`. 125 files changed, 320 insertions, 29007 deleti"
+      }
+    ],
+    "reference_count": 3
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    },
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    },
+    {
+      "path": "/mnt/results/HYGIENE_DELETE_PROOF.md",
+      "exists": true,
+      "bytes": 2502,
+      "sha256": "ed17f55f8fa1bcbb522f6aacbb089c4562339a994ae85413d20b41e162e3ad11",
+      "mtime_iso": "2026-05-05T07:04:40+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "roadmap_chapter:02_tests_test_patient_sl_report_py",
+  "type": "roadmap_chapter",
+  "name": "Ch 02 — tests/test_patient_sl_report.py",
+  "what_it_solves": "CRISPRO_SL_PHD_ROADMAP chapter 'tests/test_patient_sl_report.py' spanning lines 1059..1074.",
+  "how_it_solves": "Chapter body preview (first 2000 chars) attached; full content lives in the source file. Subheadings enumerated.",
+  "why_it_exists": "Chapter is the natural unit of the roadmap — one entity per chapter makes 'what does Ch 3.4 say about the fuser?' addressable.",
+  "attributes": {
+    "level": 1,
+    "start_line": 1059,
+    "end_line": 1074,
+    "byte_length": 598,
+    "subheadings": [],
+    "body_preview_2000c": "\t\n\n\tdef test_ayesha_sl_report():\n\t    \"\"\"Ayesha (MBD4-LOF + TP53-LOF) should get VALIDATED cytidine_analogs.\"\"\"\n\t    response = client.post(\"/api/v1/patient/sl_report\", json={\n\t        \"patient_id\": \"ayesha_001\",\n\t        \"mutations\": [\n\t            {\"gene\": \"MBD4\", \"variant\": \"c.1562delG\", \"consequence\": \"frameshift\"},\n\t            {\"gene\": \"TP53\", \"variant\": \"R175H\", \"consequence\": \"missense\"}\n\t        ],\n\t        \"cancer_type\": \"ovarian_cancer\"\n\t    })\n\t    assert response.status_code == 200\n\t    report = response.json()\n\t    assert report[\"ruo\"] is True"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "lines 1059..1074"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:synthetic_lethality_deep"
+}

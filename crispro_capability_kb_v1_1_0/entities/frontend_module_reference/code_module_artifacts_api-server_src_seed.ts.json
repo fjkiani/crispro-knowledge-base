@@ -1,0 +1,34 @@
+{
+  "id": "code_module:artifacts/api-server/src/seed.ts",
+  "type": "frontend_module_reference",
+  "name": "artifacts/api-server/src/seed.ts",
+  "what_it_solves": "Frontend module 'artifacts/api-server/src/seed.ts' referenced by the architecture / frontend audit corpus.",
+  "how_it_solves": "Extracted by regex for .ts/.tsx/.js/.jsx paths.",
+  "why_it_exists": "Enumerates the concrete frontend surface (crispro-front-end) so any SL/Ayesha UI claim can be traced to a real file.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+        "line": 409,
+        "context": "ifacts/api-server/src/index.ts\") as f:\n    migration_src = f.read()\n\nwith open(\"artifacts/api-server/src/seed.ts\") as f:\n    seed_src = f.read()\n\n# Parse CREATE TABLE blocks\ntable_cols = {}\nfo"
+      }
+    ],
+    "reference_count": 1
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+      "exists": true,
+      "bytes": 24575,
+      "sha256": "8c06c5f6092feaaf9680b60bd45bc6797d140fb43132233f3a5d03e21a621aa0",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-front-end",
+    "component:frontend_canonicalization"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

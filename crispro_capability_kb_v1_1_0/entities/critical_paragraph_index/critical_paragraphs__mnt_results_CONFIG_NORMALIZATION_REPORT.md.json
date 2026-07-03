@@ -1,0 +1,33 @@
+{
+  "id": "critical_paragraphs:/mnt/results/CONFIG_NORMALIZATION_REPORT.md",
+  "type": "critical_paragraph_index",
+  "name": "Critical paragraphs — CONFIG_NORMALIZATION_REPORT.md",
+  "what_it_solves": "Paragraphs from '/mnt/results/CONFIG_NORMALIZATION_REPORT.md' matching critical/discovery/gap/hardcoded/bug/blocker keywords.",
+  "how_it_solves": "Paragraph-split then filtered by `(critical|most important|discovery|gap|finding|bug|blocker|hardcoded)` case-insensitive.",
+  "why_it_exists": "The 'most important discovery' paragraphs in the audit reports carry disproportionate weight — surfacing them as an index makes them searchable.",
+  "attributes": {
+    "hit_count": 1,
+    "hits": [
+      {
+        "line": 60,
+        "bytes": 490,
+        "text": "- Shared `getAuthToken()` exported from `src/utils/sessionPersistence.js`\n- Uses `SESSION_KEYS.AUTH_SESSION` constant (`= 'mock_auth_session'`) instead of hardcoded string\n- Documents that Supabase is force-disabled (`isSupabaseEnabled = false` in `supabaseClient.js`) and `localStorage` pattern is intentional\n- `useAyeshaTherapyFitBundle.js` now imports:\n  ```js\n  import { getAuthToken } from '../utils/sessionPersistence';\n  ```\n- Inline copy removed from `useAyeshaTherapyFitBundle.js`"
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CONFIG_NORMALIZATION_REPORT.md",
+      "exists": true,
+      "bytes": 3342,
+      "sha256": "d068e515e4d22a53cc02f440946021fc7fdea1cc9f76914d06f42f4e1a0584f7",
+      "mtime_iso": "2026-05-05T07:04:43+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:brenus_diligence"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

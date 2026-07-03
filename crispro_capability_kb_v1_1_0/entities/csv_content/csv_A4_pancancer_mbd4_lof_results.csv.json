@@ -1,0 +1,162 @@
+{
+  "id": "csv:A4_pancancer_mbd4_lof_results.csv",
+  "type": "csv_content",
+  "name": "A4_pancancer_mbd4_lof_results.csv",
+  "what_it_solves": "Parsed contents of A4_pancancer_mbd4_lof_results.csv: header + row count + column ranges.",
+  "how_it_solves": "csv.reader → header + row list; per column, if numeric ⇒ (n, min, max, mean); if categorical ⇒ top-3 values + unique count.",
+  "why_it_exists": "Deep pass: previous stream had file metadata only. This entity carries the actual data shape so downstream consumers can validate any claim about A1/A2/A3/… without re-parsing.",
+  "attributes": {
+    "header": [
+      "study_id",
+      "cancer_type",
+      "n_total",
+      "n_damaging_mut",
+      "n_deep_del",
+      "n_lof_total",
+      "lof_frequency",
+      "lof_pct"
+    ],
+    "row_count": 30,
+    "sample_rows": [
+      [
+        "ucec_tcga_pan_can_atlas_2018",
+        "UCEC",
+        "529",
+        "9",
+        "0",
+        "9",
+        "0.017013232514177693",
+        "1.7"
+      ],
+      [
+        "meso_tcga_pan_can_atlas_2018",
+        "MESO",
+        "87",
+        "0",
+        "1",
+        "1",
+        "0.011494252873563218",
+        "1.15"
+      ],
+      [
+        "lgg_tcga_pan_can_atlas_2018",
+        "LGG",
+        "514",
+        "1",
+        "2",
+        "3",
+        "0.005836575875486381",
+        "0.58"
+      ],
+      [
+        "prad_tcga_pan_can_atlas_2018",
+        "PRAD",
+        "494",
+        "0",
+        "2",
+        "2",
+        "0.004048582995951417",
+        "0.4"
+      ],
+      [
+        "cesc_tcga_pan_can_atlas_2018",
+        "CESC",
+        "297",
+        "1",
+        "0",
+        "1",
+        "0.003367003367003367",
+        "0.34"
+      ]
+    ],
+    "column_ranges": {
+      "study_id": {
+        "categorical": true,
+        "top_values": [
+          [
+            "ucec_tcga_pan_can_atlas_2018",
+            1
+          ],
+          [
+            "meso_tcga_pan_can_atlas_2018",
+            1
+          ],
+          [
+            "lgg_tcga_pan_can_atlas_2018",
+            1
+          ]
+        ],
+        "unique_count": 30
+      },
+      "cancer_type": {
+        "categorical": true,
+        "top_values": [
+          [
+            "UCEC",
+            1
+          ],
+          [
+            "MESO",
+            1
+          ],
+          [
+            "LGG",
+            1
+          ]
+        ],
+        "unique_count": 30
+      },
+      "n_total": {
+        "n_numeric": 30,
+        "min": 36.0,
+        "max": 1084.0,
+        "mean": 337.3333333333333
+      },
+      "n_damaging_mut": {
+        "n_numeric": 30,
+        "min": 0.0,
+        "max": 9.0,
+        "mean": 0.4
+      },
+      "n_deep_del": {
+        "n_numeric": 30,
+        "min": 0.0,
+        "max": 2.0,
+        "mean": 0.23333333333333334
+      },
+      "n_lof_total": {
+        "n_numeric": 30,
+        "min": 0.0,
+        "max": 9.0,
+        "mean": 0.6333333333333333
+      },
+      "lof_frequency": {
+        "n_numeric": 30,
+        "min": 0.0,
+        "max": 0.017013232514177693,
+        "mean": 0.0015599582853035637
+      },
+      "lof_pct": {
+        "n_numeric": 30,
+        "min": 0.0,
+        "max": 1.7,
+        "mean": 0.15566666666666668
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A4_pancancer_mbd4_lof_results.csv",
+      "exists": true,
+      "bytes": 1784,
+      "sha256": "1ca4675419054d2918ceb48f83f4606dd1a65c99baaf975a9e8f38e82d1805ab",
+      "mtime_iso": "2026-04-25T07:29:37+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

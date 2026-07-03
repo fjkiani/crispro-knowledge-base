@@ -1,0 +1,110 @@
+{
+  "id": "dbgap_access_pack:dbgap_access_request_draft.md",
+  "type": "dbgap_access_pack",
+  "name": "dbgap_access_request_draft.md",
+  "what_it_solves": "dbgap_access_pack artifact dbgap_access_request_draft.md",
+  "how_it_solves": "Auto-parsed by extension.",
+  "why_it_exists": "Every access pack / SL map / gap-lineage report is a durable operational asset — must be addressable.",
+  "attributes": {
+    "byte_length": 14675,
+    "heading_count": 16,
+    "headings": [
+      {
+        "level": 1,
+        "title": "dbGaP Access Request — phs003428 (CALGB/SWOG 80405)",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "1. Study Summary (Confirmed from dbGaP Page)",
+        "line": 6
+      },
+      {
+        "level": 2,
+        "title": "2. Data Types Available in phs003428 (Confirmed)",
+        "line": 26
+      },
+      {
+        "level": 2,
+        "title": "3. Consent Groups and Access Requirements",
+        "line": 41
+      },
+      {
+        "level": 2,
+        "title": "4. PI and Institution",
+        "line": 57
+      },
+      {
+        "level": 2,
+        "title": "5. Draft Access Request Memo",
+        "line": 68
+      },
+      {
+        "level": 3,
+        "title": "5.1 Requesting Institution",
+        "line": 81
+      },
+      {
+        "level": 3,
+        "title": "5.2 Research Purpose",
+        "line": 91
+      },
+      {
+        "level": 3,
+        "title": "5.3 Specific Data Requested",
+        "line": 101
+      },
+      {
+        "level": 3,
+        "title": "5.4 How Data Will Be Used",
+        "line": 116
+      },
+      {
+        "level": 3,
+        "title": "5.5 Data Security Plan",
+        "line": 136
+      },
+      {
+        "level": 3,
+        "title": "5.6 Justification for Controlled-Access Data",
+        "line": 151
+      },
+      {
+        "level": 3,
+        "title": "5.7 Signatures",
+        "line": 157
+      },
+      {
+        "level": 2,
+        "title": "6. Next Steps Checklist for PI",
+        "line": 178
+      },
+      {
+        "level": 2,
+        "title": "7. Key References",
+        "line": 193
+      },
+      {
+        "level": 2,
+        "title": "8. Important Notes for the Requesting PI",
+        "line": 205
+      }
+    ],
+    "preview": "# dbGaP Access Request — phs003428 (CALGB/SWOG 80405)\n**CrisPRO EscapeMap Project | Immune Biomarker Validation for Bevacizumab Resistance in mCRC**\n\n---\n\n## 1. Study Summary (Confirmed from dbGaP Page)\n\n| Field | Value |\n|---|---|\n| **dbGaP Accession** | phs003428.v1.p1 |\n| **Full Title** | CALGB/SWOG 80405: Genome-Wide Association Study of Patients with Advanced or Metastatic Colorectal Cancer Treated with First-Line Chemotherapy Combined with Cetuximab and/or Bevacizumab |\n| **ClinicalTrials.gov** | NCT00265850 |\n| **Principal Investigator** | Kouros Owzar, PhD |\n| **Submitting Institution** | Duke University, Durham, North Carolina, USA |\n| **Total Consented Subjects** | 1,464 |\n| **Randomized Patients** | 2,334 (across 396 sites, Sept 2005 – March 2012) |\n| **Study Design** | Randomized Phase III Clinical Trial; Multicenter |\n| **Primary Phenotype** | Colorectal Neoplasms / Survival Analysis |\n| **Access Portal** | https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?page=login (confirmed active) |\n| **DUC Agreement** | https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?view_pdf&stacc=phs003428.v1.p1 |\n\n**Study Background:** CALGB/SWOG 80405 randomized patients with untreated metastatic adenocarcinoma of the colon or rectum to bevacizumab, cetuximab, or the combination of both, in addition to FOLFOX or FOLFIRI chemotherapy. Germline DNA was prospectively collected and genome-wide association studies (GWAS) were conducted using clinical outcomes and molecular features. The combination arm was dropped in September 2009 due to lack of benefit and increased toxicity.\n\n---\n\n## 2. Data Types Available in phs003428 (Confirmed)\n\n| Data Type | Confirmed | Notes |\n|---|---|---|\n| **Germline Genotype (GWAS)** | YES | ~700,000 SNPs from peripheral blood DNA; primary data type |\n| **Phenotype / Clinical Outcomes** | YES | Includes OS, survival analysis variables |\n| **Molecular Features (eQTL)** | YES | Expression quantitative trait loci analyses |\n| **Clinical Trial Metadata** | YES | Treatment arm, chemotherapy regimen (FOLFOX/FOLFIRI), randomization data |\n| **Tumor Molecular Markers** | YES | RAS/KRAS/NRAS mutations, BRAF mutations, MSI status |\n| **RNA-seq Expression Data** | **NOT in phs003428** | RNA-seq (N=554 tumors) is in GEO as **GSE196576** (public, no access required) |\n\n> **Critical Note:** The RNA-seq expression data and CIBERSORTx immune scores are already publicly available in **GSE196576** (GEO, public access). The dbGaP phs003428 dataset provides the **per-patient "
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/dbgap_access_request_draft.md",
+      "exists": true,
+      "bytes": 14716,
+      "sha256": "855aa4444ed87f5d74c6fe38e5ee5eb05d634a7721763cf66261c781af95929d",
+      "mtime_iso": "2026-05-12T17:38:36+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:access_packs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

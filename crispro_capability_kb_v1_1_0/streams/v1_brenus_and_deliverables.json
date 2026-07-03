@@ -1,0 +1,429 @@
+{
+  "stream_id": "brenus_and_deliverables",
+  "stream_name": "Brenus diligence module + Sanofi/AACR deliverables + open bugs",
+  "generated_at_utc": "2026-07-03T21:06:10.910338+00:00",
+  "files_audited": [
+    {
+      "path": "/mnt/user-uploads/sanofiPitchDeckDirective.json",
+      "exists": true,
+      "bytes": 54645,
+      "sha256": "281c15882038ec8ca192b5581453ed5a683725db527dee43db79b2461d46ef10",
+      "mtime_iso": "2026-06-15T22:24:00+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/aacr2026_schema_a_master.json",
+      "exists": true,
+      "bytes": 4038664,
+      "sha256": "c6be802f87bf5b730a05fd67531aa9db7ae0ae21f066bb9695438b9d7adef588",
+      "mtime_iso": "2026-06-14T22:02:43+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/CrisPRO - AACR 2026 Lead Audit Tracker - Sheet1.csv",
+      "exists": true,
+      "bytes": 15556,
+      "sha256": "7693ac7623086e428428fcea40aa1ba8744cf5b8fce980f0f50ff9da8fe2d15c",
+      "mtime_iso": "2026-05-09T05:07:59+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/AACR_SESSION_NAVIGATION.md",
+      "exists": true,
+      "bytes": 10606,
+      "sha256": "e343b30476e25e01ddfdfac8e1fd429bc12562f035405edcf41750887ff493f6",
+      "mtime_iso": "2026-07-02T15:30:14+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/GTM_SCHEMA_B_BRIDGE.md",
+      "exists": true,
+      "bytes": 9902,
+      "sha256": "8248a6f0f2b0301cc0d031efc9280e61aeb98509233d0355d483818790494693",
+      "mtime_iso": "2026-07-02T15:29:52+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/INTEL_FACETED_FILTERING.md",
+      "exists": true,
+      "bytes": 10799,
+      "sha256": "3b86630f7a064a753c9a133bab1e6867f6614787e2ce6ee7271b478104d84c86",
+      "mtime_iso": "2026-07-02T15:30:00+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/BreAK_CRC-001_Benchmark_Calibration (2).pdf",
+      "exists": true,
+      "bytes": 2131238,
+      "sha256": "ddf597724746322c1d31be87ad897f4cdda1cda3985b4aebab8b6e944d21626c",
+      "mtime_iso": "2026-05-28T20:58:48+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/manuscript_coin_toss_oncology_FINAL.md",
+      "exists": true,
+      "bytes": 61129,
+      "sha256": "4c3bc2d6c48c8867e7470ee110470765bf608e988b538be22eb0a0cb13bdd2fc",
+      "mtime_iso": "2026-05-18T04:45:11+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/richtext_converted_to_markdown.md",
+      "exists": true,
+      "bytes": 141553,
+      "sha256": "ca62fb70cffecfe064bb5a5d019fc22d263e7ad85d9ad6bdef48fa79caaf7992",
+      "mtime_iso": "2026-06-16T23:32:32+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/PROJECT_DATA_SPHERE_AUDIT_AGENT_PLAN.mdc",
+      "exists": true,
+      "bytes": 17663,
+      "sha256": "e4c834206c74788e9a2ea15cc2b38d32cb18b22fb5abc22bec0609c40e204247",
+      "mtime_iso": "2026-05-10T20:56:00+00:00"
+    }
+  ],
+  "audit_method": {
+    "approach": "Every deliverable ties back to an on-disk source (sha256 + mtime). The Brenus diligence module and MRTX1719 bug are named explicitly because they are the two 'never-forget' items in this stream.",
+    "correction_lock": "MBD4/ATR tier claim in Sanofi deck / manuscript must be reconciled against receipt:mbd4_atr_evidence_matrix_v2 in stream_evidence.json (current_tier=Mechanistic, tier_change=NO CHANGE)."
+  },
+  "entities": [
+    {
+      "id": "module:brenus_diligence",
+      "type": "diligence_module",
+      "name": "Brenus diligence module (BreAK CRC-001 / STC-1010)",
+      "what_it_solves": "Hard-coded diligence guardrails + canon-frozen blocker registry for the Brenus BreAK CRC-001 program (anchor: STC-1010 haptenated whole-cell vaccine).",
+      "how_it_solves": "Module holds: (1) canon-frozen blocker registry preventing silent rewrites of prior downgrades/quarantines, (2) hard-coded guardrails for BreAK CRC-001 protocol claims, (3) diligence checkpoints reconciled against the 8D remediation state and PATH A formula lock.",
+      "why_it_exists": "CRISPRO_REPO_ARCHITECTURE_REPORT calls the diligence module 'the most important discovery' — it isolates the Brenus-specific rules from the general SL engine so protocol drift (mFOLFOX6 ± bevacizumab backbone, STC-1010 vaccine details) can't leak into other cases.",
+      "attributes": {
+        "anchor_program": "STC-1010 (haptenated whole-cell therapeutic vaccine, MSS CRC)",
+        "trial_name": "BreAK CRC-001",
+        "backbone": "mFOLFOX6 +/- bevacizumab",
+        "scientific_anchor": "Alzeeb et al. 2024 (DOI: 10.3389/fonc.2024.1427428)"
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+          "note": "'most important discovery' anchor"
+        }
+      ],
+      "cross_refs": [
+        "governance:8d_remediation",
+        "governance:path_a_formula",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "deliverable:sanofi_pitch_deck_directive",
+      "type": "pitch_directive",
+      "name": "Sanofi pitch deck directive (v1.0.1)",
+      "what_it_solves": "Directive JSON that generates the Sanofi pitch deck — anchor asset SAR445953 (SGN-CEACAM5C).",
+      "how_it_solves": "sanofiPitchDeckDirective.json enumerates each slide's canon (asset details, evidence receipts to cite, claims allowed).",
+      "why_it_exists": "Prevents slide-authoring drift by making the pitch deck a downstream artefact of a canonical JSON, not a hand-crafted document.",
+      "attributes": {
+        "version": "v1.0.1",
+        "anchor_asset": "SAR445953 (SGN-CEACAM5C)",
+        "top_level_keys": [
+          "_document_metadata",
+          "slides"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/sanofiPitchDeckDirective.json",
+          "exists": true,
+          "bytes": 54645,
+          "sha256": "281c15882038ec8ca192b5581453ed5a683725db527dee43db79b2461d46ef10",
+          "mtime_iso": "2026-06-15T22:24:00+00:00"
+        }
+      ],
+      "cross_refs": [
+        "module:brenus_diligence",
+        "engine:synthetic_lethality",
+        "receipt:mbd4_atr_evidence_matrix_v2"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "deliverable:aacr2026_lead_audit_tracker",
+      "type": "lead_tracker",
+      "name": "AACR 2026 Lead Audit Tracker (50 leads, 18 columns)",
+      "what_it_solves": "Structured tracker of 50 AACR 2026 leads with 18 audit columns.",
+      "how_it_solves": "Sheet1 CSV holds the working data; the .xlsx duplicates the sheet for legacy tooling.",
+      "why_it_exists": "Turns AACR outreach into a testable pipeline (per-lead audit status + assignment) rather than an unstructured funnel.",
+      "attributes": {
+        "lead_count_reported": 50,
+        "column_count_reported": 18
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CrisPRO - AACR 2026 Lead Audit Tracker - Sheet1.csv",
+          "exists": true,
+          "bytes": 15556,
+          "sha256": "7693ac7623086e428428fcea40aa1ba8744cf5b8fce980f0f50ff9da8fe2d15c",
+          "mtime_iso": "2026-05-09T05:07:59+00:00"
+        },
+        {
+          "path": "/mnt/user-uploads/CrisPRO - AACR 2026 Lead Audit Tracker (2).xlsx",
+          "exists": true,
+          "bytes": 23442,
+          "sha256": "500ab2d78b2e2e8967f7a7cb803793df994923a304a748fdce3c435e2ae925d2",
+          "mtime_iso": "2026-06-28T21:02:05+00:00"
+        },
+        {
+          "path": "/mnt/user-uploads/CrisPRO - AACR 2026 Lead Audit Tracker.xlsx",
+          "exists": true,
+          "bytes": 23442,
+          "sha256": "389f01dd9a033f8f9025b2bb45025ca92b5421e526909f7ddb071d8fad9ea5c8",
+          "mtime_iso": "2026-05-02T17:18:19+00:00"
+        }
+      ],
+      "cross_refs": [
+        "deliverable:sanofi_pitch_deck_directive"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "deliverable:aacr2026_schema_a_master",
+      "type": "schema_master",
+      "name": "AACR 2026 schema A master JSON",
+      "what_it_solves": "Master schema JSON that describes the AACR 2026 outreach schema (fields, controlled vocabularies, join keys).",
+      "how_it_solves": "aacr2026_schema_a_master.json is the source-of-truth schema; GTM_SCHEMA_B_BRIDGE.md documents the bridge to schema B (GTM view).",
+      "why_it_exists": "Prevents lead-tracker column drift by pinning schema in JSON; GTM consumers use schema B via the bridge, not the raw tracker.",
+      "attributes": {
+        "top_level_keys_or_shape": [
+          "[list of 862]"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/aacr2026_schema_a_master.json",
+          "exists": true,
+          "bytes": 4038664,
+          "sha256": "c6be802f87bf5b730a05fd67531aa9db7ae0ae21f066bb9695438b9d7adef588",
+          "mtime_iso": "2026-06-14T22:02:43+00:00"
+        },
+        {
+          "path": "/mnt/user-uploads/GTM_SCHEMA_B_BRIDGE.md",
+          "exists": true,
+          "bytes": 9902,
+          "sha256": "8248a6f0f2b0301cc0d031efc9280e61aeb98509233d0355d483818790494693",
+          "mtime_iso": "2026-07-02T15:29:52+00:00"
+        }
+      ],
+      "cross_refs": [
+        "deliverable:aacr2026_lead_audit_tracker"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "deliverable:aacr_session_navigation",
+      "type": "operations_artifact",
+      "name": "AACR session navigation guide",
+      "what_it_solves": "Navigation guide for AACR 2026 sessions relevant to CrisPRO outreach.",
+      "how_it_solves": "AACR_SESSION_NAVIGATION.md maps sessions → dates → CrisPRO relevance score + assigned attendee.",
+      "why_it_exists": "Turns AACR floor time into a routed lead-collection exercise instead of ad-hoc booth walking.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/AACR_SESSION_NAVIGATION.md",
+          "exists": true,
+          "bytes": 10606,
+          "sha256": "e343b30476e25e01ddfdfac8e1fd429bc12562f035405edcf41750887ff493f6",
+          "mtime_iso": "2026-07-02T15:30:14+00:00"
+        }
+      ],
+      "cross_refs": [
+        "deliverable:aacr2026_lead_audit_tracker"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "deliverable:intel_faceted_filtering",
+      "type": "operations_artifact",
+      "name": "Intel faceted filtering spec",
+      "what_it_solves": "Spec for faceted filtering over the CRM/intel corpus — how to slice leads by tumor type / axis / stage.",
+      "how_it_solves": "INTEL_FACETED_FILTERING.md defines each facet with its controlled vocabulary and mapping back to schema A/B.",
+      "why_it_exists": "Prevents ad-hoc lead segmentation queries by making the facet catalogue explicit.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/INTEL_FACETED_FILTERING.md",
+          "exists": true,
+          "bytes": 10799,
+          "sha256": "3b86630f7a064a753c9a133bab1e6867f6614787e2ce6ee7271b478104d84c86",
+          "mtime_iso": "2026-07-02T15:30:00+00:00"
+        }
+      ],
+      "cross_refs": [
+        "deliverable:aacr2026_schema_a_master"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "deliverable:breakcrc001_benchmark_calibration",
+      "type": "calibration_document",
+      "name": "BreAK CRC-001 benchmark calibration (PDF)",
+      "what_it_solves": "Benchmark calibration document for the BreAK CRC-001 trial — how CrisPRO's predictions map to the trial's efficacy assumptions.",
+      "how_it_solves": "PDF pairs each trial arm's assumed effect with the CrisPRO-predicted axis dependencies; deltas are quarantined until PATH A recomputation.",
+      "why_it_exists": "Provides the diligence backbone: any Brenus claim about BreAK CRC-001 outcomes is checked against this calibration PDF, not the pitch deck.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/BreAK_CRC-001_Benchmark_Calibration (2).pdf",
+          "exists": true,
+          "bytes": 2131238,
+          "sha256": "ddf597724746322c1d31be87ad897f4cdda1cda3985b4aebab8b6e944d21626c",
+          "mtime_iso": "2026-05-28T20:58:48+00:00"
+        }
+      ],
+      "cross_refs": [
+        "module:brenus_diligence",
+        "governance:path_a_formula"
+      ],
+      "gaps_still_open": [
+        "LATIFY deltas (CT-03/DL-05/PC-06) remain quarantined until vector version resolved.",
+        "PC-02 permanently downgraded until retroactive prediction reproduction."
+      ]
+    },
+    {
+      "id": "deliverable:coin_toss_oncology_manuscript",
+      "type": "manuscript",
+      "name": "Coin-toss oncology manuscript (final)",
+      "what_it_solves": "Positioning manuscript arguing that current oncology-drug picking is coin-toss-grade, and CrisPRO's SL engine is a principled alternative.",
+      "how_it_solves": "manuscript_coin_toss_oncology_FINAL.md consolidates the SL evidence and the moat_comparison record into a public-facing narrative.",
+      "why_it_exists": "Owned narrative around the moat; keeps external-facing story consistent with the internal evidence receipts.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/manuscript_coin_toss_oncology_FINAL.md",
+          "exists": true,
+          "bytes": 61129,
+          "sha256": "4c3bc2d6c48c8867e7470ee110470765bf608e988b538be22eb0a0cb13bdd2fc",
+          "mtime_iso": "2026-05-18T04:45:11+00:00"
+        }
+      ],
+      "cross_refs": [
+        "moat:aggregate",
+        "engine:synthetic_lethality",
+        "receipt:mbd4_atr_evidence_matrix_v2"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "deliverable:richtext_converted",
+      "type": "working_document",
+      "name": "Rich-text converted to markdown (working doc)",
+      "what_it_solves": "Rich-text-source document converted to markdown — carries additional context (~141 KB).",
+      "how_it_solves": "richtext_converted_to_markdown.md preserves the original content for further audit.",
+      "why_it_exists": "Keeps the source of prior deliverables auditable rather than lost in a proprietary format.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/richtext_converted_to_markdown.md",
+          "exists": true,
+          "bytes": 141553,
+          "sha256": "ca62fb70cffecfe064bb5a5d019fc22d263e7ad85d9ad6bdef48fa79caaf7992",
+          "mtime_iso": "2026-06-16T23:32:32+00:00"
+        }
+      ],
+      "cross_refs": [
+        "deliverable:coin_toss_oncology_manuscript"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "deliverable:pds_audit_agent_plan",
+      "type": "operations_plan",
+      "name": "Project Data Sphere audit agent plan",
+      "what_it_solves": "Plan for the Project Data Sphere audit agent — what it inspects, what it emits, how findings feed back.",
+      "how_it_solves": "PROJECT_DATA_SPHERE_AUDIT_AGENT_PLAN.mdc lists the agent's inputs, outputs, and integration points.",
+      "why_it_exists": "External data-sphere assets need their own audit lane, distinct from the SL engine's KB ingestion.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/PROJECT_DATA_SPHERE_AUDIT_AGENT_PLAN.mdc",
+          "exists": true,
+          "bytes": 17663,
+          "sha256": "e4c834206c74788e9a2ea15cc2b38d32cb18b22fb5abc22bec0609c40e204247",
+          "mtime_iso": "2026-05-10T20:56:00+00:00"
+        }
+      ],
+      "cross_refs": [
+        "protocol:mars",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": []
+    },
+    {
+      "id": "bug:mrtx1719_wrn_mismap",
+      "type": "known_bug",
+      "name": "MRTX1719 → WRN axis mismap (OPEN)",
+      "what_it_solves": "pharmacologic_analyzer maps MRTX1719 to the WRN axis, but MRTX1719 is a PRMT5/MTAP-cooperative agent — the WRN axis is wrong.",
+      "how_it_solves": "Current code: `'mrtx1719': 'wrn'` at pharmacologic_analyzer.py:66. Correct mapping per Bev2026 + Engstrom 2023 (Cancer Discov 13:2412-2431) + Pettus 2025 (J Med Chem 68:6932-6954): `'mrtx1719': 'prmt5_mtap_cooperative'` — but that axis does not exist yet in the CandidateAxis enum.",
+      "why_it_exists": "Silent axis mislabelling propagates through the SL engine's pharmacology contribution; any downstream tier decision referencing MRTX1719 for WRN is currently wrong.",
+      "attributes": {
+        "location": "pharmacologic_analyzer.py:66",
+        "current_mapping": "'mrtx1719': 'wrn'",
+        "correct_mapping": "'mrtx1719': 'prmt5_mtap_cooperative'",
+        "target_axis_status": "NOT_YET_IN_ENUM",
+        "status": "OPEN",
+        "evidence_sources": [
+          "Bev2026",
+          "Engstrom 2023 Cancer Discov 13:2412-2431",
+          "Pettus 2025 J Med Chem 68:6932-6954"
+        ],
+        "no_fix_commit_as_of": "2026-06"
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "fjkiani/Brenus or crispro-backend-v2:pharmacologic_analyzer.py:66",
+          "note": "bug location — not in this KB corpus"
+        }
+      ],
+      "cross_refs": [
+        "axis:WRN",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [
+        "Fix requires (1) adding PRMT5_MTAP_COOPERATIVE axis to the enum, (2) re-tiering, (3) regression tests, (4) canonical receipt for the new axis."
+      ]
+    },
+    {
+      "id": "pipeline:deliverables",
+      "type": "deliverable_pipeline",
+      "name": "CrisPRO deliverable pipeline (evidence → manuscript → pitch → outreach)",
+      "what_it_solves": "End-to-end pipeline that converts evidence receipts (MBD4/ATR + 9p21 audit) into downstream artefacts: manuscripts, pitch deck, AACR outreach.",
+      "how_it_solves": "Directional flow: canonical_receipts → intelligence reports → manuscripts (v2→v4) → coin-toss positioning manuscript → Sanofi pitch directive → AACR tracker + session navigation.",
+      "why_it_exists": "Prevents each deliverable from re-deriving evidence — every stage consumes the immediately-upstream artefact, not the raw data.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2",
+        "artifact:mbd4_intel_reports",
+        "artifact:mbd4_manuscript_versions",
+        "deliverable:coin_toss_oncology_manuscript",
+        "deliverable:sanofi_pitch_deck_directive",
+        "deliverable:aacr2026_lead_audit_tracker",
+        "deliverable:aacr_session_navigation",
+        "deliverable:intel_faceted_filtering"
+      ],
+      "gaps_still_open": []
+    }
+  ],
+  "gaps_still_open_stream_level": [
+    "MRTX1719 → WRN mismap remains OPEN (no fix commit as of 2026-06).",
+    "PRMT5_MTAP_COOPERATIVE axis is not in the enum yet.",
+    "LATIFY deltas + PC-02 quarantine still constrain BreAK CRC-001 benchmark calibration.",
+    "AACR 2026 schema A master top-level shape was captured from live parse; if downstream consumers rely on nested field paths, add explicit walks in a follow-up pass."
+  ],
+  "cross_stream_refs": [
+    "See stream_evidence.json for the canonical MBD4 verdict that anchors every deliverable here.",
+    "See stream_moat.json for the governance decisions (PATH A, 8D) that quarantine some of these deliverables' subfields.",
+    "See stream_sl.json for the engine that produces the tiers cited in every deliverable."
+  ]
+}

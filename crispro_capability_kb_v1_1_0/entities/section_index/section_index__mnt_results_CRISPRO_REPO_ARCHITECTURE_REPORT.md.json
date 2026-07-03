@@ -1,0 +1,151 @@
+{
+  "id": "section_index:/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+  "type": "section_index",
+  "name": "Section index — CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+  "what_it_solves": "Section index of '/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md': every heading with its level and starting line.",
+  "how_it_solves": "Regex `^#{1,6}\\s+(.+)$` extracted at generation time; preserves navigation without duplicating body text.",
+  "why_it_exists": "Downstream ingestors can walk the document by section without re-parsing markdown; the KB stops being an opaque blob.",
+  "attributes": {
+    "heading_count": 25,
+    "headings": [
+      {
+        "level": 1,
+        "title": "CrisPRO Platform — Dual-Repo Architecture Report",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "1. Executive Summary",
+        "line": 9
+      },
+      {
+        "level": 2,
+        "title": "2. Backend (`crispro-backend-v2`) — Architecture",
+        "line": 17
+      },
+      {
+        "level": 3,
+        "title": "2.1 Top-Level Structure",
+        "line": 19
+      },
+      {
+        "level": 3,
+        "title": "2.2 API Surface (main.py — 40+ routers registered)",
+        "line": 42
+      },
+      {
+        "level": 3,
+        "title": "2.3 Synthetic Lethality Engine — v3 Architecture",
+        "line": 78
+      },
+      {
+        "level": 3,
+        "title": "2.4 MBD4 Module (`api/services/mbd4_module.py`)",
+        "line": 103
+      },
+      {
+        "level": 3,
+        "title": "2.5 Brenus Diligence Module (`brenus_diligence/`) — CRITICAL",
+        "line": 112
+      },
+      {
+        "level": 3,
+        "title": "2.6 Governance (`governance/formula_decision/`)",
+        "line": 139
+      },
+      {
+        "level": 3,
+        "title": "2.7 Biomarker Enriched Cohorts (`biomarker_enriched_cohorts/`)",
+        "line": 148
+      },
+      {
+        "level": 3,
+        "title": "2.8 Key Resource Files",
+        "line": 159
+      },
+      {
+        "level": 2,
+        "title": "3. Frontend (`crispro-front-end`) — Architecture",
+        "line": 172
+      },
+      {
+        "level": 3,
+        "title": "3.1 Top-Level Structure",
+        "line": 174
+      },
+      {
+        "level": 3,
+        "title": "3.2 Synthetic Lethality UI (`src/components/SyntheticLethality/`)",
+        "line": 197
+      },
+      {
+        "level": 3,
+        "title": "3.3 CoPilot (`src/components/CoPilot/`)",
+        "line": 218
+      },
+      {
+        "level": 3,
+        "title": "3.4 Ayesha Persona (`src/components/ayesha/`)",
+        "line": 225
+      },
+      {
+        "level": 3,
+        "title": "3.5 Clinical Genomics Command Center",
+        "line": 235
+      },
+      {
+        "level": 3,
+        "title": "3.6 Deployment",
+        "line": 242
+      },
+      {
+        "level": 2,
+        "title": "4. Integration Architecture (Backend ↔ Frontend)",
+        "line": 251
+      },
+      {
+        "level": 2,
+        "title": "5. CrisPRO Fit-Gap for Brenus/STC-1010 Use Case",
+        "line": 277
+      },
+      {
+        "level": 3,
+        "title": "5.1 What's Already Built (Fits)",
+        "line": 279
+      },
+      {
+        "level": 3,
+        "title": "5.2 Active Blockers / Gaps",
+        "line": 295
+      },
+      {
+        "level": 3,
+        "title": "5.3 Recommended Next Actions",
+        "line": 306
+      },
+      {
+        "level": 2,
+        "title": "6. Key Files for Downstream Agents",
+        "line": 316
+      },
+      {
+        "level": 2,
+        "title": "7. Permanent Boundaries (Inherited from Brenus Canon)",
+        "line": 328
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+      "exists": true,
+      "bytes": 17877,
+      "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+      "mtime_iso": "2026-05-05T06:14:00+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

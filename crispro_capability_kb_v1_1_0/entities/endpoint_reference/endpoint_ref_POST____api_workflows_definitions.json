@@ -1,0 +1,35 @@
+{
+  "id": "endpoint_ref:POST   /api/workflows/definitions",
+  "type": "endpoint_reference",
+  "name": "POST   /api/workflows/definitions",
+  "what_it_solves": "HTTP endpoint 'POST   /api/workflows/definitions' referenced in the architecture / hardening corpus.",
+  "how_it_solves": "Regex `(GET|POST|PUT|DELETE|PATCH)\\s+/…` captured with source_file + line + context.",
+  "why_it_exists": "Every route claim in an audit is testable; this enumerates them so consumers can diff against the live server.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+        "line": 279,
+        "context": "ifacts/api-server/src/routes/workflows.ts` (new file):\n\n```\nPOST   /api/workflows/definitions          — create workflow definition\nGET    /api/workflows"
+      }
+    ],
+    "reference_count": 1
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+      "exists": true,
+      "bytes": 24575,
+      "sha256": "8c06c5f6092feaaf9680b60bd45bc6797d140fb43132233f3a5d03e21a621aa0",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    }
+  ],
+  "cross_refs": [
+    "endpoint:sl",
+    "endpoint:bundle",
+    "layer:output"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

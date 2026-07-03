@@ -1,0 +1,24 @@
+{
+  "id": "deliverable:aacr_session_navigation",
+  "type": "operations_artifact",
+  "name": "AACR session navigation guide",
+  "what_it_solves": "Navigation guide for AACR 2026 sessions relevant to CrisPRO outreach.",
+  "how_it_solves": "AACR_SESSION_NAVIGATION.md maps sessions → dates → CrisPRO relevance score + assigned attendee.",
+  "why_it_exists": "Turns AACR floor time into a routed lead-collection exercise instead of ad-hoc booth walking.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/AACR_SESSION_NAVIGATION.md",
+      "exists": true,
+      "bytes": 10606,
+      "sha256": "e343b30476e25e01ddfdfac8e1fd429bc12562f035405edcf41750887ff493f6",
+      "mtime_iso": "2026-07-02T15:30:14+00:00"
+    }
+  ],
+  "cross_refs": [
+    "deliverable:aacr2026_lead_audit_tracker"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:brenus_and_deliverables"
+}

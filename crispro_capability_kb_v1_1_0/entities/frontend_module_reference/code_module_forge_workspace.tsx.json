@@ -1,0 +1,34 @@
+{
+  "id": "code_module:forge/workspace.tsx",
+  "type": "frontend_module_reference",
+  "name": "forge/workspace.tsx",
+  "what_it_solves": "Frontend module 'forge/workspace.tsx' referenced by the architecture / frontend audit corpus.",
+  "how_it_solves": "Extracted by regex for .ts/.tsx/.js/.jsx paths.",
+  "why_it_exists": "Enumerates the concrete frontend surface (crispro-front-end) so any SL/Ayesha UI claim can be traced to a real file.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+        "line": 127,
+        "context": "sx\n/forge             → forge/index.tsx   ← workspace list\n/forge/:wid        → forge/workspace.tsx (5 tabs: Overview, Datasets, Jobs, Registry, Policy)\n```\n\n### 1.6 Kairos Client"
+      }
+    ],
+    "reference_count": 1
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+      "exists": true,
+      "bytes": 24575,
+      "sha256": "8c06c5f6092feaaf9680b60bd45bc6797d140fb43132233f3a5d03e21a621aa0",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-front-end",
+    "component:frontend_canonicalization"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

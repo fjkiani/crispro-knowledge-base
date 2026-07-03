@@ -1,0 +1,114 @@
+{
+  "id": "csv:A1_codependency_pancancer_results_REAL.csv",
+  "type": "csv_content",
+  "name": "A1_codependency_pancancer_results_REAL.csv",
+  "what_it_solves": "Parsed contents of A1_codependency_pancancer_results_REAL.csv: header + row count + column ranges.",
+  "how_it_solves": "csv.reader → header + row list; per column, if numeric ⇒ (n, min, max, mean); if categorical ⇒ top-3 values + unique count.",
+  "why_it_exists": "Deep pass: previous stream had file metadata only. This entity carries the actual data shape so downstream consumers can validate any claim about A1/A2/A3/… without re-parsing.",
+  "attributes": {
+    "header": [
+      "gene",
+      "n",
+      "spearman_r",
+      "p_value",
+      "scope",
+      "p_adj_BH"
+    ],
+    "row_count": 3,
+    "sample_rows": [
+      [
+        "ATR",
+        "1112",
+        "0.013009812449902666",
+        "0.6647501617844465",
+        "pan-cancer",
+        "0.8623903938132358"
+      ],
+      [
+        "CHEK1",
+        "1112",
+        "0.005203701567597719",
+        "0.8623903938132358",
+        "pan-cancer",
+        "0.8623903938132358"
+      ],
+      [
+        "WEE1",
+        "1112",
+        "-0.031110498860389676",
+        "0.2999617295659523",
+        "pan-cancer",
+        "0.8623903938132358"
+      ]
+    ],
+    "column_ranges": {
+      "gene": {
+        "categorical": true,
+        "top_values": [
+          [
+            "ATR",
+            1
+          ],
+          [
+            "CHEK1",
+            1
+          ],
+          [
+            "WEE1",
+            1
+          ]
+        ],
+        "unique_count": 3
+      },
+      "n": {
+        "n_numeric": 3,
+        "min": 1112.0,
+        "max": 1112.0,
+        "mean": 1112.0
+      },
+      "spearman_r": {
+        "n_numeric": 3,
+        "min": -0.031110498860389676,
+        "max": 0.013009812449902666,
+        "mean": -0.004298994947629764
+      },
+      "p_value": {
+        "n_numeric": 3,
+        "min": 0.2999617295659523,
+        "max": 0.8623903938132358,
+        "mean": 0.6090340950545449
+      },
+      "scope": {
+        "categorical": true,
+        "top_values": [
+          [
+            "pan-cancer",
+            3
+          ]
+        ],
+        "unique_count": 1
+      },
+      "p_adj_BH": {
+        "n_numeric": 3,
+        "min": 0.8623903938132358,
+        "max": 0.8623903938132358,
+        "mean": 0.8623903938132358
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1_codependency_pancancer_results_REAL.csv",
+      "exists": true,
+      "bytes": 282,
+      "sha256": "5cc36c8831eaa7cfb9d5e5978b40e1ee1a4598a1f0a85ba8584ae89561bfda00",
+      "mtime_iso": "2026-04-25T07:17:07+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

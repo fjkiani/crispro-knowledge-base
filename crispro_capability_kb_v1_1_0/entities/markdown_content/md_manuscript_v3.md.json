@@ -1,0 +1,145 @@
+{
+  "id": "md:manuscript_v3.md",
+  "type": "markdown_content",
+  "name": "manuscript_v3.md",
+  "what_it_solves": "Structured view of manuscript_v3.md: heading tree + first 2000 chars.",
+  "how_it_solves": "Regex heading extract + preview slice.",
+  "why_it_exists": "Turns evidence-narrative markdowns into a searchable heading index without duplicating the full body.",
+  "attributes": {
+    "byte_length": 33366,
+    "heading_count": 23,
+    "headings": [
+      {
+        "level": 2,
+        "title": "Introduction",
+        "line": 46
+      },
+      {
+        "level": 2,
+        "title": "Computational Methods & Rigor",
+        "line": 56
+      },
+      {
+        "level": 2,
+        "title": "Results",
+        "line": 60
+      },
+      {
+        "level": 3,
+        "title": "Cytidine analogs define the gold-standard therapeutic axis for MBD4-LOF",
+        "line": 62
+      },
+      {
+        "level": 3,
+        "title": "MBD4-LOF tumors do NOT exhibit transcriptional PARP1 upregulation",
+        "line": 68
+      },
+      {
+        "level": 3,
+        "title": "Falsified Sub-Hypotheses",
+        "line": 74
+      },
+      {
+        "level": 3,
+        "title": "PARP1 expression is a pan-cancer predictor of PARP inhibitor sensitivity",
+        "line": 78
+      },
+      {
+        "level": 3,
+        "title": "MBD4-LOF confers sensitivity to ATR inhibition, validated by four confound stress tests",
+        "line": 86
+      },
+      {
+        "level": 3,
+        "title": "BER deficiency drives an evidence-supported dual therapeutic framework",
+        "line": 110
+      },
+      {
+        "level": 2,
+        "title": "Discussion",
+        "line": 124
+      },
+      {
+        "level": 2,
+        "title": "Methods",
+        "line": 140
+      },
+      {
+        "level": 3,
+        "title": "Cell line classification",
+        "line": 142
+      },
+      {
+        "level": 3,
+        "title": "Pharmacological stratification",
+        "line": 146
+      },
+      {
+        "level": 3,
+        "title": "Confound stress testing",
+        "line": 152
+      },
+      {
+        "level": 3,
+        "title": "Analysis workflow",
+        "line": 163
+      },
+      {
+        "level": 3,
+        "title": "Expression analysis",
+        "line": 167
+      },
+      {
+        "level": 3,
+        "title": "Multimodal evidence matrix",
+        "line": 171
+      },
+      {
+        "level": 3,
+        "title": "Data availability",
+        "line": 175
+      },
+      {
+        "level": 3,
+        "title": "Code availability",
+        "line": 179
+      },
+      {
+        "level": 2,
+        "title": "Figures",
+        "line": 183
+      },
+      {
+        "level": 2,
+        "title": "References",
+        "line": 195
+      },
+      {
+        "level": 2,
+        "title": "Supplementary Material",
+        "line": 197
+      },
+      {
+        "level": 3,
+        "title": "Supplementary Table S-ATM: ATM-LOF vs MBD4-LOF GDSC2 Pharmacology Benchmark",
+        "line": 199
+      }
+    ],
+    "preview": "---\ntitle: \"MBD4 deficiency defines a BER-defective state characterized by cytidine-analog synthetic lethality, replication stress-driven ATR checkpoint dependency, and falsification of a transcriptional PARP1-upregulation model for PARP-trapping vulnerability\"\nshort_title: \"MBD4-LOF Dual Therapeutic Vulnerability\"\nauthors:\n - name: \"Fahad Kiani\"\n   affiliation: \"1\"\n   email: \"fahad@crispro.ai\" \n   corresponding: true\naffiliations:\n - id: \"1\"\n   name: \"CrisPRO.org\" \ndate: \"2026\"\nkeywords:\n - MBD4\n - synthetic lethality\n - base excision repair\n - ATR inhibitor\n - ceralasertib\n - PARP trapping\n - replication stress\n - pharmacogenomics\n - DepMap\n - GDSC\njournal: \"bioRxiv\"\ndoi: \"\"\nabstract: |\n Loss-of-function (LOF) mutations in the base excision repair (BER) glycosylase MBD4 define a distinct\n tumor state characterized by CpG>TpG hypermutation, BER pathway deficiency, and exploitable\n therapeutic vulnerabilities. Here we integrate published isogenic data, DepMap genome-wide expression,\n and GDSC2 pharmacological screens to characterize MBD4-LOF across three therapeutic axes. We confirm\n strong cytidine analog synthetic lethality in isogenic MBD4-knockout models with mechanistic rescue\n (gold standard). We report three novel, multi-modally validated observations: (1) MBD4-LOF cancer cell lines\n do NOT exhibit significantly elevated PARP1 expression (p=0.605, n=19 LOF vs 1,498 WT; DepMap), falsifying the specific hypothesis that MBD4-LOF induces selective PARP1 transcriptional upregulation as the basis for PARPi sensitivity; (2) However, PARP1 expression level remains a strong pan-cancer\n predictor of PARP inhibitor sensitivity (Spearman ρ=−0.416, p=1.36×10⁻²¹, n=481; GDSC2); and (3)\n MBD4-LOF lines show significantly enhanced sensitivity to the ATR inhibitor ceralasertib (AZD6738)\n (LN_IC50 Δ=−0.73, p=0.021, Cohen's d=−0.50; n=14 True-LOF vs 914 WT; GDSC2), a finding that\n survives four orthogonal confound stress tests: MSI-H purge (p=0.015), TP53 stratification\n (p=0.0"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/manuscript_v3.md",
+      "exists": true,
+      "bytes": 33555,
+      "sha256": "3382a71a9d7d48c921163cd7056afb23aecdfc7ca5fa4f425583d8697da4bf82",
+      "mtime_iso": "2026-04-27T06:41:11+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

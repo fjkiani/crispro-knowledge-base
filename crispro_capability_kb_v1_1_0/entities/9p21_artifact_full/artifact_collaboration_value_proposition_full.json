@@ -1,0 +1,261 @@
+{
+  "id": "artifact:collaboration_value_proposition_full",
+  "type": "9p21_artifact_full",
+  "name": "collaboration_value_proposition.json",
+  "what_it_solves": "Full parsed contents of collaboration_value_proposition.json.",
+  "how_it_solves": "json.load at generation time; raw payload carried.",
+  "why_it_exists": "Deep pass carries the full payload so consumers don't need a second read.",
+  "attributes": {
+    "raw": {
+      "$schema_version": "2026-06-24-v1",
+      "document_purpose": "Researcher-specific collaboration value propositions for the Bevilacqua 2026 author team, grounded in actual paper attribution (corresponding/senior/contribution roles), affiliations, and publicly-disclosed competing interests. Targets: Demichelis (corresponding, senior), Kruithof-de Julio (corresponding), Faltas (conceptualization only). Each deliverable must trace to a CrisPRO capability with a verifiable receipt.",
+      "provenance": {
+        "audit_date_utc": "2026-06-24",
+        "primary_source": {
+          "paper": "Bevilacqua R, Gasperini P, Cantore T, et al. Therapeutic vulnerabilities exposed by the 9p21 loss identified through multiparametric drug screening inform rational combination strategies.",
+          "journal": "npj Precision Oncology",
+          "year": 2026,
+          "volume": "10",
+          "article_no": "232",
+          "doi": "10.1038/s41698-026-01434-w",
+          "received": "2025-09-01",
+          "accepted": "2026-04-07",
+          "published": "2026-04-18",
+          "retrieval_method": "Full PDF read (16 pages) via Read tool on /mnt/user-uploads/s41698-026-01434-w.pdf, 2026-06-24",
+          "data_deposition": "Zenodo 10.5281/zenodo.18957959",
+          "code_availability": "Not publicly available; available on reasonable request from corresponding authors per paper Code Availability statement",
+          "license": "CC-BY 4.0"
+        },
+        "verification_status": "Every leaf below is traceable to a specific page/figure/table of the source PDF or to a verifiable transcript receipt. No claim retained from prior generated JSONs unless re-verified.",
+        "audit_corrections_applied": [
+          "MTAP-loss prevalence in TCGA MIBC = 26% (paper text, Discussion §1, cBioPortal computation by the authors). 22% in PLAN.md was the older Robertson 2017 CDKN2A-alone figure for MIBC; both retained, distinguished.",
+          "Phenotypic features = 12 (verbatim, Results §Phenotype-based hit selection: 'For each object (i.e., cell or nucleus), 12 phenotypic features...'). PLAN.md had hedged this to 'feature count not in retrieved supplementary'; PDF resolves it definitively to 12.",
+          "SynergyFinder version = 3.1 (verbatim, Fig 3 legend). Reference 21 (Ianevski 2022) is the SynergyFinder 3.0 paper; the authors used the 3.1 release derived from the same software lineage.",
+          "ATR inhibitor name verbatim = VX970 (no hyphen, no 'berzosertib'). Paper uses VX970 throughout.",
+          "Compound library composition: 2,349 total = 349 (Selleck Anti-cancer) + 958 (MicroSource Spectrum known drugs in human therapy) + 629 (natural products) + 343 (biological activity at experimental level) + 70 (approved for agricultural use only). Numerical sum = 2,349.",
+          "PDO clinical context: BlCa197 = 54-year-old female, high-grade MIBC, mixed urothelial+sarcomatoid, neoadjuvant cisplatin/gemcitabine + radical cystectomy. TN-001 = 53-year-old male, high-grade MIBC, mixed urothelial+sarcomatoid, MVAC combination + radical cystectomy.",
+          "Ethical approvals: KEK 06/03 and 2017-02295.",
+          "AZD7762 and MK-1775 z-scores from primary screen now stated verbatim: AZD7762 WT z=-3.60 / 3KO z=-5.06; MK-1775 WT z=-1.12 / 3KO z=-2.06.",
+          "MRTX1719 axis bug in repo: pharmacologic_analyzer.py:66 maps 'mrtx1719' -> 'wrn'. Correct axis per Bev2026 §Methods +  Engstrom 2023 ref 7 = PRMT5 (MTA-cooperative). Flag in DH JSON; no code fix in this task per user lock #4."
+        ]
+      },
+      "authorship_facts_from_paper": {
+        "title_verbatim": "Therapeutic vulnerabilities exposed by the 9p21 loss identified through multiparametric drug screening inform rational combination strategies",
+        "equal_first_authors_verbatim": "These authors contributed equally: Riccardo Bevilacqua, Paola Gasperini",
+        "corresponding_authors_verbatim": "Correspondence and requests for materials should be addressed to Marianna Kruithof-de Julio or Francesca Demichelis.",
+        "corresponding_emails_verbatim": [
+          "marianna.kruithofdejulio@unibe.ch",
+          "f.demichelis@unitn.it"
+        ],
+        "senior_author_verbatim": "Supervision: F.D. (Francesca Demichelis only)",
+        "funding_acquisition_verbatim": "F.D., B.K., M.K.d.J. (Demichelis, Kiss, Kruithof-de Julio)",
+        "contributions_full_verbatim": "Conceptualization: R.B., P. Gasperini, B.M.F., and F.D.; formal analysis: R.B., P. Gasperini, T.C., M.P., T.F., P. Gatto, V.A.; investigation: R.B., P. Gasperini, T.C., C.M.S., H.Y., M.P., O.Q., P. Gatto, V.A. and F.L.; data curation: T.C., M.P., T.F., P. Gatto, V.A.; resources: H.Y., M.R., R.S., B.K., M.K.d.J.; methodology; R.B., P. Gasperini, T.C.; validation: R.B., P. Gasperini; visualization: R.B., P. Gasperini, T.C.; software: T.C., M.P., T.F.; supervision: F.D.; funding acquisition: F.D., B.K., M.K.d.J.; writing–original draft: R.B., P. Gasperini, and F.D.",
+        "Faltas_role_verbatim": "Conceptualization: R.B., P. Gasperini, B.M.F., and F.D. — Faltas appears ONLY in conceptualization. NOT in formal analysis, investigation, data curation, resources, methodology, validation, visualization, software, supervision, funding acquisition, or writing-original draft.",
+        "all_authors_in_order_verbatim": [
+          "Riccardo Bevilacqua (equal first; CIBIO Trento)",
+          "Paola Gasperini (equal first; CIBIO Trento)",
+          "Thomas Cantore (CIBIO Trento; software lead)",
+          "Catarina Macedo-Silva (Urology Research Lab, DBMR Bern; investigation)",
+          "Michael Pancher (CIBIO Trento; data curation, software)",
+          "Martina Radić (Urology Research Lab DBMR Bern; resources)",
+          "Haiyan Yue (Urology Research Lab DBMR Bern; resources)",
+          "Orsetta Quaini (CIBIO Trento; investigation)",
+          "Tarcisio Fedrizzi (CIBIO Trento; data curation, software)",
+          "Pamela Gatto (CIBIO Trento; formal analysis, data curation, investigation)",
+          "Roland Seiler (Urology DBMR Bern / Hospital Biel / Inselspital; resources)",
+          "Bernhard Kiss (Urology Inselspital / DBMR Bern; resources, funding)",
+          "Valentina Adami (CIBIO Trento; formal analysis, investigation, data curation)",
+          "Francesca Lorenzin (CIBIO Trento; investigation)",
+          "Marianna Kruithof-de Julio (CORRESPONDING; DBMR/TOR Bern; resources, funding)",
+          "Bishoy Morris Faltas (CONCEPTUALIZATION ONLY; Weill Cornell Medicine NY)",
+          "Francesca Demichelis (CORRESPONDING + SUPERVISION + FUNDING; CIBIO Trento)"
+        ],
+        "Faltas_competing_interests_verbatim": "B.M.F. participated in advisory boards or consulted for Astrin Bioscience, Natera, Guardant, Janssen, Gilead, Merck, Immunomedics, and QED Therapeutics, and obtained patent royalties from Immunomedics and Gilead, honoraria from Urotoday, Axiom Healthcare Strategies, and research support from Eli Lilly. Other authors declare no potential conflicts of interest.",
+        "Demichelis_KdJ_competing_interests_verbatim": "Other authors declare no potential conflicts of interest. — Demichelis and Kruithof-de Julio have NO disclosed conflicts in the paper."
+      },
+      "funding_facts_for_outreach_context": {
+        "Demichelis_funding_verbatim": [
+          "ERC Horizon 2020 grant agreement no. 648670; SPICE (to F.D.)",
+          "Samuel and Barbara Sternberg Foundation (to F.D.)",
+          "CIBIO Department Core Facilities (IRBIO) supported by ERDF 2014-2020 and 2021-2027"
+        ],
+        "Kruithof_de_Julio_funding_verbatim": [
+          "ISREC Foundation TANDEM grant awarded to M.K.d.J. and B.K. (supports M.R., H.Y., C.M.S.)",
+          "Wilhelm Sander Stiftung (Grant 2022.136.1) awarded to M.K.d.J."
+        ]
+      },
+      "researcher_target_demichelis": {
+        "name": "Francesca Demichelis",
+        "title": "Co-corresponding author + sole supervisor of Bevilacqua 2026",
+        "affiliation": "Department of Cellular, Computational and Integrative Biology (CIBIO), University of Trento, Italy",
+        "email_paper_verbatim": "f.demichelis@unitn.it",
+        "role_in_bev2026": "Corresponding author + SOLE supervision lead + funding acquisition. Co-conceptualization + writing-original draft.",
+        "scientific_strength": "Computational/integrative oncology with proven translation track record. Lab generates the 9p21 isogenic models, runs the multiparametric screen, performs phenotype-correlation analysis, and supervises the project end-to-end.",
+        "deliverables_proposed": [
+          {
+            "id": "CVP-DEM-01",
+            "deliverable": "CrisPRO ATR/CHK1 axis double-check on the 9p21-loss findings",
+            "specific_offer": "Apply CrisPRO's MBD4-LOF × ATR/WEE1 canonical pipeline (HEAD bfd6d11f at last verification, fix/mbd4-atr-strong-tier branch) to the 9p21 isogenic models. Test whether the same ceralasertib effect (n_LOF=14, n_WT=914, d=-0.50 LN_IC50, d=-0.56 AUC) holds against an isogenic 9p21 background using DepMap CCLE bladder cell lines + GDSC2 drug screen as the comparator.",
+            "anchor_in_paper": "Paper §Results — VX970 + MRTX1719 combination depends on ATR/CHK1 pathway. Paper §Discussion — 'the correlation [of ATR inhibition + cytarabine synergism] to 9p21 status has never been reported before.' CrisPRO's MBD4-LOF axis falsified the PARP-trapping competing hypothesis (Mann-Whitney U p=0.6048, n=19/1498, ρ=-0.416 pan-cancer); same falsification scaffolding could test 9p21 × ATR axis against confounders.",
+            "value_to_demichelis_lab": "Independent validation of ATR axis dependency via in-silico/canonical-rerun pipeline before committing in-vivo or PDO follow-on resource.",
+            "value_to_crispro": "Reference dataset from a published precision oncology lab; demonstration that CrisPRO's stress-test methodology generalizes beyond MBD4-LOF."
+          },
+          {
+            "id": "CVP-DEM-02",
+            "deliverable": "Pharmacological-vulnerability ranking for the residual 16 of 18 primary hits",
+            "specific_offer": "Paper names only 2 of the 18 primary screen hits (cytarabine + MTX). Apply CrisPRO's literature_receipts axis-mapping over the full 18-drug list (recoverable from Supp Fig 1E if shared) to rank the other 16 by: (a) clinical maturity, (b) overlap with ATR/CHK1/PRMT5/MAT2A axes, (c) DepMap-CCLE×GDSC2 effect signal in CDKN2A-deleted cell lines.",
+            "anchor_in_paper": "Paper §Discussion — 'a primary limitation of our screening approach is that all compounds were tested, in replicate, at a fixed concentration (of 1 μM), therefore likely missing compounds with genotype-specific response at different concentrations'. Ranking the residual 16 + flagging dose-response-sensitive candidates is a natural extension.",
+            "value_to_demichelis_lab": "Augmented hit triage without re-running the wet screen; identifies candidates for follow-on combinations.",
+            "verification_status": "Offer is conditional on receiving Supp Fig 1E hit list. Not assumed."
+          },
+          {
+            "id": "CVP-DEM-03",
+            "deliverable": "Repo MRTX1719 axis-mapping fix (PRMT5 vs WRN)",
+            "specific_offer": "Repo currently maps 'mrtx1719' to 'wrn' axis (pharmacologic_analyzer.py:66 at HEAD bfd6d11f). Bev2026 + Engstrom 2023 establish MRTX1719 as PRMT5 MTA-cooperative inhibitor. We commit to a single-PR fix that adds prmt5_mtap_cooperative to the CandidateAxis enum (currently 7 axes per models.py:122) and remaps MRTX1719. This brings CrisPRO's axis taxonomy in line with the Bev2026 mechanism.",
+            "anchor_in_paper": "Paper § entire Results + Methods — MRTX1719 is the PRMT5 inhibitor (introduced first paragraph of Discussion via ref 7 Engstrom 2023).",
+            "value_to_demichelis_lab": "Demonstrates that CrisPRO's taxonomy can be corrected against published mechanism without losing the existing 7-axis structure.",
+            "verification_status": "Confirmed bug per repo HEAD bfd6d11f. Code fix is OUT OF SCOPE for this audit per user lock #4 but is part of the outreach value proposition."
+          },
+          {
+            "id": "CVP-DEM-04",
+            "deliverable": "Joint-publication target: pan-cancer MTAP-loss × ATR replication stress vulnerability",
+            "specific_offer": "Co-author opportunity. Bev2026 validates MRTX1719 + cytarabine + VX970 combinations in BLCA + pleural mesothelioma (SPC111) + pancreatic adeno (SW1990) + 2 PDOs. Paper's Discussion §last paragraph: 'Given the high prevalence of 9p21 loss in multiple cancer types, these combinations may offer new precision medicine opportunities across a wide spectrum of malignancies.' CrisPRO can run pan-cancer DepMap analysis (similar to MBD4 axis: n=1498 cell lines, 481 with PARP1×PARPi pairs) to identify candidate tissue/lineage × MTAP-loss × ATR-inhibitor effect sizes.",
+            "anchor_in_paper": "Verbatim Discussion sentence above.",
+            "value_to_both_parties": "Standard scientific collaboration with clear authorship norms (CrisPRO contributes computational analysis; Demichelis lab provides biology and additional experimental validation)."
+          },
+          {
+            "id": "CVP-DEM-05",
+            "deliverable": "TP53 stratifier overlay onto 9p21-loss model",
+            "specific_offer": "CrisPRO's TP53-stratification stress test in the MBD4-LOF context found the LARGEST effect size (d=-0.74 LN_IC50, d=-0.89 AUC, n_LOF=11 / n_WT=619 of TP53-mutant subpopulation). HGSOC is >95% TP53-mutant. Apply the same TP53 stratifier to the 9p21-loss × ceralasertib axis to test whether TP53-mut subpopulation similarly amplifies the 9p21 ATR-axis effect.",
+            "anchor_in_paper": "Paper §Discussion — speculates 9p21-deletion drives basal replication stress (p-CHK1 elevated in untreated 3KO T24 cells, Fig 4C). TP53 is upstream regulator of replication stress response. Mechanistic prior supports an interaction.",
+            "scientific_question": "Does 9p21-loss × TP53-mut amplify ceralasertib response analogously to MBD4-LOF × TP53-mut?",
+            "verification_status": "Hypothesis-generating; no experimental claim. Effect size from MBD4 family is verified canonical (d=-0.7405 LN_IC50, p=0.003003)."
+          },
+          {
+            "id": "CVP-DEM-06",
+            "deliverable": "Negative-control / falsification arm methodology",
+            "specific_offer": "Bev2026 deploys 2KO clones (CDKN2A/2B deleted, MTAP retained) as a falsification arm for MTAP-driven sensitivity. CrisPRO's PARP1 expression Mann-Whitney falsification (p=0.6048, median LOF 6.770 vs comparator 6.656, n=19/1498) is a structurally equivalent approach using publicly available DepMap data. Joint methodology paper / methods-section appendix opportunity.",
+            "anchor_in_paper": "Bev2026 ref 17 Alhalabi 2022 + ref 13 Lindskrog 2021 + ref 14 Robertson 2017 — none of these have an analogous in-silico falsification arm. Methodological gap.",
+            "value_proposition": "Establishes CrisPRO's stress-test/falsification scaffolding as a publishable methodology rather than internal QC."
+          }
+        ],
+        "title_caveat": "Academic rank (e.g., Professor, Associate Professor) NOT retrieved this session and not stated in the paper. PDF lists 'Department of Cellular, Computational and Integrative Biology, University of Trento' as her affiliation; specific academic title to be confirmed before outreach if relevant."
+      },
+      "researcher_target_kruithof_de_julio": {
+        "name": "Marianna Kruithof-de Julio",
+        "title": "Co-corresponding author + resources lead (PDO infrastructure)",
+        "affiliation": "Department for BioMedical Research (DBMR), University of Bern + Department of Urology, Inselspital, Bern University Hospital + Translational Organoid Resource (TOR), Bern",
+        "email_paper_verbatim": "marianna.kruithofdejulio@unibe.ch",
+        "role_in_bev2026": "Co-corresponding author. Resources lead (provides PDO infrastructure via TOR). Funding acquisition (ISREC TANDEM grant + Wilhelm Sander Stiftung 2022.136.1).",
+        "scientific_strength": "Bladder cancer PDO platform via TOR. Provides primary patient material + organoid culture know-how + clinical translation pathway.",
+        "deliverables_proposed": [
+          {
+            "id": "CVP-MKJ-01",
+            "deliverable": "PDO panel expansion + CrisPRO biomarker scoring",
+            "specific_offer": "Paper §Discussion §last-but-one: 'additional studies with a larger panel of PDOs will be critical to offer deeper insight into the therapeutic potential of these combination strategies.' CrisPRO offers to triage TOR's PDO library by 9p21-loss + MTAP-loss + TP53-mut combinatorial biomarker score to identify candidates for the MRTX1719+VX970+cytarabine combination test. Output: ranked PDO list with predicted response.",
+            "anchor_in_paper": "Verbatim quote above + Fig 7D demonstrating 2-PDO model is informative but underpowered.",
+            "value_to_kdj_lab": "Avoids burning organoid resource on PDOs predicted to be MTAP-proficient or otherwise non-responsive.",
+            "value_to_crispro": "PDO-validated predictions extend CrisPRO's validation framework beyond cell-line × DepMap-GDSC2."
+          },
+          {
+            "id": "CVP-MKJ-02",
+            "deliverable": "Cisplatin-resistant MIBC subgroup analysis",
+            "specific_offer": "BlCa197 PDO is from a 54yo female with cisplatin/gemcitabine-pretreated MIBC (verbatim from paper). This is a resistant-disease context. Apply CrisPRO biomarker stratification to identify how MTAP-loss + prior platinum exposure interact in determining response to the MRTX1719 + VX970 axis.",
+            "anchor_in_paper": "Verbatim from paper PDO §Clinical details — BlCa197 patient demographics.",
+            "scientific_question": "Does post-cisplatin platinum-resistance state alter the MTAP-loss-driven ATR axis dependency?",
+            "value_proposition": "Targets a specific unmet-need patient subgroup with high translational impact."
+          },
+          {
+            "id": "CVP-MKJ-03",
+            "deliverable": "Sarcomatoid urothelial subtype biomarker",
+            "specific_offer": "Both PDOs (TN-001 + BlCa197) are mixed urothelial/sarcomatoid histology — a high-grade subtype previously characterized by Garioni et al. 2023 (ref 34 in Bev2026, npj Precision Oncology 7:112). Apply CrisPRO's MBD4-LOF × TP53 stratifier (d=-0.89 AUC) to sarcomatoid urothelial samples to test whether the histological subtype enriches for the genotypes that drive the ATR-axis response.",
+            "anchor_in_paper": "Ref 34 Garioni 2023 + Bev2026 §PDO clinical details specifying mixed urothelial/sarcomatoid histology for both PDOs.",
+            "value_proposition": "Subtype-specific biomarker for an aggressive disease subgroup."
+          },
+          {
+            "id": "CVP-MKJ-04",
+            "deliverable": "Methodology audit of MTAP-loss-induction protocols",
+            "specific_offer": "Paper uses two opposite engineering approaches: (a) TN-001 doxycycline-inducible MTAP overexpression (rescue) and (b) BlCa197 lentiCRISPR MTAP KO (loss-of-function). These bi-directional manipulations are a useful control. CrisPRO can write a methods-paper appendix documenting the bi-directional editing strategy + quantitative criteria for distinguishing MTAP-induced sensitivity vs background MTAP-independent toxicity.",
+            "anchor_in_paper": "Paper §PDO §editing — verbatim description of pCW57.1 + lentiCRISPR_v1 + MTAP sgRNA protocols.",
+            "value_proposition": "Codifies a transferable methodology pattern."
+          }
+        ],
+        "title_caveat": "Academic rank not retrieved this session and not stated in the paper. Affiliations span DBMR Bern, Inselspital Department of Urology, and TOR Bern."
+      },
+      "researcher_target_faltas": {
+        "name": "Bishoy Morris Faltas",
+        "title": "Conceptualization-only co-author of Bevilacqua 2026",
+        "affiliation": "Department of Medicine, Weill Cornell Medicine, New York, NY, USA",
+        "role_in_bev2026": "CONCEPTUALIZATION ONLY (not corresponding, not senior, not supervision, not funding, not data curation, not investigation, not validation, not writing-original draft).",
+        "outreach_caveat_required": "Faltas's role in this specific paper is limited to conceptualization. Outreach must reflect that he is NOT the primary scientific contact for the 9p21 dataset itself. Demichelis (CIBIO) and Kruithof-de Julio (Bern/TOR) are the operational/data contacts.",
+        "competing_interests_to_disclose_in_outreach": "Per the paper's Competing Interests section, Faltas has disclosed advisory/consulting relationships with Astrin Bioscience, Natera, Guardant, Janssen, Gilead, Merck, Immunomedics, QED Therapeutics; patent royalties from Immunomedics and Gilead; honoraria from Urotoday and Axiom Healthcare Strategies; and research support from Eli Lilly. Brenus/Phylo should ensure their outreach is consistent with Faltas's disclosed engagements (no overlapping potential COI).",
+        "scientific_strength": "Faltas is a clonal-evolution / chemotherapy-resistance researcher (cited as ref 12 in Bev2026 for Nat Genet 2016 paper on clonal evolution of chemotherapy-resistant urothelial carcinoma). MIBC-focused.",
+        "deliverables_proposed": [
+          {
+            "id": "CVP-FAL-01",
+            "deliverable": "Clonal evolution + 9p21-loss longitudinal biomarker",
+            "specific_offer": "Faltas's 2016 paper (Nat Genet 48:1490-1499) shows clonal evolution in chemotherapy-resistant urothelial carcinoma. Bev2026 paper raises the question of whether 9p21-loss + MTAP-loss are evolutionarily stable through cisplatin/gemcitabine pressure. CrisPRO offers to compute a longitudinal clonality score using public WGS/WES data from Faltas's published cohorts to test biomarker stability.",
+            "anchor_in_paper": "Bev2026 ref 12 (Faltas 2016) + Bev2026 BlCa197 PDO §clinical details (post-cisplatin/gemcitabine).",
+            "scientific_question": "Is 9p21-loss enriched, depleted, or stable in post-treatment samples relative to pre-treatment?",
+            "value_proposition": "Independent biomarker question that intersects Faltas's clonal-evolution focus AND Bev2026 mechanism."
+          },
+          {
+            "id": "CVP-FAL-02",
+            "deliverable": "MIBC PDX/clinical trial cohort biomarker enrichment analysis",
+            "specific_offer": "If Weill Cornell maintains MIBC PDX models or BLCA clinical-trial infrastructure (not verified this session — to be confirmed), CrisPRO offers to apply the 9p21 + MTAP + TP53 + replication-stress composite biomarker score for trial enrollment criteria for MRTX1719/VX970 combinations.",
+            "anchor": "Inferential — based on Faltas's published clonal-evolution work (Nat Genet 2016, ref 12) and Weill Cornell Medicine affiliation. Specific PDX/trial resources NOT verified this session.",
+            "verification_status": "OFFER IS HYPOTHETICAL pending verification of Weill Cornell BLCA PDX/trial infrastructure. Do not assert as fact in outreach.",
+            "pre_outreach_required_verification": "Search clinicaltrials.gov for Faltas as Principal Investigator on BLCA trials; check Weill Cornell Englander Institute / Caryl & Israel Englander Institute of Precision Medicine for stated PDX resources; confirm overlap with Faltas's disclosed industry COI (especially Janssen, Gilead, Merck for ATR-pathway competing assets)."
+          }
+        ],
+        "title_caveat": "Academic rank not retrieved this session. PDF affiliation: 'Department of Medicine, Weill Cornell Medicine, New York, NY, USA'. Title (e.g., Associate Professor, Professor) to be confirmed before outreach."
+      },
+      "verification_disclaimer": {
+        "what_we_did_NOT_retrieve_this_session": [
+          "Demichelis full CV / Google Scholar h-index",
+          "Kruithof-de Julio TOR organoid bank size / IRB scope",
+          "Faltas active clinical trial portfolio (clinicaltrials.gov was NOT queried this session)",
+          "Lab-specific RNA-seq/WGS resources beyond what Bev2026 explicitly cites"
+        ],
+        "what_we_did_NOT_assume": [
+          "We did NOT assume any prior outreach has occurred. Every deliverable is a first-contact value proposition.",
+          "We did NOT assume Demichelis or Kruithof-de Julio have shared raw data beyond Zenodo deposition (10.5281/zenodo.18957959).",
+          "We did NOT assume Faltas is a primary scientific contact for this dataset (paper attribution confirms he is conceptualization-only).",
+          "We did NOT assume the repo MRTX1719 axis-mapping fix has been merged. Repo HEAD bfd6d11f on fix/mbd4-atr-strong-tier branch still has the bug at last verification before worker termination."
+        ]
+      },
+      "audit_corrections_2026_06_24": {
+        "fix_1_titles_stripped": "Removed 'Professor' from Demichelis and 'Associate Professor' from Faltas. Neither title appears in the paper. Roles now stated from contributions section only (corresponding, conceptualization, supervision, funding).",
+        "fix_2_FAL_02_softened": "CVP-FAL-02 'Weill Cornell maintains MIBC PDX models + clinical trial infrastructure' was an unverified inference. Reclassified as hypothetical offer requiring pre-outreach verification of Faltas's specific institutional resources.",
+        "general_principle": "Every researcher-specific claim now traces either to the paper's published contributions/competing interests/affiliations (verifiable) or is explicitly flagged as inference requiring verification before outreach."
+      }
+    },
+    "top_keys": [
+      "$schema_version",
+      "document_purpose",
+      "provenance",
+      "authorship_facts_from_paper",
+      "funding_facts_for_outreach_context",
+      "researcher_target_demichelis",
+      "researcher_target_kruithof_de_julio",
+      "researcher_target_faltas",
+      "verification_disclaimer",
+      "audit_corrections_2026_06_24"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/collaboration_value_proposition.json",
+      "exists": true,
+      "bytes": 25131,
+      "sha256": "bd343c4fd98b4b681a3294b8fedcbb4e07c021d2d974ce4a727ffd075c3d0b1f",
+      "mtime_iso": "2026-06-24T20:50:11+00:00"
+    }
+  ],
+  "cross_refs": [
+    "moat:aggregate"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:moat_and_governance_deep"
+}

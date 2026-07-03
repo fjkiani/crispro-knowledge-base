@@ -1,0 +1,64 @@
+{
+  "id": "endpoint_ref:POST /api/guidance/synthetic_lethality",
+  "type": "endpoint_reference",
+  "name": "POST /api/guidance/synthetic_lethality",
+  "what_it_solves": "HTTP endpoint 'POST /api/guidance/synthetic_lethality' referenced in the architecture / hardening corpus.",
+  "how_it_solves": "Regex `(GET|POST|PUT|DELETE|PATCH)\\s+/…` captured with source_file + line + context.",
+  "why_it_exists": "Every route claim in an audit is testable; this enumerates them so consumers can diff against the live server.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+        "line": 27,
+        "context": "ne loop) | One call per gene |\n| 3 | Synthetic Lethality | `POST /api/guidance/synthetic_lethality` | Parallel fallback |\n| 4 | Main Care Plan | `POST /api/ay"
+      },
+      {
+        "source_file": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+        "line": 54,
+        "context": "eCompleteCareOrchestrator` → `fetchSyntheticLethality()` → `POST /api/guidance/synthetic_lethality` (parallel)\n2. `useAyeshaCarePlan` (legacy hook, also mount"
+      },
+      {
+        "source_file": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+        "line": 328,
+        "context": "ality()  ← REDUNDANT, should remove\n              │     └── POST /api/guidance/synthetic_lethality\n              │           payload: {disease: \"ovarian_cance"
+      },
+      {
+        "source_file": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+        "line": 130,
+        "context": "eCompleteCareOrchestrator` → `fetchSyntheticLethality()` → `POST /api/guidance/synthetic_lethality`\n2. `useAyeshaCarePlan` (if also mounted) → `useSyntheticLe"
+      }
+    ],
+    "reference_count": 4
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "exists": true,
+      "bytes": 19314,
+      "sha256": "4c29bc6cecf7bcc6ba7a1232e3fa3a19d50c02bc1a065ea95f1bafc6f1a9c326",
+      "mtime_iso": "2026-05-05T06:24:21+00:00"
+    },
+    {
+      "path": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "exists": true,
+      "bytes": 19314,
+      "sha256": "4c29bc6cecf7bcc6ba7a1232e3fa3a19d50c02bc1a065ea95f1bafc6f1a9c326",
+      "mtime_iso": "2026-05-05T06:24:21+00:00"
+    },
+    {
+      "path": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "exists": true,
+      "bytes": 19314,
+      "sha256": "4c29bc6cecf7bcc6ba7a1232e3fa3a19d50c02bc1a065ea95f1bafc6f1a9c326",
+      "mtime_iso": "2026-05-05T06:24:21+00:00"
+    }
+  ],
+  "cross_refs": [
+    "endpoint:sl",
+    "endpoint:bundle",
+    "layer:output"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

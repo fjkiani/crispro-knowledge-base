@@ -1,0 +1,46 @@
+{
+  "id": "code_module:artifacts/api-server/src/routes/forge.ts",
+  "type": "frontend_module_reference",
+  "name": "artifacts/api-server/src/routes/forge.ts",
+  "what_it_solves": "Frontend module 'artifacts/api-server/src/routes/forge.ts' referenced by the architecture / frontend audit corpus.",
+  "how_it_solves": "Extracted by regex for .ts/.tsx/.js/.jsx paths.",
+  "why_it_exists": "Enumerates the concrete frontend surface (crispro-front-end) so any SL/Ayesha UI claim can be traced to a real file.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+        "line": 64,
+        "context": ", budget_usd=500\n\n### 1.3 API Routes (all live, auth-gated)\n\n**Forge router** (`artifacts/api-server/src/routes/forge.ts`, 1020 lines, 23 routes):\n\n```\nGET    /api/forge/workspaces\nPOST   /api/forge/w"
+      },
+      {
+        "source_file": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+        "line": 339,
+        "context": "es. Do not modify them:\n\n| File | Owner | Reason |\n|------|-------|--------|\n| `artifacts/api-server/src/routes/forge.ts` | Model Forge | 23 routes, FSM logic, Kairos dispatch |\n| `artifacts/api-serve"
+      }
+    ],
+    "reference_count": 2
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+      "exists": true,
+      "bytes": 24575,
+      "sha256": "8c06c5f6092feaaf9680b60bd45bc6797d140fb43132233f3a5d03e21a621aa0",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+      "exists": true,
+      "bytes": 24575,
+      "sha256": "8c06c5f6092feaaf9680b60bd45bc6797d140fb43132233f3a5d03e21a621aa0",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-front-end",
+    "component:frontend_canonicalization"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

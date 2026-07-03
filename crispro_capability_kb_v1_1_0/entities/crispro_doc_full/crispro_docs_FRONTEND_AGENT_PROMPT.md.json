@@ -1,0 +1,195 @@
+{
+  "id": "crispro_docs:FRONTEND_AGENT_PROMPT.md",
+  "type": "crispro_doc_full",
+  "name": "FRONTEND_AGENT_PROMPT.md",
+  "what_it_solves": "crispro_docs artifact — FRONTEND_AGENT_PROMPT.md",
+  "how_it_solves": "Parsed as JSON (if <300 KB carry raw, else shape-only) or markdown (heading tree + 3000-char preview).",
+  "why_it_exists": "crispro_docs is the roadmap + frontend-agent-prompt seed; every doc in it is a first-class KB entity.",
+  "attributes": {
+    "byte_length": 14864,
+    "heading_count": 33,
+    "headings": [
+      {
+        "level": 1,
+        "title": "CRISPRO FRONTEND AGENT PROMPT",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "Build the Tumor Board UI — Wire the SL Engine to the Clinician",
+        "line": 2
+      },
+      {
+        "level": 2,
+        "title": "YOUR MISSION",
+        "line": 11
+      },
+      {
+        "level": 2,
+        "title": "WHAT THE BACKEND GIVES YOU",
+        "line": 19
+      },
+      {
+        "level": 3,
+        "title": "Core Endpoints (All Live)",
+        "line": 21
+      },
+      {
+        "level": 3,
+        "title": "What the Evidence Matrix Returns",
+        "line": 43
+      },
+      {
+        "level": 2,
+        "title": "WHAT YOU MUST BUILD",
+        "line": 93
+      },
+      {
+        "level": 3,
+        "title": "Component 1: Gene Query Bar",
+        "line": 95
+      },
+      {
+        "level": 3,
+        "title": "Component 2: RS Context Panel (Collapsible)",
+        "line": 106
+      },
+      {
+        "level": 3,
+        "title": "Component 3: Evidence Matrix Table",
+        "line": 125
+      },
+      {
+        "level": 3,
+        "title": "Component 4: RS Score Card",
+        "line": 160
+      },
+      {
+        "level": 3,
+        "title": "Component 5: Combination Vulnerabilities Panel",
+        "line": 179
+      },
+      {
+        "level": 3,
+        "title": "Component 6: RUO Banner (NON-NEGOTIABLE)",
+        "line": 198
+      },
+      {
+        "level": 2,
+        "title": "THE VALUE PROPOSITION (WHY THIS MATTERS)",
+        "line": 215
+      },
+      {
+        "level": 3,
+        "title": "What the Tumor Board Gets",
+        "line": 217
+      },
+      {
+        "level": 3,
+        "title": "The Moat",
+        "line": 235
+      },
+      {
+        "level": 3,
+        "title": "Immediate Value (Day 1)",
+        "line": 249
+      },
+      {
+        "level": 2,
+        "title": "TECHNICAL REQUIREMENTS",
+        "line": 261
+      },
+      {
+        "level": 3,
+        "title": "Stack",
+        "line": 263
+      },
+      {
+        "level": 3,
+        "title": "API Client",
+        "line": 270
+      },
+      {
+        "level": 3,
+        "title": "RUO Enforcement",
+        "line": 298
+      },
+      {
+        "level": 3,
+        "title": "Tier Badge Component",
+        "line": 315
+      },
+      {
+        "level": 2,
+        "title": "PAGES TO BUILD",
+        "line": 344
+      },
+      {
+        "level": 3,
+        "title": "Page 1: `/sl` — SL Evidence Matrix (PRIMARY)",
+        "line": 346
+      },
+      {
+        "level": 3,
+        "title": "Page 2: `/tumor-board` — Patient Bundle View",
+        "line": 363
+      },
+      {
+        "level": 3,
+        "title": "Page 3: `/` — Landing / Gene Search",
+        "line": 372
+      },
+      {
+        "level": 2,
+        "title": "MERGE GATE",
+        "line": 378
+      },
+      {
+        "level": 1,
+        "title": "Unit tests",
+        "line": 383
+      },
+      {
+        "level": 1,
+        "title": "Type check",
+        "line": 386
+      },
+      {
+        "level": 1,
+        "title": "API integration smoke test (requires backend running)",
+        "line": 389
+      },
+      {
+        "level": 2,
+        "title": "WHAT NOT TO BUILD",
+        "line": 407
+      },
+      {
+        "level": 2,
+        "title": "EXECUTION ORDER",
+        "line": 418
+      },
+      {
+        "level": 2,
+        "title": "COMMIT MESSAGE CONVENTION",
+        "line": 433
+      }
+    ],
+    "preview": "# CRISPRO FRONTEND AGENT PROMPT\n## Build the Tumor Board UI — Wire the SL Engine to the Clinician\n\n**Classification**: RESEARCH USE ONLY — Not for Clinical Decision Making  \n**Repo**: `crispro-front-end` (TypeScript / React)  \n**Backend**: `crispro-backend-v3` (FastAPI, deployed on Render)  \n**Base URL**: `https://crispro-backend-v3.onrender.com`\n\n---\n\n## YOUR MISSION\n\nYou are building the frontend that makes the CrisPRO Synthetic Lethality engine visible to oncologists, tumor boards, and researchers. The backend is production-ready. The engine is live. Your job is to wire it to a UI that makes the evidence matrix legible, actionable, and trustworthy.\n\nThis is not a demo. This is a tumor board tool. Every pixel you ship either helps a clinician understand a patient's vulnerability or it doesn't. There is no middle ground.\n\n---\n\n## WHAT THE BACKEND GIVES YOU\n\n### Core Endpoints (All Live)\n\n```\nGET  /api/v1/analyze/evidence_matrix?gene={GENE}\n     &rs_ccne1_amplified={bool}\n     &rs_tp53_lof={bool}\n     &rs_mbd4_lof={bool}\n     &rs_msi_h={bool}\n     &rs_arid1a_lof={bool}\n     &rs_myc_amplified={bool}\n\nPOST /api/v1/analyze/multimodal\n     Body: MultiModalQueryInput { gene, cancer_type, axes[], rs_features }\n\nGET  /api/v1/health\n     Returns: { status, sl_data_mode, ruo }\n\nPOST /api/ayesha/therapy-fit/bundle\n     Body: BundleRequest { ca125_history, hrd_score, rss_inputs, ... }\n     Query: level=l1|l2|l3, include_synthetic_lethality=true\n```\n\n### What the Evidence Matrix Returns\n\n```typescript\ninterface EvidenceMatrix {\n  query_gene: string;\n  cancer_type: string | null;\n  depmap_release: string;\n  rows: EvidenceRow[];\n  rs_score: RSScore | null;\n  combination_vulnerabilities: CombinationVulnerability[];\n  ruo: boolean;  // ALWAYS TRUE — display this\n}\n\ninterface EvidenceRow {\n  axis: CandidateAxis;\n  axis_label: string;\n  mechanism: string;\n  recommendation_tier: TierLabel;\n  overall_evidence_level: EvidenceLevel;\n  crispr: ModalityEvidence;\n  expression: ModalityEvidence;\n  prism: ModalityEvidence;\n  gdsc: ModalityEvidence;\n  in_vitro: ModalityEvidence;\n  in_vivo: ModalityEvidence;\n  clinical: ModalityEvidence;\n  interpretation: string;\n  crispr_pharmacologic_agreement: AgreementCategory;\n}\n\ntype TierLabel =\n  | \"Validated SL therapeutic lever\"\n  | \"Strong candidate dependency axis\"\n  | \"Mechanistic candidate only\"\n  | \"Not supported / negative\";\n\ntype CandidateAxis =\n  | \"cytidine_analogs\"\n  | \"parp_inhibitors\"\n  | \"atr_wee1\"\n  | \"ccne1_amp\"\n  | \"pkmyt1\"\n  | \"tp53_rs\"\n  | \"wrn\"\n  | \"immunotherapy\"\n  | \"custom\";\n```\n\n---\n\n## WHAT YOU MUST BUILD\n\n### Component 1: Gene Query Bar\n\n```\n[ Gene Symbol Input ] [ Cancer Type Dropdown ] [ Query Button ]\n```\n\n- Gene input: free text, uppercase on blur, validate against known HGNC symbols\n- Cancer type: `ovarian_cancer | colorectal_cancer | breast_cancer_tnbc | pancreatic_cancer | prostate_cancer | aml | bladder_cancer | all`\n- On submit: call `GET /api/v1/analyze/evidence_matrix?gene={gene}&cancer_type={type"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/crispro_docs/FRONTEND_AGENT_PROMPT.md",
+      "exists": true,
+      "bytes": 17060,
+      "sha256": "87f522c8c861f1ba9a3efab157d6e8146d8f377319569c0aa2b0e7736b1e3600",
+      "mtime_iso": "2026-04-13T20:08:21+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:brenus_diligence"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

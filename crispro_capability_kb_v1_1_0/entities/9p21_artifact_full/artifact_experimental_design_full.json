@@ -1,0 +1,435 @@
+{
+  "id": "artifact:experimental_design_full",
+  "type": "9p21_artifact_full",
+  "name": "experimental_design.json",
+  "what_it_solves": "Full parsed contents of experimental_design.json.",
+  "how_it_solves": "json.load at generation time; raw payload carried.",
+  "why_it_exists": "Deep pass carries the full payload so consumers don't need a second read.",
+  "attributes": {
+    "raw": {
+      "$schema_version": "2026-06-24-v1",
+      "document_purpose": "Reconstruct the Bevilacqua et al. 2026 experimental design from primary sources (full PDF + canonical repo receipts) for CrisPRO fit-gap analysis. No claim retained without verifiable receipt.",
+      "provenance": {
+        "audit_date_utc": "2026-06-24",
+        "primary_source": {
+          "paper": "Bevilacqua R, Gasperini P, Cantore T, et al. Therapeutic vulnerabilities exposed by the 9p21 loss identified through multiparametric drug screening inform rational combination strategies.",
+          "journal": "npj Precision Oncology",
+          "year": 2026,
+          "volume": "10",
+          "article_no": "232",
+          "doi": "10.1038/s41698-026-01434-w",
+          "received": "2025-09-01",
+          "accepted": "2026-04-07",
+          "published": "2026-04-18",
+          "retrieval_method": "Full PDF read (16 pages) via Read tool on /mnt/user-uploads/s41698-026-01434-w.pdf, 2026-06-24",
+          "data_deposition": "Zenodo 10.5281/zenodo.18957959",
+          "code_availability": "Not publicly available; available on reasonable request from corresponding authors per paper Code Availability statement",
+          "license": "CC-BY 4.0"
+        },
+        "verification_status": "Every leaf below is traceable to a specific page/figure/table of the source PDF or to a verifiable transcript receipt. No claim retained from prior generated JSONs unless re-verified.",
+        "audit_corrections_applied": [
+          "MTAP-loss prevalence in TCGA MIBC = 26% (paper text, Discussion §1, cBioPortal computation by the authors). 22% in PLAN.md was the older Robertson 2017 CDKN2A-alone figure for MIBC; both retained, distinguished.",
+          "Phenotypic features = 12 (verbatim, Results §Phenotype-based hit selection: 'For each object (i.e., cell or nucleus), 12 phenotypic features...'). PLAN.md had hedged this to 'feature count not in retrieved supplementary'; PDF resolves it definitively to 12.",
+          "SynergyFinder version = 3.1 (verbatim, Fig 3 legend). Reference 21 (Ianevski 2022) is the SynergyFinder 3.0 paper; the authors used the 3.1 release derived from the same software lineage.",
+          "ATR inhibitor name verbatim = VX970 (no hyphen, no 'berzosertib'). Paper uses VX970 throughout.",
+          "Compound library composition: 2,349 total = 349 (Selleck Anti-cancer) + 958 (MicroSource Spectrum known drugs in human therapy) + 629 (natural products) + 343 (biological activity at experimental level) + 70 (approved for agricultural use only). Numerical sum = 2,349.",
+          "PDO clinical context: BlCa197 = 54-year-old female, high-grade MIBC, mixed urothelial+sarcomatoid, neoadjuvant cisplatin/gemcitabine + radical cystectomy. TN-001 = 53-year-old male, high-grade MIBC, mixed urothelial+sarcomatoid, MVAC combination + radical cystectomy.",
+          "Ethical approvals: KEK 06/03 and 2017-02295.",
+          "AZD7762 and MK-1775 z-scores from primary screen now stated verbatim: AZD7762 WT z=-3.60 / 3KO z=-5.06; MK-1775 WT z=-1.12 / 3KO z=-2.06.",
+          "MRTX1719 axis bug in repo: pharmacologic_analyzer.py:66 maps 'mrtx1719' -> 'wrn'. Correct axis per Bev2026 §Methods +  Engstrom 2023 ref 7 = PRMT5 (MTA-cooperative). Flag in DH JSON; no code fix in this task per user lock #4."
+        ]
+      },
+      "study_title_verbatim": "Therapeutic vulnerabilities exposed by the 9p21 loss identified through multiparametric drug screening inform rational combination strategies",
+      "study_design_overview": {
+        "experimental_paradigm": "9p21 locus isogenic CRISPR/Cas9 deletion in bladder cancer cell lines + multiparametric high-content drug screen + mechanistic dissection + cross-tumor-type validation + PDO translational validation",
+        "isogenic_strategy_rationale_verbatim": "The use of an isogenic pair, WT and 3KO, with an identical genetic background, excludes inter-sample variability and ensures that observed drug response differences relate to the pharmacological intervention specific for the 9p21 loss.",
+        "primary_endpoints": [
+          "Nuclei-count viability z-score (hit selection for 3KO-selective drugs)",
+          "12-feature morphological signature (CellProfiler 4) for phenotype-based hit nomination",
+          "HSA + Bliss synergy scores via SynergyFinder 3.1 (combinations)",
+          "gamma-H2AX foci per nucleus (DSBs)",
+          "p-CHK1 (Ser345) by Western blot (replication stress)",
+          "Annexin V / PI FACS (apoptosis)",
+          "Cleaved Caspase-3 + cleaved PARP by Western blot (apoptosis confirmation)",
+          "Crystal violet and CCK-8 cell viability assays",
+          "CellTiter-Glo 3D for PDO viability"
+        ]
+      },
+      "cell_models": {
+        "primary_bladder_isogenic_pair": {
+          "parental_cell_lines": [
+            {
+              "name": "HT1197",
+              "RRID": "CVCL_1291",
+              "source": "ATCC",
+              "medium": "MEM + 10% FBS + 1X MEM-NEAA + 1 mM sodium pyruvate + 1% P/S"
+            },
+            {
+              "name": "T24",
+              "RRID": "CVCL_2728",
+              "source": "ECACC",
+              "medium": "McCoy's 5A + 10% FBS + 1% P/S"
+            }
+          ],
+          "selection_criteria": "Intact 9p21 locus (WT) and WT RB1 status; 2 of 6 candidate BLCA lines from DepMap CCLE satisfying these criteria.",
+          "rationale_verbatim": "to evaluate the effects of CDKN2A/2B deletion on the cell cycle since these two genes encode for proteins that prevent RB1 phosphorylation via CDK4/6 interaction",
+          "engineering": "CRISPR/Cas9 (lentiCas9-Blast, Addgene #52962). ~210 kb deletion encompassing CDKN2A, CDKN2B, MTAP (3KO). Separate ~140 kb deletion encompassing only CDKN2A/CDKN2B (2KO) used in HT1197 for MTAP-vs-cell-cycle dissection.",
+          "validation": "Genotype by PCR + Sanger sequencing; protein loss by Western blot (p14, p15, p16, MTAP) — Fig 1B + Supp Fig 1A. SDMA decrease in 3KO vs WT confirms PRMT5 partial impairment — Supp Fig 1D.",
+          "growth_phenotype": {
+            "HT1197_3KO_vs_WT": "3KO outcompetes WT after ~3 weeks of co-culture (P<0.0001, unpaired t-test) (Fig 1C)",
+            "T24_3KO_vs_WT": "Proportions remain similar over time, attributed to T24 lacking p16 expression (Supp Fig 1A,B)"
+          }
+        },
+        "secondary_models_other_tumor_types": [
+          {
+            "cell_line": "SW1990",
+            "tumor_type": "Pancreatic adenocarcinoma",
+            "RRID": "CVCL_1723",
+            "source_verbatim": "kind donation of Prof. Alessandro Provenzani laboratory",
+            "MTAP_status_modification": "WT MTAP parental; transduced with lentiviral sgRNA to induce MTAP KO (sgMTAP) vs sgNT (Fig 6B, Supp Fig 6A)"
+          },
+          {
+            "cell_line": "SPC111",
+            "tumor_type": "Pleural mesothelioma",
+            "RRID": "CVCL_D311",
+            "source_verbatim": "kind donation of Dr. Nadia Zaffaroni laboratory",
+            "MTAP_status_modification": "WT MTAP parental; transduced with lentiviral sgRNA to induce MTAP KO (sgMTAP) vs sgNT"
+          }
+        ],
+        "patient_derived_organoids": [
+          {
+            "PDO_id": "TN-001",
+            "patient_demographics_verbatim": "53-year-old male patient diagnosed with high-grade MIBC with mixed urothelial and sarcomatoid histology",
+            "treatment_history_verbatim": "received MVAC combination followed by radical cystectomy",
+            "9p21_status": "9p21 locus deletion (no expression of p14, p15, p16, MTAP) — Fig 7B",
+            "engineering_for_drug_test": "Transduced with pCW57.1 (Addgene #41393) lentiviral vector encoding doxycycline-inducible MTAP overexpression. Treated with Dox 1 µg/ml for MTAP-OE arm; EtOH vehicle for MTAP-loss arm.",
+            "source_hospital": "Inselspital, University Hospital, Bern"
+          },
+          {
+            "PDO_id": "BlCa197",
+            "patient_demographics_verbatim": "54-year-old female patient with high-grade MIBC with mixed urothelial and sarcomatoid histology",
+            "treatment_history_verbatim": "underwent neoadjuvant cisplatin/gemcitabine treatment followed by radical cystectomy",
+            "9p21_status": "9p21 WT (expression of p14, p15, p16, MTAP confirmed)",
+            "engineering_for_drug_test": "Transduced with lentiCRISPR_v1 + MTAP sgRNA for MTAP KO arm vs sgNT control arm.",
+            "source_hospital": "Spitalzentrum Biel"
+          }
+        ],
+        "PDO_ethical_approval_verbatim": "Cantonal Ethical approval KEK 06/03 and 2017-02295",
+        "PDO_consent_status_verbatim": "Patients included in this study provided written informed consent. The research has been performed in accordance with the Declaration of Helsinki."
+      },
+      "primary_drug_screen": {
+        "screen_format": {
+          "platform": "Freedom EVO platform (Tecan) with 96-channel pipetting head; 384-well plates",
+          "imaging": "Operetta High Content Imaging System (Revvity), 10x widefield, 2 fields per well",
+          "staining": "Hoechst 33342 (nuclei) + Alexa Fluor 555 phalloidin (actin) via EL406 (BioTek) plate washer-dispenser",
+          "fixation": "4% PFA"
+        },
+        "cell_lines_screened": "HT1197 WT clone + HT1197 3KO clone (isogenic pair). T24 used in validation only, NOT in primary screen.",
+        "compound_library": {
+          "total_compounds": 2349,
+          "concentration": "1 µM single concentration",
+          "treatment_duration": "48 h",
+          "replicate_structure": "Duplicate technical replicates per compound per genotype",
+          "library_composition_verbatim": [
+            {
+              "collection": "Selleck Anti-cancer compounds",
+              "count": 349,
+              "description_verbatim": "anti-cancer small molecules in clinical use or in clinical trials"
+            },
+            {
+              "collection": "MicroSource Spectrum Collection - known drugs",
+              "count": 958,
+              "description_verbatim": "known drugs that have been used in human therapy"
+            },
+            {
+              "collection": "MicroSource Spectrum Collection - natural products",
+              "count": 629,
+              "description_verbatim": "natural products, and derivatives with undetermined biological activities"
+            },
+            {
+              "collection": "MicroSource Spectrum Collection - bioactive at experimental level",
+              "count": 343,
+              "description_verbatim": "compounds with reported biological activity at the experimental level"
+            },
+            {
+              "collection": "MicroSource Spectrum Collection - agricultural use",
+              "count": 70,
+              "description_verbatim": "compounds approved for, and restricted to, agricultural use"
+            }
+          ],
+          "library_composition_arithmetic_check": "349 + 958 + 629 + 343 + 70 = 2349 (matches paper's stated total)"
+        },
+        "image_analysis": {
+          "software_verbatim": "CellProfiler44 (CellProfiler 4, Stirling 2021 BMC Bioinform. 22:433)",
+          "features_per_object_verbatim_count": 12,
+          "feature_categories_verbatim": [
+            "Nucleus-level: area, compactness, formfactor, perimeter, DNA intensity, phalloidin intensity",
+            "Cell-level: area, compactness, formfactor, perimeter, DNA intensity, phalloidin intensity"
+          ],
+          "z_score_formula_verbatim": "(X_S - X_V) / SD_V; where X_S is the mean signal from technical replicates for each drug treatment, X_V is the mean of technical replicates of the vehicle, and SD_V the standard deviation of the technical replicates of the vehicle"
+        },
+        "hit_selection_thresholds_verbatim": {
+          "viability_based_3KO_selective": "z-score <= -2.5 in 3KO clone AND -1.5 <= z-score <= 1.5 in WT clone (Fig 1E)",
+          "morphology_based_outliers": "drugs scoring within the interquartile range (IQR) for WT cells and outliers for 3KO cells, defined as below Q1 - 1.5*IQR or above Q3 + 1.5*IQR"
+        },
+        "primary_hits_verbatim_count": 18,
+        "primary_hits_named_in_paper": [
+          {
+            "drug": "methotrexate (MTX)",
+            "role_verbatim": "antifolate agent worked as a positive control based on Alhalabi et al.17, who recently demonstrated increased sensitivity of MTAP-deficient BLCA cells to the antifolate agent pemetrexed"
+          },
+          {
+            "drug": "cytarabine",
+            "role_verbatim": "novel pharmacological vulnerability identified in 9p21-loss BLCA"
+          }
+        ],
+        "drugs_excluded_from_hit_list_but_directional": {
+          "AZD7762": {
+            "WT_z_score": -3.6,
+            "3KO_z_score": -5.06,
+            "exclusion_reason_verbatim": "viability z-scores were out of the considered range (i.e., z-scores <= -2.5 for 3KO and -1.5 <= z-score <= 1.5 for WT)"
+          },
+          "MK-1775": {
+            "WT_z_score": -1.12,
+            "3KO_z_score": -2.06,
+            "exclusion_reason": "3KO z-score did not cross the -2.5 threshold despite being more negative than WT"
+          }
+        },
+        "morphology_correlation_analysis": {
+          "method_verbatim": "Pearson correlation coefficient between cytarabine-induced morphological features and those induced by other drugs in the screening (Supplementary Table 8)",
+          "top_morphology_nominated_drug": "gemcitabine (nucleoside analog similar to cytarabine; standard-of-care for MIBC in combination with cisplatin)"
+        }
+      },
+      "validation_experiments": {
+        "validation_cell_lines_added": [
+          "T24 (added beyond HT1197 primary screen)",
+          "HT1197 2KO clones (CDKN2A/2B-only deletion, MTAP retained)"
+        ],
+        "validation_assays": [
+          {
+            "assay": "Crystal violet survival",
+            "format_verbatim": "2 WT and 2 3KO clones per cell line, mean ± SD, n=6, 3 biological replicates per clone; HT1197 treated 7 days, T24 treated 3 days"
+          },
+          {
+            "assay": "CCK-8 viability",
+            "purpose": "Dose-response for synergy calculations"
+          },
+          {
+            "assay": "Gemcitabine dose-response in HT1197 and T24 3KO vs WT",
+            "concentration_range_verbatim": "0.1-50 nM"
+          },
+          {
+            "assay": "2KO control assay",
+            "outcome_verbatim": "WT and 2KO clones were equally sensitive to the tested drugs, suggesting that MTAP deletion - but not CDKN2A/2B deletion - is required to increase sensitivity to the drugs (P > 0.05, unpaired t-test)"
+          }
+        ]
+      },
+      "combination_experiments": {
+        "sequential_dosing_rationale_verbatim": "Since AG-270 and MRTX1719 target an epigenetic pathway (i.e., PRMT5-mediated symmetric di-methylation of arginine marks), it has been reported that several days of treatment are required to observe a potent anti-tumor activity. Therefore, we reasoned that a sequential administration protocol with AG-270 or MRTX1719 pre-treatment followed by chemotherapy was preferential to reduce toxicity mediated by long treatment with cytarabine, gemcitabine, or MTX.",
+        "synergy_calculation": {
+          "software_verbatim": "SynergyFinder 3.1",
+          "models_verbatim": [
+            "HSA (Highest Single Agent)",
+            "Bliss"
+          ],
+          "reporting": "HSA synergy scores AND summary synergy scores with 95% CI for CCK-8 experiments",
+          "synergy_threshold_verbatim": "synergy score > 10 = synergistic interaction (per ref 21, Ianevski 2022)"
+        },
+        "combination_dosing_schedules": [
+          {
+            "combo": "MRTX1719 + gemcitabine",
+            "HT1197_schedule_verbatim": "MRTX1719 for 2 days, followed by combined MRTX1719 and gemcitabine treatment for 5 days",
+            "T24_schedule_verbatim": "MRTX1719 for 2 days, followed by combined MRTX1719 and gemcitabine treatment for 3 days",
+            "outcome": "Synergy at only a few concentrations; limited 3KO selectivity in both cell lines (Fig 3A)"
+          },
+          {
+            "combo": "AG-270 + cytarabine",
+            "HT1197_schedule_verbatim": "AG-270 for 6 days, followed by combined AG-270 and cytarabine treatment for 7 days",
+            "T24_schedule_verbatim": "AG-270 for 2 days, followed by combined AG-270 and cytarabine treatment for 3 days",
+            "HT1197_doses_in_Fig3B": "AG-270 50 nM (representative); cytarabine 80 nM (representative). Full matrix: AG-270 0/50/100 nM x cytarabine 0/40/80/160 nM",
+            "T24_doses_in_Fig3B": "AG-270 25 nM (representative); cytarabine 200 nM (representative). Full matrix: AG-270 0/12.5/25 nM x cytarabine 0/50/100/200 nM",
+            "outcome": "HT1197 3KO CCK-8 synergy 29.0 ± 18.8; WT 10.7 ± 12.4. T24 3KO CCK-8 synergy 32.3 ± 10.4; WT -4.4 ± 7.6. (Fig 3B)"
+          },
+          {
+            "combo": "MRTX1719 + cytarabine",
+            "HT1197_schedule_verbatim": "MRTX1719 for 2 days, followed by combined MRTX1719 and cytarabine treatment for 5 days",
+            "T24_schedule_verbatim": "MRTX1719 for 2 days, followed by combined MRTX1719 and cytarabine treatment for 3 days",
+            "HT1197_doses_in_Fig3C": "MRTX1719 50 nM (representative); cytarabine 80 nM (representative). Full matrix: MRTX1719 0/50/100 nM x cytarabine 0/40/80/160 nM",
+            "T24_doses_in_Fig3C": "MRTX1719 10 nM (representative); cytarabine 200 nM (representative). Full matrix: MRTX1719 0/5/10 nM x cytarabine 0/50/100/200 nM",
+            "outcome": "HT1197 3KO CCK-8 synergy 18.7 ± 4.7; WT 7.2 ± 5.3. T24 3KO CCK-8 synergy 30.5 ± 7.7; WT 2.8 ± 4.7. (Fig 3C)"
+          },
+          {
+            "combo": "MRTX1719 + cytarabine: mechanistic readout (T24, gamma-H2AX foci IF)",
+            "doses_verbatim": "AG-270 (25 nM) or MRTX1719 (10 nM) for 2 days, followed by combination with cytarabine (200 nM) for 3 days",
+            "readout_verbatim": "Data represents the proportion of cells with >5 foci/nucleus",
+            "imaging": "ImageXpress Micro Confocal 20x; minimum 300 cells per condition; nuclei area minimum 100 μm²"
+          },
+          {
+            "combo": "MRTX1719 + VX970 (ATR inhibitor)",
+            "HT1197_schedule_verbatim": "MRTX1719 for 2 days, followed by combination with VX970 for 5 days",
+            "T24_schedule_verbatim": "MRTX1719 for 2 days, followed by combination with VX970 for 4 days",
+            "HT1197_doses_in_Fig5B": "VX970 200 nM; MRTX1719 50 nM and 100 nM",
+            "T24_doses_in_Fig5B": "VX970 200 nM; MRTX1719 5 nM and 10 nM",
+            "outcome": "Significant cell viability reduction selectively in HT1197 and T24 3KO cells (P < 0.01, unpaired t-test)"
+          },
+          {
+            "combo": "MRTX1719 + AZD7762 (CHK1 inhibitor)",
+            "context_verbatim": "Similar effect observed for the combination of the CHK1 inhibitor AZD7762 with MRTX1719 in T24 3KO cells (Supplementary Fig. 5C)",
+            "note": "Pathway-equivalent backup to VX970; demonstrates ATR/CHK1 axis dependency"
+          }
+        ]
+      },
+      "mechanistic_readouts": {
+        "DNA_damage": {
+          "marker": "gamma-H2AX",
+          "method": "IF foci/nucleus + Western blot",
+          "threshold_verbatim": ">5 foci/nucleus"
+        },
+        "replication_stress": {
+          "markers": [
+            "p-CHK1 Ser345",
+            "CHK1 total"
+          ],
+          "method": "Western blot",
+          "interpretation_verbatim": "marker of replication stress"
+        },
+        "apoptosis": {
+          "method_1": "Annexin V (APC) + PI (Propidium Iodide) FACS",
+          "FACS_instrument": "BD FACSymphony A1 Cell Analyzer",
+          "events_per_sample_verbatim": "10,000 events",
+          "method_2": "Cleaved Caspase-3 + cleaved PARP by Western blot"
+        },
+        "genomic_instability": {
+          "marker": "Micronuclei (gamma-H2AX-positive subset)",
+          "method": "IF on 300 nuclei per condition"
+        }
+      },
+      "translational_validation": {
+        "MTAP_loss_prevalence_panels": {
+          "TCGA_pancancer_atlas_2018_source": "Ref 45 (Liu et al. Cell 173:400-416.e11 2018) via Fig 6A oncoprint",
+          "top10_tumor_types_by_CDKN2A_deletion_frequency_verbatim": [
+            {
+              "tumor": "GBM (n=585)",
+              "MTAP_pct": 42,
+              "CDKN2A_pct": 55,
+              "CDKN2B_pct": 54
+            },
+            {
+              "tumor": "MESO (n=87)",
+              "MTAP_pct": 32,
+              "CDKN2A_pct": 40,
+              "CDKN2B_pct": 43
+            },
+            {
+              "tumor": "ESCA (n=182)",
+              "MTAP_pct": 21,
+              "CDKN2A_pct": 39,
+              "CDKN2B_pct": 35
+            },
+            {
+              "tumor": "BLCA (n=411)",
+              "MTAP_pct": 26,
+              "CDKN2A_pct": 32,
+              "CDKN2B_pct": 31
+            },
+            {
+              "tumor": "HNSC (n=523)",
+              "MTAP_pct": 14,
+              "CDKN2A_pct": 30,
+              "CDKN2B_pct": 28
+            },
+            {
+              "tumor": "PAAD (n=184)",
+              "MTAP_pct": 22,
+              "CDKN2A_pct": 32,
+              "CDKN2B_pct": 27
+            },
+            {
+              "tumor": "DLBC (n=48)",
+              "MTAP_pct": 15,
+              "CDKN2A_pct": 25,
+              "CDKN2B_pct": 21
+            },
+            {
+              "tumor": "LUSC (n=487)",
+              "MTAP_pct": 20,
+              "CDKN2A_pct": 26,
+              "CDKN2B_pct": 26
+            },
+            {
+              "tumor": "SKCM (n=442)",
+              "MTAP_pct": 16,
+              "CDKN2A_pct": 25,
+              "CDKN2B_pct": 24
+            },
+            {
+              "tumor": "LUAD (n=566)",
+              "MTAP_pct": 11,
+              "CDKN2A_pct": 15,
+              "CDKN2B_pct": 15
+            }
+          ],
+          "MIBC_specific_prevalence": {
+            "26_pct_value_verbatim": "Co-occurrence of CDKN2A/2B and MTAP deletions interests 26% of TCGA MIBC patients (p value < 0.001 based on cBioPortal two-sided Fisher Exact Test), while deletions affecting CDKN2A/2B are comparatively infrequent (5.6%), and CDKN2A focal loss is rare (0.5%).",
+            "22_pct_alternative_reference": "Robertson AG et al. Cell 2017; 171:540-556.e25 reports CDKN2A 'homozygous deletions (22%) were common' in TCGA MIBC n=412. Both numbers valid: paper's 26% counts CDKN2A/2B/MTAP co-deletion; Robertson 22% counts CDKN2A focal-deletion alone.",
+            "NMIBC_prevalence_verbatim": "CDKN2A loss at chromosome 9p21 ... occurring in approximately 42% [...] of NMIBC (ref 13: Lindskrog et al. Nat Commun 12:2301, 2021)"
+          }
+        },
+        "PDO_drug_response_protocol_verbatim": {
+          "dissociation": "TrypLE Express at 37°C for 10 min, single-cell suspension",
+          "seeding": "Resuspended in Matrigel (Corning) at 2000 cells per 10 μl Matrigel per well in white 96-multiwell plate (Revvity)",
+          "drug_start": "Three days post-seeding, medium replaced with organoid medium containing drugs at specified concentrations (2 technical replicates per condition)",
+          "medium_changes": "Every 2-3 days",
+          "viability_readout": "CellTiter-Glo 3D (Promega) at 1:3 dilution with culture medium; luminescence on Varioskan LUX",
+          "treatment_schedule_verbatim": "DMSO (as control), or MRTX1719 for 2 days, followed by combination with cytarabine or VX970 for 5 days"
+        },
+        "PDO_marker_panel_verbatim": [
+          "Basal: cytokeratin 5 (KRT5), p63",
+          "Luminal: cytokeratin 8 (KRT8), GATA3, uroplakin II (UPKII)",
+          "Adhesion/epithelial: E-cadherin (E-CAD)",
+          "Mesenchymal: alpha smooth muscle actin (αSMA), vimentin (VIM)",
+          "Proliferation: Ki-67",
+          "Differentiation: cytokeratin 20 (KRT20) - 'absent or only residual in both samples'"
+        ]
+      },
+      "what_paper_does_NOT_quantitatively_report": {
+        "context": "These are gaps where the published paper either reports qualitatively, defers to supplementary, or omits an item that would matter for CrisPRO benchmarking.",
+        "items": [
+          "Quantitative DepMap CDKN2A/MTAP × cytarabine effect size (refs internal DepMap analysis in passing - Discussion §4 - without numerical Δ, p-value, or n).",
+          "Within-figure quantitative IC50 / GI50 values for cytarabine, MTX, gemcitabine in the 3KO clones (figures show bar/dose-response plots; numerical IC50 table not provided in retrievable supplementary text via this PDF).",
+          "Per-clone (rather than per-genotype) variability statistics for the 4 clone-pair design.",
+          "MTAP IHC concordance with genomic MTAP loss (paper validates by Western blot only). Cross-paper concordance with Gorbokon et al. 2025 not retrieved this session."
+        ]
+      }
+    },
+    "top_keys": [
+      "$schema_version",
+      "document_purpose",
+      "provenance",
+      "study_title_verbatim",
+      "study_design_overview",
+      "cell_models",
+      "primary_drug_screen",
+      "validation_experiments",
+      "combination_experiments",
+      "mechanistic_readouts",
+      "translational_validation",
+      "what_paper_does_NOT_quantitatively_report"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/experimental_design.json",
+      "exists": true,
+      "bytes": 23457,
+      "sha256": "f4648d65cdca27146d457a3fd780381976f34ca5f0fd013945e1f6b11f7ea008",
+      "mtime_iso": "2026-06-24T20:41:23+00:00"
+    }
+  ],
+  "cross_refs": [
+    "moat:aggregate"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:moat_and_governance_deep"
+}

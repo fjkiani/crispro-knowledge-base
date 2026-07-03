@@ -1,0 +1,60 @@
+{
+  "id": "dbgap_access_pack:dbgap_phs003428_ctep_email_final.md",
+  "type": "dbgap_access_pack",
+  "name": "dbgap_phs003428_ctep_email_final.md",
+  "what_it_solves": "dbgap_access_pack artifact dbgap_phs003428_ctep_email_final.md",
+  "how_it_solves": "Auto-parsed by extension.",
+  "why_it_exists": "Every access pack / SL map / gap-lineage report is a durable operational asset — must be addressable.",
+  "attributes": {
+    "byte_length": 7219,
+    "heading_count": 6,
+    "headings": [
+      {
+        "level": 1,
+        "title": "CTEP Pre-Notification Email — PASTE-READY",
+        "line": 1
+      },
+      {
+        "level": 1,
+        "title": "Fields marked [FAHAD_INSERT: ...] require Fahad to fill before sending.",
+        "line": 2
+      },
+      {
+        "level": 1,
+        "title": "All other text is final.",
+        "line": 3
+      },
+      {
+        "level": 1,
+        "title": "INSTITUTION INTAKE CHECKLIST",
+        "line": 75
+      },
+      {
+        "level": 1,
+        "title": "Minimum items Fahad must collect from institution before DAR submission.",
+        "line": 76
+      },
+      {
+        "level": 1,
+        "title": "All run in parallel with the 14-day BMS review window.",
+        "line": 77
+      }
+    ],
+    "preview": "# CTEP Pre-Notification Email — PASTE-READY\n# Fields marked [FAHAD_INSERT: ...] require Fahad to fill before sending.\n# All other text is final.\n\n---\n\nTO: NCICTEPDAR@mail.nih.gov\nCC: ncidac@mail.nih.gov\nSUBJECT: CTEP Pre-Notification — dbGaP Access Request for phs003428.v1.p1 (CALGB/SWOG 80405)\n\n---\n\nDear CTEP Data Access Team,\n\nThis message serves as formal pre-notification, per CTEP Collaborative Agreement requirements, of an upcoming dbGaP Data Access Request (DAR) for the dataset phs003428.v1.p1 (CALGB/SWOG 80405), a study conducted under NCI/CTEP sponsorship with Bristol Myers Squibb (BMS) as a collaborative partner. We respectfully request that BMS complete its standard 14-day review within the customary timeline following receipt of this notification.\n\n**Study Requested**\n\nDataset: phs003428.v1.p1\nStudy Name: CALGB/SWOG 80405 — A Phase III Trial of FOLFOX/BEVACIZUMAB vs. FOLFOX/CETUXIMAB vs. FOLFOX/BEVACIZUMAB/CETUXIMAB for Patients with Untreated Metastatic Colorectal Cancer\nConsent Group: DS-CA-COL (Disease-Specific: Cancer, COL)\nData Requested: All available RNA-seq expression data and linked clinical outcome variables (including: dead, fu_time, pf_time, pf_stat, TREAT_ASSIGNED)\n\n**Principal Investigator**\n\nName: Fahad Kiani, PhD\nInstitution: CrisPRO / Brenus Pharma\nAddress: [FAHAD_INSERT: full institutional mailing address]\neRA Commons ID: [FAHAD_INSERT: eRA Commons username]\n\n**Research Use Statement**\n\nThis project seeks to validate a 15-gene M2 macrophage transcriptomic panel (M2-15) as a bevacizumab-specific resistance predictor in metastatic colorectal cancer (mCRC). Using RNA-seq expression data and clinical outcome variables from phs003428.v1.p1, we will compute M2-15 composite scores for each patient and apply multivariable Cox proportional hazards regression to assess the association between M2-15 scores and overall survival (OS) and progression-free survival (PFS), stratified by treatment arm (bevacizumab, cetuximab, and combination). This work directly extends the findings of Innocenti et al. 2022 (PMID 35176136), which identified M2 macrophage gene expression signatures as prognostically relevant in CALGB/SWOG 80405, by prospectively testing a refined, clinically actionable panel in a treatment-arm-specific framework. The public GEO dataset GSE196576 provides the expression layer already accessible to our group; the controlled-access phs003428.v1.p1 data are required for linkage to individual-level clinical outcomes and treatment ass"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/dbgap_phs003428_ctep_email_final.md",
+      "exists": true,
+      "bytes": 7241,
+      "sha256": "5c6c39b94bcf5a33ccdff816a05ee2655f564ce5d1c1300cc575809634f74e04",
+      "mtime_iso": "2026-05-13T09:04:38+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:access_packs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

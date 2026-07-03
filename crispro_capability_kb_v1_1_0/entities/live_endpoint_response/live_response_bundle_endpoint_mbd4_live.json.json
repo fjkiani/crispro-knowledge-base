@@ -1,0 +1,4021 @@
+{
+  "id": "live_response:bundle_endpoint_mbd4_live.json",
+  "type": "live_endpoint_response",
+  "name": "bundle_endpoint_mbd4_live (POST /api/ayesha/therapy-fit/bundle)",
+  "what_it_solves": "Full parsed live response payload from bundle_endpoint_mbd4_live.json.",
+  "how_it_solves": "Direct json.load; raw payload carried.",
+  "why_it_exists": "Turns the endpoint proof from a 'yes it exists' claim into an inspectable response with real keys/values.",
+  "attributes": {
+    "raw": {
+      "contract_version": "v2.0",
+      "patient_id": "AK",
+      "requested_levels": [
+        "L1"
+      ],
+      "generated_at": "2026-06-06T21:01:04.881736",
+      "levels": {
+        "L1": {
+          "is_preview": false,
+          "effective_assembly": "GRCh38",
+          "inputs_used": {
+            "mutations": [
+              {
+                "gene": "MBD4",
+                "hgvs_p": "p.K431Nfs*54",
+                "hgvs_c": "c.1293delA",
+                "consequence": "frameshift_variant",
+                "classification": "pathogenic",
+                "origin": "germline",
+                "chrom": "3",
+                "pos": 129433949,
+                "ref": "AT",
+                "alt": "A",
+                "build": "GRCh38"
+              },
+              {
+                "gene": "PDGFRA",
+                "hgvs_p": "p.S755P",
+                "hgvs_c": "c.2263T>C",
+                "consequence": "missense_variant",
+                "classification": "VUS",
+                "origin": "germline",
+                "chrom": "4",
+                "pos": 54280422,
+                "ref": "T",
+                "alt": "C",
+                "build": "GRCh38"
+              },
+              {
+                "gene": "TP53",
+                "hgvs_p": "p.R175H",
+                "hgvs_c": "c.524G>A",
+                "consequence": "missense_variant",
+                "origin": "somatic",
+                "chrom": "17",
+                "pos": 7577120,
+                "ref": "G",
+                "alt": "A"
+              }
+            ],
+            "tumor_context": {
+              "completeness_score": 0.55,
+              "somatic_mutations": [
+                {
+                  "gene": "TP53",
+                  "hgvs_p": "p.R175H",
+                  "consequence": "missense_variant"
+                }
+              ],
+              "msi_status": "MSS",
+              "pd_l1_status": "POSITIVE",
+              "pd_l1_cps": 10,
+              "er_status": "WEAKLY_POSITIVE",
+              "er_percent": 50
+            }
+          },
+          "efficacy": {
+            "drugs": [
+              {
+                "name": "paclitaxel",
+                "moa": "taxane chemotherapy",
+                "efficacy_score": 0.32,
+                "confidence": 0.6,
+                "evidence_tier": "insufficient",
+                "badges": [
+                  "PathwayAligned"
+                ],
+                "evidence_strength": 0.0,
+                "citations": [],
+                "citations_count": 0,
+                "clinvar": {
+                  "classification": null,
+                  "review_status": null,
+                  "prior": 0.0
+                },
+                "evidence_manifest": {
+                  "pubmed_query": null,
+                  "citations": [],
+                  "clinvar": {
+                    "classification": null,
+                    "review_status": null
+                  }
+                },
+                "insights": {
+                  "functionality": 0.0,
+                  "chromatin": 0.0,
+                  "essentiality": 0.0,
+                  "regulatory": 0.0
+                },
+                "rationale": [
+                  {
+                    "type": "sequence",
+                    "value": 0.0001,
+                    "percentile": 0.8
+                  },
+                  {
+                    "type": "pathway",
+                    "percentile": 1.0,
+                    "primary_pathway": "tp53",
+                    "breakdown": {
+                      "tp53": 0.4,
+                      "ras_mapk": 0.0,
+                      "ddr": 0.0,
+                      "pi3k": 0.0,
+                      "vegf": 0.0,
+                      "io": 0.0
+                    }
+                  },
+                  {
+                    "type": "evidence",
+                    "strength": 0.0
+                  }
+                ],
+                "meets_evidence_gate": false,
+                "insufficient_signal": true,
+                "sporadic_gates_provenance": {
+                  "germline_status": "positive",
+                  "level": "L1",
+                  "gates_applied": [
+                    "CONFIDENCE_CAP_L1",
+                    "SPORADIC_SUMMARY"
+                  ],
+                  "efficacy_delta": 0.0,
+                  "confidence_delta": -0.07000000000000006,
+                  "rationale": [
+                    {
+                      "gate": "CONFIDENCE_CAP_L1",
+                      "verdict": "CAPPED",
+                      "cap": 0.6,
+                      "level": "L1",
+                      "completeness": 0.55,
+                      "original_confidence": 0.67,
+                      "capped_confidence": 0.6,
+                      "reason": "Level 1 data (completeness=0.55) → confidence capped at 0.6"
+                    },
+                    {
+                      "gate": "SPORADIC_SUMMARY",
+                      "germline_status": "positive",
+                      "level": "L1",
+                      "completeness": 0.55,
+                      "original_efficacy": 0.32,
+                      "final_efficacy": 0.32,
+                      "efficacy_delta": 0.0,
+                      "original_confidence": 0.67,
+                      "final_confidence": 0.6,
+                      "confidence_delta": -0.07000000000000006,
+                      "gates_applied": [
+                        "CONFIDENCE_CAP_L1"
+                      ]
+                    }
+                  ]
+                },
+                "label_status": "UNKNOWN",
+                "ruo_reasons": [
+                  "unknown-label",
+                  "no-citations",
+                  "low-evidence"
+                ],
+                "ruo_reason": "unknown-label",
+                "clinical_band": "E (Theoretical)",
+                "final_score": 0.32
+              },
+              {
+                "name": "adavosertib",
+                "moa": "WEE1 inhibitor",
+                "efficacy_score": 0.32,
+                "confidence": 0.6,
+                "evidence_tier": "insufficient",
+                "badges": [
+                  "PathwayAligned"
+                ],
+                "evidence_strength": 0.0,
+                "citations": [],
+                "citations_count": 0,
+                "clinvar": {
+                  "classification": null,
+                  "review_status": null,
+                  "prior": 0.0
+                },
+                "evidence_manifest": {
+                  "pubmed_query": null,
+                  "citations": [],
+                  "clinvar": {
+                    "classification": null,
+                    "review_status": null
+                  }
+                },
+                "insights": {
+                  "functionality": 0.0,
+                  "chromatin": 0.0,
+                  "essentiality": 0.0,
+                  "regulatory": 0.0
+                },
+                "rationale": [
+                  {
+                    "type": "sequence",
+                    "value": 0.0001,
+                    "percentile": 0.8
+                  },
+                  {
+                    "type": "pathway",
+                    "percentile": 1.0,
+                    "primary_pathway": "tp53",
+                    "breakdown": {
+                      "tp53": 0.4,
+                      "ras_mapk": 0.0,
+                      "ddr": 0.0,
+                      "pi3k": 0.0,
+                      "vegf": 0.0,
+                      "io": 0.0
+                    }
+                  },
+                  {
+                    "type": "evidence",
+                    "strength": 0.0
+                  }
+                ],
+                "meets_evidence_gate": false,
+                "insufficient_signal": true,
+                "sporadic_gates_provenance": {
+                  "germline_status": "positive",
+                  "level": "L1",
+                  "gates_applied": [
+                    "CONFIDENCE_CAP_L1",
+                    "SPORADIC_SUMMARY"
+                  ],
+                  "efficacy_delta": 0.0,
+                  "confidence_delta": -0.07000000000000006,
+                  "rationale": [
+                    {
+                      "gate": "CONFIDENCE_CAP_L1",
+                      "verdict": "CAPPED",
+                      "cap": 0.6,
+                      "level": "L1",
+                      "completeness": 0.55,
+                      "original_confidence": 0.67,
+                      "capped_confidence": 0.6,
+                      "reason": "Level 1 data (completeness=0.55) → confidence capped at 0.6"
+                    },
+                    {
+                      "gate": "SPORADIC_SUMMARY",
+                      "germline_status": "positive",
+                      "level": "L1",
+                      "completeness": 0.55,
+                      "original_efficacy": 0.32,
+                      "final_efficacy": 0.32,
+                      "efficacy_delta": 0.0,
+                      "original_confidence": 0.67,
+                      "final_confidence": 0.6,
+                      "confidence_delta": -0.07000000000000006,
+                      "gates_applied": [
+                        "CONFIDENCE_CAP_L1"
+                      ]
+                    }
+                  ]
+                },
+                "label_status": "UNKNOWN",
+                "ruo_reasons": [
+                  "unknown-label",
+                  "no-citations",
+                  "low-evidence"
+                ],
+                "ruo_reason": "unknown-label",
+                "clinical_band": "E (Theoretical)",
+                "final_score": 0.32
+              },
+              {
+                "name": "ceralasertib",
+                "moa": "ATR inhibitor",
+                "efficacy_score": 0.12,
+                "confidence": 0.53,
+                "evidence_tier": "insufficient",
+                "badges": [],
+                "evidence_strength": 0.0,
+                "citations": [],
+                "citations_count": 0,
+                "clinvar": {
+                  "classification": null,
+                  "review_status": null,
+                  "prior": 0.0
+                },
+                "evidence_manifest": {
+                  "pubmed_query": null,
+                  "citations": [],
+                  "clinvar": {
+                    "classification": null,
+                    "review_status": null
+                  }
+                },
+                "insights": {
+                  "functionality": 0.0,
+                  "chromatin": 0.0,
+                  "essentiality": 0.0,
+                  "regulatory": 0.0
+                },
+                "rationale": [
+                  {
+                    "type": "sequence",
+                    "value": 0.0001,
+                    "percentile": 0.8
+                  },
+                  {
+                    "type": "pathway",
+                    "percentile": 0.0,
+                    "primary_pathway": "tp53",
+                    "breakdown": {
+                      "tp53": 0.4,
+                      "ras_mapk": 0.0,
+                      "ddr": 0.0,
+                      "pi3k": 0.0,
+                      "vegf": 0.0,
+                      "io": 0.0
+                    }
+                  },
+                  {
+                    "type": "evidence",
+                    "strength": 0.0
+                  }
+                ],
+                "meets_evidence_gate": false,
+                "insufficient_signal": true,
+                "sporadic_gates_provenance": {
+                  "germline_status": "positive",
+                  "level": "L1",
+                  "gates_applied": [
+                    "CONFIDENCE_CAP_L2"
+                  ],
+                  "efficacy_delta": 0.0,
+                  "confidence_delta": 0.0,
+                  "rationale": [
+                    {
+                      "gate": "CONFIDENCE_CAP_L2",
+                      "verdict": "NO_CAP",
+                      "cap": null,
+                      "level": "L1",
+                      "completeness": 0.55,
+                      "original_confidence": 0.53,
+                      "capped_confidence": 0.53,
+                      "reason": "Level 1 data (completeness=0.55) → no confidence cap applied"
+                    }
+                  ]
+                },
+                "label_status": "UNKNOWN",
+                "ruo_reasons": [
+                  "unknown-label",
+                  "no-citations",
+                  "low-evidence"
+                ],
+                "ruo_reason": "unknown-label",
+                "clinical_band": "E (Theoretical)",
+                "final_score": 0.12
+              },
+              {
+                "name": "trametinib",
+                "moa": "MEK inhibitor",
+                "efficacy_score": 0.12,
+                "confidence": 0.53,
+                "evidence_tier": "insufficient",
+                "badges": [],
+                "evidence_strength": 0.0,
+                "citations": [],
+                "citations_count": 0,
+                "clinvar": {
+                  "classification": null,
+                  "review_status": null,
+                  "prior": 0.0
+                },
+                "evidence_manifest": {
+                  "pubmed_query": null,
+                  "citations": [],
+                  "clinvar": {
+                    "classification": null,
+                    "review_status": null
+                  }
+                },
+                "insights": {
+                  "functionality": 0.0,
+                  "chromatin": 0.0,
+                  "essentiality": 0.0,
+                  "regulatory": 0.0
+                },
+                "rationale": [
+                  {
+                    "type": "sequence",
+                    "value": 0.0001,
+                    "percentile": 0.8
+                  },
+                  {
+                    "type": "pathway",
+                    "percentile": 0.0,
+                    "primary_pathway": "tp53",
+                    "breakdown": {
+                      "tp53": 0.4,
+                      "ras_mapk": 0.0,
+                      "ddr": 0.0,
+                      "pi3k": 0.0,
+                      "vegf": 0.0,
+                      "io": 0.0
+                    }
+                  },
+                  {
+                    "type": "evidence",
+                    "strength": 0.0
+                  }
+                ],
+                "meets_evidence_gate": false,
+                "insufficient_signal": true,
+                "sporadic_gates_provenance": {
+                  "germline_status": "positive",
+                  "level": "L1",
+                  "gates_applied": [
+                    "CONFIDENCE_CAP_L2"
+                  ],
+                  "efficacy_delta": 0.0,
+                  "confidence_delta": 0.0,
+                  "rationale": [
+                    {
+                      "gate": "CONFIDENCE_CAP_L2",
+                      "verdict": "NO_CAP",
+                      "cap": null,
+                      "level": "L1",
+                      "completeness": 0.55,
+                      "original_confidence": 0.53,
+                      "capped_confidence": 0.53,
+                      "reason": "Level 1 data (completeness=0.55) → no confidence cap applied"
+                    }
+                  ]
+                },
+                "label_status": "UNKNOWN",
+                "ruo_reasons": [
+                  "unknown-label",
+                  "no-citations",
+                  "low-evidence"
+                ],
+                "ruo_reason": "unknown-label",
+                "clinical_band": "E (Theoretical)",
+                "final_score": 0.12
+              },
+              {
+                "name": "bevacizumab",
+                "moa": "anti-VEGF",
+                "efficacy_score": 0.12,
+                "confidence": 0.53,
+                "evidence_tier": "insufficient",
+                "badges": [],
+                "evidence_strength": 0.0,
+                "citations": [],
+                "citations_count": 0,
+                "clinvar": {
+                  "classification": null,
+                  "review_status": null,
+                  "prior": 0.0
+                },
+                "evidence_manifest": {
+                  "pubmed_query": null,
+                  "citations": [],
+                  "clinvar": {
+                    "classification": null,
+                    "review_status": null
+                  }
+                },
+                "insights": {
+                  "functionality": 0.0,
+                  "chromatin": 0.0,
+                  "essentiality": 0.0,
+                  "regulatory": 0.0
+                },
+                "rationale": [
+                  {
+                    "type": "sequence",
+                    "value": 0.0001,
+                    "percentile": 0.8
+                  },
+                  {
+                    "type": "pathway",
+                    "percentile": 0.0,
+                    "primary_pathway": "tp53",
+                    "breakdown": {
+                      "tp53": 0.4,
+                      "ras_mapk": 0.0,
+                      "ddr": 0.0,
+                      "pi3k": 0.0,
+                      "vegf": 0.0,
+                      "io": 0.0
+                    }
+                  },
+                  {
+                    "type": "evidence",
+                    "strength": 0.0
+                  }
+                ],
+                "meets_evidence_gate": false,
+                "insufficient_signal": true,
+                "sporadic_gates_provenance": {
+                  "germline_status": "positive",
+                  "level": "L1",
+                  "gates_applied": [
+                    "CONFIDENCE_CAP_L2"
+                  ],
+                  "efficacy_delta": 0.0,
+                  "confidence_delta": 0.0,
+                  "rationale": [
+                    {
+                      "gate": "CONFIDENCE_CAP_L2",
+                      "verdict": "NO_CAP",
+                      "cap": null,
+                      "level": "L1",
+                      "completeness": 0.55,
+                      "original_confidence": 0.53,
+                      "capped_confidence": 0.53,
+                      "reason": "Level 1 data (completeness=0.55) → no confidence cap applied"
+                    }
+                  ]
+                },
+                "label_status": "UNKNOWN",
+                "ruo_reasons": [
+                  "unknown-label",
+                  "no-citations",
+                  "low-evidence"
+                ],
+                "ruo_reason": "unknown-label",
+                "clinical_band": "E (Theoretical)",
+                "final_score": 0.12
+              },
+              {
+                "name": "pembrolizumab",
+                "moa": "anti-PD-1",
+                "efficacy_score": 0.12,
+                "confidence": 0.53,
+                "evidence_tier": "insufficient",
+                "badges": [],
+                "evidence_strength": 0.0,
+                "citations": [],
+                "citations_count": 0,
+                "clinvar": {
+                  "classification": null,
+                  "review_status": null,
+                  "prior": 0.0
+                },
+                "evidence_manifest": {
+                  "pubmed_query": null,
+                  "citations": [],
+                  "clinvar": {
+                    "classification": null,
+                    "review_status": null
+                  }
+                },
+                "insights": {
+                  "functionality": 0.0,
+                  "chromatin": 0.0,
+                  "essentiality": 0.0,
+                  "regulatory": 0.0
+                },
+                "rationale": [
+                  {
+                    "type": "sequence",
+                    "value": 0.0001,
+                    "percentile": 0.8
+                  },
+                  {
+                    "type": "pathway",
+                    "percentile": 0.0,
+                    "primary_pathway": "tp53",
+                    "breakdown": {
+                      "tp53": 0.4,
+                      "ras_mapk": 0.0,
+                      "ddr": 0.0,
+                      "pi3k": 0.0,
+                      "vegf": 0.0,
+                      "io": 0.0
+                    }
+                  },
+                  {
+                    "type": "evidence",
+                    "strength": 0.0
+                  }
+                ],
+                "meets_evidence_gate": false,
+                "insufficient_signal": true,
+                "sporadic_gates_provenance": {
+                  "germline_status": "positive",
+                  "level": "L1",
+                  "gates_applied": [
+                    null,
+                    "CONFIDENCE_CAP_L2"
+                  ],
+                  "efficacy_delta": 0.0,
+                  "confidence_delta": 0.0,
+                  "rationale": [
+                    {
+                      "gate": null,
+                      "verdict": "NO_BOOST",
+                      "boost": 1.0,
+                      "reason": "No IO boost signals detected"
+                    },
+                    {
+                      "gate": "CONFIDENCE_CAP_L2",
+                      "verdict": "NO_CAP",
+                      "cap": null,
+                      "level": "L1",
+                      "completeness": 0.55,
+                      "original_confidence": 0.53,
+                      "capped_confidence": 0.53,
+                      "reason": "Level 1 data (completeness=0.55) → no confidence cap applied"
+                    }
+                  ]
+                },
+                "label_status": "UNKNOWN",
+                "ruo_reasons": [
+                  "unknown-label",
+                  "no-citations",
+                  "low-evidence"
+                ],
+                "ruo_reason": "unknown-label",
+                "clinical_band": "E (Theoretical)",
+                "final_score": 0.12
+              },
+              {
+                "name": "ivermectin",
+                "moa": "antiparasitic (repurposing hypothesis; preclinical-only in gyn/ovarian)",
+                "efficacy_score": 0.12,
+                "confidence": 0.53,
+                "evidence_tier": "insufficient",
+                "badges": [],
+                "evidence_strength": 0.0,
+                "citations": [],
+                "citations_count": 0,
+                "clinvar": {
+                  "classification": null,
+                  "review_status": null,
+                  "prior": 0.0
+                },
+                "evidence_manifest": {
+                  "pubmed_query": null,
+                  "citations": [],
+                  "clinvar": {
+                    "classification": null,
+                    "review_status": null
+                  }
+                },
+                "insights": {
+                  "functionality": 0.0,
+                  "chromatin": 0.0,
+                  "essentiality": 0.0,
+                  "regulatory": 0.0
+                },
+                "rationale": [
+                  {
+                    "type": "sequence",
+                    "value": 0.0001,
+                    "percentile": 0.8
+                  },
+                  {
+                    "type": "pathway",
+                    "percentile": 0.0,
+                    "primary_pathway": "tp53",
+                    "breakdown": {
+                      "tp53": 0.4,
+                      "ras_mapk": 0.0,
+                      "ddr": 0.0,
+                      "pi3k": 0.0,
+                      "vegf": 0.0,
+                      "io": 0.0
+                    }
+                  },
+                  {
+                    "type": "evidence",
+                    "strength": 0.0
+                  }
+                ],
+                "meets_evidence_gate": false,
+                "insufficient_signal": true,
+                "sporadic_gates_provenance": {
+                  "germline_status": "positive",
+                  "level": "L1",
+                  "gates_applied": [
+                    "CONFIDENCE_CAP_L2"
+                  ],
+                  "efficacy_delta": 0.0,
+                  "confidence_delta": 0.0,
+                  "rationale": [
+                    {
+                      "gate": "CONFIDENCE_CAP_L2",
+                      "verdict": "NO_CAP",
+                      "cap": null,
+                      "level": "L1",
+                      "completeness": 0.55,
+                      "original_confidence": 0.53,
+                      "capped_confidence": 0.53,
+                      "reason": "Level 1 data (completeness=0.55) → no confidence cap applied"
+                    }
+                  ]
+                },
+                "label_status": "UNKNOWN",
+                "ruo_reasons": [
+                  "unknown-label",
+                  "no-citations",
+                  "low-evidence"
+                ],
+                "ruo_reason": "unknown-label",
+                "clinical_band": "E (Theoretical)",
+                "final_score": 0.12
+              },
+              {
+                "name": "olaparib",
+                "moa": "PARP inhibitor",
+                "efficacy_score": 0.12,
+                "confidence": 0.43,
+                "evidence_tier": "insufficient",
+                "badges": [],
+                "evidence_strength": 0.0,
+                "citations": [],
+                "citations_count": 0,
+                "clinvar": {
+                  "classification": null,
+                  "review_status": null,
+                  "prior": 0.0
+                },
+                "evidence_manifest": {
+                  "pubmed_query": null,
+                  "citations": [],
+                  "clinvar": {
+                    "classification": null,
+                    "review_status": null
+                  }
+                },
+                "insights": {
+                  "functionality": 0.0,
+                  "chromatin": 0.0,
+                  "essentiality": 0.0,
+                  "regulatory": 0.0
+                },
+                "rationale": [
+                  {
+                    "type": "sequence",
+                    "value": 0.0001,
+                    "percentile": 0.8
+                  },
+                  {
+                    "type": "pathway",
+                    "percentile": 0.0,
+                    "primary_pathway": "tp53",
+                    "breakdown": {
+                      "tp53": 0.4,
+                      "ras_mapk": 0.0,
+                      "ddr": 0.0,
+                      "pi3k": 0.0,
+                      "vegf": 0.0,
+                      "io": 0.0
+                    }
+                  },
+                  {
+                    "type": "evidence",
+                    "strength": 0.0
+                  }
+                ],
+                "meets_evidence_gate": false,
+                "insufficient_signal": true,
+                "sporadic_gates_provenance": {
+                  "germline_status": "positive",
+                  "level": "L1",
+                  "gates_applied": [
+                    "PARP_GERMLINE",
+                    "CONFIDENCE_CAP_L2"
+                  ],
+                  "efficacy_delta": 0.0,
+                  "confidence_delta": 0.0,
+                  "rationale": [
+                    {
+                      "gate": "PARP_GERMLINE",
+                      "verdict": "FULL_EFFECT",
+                      "penalty": 1.0,
+                      "reason": "Germline BRCA1/2 positive → PARP inhibitor appropriate"
+                    },
+                    {
+                      "gate": "CONFIDENCE_CAP_L2",
+                      "verdict": "NO_CAP",
+                      "cap": null,
+                      "level": "L1",
+                      "completeness": 0.55,
+                      "original_confidence": 0.43,
+                      "capped_confidence": 0.43,
+                      "reason": "Level 1 data (completeness=0.55) → no confidence cap applied"
+                    }
+                  ]
+                },
+                "label_status": "UNKNOWN",
+                "ruo_reasons": [
+                  "unknown-label",
+                  "no-citations",
+                  "low-evidence"
+                ],
+                "ruo_reason": "unknown-label",
+                "clinical_band": "E (Theoretical)",
+                "final_score": 0.12
+              },
+              {
+                "name": "niraparib",
+                "moa": "PARP inhibitor",
+                "efficacy_score": 0.12,
+                "confidence": 0.43,
+                "evidence_tier": "insufficient",
+                "badges": [],
+                "evidence_strength": 0.0,
+                "citations": [],
+                "citations_count": 0,
+                "clinvar": {
+                  "classification": null,
+                  "review_status": null,
+                  "prior": 0.0
+                },
+                "evidence_manifest": {
+                  "pubmed_query": null,
+                  "citations": [],
+                  "clinvar": {
+                    "classification": null,
+                    "review_status": null
+                  }
+                },
+                "insights": {
+                  "functionality": 0.0,
+                  "chromatin": 0.0,
+                  "essentiality": 0.0,
+                  "regulatory": 0.0
+                },
+                "rationale": [
+                  {
+                    "type": "sequence",
+                    "value": 0.0001,
+                    "percentile": 0.8
+                  },
+                  {
+                    "type": "pathway",
+                    "percentile": 0.0,
+                    "primary_pathway": "tp53",
+                    "breakdown": {
+                      "tp53": 0.4,
+                      "ras_mapk": 0.0,
+                      "ddr": 0.0,
+                      "pi3k": 0.0,
+                      "vegf": 0.0,
+                      "io": 0.0
+                    }
+                  },
+                  {
+                    "type": "evidence",
+                    "strength": 0.0
+                  }
+                ],
+                "meets_evidence_gate": false,
+                "insufficient_signal": true,
+                "sporadic_gates_provenance": {
+                  "germline_status": "positive",
+                  "level": "L1",
+                  "gates_applied": [
+                    "PARP_GERMLINE",
+                    "CONFIDENCE_CAP_L2"
+                  ],
+                  "efficacy_delta": 0.0,
+                  "confidence_delta": 0.0,
+                  "rationale": [
+                    {
+                      "gate": "PARP_GERMLINE",
+                      "verdict": "FULL_EFFECT",
+                      "penalty": 1.0,
+                      "reason": "Germline BRCA1/2 positive → PARP inhibitor appropriate"
+                    },
+                    {
+                      "gate": "CONFIDENCE_CAP_L2",
+                      "verdict": "NO_CAP",
+                      "cap": null,
+                      "level": "L1",
+                      "completeness": 0.55,
+                      "original_confidence": 0.43,
+                      "capped_confidence": 0.43,
+                      "reason": "Level 1 data (completeness=0.55) → no confidence cap applied"
+                    }
+                  ]
+                },
+                "label_status": "UNKNOWN",
+                "ruo_reasons": [
+                  "unknown-label",
+                  "no-citations",
+                  "low-evidence"
+                ],
+                "ruo_reason": "unknown-label",
+                "clinical_band": "E (Theoretical)",
+                "final_score": 0.12
+              },
+              {
+                "name": "rucaparib",
+                "moa": "PARP inhibitor",
+                "efficacy_score": 0.12,
+                "confidence": 0.43,
+                "evidence_tier": "insufficient",
+                "badges": [],
+                "evidence_strength": 0.0,
+                "citations": [],
+                "citations_count": 0,
+                "clinvar": {
+                  "classification": null,
+                  "review_status": null,
+                  "prior": 0.0
+                },
+                "evidence_manifest": {
+                  "pubmed_query": null,
+                  "citations": [],
+                  "clinvar": {
+                    "classification": null,
+                    "review_status": null
+                  }
+                },
+                "insights": {
+                  "functionality": 0.0,
+                  "chromatin": 0.0,
+                  "essentiality": 0.0,
+                  "regulatory": 0.0
+                },
+                "rationale": [
+                  {
+                    "type": "sequence",
+                    "value": 0.0001,
+                    "percentile": 0.8
+                  },
+                  {
+                    "type": "pathway",
+                    "percentile": 0.0,
+                    "primary_pathway": "tp53",
+                    "breakdown": {
+                      "tp53": 0.4,
+                      "ras_mapk": 0.0,
+                      "ddr": 0.0,
+                      "pi3k": 0.0,
+                      "vegf": 0.0,
+                      "io": 0.0
+                    }
+                  },
+                  {
+                    "type": "evidence",
+                    "strength": 0.0
+                  }
+                ],
+                "meets_evidence_gate": false,
+                "insufficient_signal": true,
+                "sporadic_gates_provenance": {
+                  "germline_status": "positive",
+                  "level": "L1",
+                  "gates_applied": [
+                    "PARP_GERMLINE",
+                    "CONFIDENCE_CAP_L2"
+                  ],
+                  "efficacy_delta": 0.0,
+                  "confidence_delta": 0.0,
+                  "rationale": [
+                    {
+                      "gate": "PARP_GERMLINE",
+                      "verdict": "FULL_EFFECT",
+                      "penalty": 1.0,
+                      "reason": "Germline BRCA1/2 positive → PARP inhibitor appropriate"
+                    },
+                    {
+                      "gate": "CONFIDENCE_CAP_L2",
+                      "verdict": "NO_CAP",
+                      "cap": null,
+                      "level": "L1",
+                      "completeness": 0.55,
+                      "original_confidence": 0.43,
+                      "capped_confidence": 0.43,
+                      "reason": "Level 1 data (completeness=0.55) → no confidence cap applied"
+                    }
+                  ]
+                },
+                "label_status": "UNKNOWN",
+                "ruo_reasons": [
+                  "unknown-label",
+                  "no-citations",
+                  "low-evidence"
+                ],
+                "ruo_reason": "unknown-label",
+                "clinical_band": "E (Theoretical)",
+                "final_score": 0.12
+              },
+              {
+                "name": "carboplatin",
+                "moa": "platinum alkylating agent",
+                "efficacy_score": 0.12,
+                "confidence": 0.43,
+                "evidence_tier": "insufficient",
+                "badges": [],
+                "evidence_strength": 0.0,
+                "citations": [],
+                "citations_count": 0,
+                "clinvar": {
+                  "classification": null,
+                  "review_status": null,
+                  "prior": 0.0
+                },
+                "evidence_manifest": {
+                  "pubmed_query": null,
+                  "citations": [],
+                  "clinvar": {
+                    "classification": null,
+                    "review_status": null
+                  }
+                },
+                "insights": {
+                  "functionality": 0.0,
+                  "chromatin": 0.0,
+                  "essentiality": 0.0,
+                  "regulatory": 0.0
+                },
+                "rationale": [
+                  {
+                    "type": "sequence",
+                    "value": 0.0001,
+                    "percentile": 0.8
+                  },
+                  {
+                    "type": "pathway",
+                    "percentile": 0.0,
+                    "primary_pathway": "tp53",
+                    "breakdown": {
+                      "tp53": 0.4,
+                      "ras_mapk": 0.0,
+                      "ddr": 0.0,
+                      "pi3k": 0.0,
+                      "vegf": 0.0,
+                      "io": 0.0
+                    }
+                  },
+                  {
+                    "type": "evidence",
+                    "strength": 0.0
+                  }
+                ],
+                "meets_evidence_gate": false,
+                "insufficient_signal": true,
+                "sporadic_gates_provenance": {
+                  "germline_status": "positive",
+                  "level": "L1",
+                  "gates_applied": [
+                    "OVARIAN_PATHWAY_GATES",
+                    "CONFIDENCE_CAP_L2"
+                  ],
+                  "efficacy_delta": 0.0,
+                  "confidence_delta": 0.0,
+                  "rationale": [
+                    {
+                      "gate": "OVARIAN_PATHWAY_GATES",
+                      "verdict": "NO_CHANGE",
+                      "multiplier": 1.0,
+                      "reason": "No expression data available for pathway-based prediction. Relying on HRD-based PARP gates (see PARP_GERMLINE/PARP_HRD_RESCUE gates)."
+                    },
+                    {
+                      "gate": "CONFIDENCE_CAP_L2",
+                      "verdict": "NO_CAP",
+                      "cap": null,
+                      "level": "L1",
+                      "completeness": 0.55,
+                      "original_confidence": 0.43,
+                      "capped_confidence": 0.43,
+                      "reason": "Level 1 data (completeness=0.55) → no confidence cap applied"
+                    }
+                  ]
+                },
+                "label_status": "UNKNOWN",
+                "ruo_reasons": [
+                  "unknown-label",
+                  "no-citations",
+                  "low-evidence"
+                ],
+                "ruo_reason": "unknown-label",
+                "clinical_band": "E (Theoretical)",
+                "final_score": 0.12
+              }
+            ],
+            "pathway_scores": {
+              "tp53": 0.4,
+              "ddr": null,
+              "mapk": null,
+              "pi3k": null,
+              "vegf": null,
+              "her2": null,
+              "io": null,
+              "efflux": null,
+              "rss": null
+            },
+            "pathway_scores_meta": {
+              "normalized": true,
+              "defaulted": true,
+              "defaulted_keys": [
+                "ddr",
+                "mapk",
+                "pi3k",
+                "vegf",
+                "her2",
+                "io",
+                "efflux",
+                "rss"
+              ],
+              "upstream_keys_present": [
+                "tp53"
+              ],
+              "normalization_version": "v1-null-defaults"
+            },
+            "provenance": {
+              "run_id": "16ee821b-0348-4143-84cb-9a63d8542fc8",
+              "profile": "baseline",
+              "cache": "miss",
+              "flags": {
+                "fusion_active": false,
+                "evo_use_delta_only": true,
+                "evidence_enabled": true,
+                "confidence_v2": false
+              },
+              "sequence_scoring": {
+                "engine_used": "evo2",
+                "true_scoring_required": false,
+                "allow_heuristic_sequence": true,
+                "heuristic_used": false,
+                "variants_sent_to_engine": [
+                  {
+                    "gene": "PDGFRA",
+                    "chrom": "4",
+                    "pos": 54280422,
+                    "ref": "T",
+                    "alt": "C",
+                    "build": "GRCh38",
+                    "consequence": "missense_variant"
+                  },
+                  {
+                    "gene": "TP53",
+                    "chrom": "17",
+                    "pos": 7577120,
+                    "ref": "G",
+                    "alt": "A",
+                    "build": null,
+                    "consequence": "missense_variant"
+                  }
+                ],
+                "variants_excluded": [
+                  {
+                    "variant": {
+                      "gene": "MBD4",
+                      "chrom": "3",
+                      "pos": 129433949,
+                      "ref": "AT",
+                      "alt": "A"
+                    },
+                    "reason": "non_snv_requires_normalization"
+                  }
+                ],
+                "mode": "evo2_adaptive",
+                "count": 2
+              },
+              "primary_variant_selection": {
+                "strategy": "max(calibrated_seq_percentile, sequence_disruption)",
+                "primary_gene": "TP53",
+                "primary_hgvs_p": "p.R175H"
+              },
+              "insights": "skipped_fast_mode",
+              "low_confidence_filter": "skipped_by_request_option",
+              "confidence_threshold_applied": 0.3,
+              "filtered_count": 11,
+              "rejected_count": 0,
+              "confidence_breakdown": {
+                "top_drug": "paclitaxel",
+                "confidence": 0.6,
+                "tier": "insufficient",
+                "badges": [
+                  "PathwayAligned"
+                ],
+                "rationale": [
+                  {
+                    "type": "sequence",
+                    "value": 0.0001,
+                    "percentile": 0.8
+                  },
+                  {
+                    "type": "pathway",
+                    "percentile": 1.0,
+                    "primary_pathway": "tp53",
+                    "breakdown": {
+                      "tp53": 0.4,
+                      "ras_mapk": 0.0,
+                      "ddr": 0.0,
+                      "pi3k": 0.0,
+                      "vegf": 0.0,
+                      "io": 0.0
+                    }
+                  },
+                  {
+                    "type": "evidence",
+                    "strength": 0.0
+                  }
+                ],
+                "S_contribution": 0.8,
+                "P_contribution": 1.0,
+                "E_contribution": 0.0,
+                "pathway_disruption": {
+                  "tp53": 0.4
+                }
+              },
+              "lifts": {
+                "ablation_mode": "SPE"
+              },
+              "variant_resolution": {
+                "resolved_count": 3,
+                "attempted_count": 3,
+                "receipts": [
+                  {
+                    "gene": "MBD4",
+                    "hgvs": "MBD4:c.1293delA",
+                    "ok": true,
+                    "receipt": {
+                      "ok": true,
+                      "status": 200,
+                      "url": "https://rest.ensembl.org/vep/human/hgvs/MBD4%3Ac.1293delA?content-type=application/json",
+                      "response": {
+                        "assembly": "GRCh38",
+                        "chrom": "3",
+                        "pos": 129433950,
+                        "ref": "T",
+                        "alt": "-",
+                        "most_severe_consequence": "frameshift_variant",
+                        "allele_string": "A/-",
+                        "normalization": {
+                          "needs_left_padding_for_deletion": true,
+                          "reference_base": "T",
+                          "strand_complement_applied": true,
+                          "original_ref": "A",
+                          "original_alt": "-"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "gene": "MBD4",
+                    "hgvs": "MBD4:c.1293delA",
+                    "ok": true,
+                    "note": "left_pad_deletion",
+                    "receipt": {
+                      "ok": true,
+                      "new_variant": {
+                        "chrom": "3",
+                        "pos": 129433949,
+                        "ref": "AT",
+                        "alt": "A",
+                        "assembly": "GRCh38"
+                      },
+                      "receipt": {
+                        "left_base": {
+                          "ok": true,
+                          "status": 200,
+                          "url": "https://rest.ensembl.org/sequence/region/human/3:129433949..129433949?coord_system_version=GRCh38",
+                          "response": {
+                            "seq": "A"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "gene": "PDGFRA",
+                    "hgvs": "PDGFRA:c.2263T>C",
+                    "ok": true,
+                    "receipt": {
+                      "ok": true,
+                      "status": 200,
+                      "url": "https://rest.ensembl.org/vep/human/hgvs/PDGFRA%3Ac.2263T%3EC?content-type=application/json",
+                      "response": {
+                        "assembly": "GRCh38",
+                        "chrom": "4",
+                        "pos": 54280422,
+                        "ref": "T",
+                        "alt": "C",
+                        "most_severe_consequence": "missense_variant",
+                        "allele_string": "T/C",
+                        "normalization": {
+                          "needs_left_padding_for_deletion": false,
+                          "reference_base": "T"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "honesty": {
+              "sequence_engine": "evo2",
+              "heuristic_sequence_used": false,
+              "evidence_status": "model_scored",
+              "allow_heuristic_was_set": true,
+              "drug_count": 11,
+              "ruo_disclaimer": "Sequence engine scored — results are model-derived, RUO."
+            }
+          },
+          "resistance_gate": {
+            "status": "EVALUATED",
+            "risk_level": "NOT_APPLICABLE",
+            "resistance_probability": 0.0,
+            "therapy_fit_modifier": 1.0,
+            "signals_detected_count": 0,
+            "signals": [],
+            "boardroom_outcome": {
+              "outcome": "A",
+              "label": "Convergent Evidence (Go-Forward)",
+              "summary": "Mechanistic vulnerability signal (SL) plus independent model-derived resistance screen did not flag intrinsic resistance. Mechanism-driven therapy/trial selection is more defensible.",
+              "evidence": {
+                "diamond_corroboration": false,
+                "mfap4_intrinsic_risk": false,
+                "resistance_probability": 0.0
+              },
+              "action": "Proceed with SL-guided therapy/trial selection."
+            },
+            "drug_class_used": "unknown",
+            "ca125_context_passed": false,
+            "resistance_risk_policy_ran": false,
+            "kill_chain_state": "awaiting"
+          },
+          "synthetic_lethality": {
+            "patient_id": null,
+            "disease": "ovarian_cancer",
+            "synthetic_lethality_detected": true,
+            "double_hit_description": "MBD4 + top dependency context (matrix-gated)",
+            "essentiality_scores": [
+              {
+                "gene": "MBD4",
+                "essentiality_score": 0.65,
+                "essentiality_level": "moderate",
+                "sequence_disruption": 0.0,
+                "pathway_impact": "['BER'] NON-FUNCTIONAL",
+                "functional_consequence": "Frameshift → premature stop codon → loss of function",
+                "flags": {
+                  "truncation": true,
+                  "frameshift": true,
+                  "hotspot": false,
+                  "missense": false,
+                  "splice": false,
+                  "evo2_called": false,
+                  "evo2_receipt": {
+                    "ok": false,
+                    "engine": "evo_proxy",
+                    "reason": "missing_allele_complete_fields",
+                    "request": {
+                      "chrom": null,
+                      "pos": null,
+                      "ref": null,
+                      "alt": null,
+                      "assembly": "GRCh38"
+                    },
+                    "response": null,
+                    "error": null
+                  }
+                },
+                "evo2_raw_delta": 0.0,
+                "evo2_window_used": 0,
+                "confidence": 0.7
+              },
+              {
+                "gene": "PDGFRA",
+                "essentiality_score": 0.35,
+                "essentiality_level": "low",
+                "sequence_disruption": 0.0,
+                "pathway_impact": "Unknown pathway status uncertain",
+                "functional_consequence": "Variant effect uncertain",
+                "flags": {
+                  "truncation": false,
+                  "frameshift": false,
+                  "hotspot": false,
+                  "missense": false,
+                  "splice": false,
+                  "evo2_called": false,
+                  "evo2_receipt": {
+                    "ok": false,
+                    "engine": "evo_proxy",
+                    "reason": "missing_allele_complete_fields",
+                    "request": {
+                      "chrom": null,
+                      "pos": null,
+                      "ref": null,
+                      "alt": null,
+                      "assembly": "GRCh38"
+                    },
+                    "response": null,
+                    "error": null
+                  }
+                },
+                "evo2_raw_delta": 0.0,
+                "evo2_window_used": 0,
+                "confidence": 0.5
+              },
+              {
+                "gene": "TP53",
+                "essentiality_score": 0.55,
+                "essentiality_level": "moderate",
+                "sequence_disruption": 0.0,
+                "pathway_impact": "['CHECKPOINT'] COMPROMISED (hotspot)",
+                "functional_consequence": "Hotspot mutation → known pathogenic",
+                "flags": {
+                  "truncation": false,
+                  "frameshift": false,
+                  "hotspot": true,
+                  "missense": false,
+                  "splice": false,
+                  "evo2_called": false,
+                  "evo2_receipt": {
+                    "ok": false,
+                    "engine": "evo_proxy",
+                    "request": {
+                      "chrom": "17",
+                      "pos": 7577120,
+                      "ref": "G",
+                      "alt": "A",
+                      "assembly": "GRCh38"
+                    },
+                    "response": null,
+                    "http_status": null,
+                    "error": "All connection attempts failed"
+                  }
+                },
+                "evo2_raw_delta": 0.0,
+                "evo2_window_used": 0,
+                "confidence": 0.6
+              }
+            ],
+            "broken_pathways": [],
+            "essential_pathways": [],
+            "recommended_drugs": [
+              {
+                "drug_name": "Cytidine Analogs (gemcitabine, cytarabine)",
+                "drug_class": "cytidine_analogs",
+                "target_pathway": "BER substrate accumulation in MBD4-LOF (dU:dG mispairs). Gemcitabine / cytarabine triphosphate incorporation into BER repair patches stalls replication. MBD4-specific: rescue by WT-MBD4 but not cataly",
+                "confidence": 0.88,
+                "mechanism": "BER substrate accumulation in MBD4-LOF (dU:dG mispairs). Gemcitabine / cytarabine triphosphate incorporation into BER repair patches stalls replication. MBD4-specific: rescue by WT-MBD4 but not catalytic-dead mutant.",
+                "fda_approved": false,
+                "approval_status": "Investigational",
+                "clinical_context": "Evidence matrix axis supplement (RUO); core pairs did not cover this axis.",
+                "evidence_tier": "Supported",
+                "rationale": [
+                  "BER substrate accumulation in MBD4-LOF (dU:dG mispairs). Gemcitabine / cytarabine triphosphate incorporation into BER repair patches stalls replication. MBD4-specific: rescue by WT-MBD4 but not catalytic-dead mutant.",
+                  "Validated SL axis. Positive evidence from: expression, in_vitro, in_vivo, clinical."
+                ],
+                "matrix_axis": "cytidine_analogs",
+                "override_reason": null
+              },
+              {
+                "drug_name": "PARP Inhibitors (olaparib, niraparib, talazoparib, rucaparib)",
+                "drug_class": "parp_inhibitors",
+                "target_pathway": "Pan-cancer screens and expression–sensitivity correlates link PARP pathway activity or PARP1 levels to drug response in HRD/DDR contexts; those signals are not MBD4-specific. Separately, some preclini",
+                "confidence": 0.56,
+                "mechanism": "Pan-cancer screens and expression–sensitivity correlates link PARP pathway activity or PARP1 levels to drug response in HRD/DDR contexts; those signals are not MBD4-specific. Separately, some preclinical work discusses BER load or RNF144A–PARP1 routing as a hypothetical sensitization narrative in MBD4-deficient models — a distinct layer, not interchangeable with pan-tumor PARP1 biomarker claims.",
+                "fda_approved": false,
+                "approval_status": "Investigational",
+                "clinical_context": "Evidence matrix axis supplement (RUO); core pairs did not cover this axis.",
+                "evidence_tier": "Mechanistic",
+                "rationale": [
+                  "Pan-cancer screens and expression–sensitivity correlates link PARP pathway activity or PARP1 levels to drug response in HRD/DDR contexts; those signals are not MBD4-specific. Separately, some preclinical work discusses BER load or RNF144A–PARP1 routing as a hypothetical sensitization narrative in MBD4-deficient models — a distinct layer, not interchangeable with pan-tumor PARP1 biomarker claims.",
+                  "PARP Inhibitors (olaparib, niraparib, talazoparib, rucaparib): 0 positive modalities. Evidence level: Mechanistic-only. Tier: Mechanistic candidate only."
+                ],
+                "matrix_axis": "parp_inhibitors",
+                "override_reason": null
+              },
+              {
+                "drug_name": "ATR / WEE1 Inhibitors (berzosertib, adavosertib, ceralasertib)",
+                "drug_class": "atr_wee1",
+                "target_pathway": "BER stress → ssDNA accumulation at stalled forks → ATR kinase activation. ATR/CHK1 and WEE1/CDK1 checkpoints are required to resolve replication stress. MBD4-LOF BER load may create constitutive low-l",
+                "confidence": 0.56,
+                "mechanism": "BER stress → ssDNA accumulation at stalled forks → ATR kinase activation. ATR/CHK1 and WEE1/CDK1 checkpoints are required to resolve replication stress. MBD4-LOF BER load may create constitutive low-level replication stress, sensitizing to checkpoint abrogation especially in TP53-loss context.",
+                "fda_approved": false,
+                "approval_status": "Investigational",
+                "clinical_context": "Evidence matrix axis supplement (RUO); core pairs did not cover this axis.",
+                "evidence_tier": "Mechanistic",
+                "rationale": [
+                  "BER stress → ssDNA accumulation at stalled forks → ATR kinase activation. ATR/CHK1 and WEE1/CDK1 checkpoints are required to resolve replication stress. MBD4-LOF BER load may create constitutive low-level replication stress, sensitizing to checkpoint abrogation especially in TP53-loss context.",
+                  "ATR / WEE1 Inhibitors (berzosertib, adavosertib, ceralasertib): 1 positive modalities. Evidence level: Mechanistic-only. Tier: Mechanistic candidate only. RS promotion requires base tier Mechanistic + high RS score + at least one POSITIVE CRISPR or pharmacologic screen modality."
+                ],
+                "matrix_axis": "atr_wee1",
+                "override_reason": null
+              },
+              {
+                "drug_name": "Immunotherapy / Checkpoint Inhibitors (PD-1/PD-L1)",
+                "drug_class": "immunotherapy",
+                "target_pathway": "MBD4 LOF → CpG→TpG hypermutator clock → highest TMB in many tumor types. High TMB → increased neoantigen burden → IO response. Pan-cancer TMB-high FDA approval supports pembrolizumab use. Not a direct",
+                "confidence": 0.56,
+                "mechanism": "MBD4 LOF → CpG→TpG hypermutator clock → highest TMB in many tumor types. High TMB → increased neoantigen burden → IO response. Pan-cancer TMB-high FDA approval supports pembrolizumab use. Not a direct SL axis; relies on hypermutation → neoantigens mechanism.",
+                "fda_approved": false,
+                "approval_status": "Investigational",
+                "clinical_context": "Evidence matrix axis supplement (RUO); core pairs did not cover this axis.",
+                "evidence_tier": "Mechanistic",
+                "rationale": [
+                  "MBD4 LOF → CpG→TpG hypermutator clock → highest TMB in many tumor types. High TMB → increased neoantigen burden → IO response. Pan-cancer TMB-high FDA approval supports pembrolizumab use. Not a direct SL axis; relies on hypermutation → neoantigens mechanism.",
+                  "Immunotherapy / Checkpoint Inhibitors (PD-1/PD-L1): 1 positive modalities. Evidence level: Mechanistic-only. Tier: Mechanistic candidate only."
+                ],
+                "matrix_axis": "immunotherapy",
+                "override_reason": null
+              }
+            ],
+            "suggested_therapy": "Cytidine Analogs (gemcitabine, cytarabine)",
+            "explanation": null,
+            "calculation_time_ms": 2199,
+            "evo2_used": false,
+            "provenance": {
+              "engine": "sl_v3_five_layer_matrix_bridge:v4.3.1",
+              "source": "multimodal",
+              "ruo": true,
+              "disclaimer": "Research use only. Not validated for clinical decision-making.",
+              "status": "success",
+              "primary_sl_gene": "MBD4",
+              "cancer_type": "ovary",
+              "evo2": {
+                "evo2_used": false,
+                "reason": "patient_variant_merge_no_successful_evo_delta",
+                "v2_style_evo2_receipt": "serialized_per_attempt_in_patient_variant_scoring_attempts",
+                "note": "Merge ran; see patient_variant_scoring_attempts (missing coords, non-200, or null min_delta).",
+                "patient_variant_scoring_attempts": [
+                  {
+                    "gene": "MBD4",
+                    "ok": false,
+                    "http_status": null,
+                    "reason": "missing_allele_complete_fields",
+                    "evo2_receipt": {
+                      "ok": false,
+                      "engine": "evo_proxy",
+                      "reason": "missing_allele_complete_fields",
+                      "request": {
+                        "chrom": null,
+                        "pos": null,
+                        "ref": null,
+                        "alt": null,
+                        "assembly": "GRCh38"
+                      },
+                      "response": null,
+                      "error": null
+                    }
+                  },
+                  {
+                    "gene": "PDGFRA",
+                    "ok": false,
+                    "http_status": null,
+                    "reason": "missing_allele_complete_fields",
+                    "evo2_receipt": {
+                      "ok": false,
+                      "engine": "evo_proxy",
+                      "reason": "missing_allele_complete_fields",
+                      "request": {
+                        "chrom": null,
+                        "pos": null,
+                        "ref": null,
+                        "alt": null,
+                        "assembly": "GRCh38"
+                      },
+                      "response": null,
+                      "error": null
+                    }
+                  },
+                  {
+                    "gene": "TP53",
+                    "ok": false,
+                    "http_status": null,
+                    "reason": "All connection attempts failed",
+                    "evo2_receipt": {
+                      "ok": false,
+                      "engine": "evo_proxy",
+                      "request": {
+                        "chrom": "17",
+                        "pos": 7577120,
+                        "ref": "G",
+                        "alt": "A",
+                        "assembly": "GRCh38"
+                      },
+                      "response": null,
+                      "http_status": null,
+                      "error": "All connection attempts failed"
+                    }
+                  }
+                ]
+              },
+              "fallback_reason": "empty_core_no_sl_partners_no_gene_drug_pairs",
+              "multimodal_entrypoint": "run_multimodal_analysis",
+              "evidence_matrix": {
+                "query_gene": "MBD4",
+                "cancer_type": "ovary",
+                "depmap_release": "unknown",
+                "rows": [
+                  {
+                    "axis": "cytidine_analogs",
+                    "axis_label": "Cytidine Analogs (gemcitabine, cytarabine)",
+                    "mechanism": "BER substrate accumulation in MBD4-LOF (dU:dG mispairs). Gemcitabine / cytarabine triphosphate incorporation into BER repair patches stalls replication. MBD4-specific: rescue by WT-MBD4 but not catalytic-dead mutant.",
+                    "crispr": {
+                      "modality": "crispr_dependency",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "CRISPR analysis not run or no data available.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "expression": {
+                      "modality": "expression_association",
+                      "status": "positive",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "MBD4 LOF causes BER substrate accumulation (dU:dG mispairs). Gemcitabine and cytarabine exploit this: dFdCTP/araC incorporation into dU-rich repair patches stalls replication. Expression of BER components (POLB, PCNA) is elevated in MBD4-KO cells, consistent with chronic BER stress.",
+                      "pmids": [
+                        "35428381"
+                      ],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "prism": {
+                      "modality": "prism_pharmacologic",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "PRISM data not loaded (data not available in this deployment).",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "gdsc": {
+                      "modality": "gdsc_pharmacologic",
+                      "status": "negative",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "No significant GDSC signal for Cytidine Analogs (gemcitabine, cytarabine) in MBD4-LOF vs WT.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "in_vitro": {
+                      "modality": "in_vitro_functional",
+                      "status": "positive",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": 3,
+                      "n_wt": 3,
+                      "delta_auc": null,
+                      "delta_ic50_log2": -2.3,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "MBD4-KO isogenic cell lines show ~5× increased sensitivity to gemcitabine and cytarabine vs WT in rescue experiments. Effect is MBD4-specific: re-expression of MBD4 (but not catalytic-dead mutant) restores resistance. Two independent isogenic systems validated.",
+                      "pmids": [
+                        "35428381"
+                      ],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "in_vivo": {
+                      "modality": "in_vivo_pdx",
+                      "status": "positive",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "MBD4-deficient uveal melanoma PDX derived from the index patient showed dramatic, durable response to gemcitabine monotherapy. PDX response mirrors patient response; tumor regression observed. WT-MBD4 PDX controls did not respond.",
+                      "pmids": [
+                        "35428381"
+                      ],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "clinical": {
+                      "modality": "clinical",
+                      "status": "positive",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "Index patient (uveal melanoma, MBD4 germline LOF): dramatic, durable response to gemcitabine — exceptional for uveal melanoma, which is normally chemo-refractory. Response mirrors PDX and isogenic model data. Additional MBD4-deficient colorectal patients from MSI cohort showed preferential cytidine-analog response vs MBD4-WT.",
+                      "pmids": [
+                        "35428381"
+                      ],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "overall_evidence_level": "High",
+                    "recommendation_tier": "Validated SL therapeutic lever",
+                    "tier_fusion_rule_id": "base_validated_strong_clinical_n_pos_ge_3",
+                    "tier_fusion_rule_detail": "n_positive_modalities=4 (only ModalityStatus.POSITIVE counts; MISSING/MIXED/NEGATIVE do not). weighted_modality_score=9.00. crispr=missing, prism=missing, gdsc=negative, expression=positive, in_vitro=positive, clinical=positive, in_vivo=positive. Branch: strong_clinical and n_positive≥3.",
+                    "mechanistic_hypothesis_note": "Differentiation: `mechanism` and narrative `summary` fields describe biology or literature; they do not imply ModalityStatus.POSITIVE unless the corresponding modality cell is `positive`.",
+                    "bridge_recommended_drugs_policy": "eligible_matrix_positive_tier",
+                    "interpretation": "Validated SL axis. Positive evidence from: expression, in_vitro, in_vivo, clinical.",
+                    "crispr_pharmacologic_agreement": "insufficient_data"
+                  },
+                  {
+                    "axis": "parp_inhibitors",
+                    "axis_label": "PARP Inhibitors (olaparib, niraparib, talazoparib, rucaparib)",
+                    "mechanism": "Pan-cancer screens and expression–sensitivity correlates link PARP pathway activity or PARP1 levels to drug response in HRD/DDR contexts; those signals are not MBD4-specific. Separately, some preclinical work discusses BER load or RNF144A–PARP1 routing as a hypothetical sensitization narrative in MBD4-deficient models — a distinct layer, not interchangeable with pan-tumor PARP1 biomarker claims.",
+                    "crispr": {
+                      "modality": "crispr_dependency",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "CRISPR analysis not run or no data available.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "expression": {
+                      "modality": "expression_association",
+                      "status": "mixed",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "Large-scale and pan-tumor analyses associate PARP1 expression or PARP inhibitor sensitivity with DDR/HRD-related contexts; those patterns are not defined as MBD4-specific biomarkers. For MBD4-deficient tumors, literature discusses BER stress and (in some models) PARP1 or RNF144A–PARP1 regulation as a separate, context-dependent hypothesis — orthogonal to generic PARP1-as-pan-cancer-predictor framing.",
+                      "pmids": [
+                        "35428381"
+                      ],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "prism": {
+                      "modality": "prism_pharmacologic",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "PRISM data not loaded (data not available in this deployment).",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "gdsc": {
+                      "modality": "gdsc_pharmacologic",
+                      "status": "negative",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "No significant GDSC signal for PARP Inhibitors (olaparib, niraparib, talazoparib, rucaparib) in MBD4-LOF vs WT.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "in_vitro": {
+                      "modality": "in_vitro_functional",
+                      "status": "mixed",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "No robust MBD4 isogenic KO/WT synthetic lethality with PARP inhibitors is established in the reviewed literature. RNF144A perturbation models (e.g. BRCA-WT backgrounds) report olaparib sensitization via distinct circuitry; those findings are not receipts for MBD4-isogenic PARP SL.",
+                      "pmids": [
+                        "35428381"
+                      ],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "in_vivo": {
+                      "modality": "in_vivo_pdx",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "No MBD4-deficient PDX data for PARP inhibitor response.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "clinical": {
+                      "modality": "clinical",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "No published patient-level response data for PARP inhibitors specifically in MBD4-deficient tumors. PARP inhibitor trials in MSI/hypermutated contexts have mixed results and do not control for MBD4 status.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "overall_evidence_level": "Mechanistic-only",
+                    "recommendation_tier": "Mechanistic candidate only",
+                    "tier_fusion_rule_id": "base_fallback_mechanistic_candidate_else_branch",
+                    "tier_fusion_rule_detail": "n_positive_modalities=0 (only ModalityStatus.POSITIVE counts; MISSING/MIXED/NEGATIVE do not). weighted_modality_score=0.20. crispr=missing, prism=missing, gdsc=negative, expression=mixed, in_vitro=mixed, clinical=missing, in_vivo=missing. Applied rule_id=base_fallback_mechanistic_candidate_else_branch → base_tier=Mechanistic candidate only.",
+                    "mechanistic_hypothesis_note": "Differentiation: `mechanism` and narrative `summary` fields describe biology or literature; they do not imply ModalityStatus.POSITIVE unless the corresponding modality cell is `positive`.",
+                    "bridge_recommended_drugs_policy": "eligible_matrix_positive_tier",
+                    "interpretation": "PARP Inhibitors (olaparib, niraparib, talazoparib, rucaparib): 0 positive modalities. Evidence level: Mechanistic-only. Tier: Mechanistic candidate only.",
+                    "crispr_pharmacologic_agreement": "insufficient_data"
+                  },
+                  {
+                    "axis": "atr_wee1",
+                    "axis_label": "ATR / WEE1 Inhibitors (berzosertib, adavosertib, ceralasertib)",
+                    "mechanism": "BER stress → ssDNA accumulation at stalled forks → ATR kinase activation. ATR/CHK1 and WEE1/CDK1 checkpoints are required to resolve replication stress. MBD4-LOF BER load may create constitutive low-level replication stress, sensitizing to checkpoint abrogation especially in TP53-loss context.",
+                    "crispr": {
+                      "modality": "crispr_dependency",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "CRISPR analysis not run or no data available.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "expression": {
+                      "modality": "expression_association",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": null,
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "prism": {
+                      "modality": "prism_pharmacologic",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "PRISM data not loaded (data not available in this deployment).",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "gdsc": {
+                      "modality": "gdsc_pharmacologic",
+                      "status": "positive",
+                      "delta_dep": null,
+                      "p_value": 0.021,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": 14,
+                      "n_wt": 914,
+                      "delta_auc": null,
+                      "delta_ic50_log2": -0.74,
+                      "drug_screen_dataset": "GDSC1",
+                      "stratifier": "MBD4_LOF_vs_WT",
+                      "summary": "GDSC1 pharmacologic stratification: MBD4-LOF cell lines (n=14) show increased sensitivity to ATR inhibitors vs MBD4-WT (n=914). delta_IC50_log2=-0.74, p=0.021. Manuscript-derived quantitative evidence. Supports mechanistic plausibility of BER stress → ATR checkpoint dependency.",
+                      "pmids": [
+                        "internal:crispro-mbd4-atr-gdsc-v1"
+                      ],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "in_vitro": {
+                      "modality": "in_vitro_functional",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "Mechanistically plausible: chronic BER stress in MBD4-LOF → elevated ssDNA at stalled forks → ATR activation. No published MBD4-specific isogenic ATR/WEE1 inhibitor data.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "in_vivo": {
+                      "modality": "in_vivo_pdx",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "No MBD4-specific ATR/WEE1 PDX data.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "clinical": {
+                      "modality": "clinical",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "No MBD4-specific clinical ATR/WEE1 inhibitor data.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "overall_evidence_level": "Mechanistic-only",
+                    "recommendation_tier": "Mechanistic candidate only",
+                    "tier_fusion_rule_id": "base_fallback_mechanistic_candidate_else_branch",
+                    "tier_fusion_rule_detail": "n_positive_modalities=1 (only ModalityStatus.POSITIVE counts; MISSING/MIXED/NEGATIVE do not). weighted_modality_score=2.00. crispr=missing, prism=missing, gdsc=positive, expression=missing, in_vitro=missing, clinical=missing, in_vivo=missing. Applied rule_id=base_fallback_mechanistic_candidate_else_branch → base_tier=Mechanistic candidate only. RS modulation (ATR_WEE1/PKMYT1): no promotion — rs_high=False, has_independent_crispr_or_pharma=True.",
+                    "mechanistic_hypothesis_note": "Differentiation: `mechanism` and narrative `summary` fields describe biology or literature; they do not imply ModalityStatus.POSITIVE unless the corresponding modality cell is `positive`. `in_vitro.summary` may read as mechanistically plausible while status is `missing` — it does not increment n_positive_modalities.",
+                    "bridge_recommended_drugs_policy": "eligible_matrix_positive_tier",
+                    "interpretation": "ATR / WEE1 Inhibitors (berzosertib, adavosertib, ceralasertib): 1 positive modalities. Evidence level: Mechanistic-only. Tier: Mechanistic candidate only. RS promotion requires base tier Mechanistic + high RS score + at least one POSITIVE CRISPR or pharmacologic screen modality.",
+                    "crispr_pharmacologic_agreement": "insufficient_data"
+                  },
+                  {
+                    "axis": "wrn",
+                    "axis_label": "WRN Helicase Inhibitors (VX-803, MRTX1719)",
+                    "mechanism": "WRN SL is established for MSI-H context (reversed replication forks, aberrant AT-rich secondary structures). MBD4 LOF → hypermutator → subset of tumors become MSI-H. WRN SL with MBD4-direct LOF (MSI-independent) not yet validated. Signal may be MSI-H driven, not MBD4-specific.",
+                    "crispr": {
+                      "modality": "crispr_dependency",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "CRISPR analysis not run or no data available.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "expression": {
+                      "modality": "expression_association",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": null,
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "prism": {
+                      "modality": "prism_pharmacologic",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "PRISM data not loaded (data not available in this deployment).",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "gdsc": {
+                      "modality": "gdsc_pharmacologic",
+                      "status": "negative",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "No significant GDSC signal for WRN Helicase Inhibitors (VX-803, MRTX1719) in MBD4-LOF vs WT.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "in_vitro": {
+                      "modality": "in_vitro_functional",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "WRN SL is established for MSI-H context (Chan et al. Nature 2019). MBD4 LOF → hypermutator phenotype → subset of tumors become MSI-H. WRN SL with MBD4-direct LOF (MSI-independent) not established in vitro.",
+                      "pmids": [
+                        "30971823"
+                      ],
+                      "is_confound_flagged": false,
+                      "notes": "Signal is MSI-H specific; MBD4 LOF alone insufficient."
+                    },
+                    "in_vivo": {
+                      "modality": "in_vivo_pdx",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": null,
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "clinical": {
+                      "modality": "clinical",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "No clinical WRN inhibitor data for MBD4-deficient tumors.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "overall_evidence_level": "Negative",
+                    "recommendation_tier": "Not supported / negative",
+                    "tier_fusion_rule_id": "base_zero_positive_modalities_and_non_positive_weighted_score",
+                    "tier_fusion_rule_detail": "n_positive_modalities=0 (only ModalityStatus.POSITIVE counts; MISSING/MIXED/NEGATIVE do not). weighted_modality_score=-1.00. crispr=missing, prism=missing, gdsc=negative, expression=missing, in_vitro=missing, clinical=missing, in_vivo=missing. Applied rule_id=base_zero_positive_modalities_and_non_positive_weighted_score → base_tier=Not supported / negative.",
+                    "mechanistic_hypothesis_note": "Differentiation: `mechanism` and narrative `summary` fields describe biology or literature; they do not imply ModalityStatus.POSITIVE unless the corresponding modality cell is `positive`. `in_vitro.summary` may read as mechanistically plausible while status is `missing` — it does not increment n_positive_modalities.",
+                    "bridge_recommended_drugs_policy": "excluded_negative_tier",
+                    "interpretation": "Pharmacologic screens examined (PRISM=missing, GDSC=negative) but no sensitizing signal found. CRISPR not evaluated. No evidence supports this axis for WRN Helicase Inhibitors (VX-803, MRTX1719).",
+                    "crispr_pharmacologic_agreement": "insufficient_data"
+                  },
+                  {
+                    "axis": "immunotherapy",
+                    "axis_label": "Immunotherapy / Checkpoint Inhibitors (PD-1/PD-L1)",
+                    "mechanism": "MBD4 LOF → CpG→TpG hypermutator clock → highest TMB in many tumor types. High TMB → increased neoantigen burden → IO response. Pan-cancer TMB-high FDA approval supports pembrolizumab use. Not a direct SL axis; relies on hypermutation → neoantigens mechanism.",
+                    "crispr": {
+                      "modality": "crispr_dependency",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "CRISPR analysis not run or no data available.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "expression": {
+                      "modality": "expression_association",
+                      "status": "positive",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "MBD4 LOF → CpG→TpG hypermutator clock → highest TMB in many tumor types. High TMB is associated with IO response (pan-cancer FDA approval). TMB > 10 mut/Mb threshold frequently exceeded in MBD4-deficient tumors.",
+                      "pmids": [
+                        "35428381"
+                      ],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "prism": {
+                      "modality": "prism_pharmacologic",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "PRISM data not loaded (data not available in this deployment).",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "gdsc": {
+                      "modality": "gdsc_pharmacologic",
+                      "status": "negative",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "No significant GDSC signal for Immunotherapy / Checkpoint Inhibitors (PD-1/PD-L1) in MBD4-LOF vs WT.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "in_vitro": {
+                      "modality": "in_vitro_functional",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": null,
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "in_vivo": {
+                      "modality": "in_vivo_pdx",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": null,
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "clinical": {
+                      "modality": "clinical",
+                      "status": "mixed",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "Exceptional IO responses reported in MBD4-germline-LOF uveal melanoma and colorectal cancer cases. Pan-cancer TMB-high FDA approval supports IO use. Not a direct SL axis; relies on hypermutator → TMB mechanism. Small n — case reports, not controlled trial data.",
+                      "pmids": [
+                        "35428381"
+                      ],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "overall_evidence_level": "Mechanistic-only",
+                    "recommendation_tier": "Mechanistic candidate only",
+                    "tier_fusion_rule_id": "base_mechanistic_expression_only_no_crispr_pharma_pos",
+                    "tier_fusion_rule_detail": "n_positive_modalities=1 (only ModalityStatus.POSITIVE counts; MISSING/MIXED/NEGATIVE do not). weighted_modality_score=1.60. crispr=missing, prism=missing, gdsc=negative, expression=positive, in_vitro=missing, clinical=mixed, in_vivo=missing. Applied rule_id=base_mechanistic_expression_only_no_crispr_pharma_pos → base_tier=Mechanistic candidate only.",
+                    "mechanistic_hypothesis_note": "Differentiation: `mechanism` and narrative `summary` fields describe biology or literature; they do not imply ModalityStatus.POSITIVE unless the corresponding modality cell is `positive`.",
+                    "bridge_recommended_drugs_policy": "eligible_matrix_positive_tier",
+                    "interpretation": "Immunotherapy / Checkpoint Inhibitors (PD-1/PD-L1): 1 positive modalities. Evidence level: Mechanistic-only. Tier: Mechanistic candidate only.",
+                    "crispr_pharmacologic_agreement": "insufficient_data"
+                  },
+                  {
+                    "axis": "pkmyt1",
+                    "axis_label": "PKMYT1 Kinase Inhibitors (RP-6306 class)",
+                    "mechanism": "PKMYT1 kinase inhibition (RP-6306 class); replication stress axis. CCNE1-amplified tumors depend on PKMYT1 for S-phase checkpoint regulation. PKMYT1 inhibition causes premature mitotic entry and replication catastrophe in replication-stressed cells.",
+                    "crispr": {
+                      "modality": "crispr_dependency",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "CRISPR analysis not run or no data available.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "expression": {
+                      "modality": "expression_association",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "No MBD4-specific PKMYT1 expression association data.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "prism": {
+                      "modality": "prism_pharmacologic",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "PRISM data not loaded (data not available in this deployment).",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "gdsc": {
+                      "modality": "gdsc_pharmacologic",
+                      "status": "negative",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "No significant GDSC signal for PKMYT1 Kinase Inhibitors (RP-6306 class) in MBD4-LOF vs WT.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "in_vitro": {
+                      "modality": "in_vitro_functional",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "No MBD4-specific PKMYT1 in vitro data.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "in_vivo": {
+                      "modality": "in_vivo_pdx",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": null,
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "clinical": {
+                      "modality": "clinical",
+                      "status": "missing",
+                      "delta_dep": null,
+                      "p_value": null,
+                      "fdr": null,
+                      "effect_size": null,
+                      "n_mut": null,
+                      "n_wt": null,
+                      "delta_auc": null,
+                      "delta_ic50_log2": null,
+                      "drug_screen_dataset": null,
+                      "stratifier": null,
+                      "summary": "No MBD4-specific PKMYT1 clinical data.",
+                      "pmids": [],
+                      "is_confound_flagged": false,
+                      "notes": null
+                    },
+                    "overall_evidence_level": "Negative",
+                    "recommendation_tier": "Not supported / negative",
+                    "tier_fusion_rule_id": "base_zero_positive_modalities_and_non_positive_weighted_score",
+                    "tier_fusion_rule_detail": "n_positive_modalities=0 (only ModalityStatus.POSITIVE counts; MISSING/MIXED/NEGATIVE do not). weighted_modality_score=-1.00. crispr=missing, prism=missing, gdsc=negative, expression=missing, in_vitro=missing, clinical=missing, in_vivo=missing. Applied rule_id=base_zero_positive_modalities_and_non_positive_weighted_score → base_tier=Not supported / negative.",
+                    "mechanistic_hypothesis_note": "Differentiation: `mechanism` and narrative `summary` fields describe biology or literature; they do not imply ModalityStatus.POSITIVE unless the corresponding modality cell is `positive`. `in_vitro.summary` may read as mechanistically plausible while status is `missing` — it does not increment n_positive_modalities.",
+                    "bridge_recommended_drugs_policy": "excluded_negative_tier",
+                    "interpretation": "Pharmacologic screens examined (PRISM=missing, GDSC=negative) but no sensitizing signal found. CRISPR not evaluated. No evidence supports this axis for PKMYT1 Kinase Inhibitors (RP-6306 class). RS promotion requires base tier Mechanistic + high RS score + at least one POSITIVE CRISPR or pharmacologic screen modality.",
+                    "crispr_pharmacologic_agreement": "insufficient_data"
+                  }
+                ],
+                "calibration_axis": "cytidine_analogs",
+                "gold_standard_summary": "=== CALIBRATION GOLD STANDARD: MBD4 + Cytidine Analogs ===\n\nThis is the bar that any SL axis must approach to be classified as 'Validated.'\n\nEvidence across modalities:\n  [IN_VITRO] POSITIVE: MBD4-KO isogenic cell lines show ~5× increased sensitivity to gemcitabine and cytarabine vs WT in rescue experiments. Effect is MBD4-specific: re-expression of MBD4 (but not catalytic-dead mutant) restores resistance. Two independent isogenic systems validated. [PMID: 35428381]\n  [IN_VIVO] POSITIVE: MBD4-deficient uveal melanoma PDX derived from the index patient showed dramatic, durable response to gemcitabine monotherapy. PDX response mirrors patient response; tumor regression observed. WT-MBD4 PDX controls did not respond. [PMID: 35428381]\n  [CLINICAL] POSITIVE: Index patient (uveal melanoma, MBD4 germline LOF): dramatic, durable response to gemcitabine — exceptional for uveal melanoma, which is normally chemo-refractory. Response mirrors PDX and isogenic model data. Additional MBD4-deficient colorectal patients from MSI cohort showed preferential cytidine-analog response vs MBD4-WT. [PMID: 35428381]\n  [EXPRESSION] POSITIVE: MBD4 LOF causes BER substrate accumulation (dU:dG mispairs). Gemcitabine and cytarabine exploit this: dFdCTP/araC incorporation into dU-rich repair patches stalls replication. Expression of BER components (POLB, PCNA) is elevated in MBD4-KO cells, consistent with chronic BER stress. [PMID: 35428381]\n\nPattern that defines 'High Evidence / Validated SL lever':\n  • In vitro isogenic KO/WT with rescue validation\n  • In vivo PDX matching the in vitro sensitivity\n  • At least one patient-level clinical receipt\n  • Mechanistically coherent (not MSI confound alone)\n\nPARP inhibitors: treat pan-cancer PARP1 expression and broad screen–sensitivity correlates (often HRD/DDR–framed) as a separate evidence layer from any MBD4-only BER-adjunct or RNF144A–PARP1 hypothesis; do not merge them into one biomarker story. MBD4-isogenic PARP SL does NOT yet meet the Validated bar.\nATR/WEE1 inhibitors for MBD4 are mechanistically plausible but lack in vitro/in vivo receipts.\nWRN inhibitors are MSI-H context-dependent and should NOT be declared MBD4-direct SL.",
+                "notes": [
+                  "CRISPR analysis not provided; CRISPR cells are all MISSING."
+                ],
+                "rs_score": {
+                  "score": 0.2,
+                  "level": "moderate",
+                  "contributing_features": [
+                    "msi_h",
+                    "mbd4_lof"
+                  ],
+                  "weights_applied": {
+                    "msi_h": 0.15,
+                    "mbd4_lof": 0.05
+                  },
+                  "rationale": "RS features: msi_h + mbd4_lof. Weighted sum = 0.20 → capped score = 0.20 → level = 'moderate'. MBD4 contributes modest RS (0.05 weight); co-mutations required to reach moderate/high."
+                },
+                "combination_vulnerabilities": [
+                  {
+                    "pathway_a": "BER_deficiency",
+                    "pathway_a_gene": "MBD4",
+                    "pathway_b": "checkpoint_inhibition",
+                    "pathway_b_targets": [
+                      "ATR",
+                      "CHK1",
+                      "WEE1"
+                    ],
+                    "convergence_mechanism": "mitotic_catastrophe",
+                    "pathway_a_alone_tier": "Mechanistic candidate only",
+                    "pathway_b_alone_tier": "Mechanistic candidate only",
+                    "combined_tier": null,
+                    "data_gaps": [
+                      "ATR/WEE1 CRISPR dependency in MBD4-LOF lines (DepMap stratification: Chronos Δdep in MBD4-LOF vs WT)",
+                      "Isogenic MBD4-KO + ATRi synergy experiment (Bliss/Loewe combination index in MBD4-KO vs WT)"
+                    ],
+                    "rs_score": 0.2,
+                    "rs_level": "moderate",
+                    "rationale": "MBD4 LOF → BER collapse → 5mC>T lesions → replication fork stalling → ATR/CHK1 checkpoint dependency → if checkpoint inhibited → mitotic catastrophe. RS score = 0.20 (moderate). Data gaps remain before combinatorial tier can be promoted."
+                  }
+                ]
+              },
+              "wire_finalize": true
+            },
+            "gating": {
+              "primary_sl_gene": "MBD4",
+              "request_genes": [
+                "MBD4",
+                "PDGFRA",
+                "TP53"
+              ],
+              "matrix_axis_tiers": {
+                "cytidine_analogs": "Validated SL therapeutic lever",
+                "parp_inhibitors": "Mechanistic candidate only",
+                "atr_wee1": "Mechanistic candidate only",
+                "wrn": "Not supported / negative",
+                "immunotherapy": "Mechanistic candidate only",
+                "pkmyt1": "Not supported / negative"
+              },
+              "negative_tier_literal": "Not supported / negative",
+              "combinatorial_vulnerabilities_n": 1,
+              "core_sl_empty": true,
+              "multimodal_fallback_reason": "empty_core_no_sl_partners_no_gene_drug_pairs",
+              "multimodal_entrypoint": "run_multimodal_analysis"
+            }
+          },
+          "sl_therapy_bridge": {
+            "sl_indicated_drugs": [
+              {
+                "drug_name": "Cytidine Analogs (gemcitabine, cytarabine)",
+                "moa": null,
+                "therapy_class": "UNKNOWN",
+                "sl_rationale": "BER substrate accumulation in MBD4-LOF (dU:dG mispairs). Gemcitabine / cytarabine triphosphate incorporation into BER repair patches stalls replication. MBD4-specific: rescue by WT-MBD4 but not catalytic-dead mutant.",
+                "vulnerability_gene": null,
+                "actionability_tier": "HYPOTHESIS",
+                "policy_decision": "ALLOW",
+                "policy_flags": [],
+                "policy_rationale_short": null
+              },
+              {
+                "drug_name": "PARP Inhibitors (olaparib, niraparib, talazoparib, rucaparib)",
+                "moa": null,
+                "therapy_class": "UNKNOWN",
+                "sl_rationale": "Pan-cancer screens and expression–sensitivity correlates link PARP pathway activity or PARP1 levels to drug response in HRD/DDR contexts; those signals are not MBD4-specific. Separately, some preclinical work discusses BER load or RNF144A–PARP1 routing as a hypothetical sensitization narrative in MBD4-deficient models — a distinct layer, not interchangeable with pan-tumor PARP1 biomarker claims.",
+                "vulnerability_gene": null,
+                "actionability_tier": "HYPOTHESIS",
+                "policy_decision": "ALLOW",
+                "policy_flags": [],
+                "policy_rationale_short": null
+              },
+              {
+                "drug_name": "ATR / WEE1 Inhibitors (berzosertib, adavosertib, ceralasertib)",
+                "moa": null,
+                "therapy_class": "UNKNOWN",
+                "sl_rationale": "BER stress → ssDNA accumulation at stalled forks → ATR kinase activation. ATR/CHK1 and WEE1/CDK1 checkpoints are required to resolve replication stress. MBD4-LOF BER load may create constitutive low-level replication stress, sensitizing to checkpoint abrogation especially in TP53-loss context.",
+                "vulnerability_gene": null,
+                "actionability_tier": "HYPOTHESIS",
+                "policy_decision": "ALLOW",
+                "policy_flags": [],
+                "policy_rationale_short": null
+              },
+              {
+                "drug_name": "Immunotherapy / Checkpoint Inhibitors (PD-1/PD-L1)",
+                "moa": null,
+                "therapy_class": "UNKNOWN",
+                "sl_rationale": "MBD4 LOF → CpG→TpG hypermutator clock → highest TMB in many tumor types. High TMB → increased neoantigen burden → IO response. Pan-cancer TMB-high FDA approval supports pembrolizumab use. Not a direct SL axis; relies on hypermutation → neoantigens mechanism.",
+                "vulnerability_gene": null,
+                "actionability_tier": "HYPOTHESIS",
+                "policy_decision": "ALLOW",
+                "policy_flags": [],
+                "policy_rationale_short": null
+              }
+            ],
+            "policy_overlays": [
+              {
+                "drug_name": "paclitaxel",
+                "therapy_class": "UNKNOWN",
+                "policy_decision": "ALLOW",
+                "policy_flags": [],
+                "policy_rationale_short": null,
+                "provenance": {
+                  "policy_engine_version": "v1.0"
+                }
+              },
+              {
+                "drug_name": "adavosertib",
+                "therapy_class": "UNKNOWN",
+                "policy_decision": "ALLOW",
+                "policy_flags": [],
+                "policy_rationale_short": null,
+                "provenance": {
+                  "policy_engine_version": "v1.0"
+                }
+              },
+              {
+                "drug_name": "ceralasertib",
+                "therapy_class": "UNKNOWN",
+                "policy_decision": "ALLOW",
+                "policy_flags": [],
+                "policy_rationale_short": null,
+                "provenance": {
+                  "policy_engine_version": "v1.0"
+                }
+              },
+              {
+                "drug_name": "trametinib",
+                "therapy_class": "UNKNOWN",
+                "policy_decision": "ALLOW",
+                "policy_flags": [],
+                "policy_rationale_short": null,
+                "provenance": {
+                  "policy_engine_version": "v1.0"
+                }
+              },
+              {
+                "drug_name": "bevacizumab",
+                "therapy_class": "UNKNOWN",
+                "policy_decision": "ALLOW",
+                "policy_flags": [],
+                "policy_rationale_short": null,
+                "provenance": {
+                  "policy_engine_version": "v1.0"
+                }
+              },
+              {
+                "drug_name": "pembrolizumab",
+                "therapy_class": "UNKNOWN",
+                "policy_decision": "ALLOW",
+                "policy_flags": [],
+                "policy_rationale_short": null,
+                "provenance": {
+                  "policy_engine_version": "v1.0"
+                }
+              },
+              {
+                "drug_name": "ivermectin",
+                "therapy_class": "UNKNOWN",
+                "policy_decision": "ALLOW",
+                "policy_flags": [],
+                "policy_rationale_short": null,
+                "provenance": {
+                  "policy_engine_version": "v1.0"
+                }
+              },
+              {
+                "drug_name": "olaparib",
+                "therapy_class": "PARP_INHIBITOR",
+                "policy_decision": "ALLOW",
+                "policy_flags": [],
+                "policy_rationale_short": null,
+                "provenance": {
+                  "policy_engine_version": "v1.0"
+                }
+              },
+              {
+                "drug_name": "niraparib",
+                "therapy_class": "PARP_INHIBITOR",
+                "policy_decision": "ALLOW",
+                "policy_flags": [],
+                "policy_rationale_short": null,
+                "provenance": {
+                  "policy_engine_version": "v1.0"
+                }
+              },
+              {
+                "drug_name": "rucaparib",
+                "therapy_class": "PARP_INHIBITOR",
+                "policy_decision": "ALLOW",
+                "policy_flags": [],
+                "policy_rationale_short": null,
+                "provenance": {
+                  "policy_engine_version": "v1.0"
+                }
+              },
+              {
+                "drug_name": "carboplatin",
+                "therapy_class": "UNKNOWN",
+                "policy_decision": "ALLOW",
+                "policy_flags": [],
+                "policy_rationale_short": null,
+                "provenance": {
+                  "policy_engine_version": "v1.0"
+                }
+              }
+            ],
+            "gap_summary": {
+              "top_fit_blocked_count": 0,
+              "best_actionable_rank": 1,
+              "route_around_targets": []
+            },
+            "bridge_version": "v3.0",
+            "provenance": {
+              "policy_engine_version": "v1.0",
+              "sl_therapy_map_version": "v1.1",
+              "bridge_version": "v3.0",
+              "gap_summary_top_n_window": 3,
+              "vulnerability_genes": []
+            }
+          },
+          "completeness": {
+            "level": "L1",
+            "level_name": "Partial",
+            "completeness_score": 0.55,
+            "has_germline": true,
+            "has_somatic_ngs": true,
+            "has_ihc": true,
+            "has_hrd": false,
+            "has_tmb": false,
+            "has_expression": false,
+            "has_ca125": false,
+            "missing": [
+              "HRD score",
+              "TMB score",
+              "RNA expression data",
+              "CA-125 lab values"
+            ],
+            "confidence_cap": 0.6
+          },
+          "expression_contract": null,
+          "rss": {
+            "rss": null,
+            "rs_high": null,
+            "confidence": "NONE",
+            "triggers": []
+          },
+          "io_harm_prevention": {
+            "decision_result": {
+              "decision": "AWAITING_DATA",
+              "p_resp": null,
+              "p_resp_source": "io_pathway_score",
+              "p_resp_semantics": "proxy_probability",
+              "p_resp_note": "p_resp is derived from the IO pathway composite score (0–1 scale). No IO pathway score available — awaiting RNA-seq data.",
+              "rationale": "Insufficient data for IO response prediction. RNA sequencing data required.",
+              "regimen_name": null
+            },
+            "biomarker_drivers": null,
+            "checkpoint_expression": null,
+            "io_profile_card": null,
+            "safety_gate": {
+              "active": true,
+              "tmb_h": false,
+              "msi_h": false,
+              "io_boost_allowed": false,
+              "reason": "Conservative gating active — IO boost requires TMB-H (≥20 mut/Mb) or MSI-H."
+            }
+          }
+        }
+      },
+      "tests_needed": [
+        {
+          "test": "HRD Assay (Myriad MyChoice or similar)",
+          "unlocks": [
+            "L2: PARP Sensitivity Prediction",
+            "L2: Platinum Response"
+          ],
+          "why": "Required to determine if the tumor has Homologous Recombination Deficiency (HRD), a key biomarker for PARP inhibitors.",
+          "status": "missing",
+          "source": "recommended"
+        },
+        {
+          "test": "Comprehensive Genomic Profiling (CGP) for TMB",
+          "unlocks": [
+            "L2: Immunotherapy Eligibility"
+          ],
+          "why": "Tumor Mutational Burden (TMB) predicts response to checkpoint inhibitors (Keytruda, etc).",
+          "status": "missing",
+          "source": "recommended"
+        },
+        {
+          "test": "RNA Sequencing (Transcriptome)",
+          "unlocks": [
+            "L3: Pathway Activation Scores",
+            "L3: Mechanism of Action"
+          ],
+          "why": "needed to measure actual pathway activity (e.g. VEGF, MAPK) beyond just DNA mutations.",
+          "status": "missing",
+          "source": "recommended"
+        },
+        {
+          "test": "Serum CA-125 Level",
+          "unlocks": [
+            "L3: Tumor Burden Baseline"
+          ],
+          "why": "Baseline CA-125 is critical for tracking response dynamics.",
+          "status": "missing",
+          "source": "recommended"
+        }
+      ],
+      "patient_context": {
+        "completeness_score": 0.55,
+        "somatic_mutations": [
+          {
+            "gene": "TP53",
+            "hgvs_p": "p.R175H",
+            "consequence": "missense_variant"
+          }
+        ],
+        "msi_status": "MSS",
+        "pd_l1_status": "POSITIVE",
+        "pd_l1_cps": 10,
+        "er_status": "WEAKLY_POSITIVE",
+        "er_percent": 50
+      },
+      "synthetic_lethality": {
+        "patient_id": null,
+        "disease": "ovarian_cancer",
+        "synthetic_lethality_detected": true,
+        "double_hit_description": "MBD4 + top dependency context (matrix-gated)",
+        "essentiality_scores": [
+          {
+            "gene": "MBD4",
+            "essentiality_score": 0.65,
+            "essentiality_level": "moderate",
+            "sequence_disruption": 0.0,
+            "pathway_impact": "['BER'] NON-FUNCTIONAL",
+            "functional_consequence": "Frameshift → premature stop codon → loss of function",
+            "flags": {
+              "truncation": true,
+              "frameshift": true,
+              "hotspot": false,
+              "missense": false,
+              "splice": false,
+              "evo2_called": false,
+              "evo2_receipt": {
+                "ok": false,
+                "engine": "evo_proxy",
+                "reason": "missing_allele_complete_fields",
+                "request": {
+                  "chrom": null,
+                  "pos": null,
+                  "ref": null,
+                  "alt": null,
+                  "assembly": "GRCh38"
+                },
+                "response": null,
+                "error": null
+              }
+            },
+            "evo2_raw_delta": 0.0,
+            "evo2_window_used": 0,
+            "confidence": 0.7
+          },
+          {
+            "gene": "PDGFRA",
+            "essentiality_score": 0.35,
+            "essentiality_level": "low",
+            "sequence_disruption": 0.0,
+            "pathway_impact": "Unknown pathway status uncertain",
+            "functional_consequence": "Variant effect uncertain",
+            "flags": {
+              "truncation": false,
+              "frameshift": false,
+              "hotspot": false,
+              "missense": false,
+              "splice": false,
+              "evo2_called": false,
+              "evo2_receipt": {
+                "ok": false,
+                "engine": "evo_proxy",
+                "reason": "missing_allele_complete_fields",
+                "request": {
+                  "chrom": null,
+                  "pos": null,
+                  "ref": null,
+                  "alt": null,
+                  "assembly": "GRCh38"
+                },
+                "response": null,
+                "error": null
+              }
+            },
+            "evo2_raw_delta": 0.0,
+            "evo2_window_used": 0,
+            "confidence": 0.5
+          },
+          {
+            "gene": "TP53",
+            "essentiality_score": 0.55,
+            "essentiality_level": "moderate",
+            "sequence_disruption": 0.0,
+            "pathway_impact": "['CHECKPOINT'] COMPROMISED (hotspot)",
+            "functional_consequence": "Hotspot mutation → known pathogenic",
+            "flags": {
+              "truncation": false,
+              "frameshift": false,
+              "hotspot": true,
+              "missense": false,
+              "splice": false,
+              "evo2_called": false,
+              "evo2_receipt": {
+                "ok": false,
+                "engine": "evo_proxy",
+                "request": {
+                  "chrom": "17",
+                  "pos": 7577120,
+                  "ref": "G",
+                  "alt": "A",
+                  "assembly": "GRCh38"
+                },
+                "response": null,
+                "http_status": null,
+                "error": "All connection attempts failed"
+              }
+            },
+            "evo2_raw_delta": 0.0,
+            "evo2_window_used": 0,
+            "confidence": 0.6
+          }
+        ],
+        "broken_pathways": [],
+        "essential_pathways": [],
+        "recommended_drugs": [
+          {
+            "drug_name": "Cytidine Analogs (gemcitabine, cytarabine)",
+            "drug_class": "cytidine_analogs",
+            "target_pathway": "BER substrate accumulation in MBD4-LOF (dU:dG mispairs). Gemcitabine / cytarabine triphosphate incorporation into BER repair patches stalls replication. MBD4-specific: rescue by WT-MBD4 but not cataly",
+            "confidence": 0.88,
+            "mechanism": "BER substrate accumulation in MBD4-LOF (dU:dG mispairs). Gemcitabine / cytarabine triphosphate incorporation into BER repair patches stalls replication. MBD4-specific: rescue by WT-MBD4 but not catalytic-dead mutant.",
+            "fda_approved": false,
+            "approval_status": "Investigational",
+            "clinical_context": "Evidence matrix axis supplement (RUO); core pairs did not cover this axis.",
+            "evidence_tier": "Supported",
+            "rationale": [
+              "BER substrate accumulation in MBD4-LOF (dU:dG mispairs). Gemcitabine / cytarabine triphosphate incorporation into BER repair patches stalls replication. MBD4-specific: rescue by WT-MBD4 but not catalytic-dead mutant.",
+              "Validated SL axis. Positive evidence from: expression, in_vitro, in_vivo, clinical."
+            ],
+            "matrix_axis": "cytidine_analogs",
+            "override_reason": null
+          },
+          {
+            "drug_name": "PARP Inhibitors (olaparib, niraparib, talazoparib, rucaparib)",
+            "drug_class": "parp_inhibitors",
+            "target_pathway": "Pan-cancer screens and expression–sensitivity correlates link PARP pathway activity or PARP1 levels to drug response in HRD/DDR contexts; those signals are not MBD4-specific. Separately, some preclini",
+            "confidence": 0.56,
+            "mechanism": "Pan-cancer screens and expression–sensitivity correlates link PARP pathway activity or PARP1 levels to drug response in HRD/DDR contexts; those signals are not MBD4-specific. Separately, some preclinical work discusses BER load or RNF144A–PARP1 routing as a hypothetical sensitization narrative in MBD4-deficient models — a distinct layer, not interchangeable with pan-tumor PARP1 biomarker claims.",
+            "fda_approved": false,
+            "approval_status": "Investigational",
+            "clinical_context": "Evidence matrix axis supplement (RUO); core pairs did not cover this axis.",
+            "evidence_tier": "Mechanistic",
+            "rationale": [
+              "Pan-cancer screens and expression–sensitivity correlates link PARP pathway activity or PARP1 levels to drug response in HRD/DDR contexts; those signals are not MBD4-specific. Separately, some preclinical work discusses BER load or RNF144A–PARP1 routing as a hypothetical sensitization narrative in MBD4-deficient models — a distinct layer, not interchangeable with pan-tumor PARP1 biomarker claims.",
+              "PARP Inhibitors (olaparib, niraparib, talazoparib, rucaparib): 0 positive modalities. Evidence level: Mechanistic-only. Tier: Mechanistic candidate only."
+            ],
+            "matrix_axis": "parp_inhibitors",
+            "override_reason": null
+          },
+          {
+            "drug_name": "ATR / WEE1 Inhibitors (berzosertib, adavosertib, ceralasertib)",
+            "drug_class": "atr_wee1",
+            "target_pathway": "BER stress → ssDNA accumulation at stalled forks → ATR kinase activation. ATR/CHK1 and WEE1/CDK1 checkpoints are required to resolve replication stress. MBD4-LOF BER load may create constitutive low-l",
+            "confidence": 0.56,
+            "mechanism": "BER stress → ssDNA accumulation at stalled forks → ATR kinase activation. ATR/CHK1 and WEE1/CDK1 checkpoints are required to resolve replication stress. MBD4-LOF BER load may create constitutive low-level replication stress, sensitizing to checkpoint abrogation especially in TP53-loss context.",
+            "fda_approved": false,
+            "approval_status": "Investigational",
+            "clinical_context": "Evidence matrix axis supplement (RUO); core pairs did not cover this axis.",
+            "evidence_tier": "Mechanistic",
+            "rationale": [
+              "BER stress → ssDNA accumulation at stalled forks → ATR kinase activation. ATR/CHK1 and WEE1/CDK1 checkpoints are required to resolve replication stress. MBD4-LOF BER load may create constitutive low-level replication stress, sensitizing to checkpoint abrogation especially in TP53-loss context.",
+              "ATR / WEE1 Inhibitors (berzosertib, adavosertib, ceralasertib): 1 positive modalities. Evidence level: Mechanistic-only. Tier: Mechanistic candidate only. RS promotion requires base tier Mechanistic + high RS score + at least one POSITIVE CRISPR or pharmacologic screen modality."
+            ],
+            "matrix_axis": "atr_wee1",
+            "override_reason": null
+          },
+          {
+            "drug_name": "Immunotherapy / Checkpoint Inhibitors (PD-1/PD-L1)",
+            "drug_class": "immunotherapy",
+            "target_pathway": "MBD4 LOF → CpG→TpG hypermutator clock → highest TMB in many tumor types. High TMB → increased neoantigen burden → IO response. Pan-cancer TMB-high FDA approval supports pembrolizumab use. Not a direct",
+            "confidence": 0.56,
+            "mechanism": "MBD4 LOF → CpG→TpG hypermutator clock → highest TMB in many tumor types. High TMB → increased neoantigen burden → IO response. Pan-cancer TMB-high FDA approval supports pembrolizumab use. Not a direct SL axis; relies on hypermutation → neoantigens mechanism.",
+            "fda_approved": false,
+            "approval_status": "Investigational",
+            "clinical_context": "Evidence matrix axis supplement (RUO); core pairs did not cover this axis.",
+            "evidence_tier": "Mechanistic",
+            "rationale": [
+              "MBD4 LOF → CpG→TpG hypermutator clock → highest TMB in many tumor types. High TMB → increased neoantigen burden → IO response. Pan-cancer TMB-high FDA approval supports pembrolizumab use. Not a direct SL axis; relies on hypermutation → neoantigens mechanism.",
+              "Immunotherapy / Checkpoint Inhibitors (PD-1/PD-L1): 1 positive modalities. Evidence level: Mechanistic-only. Tier: Mechanistic candidate only."
+            ],
+            "matrix_axis": "immunotherapy",
+            "override_reason": null
+          }
+        ],
+        "suggested_therapy": "Cytidine Analogs (gemcitabine, cytarabine)",
+        "explanation": null,
+        "calculation_time_ms": 2199,
+        "evo2_used": false,
+        "provenance": {
+          "engine": "sl_v3_five_layer_matrix_bridge:v4.3.1",
+          "source": "multimodal",
+          "ruo": true,
+          "disclaimer": "Research use only. Not validated for clinical decision-making.",
+          "status": "success",
+          "primary_sl_gene": "MBD4",
+          "cancer_type": "ovary",
+          "evo2": {
+            "evo2_used": false,
+            "reason": "patient_variant_merge_no_successful_evo_delta",
+            "v2_style_evo2_receipt": "serialized_per_attempt_in_patient_variant_scoring_attempts",
+            "note": "Merge ran; see patient_variant_scoring_attempts (missing coords, non-200, or null min_delta).",
+            "patient_variant_scoring_attempts": [
+              {
+                "gene": "MBD4",
+                "ok": false,
+                "http_status": null,
+                "reason": "missing_allele_complete_fields",
+                "evo2_receipt": {
+                  "ok": false,
+                  "engine": "evo_proxy",
+                  "reason": "missing_allele_complete_fields",
+                  "request": {
+                    "chrom": null,
+                    "pos": null,
+                    "ref": null,
+                    "alt": null,
+                    "assembly": "GRCh38"
+                  },
+                  "response": null,
+                  "error": null
+                }
+              },
+              {
+                "gene": "PDGFRA",
+                "ok": false,
+                "http_status": null,
+                "reason": "missing_allele_complete_fields",
+                "evo2_receipt": {
+                  "ok": false,
+                  "engine": "evo_proxy",
+                  "reason": "missing_allele_complete_fields",
+                  "request": {
+                    "chrom": null,
+                    "pos": null,
+                    "ref": null,
+                    "alt": null,
+                    "assembly": "GRCh38"
+                  },
+                  "response": null,
+                  "error": null
+                }
+              },
+              {
+                "gene": "TP53",
+                "ok": false,
+                "http_status": null,
+                "reason": "All connection attempts failed",
+                "evo2_receipt": {
+                  "ok": false,
+                  "engine": "evo_proxy",
+                  "request": {
+                    "chrom": "17",
+                    "pos": 7577120,
+                    "ref": "G",
+                    "alt": "A",
+                    "assembly": "GRCh38"
+                  },
+                  "response": null,
+                  "http_status": null,
+                  "error": "All connection attempts failed"
+                }
+              }
+            ]
+          },
+          "fallback_reason": "empty_core_no_sl_partners_no_gene_drug_pairs",
+          "multimodal_entrypoint": "run_multimodal_analysis",
+          "evidence_matrix": {
+            "query_gene": "MBD4",
+            "cancer_type": "ovary",
+            "depmap_release": "unknown",
+            "rows": [
+              {
+                "axis": "cytidine_analogs",
+                "axis_label": "Cytidine Analogs (gemcitabine, cytarabine)",
+                "mechanism": "BER substrate accumulation in MBD4-LOF (dU:dG mispairs). Gemcitabine / cytarabine triphosphate incorporation into BER repair patches stalls replication. MBD4-specific: rescue by WT-MBD4 but not catalytic-dead mutant.",
+                "crispr": {
+                  "modality": "crispr_dependency",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "CRISPR analysis not run or no data available.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "expression": {
+                  "modality": "expression_association",
+                  "status": "positive",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "MBD4 LOF causes BER substrate accumulation (dU:dG mispairs). Gemcitabine and cytarabine exploit this: dFdCTP/araC incorporation into dU-rich repair patches stalls replication. Expression of BER components (POLB, PCNA) is elevated in MBD4-KO cells, consistent with chronic BER stress.",
+                  "pmids": [
+                    "35428381"
+                  ],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "prism": {
+                  "modality": "prism_pharmacologic",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "PRISM data not loaded (data not available in this deployment).",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "gdsc": {
+                  "modality": "gdsc_pharmacologic",
+                  "status": "negative",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "No significant GDSC signal for Cytidine Analogs (gemcitabine, cytarabine) in MBD4-LOF vs WT.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "in_vitro": {
+                  "modality": "in_vitro_functional",
+                  "status": "positive",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": 3,
+                  "n_wt": 3,
+                  "delta_auc": null,
+                  "delta_ic50_log2": -2.3,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "MBD4-KO isogenic cell lines show ~5× increased sensitivity to gemcitabine and cytarabine vs WT in rescue experiments. Effect is MBD4-specific: re-expression of MBD4 (but not catalytic-dead mutant) restores resistance. Two independent isogenic systems validated.",
+                  "pmids": [
+                    "35428381"
+                  ],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "in_vivo": {
+                  "modality": "in_vivo_pdx",
+                  "status": "positive",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "MBD4-deficient uveal melanoma PDX derived from the index patient showed dramatic, durable response to gemcitabine monotherapy. PDX response mirrors patient response; tumor regression observed. WT-MBD4 PDX controls did not respond.",
+                  "pmids": [
+                    "35428381"
+                  ],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "clinical": {
+                  "modality": "clinical",
+                  "status": "positive",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "Index patient (uveal melanoma, MBD4 germline LOF): dramatic, durable response to gemcitabine — exceptional for uveal melanoma, which is normally chemo-refractory. Response mirrors PDX and isogenic model data. Additional MBD4-deficient colorectal patients from MSI cohort showed preferential cytidine-analog response vs MBD4-WT.",
+                  "pmids": [
+                    "35428381"
+                  ],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "overall_evidence_level": "High",
+                "recommendation_tier": "Validated SL therapeutic lever",
+                "tier_fusion_rule_id": "base_validated_strong_clinical_n_pos_ge_3",
+                "tier_fusion_rule_detail": "n_positive_modalities=4 (only ModalityStatus.POSITIVE counts; MISSING/MIXED/NEGATIVE do not). weighted_modality_score=9.00. crispr=missing, prism=missing, gdsc=negative, expression=positive, in_vitro=positive, clinical=positive, in_vivo=positive. Branch: strong_clinical and n_positive≥3.",
+                "mechanistic_hypothesis_note": "Differentiation: `mechanism` and narrative `summary` fields describe biology or literature; they do not imply ModalityStatus.POSITIVE unless the corresponding modality cell is `positive`.",
+                "bridge_recommended_drugs_policy": "eligible_matrix_positive_tier",
+                "interpretation": "Validated SL axis. Positive evidence from: expression, in_vitro, in_vivo, clinical.",
+                "crispr_pharmacologic_agreement": "insufficient_data"
+              },
+              {
+                "axis": "parp_inhibitors",
+                "axis_label": "PARP Inhibitors (olaparib, niraparib, talazoparib, rucaparib)",
+                "mechanism": "Pan-cancer screens and expression–sensitivity correlates link PARP pathway activity or PARP1 levels to drug response in HRD/DDR contexts; those signals are not MBD4-specific. Separately, some preclinical work discusses BER load or RNF144A–PARP1 routing as a hypothetical sensitization narrative in MBD4-deficient models — a distinct layer, not interchangeable with pan-tumor PARP1 biomarker claims.",
+                "crispr": {
+                  "modality": "crispr_dependency",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "CRISPR analysis not run or no data available.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "expression": {
+                  "modality": "expression_association",
+                  "status": "mixed",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "Large-scale and pan-tumor analyses associate PARP1 expression or PARP inhibitor sensitivity with DDR/HRD-related contexts; those patterns are not defined as MBD4-specific biomarkers. For MBD4-deficient tumors, literature discusses BER stress and (in some models) PARP1 or RNF144A–PARP1 regulation as a separate, context-dependent hypothesis — orthogonal to generic PARP1-as-pan-cancer-predictor framing.",
+                  "pmids": [
+                    "35428381"
+                  ],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "prism": {
+                  "modality": "prism_pharmacologic",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "PRISM data not loaded (data not available in this deployment).",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "gdsc": {
+                  "modality": "gdsc_pharmacologic",
+                  "status": "negative",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "No significant GDSC signal for PARP Inhibitors (olaparib, niraparib, talazoparib, rucaparib) in MBD4-LOF vs WT.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "in_vitro": {
+                  "modality": "in_vitro_functional",
+                  "status": "mixed",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "No robust MBD4 isogenic KO/WT synthetic lethality with PARP inhibitors is established in the reviewed literature. RNF144A perturbation models (e.g. BRCA-WT backgrounds) report olaparib sensitization via distinct circuitry; those findings are not receipts for MBD4-isogenic PARP SL.",
+                  "pmids": [
+                    "35428381"
+                  ],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "in_vivo": {
+                  "modality": "in_vivo_pdx",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "No MBD4-deficient PDX data for PARP inhibitor response.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "clinical": {
+                  "modality": "clinical",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "No published patient-level response data for PARP inhibitors specifically in MBD4-deficient tumors. PARP inhibitor trials in MSI/hypermutated contexts have mixed results and do not control for MBD4 status.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "overall_evidence_level": "Mechanistic-only",
+                "recommendation_tier": "Mechanistic candidate only",
+                "tier_fusion_rule_id": "base_fallback_mechanistic_candidate_else_branch",
+                "tier_fusion_rule_detail": "n_positive_modalities=0 (only ModalityStatus.POSITIVE counts; MISSING/MIXED/NEGATIVE do not). weighted_modality_score=0.20. crispr=missing, prism=missing, gdsc=negative, expression=mixed, in_vitro=mixed, clinical=missing, in_vivo=missing. Applied rule_id=base_fallback_mechanistic_candidate_else_branch → base_tier=Mechanistic candidate only.",
+                "mechanistic_hypothesis_note": "Differentiation: `mechanism` and narrative `summary` fields describe biology or literature; they do not imply ModalityStatus.POSITIVE unless the corresponding modality cell is `positive`.",
+                "bridge_recommended_drugs_policy": "eligible_matrix_positive_tier",
+                "interpretation": "PARP Inhibitors (olaparib, niraparib, talazoparib, rucaparib): 0 positive modalities. Evidence level: Mechanistic-only. Tier: Mechanistic candidate only.",
+                "crispr_pharmacologic_agreement": "insufficient_data"
+              },
+              {
+                "axis": "atr_wee1",
+                "axis_label": "ATR / WEE1 Inhibitors (berzosertib, adavosertib, ceralasertib)",
+                "mechanism": "BER stress → ssDNA accumulation at stalled forks → ATR kinase activation. ATR/CHK1 and WEE1/CDK1 checkpoints are required to resolve replication stress. MBD4-LOF BER load may create constitutive low-level replication stress, sensitizing to checkpoint abrogation especially in TP53-loss context.",
+                "crispr": {
+                  "modality": "crispr_dependency",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "CRISPR analysis not run or no data available.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "expression": {
+                  "modality": "expression_association",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": null,
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "prism": {
+                  "modality": "prism_pharmacologic",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "PRISM data not loaded (data not available in this deployment).",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "gdsc": {
+                  "modality": "gdsc_pharmacologic",
+                  "status": "positive",
+                  "delta_dep": null,
+                  "p_value": 0.021,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": 14,
+                  "n_wt": 914,
+                  "delta_auc": null,
+                  "delta_ic50_log2": -0.74,
+                  "drug_screen_dataset": "GDSC1",
+                  "stratifier": "MBD4_LOF_vs_WT",
+                  "summary": "GDSC1 pharmacologic stratification: MBD4-LOF cell lines (n=14) show increased sensitivity to ATR inhibitors vs MBD4-WT (n=914). delta_IC50_log2=-0.74, p=0.021. Manuscript-derived quantitative evidence. Supports mechanistic plausibility of BER stress → ATR checkpoint dependency.",
+                  "pmids": [
+                    "internal:crispro-mbd4-atr-gdsc-v1"
+                  ],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "in_vitro": {
+                  "modality": "in_vitro_functional",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "Mechanistically plausible: chronic BER stress in MBD4-LOF → elevated ssDNA at stalled forks → ATR activation. No published MBD4-specific isogenic ATR/WEE1 inhibitor data.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "in_vivo": {
+                  "modality": "in_vivo_pdx",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "No MBD4-specific ATR/WEE1 PDX data.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "clinical": {
+                  "modality": "clinical",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "No MBD4-specific clinical ATR/WEE1 inhibitor data.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "overall_evidence_level": "Mechanistic-only",
+                "recommendation_tier": "Mechanistic candidate only",
+                "tier_fusion_rule_id": "base_fallback_mechanistic_candidate_else_branch",
+                "tier_fusion_rule_detail": "n_positive_modalities=1 (only ModalityStatus.POSITIVE counts; MISSING/MIXED/NEGATIVE do not). weighted_modality_score=2.00. crispr=missing, prism=missing, gdsc=positive, expression=missing, in_vitro=missing, clinical=missing, in_vivo=missing. Applied rule_id=base_fallback_mechanistic_candidate_else_branch → base_tier=Mechanistic candidate only. RS modulation (ATR_WEE1/PKMYT1): no promotion — rs_high=False, has_independent_crispr_or_pharma=True.",
+                "mechanistic_hypothesis_note": "Differentiation: `mechanism` and narrative `summary` fields describe biology or literature; they do not imply ModalityStatus.POSITIVE unless the corresponding modality cell is `positive`. `in_vitro.summary` may read as mechanistically plausible while status is `missing` — it does not increment n_positive_modalities.",
+                "bridge_recommended_drugs_policy": "eligible_matrix_positive_tier",
+                "interpretation": "ATR / WEE1 Inhibitors (berzosertib, adavosertib, ceralasertib): 1 positive modalities. Evidence level: Mechanistic-only. Tier: Mechanistic candidate only. RS promotion requires base tier Mechanistic + high RS score + at least one POSITIVE CRISPR or pharmacologic screen modality.",
+                "crispr_pharmacologic_agreement": "insufficient_data"
+              },
+              {
+                "axis": "wrn",
+                "axis_label": "WRN Helicase Inhibitors (VX-803, MRTX1719)",
+                "mechanism": "WRN SL is established for MSI-H context (reversed replication forks, aberrant AT-rich secondary structures). MBD4 LOF → hypermutator → subset of tumors become MSI-H. WRN SL with MBD4-direct LOF (MSI-independent) not yet validated. Signal may be MSI-H driven, not MBD4-specific.",
+                "crispr": {
+                  "modality": "crispr_dependency",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "CRISPR analysis not run or no data available.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "expression": {
+                  "modality": "expression_association",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": null,
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "prism": {
+                  "modality": "prism_pharmacologic",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "PRISM data not loaded (data not available in this deployment).",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "gdsc": {
+                  "modality": "gdsc_pharmacologic",
+                  "status": "negative",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "No significant GDSC signal for WRN Helicase Inhibitors (VX-803, MRTX1719) in MBD4-LOF vs WT.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "in_vitro": {
+                  "modality": "in_vitro_functional",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "WRN SL is established for MSI-H context (Chan et al. Nature 2019). MBD4 LOF → hypermutator phenotype → subset of tumors become MSI-H. WRN SL with MBD4-direct LOF (MSI-independent) not established in vitro.",
+                  "pmids": [
+                    "30971823"
+                  ],
+                  "is_confound_flagged": false,
+                  "notes": "Signal is MSI-H specific; MBD4 LOF alone insufficient."
+                },
+                "in_vivo": {
+                  "modality": "in_vivo_pdx",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": null,
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "clinical": {
+                  "modality": "clinical",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "No clinical WRN inhibitor data for MBD4-deficient tumors.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "overall_evidence_level": "Negative",
+                "recommendation_tier": "Not supported / negative",
+                "tier_fusion_rule_id": "base_zero_positive_modalities_and_non_positive_weighted_score",
+                "tier_fusion_rule_detail": "n_positive_modalities=0 (only ModalityStatus.POSITIVE counts; MISSING/MIXED/NEGATIVE do not). weighted_modality_score=-1.00. crispr=missing, prism=missing, gdsc=negative, expression=missing, in_vitro=missing, clinical=missing, in_vivo=missing. Applied rule_id=base_zero_positive_modalities_and_non_positive_weighted_score → base_tier=Not supported / negative.",
+                "mechanistic_hypothesis_note": "Differentiation: `mechanism` and narrative `summary` fields describe biology or literature; they do not imply ModalityStatus.POSITIVE unless the corresponding modality cell is `positive`. `in_vitro.summary` may read as mechanistically plausible while status is `missing` — it does not increment n_positive_modalities.",
+                "bridge_recommended_drugs_policy": "excluded_negative_tier",
+                "interpretation": "Pharmacologic screens examined (PRISM=missing, GDSC=negative) but no sensitizing signal found. CRISPR not evaluated. No evidence supports this axis for WRN Helicase Inhibitors (VX-803, MRTX1719).",
+                "crispr_pharmacologic_agreement": "insufficient_data"
+              },
+              {
+                "axis": "immunotherapy",
+                "axis_label": "Immunotherapy / Checkpoint Inhibitors (PD-1/PD-L1)",
+                "mechanism": "MBD4 LOF → CpG→TpG hypermutator clock → highest TMB in many tumor types. High TMB → increased neoantigen burden → IO response. Pan-cancer TMB-high FDA approval supports pembrolizumab use. Not a direct SL axis; relies on hypermutation → neoantigens mechanism.",
+                "crispr": {
+                  "modality": "crispr_dependency",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "CRISPR analysis not run or no data available.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "expression": {
+                  "modality": "expression_association",
+                  "status": "positive",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "MBD4 LOF → CpG→TpG hypermutator clock → highest TMB in many tumor types. High TMB is associated with IO response (pan-cancer FDA approval). TMB > 10 mut/Mb threshold frequently exceeded in MBD4-deficient tumors.",
+                  "pmids": [
+                    "35428381"
+                  ],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "prism": {
+                  "modality": "prism_pharmacologic",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "PRISM data not loaded (data not available in this deployment).",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "gdsc": {
+                  "modality": "gdsc_pharmacologic",
+                  "status": "negative",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "No significant GDSC signal for Immunotherapy / Checkpoint Inhibitors (PD-1/PD-L1) in MBD4-LOF vs WT.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "in_vitro": {
+                  "modality": "in_vitro_functional",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": null,
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "in_vivo": {
+                  "modality": "in_vivo_pdx",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": null,
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "clinical": {
+                  "modality": "clinical",
+                  "status": "mixed",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "Exceptional IO responses reported in MBD4-germline-LOF uveal melanoma and colorectal cancer cases. Pan-cancer TMB-high FDA approval supports IO use. Not a direct SL axis; relies on hypermutator → TMB mechanism. Small n — case reports, not controlled trial data.",
+                  "pmids": [
+                    "35428381"
+                  ],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "overall_evidence_level": "Mechanistic-only",
+                "recommendation_tier": "Mechanistic candidate only",
+                "tier_fusion_rule_id": "base_mechanistic_expression_only_no_crispr_pharma_pos",
+                "tier_fusion_rule_detail": "n_positive_modalities=1 (only ModalityStatus.POSITIVE counts; MISSING/MIXED/NEGATIVE do not). weighted_modality_score=1.60. crispr=missing, prism=missing, gdsc=negative, expression=positive, in_vitro=missing, clinical=mixed, in_vivo=missing. Applied rule_id=base_mechanistic_expression_only_no_crispr_pharma_pos → base_tier=Mechanistic candidate only.",
+                "mechanistic_hypothesis_note": "Differentiation: `mechanism` and narrative `summary` fields describe biology or literature; they do not imply ModalityStatus.POSITIVE unless the corresponding modality cell is `positive`.",
+                "bridge_recommended_drugs_policy": "eligible_matrix_positive_tier",
+                "interpretation": "Immunotherapy / Checkpoint Inhibitors (PD-1/PD-L1): 1 positive modalities. Evidence level: Mechanistic-only. Tier: Mechanistic candidate only.",
+                "crispr_pharmacologic_agreement": "insufficient_data"
+              },
+              {
+                "axis": "pkmyt1",
+                "axis_label": "PKMYT1 Kinase Inhibitors (RP-6306 class)",
+                "mechanism": "PKMYT1 kinase inhibition (RP-6306 class); replication stress axis. CCNE1-amplified tumors depend on PKMYT1 for S-phase checkpoint regulation. PKMYT1 inhibition causes premature mitotic entry and replication catastrophe in replication-stressed cells.",
+                "crispr": {
+                  "modality": "crispr_dependency",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "CRISPR analysis not run or no data available.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "expression": {
+                  "modality": "expression_association",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "No MBD4-specific PKMYT1 expression association data.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "prism": {
+                  "modality": "prism_pharmacologic",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "PRISM data not loaded (data not available in this deployment).",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "gdsc": {
+                  "modality": "gdsc_pharmacologic",
+                  "status": "negative",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "No significant GDSC signal for PKMYT1 Kinase Inhibitors (RP-6306 class) in MBD4-LOF vs WT.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "in_vitro": {
+                  "modality": "in_vitro_functional",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "No MBD4-specific PKMYT1 in vitro data.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "in_vivo": {
+                  "modality": "in_vivo_pdx",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": null,
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "clinical": {
+                  "modality": "clinical",
+                  "status": "missing",
+                  "delta_dep": null,
+                  "p_value": null,
+                  "fdr": null,
+                  "effect_size": null,
+                  "n_mut": null,
+                  "n_wt": null,
+                  "delta_auc": null,
+                  "delta_ic50_log2": null,
+                  "drug_screen_dataset": null,
+                  "stratifier": null,
+                  "summary": "No MBD4-specific PKMYT1 clinical data.",
+                  "pmids": [],
+                  "is_confound_flagged": false,
+                  "notes": null
+                },
+                "overall_evidence_level": "Negative",
+                "recommendation_tier": "Not supported / negative",
+                "tier_fusion_rule_id": "base_zero_positive_modalities_and_non_positive_weighted_score",
+                "tier_fusion_rule_detail": "n_positive_modalities=0 (only ModalityStatus.POSITIVE counts; MISSING/MIXED/NEGATIVE do not). weighted_modality_score=-1.00. crispr=missing, prism=missing, gdsc=negative, expression=missing, in_vitro=missing, clinical=missing, in_vivo=missing. Applied rule_id=base_zero_positive_modalities_and_non_positive_weighted_score → base_tier=Not supported / negative.",
+                "mechanistic_hypothesis_note": "Differentiation: `mechanism` and narrative `summary` fields describe biology or literature; they do not imply ModalityStatus.POSITIVE unless the corresponding modality cell is `positive`. `in_vitro.summary` may read as mechanistically plausible while status is `missing` — it does not increment n_positive_modalities.",
+                "bridge_recommended_drugs_policy": "excluded_negative_tier",
+                "interpretation": "Pharmacologic screens examined (PRISM=missing, GDSC=negative) but no sensitizing signal found. CRISPR not evaluated. No evidence supports this axis for PKMYT1 Kinase Inhibitors (RP-6306 class). RS promotion requires base tier Mechanistic + high RS score + at least one POSITIVE CRISPR or pharmacologic screen modality.",
+                "crispr_pharmacologic_agreement": "insufficient_data"
+              }
+            ],
+            "calibration_axis": "cytidine_analogs",
+            "gold_standard_summary": "=== CALIBRATION GOLD STANDARD: MBD4 + Cytidine Analogs ===\n\nThis is the bar that any SL axis must approach to be classified as 'Validated.'\n\nEvidence across modalities:\n  [IN_VITRO] POSITIVE: MBD4-KO isogenic cell lines show ~5× increased sensitivity to gemcitabine and cytarabine vs WT in rescue experiments. Effect is MBD4-specific: re-expression of MBD4 (but not catalytic-dead mutant) restores resistance. Two independent isogenic systems validated. [PMID: 35428381]\n  [IN_VIVO] POSITIVE: MBD4-deficient uveal melanoma PDX derived from the index patient showed dramatic, durable response to gemcitabine monotherapy. PDX response mirrors patient response; tumor regression observed. WT-MBD4 PDX controls did not respond. [PMID: 35428381]\n  [CLINICAL] POSITIVE: Index patient (uveal melanoma, MBD4 germline LOF): dramatic, durable response to gemcitabine — exceptional for uveal melanoma, which is normally chemo-refractory. Response mirrors PDX and isogenic model data. Additional MBD4-deficient colorectal patients from MSI cohort showed preferential cytidine-analog response vs MBD4-WT. [PMID: 35428381]\n  [EXPRESSION] POSITIVE: MBD4 LOF causes BER substrate accumulation (dU:dG mispairs). Gemcitabine and cytarabine exploit this: dFdCTP/araC incorporation into dU-rich repair patches stalls replication. Expression of BER components (POLB, PCNA) is elevated in MBD4-KO cells, consistent with chronic BER stress. [PMID: 35428381]\n\nPattern that defines 'High Evidence / Validated SL lever':\n  • In vitro isogenic KO/WT with rescue validation\n  • In vivo PDX matching the in vitro sensitivity\n  • At least one patient-level clinical receipt\n  • Mechanistically coherent (not MSI confound alone)\n\nPARP inhibitors: treat pan-cancer PARP1 expression and broad screen–sensitivity correlates (often HRD/DDR–framed) as a separate evidence layer from any MBD4-only BER-adjunct or RNF144A–PARP1 hypothesis; do not merge them into one biomarker story. MBD4-isogenic PARP SL does NOT yet meet the Validated bar.\nATR/WEE1 inhibitors for MBD4 are mechanistically plausible but lack in vitro/in vivo receipts.\nWRN inhibitors are MSI-H context-dependent and should NOT be declared MBD4-direct SL.",
+            "notes": [
+              "CRISPR analysis not provided; CRISPR cells are all MISSING."
+            ],
+            "rs_score": {
+              "score": 0.2,
+              "level": "moderate",
+              "contributing_features": [
+                "msi_h",
+                "mbd4_lof"
+              ],
+              "weights_applied": {
+                "msi_h": 0.15,
+                "mbd4_lof": 0.05
+              },
+              "rationale": "RS features: msi_h + mbd4_lof. Weighted sum = 0.20 → capped score = 0.20 → level = 'moderate'. MBD4 contributes modest RS (0.05 weight); co-mutations required to reach moderate/high."
+            },
+            "combination_vulnerabilities": [
+              {
+                "pathway_a": "BER_deficiency",
+                "pathway_a_gene": "MBD4",
+                "pathway_b": "checkpoint_inhibition",
+                "pathway_b_targets": [
+                  "ATR",
+                  "CHK1",
+                  "WEE1"
+                ],
+                "convergence_mechanism": "mitotic_catastrophe",
+                "pathway_a_alone_tier": "Mechanistic candidate only",
+                "pathway_b_alone_tier": "Mechanistic candidate only",
+                "combined_tier": null,
+                "data_gaps": [
+                  "ATR/WEE1 CRISPR dependency in MBD4-LOF lines (DepMap stratification: Chronos Δdep in MBD4-LOF vs WT)",
+                  "Isogenic MBD4-KO + ATRi synergy experiment (Bliss/Loewe combination index in MBD4-KO vs WT)"
+                ],
+                "rs_score": 0.2,
+                "rs_level": "moderate",
+                "rationale": "MBD4 LOF → BER collapse → 5mC>T lesions → replication fork stalling → ATR/CHK1 checkpoint dependency → if checkpoint inhibited → mitotic catastrophe. RS score = 0.20 (moderate). Data gaps remain before combinatorial tier can be promoted."
+              }
+            ]
+          },
+          "wire_finalize": true
+        },
+        "gating": {
+          "primary_sl_gene": "MBD4",
+          "request_genes": [
+            "MBD4",
+            "PDGFRA",
+            "TP53"
+          ],
+          "matrix_axis_tiers": {
+            "cytidine_analogs": "Validated SL therapeutic lever",
+            "parp_inhibitors": "Mechanistic candidate only",
+            "atr_wee1": "Mechanistic candidate only",
+            "wrn": "Not supported / negative",
+            "immunotherapy": "Mechanistic candidate only",
+            "pkmyt1": "Not supported / negative"
+          },
+          "negative_tier_literal": "Not supported / negative",
+          "combinatorial_vulnerabilities_n": 1,
+          "core_sl_empty": true,
+          "multimodal_fallback_reason": "empty_core_no_sl_partners_no_gene_drug_pairs",
+          "multimodal_entrypoint": "run_multimodal_analysis"
+        }
+      },
+      "sl_status": "computed"
+    },
+    "top_keys": [
+      "contract_version",
+      "patient_id",
+      "requested_levels",
+      "generated_at",
+      "levels",
+      "tests_needed",
+      "patient_context",
+      "synthetic_lethality",
+      "sl_status"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/bundle_endpoint_mbd4_live.json",
+      "exists": true,
+      "bytes": 171815,
+      "sha256": "7caf61b0df24cddab133485678558d5c0ea148c33782c5f605c442c1a79f18e4",
+      "mtime_iso": "2026-06-06T21:01:06+00:00"
+    }
+  ],
+  "cross_refs": [
+    "endpoint:sl",
+    "endpoint:bundle",
+    "receipt:crispro_live_api_proof",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

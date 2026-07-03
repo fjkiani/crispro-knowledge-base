@@ -1,0 +1,26 @@
+{
+  "id": "deliverable:coin_toss_oncology_manuscript",
+  "type": "manuscript",
+  "name": "Coin-toss oncology manuscript (final)",
+  "what_it_solves": "Positioning manuscript arguing that current oncology-drug picking is coin-toss-grade, and CrisPRO's SL engine is a principled alternative.",
+  "how_it_solves": "manuscript_coin_toss_oncology_FINAL.md consolidates the SL evidence and the moat_comparison record into a public-facing narrative.",
+  "why_it_exists": "Owned narrative around the moat; keeps external-facing story consistent with the internal evidence receipts.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/manuscript_coin_toss_oncology_FINAL.md",
+      "exists": true,
+      "bytes": 61129,
+      "sha256": "4c3bc2d6c48c8867e7470ee110470765bf608e988b538be22eb0a0cb13bdd2fc",
+      "mtime_iso": "2026-05-18T04:45:11+00:00"
+    }
+  ],
+  "cross_refs": [
+    "moat:aggregate",
+    "engine:synthetic_lethality",
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:brenus_and_deliverables"
+}

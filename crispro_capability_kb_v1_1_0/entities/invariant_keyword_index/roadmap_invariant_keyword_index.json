@@ -1,0 +1,400 @@
+{
+  "id": "roadmap:invariant_keyword_index",
+  "type": "invariant_keyword_index",
+  "name": "Roadmap invariant / sprint / gap keyword index",
+  "what_it_solves": "Every hit of `sprint 4s|invariant|closed at|gap exploit|underpowered|POLE|RUO|VALIDATED never|frozen_receipt|receipt immutability|tier clamp|apply_rs_promotion` in the roadmap.",
+  "how_it_solves": "Case-insensitive regex + 240-char context window per hit.",
+  "why_it_exists": "Cross-references the 8 invariant entities in stream_sl.json to their exact roadmap locations, so 'the invariant is in the code' claims are verifiable.",
+  "attributes": {
+    "count": 73,
+    "hits": [
+      {
+        "keyword": "INVARIANT",
+        "line": 110,
+        "context": " patient with MBD4-LOF ovarian cancer achieved partial response to gemcitabine-based therapy after platinum resistance.\nINVARIANT: VALIDATED is NEVER Auto-Assigned\nThe CrisPRO system CANNOT automatically assign VALIDATED tier to any SL axis.\nThis ti"
+      },
+      {
+        "keyword": "invariant",
+        "line": 114,
+        "context": "w of the clinical evidence.\nIt may only exist as a frozen receipt in literature_receipts.py, entered by a curator.\nThis invariant is enforced in test_ayesha_e2e.py and modality_fuser.py.\n\tSTRONG Tier — Multi-Modal Convergence\nSTRONG tier requires co"
+      },
+      {
+        "keyword": "ruo",
+        "line": 692,
+        "context": "ntervention\n\tSingle therapeutic recommendation with evidence chain\n\tdrug, target_gene, evidence_tier, evidence_sources, ruo: bool\n\tRSFeatureSet\n\tBinary feature vector for replication stress scoring\n\tccne1_amplified, arid1a_lof, myc_amplified, "
+      },
+      {
+        "keyword": "invariant",
+        "line": 781,
+        "context": "nism field is non-empty\n\t  NOT SUPPORTED: score == 0 AND mechanism field is empty\n\tThe All-MISSING Guardrail\nA critical invariant: if all modalities are MISSING (no data) but the mechanism field contains a non-empty string (pathway rationale), the t"
+      },
+      {
+        "keyword": "apply_rs_promotion",
+        "line": 783,
+        "context": " data for this, but the mechanism is plausible\" rather than suppressing the hypothesis entirely.\nRS Promotion Logic\ndef apply_rs_promotion(axis_result, rs_features, rs_score):\n\t    if rs_score < 0.40:\n\t        return axis_result  # No promotion below RS \"hig"
+      },
+      {
+        "keyword": "Sprint 4S",
+        "line": 799,
+        "context": " return axis_result\n\t\n\n3.5 Confirmed Live Gaps (All Closed as of 474b812)\nThe following gaps were identified during the Sprint 4S hardening cycle and have been resolved. They are documented here for historical reference and to inform future extensio"
+      },
+      {
+        "keyword": "invariant",
+        "line": 817,
+        "context": "n\n\tGAP 3: VALIDATED tier auto-assignable by fuser\n\tNo guard in tier assignment logic\n\tAdded VALIDATED-only-from-receipt invariant\n\t474b812\n\ttest_validated_never_auto\n\tGAP 4: POLE guard missing\n\tPOLE ultramutator context not handled\n\tAdded POLE check"
+      },
+      {
+        "keyword": "POLE",
+        "line": 820,
+        "context": "guard in tier assignment logic\n\tAdded VALIDATED-only-from-receipt invariant\n\t474b812\n\ttest_validated_never_auto\n\tGAP 4: POLE guard missing\n\tPOLE ultramutator context not handled\n\tAdded POLE check in mutation preprocessing\n\t474b812\n\ttest_pole_gu"
+      },
+      {
+        "keyword": "POLE",
+        "line": 821,
+        "context": "ment logic\n\tAdded VALIDATED-only-from-receipt invariant\n\t474b812\n\ttest_validated_never_auto\n\tGAP 4: POLE guard missing\n\tPOLE ultramutator context not handled\n\tAdded POLE check in mutation preprocessing\n\t474b812\n\ttest_pole_guard\n\tGAP 5: RUO disc"
+      },
+      {
+        "keyword": "POLE",
+        "line": 822,
+        "context": " invariant\n\t474b812\n\ttest_validated_never_auto\n\tGAP 4: POLE guard missing\n\tPOLE ultramutator context not handled\n\tAdded POLE check in mutation preprocessing\n\t474b812\n\ttest_pole_guard\n\tGAP 5: RUO disclaimer missing from some routes\n\tInconsistent"
+      },
+      {
+        "keyword": "pole",
+        "line": 824,
+        "context": "4: POLE guard missing\n\tPOLE ultramutator context not handled\n\tAdded POLE check in mutation preprocessing\n\t474b812\n\ttest_pole_guard\n\tGAP 5: RUO disclaimer missing from some routes\n\tInconsistent footer injection\n\tAdded RUO middleware to all v3 ro"
+      },
+      {
+        "keyword": "RUO",
+        "line": 825,
+        "context": "ng\n\tPOLE ultramutator context not handled\n\tAdded POLE check in mutation preprocessing\n\t474b812\n\ttest_pole_guard\n\tGAP 5: RUO disclaimer missing from some routes\n\tInconsistent footer injection\n\tAdded RUO middleware to all v3 routes\n\t474b812\n\ttes"
+      },
+      {
+        "keyword": "RUO",
+        "line": 827,
+        "context": "cessing\n\t474b812\n\ttest_pole_guard\n\tGAP 5: RUO disclaimer missing from some routes\n\tInconsistent footer injection\n\tAdded RUO middleware to all v3 routes\n\t474b812\n\ttest_ruo_all_routes\n\t3.6 The RUO Invariant\nRUO INVARIANT — NON-NEGOTIABLE\nEvery s"
+      },
+      {
+        "keyword": "ruo",
+        "line": 829,
+        "context": "isclaimer missing from some routes\n\tInconsistent footer injection\n\tAdded RUO middleware to all v3 routes\n\t474b812\n\ttest_ruo_all_routes\n\t3.6 The RUO Invariant\nRUO INVARIANT — NON-NEGOTIABLE\nEvery single API response from crispro-backend-v3 MUST"
+      },
+      {
+        "keyword": "RUO",
+        "line": 830,
+        "context": "ome routes\n\tInconsistent footer injection\n\tAdded RUO middleware to all v3 routes\n\t474b812\n\ttest_ruo_all_routes\n\t3.6 The RUO Invariant\nRUO INVARIANT — NON-NEGOTIABLE\nEvery single API response from crispro-backend-v3 MUST include:\n  ruo: true\n  "
+      },
+      {
+        "keyword": "Invariant",
+        "line": 830,
+        "context": "routes\n\tInconsistent footer injection\n\tAdded RUO middleware to all v3 routes\n\t474b812\n\ttest_ruo_all_routes\n\t3.6 The RUO Invariant\nRUO INVARIANT — NON-NEGOTIABLE\nEvery single API response from crispro-backend-v3 MUST include:\n  ruo: true\n  disclaimer"
+      },
+      {
+        "keyword": "RUO",
+        "line": 831,
+        "context": "consistent footer injection\n\tAdded RUO middleware to all v3 routes\n\t474b812\n\ttest_ruo_all_routes\n\t3.6 The RUO Invariant\nRUO INVARIANT — NON-NEGOTIABLE\nEvery single API response from crispro-backend-v3 MUST include:\n  ruo: true\n  disclaimer: \"R"
+      },
+      {
+        "keyword": "INVARIANT",
+        "line": 831,
+        "context": "istent footer injection\n\tAdded RUO middleware to all v3 routes\n\t474b812\n\ttest_ruo_all_routes\n\t3.6 The RUO Invariant\nRUO INVARIANT — NON-NEGOTIABLE\nEvery single API response from crispro-backend-v3 MUST include:\n  ruo: true\n  disclaimer: \"Research us"
+      },
+      {
+        "keyword": "ruo",
+        "line": 833,
+        "context": "\t3.6 The RUO Invariant\nRUO INVARIANT — NON-NEGOTIABLE\nEvery single API response from crispro-backend-v3 MUST include:\n  ruo: true\n  disclaimer: \"Research use only. Not validated for clinical decision-making.\"\n\n\nThis is hardcoded at every layer"
+      },
+      {
+        "keyword": "invariant",
+        "line": 840,
+        "context": "ent variable can override it.\nRationale: CrisPRO is a research tool. It is NOT a clinical decision support system.\nThis invariant is enforced by test_ruo_all_routes in test_ayesha_e2e.py.\n\t3.7 Sprint 4S Hardening Invariants\nEight invariants were est"
+      },
+      {
+        "keyword": "ruo",
+        "line": 840,
+        "context": "Rationale: CrisPRO is a research tool. It is NOT a clinical decision support system.\nThis invariant is enforced by test_ruo_all_routes in test_ayesha_e2e.py.\n\t3.7 Sprint 4S Hardening Invariants\nEight invariants were established during the Spri"
+      },
+      {
+        "keyword": "Sprint 4S",
+        "line": 841,
+        "context": "s NOT a clinical decision support system.\nThis invariant is enforced by test_ruo_all_routes in test_ayesha_e2e.py.\n\t3.7 Sprint 4S Hardening Invariants\nEight invariants were established during the Sprint 4S hardening cycle. Each is enforced at the co"
+      },
+      {
+        "keyword": "Invariant",
+        "line": 841,
+        "context": "ision support system.\nThis invariant is enforced by test_ruo_all_routes in test_ayesha_e2e.py.\n\t3.7 Sprint 4S Hardening Invariants\nEight invariants were established during the Sprint 4S hardening cycle. Each is enforced at the code level and verifie"
+      },
+      {
+        "keyword": "invariant",
+        "line": 842,
+        "context": "tem.\nThis invariant is enforced by test_ruo_all_routes in test_ayesha_e2e.py.\n\t3.7 Sprint 4S Hardening Invariants\nEight invariants were established during the Sprint 4S hardening cycle. Each is enforced at the code level and verified by at least one"
+      },
+      {
+        "keyword": "Sprint 4S",
+        "line": 842,
+        "context": "_ruo_all_routes in test_ayesha_e2e.py.\n\t3.7 Sprint 4S Hardening Invariants\nEight invariants were established during the Sprint 4S hardening cycle. Each is enforced at the code level and verified by at least one test in test_ayesha_e2e.py:\n#\n\tInvaria"
+      },
+      {
+        "keyword": "Invariant",
+        "line": 844,
+        "context": "rint 4S hardening cycle. Each is enforced at the code level and verified by at least one test in test_ayesha_e2e.py:\n#\n\tInvariant\n\tEnforcement\n\tTest\n\t1\n\tVALIDATED never auto-assigned\n\tmodality_fuser.py: tier == VALIDATED only if source == \"frozen_re"
+      },
+      {
+        "keyword": "VALIDATED never",
+        "line": 848,
+        "context": "enforced at the code level and verified by at least one test in test_ayesha_e2e.py:\n#\n\tInvariant\n\tEnforcement\n\tTest\n\t1\n\tVALIDATED never auto-assigned\n\tmodality_fuser.py: tier == VALIDATED only if source == \"frozen_receipt\"\n\ttest_validated_never_auto\n\t2\n\tT"
+      },
+      {
+        "keyword": "frozen_receipt",
+        "line": 849,
+        "context": "Invariant\n\tEnforcement\n\tTest\n\t1\n\tVALIDATED never auto-assigned\n\tmodality_fuser.py: tier == VALIDATED only if source == \"frozen_receipt\"\n\ttest_validated_never_auto\n\t2\n\tTier clamp: maximum assignable tier without clinical evidence is STRONG\n\tmodality_fuser"
+      },
+      {
+        "keyword": "Tier clamp",
+        "line": 852,
+        "context": "r auto-assigned\n\tmodality_fuser.py: tier == VALIDATED only if source == \"frozen_receipt\"\n\ttest_validated_never_auto\n\t2\n\tTier clamp: maximum assignable tier without clinical evidence is STRONG\n\tmodality_fuser.py: if clinical != POSITIVE → max(tier) = "
+      },
+      {
+        "keyword": "Receipt immutability",
+        "line": 856,
+        "context": "linical evidence is STRONG\n\tmodality_fuser.py: if clinical != POSITIVE → max(tier) = STRONG\n\ttest_tier_clamp_strong\n\t3\n\tReceipt immutability: frozen receipts cannot be modified at runtime\n\tliterature_receipts.py: deepcopy on read; no setter method exposed\n\ttes"
+      },
+      {
+        "keyword": "POLE",
+        "line": 864,
+        "context": "ows from curated KB → fuser; never reverse\n\tNo write methods on KB adapters; read-only interface\n\ttest_kb_read_only\n\t5\n\tPOLE guard: POLE ultramutator tumors excluded from MSI-H inference\n\tMutation preprocessor: if POLE hotspot → set msi_h = Fal"
+      },
+      {
+        "keyword": "POLE",
+        "line": 864,
+        "context": "ated KB → fuser; never reverse\n\tNo write methods on KB adapters; read-only interface\n\ttest_kb_read_only\n\t5\n\tPOLE guard: POLE ultramutator tumors excluded from MSI-H inference\n\tMutation preprocessor: if POLE hotspot → set msi_h = False\n\ttest_pol"
+      },
+      {
+        "keyword": "POLE",
+        "line": 865,
+        "context": "ce\n\ttest_kb_read_only\n\t5\n\tPOLE guard: POLE ultramutator tumors excluded from MSI-H inference\n\tMutation preprocessor: if POLE hotspot → set msi_h = False\n\ttest_pole_guard\n\t6\n\tRUO on all responses\n\tMiddleware + contract default: ruo=True, disclai"
+      },
+      {
+        "keyword": "pole",
+        "line": 866,
+        "context": "OLE ultramutator tumors excluded from MSI-H inference\n\tMutation preprocessor: if POLE hotspot → set msi_h = False\n\ttest_pole_guard\n\t6\n\tRUO on all responses\n\tMiddleware + contract default: ruo=True, disclaimer string\n\ttest_ruo_all_routes\n\t7\n\tAud"
+      },
+      {
+        "keyword": "RUO",
+        "line": 868,
+        "context": "r tumors excluded from MSI-H inference\n\tMutation preprocessor: if POLE hotspot → set msi_h = False\n\ttest_pole_guard\n\t6\n\tRUO on all responses\n\tMiddleware + contract default: ruo=True, disclaimer string\n\ttest_ruo_all_routes\n\t7\n\tAudit trail: ever"
+      },
+      {
+        "keyword": "ruo",
+        "line": 869,
+        "context": "rocessor: if POLE hotspot → set msi_h = False\n\ttest_pole_guard\n\t6\n\tRUO on all responses\n\tMiddleware + contract default: ruo=True, disclaimer string\n\ttest_ruo_all_routes\n\t7\n\tAudit trail: every tier assignment logged with source and timestamp\n\tm"
+      },
+      {
+        "keyword": "ruo",
+        "line": 870,
+        "context": "i_h = False\n\ttest_pole_guard\n\t6\n\tRUO on all responses\n\tMiddleware + contract default: ruo=True, disclaimer string\n\ttest_ruo_all_routes\n\t7\n\tAudit trail: every tier assignment logged with source and timestamp\n\tmodality_fuser.py: AuditEntry appen"
+      },
+      {
+        "keyword": "Underpowered",
+        "line": 876,
+        "context": "th source and timestamp\n\tmodality_fuser.py: AuditEntry appended on every tier assignment\n\ttest_audit_trail_complete\n\t8\n\tUnderpowered guard: n_mut < 15 → powered=False → promotion blocked\n\tmodality_fuser.py: PromotionBlockedError if powered=False\n\ttest_"
+      },
+      {
+        "keyword": "underpowered",
+        "line": 878,
+        "context": " guard: n_mut < 15 → powered=False → promotion blocked\n\tmodality_fuser.py: PromotionBlockedError if powered=False\n\ttest_underpowered_block\n\t________________\n\n\nChapter 4: The Exploitation Pattern (How to Use Claude Code)\n\n\n4.1 The Blueprint → Execution "
+      },
+      {
+        "keyword": "invariant",
+        "line": 915,
+        "context": " NON-NEGOTIABLE\nThe universal merge gate is: pytest tests/test_ayesha_e2e.py -x\n\n\nThis test file validates ALL critical invariants:\n  - MBD4 cytidine_analogs tier = VALIDATED\n  - VALIDATED never auto-assigned\n  - RUO on all responses\n  - RS score co"
+      },
+      {
+        "keyword": "VALIDATED never",
+        "line": 917,
+        "context": "est_ayesha_e2e.py -x\n\n\nThis test file validates ALL critical invariants:\n  - MBD4 cytidine_analogs tier = VALIDATED\n  - VALIDATED never auto-assigned\n  - RUO on all responses\n  - RS score computation\n  - POLE guard\n  - Tier clamp\n  - Audit trail completen"
+      },
+      {
+        "keyword": "RUO",
+        "line": 918,
+        "context": "ile validates ALL critical invariants:\n  - MBD4 cytidine_analogs tier = VALIDATED\n  - VALIDATED never auto-assigned\n  - RUO on all responses\n  - RS score computation\n  - POLE guard\n  - Tier clamp\n  - Audit trail completeness\n\n\nIf this test pas"
+      },
+      {
+        "keyword": "POLE",
+        "line": 920,
+        "context": "tidine_analogs tier = VALIDATED\n  - VALIDATED never auto-assigned\n  - RUO on all responses\n  - RS score computation\n  - POLE guard\n  - Tier clamp\n  - Audit trail completeness\n\n\nIf this test passes, the change is safe to ship.\nIf this test fails"
+      },
+      {
+        "keyword": "Tier clamp",
+        "line": 921,
+        "context": "tier = VALIDATED\n  - VALIDATED never auto-assigned\n  - RUO on all responses\n  - RS score computation\n  - POLE guard\n  - Tier clamp\n  - Audit trail completeness\n\n\nIf this test passes, the change is safe to ship.\nIf this test fails, NOTHING ships. Fix "
+      },
+      {
+        "keyword": "ruo",
+        "line": 1041,
+        "context": " Sprint C)\n\t    data_gaps: List[DataGap]       # what tests would upgrade any tier\n\t    next_best_tests: List[str]\n\t    ruo: bool = True\n\t    disclaimer: str = \"Research use only. Not validated for clinical decision-making.\"\n\t6.4 DataGap Model"
+      },
+      {
+        "keyword": "ruo",
+        "line": 1057,
+        "context": "h\n* 5. Generate next-best-test recommendations based on highest-impact data gaps\n* 6. Combine into SLPatientReport with ruo=True\n6.6 Test Specification\n# tests/test_patient_sl_report.py\n\t\n\n\tdef test_ayesha_sl_report():\n\t    \"\"\"Ayesha (MBD4-LOF"
+      },
+      {
+        "keyword": "ruo",
+        "line": 1074,
+        "context": "pe\": \"ovarian_cancer\"\n\t    })\n\t    assert response.status_code == 200\n\t    report = response.json()\n\t    assert report[\"ruo\"] is True\n\t    # VALIDATED cytidine_analogs in top axes\n\t    top_axis_names = [a[\"axis\"] for a in report[\"top_axes\"]]\n\t"
+      },
+      {
+        "keyword": "FROZEN_RECEIPT",
+        "line": 1153,
+        "context": "erature receipts that enable WRN-axis scoring for MSI-H genes.\n8.2 Frozen Receipts to Add\n# In literature_receipts.py — FROZEN_RECEIPTS dict\n\t\n\n\t(\"MLH1\", CandidateAxis.WRN): EvidenceReceipt(\n\t    gene=\"MLH1\", axis=CandidateAxis.WRN,\n\t    in_vitro=\"POSITI"
+      },
+      {
+        "keyword": "underpowered",
+        "line": 1213,
+        "context": " CODE SPEC FILE\nTarget repo: crispro-backend-v3\nTarget: layer1_engines/synthetic_lethality/audit/\nGoal: Audit queue for underpowered BRCA/FA hits (FANCM, FANCC, H2AFX)\nExpected result: FANCM/parp_inhibitors receipt with PENDING_REVIEW + promotion block"
+      },
+      {
+        "keyword": "underpowered",
+        "line": 1216,
+        "context": "mia (FA) DNA repair pathway and the histone variant involved in DNA damage signaling. However, the cohort is critically underpowered (n=11, below the 15-line threshold), meaning these hits are hypothesis-generating only.\nThe correct handling is NOT to "
+      },
+      {
+        "keyword": "underpowered",
+        "line": 1217,
+        "context": "e) or to discard them (which would lose potentially valuable leads). Instead, they enter the audit queue with explicit \"underpowered\" tagging and promotion blocking.\n9.2 Audit Queue Entries\n# In audit/receipt_miner.py — auto-generated candidate receipt"
+      },
+      {
+        "keyword": "Underpowered",
+        "line": 1228,
+        "context": "idateAxis.PARP_INHIBITORS,\n\t        status=\"PENDING_REVIEW\",\n\t        powered=False,\n\t        n_mut=11,\n\t        notes=\"Underpowered cohort (n=11 < threshold=15). Hypothesis-generating only. \"\n\t              \"Requires validation in larger BRCA1/2-mutan"
+      },
+      {
+        "keyword": "underpowered",
+        "line": 1237,
+        "context": "Axis.PARP_INHIBITORS,\n\t        status=\"PENDING_REVIEW\",\n\t        powered=False,\n\t        n_mut=11,\n\t        notes=\"Same underpowered cohort as FANCM. FA pathway member.\",\n\t        source=\"depmap_brca_analysis\",\n\t    ),\n\t    CandidateReceipt(\n\t        g"
+      },
+      {
+        "keyword": "Underpowered",
+        "line": 1245,
+        "context": "=\"PENDING_REVIEW\",\n\t        powered=False,\n\t        n_mut=11,\n\t        notes=\"gamma-H2AX variant. DNA damage signaling. Underpowered.\",\n\t        source=\"depmap_brca_analysis\",\n\t    ),\n\t]\n\t9.3 Promotion Block Guard\n# In modality_fuser.py — add Promotion"
+      },
+      {
+        "keyword": "underpowered",
+        "line": 1261,
+        "context": "        raise PromotionBlockedError(\n\t            f\"{receipt.gene}/{receipt.axis}: promotion blocked — \"\n\t            f\"underpowered cohort (n={receipt.n_mut} < 15)\"\n\t        )\n\t9.4 Test Specification\ndef test_fancm_pending_review():\n\t    receipt = get"
+      },
+      {
+        "keyword": "underpowered",
+        "line": 1277,
+        "context": "hanistic\" in result.tier or \"Not supported\" in result.tier\n\t    assert result.tier != \"Strong\"\n\t\n\n\tdef test_audit_queue_underpowered():\n\t    response = client.get(\"/api/v1/audit/queue\", params={\"filter\": \"underpowered\"})\n\t    genes = [e[\"gene\"] for e i"
+      },
+      {
+        "keyword": "underpowered",
+        "line": 1278,
+        "context": " \"Strong\"\n\t\n\n\tdef test_audit_queue_underpowered():\n\t    response = client.get(\"/api/v1/audit/queue\", params={\"filter\": \"underpowered\"})\n\t    genes = [e[\"gene\"] for e in response.json()[\"entries\"]]\n\t    assert \"FANCM\" in genes\n\t    assert \"FANCC\" in gen"
+      },
+      {
+        "keyword": "Sprints",
+        "line": 1412,
+        "context": "the endgame. When this exists, the Tumor Board has everything.\n\t12.1 Goal\nThe Universal SL Report is the culmination of Sprints A through G. It is a single POST endpoint that accepts any patient with any cancer type and returns a comprehensive syn"
+      },
+      {
+        "keyword": "underpowered",
+        "line": 1437,
+        "context": "→ pairwise assessment\n\tSynergistic drug combinations with rationale\n\t5\n\tAudit Queue Population\n\tAll subthreshold hits → underpowered check\n\tCandidate receipts with PENDING_REVIEW status\n\t6\n\tData Gap Analysis\n\tAll Mechanistic axes → upgrade path computa"
+      },
+      {
+        "keyword": "ruo",
+        "line": 1461,
+        "context": "   audit_candidates: List[CandidateReceipt]\n\t    data_gaps: List[DataGap]\n\t    next_best_tests: List[NextBestTest]\n\t    ruo: bool = True\n\t    disclaimer: str = \"Research use only. Not validated for clinical decision-making.\"\n\t12.4 Frontend Int"
+      },
+      {
+        "keyword": "FROZEN_RECEIPT",
+        "line": 1489,
+        "context": "\n\n\nGOOD: \"Open crispro-backend-v3/layer1_engines/synthetic_lethality/multimodal/literature_receipts.py.\nRead the entire FROZEN_RECEIPTS dict. Then add the following two entries after the MBD4 entries:\n  (\"MLH1\", CandidateAxis.WRN): EvidenceReceipt(...)\n "
+      },
+      {
+        "keyword": "ruo",
+        "line": 1599,
+        "context": "els.py CandidateAxis enum. Must be an existing enum value.\n\tEither add the enum value first, or do not add receipt.\n\t7\n\truo: true in API response?\n\tAfter adding receipt, query the API and check response includes ruo: true\n\tFix RUO middleware. "
+      },
+      {
+        "keyword": "ruo",
+        "line": 1600,
+        "context": " or do not add receipt.\n\t7\n\truo: true in API response?\n\tAfter adding receipt, query the API and check response includes ruo: true\n\tFix RUO middleware. Do not ship without RUO.\n\t8\n\tMerge gate passes?\n\tpytest tests/test_ayesha_e2e.py -x → all gr"
+      },
+      {
+        "keyword": "RUO",
+        "line": 1601,
+        "context": "receipt.\n\t7\n\truo: true in API response?\n\tAfter adding receipt, query the API and check response includes ruo: true\n\tFix RUO middleware. Do not ship without RUO.\n\t8\n\tMerge gate passes?\n\tpytest tests/test_ayesha_e2e.py -x → all green\n\tFix test f"
+      },
+      {
+        "keyword": "RUO",
+        "line": 1601,
+        "context": "se?\n\tAfter adding receipt, query the API and check response includes ruo: true\n\tFix RUO middleware. Do not ship without RUO.\n\t8\n\tMerge gate passes?\n\tpytest tests/test_ayesha_e2e.py -x → all green\n\tFix test failures before committing.\n\t________"
+      },
+      {
+        "keyword": "Underpowered",
+        "line": 1859,
+        "context": "091\n\t11\n\t48\n\tPARP_INHIBITORS (audit)\n\tTP53 LOF\n\tWEE1\n\t−0.38\n\t0.12\n\t55\n\t4\n\tATR_WEE1\n\tMBD4 LOF\n\tPOLB\n\t−0.62\n\t0.15\n\t3\n\t56\n\tUnderpowered (n=3)\n\t\n\nNOTE ON UNDERPOWERED RESULTS\nBRCA1/2 cohort (n=11) and MBD4 cohort (n=3) are below the n=15 threshold.\nFANCM, "
+      },
+      {
+        "keyword": "UNDERPOWERED",
+        "line": 1862,
+        "context": "audit)\n\tTP53 LOF\n\tWEE1\n\t−0.38\n\t0.12\n\t55\n\t4\n\tATR_WEE1\n\tMBD4 LOF\n\tPOLB\n\t−0.62\n\t0.15\n\t3\n\t56\n\tUnderpowered (n=3)\n\t\n\nNOTE ON UNDERPOWERED RESULTS\nBRCA1/2 cohort (n=11) and MBD4 cohort (n=3) are below the n=15 threshold.\nFANCM, FANCC, H2AFX enter the audit q"
+      },
+      {
+        "keyword": "underpowered",
+        "line": 1865,
+        "context": "hort (n=3) are below the n=15 threshold.\nFANCM, FANCC, H2AFX enter the audit queue with powered=False.\nMBD4/POLB is too underpowered for even audit queue consideration.\nThese results are hypothesis-generating only and require independent validation.\n\t_"
+      },
+      {
+        "keyword": "FROZEN_RECEIPT",
+        "line": 1876,
+        "context": "iterature Receipt ──────────────────────────────────────\n\t# Copy this block and fill in all fields.\n\t# Place inside the FROZEN_RECEIPTS dict in literature_receipts.py\n\t\n\n\t(\"GENE_SYMBOL\", CandidateAxis.AXIS_NAME): EvidenceReceipt(\n\t    gene=\"GENE_SYMBOL\","
+      },
+      {
+        "keyword": "underpowered",
+        "line": 1965,
+        "context": " WRN\n\tWRN axis receipts for MSI-H CRC\n\tliterature_receipts.py, panels.py\n\tPLANNED\n\t—\n\tE\n\tBRCA/FA Audit\n\tAudit queue for underpowered FANCM/FANCC/H2AFX\n\taudit/receipt_miner.py, modality_fuser.py\n\tPLANNED\n\t—\n\tF\n\tPDAC + Breast\n\tFrozen receipts for PDAC/TN"
+      },
+      {
+        "keyword": "RUO",
+        "line": 1992,
+        "context": "RITERIA\n1. Merge gate (test_ayesha_e2e.py) passes — no exceptions\n2. Live endpoint returns expected tier assignments\n3. RUO invariant verified on all new routes\n4. This document updated with commit hash and any deviations\n5. No regressions in "
+      },
+      {
+        "keyword": "invariant",
+        "line": 1992,
+        "context": "RIA\n1. Merge gate (test_ayesha_e2e.py) passes — no exceptions\n2. Live endpoint returns expected tier assignments\n3. RUO invariant verified on all new routes\n4. This document updated with commit hash and any deviations\n5. No regressions in previously"
+      },
+      {
+        "keyword": "sprints",
+        "line": 1994,
+        "context": "n all new routes\n4. This document updated with commit hash and any deviations\n5. No regressions in previously completed sprints\n\t\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nEND OF DOCUMENT\nCrisPRO SL Engine — PhD Roadmap v1.0 | April 2026\nResearch"
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00"
+    }
+  ],
+  "cross_refs": [
+    "invariant:validated_never_auto",
+    "invariant:tier_clamp_no_clinical",
+    "invariant:receipt_immutability",
+    "invariant:kb_read_only",
+    "invariant:pole_guard",
+    "invariant:ruo_middleware",
+    "invariant:audit_trail",
+    "invariant:underpowered_guard"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:synthetic_lethality_deep"
+}

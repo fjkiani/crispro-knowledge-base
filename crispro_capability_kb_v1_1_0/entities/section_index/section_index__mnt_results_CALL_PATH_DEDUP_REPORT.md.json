@@ -1,0 +1,51 @@
+{
+  "id": "section_index:/mnt/results/CALL_PATH_DEDUP_REPORT.md",
+  "type": "section_index",
+  "name": "Section index — CALL_PATH_DEDUP_REPORT.md",
+  "what_it_solves": "Section index of '/mnt/results/CALL_PATH_DEDUP_REPORT.md': every heading with its level and starting line.",
+  "how_it_solves": "Regex `^#{1,6}\\s+(.+)$` extracted at generation time; preserves navigation without duplicating body text.",
+  "why_it_exists": "Downstream ingestors can walk the document by section without re-parsing markdown; the KB stops being an opaque blob.",
+  "attributes": {
+    "heading_count": 5,
+    "headings": [
+      {
+        "level": 1,
+        "title": "Care-Plan + SL Call Deduplication Report",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "Before State — Calls Triggered on AK/Ayesha Dashboard Mount",
+        "line": 3
+      },
+      {
+        "level": 2,
+        "title": "After State — Calls Triggered on AK/Ayesha Dashboard Mount",
+        "line": 13
+      },
+      {
+        "level": 2,
+        "title": "Calls Removed",
+        "line": 21
+      },
+      {
+        "level": 2,
+        "title": "SL Display States Preserved",
+        "line": 27
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CALL_PATH_DEDUP_REPORT.md",
+      "exists": true,
+      "bytes": 1938,
+      "sha256": "9c11c6709af9e07b862809842b719640b034a049eddf27d7df718467e67219f2",
+      "mtime_iso": "2026-05-05T07:04:42+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

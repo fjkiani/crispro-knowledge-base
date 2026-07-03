@@ -1,0 +1,50 @@
+{
+  "id": "code_blocks:/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+  "type": "code_block_index",
+  "name": "Code blocks — CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+  "what_it_solves": "Index of every fenced code block in '/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md'.",
+  "how_it_solves": "Extracted with `RE_CODE_BLOCK`; each block carries language, starting line, byte count, and a 400-char preview.",
+  "why_it_exists": "Reports embed code snippets that are load-bearing (e.g. class definitions, config JSON); this makes them addressable without re-reading the parent file.",
+  "attributes": {
+    "block_count": 4,
+    "blocks": [
+      {
+        "lang": "",
+        "line": 21,
+        "bytes": 1308,
+        "preview": "crispro-backend-v2/\n├── api/                          # FastAPI application (primary)\n│   ├── main.py                   # App factory + 40+ router registrations\n│   ├── config.py                 # Env config, model routing, feature flags\n│   ├── routers/                  # 40+ endpoint modules\n│   ├── services/                 # Business logic (100+ service modules)\n│   ├── schemas/               "
+      },
+      {
+        "lang": "",
+        "line": 116,
+        "bytes": 260,
+        "preview": "brenus_diligence/\n├── guardrails/\n│   └── brenus_flags.py          # Flag enforcement engine (SLICE-003)\n├── receipts/\n│   └── receipt_brenus.py        # Receipt generation for Brenus outputs\n└── tests/\n    └── test_brenus_flags.py     # Flag enforcement tests"
+      },
+      {
+        "lang": "",
+        "line": 176,
+        "bytes": 989,
+        "preview": "crispro-front-end/\n├── src/\n│   ├── App.jsx                   # Main app + modular route architecture\n│   ├── components/\n│   │   ├── SyntheticLethality/   # SL Analyzer UI (primary CrisPRO surface)\n│   │   ├── ClinicalDossier/      # Clinical dossier view\n│   │   ├── ClinicalGenomicsCommandCenter/  # Genomics command center\n│   │   ├── CoPilot/              # AI CoPilot (Q2C router, intents, LLM)"
+      },
+      {
+        "lang": "",
+        "line": 253,
+        "bytes": 720,
+        "preview": "Frontend (React/MUI)\n    │\n    ├── useSyntheticLethality hook\n    │       └── POST /api/agents/synthetic_lethality\n    │               └── SyntheticLethalityAgent (v3_contract/agent.py)\n    │                       └── v3 SLEngine (Wilcoxon + BH FDR + Cohen's d)\n    │                               └── DepMap 24Q2 + GDSC2 + PRISM\n    │\n    ├── CoPilot (Q2C Router)\n    │       └── POST /api/copilot/\n"
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+      "exists": true,
+      "bytes": 17877,
+      "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+      "mtime_iso": "2026-05-05T06:14:00+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

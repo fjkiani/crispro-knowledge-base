@@ -1,0 +1,31 @@
+{
+  "id": "commit:f69e4bb",
+  "type": "commit_reference",
+  "name": "Commit f69e4bb",
+  "what_it_solves": "Git commit SHA 'f69e4bb' referenced in the architecture / hardening / handoff corpus.",
+  "how_it_solves": "Regex-detected hex tokens filtered by neighbour keywords (commit / sha / hash / sprint).",
+  "why_it_exists": "Turns 'closed at commit 474b812' style claims into a searchable enumeration; downstream consumers can join this back to a real repo.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+        "line": 104,
+        "context": "zoa/events/dashboard    — recent events (fixed CORS, commit f69e4bb)\nGET  /api/v1/zoa/events/{agent_id}   — events for a specif"
+      }
+    ],
+    "reference_count": 1
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+      "exists": true,
+      "bytes": 24575,
+      "sha256": "8c06c5f6092feaaf9680b60bd45bc6797d140fb43132233f3a5d03e21a621aa0",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

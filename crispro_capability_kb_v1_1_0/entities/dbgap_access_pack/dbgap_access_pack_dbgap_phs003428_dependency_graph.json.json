@@ -1,0 +1,180 @@
+{
+  "id": "dbgap_access_pack:dbgap_phs003428_dependency_graph.json",
+  "type": "dbgap_access_pack",
+  "name": "dbgap_phs003428_dependency_graph.json",
+  "what_it_solves": "dbgap_access_pack artifact dbgap_phs003428_dependency_graph.json",
+  "how_it_solves": "Auto-parsed by extension.",
+  "why_it_exists": "Every access pack / SL map / gap-lineage report is a durable operational asset — must be addressable.",
+  "attributes": {
+    "raw": [
+      {
+        "step_id": "S00",
+        "action": "eRA Commons PI account — active and verified for Fahad Kiani",
+        "owner": "Fahad Kiani",
+        "depends_on": [],
+        "status": "CLEARED",
+        "days_to_clear": 0,
+        "url": "https://public.era.nih.gov/commonsplus/public/login.era",
+        "notes": "CLEARED. eRA Commons PI account is active. No action required. Do not list as a blocker."
+      },
+      {
+        "step_id": "S01",
+        "action": "Send CTEP pre-notification email to NCICTEPDAR@mail.nih.gov (CC: ncidac@mail.nih.gov) using dbgap_phs003428_ctep_email_final.md — paste-ready, insert [DATE] and PI contact details, then send",
+        "owner": "Fahad Kiani",
+        "depends_on": [],
+        "status": "READY_NOW",
+        "days_to_clear": 0,
+        "url": "mailto:NCICTEPDAR@mail.nih.gov",
+        "notes": "Email is fully drafted and paste-ready. Insert [DATE] and PI email/phone before sending. Sending this email starts the 14-day BMS/CTEP review clock (S07). Do today."
+      },
+      {
+        "step_id": "S02",
+        "action": "Identify the Institutional Signing Official (SO) at CrisPRO / Brenus Pharma — the authorized organizational representative who can legally commit the institution to the Data Use Agreement",
+        "owner": "Fahad Kiani",
+        "depends_on": [],
+        "status": "PENDING_HUMAN",
+        "days_to_clear": 2,
+        "url": "https://era.nih.gov/register-accounts/understanding-institutional-signing-official.htm",
+        "notes": "Typically the VP of Research, Chief Scientific Officer, or designated Research Compliance Officer. Fahad must identify this person and obtain their name and institutional email."
+      },
+      {
+        "step_id": "S03",
+        "action": "Confirm that the identified Institutional SO has an active eRA Commons account (or register one if not); SO must be registered under the institution's eRA Commons organization",
+        "owner": "Institution (SO)",
+        "depends_on": [
+          "S02"
+        ],
+        "status": "PENDING_HUMAN",
+        "days_to_clear": 3,
+        "url": "https://public.era.nih.gov/commonsplus/public/login.era",
+        "notes": "SO must have an eRA Commons account to countersign the DAR. If not registered, institutional registration can take 1-3 business days. Blocks S08 and S09."
+      },
+      {
+        "step_id": "S04",
+        "action": "Identify the IT Director or IT Security Officer at CrisPRO / Brenus Pharma who can attest to the computing environment and data security plan",
+        "owner": "Fahad Kiani",
+        "depends_on": [],
+        "status": "PENDING_HUMAN",
+        "days_to_clear": 2,
+        "url": null,
+        "notes": "Required for the computing environment and data security sections of the DAR. Fahad must identify this person and obtain their name, email, and confirm they can attest to NIH dbGaP security requirements."
+      },
+      {
+        "step_id": "S05",
+        "action": "Confirm that the IT Director has an active eRA Commons account (or register one); IT Director may need to co-sign or be listed in the DAR depending on current form version",
+        "owner": "Institution (IT)",
+        "depends_on": [
+          "S04"
+        ],
+        "status": "PENDING_HUMAN",
+        "days_to_clear": 3,
+        "url": "https://public.era.nih.gov/commonsplus/public/login.era",
+        "notes": "Some DAR form versions require IT Director eRA Commons ID. Confirm current requirement at dbGaP portal. Blocks S08."
+      },
+      {
+        "step_id": "S06",
+        "action": "Submit IRB application for exemption determination under 45 CFR 46.104(d)(4) — secondary research use of identifiable private information/biospecimens; obtain written exemption determination or IRB approval letter",
+        "owner": "Institution (IRB)",
+        "depends_on": [],
+        "status": "PENDING_HUMAN",
+        "days_to_clear": 14,
+        "url": "https://www.hhs.gov/ohrp/regulations-and-policy/regulations/45-cfr-46/revised-common-rule-regulatory-text/index.html#46.104",
+        "notes": "Exemption under 45 CFR 46.104(d)(4) is likely applicable (secondary research with identifiable data, no patient contact). IRB must make formal written determination. Range: 5-14 days depending on institution. Blocks S08. Start immediately in parallel with S01."
+      },
+      {
+        "step_id": "S07",
+        "action": "BMS/CTEP 14-day review period — CTEP forwards pre-notification to Bristol Myers Squibb; BMS reviews proposed research use for consistency with collaborative agreement terms",
+        "owner": "BMS/CTEP",
+        "depends_on": [
+          "S01"
+        ],
+        "status": "PENDING_EXTERNAL",
+        "days_to_clear": 14,
+        "url": "mailto:NCICTEPDAR@mail.nih.gov",
+        "notes": "Clock starts when S01 email is sent. Standard 14-day review. If BMS does not respond within 14 days, proceed with DAR submission. If BMS raises concerns, address before submission. Blocks S08."
+      },
+      {
+        "step_id": "S08",
+        "action": "Submit formal Data Access Request via dbGaP portal using pre-filled DAR checklist (dbgap_phs003428_dar_checklist.csv); attach IRB determination letter; complete all form fields",
+        "owner": "Fahad Kiani",
+        "depends_on": [
+          "S00",
+          "S03",
+          "S05",
+          "S06",
+          "S07"
+        ],
+        "status": "READY_NOW",
+        "days_to_clear": 0,
+        "url": "https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi",
+        "notes": "DAR is pre-filled and ready to submit once all dependencies are cleared. days_to_clear=0 means zero additional days needed by Fahad after dependencies resolve — submission is same-day. DUC PDF: https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?view_pdf&stacc=phs003428.v1.p1"
+      },
+      {
+        "step_id": "S09",
+        "action": "Institutional SO logs into eRA Commons and countersigns the submitted DAR; SO receives automated notification from eRA Commons upon DAR submission",
+        "owner": "Institution (SO)",
+        "depends_on": [
+          "S08"
+        ],
+        "status": "PENDING_HUMAN",
+        "days_to_clear": 5,
+        "url": "https://public.era.nih.gov/commonsplus/public/login.era",
+        "notes": "SO countersignature is required before NCI DAC review begins. Range: 1-5 business days depending on SO availability. Fahad should alert SO immediately upon DAR submission. Blocks S10."
+      },
+      {
+        "step_id": "S10",
+        "action": "NCI Data Access Committee (ncidac@mail.nih.gov) reviews the countersigned DAR for scientific merit, data use consistency with DS-CA-COL consent, and security compliance",
+        "owner": "NCI DAC",
+        "depends_on": [
+          "S09"
+        ],
+        "status": "PENDING_EXTERNAL",
+        "days_to_clear": 56,
+        "url": "https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi",
+        "notes": "NCI DAC meets on a rolling basis. Typical review: 28-56 days (4-8 weeks). Fahad may be contacted for clarifications. Monitor dbGaP portal for status updates. Blocks S11."
+      },
+      {
+        "step_id": "S11",
+        "action": "Upon DAC approval, execute Data Use Agreement (DUA) — Institutional SO signs the DUA on behalf of CrisPRO / Brenus Pharma; return signed DUA to NCI DAC",
+        "owner": "Institution (SO)",
+        "depends_on": [
+          "S10"
+        ],
+        "status": "PENDING_HUMAN",
+        "days_to_clear": 14,
+        "url": "https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?view_pdf&stacc=phs003428.v1.p1",
+        "notes": "DUA template available at DUC PDF URL. SO must sign. Range: 7-14 days for institutional legal/compliance review and signature. Blocks S12."
+      },
+      {
+        "step_id": "S12",
+        "action": "Download controlled-access data from phs003428.v1.p1 via dbGaP using SRA Toolkit or dbGaP file download interface; verify data integrity with provided checksums",
+        "owner": "Fahad Kiani",
+        "depends_on": [
+          "S11"
+        ],
+        "status": "READY_NOW",
+        "days_to_clear": 0,
+        "url": "https://www.ncbi.nlm.nih.gov/sra/docs/sradownload/",
+        "notes": "days_to_clear=0 — download begins same day DUA is executed. Use SRA Toolkit (prefetch + fasterq-dump) or dbGaP download manager. Store in secure environment per data security plan. GEO GSE196576 (public expression layer) already accessible without this step."
+      }
+    ],
+    "top_keys": null,
+    "bytes": 7674,
+    "note": "raw carried"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/dbgap_phs003428_dependency_graph.json",
+      "exists": true,
+      "bytes": 7674,
+      "sha256": "49a7164f8c9cae87f40dc4c4fd16abed47fa47f655a132523dda26021d8cfaa7",
+      "mtime_iso": "2026-05-13T08:22:55+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:access_packs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

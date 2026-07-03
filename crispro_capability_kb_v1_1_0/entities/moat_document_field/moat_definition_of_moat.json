@@ -1,0 +1,27 @@
+{
+  "id": "moat:definition_of_moat",
+  "type": "moat_document_field",
+  "name": "moat_comparison — definition_of_moat",
+  "what_it_solves": "Declared definition of 'moat' used to score each dimension.",
+  "how_it_solves": "Extracted verbatim.",
+  "why_it_exists": "Without an explicit definition, PARITY/EDGE/GAP labels are subjective; this makes them reproducible.",
+  "attributes": {
+    "raw": "Defensible methodological features that distinguish CrisPRO's approach from established or emerging competitors. Moat ≠ moral superiority; moat = features competitors cannot easily replicate without comparable infrastructure, expertise, or data access."
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00",
+      "span_extracted": "definition_of_moat"
+    }
+  ],
+  "cross_refs": [
+    "moat:aggregate"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:moat_and_governance_deep"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "endpoint:sl",
+  "type": "endpoint",
+  "name": "POST /api/agents/synthetic_lethality",
+  "what_it_solves": "Direct SL engine endpoint — returns tier-assigned axis results for a PatientState.",
+  "how_it_solves": "Live commit + response body captured in sl_endpoint_mbd4_live.json. Top-level keys observed in this response: ['patient_id', 'disease', 'gating', 'evidence_matrix', 'synthetic_lethality_detected', 'double_hit_description', 'essentiality_scores', 'broken_pathways', 'essential_pathways', 'recommended_drugs', 'suggested_therapy', 'explanation', 'calculation_time_ms', 'evo2_used', 'provenance']",
+  "why_it_exists": "Exposes the engine as a peer-callable service (used by the Ayesha bundle and by direct API consumers).",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/crispro_live_api_proof.json",
+      "exists": true,
+      "bytes": 4103,
+      "sha256": "e2dbc0ec6c59e92b0be8ff2a49a98a522e095d978c1f29d3e49cdcf10e36665b",
+      "mtime_iso": "2026-06-06T21:01:49+00:00"
+    },
+    {
+      "path": "/mnt/results/sl_endpoint_mbd4_live.json",
+      "exists": true,
+      "bytes": 92823,
+      "sha256": "17f54734d4c9b8ac61210516d089e255960e06ca20cfc42caf66ab467d36e0c9",
+      "mtime_iso": "2026-06-06T21:00:33+00:00"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality",
+    "layer:output",
+    "receipt:crispro_live_api_proof"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:evidence_and_receipts"
+}

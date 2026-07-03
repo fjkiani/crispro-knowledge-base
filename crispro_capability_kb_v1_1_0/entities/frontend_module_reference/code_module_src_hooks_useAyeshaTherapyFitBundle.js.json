@@ -1,0 +1,34 @@
+{
+  "id": "code_module:src/hooks/useAyeshaTherapyFitBundle.js",
+  "type": "frontend_module_reference",
+  "name": "src/hooks/useAyeshaTherapyFitBundle.js",
+  "what_it_solves": "Frontend module 'src/hooks/useAyeshaTherapyFitBundle.js' referenced by the architecture / frontend audit corpus.",
+  "how_it_solves": "Extracted by regex for .ts/.tsx/.js/.jsx paths.",
+  "why_it_exists": "Enumerates the concrete frontend surface (crispro-front-end) so any SL/Ayesha UI claim can be traced to a real file.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+        "line": 334,
+        "context": "nts.\n\n#### Fix 2.3 — Fix getAuthToken() in useAyeshaTherapyFitBundle\n**File:** `src/hooks/useAyeshaTherapyFitBundle.js`\n\n**Current:** Reads `mock_auth_session` and `supabase_auth_token` directly fro"
+      }
+    ],
+    "reference_count": 1
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+      "exists": true,
+      "bytes": 24805,
+      "sha256": "f31945d7d1d131535769da391ab19546f2829f86263b1f5e49c49af1619166c4",
+      "mtime_iso": "2026-05-05T06:38:41+00:00"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-front-end",
+    "component:frontend_canonicalization"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

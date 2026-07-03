@@ -1,0 +1,59 @@
+{
+  "id": "endpoint_ref:POST /api/ayesha/complete_care_v2",
+  "type": "endpoint_reference",
+  "name": "POST /api/ayesha/complete_care_v2",
+  "what_it_solves": "HTTP endpoint 'POST /api/ayesha/complete_care_v2' referenced in the architecture / hardening corpus.",
+  "how_it_solves": "Regex `(GET|POST|PUT|DELETE|PATCH)\\s+/…` captured with source_file + line + context.",
+  "why_it_exists": "Every route claim in an audit is testable; this enumerates them so consumers can diff against the live server.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+        "line": 28,
+        "context": "ic_lethality` | Parallel fallback |\n| 4 | Main Care Plan | `POST /api/ayesha/complete_care_v2` | Heaviest call |\n\nThe `Promise.all` is correct — these ru"
+      },
+      {
+        "source_file": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+        "line": 330,
+        "context": "hgs\", mutations: [MBD4, TP53]}\n              └── [PARALLEL] POST /api/ayesha/complete_care_v2\n                    └── AyeshaCarePlanOrchestrator (sequent"
+      },
+      {
+        "source_file": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+        "line": 346,
+        "context": "── useAyeshaCarePlan (if also mounted — legacy)\n        └── POST /api/ayesha/complete_care_v2  ← DUPLICATE main call\n        └── useSyntheticLethality.an"
+      }
+    ],
+    "reference_count": 3
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "exists": true,
+      "bytes": 19314,
+      "sha256": "4c29bc6cecf7bcc6ba7a1232e3fa3a19d50c02bc1a065ea95f1bafc6f1a9c326",
+      "mtime_iso": "2026-05-05T06:24:21+00:00"
+    },
+    {
+      "path": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "exists": true,
+      "bytes": 19314,
+      "sha256": "4c29bc6cecf7bcc6ba7a1232e3fa3a19d50c02bc1a065ea95f1bafc6f1a9c326",
+      "mtime_iso": "2026-05-05T06:24:21+00:00"
+    },
+    {
+      "path": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "exists": true,
+      "bytes": 19314,
+      "sha256": "4c29bc6cecf7bcc6ba7a1232e3fa3a19d50c02bc1a065ea95f1bafc6f1a9c326",
+      "mtime_iso": "2026-05-05T06:24:21+00:00"
+    }
+  ],
+  "cross_refs": [
+    "endpoint:sl",
+    "endpoint:bundle",
+    "layer:output"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

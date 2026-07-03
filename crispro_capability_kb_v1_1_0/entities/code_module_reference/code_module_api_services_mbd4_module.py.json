@@ -1,0 +1,58 @@
+{
+  "id": "code_module:api/services/mbd4_module.py",
+  "type": "code_module_reference",
+  "name": "api/services/mbd4_module.py",
+  "what_it_solves": "Python module 'api/services/mbd4_module.py' referenced by the architecture / hardening audit corpus.",
+  "how_it_solves": "Extracted by regex `[/\\w._-]+\\.py(?::\\d+)?` — every mention captured with source_file + line + context window.",
+  "why_it_exists": "Enumerates the concrete code surface the architecture reports point at, so downstream consumers can walk from a claim to an actual file:line without re-reading the whole report.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+        "line": 103,
+        "context": "ocks the drug. This is the production safety constraint.\n\n### 2.4 MBD4 Module (`api/services/mbd4_module.py`)\n\nA standalone 3-axis rule engine (RUO) for MBD4-LOF patients:\n- **Axis A:** C"
+      },
+      {
+        "source_file": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+        "line": 292,
+        "context": "`api/resources/ranking_formulas/default.yaml` |\n| MBD4 rule engine | ✅ Built | `api/services/mbd4_module.py` |\n| Personalized outreach | ✅ Built | `api/services/personalized_outreach/` |\n"
+      },
+      {
+        "source_file": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+        "line": 320,
+        "context": "-----------|\n| SL exploitation agent | `api/services/synthetic_lethality/v3/`, `api/services/mbd4_module.py`, `evidence/sl_full_context_audit/` |\n| Brenus diligence agent | `brenus_dilige"
+      }
+    ],
+    "reference_count": 3
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+      "exists": true,
+      "bytes": 17877,
+      "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+      "mtime_iso": "2026-05-05T06:14:00+00:00"
+    },
+    {
+      "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+      "exists": true,
+      "bytes": 17877,
+      "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+      "mtime_iso": "2026-05-05T06:14:00+00:00"
+    },
+    {
+      "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+      "exists": true,
+      "bytes": 17877,
+      "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+      "mtime_iso": "2026-05-05T06:14:00+00:00"
+    }
+  ],
+  "cross_refs": [
+    "layer:engines",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

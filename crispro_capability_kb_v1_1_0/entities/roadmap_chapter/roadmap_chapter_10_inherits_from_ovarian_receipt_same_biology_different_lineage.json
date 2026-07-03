@@ -1,0 +1,32 @@
+{
+  "id": "roadmap_chapter:10_inherits_from_ovarian_receipt_same_biology_different_lineage",
+  "type": "roadmap_chapter",
+  "name": "Ch 10 — Inherits from ovarian receipt — same biology, different lineage",
+  "what_it_solves": "CRISPRO_SL_PHD_ROADMAP chapter 'Inherits from ovarian receipt — same biology, different lineage' spanning lines 1392..1873.",
+  "how_it_solves": "Chapter body preview (first 2000 chars) attached; full content lives in the source file. Subheadings enumerated.",
+  "why_it_exists": "Chapter is the natural unit of the roadmap — one entity per chapter makes 'what does Ch 3.4 say about the fuser?' addressable.",
+  "attributes": {
+    "level": 1,
+    "start_line": 1392,
+    "end_line": 1873,
+    "byte_length": 14155,
+    "subheadings": [],
+    "body_preview_2000c": "\t    in_vitro=\"POSITIVE\",\n\t    in_vivo=\"POSITIVE\",\n\t    clinical=\"POSITIVE\",\n\t    pmids=[\"35428381\"],\n\t    drugs=[\"decitabine\", \"azacitidine\", \"gemcitabine\"],\n\t    mechanism=\"MBD4 LOF → BER deficiency → cytidine analog vulnerability (cross-lineage)\",\n\t),\n\t________________\n\n\nChapter 12: The Universal SL Report (Sprint H — Endgame)\n\n\nSPRINT H — THE FINAL ENDPOINT\nPOST /api/v1/universal/sl_report\nAccepts any PatientState with any cancer_type\nReturns the complete SL analysis: evidence matrix + lineage + RS + combos + audit + gaps\nThis is the endgame. When this exists, the Tumor Board has everything.\n\t12.1 Goal\nThe Universal SL Report is the culmination of Sprints A through G. It is a single POST endpoint that accepts any patient with any cancer type and returns a comprehensive synthetic lethality analysis. This endpoint powers the Tumor Board and the SL page in the CrisPRO frontend.\n12.2 Execution Pipeline\nThe Universal SL Report endpoint executes the following seven-step pipeline:\nStep\n\tEngine\n\tInput\n\tOutput\n\t1\n\tMultimodal Evidence Matrix\n\tAll mutated genes × all CandidateAxis values + RS features\n\tPer-gene evidence matrix with tier assignments\n\t2\n\tLineage Dependency Engine\n\tcancer_type → lineage panel lookup\n\tRanked lineage essential genes with Cohen's d\n\t3\n\tRS Score Computation\n\tRSFeatureSet binary vector\n\tRS score (0.0–1.0) + classification (low/medium/high)\n\t4\n\tCombination Vulnerability\n\tAll STRONG+ axes → pairwise assessment\n\tSynergistic drug combinations with rationale\n\t5\n\tAudit Queue Population\n\tAll subthreshold hits → underpowered check\n\tCandidate receipts with PENDING_REVIEW status\n\t6\n\tData Gap Analysis\n\tAll Mechanistic axes → upgrade path computation\n\tPer-axis upgrade requirements and blocking reasons\n\t7\n\tNext-Best-Test Recommendation\n\tData gaps ranked by upgrade impact\n\tOrdered list of experiments that would most improve confidence\n\t12.3 Response Model\nclass SLUniversalReport(BaseModel):\n\t    patient_id: str\n\t    cancer_type: str\n\t    generated_at: str\n\t    "
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "lines 1392..1873"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:synthetic_lethality_deep"
+}

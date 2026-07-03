@@ -1,0 +1,487 @@
+{
+  "id": "roadmap:threshold_index",
+  "type": "threshold_index",
+  "name": "Roadmap threshold index",
+  "what_it_solves": "Enumeration of every `identifier op number` construct in the roadmap.",
+  "how_it_solves": "Regex sweep: `([A-Za-z_]\\w*)\\s*(>=|<=|==|>|<|=)\\s*([-\\d.]+)`.",
+  "why_it_exists": "Turns the roadmap's implicit numeric thresholds (score ≥ 6, rs_score ≥ 0.40, n_mut < 15) into a searchable list.",
+  "attributes": {
+    "count": 76,
+    "thresholds": [
+      {
+        "lhs": "showed",
+        "op": ">",
+        "rhs": "10-",
+        "line": 107
+      },
+      {
+        "lhs": "p",
+        "op": "<",
+        "rhs": "0.05",
+        "line": 118
+      },
+      {
+        "lhs": "FDR",
+        "op": "<",
+        "rhs": "0.10.",
+        "line": 119
+      },
+      {
+        "lhs": "FDR",
+        "op": "<",
+        "rhs": "0.05",
+        "line": 139
+      },
+      {
+        "lhs": "p",
+        "op": "<",
+        "rhs": "0.05",
+        "line": 149
+      },
+      {
+        "lhs": "FDR",
+        "op": "<",
+        "rhs": "0.10",
+        "line": 159
+      },
+      {
+        "lhs": "FDR",
+        "op": "<",
+        "rhs": "0.05",
+        "line": 169
+      },
+      {
+        "lhs": "score",
+        "op": "=",
+        "rhs": "1",
+        "line": 175
+      },
+      {
+        "lhs": "threshold",
+        "op": "=",
+        "rhs": "6",
+        "line": 175
+      },
+      {
+        "lhs": "RS_score",
+        "op": "=",
+        "rhs": "0.30",
+        "line": 268
+      },
+      {
+        "lhs": "RS_score",
+        "op": "<",
+        "rhs": "0.20",
+        "line": 274
+      },
+      {
+        "lhs": "FDR",
+        "op": "<",
+        "rhs": "0.01",
+        "line": 329
+      },
+      {
+        "lhs": "n",
+        "op": "=",
+        "rhs": "12",
+        "line": 329
+      },
+      {
+        "lhs": "score",
+        "op": ">",
+        "rhs": "0",
+        "line": 778
+      },
+      {
+        "lhs": "score",
+        "op": "==",
+        "rhs": "0",
+        "line": 779
+      },
+      {
+        "lhs": "rs_score",
+        "op": "<",
+        "rhs": "0.40",
+        "line": 784
+      },
+      {
+        "lhs": "n_mut",
+        "op": "<",
+        "rhs": "15",
+        "line": 876
+      },
+      {
+        "lhs": "status_code",
+        "op": "==",
+        "rhs": "200",
+        "line": 988
+      },
+      {
+        "lhs": "status_code",
+        "op": "==",
+        "rhs": "200",
+        "line": 1000
+      },
+      {
+        "lhs": "Validated",
+        "op": "=",
+        "rhs": "4",
+        "line": 1054
+      },
+      {
+        "lhs": "Strong",
+        "op": "=",
+        "rhs": "3",
+        "line": 1054
+      },
+      {
+        "lhs": "Mechanistic",
+        "op": "=",
+        "rhs": "2",
+        "line": 1054
+      },
+      {
+        "lhs": "status_code",
+        "op": "==",
+        "rhs": "200",
+        "line": 1072
+      },
+      {
+        "lhs": "cohens_d",
+        "op": "=",
+        "rhs": "-1.25",
+        "line": 1106
+      },
+      {
+        "lhs": "fdr",
+        "op": "=",
+        "rhs": "6.5",
+        "line": 1106
+      },
+      {
+        "lhs": "n_lines",
+        "op": "=",
+        "rhs": "59",
+        "line": 1106
+      },
+      {
+        "lhs": "cohens_d",
+        "op": "=",
+        "rhs": "-1.08",
+        "line": 1109
+      },
+      {
+        "lhs": "fdr",
+        "op": "=",
+        "rhs": "7.5",
+        "line": 1109
+      },
+      {
+        "lhs": "cohens_d",
+        "op": "=",
+        "rhs": "-0.97",
+        "line": 1112
+      },
+      {
+        "lhs": "fdr",
+        "op": "=",
+        "rhs": "4.6",
+        "line": 1112
+      },
+      {
+        "lhs": "cohens_d",
+        "op": "=",
+        "rhs": "-0.85",
+        "line": 1115
+      },
+      {
+        "lhs": "fdr",
+        "op": "=",
+        "rhs": "2.4",
+        "line": 1115
+      },
+      {
+        "lhs": "cohens_d",
+        "op": "=",
+        "rhs": "-0.66",
+        "line": 1118
+      },
+      {
+        "lhs": "fdr",
+        "op": "=",
+        "rhs": "1.9",
+        "line": 1118
+      },
+      {
+        "lhs": "cohens_d",
+        "op": "==",
+        "rhs": "-1.25",
+        "line": 1132
+      },
+      {
+        "lhs": "d",
+        "op": "=",
+        "rhs": "-1.2",
+        "line": 1161
+      },
+      {
+        "lhs": "cohens_d",
+        "op": "=",
+        "rhs": "-0.95",
+        "line": 1181
+      },
+      {
+        "lhs": "fdr",
+        "op": "=",
+        "rhs": "1.2",
+        "line": 1181
+      },
+      {
+        "lhs": "n_lines",
+        "op": "=",
+        "rhs": "45",
+        "line": 1181
+      },
+      {
+        "lhs": "cohens_d",
+        "op": "=",
+        "rhs": "-0.78",
+        "line": 1184
+      },
+      {
+        "lhs": "fdr",
+        "op": "=",
+        "rhs": "3.4",
+        "line": 1184
+      },
+      {
+        "lhs": "n_lines",
+        "op": "=",
+        "rhs": "45",
+        "line": 1184
+      },
+      {
+        "lhs": "cohens_d",
+        "op": "=",
+        "rhs": "-0.62",
+        "line": 1187
+      },
+      {
+        "lhs": "fdr",
+        "op": "=",
+        "rhs": "2.1",
+        "line": 1187
+      },
+      {
+        "lhs": "n_lines",
+        "op": "=",
+        "rhs": "45",
+        "line": 1187
+      },
+      {
+        "lhs": "n",
+        "op": "=",
+        "rhs": "11",
+        "line": 1216
+      },
+      {
+        "lhs": "n",
+        "op": "=",
+        "rhs": "11",
+        "line": 1216
+      },
+      {
+        "lhs": "n_mut",
+        "op": "=",
+        "rhs": "11",
+        "line": 1227
+      },
+      {
+        "lhs": "n",
+        "op": "=",
+        "rhs": "11",
+        "line": 1228
+      },
+      {
+        "lhs": "threshold",
+        "op": "=",
+        "rhs": "15",
+        "line": 1228
+      },
+      {
+        "lhs": "n_mut",
+        "op": "=",
+        "rhs": "11",
+        "line": 1236
+      },
+      {
+        "lhs": "n_mut",
+        "op": "=",
+        "rhs": "11",
+        "line": 1244
+      },
+      {
+        "lhs": "n_mut",
+        "op": "<",
+        "rhs": "15",
+        "line": 1258
+      },
+      {
+        "lhs": "cohens_d",
+        "op": "=",
+        "rhs": "-0.45",
+        "line": 1315
+      },
+      {
+        "lhs": "fdr",
+        "op": "=",
+        "rhs": "0.12",
+        "line": 1315
+      },
+      {
+        "lhs": "n_lines",
+        "op": "=",
+        "rhs": "42",
+        "line": 1315
+      },
+      {
+        "lhs": "cohens_d",
+        "op": "=",
+        "rhs": "-0.52",
+        "line": 1318
+      },
+      {
+        "lhs": "fdr",
+        "op": "=",
+        "rhs": "0.08",
+        "line": 1318
+      },
+      {
+        "lhs": "n_lines",
+        "op": "=",
+        "rhs": "42",
+        "line": 1318
+      },
+      {
+        "lhs": "cohens_d",
+        "op": "=",
+        "rhs": "-0.72",
+        "line": 1344
+      },
+      {
+        "lhs": "fdr",
+        "op": "=",
+        "rhs": "1.8",
+        "line": 1344
+      },
+      {
+        "lhs": "n_lines",
+        "op": "=",
+        "rhs": "35",
+        "line": 1344
+      },
+      {
+        "lhs": "cohens_d",
+        "op": "=",
+        "rhs": "-0.68",
+        "line": 1347
+      },
+      {
+        "lhs": "fdr",
+        "op": "=",
+        "rhs": "4.2",
+        "line": 1347
+      },
+      {
+        "lhs": "n_lines",
+        "op": "=",
+        "rhs": "35",
+        "line": 1347
+      },
+      {
+        "lhs": "n_mut",
+        "op": "<",
+        "rhs": "15",
+        "line": 1588
+      },
+      {
+        "lhs": "n",
+        "op": "=",
+        "rhs": "59",
+        "line": 1752
+      },
+      {
+        "lhs": "n",
+        "op": "=",
+        "rhs": "3",
+        "line": 1859
+      },
+      {
+        "lhs": "n",
+        "op": "=",
+        "rhs": "11",
+        "line": 1863
+      },
+      {
+        "lhs": "n",
+        "op": "=",
+        "rhs": "3",
+        "line": 1863
+      },
+      {
+        "lhs": "n",
+        "op": "=",
+        "rhs": "15",
+        "line": 1863
+      },
+      {
+        "lhs": "n_mut",
+        "op": "<",
+        "rhs": "15",
+        "line": 1903
+      },
+      {
+        "lhs": "n_mut",
+        "op": "=",
+        "rhs": "0",
+        "line": 1904
+      },
+      {
+        "lhs": "n_wt",
+        "op": "=",
+        "rhs": "0",
+        "line": 1905
+      },
+      {
+        "lhs": "cohens_d",
+        "op": "=",
+        "rhs": "0.0",
+        "line": 1906
+      },
+      {
+        "lhs": "fdr",
+        "op": "=",
+        "rhs": "1.0",
+        "line": 1907
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00"
+    }
+  ],
+  "cross_refs": [
+    "framework:rs",
+    "tier:STRONG",
+    "tier:VALIDATED",
+    "invariant:underpowered_guard"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:synthetic_lethality_deep"
+}

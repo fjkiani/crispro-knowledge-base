@@ -1,0 +1,30 @@
+{
+  "id": "engine:synthetic_lethality",
+  "type": "engine",
+  "name": "Synthetic Lethality Engine",
+  "what_it_solves": "Given a PatientState, evaluates each of 8 CandidateAxis dependencies and returns tier-assigned, evidence-fused RankedIntervention list.",
+  "how_it_solves": "Sub-modules: core/ (axis dispatch + tier logic), multimodal/ (7-modality fuser), kb/ (curated evidence loaded read-only), audit/ (AuditEntry per tier assignment), api/ (thin HTTP surface). Called from the Orchestrator at Phase 3.5.",
+  "why_it_exists": "Every axis dependency previously had scattered, ad-hoc logic; the engine consolidates fusion + tiering + provenance in one testable module with strict boundaries.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "Ch 3.1–3.5 — SL engine architecture"
+    }
+  ],
+  "cross_refs": [
+    "layer:engines",
+    "layer:orchestrator",
+    "contract:PatientState",
+    "contract:CaseResolution",
+    "component:modality_fuser",
+    "framework:rs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:synthetic_lethality"
+}

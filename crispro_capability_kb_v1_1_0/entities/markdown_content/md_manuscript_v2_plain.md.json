@@ -1,0 +1,120 @@
+{
+  "id": "md:manuscript_v2_plain.md",
+  "type": "markdown_content",
+  "name": "manuscript_v2_plain.md",
+  "what_it_solves": "Structured view of manuscript_v2_plain.md: heading tree + first 2000 chars.",
+  "how_it_solves": "Regex heading extract + preview slice.",
+  "why_it_exists": "Turns evidence-narrative markdowns into a searchable heading index without duplicating the full body.",
+  "attributes": {
+    "byte_length": 36547,
+    "heading_count": 18,
+    "headings": [
+      {
+        "level": 1,
+        "title": "MBD4 Loss of Function: Treatment Vulnerability Evidence Brief",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "Section 1 — Clinical Question",
+        "line": 11
+      },
+      {
+        "level": 2,
+        "title": "Section 2 — Bottom-Line Answer",
+        "line": 19
+      },
+      {
+        "level": 2,
+        "title": "Section 3 — Legend: What the Numbers Mean",
+        "line": 32
+      },
+      {
+        "level": 2,
+        "title": "Section 4 — What Is Already Known",
+        "line": 117
+      },
+      {
+        "level": 2,
+        "title": "Section 5 — What This Analysis Tested",
+        "line": 134
+      },
+      {
+        "level": 2,
+        "title": "Section 6 — Main Findings",
+        "line": 151
+      },
+      {
+        "level": 3,
+        "title": "Finding 1: The proposed PARP1-upregulation mechanism was not supported",
+        "line": 153
+      },
+      {
+        "level": 3,
+        "title": "Finding 2: PARP1 protein levels do predict PARP inhibitor sensitivity — but independently of MBD4 status",
+        "line": 172
+      },
+      {
+        "level": 3,
+        "title": "Finding 3: ATR inhibition — a new candidate vulnerability in MBD4-deficient tumors",
+        "line": 186
+      },
+      {
+        "level": 2,
+        "title": "Section 7 — What This Means for Treatment Selection",
+        "line": 265
+      },
+      {
+        "level": 2,
+        "title": "Section 8 — Confidence and Limitations",
+        "line": 283
+      },
+      {
+        "level": 2,
+        "title": "Section 9 — Methods in Plain English",
+        "line": 302
+      },
+      {
+        "level": 2,
+        "title": "Section 10 — Numbers Reference Table",
+        "line": 332
+      },
+      {
+        "level": 2,
+        "title": "Section 11 — Supporting Context: Immunotherapy Signal and Comparator Benchmark",
+        "line": 379
+      },
+      {
+        "level": 3,
+        "title": "Immunotherapy and MBD4 — early signals, hypothesis only",
+        "line": 381
+      },
+      {
+        "level": 3,
+        "title": "Comparator benchmark: why ATM-LOF does not show the same ATR inhibitor signal",
+        "line": 395
+      },
+      {
+        "level": 2,
+        "title": "References (endnotes)",
+        "line": 416
+      }
+    ],
+    "preview": "# MBD4 Loss of Function: Treatment Vulnerability Evidence Brief\n\n**Version:** 2.0 (plain-English tumor board edition)\n**Date:** 2026-05-15\n**Source analysis:** DepMap 24Q2 · GDSC2 pharmacological screens · published isogenic and clinical data\n**Scope:** Pan-cancer cell line analysis with ovarian cancer context noted where directly supported\n**Research Use Only.** These findings are computational and preclinical. They are not intended to guide diagnosis, prognosis, or treatment selection outside of a research setting.\n\n---\n\n## Section 1 — Clinical Question\n\n**When a tumor carries a loss-of-function mutation in MBD4, which treatments are most likely to exploit that specific genetic defect?**\n\nThis brief evaluates four candidate treatment strategies — cytidine analog chemotherapy, ATR inhibitors, PARP inhibitors, and immune checkpoint inhibitors — and assigns each a confidence level based on the available evidence.\n\n---\n\n## Section 2 — Bottom-Line Answer\n\nRead this first. The rest of the brief explains the evidence behind each statement.\n\n| Treatment | Confidence level | One-line summary |\n|-----------|-----------------|-----------------|\n| Cytidine analogs (gemcitabine, cytarabine) | **Validated in lab models** | Strongest evidence. MBD4-deficient cells are ~10× more sensitive. Confirmed in isogenic models, animal models, and one patient case. |\n| ATR inhibitors (ceralasertib) | **Strong computational candidate — not yet validated in patients** | MBD4-deficient cell lines are significantly more sensitive. Signal held across four independent checks. Needs isogenic and clinical confirmation. |\n| PARP inhibitors | **One proposed mechanism not supported — class not ruled out** | The specific reason PARP inhibitors were expected to work (MBD4 loss causing cells to make more PARP1 protein) was not seen in the data. PARP inhibitors may still have a role, but not through this mechanism. |\n| Immune checkpoint inhibitors | **Hypothesis only — early signals in one cancer type** "
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/manuscript_v2_plain.md",
+      "exists": true,
+      "bytes": 36863,
+      "sha256": "15db7957bc399b2eed5c9c32c39fa31556e563c21f66f24c6dd76ec45381784e",
+      "mtime_iso": "2026-05-20T03:28:35+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

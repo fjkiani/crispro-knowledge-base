@@ -1,0 +1,53 @@
+{
+  "id": "evidence:atm_benchmark",
+  "type": "evidence_analysis",
+  "name": "ATM benchmark (MSS-only + pan-cancer)",
+  "what_it_solves": "Positive-control comparator: ATM-LOF is a well-established checkpoint dependency, so it is used to calibrate the MBD4-LOF pipeline.",
+  "how_it_solves": "ATM_benchmark_MSS_only.csv + ATM_benchmark_pancancer.csv show effect sizes ATM-LOF vs WT for the same pipeline used on MBD4.",
+  "why_it_exists": "If the pipeline can detect the known ATM signal, absence of MBD4 signal is a real biological finding, not a pipeline artefact.",
+  "attributes": {
+    "files": [
+      "ATM_benchmark_MSS_only.csv",
+      "ATM_benchmark_effect_sizes.png",
+      "ATM_benchmark_pancancer.csv",
+      "ATM_benchmark_violin.png"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/ATM_benchmark_MSS_only.csv",
+      "exists": true,
+      "bytes": 542,
+      "sha256": "1c69dc47476a81f2bd53bbdf1260e3a058f1680d299ccb73411f04b61dcaecc7",
+      "mtime_iso": "2026-04-27T02:36:23+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/ATM_benchmark_effect_sizes.png",
+      "exists": true,
+      "bytes": 100931,
+      "sha256": "8e1fdae9b8f8f239c7462715e0e55c271cd5113cfb6f8f10aef6cfd623bbb726",
+      "mtime_iso": "2026-04-27T02:37:05+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/ATM_benchmark_pancancer.csv",
+      "exists": true,
+      "bytes": 850,
+      "sha256": "688ad48d369729fd7b3a4fdd5c16188f6ead7a61a72b22bb1bdcbd1cb5fe10eb",
+      "mtime_iso": "2026-04-27T02:36:23+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/ATM_benchmark_violin.png",
+      "exists": true,
+      "bytes": 330444,
+      "sha256": "802680451b3559608f8ecd8295fbe25dbd8a8a738619d36bfd4308fffef38a41",
+      "mtime_iso": "2026-04-27T02:36:48+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2",
+    "axis:ATR_WEE1"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:evidence_and_receipts"
+}

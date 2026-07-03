@@ -1,0 +1,32 @@
+{
+  "id": "roadmap_chapter:06_in_literature_receipts_py_frozen_receipts_dict",
+  "type": "roadmap_chapter",
+  "name": "Ch 06 — In literature_receipts.py — FROZEN_RECEIPTS dict",
+  "what_it_solves": "CRISPRO_SL_PHD_ROADMAP chapter 'In literature_receipts.py — FROZEN_RECEIPTS dict' spanning lines 1153..1176.",
+  "how_it_solves": "Chapter body preview (first 2000 chars) attached; full content lives in the source file. Subheadings enumerated.",
+  "why_it_exists": "Chapter is the natural unit of the roadmap — one entity per chapter makes 'what does Ch 3.4 say about the fuser?' addressable.",
+  "attributes": {
+    "level": 1,
+    "start_line": 1153,
+    "end_line": 1176,
+    "byte_length": 868,
+    "subheadings": [],
+    "body_preview_2000c": "\t\n\n\t(\"MLH1\", CandidateAxis.WRN): EvidenceReceipt(\n\t    gene=\"MLH1\", axis=CandidateAxis.WRN,\n\t    in_vitro=\"POSITIVE\",    # Isogenic KO confirmed WRN dependency\n\t    in_vivo=\"POSITIVE\",     # Xenograft regression with WRN knockdown\n\t    clinical=\"POSITIVE\",    # VX-803 Phase I signal in MSI-H CRC\n\t    crispr=\"POSITIVE\",      # DepMap d=-1.2 in MSI-H vs MSS\n\t    pmids=[\"30971823\"],\n\t    drugs=[\"VX-803\", \"MRTX1719\", \"HRO-761\"],\n\t    mechanism=\"MSI-H creates aberrant (TA)n repeats → reversed forks → WRN dependency\",\n\t),\n\t\n\n\t(\"MSH2\", CandidateAxis.WRN): EvidenceReceipt(\n\t    gene=\"MSH2\", axis=CandidateAxis.WRN,\n\t    in_vitro=\"POSITIVE\",\n\t    crispr=\"POSITIVE\",\n\t    pmids=[\"30971823\"],\n\t    drugs=[\"VX-803\", \"MRTX1719\"],\n\t    mechanism=\"MSH2 loss → MSI-H → same WRN dependency as MLH1\",\n\t),\n\t8.3 CRC Lineage Panel"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "lines 1153..1176"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:synthetic_lethality_deep"
+}

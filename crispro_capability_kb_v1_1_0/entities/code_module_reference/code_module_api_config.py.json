@@ -1,0 +1,82 @@
+{
+  "id": "code_module:api/config.py",
+  "type": "code_module_reference",
+  "name": "api/config.py",
+  "what_it_solves": "Python module 'api/config.py' referenced by the architecture / hardening audit corpus.",
+  "how_it_solves": "Extracted by regex `[/\\w._-]+\\.py(?::\\d+)?` — every mention captured with source_file + line + context window.",
+  "why_it_exists": "Enumerates the concrete code surface the architecture reports point at, so downstream consumers can walk from a claim to an actual file:line without re-reading the whole report.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 82,
+        "context": "at matters for the live service must go in `api/index.py` or files it imports (`api/config.py`, `api/routers/`). Changes to `main.py` are irrelevant to production.\n\n### 3B. "
+      },
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 84,
+        "context": "anges to `main.py` are irrelevant to production.\n\n### 3B. CORS config lives in `api/config.py` → read by `api/index.py`\n\n```python\n# api/config.py\nALLOWED_ORIGINS = [\n    o."
+      },
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 87,
+        "context": " 3B. CORS config lives in `api/config.py` → read by `api/index.py`\n\n```python\n# api/config.py\nALLOWED_ORIGINS = [\n    o.strip()\n    for o in os.getenv(\"ALLOWED_ORIGINS\", \".."
+      },
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 161,
+        "context": "on't update existing services) | Deployed but ineffective |\n| `b17ee064` | Fix `api/config.py` default list (right file, but env var in dashboard overrides it) | Deployed bu"
+      },
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 189,
+        "context": "Render dashboard: uvicorn api.index:app (overrides Procfile)\n  └── CORS config: api/config.py → reads ALLOWED_ORIGINS env var\n  └── Auto-deploy: DISABLED (must be enabled in"
+      }
+    ],
+    "reference_count": 5
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    },
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    },
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    },
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    },
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    }
+  ],
+  "cross_refs": [
+    "layer:engines",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

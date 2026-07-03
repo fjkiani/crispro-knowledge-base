@@ -1,0 +1,130 @@
+{
+  "id": "md:manuscript_v4.md",
+  "type": "markdown_content",
+  "name": "manuscript_v4.md",
+  "what_it_solves": "Structured view of manuscript_v4.md: heading tree + first 2000 chars.",
+  "how_it_solves": "Regex heading extract + preview slice.",
+  "why_it_exists": "Turns evidence-narrative markdowns into a searchable heading index without duplicating the full body.",
+  "attributes": {
+    "byte_length": 34078,
+    "heading_count": 20,
+    "headings": [
+      {
+        "level": 2,
+        "title": "Introduction",
+        "line": 47
+      },
+      {
+        "level": 2,
+        "title": "Results",
+        "line": 59
+      },
+      {
+        "level": 3,
+        "title": "MBD4-LOF is associated with ATR inhibitor sensitivity across four confound stress tests",
+        "line": 61
+      },
+      {
+        "level": 3,
+        "title": "Expression analyses do not support a direct PARP-trapping model in MBD4-LOF",
+        "line": 89
+      },
+      {
+        "level": 3,
+        "title": "Published isogenic data establish cytidine analog sensitivity as a positive-control calibration benchmark",
+        "line": 103
+      },
+      {
+        "level": 3,
+        "title": "Synthesis: MBD4-LOF pharmacogenomics supports an ATR checkpoint hypothesis",
+        "line": 109
+      },
+      {
+        "level": 2,
+        "title": "Discussion",
+        "line": 115
+      },
+      {
+        "level": 2,
+        "title": "Methods",
+        "line": 131
+      },
+      {
+        "level": 3,
+        "title": "Cell line classification",
+        "line": 133
+      },
+      {
+        "level": 3,
+        "title": "Pharmacological stratification",
+        "line": 137
+      },
+      {
+        "level": 3,
+        "title": "Confound stress testing",
+        "line": 143
+      },
+      {
+        "level": 3,
+        "title": "Analysis workflow",
+        "line": 154
+      },
+      {
+        "level": 3,
+        "title": "Expression analysis",
+        "line": 158
+      },
+      {
+        "level": 3,
+        "title": "Data availability",
+        "line": 162
+      },
+      {
+        "level": 3,
+        "title": "Code availability",
+        "line": 166
+      },
+      {
+        "level": 2,
+        "title": "Figures",
+        "line": 170
+      },
+      {
+        "level": 2,
+        "title": "References",
+        "line": 180
+      },
+      {
+        "level": 2,
+        "title": "Supplementary Material",
+        "line": 182
+      },
+      {
+        "level": 3,
+        "title": "Supplementary Figure S1. Evidence summary across candidate therapeutic axes for MBD4-LOF tumors",
+        "line": 184
+      },
+      {
+        "level": 3,
+        "title": "Supplementary Table S1. Pan-cancer comparator pharmacology for ATM-LOF and MBD4-LOF in GDSC2",
+        "line": 188
+      }
+    ],
+    "preview": "---\ntitle: \"MBD4 loss-of-function is associated with ATR inhibitor sensitivity and does not support a direct transcriptional PARP1-upregulation model: a pharmacogenomic hypothesis-generation study\"\nshort_title: \"MBD4-LOF ATR Vulnerability: Pharmacogenomic Hypothesis Generation\"\nauthors:\n - name: \"Fahad Kiani\"\n   affiliation: \"1\"\n   email: \"fahad@crispro.ai\"\n   corresponding: true\naffiliations:\n - id: \"1\"\n   name: \"Independent Researcher\"\ndate: \"2026\"\nkeywords:\n - MBD4\n - synthetic lethality\n - base excision repair\n - ATR inhibitor\n - ceralasertib\n - PARP trapping\n - replication stress\n - pharmacogenomics\n - DepMap\n - hypothesis generation\n - isogenic validation\n - ATR checkpoint dependency\njournal: \"bioRxiv\"\ndoi: \"\"\nabstract: |\n Loss-of-function (LOF) mutations in the base excision repair (BER) glycosylase MBD4 define a distinct\n tumor state characterized by CpG>TpG hypermutation and BER pathway deficiency. We report three\n pharmacogenomic observations using DepMap 24Q2 expression data and GDSC2 drug sensitivity screens.\n First, MBD4-LOF cancer cell lines show enhanced sensitivity to the ATR inhibitor ceralasertib\n (AZD6738) compared with wild-type lines (LN_IC50 Δ=−0.73, p=0.021, Cohen's d=−0.50; n=14 vs 914;\n GDSC2), and this association survives predefined confound stress tests, although MSI-H collinearity\n remains a major structural limitation of the observational design. Second, MBD4-LOF lines do not exhibit significantly elevated PARP1\n expression (p=0.605, n=19 LOF vs 1,498 WT; DepMap), falsifying the specific hypothesis that MBD4-LOF\n induces selective PARP1 transcriptional upregulation as the basis for PARPi sensitivity. Third,\n published isogenic data confirm that MBD4-knockout cells are hypersensitive to cytidine analogs\n (gemcitabine, cytarabine) with rescue on MBD4 re-expression (Chabot et al., 2022), providing a\n positive-control calibration benchmark for the pharmacogenomic approach. Together, these observations\n generate the hypothesis that MBD4-LOF "
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/manuscript_v4.md",
+      "exists": true,
+      "bytes": 34247,
+      "sha256": "6d6ba103ddea1422211fcaad4515ddb7f3a793ee691c0112b334c9eb467e672b",
+      "mtime_iso": "2026-05-07T05:00:37+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "artifact:bev2026_code_availability_inventory",
+  "type": "competitor_artifact",
+  "name": "Bev2026 code availability inventory (2026-06-24)",
+  "what_it_solves": "Structured audit of Bev2026's published code assets — which parts are runnable, which are pseudo-code, which are missing.",
+  "how_it_solves": "bev2026_code_availability_inventory_2026_06_24.json enumerates each claimed method → observed code artefact → status.",
+  "why_it_exists": "Grounds every 'we do X, Bev2026 does not' claim in the moat comparison against an actual code-availability check.",
+  "attributes": {
+    "inventory_top_keys": [
+      "$schema_version",
+      "investigation",
+      "investigation_date_utc",
+      "investigator_question_verbatim",
+      "narrowing_from_PDF",
+      "what_IS_publicly_available_verified",
+      "what_IS_NOT_publicly_available_verified",
+      "what_can_be_inferred_about_downstream_pipeline",
+      "implication_for_crispro_moat_dimension_7_reproducibility",
+      "tools_used_for_this_search",
+      "what_we_did_not_do_and_why",
+      "bottom_line"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/bev2026_code_availability_inventory_2026_06_24.json",
+      "exists": true,
+      "bytes": 14802,
+      "sha256": "1b0767cfa7db93fdba60bb3900382fc06f35e56d77c2217d6930065fcaaa72da",
+      "mtime_iso": "2026-06-25T03:41:16+00:00"
+    }
+  ],
+  "cross_refs": [
+    "moat:aggregate",
+    "moat:primary_discovery_design_multi_modal_vs_single_modal",
+    "moat:falsification_arm_methodology",
+    "moat:stress_testing_confound_robustness",
+    "moat:sample_size_and_statistical_power",
+    "moat:axis_taxonomy_and_target_class_mapping",
+    "moat:patient_derived_organoid_pdo_deployment",
+    "moat:reproducibility_infrastructure",
+    "moat:synergy_quantification_methodology",
+    "moat:source_of_mtap_loss_mibc_prevalence_statistic"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:moat_and_governance"
+}

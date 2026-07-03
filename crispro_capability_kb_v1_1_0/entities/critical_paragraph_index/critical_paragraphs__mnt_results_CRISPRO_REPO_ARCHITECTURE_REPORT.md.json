@@ -1,0 +1,68 @@
+{
+  "id": "critical_paragraphs:/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+  "type": "critical_paragraph_index",
+  "name": "Critical paragraphs — CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+  "what_it_solves": "Paragraphs from '/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md' matching critical/discovery/gap/hardcoded/bug/blocker keywords.",
+  "how_it_solves": "Paragraph-split then filtered by `(critical|most important|discovery|gap|finding|bug|blocker|hardcoded)` case-insensitive.",
+  "why_it_exists": "The 'most important discovery' paragraphs in the audit reports carry disproportionate weight — surfacing them as an index makes them searchable.",
+  "attributes": {
+    "hit_count": 8,
+    "hits": [
+      {
+        "line": 13,
+        "bytes": 363,
+        "text": "**Key finding for Brenus/STC-1010 positioning:** The backend already contains a `brenus_diligence/` module with hardcoded guardrails, flag enforcement, and a canon-frozen blocker registry specifically for the BreAK CRC-001 / STC-1010 diligence package. This is the most important discovery — CrisPRO has already internalized the Brenus use case at the code level."
+      },
+      {
+        "line": 21,
+        "bytes": 1316,
+        "text": "```\ncrispro-backend-v2/\n├── api/                          # FastAPI application (primary)\n│   ├── main.py                   # App factory + 40+ router registrations\n│   ├── config.py                 # Env config, model routing, feature flags\n│   ├── routers/                  # 40+ endpoint modules\n│   ├── services/                 # Business logic (100+ service modules)\n│   ├── schemas/                  # Pydantic request/response models\n│   ├── resources/                # Static data (disease priors, trial vectors, SAE maps)\n│   └── middleware/               # Auth, HIPAA PII, MFA, quota, security headers\n├── brenus_diligence/             # *** Brenus-specific guardrails (CRITICAL) ***\n├── biomarker_enriched_cohorts/   # TCGA/cBioPortal enriched cohort data + validation\n├── cohort_validation/            # DDR-bin survival validation scripts\n├── dosing_guidance_validation/   # CPIC concordance validation\n├── governance/formula_decision/  # PATH A decision record (signed 2026-04-28)\n├── knowledge_base/               # Structured KB (genes, variants, pathways, cohorts)\n├── Pubmed-LLM-Agent-main/        # RAG-based PubMed agent (embedded)\n├── scripts/                      # Benchmarking, data acquisition, analysis scripts\n└── evidence/sl_full_context_audit/ # Live SL audit artifacts (Cases A–D)\n```"
+      },
+      {
+        "line": 110,
+        "bytes": 110,
+        "text": "This module is directly wired into the backend and represents the MBD4 manuscript findings in production code."
+      },
+      {
+        "line": 112,
+        "bytes": 64,
+        "text": "### 2.5 Brenus Diligence Module (`brenus_diligence/`) — CRITICAL"
+      },
+      {
+        "line": 114,
+        "bytes": 94,
+        "text": "This is the most strategically important discovery. The backend has a dedicated Brenus module:"
+      },
+      {
+        "line": 134,
+        "bytes": 152,
+        "text": "**Canon source:** `brenus_canon_v2_freeze.md v2.1-FREEZE (2026-04-28)`  \n**Blocker source:** `brenus_final_blockers_registry.md v1.1-FINAL (2026-04-28)`"
+      },
+      {
+        "line": 297,
+        "bytes": 738,
+        "text": "| Gap | Severity | Details |\n|-----|----------|---------|\n| No human efficacy data for STC-1010 | HARD_BLOCK (B-003) | BreAK CRC-001 hasResults=false; n=6 preliminary signals from press releases only |\n| HT29 BRAF V600E conflict | ACTIVE_CONFLICT (SC-001) | BRAF-mutant cell line in vaccine for BRAF-WT patients — unresolved |\n| No CPI in regimen | HARD_BLOCK | Regimen confirmed: STC-1010 + low-dose Cy + GM-CSF + mFOLFOX6 ± bev; no ICI |\n| DL-07 Figure 2 DDR 0.983 | QUARANTINED | Mathematically impossible under PATH A ceiling (0.8898); publication-blocking |\n| LATIFY deltas (CT-03/DL-05/PC-06) | QUARANTINED | Vector version unresolved |\n| PC-02 | PERMANENTLY DOWNGRADED | Reproducibility failure; no recomputation will change this |"
+      },
+      {
+        "line": 338,
+        "bytes": 111,
+        "text": "*Report generated from verbatim GitHub API fetch. All findings are from source code inspection, not inference.*"
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+      "exists": true,
+      "bytes": 17877,
+      "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+      "mtime_iso": "2026-05-05T06:14:00+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:brenus_diligence"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

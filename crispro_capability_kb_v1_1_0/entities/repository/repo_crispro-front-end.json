@@ -1,0 +1,33 @@
+{
+  "id": "repo:crispro-front-end",
+  "type": "repository",
+  "name": "crispro-front-end",
+  "what_it_solves": "Clinician UI — TypeScript / React",
+  "how_it_solves": "See CRISPRO_REPO_ARCHITECTURE_REPORT.md for exact ownership/layer mapping and cross-repo contracts.",
+  "why_it_exists": "Separation of concerns: R&D exploration is siloed from production, and the frontend consumes typed engine contracts so clinician-facing UI never re-derives synthetic-lethality logic.",
+  "attributes": {
+    "role": "Clinician UI",
+    "stack": "TypeScript / React",
+    "status": "Active",
+    "block_found_in_arch_report": true
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+      "exists": true,
+      "bytes": 17877,
+      "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+      "mtime_iso": "2026-05-05T06:14:00+00:00",
+      "span_extracted": "repo:crispro-front-end"
+    }
+  ],
+  "cross_refs": [
+    "layer:contracts",
+    "layer:engines",
+    "layer:orchestrator",
+    "layer:output"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:architecture"
+}

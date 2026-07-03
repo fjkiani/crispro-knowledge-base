@@ -1,0 +1,34 @@
+{
+  "id": "code_module:src/components/ayesha/CarePlanActionButtons.jsx",
+  "type": "frontend_module_reference",
+  "name": "src/components/ayesha/CarePlanActionButtons.jsx",
+  "what_it_solves": "Frontend module 'src/components/ayesha/CarePlanActionButtons.jsx' referenced by the architecture / frontend audit corpus.",
+  "how_it_solves": "Extracted by regex for .ts/.tsx/.js/.jsx paths.",
+  "why_it_exists": "Enumerates the concrete frontend surface (crispro-front-end) so any SL/Ayesha UI claim can be traced to a real file.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/AYESHA_PAGE_MERGE_REPORT.md",
+        "line": 31,
+        "context": "nents/ayesha/PatientProfileSummary.jsx` | MERGED |\n| `CarePlanActionButtons` | `src/components/ayesha/CarePlanActionButtons.jsx` | MERGED |\n| `GermlinePathogenicAlert` | `src/components/ayesha/GermlinePathog"
+      }
+    ],
+    "reference_count": 1
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/AYESHA_PAGE_MERGE_REPORT.md",
+      "exists": true,
+      "bytes": 3844,
+      "sha256": "548e39ad9cda1c24fc5de8d047255a9da4096d7436ba78a445831a786bfc448f",
+      "mtime_iso": "2026-05-05T07:04:41+00:00"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-front-end",
+    "component:frontend_canonicalization"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

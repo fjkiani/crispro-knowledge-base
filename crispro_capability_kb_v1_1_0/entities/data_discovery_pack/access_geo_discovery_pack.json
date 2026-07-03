@@ -1,0 +1,45 @@
+{
+  "id": "access:geo_discovery_pack",
+  "type": "data_discovery_pack",
+  "name": "GEO discovery pack",
+  "what_it_solves": "GEO-wide discovery scan + expansion report identifying candidate datasets for the SL evidence pipeline.",
+  "how_it_solves": "geo_search_trace.json + geo_discovery_results.csv + geo_discovery_expansion_report.md capture the search parameters, hits, and expansion rationale.",
+  "why_it_exists": "Turns 'search GEO for relevant datasets' into a reproducible, auditable step with the exact query trace preserved.",
+  "attributes": {
+    "files": [
+      "geo_discovery_expansion_report.md",
+      "geo_discovery_results.csv",
+      "geo_search_trace.json"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/geo_discovery_expansion_report.md",
+      "exists": true,
+      "bytes": 7431,
+      "sha256": "0957d559fd6bf17c8fd0e91b2ac12455917aefbaa178490082c3bca36d9c8cac",
+      "mtime_iso": "2026-05-12T17:47:50+00:00"
+    },
+    {
+      "path": "/mnt/results/geo_discovery_results.csv",
+      "exists": true,
+      "bytes": 35191,
+      "sha256": "c178e6deacfffe29cd01b70af354899bcaa6075284d5b8685481e53329c9994f",
+      "mtime_iso": "2026-05-12T17:43:29+00:00"
+    },
+    {
+      "path": "/mnt/results/geo_search_trace.json",
+      "exists": true,
+      "bytes": 45443,
+      "sha256": "4d4497f7a0dc6b4afcc88b456b3f70fe2a3e864729853ad33b5deeb7dcb7b727",
+      "mtime_iso": "2026-05-11T15:56:42+00:00"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality",
+    "protocol:mars"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:operations_and_access"
+}

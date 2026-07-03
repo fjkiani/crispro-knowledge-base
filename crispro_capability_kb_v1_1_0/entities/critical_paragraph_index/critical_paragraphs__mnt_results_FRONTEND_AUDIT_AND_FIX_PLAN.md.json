@@ -1,0 +1,63 @@
+{
+  "id": "critical_paragraphs:/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+  "type": "critical_paragraph_index",
+  "name": "Critical paragraphs — FRONTEND_AUDIT_AND_FIX_PLAN.md",
+  "what_it_solves": "Paragraphs from '/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md' matching critical/discovery/gap/hardcoded/bug/blocker keywords.",
+  "how_it_solves": "Paragraph-split then filtered by `(critical|most important|discovery|gap|finding|bug|blocker|hardcoded)` case-insensitive.",
+  "why_it_exists": "The 'most important discovery' paragraphs in the audit reports carry disproportionate weight — surfacing them as an index makes them searchable.",
+  "attributes": {
+    "hit_count": 7,
+    "hits": [
+      {
+        "line": 1,
+        "bytes": 274,
+        "text": "# CrisPRO Frontend Audit & Fix Plan\n**Repo:** `fjkiani/crispro-front-end` · **Branch:** `main` · **Date:** 2026-05-04  \n**Scope:** Full audit — dead code, duplicate pages, broken imports, repo hygiene, bundle, API surface, hook architecture, hardening gaps. Brenus excluded."
+      },
+      {
+        "line": 9,
+        "bytes": 733,
+        "text": "The frontend is a working React/Vite/MUI application with a well-structured modular route system and solid hook architecture. The core MOAT pipeline, Ayesha persona, and SL analyzer are all functional. However, the repo has accumulated significant technical debt across five categories: **repo hygiene** (Python backend code committed into the frontend), **duplicate pages** (two live AyeshaCompleteCare files), **dead/stale code** (6 .bak files, 30+ committed .md docs, 4 sl_patch directories), **runtime correctness gaps** (render.yaml rootDir mismatch, options merge bug, duplicate SL calls), and **bundle bloat** (manualChunks disabled, no code splitting). All findings are rated by severity and mapped to a prioritized fix list."
+      },
+      {
+        "line": 32,
+        "bytes": 226,
+        "text": "Additionally at repo root:\n- `debug_raw_signals.py`\n- `test_paclitaxel_payload.py`\n- `verify_eligibility_adapter.py`\n- `verify_workflow_store.py`\n- `src/components/research/__init__.py`\n- `src/pages/ResearchPortal/__init__.py`"
+      },
+      {
+        "line": 42,
+        "bytes": 130,
+        "text": "**Note:** `.gitignore` already has `*.py[cod]` and `debug_*.py` but does NOT ignore `*.py` generally — so these files are tracked."
+      },
+      {
+        "line": 136,
+        "bytes": 804,
+        "text": "#### 1.4.2 useAyeshaCareData Options Merge Bug\n**Severity: MEDIUM** — In `useAyeshaCareData`:\n```js\nconst requestBody = buildRequest({ ...options, include_io_selection: true, max_trials: 50 });\ngeneratePlan(profile, requestBody);\n```\nThen in `useCompleteCareOrchestrator.generatePlan`:\n```js\nconst requestBody = { ...baseRequest, ...options };\n```\nThe `options` parameter passed to `generatePlan` is the already-merged `requestBody` from `buildRequest`. This means the spread `{ ...baseRequest, ...options }` overwrites `baseRequest` with the merged object — which is correct. **However**, `buildRequest` in `useAyeshaProfile` sets `include_io_selection: false` by default. The `useAyeshaCareData` override sets it to `true`, but only if it survives the merge. This is fragile and depends on merge order."
+      },
+      {
+        "line": 148,
+        "bytes": 463,
+        "text": "#### 1.4.3 TrialReplaySandbox Uses Hardcoded localhost\n**Severity: MEDIUM** — `src/components/ayesha/simulator/TrialReplaySandbox.jsx` line 11:\n```js\nconst API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';\n```\nThis uses `VITE_API_URL` (not `VITE_API_ROOT`) and falls back to `localhost:8000`. In production, if `VITE_API_URL` is not set, all simulator API calls silently fail. All other components use `API_ROOT` from `src/lib/apiConfig.js`."
+      },
+      {
+        "line": 224,
+        "bytes": 752,
+        "text": "#### Fix 1.1 — Remove Python backend code from frontend repo\n**Files to delete (git rm):**\n```\nsrc/components/orchestrator/Analysis/SyntheticLethality/sl_agent/   (entire dir)\nsrc/components/orchestrator/Analysis/SyntheticLethality/sl_patch/    (entire dir)\nsrc/components/orchestrator/Analysis/SyntheticLethality/sl_patch_rs/ (entire dir)\nsrc/components/orchestrator/Analysis/SyntheticLethality/sl_patch_rs_2/ (entire dir)\nsrc/components/research/__init__.py\nsrc/pages/ResearchPortal/__init__.py\ndebug_raw_signals.py\ntest_paclitaxel_payload.py\nverify_eligibility_adapter.py\nverify_workflow_store.py\n```\n**Action:** `git rm -r` each path. Add `*.py` to `.gitignore` with exception for any intentional Python scripts (none currently needed in frontend)."
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+      "exists": true,
+      "bytes": 24805,
+      "sha256": "f31945d7d1d131535769da391ab19546f2829f86263b1f5e49c49af1619166c4",
+      "mtime_iso": "2026-05-05T06:38:41+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:brenus_diligence"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "critical_paragraphs:/mnt/results/HYGIENE_DELETE_PROOF.md",
+  "type": "critical_paragraph_index",
+  "name": "Critical paragraphs — HYGIENE_DELETE_PROOF.md",
+  "what_it_solves": "Paragraphs from '/mnt/results/HYGIENE_DELETE_PROOF.md' matching critical/discovery/gap/hardcoded/bug/blocker keywords.",
+  "how_it_solves": "Paragraph-split then filtered by `(critical|most important|discovery|gap|finding|bug|blocker|hardcoded)` case-insensitive.",
+  "why_it_exists": "The 'most important discovery' paragraphs in the audit reports carry disproportionate weight — surfacing them as an index makes them searchable.",
+  "attributes": {
+    "hit_count": 1,
+    "hits": [
+      {
+        "line": 7,
+        "bytes": 2175,
+        "text": "| Path | Why Safe | Proof No Live Imports | Build Impact |\n|---|---|---|---|\n| `src/components/orchestrator/Analysis/SyntheticLethality/sl_agent/` (43 files) | Python FastAPI backend accidentally committed into React frontend | `grep -r \"sl_agent\" src/ --include=\"*.jsx\" --include=\"*.js\"` returned zero results | None — Python files are never processed by Vite |\n| `src/components/orchestrator/Analysis/SyntheticLethality/sl_patch/` (11 files) | Patch iteration of sl_agent, also Python | Same grep — zero JS/JSX references | None |\n| `src/components/orchestrator/Analysis/SyntheticLethality/sl_patch_rs/` (7 files) | Replication-stress patch, Python | Same grep — zero references | None |\n| `src/components/orchestrator/Analysis/SyntheticLethality/sl_patch_rs_2/` (7 files) | Second RS patch iteration, Python | Same grep — zero references | None |\n| `src/components/research/__init__.py` | Python stub, not a JS module | grep returned zero references | None |\n| `src/pages/ResearchPortal/__init__.py` | Python stub, not a JS module | grep returned zero references | None |\n| `debug_raw_signals.py`, `test_paclitaxel_payload.py`, `verify_eligibility_adapter.py`, `verify_workflow_store.py` (root level) | Python test scripts, never imported | Not importable by Vite | None |\n| `src/components/ayesha/DrugRankingPanel.jsx.backup` | Backup of DrugRankingPanel.jsx; live file at same path without `.backup` extension is unchanged | `grep -r \".backup\" src/ --include=\"*.jsx\"` returned zero references | None |\n| `src/components/vus/EfficacyModal.jsx.backup` | Same pattern | Zero references | None |\n| `"
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/HYGIENE_DELETE_PROOF.md",
+      "exists": true,
+      "bytes": 2502,
+      "sha256": "ed17f55f8fa1bcbb522f6aacbb089c4562339a994ae85413d20b41e162e3ad11",
+      "mtime_iso": "2026-05-05T07:04:40+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:brenus_diligence"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

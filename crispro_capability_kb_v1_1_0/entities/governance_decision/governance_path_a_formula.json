@@ -1,0 +1,45 @@
+{
+  "id": "governance:path_a_formula",
+  "type": "governance_decision",
+  "name": "PATH A formula (production ranker)",
+  "what_it_solves": "Signed decision locking the production ranker formula for CrisPRO to PATH A.",
+  "how_it_solves": "Approval statement (Fahad Kiani, 2026-04-28): 'Approved PATH A as production ranker formula effective immediately.' Formula: fit = clip((p·t) / ‖t‖₂, 0, 1). Records committed under governance/formula_decision/ in fjkiani/Brenus + fjkiani/crispro-backend-v2.",
+  "why_it_exists": "Prior sessions oscillated between PATH A and PATH B, quarantining downstream items (DL-03, PC-05, CT-01, Change 1.2). Signing PATH A unblocked ranker recomputation and made PATH B prohibited in all outputs.",
+  "attributes": {
+    "formula": "fit = clip((p·t) / ‖t‖₂, 0, 1)",
+    "signed_by": "Fahad Kiani",
+    "signed_at": "2026-04-28",
+    "path_b_status": "PROHIBITED",
+    "unblocked_items": [
+      "DL-03",
+      "PC-05",
+      "CT-01",
+      "Change 1.2 (pending recomputation/wording lock)"
+    ],
+    "still_quarantined": [
+      "DL-07 Figure 2 (DDR 0.983 — publication-blocking)",
+      "LATIFY deltas (CT-03/DL-05/PC-06 — vector version unresolved)",
+      "PC-02 (permanently downgraded)"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "governance/formula_decision/ (in fjkiani/Brenus)",
+      "note": "committed 2026-04-28",
+      "exists": null
+    },
+    {
+      "path": "governance/formula_decision/ (in fjkiani/crispro-backend-v2)",
+      "note": "committed 2026-04-28",
+      "exists": null
+    }
+  ],
+  "cross_refs": [
+    "governance:8d_remediation",
+    "moat:aggregate",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:moat_and_governance"
+}

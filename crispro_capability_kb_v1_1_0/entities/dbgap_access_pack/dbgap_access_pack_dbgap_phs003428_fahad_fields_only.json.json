@@ -1,0 +1,73 @@
+{
+  "id": "dbgap_access_pack:dbgap_phs003428_fahad_fields_only.json",
+  "type": "dbgap_access_pack",
+  "name": "dbgap_phs003428_fahad_fields_only.json",
+  "what_it_solves": "dbgap_access_pack artifact dbgap_phs003428_fahad_fields_only.json",
+  "how_it_solves": "Auto-parsed by extension.",
+  "why_it_exists": "Every access pack / SL map / gap-lineage report is a durable operational asset — must be addressable.",
+  "attributes": {
+    "raw": {
+      "fields": [
+        {
+          "field_id": "F01",
+          "label": "Institutional mailing address",
+          "where_to_insert": "Address block under PI/Applicant section in dbgap_phs003428_ctep_email_final.md",
+          "placeholder": "[FAHAD_INSERT: full registered mailing address of CrisPRO/Brenus Pharma]",
+          "how_to_find": "Use the registered business address of CrisPRO/Brenus Pharma as filed with the state/country of incorporation or as listed on official company documents"
+        },
+        {
+          "field_id": "F02",
+          "label": "eRA Commons username",
+          "where_to_insert": "PI eRA Commons ID field in dbgap_phs003428_ctep_email_final.md",
+          "placeholder": "[FAHAD_INSERT: your eRA Commons username]",
+          "how_to_find": "Log in to https://public.era.nih.gov/commonsplus — your username appears in the top-right corner of the dashboard"
+        },
+        {
+          "field_id": "F03",
+          "label": "Institutional email",
+          "where_to_insert": "PI contact email field in dbgap_phs003428_ctep_email_final.md",
+          "placeholder": "[FAHAD_INSERT: your institutional email address at CrisPRO/Brenus Pharma]",
+          "how_to_find": "Use your official @crispro.com or @brenus-pharma.com email address (whichever is your primary institutional address)"
+        },
+        {
+          "field_id": "F04",
+          "label": "Institutional phone",
+          "where_to_insert": "PI contact phone field in dbgap_phs003428_ctep_email_final.md",
+          "placeholder": "[FAHAD_INSERT: your direct institutional phone number at CrisPRO/Brenus Pharma]",
+          "how_to_find": "Use your direct office or mobile number registered under CrisPRO/Brenus Pharma; include country code if outside the US (e.g., +1-XXX-XXX-XXXX)"
+        },
+        {
+          "field_id": "F05",
+          "label": "Date",
+          "where_to_insert": "Date line at the top of dbgap_phs003428_ctep_email_final.md",
+          "placeholder": "[FAHAD_INSERT: today's date in Month DD, YYYY format]",
+          "how_to_find": "Use today's date at the moment you send the email, formatted as e.g. July 14, 2025"
+        }
+      ],
+      "total_fields": 5,
+      "send_unblocked_after": "all 5 fields filled"
+    },
+    "top_keys": [
+      "fields",
+      "total_fields",
+      "send_unblocked_after"
+    ],
+    "bytes": 2104,
+    "note": "raw carried"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/dbgap_phs003428_fahad_fields_only.json",
+      "exists": true,
+      "bytes": 2104,
+      "sha256": "36d267f2da703948b25fc23276552d9ba01a1690a7975def8270476d4f4bbdee",
+      "mtime_iso": "2026-05-13T09:17:35+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:access_packs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

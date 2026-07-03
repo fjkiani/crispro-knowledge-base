@@ -1,0 +1,214 @@
+{
+  "id": "csv:A8_dependency_probability.csv",
+  "type": "csv_content",
+  "name": "A8_dependency_probability.csv",
+  "what_it_solves": "Parsed contents of A8_dependency_probability.csv: header + row count + column ranges.",
+  "how_it_solves": "csv.reader → header + row list; per column, if numeric ⇒ (n, min, max, mean); if categorical ⇒ top-3 values + unique count.",
+  "why_it_exists": "Deep pass: previous stream had file metadata only. This entity carries the actual data shape so downstream consumers can validate any claim about A1/A2/A3/… without re-parsing.",
+  "attributes": {
+    "header": [
+      "gene",
+      "n_LOF",
+      "n_WT",
+      "n_dep_gt05_LOF",
+      "n_dep_gt05_WT",
+      "frac_dep_gt05_LOF",
+      "frac_dep_gt05_WT",
+      "mean_dep_prob_LOF",
+      "mean_dep_prob_WT",
+      "median_dep_prob_LOF",
+      "median_dep_prob_WT",
+      "fisher_OR",
+      "fisher_p",
+      "mw_stat",
+      "mw_p",
+      "note"
+    ],
+    "row_count": 3,
+    "sample_rows": [
+      [
+        "ATR",
+        "12",
+        "1174",
+        "12",
+        "1141",
+        "1.0",
+        "0.9718909710391823",
+        "0.9646292358014418",
+        "0.9331875623878346",
+        "0.982944525681962",
+        "0.9764273840707354",
+        "inf",
+        "0.7116052335862899",
+        "7652.0",
+        "0.3034089407743389",
+        "Near-universal essential gene; binary >0.5 not discriminating"
+      ],
+      [
+        "CHEK1",
+        "12",
+        "1174",
+        "12",
+        "1173",
+        "1.0",
+        "0.9991482112436116",
+        "0.9796745111808999",
+        "0.9940427576817054",
+        "0.999155130553127",
+        "0.9999820589606244",
+        "inf",
+        "0.9898819561551433",
+        "4888.0",
+        "0.9699158534929583",
+        "Near-universal essential gene; binary >0.5 not discriminating"
+      ],
+      [
+        "WEE1",
+        "12",
+        "1174",
+        "12",
+        "1174",
+        "1.0",
+        "1.0",
+        "0.9972385215869545",
+        "0.9996354824819522",
+        "1.0",
+        "1.0",
+        "",
+        "1.0",
+        "6824.0",
+        "0.6796958791998599",
+        "Near-universal essential gene; binary >0.5 not discriminating"
+      ]
+    ],
+    "column_ranges": {
+      "gene": {
+        "categorical": true,
+        "top_values": [
+          [
+            "ATR",
+            1
+          ],
+          [
+            "CHEK1",
+            1
+          ],
+          [
+            "WEE1",
+            1
+          ]
+        ],
+        "unique_count": 3
+      },
+      "n_LOF": {
+        "n_numeric": 3,
+        "min": 12.0,
+        "max": 12.0,
+        "mean": 12.0
+      },
+      "n_WT": {
+        "n_numeric": 3,
+        "min": 1174.0,
+        "max": 1174.0,
+        "mean": 1174.0
+      },
+      "n_dep_gt05_LOF": {
+        "n_numeric": 3,
+        "min": 12.0,
+        "max": 12.0,
+        "mean": 12.0
+      },
+      "n_dep_gt05_WT": {
+        "n_numeric": 3,
+        "min": 1141.0,
+        "max": 1174.0,
+        "mean": 1162.6666666666667
+      },
+      "frac_dep_gt05_LOF": {
+        "n_numeric": 3,
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0
+      },
+      "frac_dep_gt05_WT": {
+        "n_numeric": 3,
+        "min": 0.9718909710391823,
+        "max": 1.0,
+        "mean": 0.9903463940942646
+      },
+      "mean_dep_prob_LOF": {
+        "n_numeric": 3,
+        "min": 0.9646292358014418,
+        "max": 0.9972385215869545,
+        "mean": 0.9805140895230987
+      },
+      "mean_dep_prob_WT": {
+        "n_numeric": 3,
+        "min": 0.9331875623878346,
+        "max": 0.9996354824819522,
+        "mean": 0.9756219341838307
+      },
+      "median_dep_prob_LOF": {
+        "n_numeric": 3,
+        "min": 0.982944525681962,
+        "max": 1.0,
+        "mean": 0.9940332187450297
+      },
+      "median_dep_prob_WT": {
+        "n_numeric": 3,
+        "min": 0.9764273840707354,
+        "max": 1.0,
+        "mean": 0.9921364810104533
+      },
+      "fisher_OR": {
+        "n_numeric": 2,
+        "min": Infinity,
+        "max": Infinity,
+        "mean": Infinity
+      },
+      "fisher_p": {
+        "n_numeric": 3,
+        "min": 0.7116052335862899,
+        "max": 1.0,
+        "mean": 0.9004957299138111
+      },
+      "mw_stat": {
+        "n_numeric": 3,
+        "min": 4888.0,
+        "max": 7652.0,
+        "mean": 6454.666666666667
+      },
+      "mw_p": {
+        "n_numeric": 3,
+        "min": 0.3034089407743389,
+        "max": 0.9699158534929583,
+        "mean": 0.6510068911557191
+      },
+      "note": {
+        "categorical": true,
+        "top_values": [
+          [
+            "Near-universal essential gene; binary >0.5 not discriminating",
+            3
+          ]
+        ],
+        "unique_count": 1
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A8_dependency_probability.csv",
+      "exists": true,
+      "bytes": 819,
+      "sha256": "c9bec4f53c68a73ba32bc008774c7a69e1fab36f0ffcaf21b2b473845afc86ff",
+      "mtime_iso": "2026-04-26T06:24:37+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

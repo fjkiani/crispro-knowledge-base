@@ -1,0 +1,32 @@
+{
+  "id": "roadmap_chapter:05_no_automated_validated_assignment_only_frozen_receipt_",
+  "type": "roadmap_chapter",
+  "name": "Ch 05 — No automated VALIDATED assignment (only frozen receipt)",
+  "what_it_solves": "CRISPRO_SL_PHD_ROADMAP chapter 'No automated VALIDATED assignment (only frozen receipt)' spanning lines 1080..1152.",
+  "how_it_solves": "Chapter body preview (first 2000 chars) attached; full content lives in the source file. Subheadings enumerated.",
+  "why_it_exists": "Chapter is the natural unit of the roadmap — one entity per chapter makes 'what does Ch 3.4 say about the fuser?' addressable.",
+  "attributes": {
+    "level": 1,
+    "start_line": 1080,
+    "end_line": 1152,
+    "byte_length": 4218,
+    "subheadings": [],
+    "body_preview_2000c": "\t    for gap in report[\"data_gaps\"]:\n\t        assert gap[\"current_tier\"] != \"VALIDATED\"  # gaps are for upgradeable tiers\n\t________________\n\n\nChapter 7: Lineage Dependency Engine (Sprint C)\n\n\nSPRINT C — CLAUDE CODE SPEC FILE\nTarget repo: crispro-backend-v3\nTarget: layer1_engines/lineage_dependency/ (NEW MODULE)\nGoal: Cancer-type-specific lineage essential genes as therapeutic targets\nExpected result: Ovarian → PAX8 (d=−1.25), PARD3 (d=−1.08) as top lineage hits\n\t7.1 Scientific Basis\nLineage dependencies are genes that are essential specifically in a given cancer lineage — not because of somatic mutations (SL) but because of the tissue-of-origin transcriptional program. PAX8 (Cohen's d = −1.25) and PARD3 (d = −1.08) emerged from DepMap ovarian analysis as the strongest lineage-selective dependencies. These are not classical SL pairs; they are therapeutic targets in their own right.\nPAX8 is the Müllerian lineage master transcription factor. Ovarian cancer cells require PAX8 for survival because their transcriptional identity is built on PAX8-driven gene expression. Inhibiting PAX8 would collapse the cancer cell's transcriptional program. PARD3 is a scaffold protein in the polarity complex essential for epithelial organization in ovarian epithelium.\n7.2 Files to Create\nlayer1_engines/lineage_dependency/\n\t├── __init__.py\n\t├── engine.py          # LineageDependencyEngine class\n\t├── panels.py          # Frozen lineage panel data per cancer type\n\t└── models.py          # LineageHit, LineageDependencyResult\n\t7.3 LineagePanel Frozen Data\nLINEAGE_PANELS = {\n\t    \"ovarian_cancer\": [\n\t        LineageHit(gene=\"PAX8\", cohens_d=-1.25, fdr=6.5e-6, n_lines=59,\n\t                   rationale=\"Müllerian lineage master TF — strongest ovarian dependency\",\n\t                   drug_candidates=[], target_class=\"transcription_factor\"),\n\t        LineageHit(gene=\"PARD3\", cohens_d=-1.08, fdr=7.5e-6,\n\t                   rationale=\"Polarity complex; epithelial organization\",\n\t                   d"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "lines 1080..1152"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:synthetic_lethality_deep"
+}

@@ -1,0 +1,116 @@
+{
+  "id": "docs:INTEL_FACETED_FILTERING.md",
+  "type": "brenus_ops_markdown",
+  "name": "INTEL_FACETED_FILTERING.md",
+  "what_it_solves": "Structured view of INTEL_FACETED_FILTERING.md: heading tree + 2500-char preview.",
+  "how_it_solves": "Regex heading extract + preview slice.",
+  "why_it_exists": "Ties the AACR session index / GTM bridge / faceted-filtering rules into the KB as first-class docs.",
+  "attributes": {
+    "byte_length": 10747,
+    "heading_count": 17,
+    "headings": [
+      {
+        "level": 1,
+        "title": "Intel Faceted Filtering — Architecture",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "Problem",
+        "line": 9
+      },
+      {
+        "level": 2,
+        "title": "Design principle",
+        "line": 26
+      },
+      {
+        "level": 2,
+        "title": "Architecture",
+        "line": 40
+      },
+      {
+        "level": 2,
+        "title": "Component 1: Lead Intel Facets (materialized index)",
+        "line": 82
+      },
+      {
+        "level": 3,
+        "title": "Proposed DocType: `Lead Intel Facets`",
+        "line": 86
+      },
+      {
+        "level": 3,
+        "title": "Rebuild function",
+        "line": 108
+      },
+      {
+        "level": 1,
+        "title": "crm/api/intel_facets.py (proposed)",
+        "line": 111
+      },
+      {
+        "level": 3,
+        "title": "Triggers",
+        "line": 119
+      },
+      {
+        "level": 2,
+        "title": "Component 2: Filter manifest API",
+        "line": 129
+      },
+      {
+        "level": 3,
+        "title": "Schema-side filter metadata (frontend + backend share contract)",
+        "line": 196
+      },
+      {
+        "level": 2,
+        "title": "Component 3: Faceted list query",
+        "line": 217
+      },
+      {
+        "level": 2,
+        "title": "Component 4: DynamicFilterBar (frontend)",
+        "line": 243
+      },
+      {
+        "level": 2,
+        "title": "What to avoid",
+        "line": 259
+      },
+      {
+        "level": 2,
+        "title": "Current state (verified in repo)",
+        "line": 271
+      },
+      {
+        "level": 2,
+        "title": "Rollout order",
+        "line": 284
+      },
+      {
+        "level": 2,
+        "title": "Success criteria",
+        "line": 295
+      }
+    ],
+    "preview": "# Intel Faceted Filtering — Architecture\n\n> **Status:** Design spec (not yet implemented)  \n> **Scope:** Dynamic, scalable Leads list filtering across GTM (CRM Lead), Schema A (AACR Talk), and Schema B (AACR Intel)  \n> **Related:** [AACR_SUPABASE_CONNECTION.md](./AACR_SUPABASE_CONNECTION.md), [GTM_SCHEMA_B_BRIDGE.md](./GTM_SCHEMA_B_BRIDGE.md), [AACR_SESSION_NAVIGATION.md](./AACR_SESSION_NAVIGATION.md)\n\n---\n\n## Problem\n\nThe Leads list (`/crm/leads`) uses the stock Frappe CRM view stack:\n\n```\nLeads.vue → ViewControls → crm.api.doc.get_data → frappe.get_list(\"CRM Lead\")\n```\n\n- Default columns are classic CRM only (name, org, status, email, mobile, assignee, modified).\n- GTM fields (`tier`, `lead_score`, `source_ref_id`, narrative fields) exist on the lead but are not in default columns or quick filters.\n- Schema B dimensions (opportunity count, vulnerabilities, presentation type) live in `AACR Intel` child tables and are **not joinable** through `get_data`.\n- ~906 AACR leads appear as an undifferentiated dump because intel facets are invisible at list time.\n\nHard-coded saved views or one-off custom fields per intel dimension do not scale when Schema C/D are added.\n\n---\n\n## Design principle\n\nMirror the display pattern already in production:\n\n| Layer | Display (exists today) | Filter (target) |\n|-------|------------------------|-----------------|\n| Config | `gtmSchema`, `aacrIntelSchema`, `aacr2026Schema` | Filter manifest derived from same schema family |\n| Renderer | `IntelPanel` + type registry | `DynamicFilterBar` + filter type registry |\n| Data | Per-lead API fetch at detail time | Materialized facet index at list time |\n\n**Rule:** Schema defines both what you **show** and what you **filter** — not separate hard-coded filter lists in Vue.\n\n---\n\n## Architecture\n\n```mermaid\nflowchart LR\n  subgraph sources [Intel sources]\n    GTM[GTM fields on CRM Lead]\n    SA[Schema A - AACR Talk]\n    SB[Schema B - AACR Intel]\n    Future[Future schemas...]\n  end\n\n  subgraph pipeline [Sync pipeline]\n    Rebuild[\"rebuild_lead_facets(lead_id)\"]\n  end\n\n  subgraph index [Queryable index]\n    Facets[\"Lead Intel Facets\\n1:1 with CRM Lead\"]\n  end\n\n  subgraph api [API layer]\n    Manifest[\"get_filter_manifest('CRM Lead')\"]\n    Query[\"get_faceted_list(doctype, filters, facet_filters)\"]\n  end\n\n  subgraph ui [Frontend]\n    Bar[\"DynamicFilterBar\"]\n    List[Leads list via ViewControls]\n  end\n\n  GTM --> Rebuild\n  SA --> Rebuild\n  SB --> Rebuild\n  Future --> Rebuild\n  Rebuild --> Facets\n  Ma"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/INTEL_FACETED_FILTERING.md",
+      "exists": true,
+      "bytes": 10799,
+      "sha256": "3b86630f7a064a753c9a133bab1e6867f6614787e2ce6ee7271b478104d84c86",
+      "mtime_iso": "2026-07-02T15:30:00+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:aacr_tracker",
+    "module:brenus_diligence"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

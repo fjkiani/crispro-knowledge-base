@@ -1,0 +1,26 @@
+{
+  "id": "doc:frontend_agent_prompt",
+  "type": "agent_prompt",
+  "name": "Frontend agent prompt (CrisPRO clinician UI)",
+  "what_it_solves": "System prompt / behavioural spec for the frontend agent that mediates the clinician UI.",
+  "how_it_solves": "17KB prompt document defining the agent's persona, tool access, invariants (RUO stamping, no free-text tier claims), and error handling.",
+  "why_it_exists": "Makes the clinician-facing agent's behaviour a versioned artefact rather than an implicit convention.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/crispro_docs/FRONTEND_AGENT_PROMPT.md",
+      "exists": true,
+      "bytes": 17060,
+      "sha256": "87f522c8c861f1ba9a3efab157d6e8146d8f377319569c0aa2b0e7736b1e3600",
+      "mtime_iso": "2026-04-13T20:08:21+00:00"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-front-end",
+    "invariant:ruo_middleware",
+    "component:frontend_canonicalization"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:operations_and_access"
+}

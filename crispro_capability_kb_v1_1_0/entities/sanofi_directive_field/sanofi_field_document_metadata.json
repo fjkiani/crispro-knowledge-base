@@ -1,0 +1,113 @@
+{
+  "id": "sanofi:field:document_metadata",
+  "type": "sanofi_directive_field",
+  "name": "sanofi directive — _document_metadata",
+  "what_it_solves": "Directive field '_document_metadata' with its full sub-payload.",
+  "how_it_solves": "Extracted verbatim from sanofiPitchDeckDirective[k].",
+  "why_it_exists": "Depth pass: each field carries its own scope (positioning, deliverables, timelines, negotiation stance) — surfacing them separately makes each addressable.",
+  "attributes": {
+    "raw": {
+      "title": "CrisPRO × Sanofi — Pitch Deck Directive",
+      "version": "v1.0.1",
+      "date": "2026-06-15",
+      "corrections": [
+        {
+          "date": "2026-06-09",
+          "issue": "SAR445953 asset-class drift",
+          "fix": "CEACAM5×CD3 T-cell engager → CEACAM5-Topo1 ADC (SGN-CEACAM5C). Gate logic unchanged."
+        }
+      ],
+      "asset_canon": {
+        "SAR445953": {
+          "aliases": [
+            "SGN-CEACAM5C"
+          ],
+          "class": "CEACAM5-Topo1 ADC",
+          "mechanism": "Humanized IgG1 anti-CEACAM5 mAb conjugated to topoisomerase 1 inhibitor AMDCPT (8 molecules per antibody)",
+          "collaboration": "Seagen/Pfizer collaboration with Sanofi",
+          "trial": "NCT06131840"
+        },
+        "SAR445877": {
+          "class": "PD-1 × IL-15 fusion protein (IO-activating)",
+          "trial": "NCT07500298"
+        }
+      },
+      "document_type": "DECK_AGENT_DIRECTIVE",
+      "purpose": "Slide-by-slide production brief for the deck-building agent. Every slide specifies: title, subtitle, act, type, visual layout, one_claim, speaker_note, data_anchors, hard_stops, and transition. The agent makes zero content decisions — all choices are pre-made here.",
+      "audience": "Sanofi Head of Translational Medicine + VP Business Development",
+      "total_slides": 13,
+      "target_duration_minutes": 20,
+      "structure": {
+        "COVER": "Slide 01",
+        "ACT_1_SCIENCE": "Slides 02–08 (7 slides) — establish the problem and the four signals",
+        "ACT_2_DEAL": "Slides 09–12 (4 slides) — deliverables, validation, deal, asks",
+        "CLOSE": "Slide 13"
+      },
+      "narrative_spine": "LIVER-SPLIT → TMB-DECODE → GATE-FAIL → CEA-GATE → Two-Gate System → Deal",
+      "framing": "CrisPRO-led — platform capabilities demonstrated through Sanofi's own asset failures",
+      "design_system": {
+        "background_primary": "#000000 (black)",
+        "background_secondary": "#1a1a1a (dark grey — ACT 2 slides)",
+        "accent_primary": "#E9ED4C (yellow)",
+        "accent_secondary": "#FF9400 (orange)",
+        "text_primary": "#FFFFFF (white)",
+        "text_secondary": "#ECE9E2 (off-white)",
+        "success_color": "#75A025 (green)",
+        "danger_color": "#CC3333 (red)",
+        "font_title": "Sans-serif, bold, large",
+        "font_body": "Sans-serif, regular, medium"
+      },
+      "act_divider_instruction": "Insert a full-bleed yellow banner slide between Slide 08 and Slide 09 labeled 'ACT 2 — THE DEAL' if the deck agent supports divider slides. If not, embed the act label in Slide 09's top banner.",
+      "source_files_used": [
+        "crispro_sanofi_pitch_deck_audited_v2.json",
+        "sanofi_pitch_deck_stc1010.json",
+        "ceacam5_sanofi_intelligence_v2.json",
+        "ceacam5_sanofi_executive_payload_v2.json",
+        "SANOFI_EXECUTIVE_PITCH_SCRIPT.json",
+        "SANOFI_INVESTOR_OUTLINE.json",
+        "ceacam5_validation_annex.json"
+      ],
+      "stress_test_status": "All data anchors verified against transcript tool outputs. See STRESS_TEST_AUDIT.json.",
+      "global_hard_stops": [
+        "pTMB ≥28 is EXPLORATORY — never 'validated biomarker'",
+        "CARMEN-LC03 ≥80% OS HR=0.71 is POST-HOC TREND — CI not published, underpowered",
+        "All cCEA ORR data are from NSCLC (PMC12720031) — NSCLC caveat mandatory on Slide 06",
+        "CEACAM5_80_FRAC=0.28 is CONSERVATIVE FLOOR from NSCLC data — label as OA-08",
+        "Do not disclose MAS formula, proprietary formula mechanics, or internal registry codes",
+        "NPV values ($12.4M/$6.7M/$18.8M) are INTERNAL MODEL — label as open assumption if shown",
+        "Use 90% CI 0.18–0.63 for pTMB HR — NOT the old 95% CI (old error, corrected)",
+        "Do not quote '$50–150M milestone payments' — removed in 8D audit (audit note S09)",
+        "SAR445953 = CEACAM5-Topo1 ADC (SGN-CEACAM5C) — NOT T-cell engager / CEACAM5×CD3"
+      ],
+      "open_assumptions_on_deck": [
+        {
+          "id": "OA-08",
+          "claim": "CEACAM5_80_FRAC=0.28",
+          "label_required": "NSCLC proxy — conservative floor"
+        },
+        {
+          "id": "OA-05",
+          "claim": "Two-gate ORR 35–45%",
+          "label_required": "Modeled — not directly observed in MSS CRC"
+        }
+      ]
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/sanofiPitchDeckDirective.json",
+      "exists": true,
+      "bytes": 54645,
+      "sha256": "281c15882038ec8ca192b5581453ed5a683725db527dee43db79b2461d46ef10",
+      "mtime_iso": "2026-06-15T22:24:00+00:00",
+      "span_extracted": "[_document_metadata]"
+    }
+  ],
+  "cross_refs": [
+    "sanofi:directive_root",
+    "module:brenus_diligence"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

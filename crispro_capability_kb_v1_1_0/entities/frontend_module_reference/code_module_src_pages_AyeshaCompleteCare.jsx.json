@@ -1,0 +1,102 @@
+{
+  "id": "code_module:src/pages/AyeshaCompleteCare.jsx",
+  "type": "frontend_module_reference",
+  "name": "src/pages/AyeshaCompleteCare.jsx",
+  "what_it_solves": "Frontend module 'src/pages/AyeshaCompleteCare.jsx' referenced by the architecture / frontend audit corpus.",
+  "how_it_solves": "Extracted by regex for .ts/.tsx/.js/.jsx paths.",
+  "why_it_exists": "Enumerates the concrete frontend surface (crispro-front-end) so any SL/Ayesha UI claim can be traced to a real file.",
+  "attributes": {
+    "references": [
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 18,
+        "context": "eshaCompleteCare.jsx` (newer, uses orchestrator) promoted to canonical. Legacy `src/pages/AyeshaCompleteCare.jsx` (971 lines, inline SL fetch) deleted. 15 components now live that were silentl"
+      },
+      {
+        "source_file": "/mnt/results/HANDOFF.md",
+        "line": 18,
+        "context": "inline SL fetch) deleted. 15 components now live that were silently missing. | `src/pages/AyeshaCompleteCare.jsx` |\n| Care-plan deduplication | `useAyeshaCarePlan.js` retired (zero consumers)."
+      },
+      {
+        "source_file": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+        "line": 51,
+        "context": "sx.backup` | 7 KB |\n| `src/components/vus/EfficacyModal.jsx.backup` | 7 KB |\n| `src/pages/AyeshaCompleteCare.jsx.bak2` | 10 KB |\n| `src/pages/AyeshaTherapyFit.jsx.bak_legacy` | 23 KB |\n| `src/"
+      },
+      {
+        "source_file": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+        "line": 83,
+        "context": " and are both importable:\n\n| File | Size | Status |\n|------|------|--------|\n| `src/pages/AyeshaCompleteCare.jsx` | 41 KB | **Active** — imported by `patientRoutes.jsx` |\n| `src/pages/ayesha/A"
+      },
+      {
+        "source_file": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+        "line": 247,
+        "context": "/ayesha/DrugRankingPanel.jsx.backup\nsrc/components/vus/EfficacyModal.jsx.backup\nsrc/pages/AyeshaCompleteCare.jsx.bak2\nsrc/pages/AyeshaTherapyFit.jsx.bak_legacy\nsrc/pages/OrchestratorDashboard."
+      },
+      {
+        "source_file": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+        "line": 307,
+        "context": "1 — Resolve duplicate AyeshaCompleteCare\n**Decision required:** The live file (`src/pages/AyeshaCompleteCare.jsx`, 41 KB) is missing newer components from the orphan (`src/pages/ayesha/AyeshaC"
+      },
+      {
+        "source_file": "/mnt/results/AYESHA_PAGE_MERGE_REPORT.md",
+        "line": 5,
+        "context": "shaCompleteCare.jsx`, 374 lines) was the NEWER, BETTER version. The live file (`src/pages/AyeshaCompleteCare.jsx`, 971 lines) was the legacy version with inline SL fetch and no orchestrator ho"
+      },
+      {
+        "source_file": "/mnt/results/AYESHA_PAGE_MERGE_REPORT.md",
+        "line": 9,
+        "context": "o orchestrator hook. The orphan was promoted to canonical.\n\n## Before State\n\n**`src/pages/AyeshaCompleteCare.jsx` (971 lines) — LIVE, imported by `patientRoutes.jsx`**\n- Uses: `useState`, `use"
+      },
+      {
+        "source_file": "/mnt/results/AYESHA_PAGE_MERGE_REPORT.md",
+        "line": 54,
+        "context": "2. Rewrote all import paths from `../../` to `../` (pages/ depth)\n3. Overwrote `src/pages/AyeshaCompleteCare.jsx` with canonical content\n4. `git rm src/pages/ayesha/AyeshaCompleteCare.jsx`\n5. "
+      }
+    ],
+    "reference_count": 9
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    },
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    },
+    {
+      "path": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+      "exists": true,
+      "bytes": 24805,
+      "sha256": "f31945d7d1d131535769da391ab19546f2829f86263b1f5e49c49af1619166c4",
+      "mtime_iso": "2026-05-05T06:38:41+00:00"
+    },
+    {
+      "path": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+      "exists": true,
+      "bytes": 24805,
+      "sha256": "f31945d7d1d131535769da391ab19546f2829f86263b1f5e49c49af1619166c4",
+      "mtime_iso": "2026-05-05T06:38:41+00:00"
+    },
+    {
+      "path": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+      "exists": true,
+      "bytes": 24805,
+      "sha256": "f31945d7d1d131535769da391ab19546f2829f86263b1f5e49c49af1619166c4",
+      "mtime_iso": "2026-05-05T06:38:41+00:00"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-front-end",
+    "component:frontend_canonicalization"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

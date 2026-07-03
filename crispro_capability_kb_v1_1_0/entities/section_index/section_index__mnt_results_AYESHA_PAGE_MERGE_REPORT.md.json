@@ -1,0 +1,61 @@
+{
+  "id": "section_index:/mnt/results/AYESHA_PAGE_MERGE_REPORT.md",
+  "type": "section_index",
+  "name": "Section index — AYESHA_PAGE_MERGE_REPORT.md",
+  "what_it_solves": "Section index of '/mnt/results/AYESHA_PAGE_MERGE_REPORT.md': every heading with its level and starting line.",
+  "how_it_solves": "Regex `^#{1,6}\\s+(.+)$` extracted at generation time; preserves navigation without duplicating body text.",
+  "why_it_exists": "Downstream ingestors can walk the document by section without re-parsing markdown; the KB stops being an opaque blob.",
+  "attributes": {
+    "heading_count": 7,
+    "headings": [
+      {
+        "level": 1,
+        "title": "AyeshaCompleteCare Page Merge Report",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "Summary",
+        "line": 3
+      },
+      {
+        "level": 2,
+        "title": "Before State",
+        "line": 7
+      },
+      {
+        "level": 2,
+        "title": "Component Inventory — Orphan-Only Components",
+        "line": 18
+      },
+      {
+        "level": 2,
+        "title": "Components in Legacy File NOT in Orphan — Discarded with Rationale",
+        "line": 40
+      },
+      {
+        "level": 2,
+        "title": "Action Taken",
+        "line": 50
+      },
+      {
+        "level": 2,
+        "title": "Route Proof",
+        "line": 58
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/AYESHA_PAGE_MERGE_REPORT.md",
+      "exists": true,
+      "bytes": 3844,
+      "sha256": "548e39ad9cda1c24fc5de8d047255a9da4096d7436ba78a445831a786bfc448f",
+      "mtime_iso": "2026-05-05T07:04:41+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

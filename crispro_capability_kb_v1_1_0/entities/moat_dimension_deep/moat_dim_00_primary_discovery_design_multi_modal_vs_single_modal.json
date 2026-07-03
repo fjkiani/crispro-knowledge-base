@@ -1,0 +1,52 @@
+{
+  "id": "moat_dim:00_primary_discovery_design_multi_modal_vs_single_modal",
+  "type": "moat_dimension_deep",
+  "name": "Dim 00 — Primary discovery design — multi-modal vs single-modal",
+  "what_it_solves": "Full moat_comparison dimension #0: 'Primary discovery design — multi-modal vs single-modal' — Bev2026 approach vs CrisPRO approach with verbatim quote.",
+  "how_it_solves": "Extracted verbatim from moat_comparison.comparison_dimensions[i]; raw dict carried in attributes.raw.",
+  "why_it_exists": "Depth pass: previous stream flattened each dimension to a few fields. This entity carries every field the JSON contains for that dimension.",
+  "attributes": {
+    "index": 0,
+    "dimension": "Primary discovery design — multi-modal vs single-modal",
+    "Bev2026_approach_verbatim": "Unlike cell viability screenings that provide only binary outcomes (live or dead), multiparametric drug screenings can capture complex cellular responses, offering insights into drug mechanisms of action, types of cell death, and molecular responses.",
+    "Bev2026_approach_verbatim_source": "Bev2026 PDF, Introduction (page 2), final paragraph before Results",
+    "Bev2026_implementation": "Two parallel hit-selection axes from same screen — viability z-score (Fig 1E) AND morphology Pearson correlation (Fig 2B). Independent nomination paths catch gemcitabine which the viability axis missed.",
+    "CrisPRO_approach": "7-modality candidate axis enum at api/services/synthetic_lethality/v3/multimodal/models.py:122: CYTIDINE_ANALOGS, PARP_INHIBITORS, ATR_WEE1, WRN, IMMUNOTHERAPY, PKMYT1, CUSTOM. EvidenceRow combines GDSC pharmacology + DepMap CRISPR + literature receipt + expression + in vitro + in vivo + clinical cells.",
+    "moat_status": "PARITY (different dimensions, similar philosophy). Bev2026 axes are biological readouts within one screen; CrisPRO axes are evidence modalities across data types.",
+    "verification_status": "Verbatim quote confirmed by direct PDF read of pages 1-3, 2026-06-24. Originally from Introduction (not Discussion as the dimension framing might imply).",
+    "raw": {
+      "dimension": "Primary discovery design — multi-modal vs single-modal",
+      "Bev2026_approach_verbatim": "Unlike cell viability screenings that provide only binary outcomes (live or dead), multiparametric drug screenings can capture complex cellular responses, offering insights into drug mechanisms of action, types of cell death, and molecular responses.",
+      "Bev2026_implementation": "Two parallel hit-selection axes from same screen — viability z-score (Fig 1E) AND morphology Pearson correlation (Fig 2B). Independent nomination paths catch gemcitabine which the viability axis missed.",
+      "CrisPRO_approach": "7-modality candidate axis enum at api/services/synthetic_lethality/v3/multimodal/models.py:122: CYTIDINE_ANALOGS, PARP_INHIBITORS, ATR_WEE1, WRN, IMMUNOTHERAPY, PKMYT1, CUSTOM. EvidenceRow combines GDSC pharmacology + DepMap CRISPR + literature receipt + expression + in vitro + in vivo + clinical cells.",
+      "moat_status": "PARITY (different dimensions, similar philosophy). Bev2026 axes are biological readouts within one screen; CrisPRO axes are evidence modalities across data types.",
+      "verification_status": "Verbatim quote confirmed by direct PDF read of pages 1-3, 2026-06-24. Originally from Introduction (not Discussion as the dimension framing might imply).",
+      "Bev2026_approach_verbatim_source": "Bev2026 PDF, Introduction (page 2), final paragraph before Results"
+    }
+  },
+  "verbatim_evidence": [
+    {
+      "quote": "Unlike cell viability screenings that provide only binary outcomes (live or dead), multiparametric drug screenings can capture complex cellular responses, offering insights into drug mechanisms of action, types of cell death, and molecular responses.",
+      "file": "/mnt/results/9p21_audit/moat_comparison.json",
+      "context": "comparison_dimensions[0].Bev2026_approach_verbatim",
+      "note": "verbatim quote from Bev2026 PDF as recorded at file creation time"
+    }
+  ],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00",
+      "span_extracted": "comparison_dimensions[0]"
+    }
+  ],
+  "cross_refs": [
+    "moat:aggregate",
+    "moat:definition_of_moat",
+    "external:bev2026_pdf"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:moat_and_governance_deep"
+}

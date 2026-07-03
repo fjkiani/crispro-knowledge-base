@@ -1,0 +1,40 @@
+{
+  "id": "evidence:patient_ak_case",
+  "type": "evidence_case_study",
+  "name": "Patient AK — MBD4 SL full extraction + treatment map",
+  "what_it_solves": "The seed case study that motivated the MBD4/ATR-WEE1 axis: a real patient with MBD4-LOF ovarian cancer.",
+  "how_it_solves": "AK_MBD4_SL_FULL_EXTRACTION.md is the full case narrative; fig5_patient_ak_gap.png and diagram4_patient_ak_treatment_map.png visualise the treatment gap.",
+  "why_it_exists": "Anchors the abstract SL work in a concrete patient — the 'if we had this earlier' motivator for every downstream artefact.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/diagram4_patient_ak_treatment_map.png",
+      "exists": true,
+      "bytes": 251173,
+      "sha256": "8aca1352c7e6755addcb6226d1ab63f30cfca2c358246379a09ea023abc9d2c4",
+      "mtime_iso": "2026-05-19T23:30:34+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/fig5_patient_ak_gap.png",
+      "exists": true,
+      "bytes": 314313,
+      "sha256": "4cc3713c43a097af5a8af83c87ab375b80ad50c0a6b29bbe3e97edf6033fabd6",
+      "mtime_iso": "2026-05-20T17:37:22+00:00"
+    },
+    {
+      "path": "/mnt/results/AK_MBD4_SL_FULL_EXTRACTION.md",
+      "exists": true,
+      "bytes": 32960,
+      "sha256": "df3ac2a1c9dc98ee08aceef386460a1fac655128c4d6d2d1f565acadeba242dc",
+      "mtime_iso": "2026-06-04T16:14:31+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2",
+    "axis:ATR_WEE1",
+    "axis:CYTIDINE_ANALOGS"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:evidence_and_receipts"
+}

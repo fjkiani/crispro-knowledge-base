@@ -1,0 +1,150 @@
+{
+  "id": "csv:A1b_mbd4_lof_crispr_results.csv",
+  "type": "csv_content",
+  "name": "A1b_mbd4_lof_crispr_results.csv",
+  "what_it_solves": "Parsed contents of A1b_mbd4_lof_crispr_results.csv: header + row count + column ranges.",
+  "how_it_solves": "csv.reader → header + row list; per column, if numeric ⇒ (n, min, max, mean); if categorical ⇒ top-3 values + unique count.",
+  "why_it_exists": "Deep pass: previous stream had file metadata only. This entity carries the actual data shape so downstream consumers can validate any claim about A1/A2/A3/… without re-parsing.",
+  "attributes": {
+    "header": [
+      "gene",
+      "n_lof",
+      "n_wt",
+      "median_lof",
+      "median_wt",
+      "mean_lof",
+      "mean_wt",
+      "p_value",
+      "p_adj_BH",
+      "cohens_d"
+    ],
+    "row_count": 3,
+    "sample_rows": [
+      [
+        "ATR",
+        "12",
+        "1174",
+        "-1.1781",
+        "-1.0878",
+        "-1.1728",
+        "-1.0953",
+        "0.110063",
+        "0.330189",
+        "-0.3154"
+      ],
+      [
+        "CHEK1",
+        "12",
+        "1174",
+        "-1.6293",
+        "-1.7735",
+        "-1.6184",
+        "-1.7932",
+        "0.923813",
+        "0.923813",
+        "0.4876"
+      ],
+      [
+        "WEE1",
+        "12",
+        "1174",
+        "-2.8188",
+        "-2.806",
+        "-2.648",
+        "-2.7362",
+        "0.653644",
+        "0.923813",
+        "0.1618"
+      ]
+    ],
+    "column_ranges": {
+      "gene": {
+        "categorical": true,
+        "top_values": [
+          [
+            "ATR",
+            1
+          ],
+          [
+            "CHEK1",
+            1
+          ],
+          [
+            "WEE1",
+            1
+          ]
+        ],
+        "unique_count": 3
+      },
+      "n_lof": {
+        "n_numeric": 3,
+        "min": 12.0,
+        "max": 12.0,
+        "mean": 12.0
+      },
+      "n_wt": {
+        "n_numeric": 3,
+        "min": 1174.0,
+        "max": 1174.0,
+        "mean": 1174.0
+      },
+      "median_lof": {
+        "n_numeric": 3,
+        "min": -2.8188,
+        "max": -1.1781,
+        "mean": -1.8754
+      },
+      "median_wt": {
+        "n_numeric": 3,
+        "min": -2.806,
+        "max": -1.0878,
+        "mean": -1.8891
+      },
+      "mean_lof": {
+        "n_numeric": 3,
+        "min": -2.648,
+        "max": -1.1728,
+        "mean": -1.8130666666666668
+      },
+      "mean_wt": {
+        "n_numeric": 3,
+        "min": -2.7362,
+        "max": -1.0953,
+        "mean": -1.8749
+      },
+      "p_value": {
+        "n_numeric": 3,
+        "min": 0.110063,
+        "max": 0.923813,
+        "mean": 0.5625066666666666
+      },
+      "p_adj_BH": {
+        "n_numeric": 3,
+        "min": 0.330189,
+        "max": 0.923813,
+        "mean": 0.7259383333333332
+      },
+      "cohens_d": {
+        "n_numeric": 3,
+        "min": -0.3154,
+        "max": 0.4876,
+        "mean": 0.11133333333333333
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1b_mbd4_lof_crispr_results.csv",
+      "exists": true,
+      "bytes": 289,
+      "sha256": "7c19334c2fef48030de6a9f41e86a2bce5d5127eaeda7d2364c4c7c2f2a5bb53",
+      "mtime_iso": "2026-04-25T08:07:11+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "code_blocks:/mnt/results/CONFIG_NORMALIZATION_REPORT.md",
+  "type": "code_block_index",
+  "name": "Code blocks — CONFIG_NORMALIZATION_REPORT.md",
+  "what_it_solves": "Index of every fenced code block in '/mnt/results/CONFIG_NORMALIZATION_REPORT.md'.",
+  "how_it_solves": "Extracted with `RE_CODE_BLOCK`; each block carries language, starting line, byte count, and a 400-char preview.",
+  "why_it_exists": "Reports embed code snippets that are load-bearing (e.g. class definitions, config JSON); this makes them addressable without re-reading the parent file.",
+  "attributes": {
+    "block_count": 3,
+    "blocks": [
+      {
+        "lang": "bash",
+        "line": 18,
+        "bytes": 28,
+        "preview": "grep -rn \"VITE_API_URL\" src/"
+      },
+      {
+        "lang": "yaml",
+        "line": 37,
+        "bytes": 63,
+        "preview": "rootDir: oncology-coPilot  # ← directory does not exist in repo"
+      },
+      {
+        "lang": "yaml",
+        "line": 42,
+        "bytes": 279,
+        "preview": "# Root Directory: leave EMPTY in the Render dashboard (repo root).\n# package.json and vite.config.js are at the repo root.\nbuildCommand: npm install && npm run build\nstaticPublishPath: ./dist\nenvVars:\n  - key: VITE_API_ROOT\n    sync: false  # ← must be set in Render dashboard UI"
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CONFIG_NORMALIZATION_REPORT.md",
+      "exists": true,
+      "bytes": 3342,
+      "sha256": "d068e515e4d22a53cc02f440946021fc7fdea1cc9f76914d06f42f4e1a0584f7",
+      "mtime_iso": "2026-05-05T07:04:43+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

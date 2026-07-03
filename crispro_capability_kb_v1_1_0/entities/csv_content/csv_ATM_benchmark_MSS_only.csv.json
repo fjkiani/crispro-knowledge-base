@@ -1,0 +1,154 @@
+{
+  "id": "csv:ATM_benchmark_MSS_only.csv",
+  "type": "csv_content",
+  "name": "ATM_benchmark_MSS_only.csv",
+  "what_it_solves": "Parsed contents of ATM_benchmark_MSS_only.csv: header + row count + column ranges.",
+  "how_it_solves": "csv.reader → header + row list; per column, if numeric ⇒ (n, min, max, mean); if categorical ⇒ top-3 values + unique count.",
+  "why_it_exists": "Deep pass: previous stream had file metadata only. This entity carries the actual data shape so downstream consumers can validate any claim about A1/A2/A3/… without re-parsing.",
+  "attributes": {
+    "header": [
+      "gene",
+      "n_LOF",
+      "n_WT",
+      "median_LOF",
+      "median_WT",
+      "delta_median",
+      "mw_p",
+      "cohens_d",
+      "mw_padj",
+      "analysis"
+    ],
+    "row_count": 3,
+    "sample_rows": [
+      [
+        "ATR",
+        "25",
+        "1080",
+        "-1.1346988374580649",
+        "-1.083651788237311",
+        "-0.05104704922075398",
+        "0.7143008753979596",
+        "0.17215567740622673",
+        "0.7143008753979596",
+        "ATM-LOF_MSS_only_vs_WT"
+      ],
+      [
+        "CHEK1",
+        "25",
+        "1080",
+        "-1.823093362899434",
+        "-1.777381150599882",
+        "-0.04571221229955191",
+        "0.4881926505988625",
+        "-0.13715098493605102",
+        "0.7143008753979596",
+        "ATM-LOF_MSS_only_vs_WT"
+      ],
+      [
+        "WEE1",
+        "25",
+        "1080",
+        "-2.778197908442623",
+        "-2.8109499962609448",
+        "0.03275208781832184",
+        "0.6805388481784509",
+        "0.06877825265305648",
+        "0.7143008753979596",
+        "ATM-LOF_MSS_only_vs_WT"
+      ]
+    ],
+    "column_ranges": {
+      "gene": {
+        "categorical": true,
+        "top_values": [
+          [
+            "ATR",
+            1
+          ],
+          [
+            "CHEK1",
+            1
+          ],
+          [
+            "WEE1",
+            1
+          ]
+        ],
+        "unique_count": 3
+      },
+      "n_LOF": {
+        "n_numeric": 3,
+        "min": 25.0,
+        "max": 25.0,
+        "mean": 25.0
+      },
+      "n_WT": {
+        "n_numeric": 3,
+        "min": 1080.0,
+        "max": 1080.0,
+        "mean": 1080.0
+      },
+      "median_LOF": {
+        "n_numeric": 3,
+        "min": -2.778197908442623,
+        "max": -1.1346988374580649,
+        "mean": -1.911996702933374
+      },
+      "median_WT": {
+        "n_numeric": 3,
+        "min": -2.8109499962609448,
+        "max": -1.083651788237311,
+        "mean": -1.8906609783660457
+      },
+      "delta_median": {
+        "n_numeric": 3,
+        "min": -0.05104704922075398,
+        "max": 0.03275208781832184,
+        "mean": -0.021335724567328018
+      },
+      "mw_p": {
+        "n_numeric": 3,
+        "min": 0.4881926505988625,
+        "max": 0.7143008753979596,
+        "mean": 0.6276774580584243
+      },
+      "cohens_d": {
+        "n_numeric": 3,
+        "min": -0.13715098493605102,
+        "max": 0.17215567740622673,
+        "mean": 0.0345943150410774
+      },
+      "mw_padj": {
+        "n_numeric": 3,
+        "min": 0.7143008753979596,
+        "max": 0.7143008753979596,
+        "mean": 0.7143008753979596
+      },
+      "analysis": {
+        "categorical": true,
+        "top_values": [
+          [
+            "ATM-LOF_MSS_only_vs_WT",
+            3
+          ]
+        ],
+        "unique_count": 1
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/ATM_benchmark_MSS_only.csv",
+      "exists": true,
+      "bytes": 542,
+      "sha256": "1c69dc47476a81f2bd53bbdf1260e3a058f1680d299ccb73411f04b61dcaecc7",
+      "mtime_iso": "2026-04-27T02:36:23+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

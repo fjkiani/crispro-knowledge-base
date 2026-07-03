@@ -1,0 +1,52 @@
+{
+  "id": "moat:audit_corrections_2026_06_24",
+  "type": "moat_document_field",
+  "name": "moat_comparison — audit_corrections_2026_06_24",
+  "what_it_solves": "Corrections applied on 2026-06-24 to earlier drafts of moat_comparison.json.",
+  "how_it_solves": "Extracted verbatim.",
+  "why_it_exists": "Correction lock: every edit that changed a moat_status is inspectable so nothing quietly flips PARITY→EDGE.",
+  "attributes": {
+    "raw": {
+      "issues_found_by_post_generation_audit": 8,
+      "issues_resolved": 8,
+      "corrections_applied": [
+        "Dim 1: Added 'PDF Introduction page 2' source location for 'Unlike cell viability screenings' verbatim quote.",
+        "Dim 3: Restored full-precision values for all 4 stress tests + primary endpoint (Δ to 16 sig figs, p-values exact, Cohen's d exact) — matches canonical_atr_wee1_rerun.json frozen 2026-04-05.",
+        "Dim 5: Added 3 verbatim Bev2026 quotes with page citations: Results page 5 header, Ref 7 Engstrom 2023, Ref 8 Pettus 2025.",
+        "Dim 6: Added 3 verbatim Bev2026 quotes with page citations: Methods page 14 PDO clinical history, Methods page 14 bi-directional editing, Results page 8 rescue finding.",
+        "Dim 8 (NEW): Synergy quantification — added Fig 3 caption verbatim with page 7 source. SynergyFinder 3.1 vs ref 21 (3.0) distinction noted.",
+        "Dim 9 (NEW): MTAP-loss prevalence attribution — 3 verbatim quotes (Intro p.2, Results p.2, Discussion p.12) explicitly disambiguating 26% (Bev2026 MTAP-codeletion) vs 22% (Robertson 2017 CDKN2A-alone).",
+        "Removed any implicit claim that CrisPRO 'verified' or 'reproduced' the 26% figure — it is Bev2026's own analysis.",
+        "Audit checked attribution drift: 0 concerns. All quantitative claims trace to verified transcript receipts or verified PDF text. Repo state qualified with 'HEAD bfd6d11f'."
+      ],
+      "claims_remaining_in_quarantine": [
+        "None in moat_comparison.json. All quantitative claims either cite verbatim verbatim or are explicitly labeled as inferences."
+      ],
+      "claims_NOT_made_in_this_document": [
+        "Wet-lab competitor comparisons (Mirati Phase II, Agios Phase I, etc.) — explicitly out of scope per competitor_landscape_not_assessed_this_session block.",
+        "Specific resolution recommendation for MRTX1719 bug — only the bug location and correct mapping per Bev2026 are stated; whether to fix or not remains the user's call per lock #4."
+      ],
+      "full_precision_audit_pass": "All canonical receipt values present at full precision: 0.7324529879649893 (delta), 0.05564297952485164 (AUC delta), 1.0692019443383756 (TP53 delta), 0.045165724128583974 (LOO max p), n=619 (TP53 strat WT).",
+      "caveat_blocks_added": [
+        "MOAT-CAV-001 (reproducibility-as-moat contingent on PC-02 + n=942/n=914 + repo-state-temporal qualification)"
+      ],
+      "caveat_added_at": "2026-06-24 (after worker-0 termination + recreation)"
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00",
+      "span_extracted": "audit_corrections_2026_06_24"
+    }
+  ],
+  "cross_refs": [
+    "moat:aggregate"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:moat_and_governance_deep"
+}

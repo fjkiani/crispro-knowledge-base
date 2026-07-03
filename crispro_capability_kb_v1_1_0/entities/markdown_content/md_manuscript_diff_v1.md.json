@@ -1,0 +1,90 @@
+{
+  "id": "md:manuscript_diff_v1.md",
+  "type": "markdown_content",
+  "name": "manuscript_diff_v1.md",
+  "what_it_solves": "Structured view of manuscript_diff_v1.md: heading tree + first 2000 chars.",
+  "how_it_solves": "Regex heading extract + preview slice.",
+  "why_it_exists": "Turns evidence-narrative markdowns into a searchable heading index without duplicating the full body.",
+  "attributes": {
+    "byte_length": 12304,
+    "heading_count": 12,
+    "headings": [
+      {
+        "level": 1,
+        "title": "Manuscript Redline Diff — Strengthening Pass v1",
+        "line": 1
+      },
+      {
+        "level": 2,
+        "title": "CHANGE INVENTORY",
+        "line": 9
+      },
+      {
+        "level": 2,
+        "title": "CHANGE C1 — Abstract rounding fix",
+        "line": 22
+      },
+      {
+        "level": 2,
+        "title": "CHANGE C2 — Figure 2 caption rounding fix",
+        "line": 34
+      },
+      {
+        "level": 2,
+        "title": "CHANGE C3 — Methods: MSI dual-definition sensitivity note",
+        "line": 46
+      },
+      {
+        "level": 2,
+        "title": "CHANGE C4 — Results: Stress Test 1 sensitivity sentence",
+        "line": 60
+      },
+      {
+        "level": 2,
+        "title": "CHANGE C5 — Discussion: A9 pan-cancer benchmark context paragraph",
+        "line": 74
+      },
+      {
+        "level": 2,
+        "title": "CHANGE C6 — Discussion: Explicit Limitations paragraph",
+        "line": 90
+      },
+      {
+        "level": 2,
+        "title": "SUPPLEMENTARY TABLE S-ATM (new appendix section)",
+        "line": 104
+      },
+      {
+        "level": 3,
+        "title": "Supplementary Table S-ATM: ATM-LOF vs MBD4-LOF GDSC2 Pharmacology Benchmark",
+        "line": 110
+      },
+      {
+        "level": 2,
+        "title": "SECTIONS UNCHANGED",
+        "line": 129
+      },
+      {
+        "level": 2,
+        "title": "SUMMARY OF NET CHANGES",
+        "line": 156
+      }
+    ],
+    "preview": "# Manuscript Redline Diff — Strengthening Pass v1\n**Base:** `feat/mbd4-rxiv-manuscript-942-baseline` → `rxiv/manuscript.md`\n**Target:** `manuscript_v2.md`\n**Date:** 2026-04-27\n**Scope:** 5 targeted edits. No Results restructuring. No new figures. Core signal unchanged.\n\n---\n\n## CHANGE INVENTORY\n\n| # | Location | Type | Summary |\n|---|---|---|---|\n| C1 | Abstract, line 8 | Rounding fix | \"−0.74\" → \"−0.73\" |\n| C2 | Fig 2 caption | Rounding fix | \"0.74 log-unit shift\" → \"0.73 log-unit shift\" |\n| C3 | Methods → Confound stress testing | New paragraph | MSI dual-definition sensitivity note |\n| C4 | Results → Stress Test 1 | New sentence | MSI sensitivity analysis denominator note |\n| C5 | Discussion | New paragraph | A9 pan-cancer benchmark context (after PARP1 paragraph, before combinatorial framework) |\n| C6 | Discussion | New paragraph | Explicit Limitations section (before References) |\n\n---\n\n## CHANGE C1 — Abstract rounding fix\n\n**Location:** Abstract, sentence beginning \"MBD4-LOF lines show significantly enhanced sensitivity...\"\n\n~~MBD4-LOF lines show significantly enhanced sensitivity to the ATR inhibitor ceralasertib (AZD6738) (LN_IC50 Δ=**−0.74**, p=0.021, Cohen's d=−0.50; n=14 True-LOF vs 942 WT; GDSC2)~~\n\n**→** MBD4-LOF lines show significantly enhanced sensitivity to the ATR inhibitor ceralasertib (AZD6738) (LN_IC50 Δ=**−0.73**, p=0.021, Cohen's d=−0.50; n=14 True-LOF vs 942 WT; GDSC2)\n\n**Rationale:** Full-precision value is −0.7325 (canonical_atr_wee1_rerun.json). \"−0.74\" rounds away from the true value; \"−0.73\" is the correct two-significant-figure representation. The Results table correctly retains \"−0.736\" (three s.f.) and is unchanged.\n\n---\n\n## CHANGE C2 — Figure 2 caption rounding fix\n\n**Location:** Fig 2 caption, final sentence.\n\n~~The MBD4-LOF group shows a **0.74** log-unit shift toward sensitivity (p=0.021, Cohen's d=−0.50, one-sided Mann-Whitney U test).~~\n\n**→** The MBD4-LOF group shows a **0.73** log-unit shift toward sensitivity (p=0.021, Cohen'"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/manuscript_diff_v1.md",
+      "exists": true,
+      "bytes": 12463,
+      "sha256": "928b305949bbe7fd3a5f8012627e0469b5384c45e73c04f0287d41a75a2f6056",
+      "mtime_iso": "2026-04-27T06:07:12+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "code_blocks:/mnt/results/AYESHA_PAGE_MERGE_REPORT.md",
+  "type": "code_block_index",
+  "name": "Code blocks — AYESHA_PAGE_MERGE_REPORT.md",
+  "what_it_solves": "Index of every fenced code block in '/mnt/results/AYESHA_PAGE_MERGE_REPORT.md'.",
+  "how_it_solves": "Extracted with `RE_CODE_BLOCK`; each block carries language, starting line, byte count, and a 400-char preview.",
+  "why_it_exists": "Reports embed code snippets that are load-bearing (e.g. class definitions, config JSON); this makes them addressable without re-reading the parent file.",
+  "attributes": {
+    "block_count": 1,
+    "blocks": [
+      {
+        "lang": "js",
+        "line": 61,
+        "bytes": 61,
+        "preview": "import AyeshaCompleteCare from '../pages/AyeshaCompleteCare';"
+      }
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/AYESHA_PAGE_MERGE_REPORT.md",
+      "exists": true,
+      "bytes": 3844,
+      "sha256": "548e39ad9cda1c24fc5de8d047255a9da4096d7436ba78a445831a786bfc448f",
+      "mtime_iso": "2026-05-05T07:04:41+00:00"
+    }
+  ],
+  "cross_refs": [],
+  "gaps_still_open": [],
+  "_stream": "v2:architecture_deep"
+}

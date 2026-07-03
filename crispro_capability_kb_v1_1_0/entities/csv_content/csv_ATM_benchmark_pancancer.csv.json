@@ -1,0 +1,214 @@
+{
+  "id": "csv:ATM_benchmark_pancancer.csv",
+  "type": "csv_content",
+  "name": "ATM_benchmark_pancancer.csv",
+  "what_it_solves": "Parsed contents of ATM_benchmark_pancancer.csv: header + row count + column ranges.",
+  "how_it_solves": "csv.reader → header + row list; per column, if numeric ⇒ (n, min, max, mean); if categorical ⇒ top-3 values + unique count.",
+  "why_it_exists": "Deep pass: previous stream had file metadata only. This entity carries the actual data shape so downstream consumers can validate any claim about A1/A2/A3/… without re-parsing.",
+  "attributes": {
+    "header": [
+      "gene",
+      "n_LOF",
+      "n_WT",
+      "median_LOF",
+      "median_WT",
+      "mean_LOF",
+      "mean_WT",
+      "delta_median",
+      "mw_p",
+      "cohens_d",
+      "frac_dep_LOF",
+      "frac_dep_WT",
+      "fisher_OR",
+      "fisher_p",
+      "mw_padj",
+      "analysis"
+    ],
+    "row_count": 3,
+    "sample_rows": [
+      [
+        "ATR",
+        "35",
+        "1151",
+        "-1.0987448518101417",
+        "-1.0882527230299592",
+        "-1.0542981973933754",
+        "-1.0973557322495542",
+        "-0.010492128780182464",
+        "0.9616436301980189",
+        "0.12615263594650863",
+        "0.8857142857142857",
+        "0.9748045178105995",
+        "0.2003119429590018",
+        "0.014154429621027139",
+        "0.9616436301980189",
+        "ATM-LOF_pancancer_vs_WT"
+      ],
+      [
+        "CHEK1",
+        "35",
+        "1151",
+        "-1.805176077283635",
+        "-1.7724187048770796",
+        "-1.7992695237442384",
+        "-1.7912413490857841",
+        "-0.032757372406555296",
+        "0.7224600696284644",
+        "-0.021951917056386355",
+        "1.0",
+        "0.9991311902693311",
+        "inf",
+        "1.0",
+        "0.9616436301980189",
+        "ATM-LOF_pancancer_vs_WT"
+      ],
+      [
+        "WEE1",
+        "35",
+        "1151",
+        "-2.744705881141966",
+        "-2.807861566106129",
+        "-2.701368904857043",
+        "-2.736390564205749",
+        "0.06315568496416324",
+        "0.6227674210719574",
+        "0.07705548423184454",
+        "1.0",
+        "1.0",
+        "",
+        "1.0",
+        "0.9616436301980189",
+        "ATM-LOF_pancancer_vs_WT"
+      ]
+    ],
+    "column_ranges": {
+      "gene": {
+        "categorical": true,
+        "top_values": [
+          [
+            "ATR",
+            1
+          ],
+          [
+            "CHEK1",
+            1
+          ],
+          [
+            "WEE1",
+            1
+          ]
+        ],
+        "unique_count": 3
+      },
+      "n_LOF": {
+        "n_numeric": 3,
+        "min": 35.0,
+        "max": 35.0,
+        "mean": 35.0
+      },
+      "n_WT": {
+        "n_numeric": 3,
+        "min": 1151.0,
+        "max": 1151.0,
+        "mean": 1151.0
+      },
+      "median_LOF": {
+        "n_numeric": 3,
+        "min": -2.744705881141966,
+        "max": -1.0987448518101417,
+        "mean": -1.8828756034119143
+      },
+      "median_WT": {
+        "n_numeric": 3,
+        "min": -2.807861566106129,
+        "max": -1.0882527230299592,
+        "mean": -1.8895109980043892
+      },
+      "mean_LOF": {
+        "n_numeric": 3,
+        "min": -2.701368904857043,
+        "max": -1.0542981973933754,
+        "mean": -1.851645541998219
+      },
+      "mean_WT": {
+        "n_numeric": 3,
+        "min": -2.736390564205749,
+        "max": -1.0973557322495542,
+        "mean": -1.8749958818470291
+      },
+      "delta_median": {
+        "n_numeric": 3,
+        "min": -0.032757372406555296,
+        "max": 0.06315568496416324,
+        "mean": 0.006635394592475159
+      },
+      "mw_p": {
+        "n_numeric": 3,
+        "min": 0.6227674210719574,
+        "max": 0.9616436301980189,
+        "mean": 0.7689570402994802
+      },
+      "cohens_d": {
+        "n_numeric": 3,
+        "min": -0.021951917056386355,
+        "max": 0.12615263594650863,
+        "mean": 0.060418734373988946
+      },
+      "frac_dep_LOF": {
+        "n_numeric": 3,
+        "min": 0.8857142857142857,
+        "max": 1.0,
+        "mean": 0.9619047619047619
+      },
+      "frac_dep_WT": {
+        "n_numeric": 3,
+        "min": 0.9748045178105995,
+        "max": 1.0,
+        "mean": 0.9913119026933103
+      },
+      "fisher_OR": {
+        "n_numeric": 2,
+        "min": 0.2003119429590018,
+        "max": Infinity,
+        "mean": Infinity
+      },
+      "fisher_p": {
+        "n_numeric": 3,
+        "min": 0.014154429621027139,
+        "max": 1.0,
+        "mean": 0.6713848098736758
+      },
+      "mw_padj": {
+        "n_numeric": 3,
+        "min": 0.9616436301980189,
+        "max": 0.9616436301980189,
+        "mean": 0.961643630198019
+      },
+      "analysis": {
+        "categorical": true,
+        "top_values": [
+          [
+            "ATM-LOF_pancancer_vs_WT",
+            3
+          ]
+        ],
+        "unique_count": 1
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/ATM_benchmark_pancancer.csv",
+      "exists": true,
+      "bytes": 850,
+      "sha256": "688ad48d369729fd7b3a4fdd5c16188f6ead7a61a72b22bb1bdcbd1cb5fe10eb",
+      "mtime_iso": "2026-04-27T02:36:23+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:evidence_and_receipts_deep"
+}

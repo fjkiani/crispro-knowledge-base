@@ -1,0 +1,32 @@
+{
+  "id": "roadmap_chapter:08_in_audit_receipt_miner_py_auto_generated_candidate_receipts",
+  "type": "roadmap_chapter",
+  "name": "Ch 08 — In audit/receipt_miner.py — auto-generated candidate receipts",
+  "what_it_solves": "CRISPRO_SL_PHD_ROADMAP chapter 'In audit/receipt_miner.py — auto-generated candidate receipts' spanning lines 1219..1249.",
+  "how_it_solves": "Chapter body preview (first 2000 chars) attached; full content lives in the source file. Subheadings enumerated.",
+  "why_it_exists": "Chapter is the natural unit of the roadmap — one entity per chapter makes 'what does Ch 3.4 say about the fuser?' addressable.",
+  "attributes": {
+    "level": 1,
+    "start_line": 1219,
+    "end_line": 1249,
+    "byte_length": 1067,
+    "subheadings": [],
+    "body_preview_2000c": "\t\n\n\tCANDIDATE_RECEIPTS = [\n\t    CandidateReceipt(\n\t        gene=\"FANCM\", axis=CandidateAxis.PARP_INHIBITORS,\n\t        status=\"PENDING_REVIEW\",\n\t        powered=False,\n\t        n_mut=11,\n\t        notes=\"Underpowered cohort (n=11 < threshold=15). Hypothesis-generating only. \"\n\t              \"Requires validation in larger BRCA1/2-mutant cohort or isogenic models.\",\n\t        source=\"depmap_brca_analysis\",\n\t    ),\n\t    CandidateReceipt(\n\t        gene=\"FANCC\", axis=CandidateAxis.PARP_INHIBITORS,\n\t        status=\"PENDING_REVIEW\",\n\t        powered=False,\n\t        n_mut=11,\n\t        notes=\"Same underpowered cohort as FANCM. FA pathway member.\",\n\t        source=\"depmap_brca_analysis\",\n\t    ),\n\t    CandidateReceipt(\n\t        gene=\"H2AFX\", axis=CandidateAxis.PARP_INHIBITORS,\n\t        status=\"PENDING_REVIEW\",\n\t        powered=False,\n\t        n_mut=11,\n\t        notes=\"gamma-H2AX variant. DNA damage signaling. Underpowered.\",\n\t        source=\"depmap_brca_analysis\",\n\t    ),\n\t]\n\t9.3 Promotion Block Guard"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "lines 1219..1249"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:synthetic_lethality_deep"
+}

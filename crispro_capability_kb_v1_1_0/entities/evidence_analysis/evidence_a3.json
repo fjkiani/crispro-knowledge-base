@@ -1,0 +1,39 @@
+{
+  "id": "evidence:a3",
+  "type": "evidence_analysis",
+  "name": "MBD4/ATR analysis A3 — TCGA-OV replication-stress score",
+  "what_it_solves": "Analysis 'A3' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+  "how_it_solves": "TCGA ovarian cohort RS score computation + MBD4 status.",
+  "why_it_exists": "Grounds the RS framework in a real clinical cohort (ovarian is the seed cancer).",
+  "attributes": {
+    "files": [
+      "A3_tcga_ov_results_REAL.csv",
+      "A3_tcga_ov_rs_score.png"
+    ],
+    "file_count": 2
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A3_tcga_ov_results_REAL.csv",
+      "exists": true,
+      "bytes": 465,
+      "sha256": "b06ab4c9dc72d6593961bd875daadee11de2c6aeb69b5115c23688d059011541",
+      "mtime_iso": "2026-04-25T07:23:59+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A3_tcga_ov_rs_score.png",
+      "exists": true,
+      "bytes": 214100,
+      "sha256": "a87c0db5c2bbafecf791f232ece8232e53f3cd54ec9d8b4b0e8b2b815cdd9744",
+      "mtime_iso": "2026-04-25T07:24:40+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2",
+    "axis:ATR_WEE1",
+    "framework:rs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v1:evidence_and_receipts"
+}

@@ -1,0 +1,192 @@
+{
+  "id": "dbgap_access_pack:dbgap_phs003428_dar_checklist.csv",
+  "type": "dbgap_access_pack",
+  "name": "dbgap_phs003428_dar_checklist.csv",
+  "what_it_solves": "dbgap_access_pack artifact dbgap_phs003428_dar_checklist.csv",
+  "how_it_solves": "Auto-parsed by extension.",
+  "why_it_exists": "Every access pack / SL map / gap-lineage report is a durable operational asset — must be addressable.",
+  "attributes": {
+    "header": [
+      "field_name",
+      "field_description",
+      "pre_filled_value",
+      "status",
+      "owner",
+      "dependency",
+      "notes"
+    ],
+    "row_count": 30,
+    "sample_rows": [
+      [
+        "project_title",
+        "Title of the research project",
+        "Validation of the M2-15 Macrophage Transcriptomic Panel as a Bevacizumab Resistance Predictor in Metastatic Colorectal Cancer Using CALGB/SWOG 80405 (phs003428.v1.p1)",
+        "COMPLETE",
+        "Fahad Kiani",
+        "none",
+        "Ready to paste into DAR form"
+      ],
+      [
+        "research_use_statement",
+        "Full scientific justification for data access",
+        "This project seeks to validate a 15-gene M2 macrophage transcriptomic panel (M2-15) as a bevacizumab-specific resistance predictor in metastatic colorectal cancer (mCRC). Using RNA-seq expression data and clinical outcome variables from phs003428.v1.p1, we will compute M2-15 composite scores for each patient and apply multivariable Cox proportional hazards regression to assess the association between M2-15 scores and overall survival (OS) and progression-free survival (PFS), stratified by treatment arm (bevacizumab, cetuximab, and combination). This work directly extends Innocenti et al. 2022 (PMID 35176136), which identified M2 macrophage gene expression signatures as prognostically relevant in CALGB/SWOG 80405, by prospectively testing a refined, clinically actionable panel in a treatment-arm-specific framework. The public GEO dataset GSE196576 provides the expression layer already accessible; the controlled-access phs003428.v1.p1 data are required for linkage to individual-level clinical outcomes and treatment assignment. No new patient contact will occur. All analyses will be conducted in a secure, access-controlled computing environment compliant with NIH dbGaP data security requirements.",
+        "COMPLETE",
+        "Fahad Kiani",
+        "none",
+        "Consistent with DS-CA-COL consent group"
+      ],
+      [
+        "non_technical_summary",
+        "Plain-language description of the research (~100 words)",
+        "Colorectal cancer is one of the most common cancers worldwide, and choosing the right targeted therapy remains a major clinical challenge. This study examines whether a specific pattern of immune cell activity — measured by 15 genes active in a type of immune cell called M2 macrophages — can predict which patients with advanced colorectal cancer will not respond well to bevacizumab, a widely used anti-cancer drug. We will analyze existing tumor gene expression data and treatment outcome records from the CALGB/SWOG 80405 clinical trial. No patients will be contacted, no new samples will be collected, and all data will be handled in a secure research environment. Results may help doctors select better treatments for individual patients in the future.",
+        "COMPLETE",
+        "Fahad Kiani",
+        "none",
+        "~100 words; plain language"
+      ]
+    ],
+    "column_ranges": {
+      "field_name": {
+        "categorical": true,
+        "top_values": [
+          [
+            "project_title",
+            1
+          ],
+          [
+            "research_use_statement",
+            1
+          ],
+          [
+            "non_technical_summary",
+            1
+          ]
+        ],
+        "unique_count": 30
+      },
+      "field_description": {
+        "categorical": true,
+        "top_values": [
+          [
+            "Title of the research project",
+            1
+          ],
+          [
+            "Full scientific justification for data access",
+            1
+          ],
+          [
+            "Plain-language description of the research (~100 words)",
+            1
+          ]
+        ],
+        "unique_count": 30
+      },
+      "pre_filled_value": {
+        "categorical": true,
+        "top_values": [
+          [
+            "Validation of the M2-15 Macrophage Transcriptomic Panel as a Bevacizumab Resistance Predictor in Metastatic Colorectal Cancer Using CALGB/SWOG 80405 (phs003428.v1.p1)",
+            1
+          ],
+          [
+            "This project seeks to validate a 15-gene M2 macrophage transcriptomic panel (M2-15) as a bevacizumab-specific resistance predictor in metastatic colorectal cancer (mCRC). Using RNA-seq expression data and clinical outcome variables from phs003428.v1.p1, we will compute M2-15 composite scores for each patient and apply multivariable Cox proportional hazards regression to assess the association between M2-15 scores and overall survival (OS) and progression-free survival (PFS), stratified by treatment arm (bevacizumab, cetuximab, and combination). This work directly extends Innocenti et al. 2022 (PMID 35176136), which identified M2 macrophage gene expression signatures as prognostically relevant in CALGB/SWOG 80405, by prospectively testing a refined, clinically actionable panel in a treatment-arm-specific framework. The public GEO dataset GSE196576 provides the expression layer already accessible; the controlled-access phs003428.v1.p1 data are required for linkage to individual-level clinical outcomes and treatment assignment. No new patient contact will occur. All analyses will be conducted in a secure, access-controlled computing environment compliant with NIH dbGaP data security requirements.",
+            1
+          ],
+          [
+            "Colorectal cancer is one of the most common cancers worldwide, and choosing the right targeted therapy remains a major clinical challenge. This study examines whether a specific pattern of immune cell activity — measured by 15 genes active in a type of immune cell called M2 macrophages — can predict which patients with advanced colorectal cancer will not respond well to bevacizumab, a widely used anti-cancer drug. We will analyze existing tumor gene expression data and treatment outcome records from the CALGB/SWOG 80405 clinical trial. No patients will be contacted, no new samples will be collected, and all data will be handled in a secure research environment. Results may help doctors select better treatments for individual patients in the future.",
+            1
+          ]
+        ],
+        "unique_count": 30
+      },
+      "status": {
+        "categorical": true,
+        "top_values": [
+          [
+            "COMPLETE",
+            17
+          ],
+          [
+            "HUMAN_INPUT_REQUIRED",
+            12
+          ],
+          [
+            "CLEARED",
+            1
+          ]
+        ],
+        "unique_count": 3
+      },
+      "owner": {
+        "categorical": true,
+        "top_values": [
+          [
+            "Fahad Kiani",
+            21
+          ],
+          [
+            "Institution (SO)",
+            3
+          ],
+          [
+            "Institution (IT)",
+            3
+          ]
+        ],
+        "unique_count": 4
+      },
+      "dependency": {
+        "categorical": true,
+        "top_values": [
+          [
+            "none",
+            21
+          ],
+          [
+            "S06",
+            3
+          ],
+          [
+            "S02",
+            2
+          ]
+        ],
+        "unique_count": 6
+      },
+      "notes": {
+        "categorical": true,
+        "top_values": [
+          [
+            "Confirmed",
+            2
+          ],
+          [
+            "Required for data security attestation",
+            2
+          ],
+          [
+            "Ready to paste into DAR form",
+            1
+          ]
+        ],
+        "unique_count": 28
+      }
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/dbgap_phs003428_dar_checklist.csv",
+      "exists": true,
+      "bytes": 10891,
+      "sha256": "1941c5ef4540b22e81455d9b0d05956dcf2f82271da4861a390928687ed75876",
+      "mtime_iso": "2026-05-13T08:22:55+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:access_packs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:brenus_and_operations_deep"
+}

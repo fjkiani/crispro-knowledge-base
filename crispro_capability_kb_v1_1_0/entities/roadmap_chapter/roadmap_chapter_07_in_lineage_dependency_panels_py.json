@@ -1,0 +1,32 @@
+{
+  "id": "roadmap_chapter:07_in_lineage_dependency_panels_py",
+  "type": "roadmap_chapter",
+  "name": "Ch 07 — In lineage_dependency/panels.py",
+  "what_it_solves": "CRISPRO_SL_PHD_ROADMAP chapter 'In lineage_dependency/panels.py' spanning lines 1177..1218.",
+  "how_it_solves": "Chapter body preview (first 2000 chars) attached; full content lives in the source file. Subheadings enumerated.",
+  "why_it_exists": "Chapter is the natural unit of the roadmap — one entity per chapter makes 'what does Ch 3.4 say about the fuser?' addressable.",
+  "attributes": {
+    "level": 1,
+    "start_line": 1177,
+    "end_line": 1218,
+    "byte_length": 2381,
+    "subheadings": [],
+    "body_preview_2000c": "\t\n\n\t\"colorectal_cancer\": [\n\t    LineageHit(gene=\"CDX2\", cohens_d=-0.95, fdr=1.2e-5, n_lines=45,\n\t              rationale=\"Intestinal lineage master TF\",\n\t              drug_candidates=[], target_class=\"transcription_factor\"),\n\t    LineageHit(gene=\"KLF5\", cohens_d=-0.78, fdr=3.4e-4, n_lines=45,\n\t              rationale=\"Intestinal epithelial proliferation TF\",\n\t              drug_candidates=[], target_class=\"transcription_factor\"),\n\t    LineageHit(gene=\"MECOM\", cohens_d=-0.62, fdr=2.1e-2, n_lines=45,\n\t              rationale=\"EVI1; shared dependency across epithelial cancers\",\n\t              drug_candidates=[], target_class=\"oncogene\"),\n\t],\n\t8.4 Test Specification\ndef test_mlh1_wrn_axis():\n\t    response = client.get(\"/api/v1/analyze/evidence_matrix\", params={\"gene\": \"MLH1\"})\n\t    axes = response.json()[\"axes\"]\n\t    wrn = next(a for a in axes if a[\"axis\"] == \"wrn\")\n\t    assert \"Strong\" in wrn[\"recommendation_tier\"] or \"Validated\" in wrn[\"recommendation_tier\"]\n\t\n\n\tdef test_wrn_receipt_pmids():\n\t    response = client.get(\"/api/v1/analyze/evidence_matrix\", params={\"gene\": \"MLH1\"})\n\t    axes = response.json()[\"axes\"]\n\t    wrn = next(a for a in axes if a[\"axis\"] == \"wrn\")\n\t    assert \"30971823\" in str(wrn.get(\"pmids\", []))\n\t________________\n\n\nChapter 9: BRCA/FA Audit Queue (Sprint E)\n\n\nSPRINT E — CLAUDE CODE SPEC FILE\nTarget repo: crispro-backend-v3\nTarget: layer1_engines/synthetic_lethality/audit/\nGoal: Audit queue for underpowered BRCA/FA hits (FANCM, FANCC, H2AFX)\nExpected result: FANCM/parp_inhibitors receipt with PENDING_REVIEW + promotion blocked\n\t9.1 Scientific Basis\nDepMap analysis of BRCA1/2-mutant cell lines (n=11 mutant lines) surfaced FANCM, FANCC, and H2AFX as potential SL partners under the parp_inhibitors axis. These genes are mechanistically coherent — they are all components of the Fanconi anemia (FA) DNA repair pathway and the histone variant involved in DNA damage signaling. However, the cohort is critically underpowered (n=11, below the 15-line threshol"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "lines 1177..1218"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "v2:synthetic_lethality_deep"
+}
