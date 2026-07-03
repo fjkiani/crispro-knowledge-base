@@ -1,0 +1,606 @@
+{
+  "worker": "W1",
+  "produced_by": "w1 machine — CEACAM5 + ATR/DDR deep audit",
+  "source_files": [
+    "program_asset_ceacam5.json",
+    "program_asset_atr_ddr.json",
+    "crispro_ceacam5_capability_map_v1.md",
+    "crispro_ceacam5_gate_architecture_mdc_v2.md",
+    "crispro_ceacam5_mdc_grounding_addendum_v2.md",
+    "SANOFI_SOURCE_OF_TRUTH.md",
+    "ceacam5_8d_validation_receipt.md",
+    "brenus_capability_ownership_matrix.md"
+  ],
+  "CAP_02_mechanism_fit_engine": {
+    "capability_id": "CAP-02",
+    "name": "Mechanism Fit Scoring — PATH A Engine",
+    "evidence_tier": "COMPUTED",
+    "code_location": "crispro-backend-v3/layer1_engines/mechanism_fit/mechanism_fit_ranker.py",
+    "formula": "fit = clip((p·t) / ‖t‖₂, 0, 1)",
+    "formula_status": "PATH A — LOCKED 2026-04-28 by Fahad Kiani",
+    "path_b_status": "PROHIBITED — cosine similarity with ‖p‖₂ in denominator is prohibited in all outputs",
+    "algorithm_step_by_step": {
+      "step_1_patient_vector_construction": {
+        "description": "Build an 8-dimensional patient vector p from the patient's genomic and clinical profile",
+        "axes": {
+          "ddr": "DNA damage response pathway activity — scored from ATM/BRCA1/BRCA2/PTEN mutation status, RS score if available",
+          "mapk": "RAS/RAF/MEK/ERK pathway activity — scored from KRAS/NRAS/BRAF mutation status and co-mutation context",
+          "pi3k": "PI3K/AKT/mTOR pathway activity — scored from PIK3CA/PTEN/AKT mutation status",
+          "vegf": "Angiogenesis/VEGF pathway activity — scored from tumor vascularity, bevacizumab history, HIF1A expression",
+          "her2": "HER2/ERBB2 pathway activity — scored from HER2 amplification/overexpression status",
+          "io": "Immune oncology permissiveness — scored from pTMB, Immunoscore-IC, CD8+ TIL density, MSS/MSI-H status, liver metastasis status",
+          "efflux": "Drug efflux/resistance pathway activity — scored from MDR1/ABCB1 expression, prior chemotherapy resistance",
+          "rss": "Replication stress score — scored from RS-High/RS-Low classification, CCNE1 amplification, CDK2 activity"
+        },
+        "value_range": "[0, 1] per axis",
+        "source": "brenus_capability_ownership_matrix.md CAP-01; crispro-backend-v3/layer1_engines/mechanism_fit/mechanism_fit_ranker.py"
+      },
+      "step_2_trial_vector_construction": {
+        "description": "Build an 8-dimensional trial vector t from the trial's mechanism of action",
+        "logic": "Each axis value represents how strongly the trial's drug mechanism targets that biological pathway. A checkpoint inhibitor scores high on io axis. A MEK inhibitor scores high on mapk axis. A PARP inhibitor scores high on ddr axis.",
+        "example_break_crc001": {
+          "io": 0.8,
+          "mapk": 0.3,
+          "ddr": 0.1,
+          "pi3k": 0.1,
+          "vegf": 0.2,
+          "her2": 0.0,
+          "efflux": 0.1,
+          "rss": 0.1,
+          "rationale": "STC-1010 is primarily an IO mechanism (whole-cell vaccine activating T-cell response) with secondary mapk relevance (KRAS-mutant CRC context)"
+        }
+      },
+      "step_3_dot_product": {
+        "description": "Compute the dot product p·t — the sum of axis-wise products",
+        "formula": "p·t = Σ(p_i × t_i) for i in {ddr, mapk, pi3k, vegf, her2, io, efflux, rss}",
+        "what_it_measures": "The raw alignment between patient biology and trial mechanism. High dot product = patient's active pathways match the trial's targeted pathways.",
+        "example_break_crc001": {
+          "io_contribution": "0.40 × 0.80 = 0.32 (46.7% of total)",
+          "mapk_contribution": "0.70 × 0.30 = 0.21 (30.7% of total)",
+          "total_dot_product": 0.685
+        }
+      },
+      "step_4_normalization": {
+        "description": "Divide by ‖t‖₂ — the L2 norm of the trial vector",
+        "formula": "‖t‖₂ = sqrt(Σ t_i²)",
+        "why_normalize_by_trial_not_patient": "Normalizing by ‖t‖₂ (not ‖p‖₂) means the score measures how well the patient matches the trial's requirements — not how active the patient's pathways are in absolute terms. A patient with very active pathways but misaligned with the trial still scores low. This is the key distinction from PATH B (cosine similarity), which normalizes by both vectors and loses this directionality.",
+        "example_break_crc001": {
+          "trial_norm": 0.9288,
+          "raw_score": "0.685 / 0.9288 = 0.7375"
+        }
+      },
+      "step_5_clip": {
+        "description": "Clip to [0, 1] — scores cannot be negative or exceed 1",
+        "formula": "fit = clip(raw_score, 0, 1)",
+        "ceiling": "The theoretical ceiling is 1.0 when p and t are perfectly aligned. The practical ceiling for PATH A is 0.8898 (‖p_ref‖₂ constraint from reference patient vector)."
+      },
+      "step_6_output_labels": {
+        "0.0_to_0.4": "LOW — high failure risk; patient biology substantially misaligned with trial mechanism",
+        "0.4_to_0.6": "MODERATE — proceed with caution; partial alignment",
+        "0.6_to_0.8": "MODERATE-HIGH — favorable alignment; design gaps may still exist",
+        "0.8_to_1.0": "HIGH — strong fit; patient biology well-matched to trial mechanism"
+      }
+    },
+    "validated_runs": [
+      {
+        "trial": "BreAK CRC-001 (STC-1010)",
+        "fit_score": 0.7375,
+        "label": "MODERATE-HIGH",
+        "primary_driver": "io axis (46.7%)",
+        "secondary_driver": "mapk axis (30.7%)",
+        "dot_product": 0.685,
+        "trial_norm": 0.9288,
+        "source": "crispro_stc1010_fit_gap.json; crispro_master_pipeline.json"
+      },
+      {
+        "trial": "LATIFY (ceralasertib + durvalumab)",
+        "note": "Only receipted two-layer demonstration. Responder score 0.8936 vs non-responder 0.6295. Delta value QUARANTINED (CT-03 — version conflict unresolved). Do not cite delta.",
+        "source": "crispro_master_pipeline.json programs[ATR_DDR]"
+      }
+    ],
+    "trials_ranked": 609,
+    "source": "repo_census.md REPO 1.1; brenus_capability_ownership_matrix.md"
+  },
+  "CAP_04_target_lock": {
+    "capability_id": "CAP-04",
+    "name": "Target-Lock Scoring Engine (Layer 1)",
+    "evidence_tier": "COMPUTED",
+    "code_location": "crispro-backend-v3/layer1_engines/ (Target-Lock module)",
+    "eight_metastasis_steps": {
+      "step_1": "Local invasion — tumor cells breach basement membrane and invade surrounding stroma",
+      "step_2": "Intravasation — tumor cells enter blood or lymphatic vessels",
+      "step_3": "Survival in circulation — tumor cells resist anoikis and immune surveillance in bloodstream",
+      "step_4": "Arrest at distant site — tumor cells adhere to endothelium at metastatic site",
+      "step_5": "Extravasation — tumor cells exit vessels at distant site",
+      "step_6": "Micrometastasis formation — tumor cells survive and proliferate in foreign microenvironment",
+      "step_7": "Colonization — micrometastases establish vascular supply and immune evasion",
+      "step_8": "Macrometastasis — clinically detectable metastatic lesion"
+    },
+    "algorithm_step_by_step": {
+      "step_1_evo2_7b": {
+        "model": "Evo2-7B (evolutionary language model)",
+        "what_it_scores": "Evolutionary constraint — how conserved is this gene across species? Highly conserved genes are more likely to be essential drivers. Evo2-7B computes the likelihood of the wild-type sequence vs. mutant sequence under evolutionary selection pressure.",
+        "output": "Evolutionary likelihood score [0, 1] — higher = more evolutionarily constrained = more likely to be a genuine driver"
+      },
+      "step_2_enformer": {
+        "model": "Enformer (chromatin accessibility predictor)",
+        "what_it_scores": "Chromatin accessibility and gene regulatory activity — is this gene actively transcribed in the relevant cancer cell type? Enformer predicts ATAC-seq and ChIP-seq profiles from DNA sequence.",
+        "output": "Regulatory activity score [0, 1] — higher = more actively regulated in cancer context"
+      },
+      "step_3_alphafold3": {
+        "model": "AlphaFold 3 (structural confidence predictor)",
+        "what_it_scores": "Structural confidence — does this gene encode a protein with a well-defined 3D structure that can be targeted by a drug? Disordered proteins are harder to drug.",
+        "output": "pLDDT structural confidence score [0, 100] — higher = more structured = more druggable"
+      },
+      "step_4_composite": {
+        "description": "Composite Target-Lock score from three model outputs",
+        "threshold": "≥0.35 = genuine metastasis driver",
+        "rationale": "Threshold set to maximize sensitivity for known FDA-approved targets while excluding false positives from the 38-gene panel"
+      }
+    },
+    "validated_performance": {
+      "self_labeled_auroc": "0.976 ± 0.035 (38-gene panel)",
+      "holdout_auprc": "0.790",
+      "msk_met_auroc": "0.689 (N=25,775 — external validation)",
+      "retroactive_validation": "9 FDA-approved genes validated retroactively in predictions_2024_retroactive.json"
+    },
+    "ceacam5_status": "NOT IN 38-GENE PANEL — Target-Lock run has not been executed for CEACAM5. Any claim that CEACAM5 scores HIGH is EXPECTED (analyst inference), not COMPUTED. Must be labeled as prospective.",
+    "source": "brenus_capability_ownership_matrix.md CAP-01; crispro_ceacam5_capability_map_v1.md CAP-05"
+  },
+  "program_CEACAM5": {
+    "program_id": "CEACAM5",
+    "program_name": "CEACAM5-Targeted Therapy Failure Corpus",
+    "admissibility": "external_safe",
+    "glb_set_investment": "Not quantified in source files — 5 trials",
+    "active_engagement": "Sanofi (SAR445953 + SAR445877) — finalist pitch July 1 2026",
+    "what_ceacam5_is": {
+      "full_name": "Carcinoembryonic antigen-related cell adhesion molecule 5",
+      "biology": "CEACAM5 is a GPI-anchored glycoprotein overexpressed on the surface of colorectal, lung, gastric, and pancreatic cancer cells. It mediates cell-cell adhesion, promotes invasion and metastasis, and suppresses immune recognition by binding inhibitory receptors on NK cells and T cells. In normal tissue, CEACAM5 expression is restricted to the apical surface of intestinal epithelium — making it a tumor-selective target with a therapeutic window.",
+      "why_it_matters_in_crc": "CEACAM5 is expressed in 98.7% of CRC tumors (Jansen et al. Cancers 2024). MSS CRC has HIGHER CEACAM5 expression than MSI-H CRC (MMR deficiency reduces CEA production, P<0.0001). This makes CEACAM5 one of the most tumor-selective targets in MSS mCRC — the challenge is not target expression but patient selection threshold.",
+      "serum_cea_as_proxy": "Serum CEA (cCEA) is a liquid biopsy proxy for CEACAM5 IHC expression. cCEA ≥100 ng/mL correlates with IHC high-expressing tumors (Spearman ρ=0.43, n=92). In NSCLC: cCEA ≥100 ORR 41.7% vs 8.1% (P=0.003) in CEACAM5-high patients."
+    },
+    "two_gate_architecture": {
+      "description": "CrisPRO's two-gate patient selection framework for CEACAM5-targeted programs",
+      "gate_1": {
+        "name": "CEACAM5 Expression Gate",
+        "threshold": "IHC ≥80% (H-score or percentage of cells staining ≥2+)",
+        "rationale": "CARMEN-LC03 enrolled at IHC ≥50% — this captured 72% of patients who could not respond. The ≥80% subgroup showed directional OS benefit (HR=0.71, post-hoc). The ≥50–79% subgroup showed numerically harmful PFS (HR=1.38). The gate must be ≥80% to enrich for responders.",
+        "population_fraction": "~28% of MSS mCRC patients (OPEN_ASSUMPTION OA-08 — CARMEN-LC03 NSCLC proxy; CRC-specific data not available)",
+        "liquid_biopsy_proxy": "cCEA ≥100 ng/mL (NSCLC data only — CRC application by inference)",
+        "crc_caveat": "In PROCEADE-CRC-01 (N=40), IHC Spearman rho=−0.14 (P=0.4) — IHC is NOT predictive in CRC at any threshold tested. The second gate is mandatory for CRC programs."
+      },
+      "gate_2": {
+        "name": "IO Permissiveness Gate",
+        "threshold": "pTMB ≥28 OR Immunoscore-IC high OR CD8+ TIL density high",
+        "rationale": "CEACAM5-targeted ADCs kill tumor cells but do not activate the immune system. In MSS CRC, the tumor microenvironment is immunosuppressive — killed cells are not immunogenic without an inflamed TME. Gate 2 selects patients whose TME can amplify the ADC's cytotoxic effect through immune activation.",
+        "why_gate_2_is_mandatory_in_crc": "PROCEADE-CRC-01 showed IHC is not predictive in CRC. The responder subgroup (3/40 = 7.5% ORR) likely had both high CEACAM5 expression AND an inflamed TME. Without Gate 2, the signal is diluted by immunosuppressed patients."
+      },
+      "vector_scalpel_ranking": {
+        "description": "11-dimension biomarker ranking for CEACAM5 patient selection — which biomarker best identifies the responder subpopulation",
+        "ranking": [
+          {
+            "rank": 1,
+            "biomarker": "cCEA ≥100 ng/mL",
+            "score": "27/33",
+            "rationale": "Liquid biopsy — no biopsy required, real-time monitoring, correlates with IHC"
+          },
+          {
+            "rank": 2,
+            "biomarker": "pTMB ≥28",
+            "score": "23/33",
+            "rationale": "Strongest IO enrichment signal in MSS CRC from randomized data (CO.26 OS HR=0.34)"
+          },
+          {
+            "rank": 3,
+            "biomarker": "CEACAM5 IHC ≥80%",
+            "score": "20/33",
+            "rationale": "Tissue-based — requires biopsy, archival tissue may not reflect current expression"
+          },
+          {
+            "rank": 4,
+            "biomarker": "Immunoscore-IC high",
+            "score": "19/33",
+            "rationale": "CD8+ TIL density at tumor center and invasive margin"
+          },
+          {
+            "rank": 5,
+            "biomarker": "DetermaIO high",
+            "score": "15/33",
+            "rationale": "Gene expression-based IO permissiveness score"
+          }
+        ],
+        "source": "crispro_ceacam5_capability_map_v1.md CAP-02; crispro_ceacam5_gate_architecture_mdc_v2.md"
+      }
+    },
+    "trials": [
+      {
+        "trial_name": "CARMEN-LC03",
+        "nct_id": "NCT04524689",
+        "drug": "Tusamitamab ravtansine (SAR408701) — CEACAM5-DM4 ADC",
+        "sponsor": "Sanofi",
+        "indication": "NSCLC (non-squamous)",
+        "phase": "III",
+        "n": 389,
+        "line": "2L+",
+        "primary_result": "PFS HR 1.14 (95% CI 0.86–1.51; P=0.8204) — FAILED primary endpoint",
+        "primary_met": false,
+        "8d_vector": {
+          "D1_biology": {
+            "score": 0.2,
+            "rationale": "CEACAM5 is a genuine surface target — biology is sound. Low D1 score because the target is real."
+          },
+          "D2_selection": {
+            "score": 0.9,
+            "rationale": "PRIMARY FAILURE DOMAIN. IHC ≥50% threshold enrolled 72% of patients who could not respond. The ≥50–79% subgroup showed numerically harmful PFS (HR=1.38). The responder subgroup (IHC ≥80%) was diluted by non-responders. This is the canonical D2 Selection failure."
+          },
+          "D3_architecture": {
+            "score": 0.1,
+            "rationale": "Phase III design was appropriate — randomized, powered, pre-specified endpoint."
+          },
+          "D4_timing": {
+            "score": 0.1,
+            "rationale": "2L+ timing is appropriate for this mechanism."
+          },
+          "D5_combination": {
+            "score": 0.1,
+            "rationale": "Single agent — no combination failure."
+          },
+          "D6_resistance": {
+            "score": 0.2,
+            "rationale": "DM4 payload resistance possible but not the primary driver."
+          },
+          "D7_translational": {
+            "score": 0.1,
+            "rationale": "ADC technology is clinically validated."
+          },
+          "D8_systemic": {
+            "score": 0.0,
+            "rationale": "No safety hold or regulatory issue."
+          }
+        },
+        "primary_failure_domain": "D2 — Selection",
+        "responder_subpopulation": "CEACAM5 IHC ≥80% (~28% of enrolled)",
+        "responder_result": "OS HR=0.71 (post-hoc, directional — CI not published; underpowered)",
+        "harmful_subgroup": "CEACAM5 IHC 50–79%: PFS HR=1.38 (numerically harmful)",
+        "transfer_lesson": "Set IHC ≥80% as the enrollment gate. Add IO permissiveness as Gate 2. Consider cCEA ≥100 as liquid biopsy screening tool.",
+        "crispro_decode_confidence": "HIGH",
+        "source": "SANOFI_SOURCE_OF_TRUTH.md; program_asset_ceacam5.json"
+      },
+      {
+        "trial_name": "PROCEADE-CRC-01",
+        "nct_id": "NCT04524689",
+        "drug": "Tusamitamab ravtansine (SAR408701)",
+        "sponsor": "Sanofi",
+        "indication": "mCRC (MSS)",
+        "phase": "II",
+        "n": 40,
+        "line": "2L+",
+        "primary_result": "Confirmed ORR 7.5% (3/40); mPFS 5.9 months",
+        "primary_met": false,
+        "8d_vector": {
+          "D1_biology": {
+            "score": 0.2,
+            "rationale": "CEACAM5 is expressed in 98.7% of CRC — biology is sound."
+          },
+          "D2_selection": {
+            "score": 0.8,
+            "rationale": "IHC Spearman rho=−0.14 (P=0.4) — IHC is NOT predictive in CRC at any threshold. The 3 responders likely had both high CEACAM5 AND inflamed TME. Without Gate 2 (IO permissiveness), the signal is diluted."
+          },
+          "D3_architecture": {
+            "score": 0.1,
+            "rationale": "Phase II single-arm — appropriate for signal-finding."
+          },
+          "D4_timing": {
+            "score": 0.1,
+            "rationale": "2L+ appropriate."
+          },
+          "D5_combination": {
+            "score": 0.1,
+            "rationale": "Single agent."
+          },
+          "D6_resistance": {
+            "score": 0.3,
+            "rationale": "MSS CRC TME is immunosuppressive — DM4 payload may not trigger immunogenic cell death in this context."
+          },
+          "D7_translational": {
+            "score": 0.2,
+            "rationale": "NSCLC data does not directly translate to CRC — different TME biology."
+          },
+          "D8_systemic": {
+            "score": 0.0,
+            "rationale": "No safety hold."
+          }
+        },
+        "primary_failure_domain": "D2 — Selection",
+        "key_finding": "IHC is not predictive in CRC — Gate 2 (IO permissiveness) is mandatory",
+        "transfer_lesson": "For CRC CEACAM5 programs: IHC alone is insufficient. Must add IO permissiveness gate (pTMB ≥28 or Immunoscore-IC high).",
+        "crispro_decode_confidence": "HIGH",
+        "source": "SANOFI_SOURCE_OF_TRUTH.md; program_asset_ceacam5.json"
+      },
+      {
+        "trial_name": "Labetuzumab govitecan (IMMU-130) Phase I/II",
+        "drug": "Labetuzumab govitecan — CEACAM5-SN-38 ADC",
+        "sponsor": "Immunomedics",
+        "indication": "mCRC",
+        "phase": "I/II",
+        "primary_result": "ORR 1.2% (1/86 confirmed PR); mPFS 3.6 months; mOS 6.9 months",
+        "8d_vector": {
+          "D1_biology": {
+            "score": 0.2,
+            "rationale": "CEACAM5 target is real."
+          },
+          "D2_selection": {
+            "score": 0.6,
+            "rationale": "Unselected population — no IHC threshold, no IO gate."
+          },
+          "D5_combination": {
+            "score": 0.1,
+            "rationale": "Single agent."
+          },
+          "D6_resistance": {
+            "score": 0.5,
+            "rationale": "SN-38 payload — topoisomerase I inhibitor. Resistance mechanisms well-characterized. Govitecan (SN-38) is less potent than Topo1i payloads in newer ADCs."
+          },
+          "D7_translational": {
+            "score": 0.4,
+            "rationale": "Older ADC technology — linker stability and bystander effect inferior to newer platforms."
+          }
+        },
+        "primary_failure_domain": "D6 — Resistance (payload) + D2 — Selection",
+        "transfer_lesson": "Payload matters as much as target. SN-38 is inferior to DM4 and Topo1i for CEACAM5 ADCs. Next-generation programs (SAR445953 — Topo1i payload) address this.",
+        "source": "program_asset_ceacam5.json"
+      },
+      {
+        "trial_name": "Cibisatamab + FAP-4-1BBL (BP42675)",
+        "drug": "Cibisatamab (CEA-TCB) + FAP-4-1BBL — bispecific T-cell engager + costimulatory",
+        "sponsor": "Roche/Genentech",
+        "indication": "mCRC",
+        "phase": "I",
+        "primary_result": "Confirmed ORR 13.5% (7/52; 95% CI 6–26); DCR 50.0%; CRS 57.7% (grade ≥3: 3.8%)",
+        "8d_vector": {
+          "D1_biology": {
+            "score": 0.2,
+            "rationale": "CEA-TCB mechanism is biologically sound — redirects T cells to CEACAM5+ tumor cells."
+          },
+          "D2_selection": {
+            "score": 0.5,
+            "rationale": "Phase I — no selection gate applied. 13.5% ORR in unselected population suggests a responder subgroup exists."
+          },
+          "D8_systemic": {
+            "score": 0.4,
+            "rationale": "CRS 57.7% — significant safety signal. Grade ≥3 CRS 3.8% is manageable but requires careful monitoring."
+          }
+        },
+        "primary_failure_domain": "D2 — Selection (opportunity) + D8 — Systemic (safety)",
+        "transfer_lesson": "13.5% ORR in unselected mCRC is the highest CEACAM5 ORR in CRC to date. With Gate 2 (IO permissiveness), the responder ORR could be substantially higher. CRS management is the key safety challenge.",
+        "source": "program_asset_ceacam5.json; SANOFI_SOURCE_OF_TRUTH.md"
+      },
+      {
+        "trial_name": "Tusamitamab sonditecan (SGN-CEACAM5C) Phase I",
+        "drug": "SGN-CEACAM5C — CEACAM5-Topo1i ADC (next-generation payload)",
+        "sponsor": "Sanofi/Seagen",
+        "indication": "Solid tumors including CRC",
+        "phase": "I",
+        "primary_result": "EU clinical hold — no efficacy data published",
+        "8d_vector": {
+          "D8_systemic": {
+            "score": 0.8,
+            "rationale": "EU clinical hold — regulatory/safety issue. No efficacy data available."
+          }
+        },
+        "primary_failure_domain": "D8 — Systemic (EU clinical hold)",
+        "transfer_lesson": "Next-generation Topo1i payload (SAR445953) is the successor program. SGN-CEACAM5C EU hold does not invalidate the CEACAM5 target — it validates the need for better payload selection.",
+        "source": "program_asset_ceacam5.json"
+      }
+    ],
+    "sanofi_engagement_specifics": {
+      "programs": [
+        "SAR445953 (CEACAM5-Topo1i ADC)",
+        "SAR445877 (CEACAM5 bispecific)"
+      ],
+      "crispro_pitch": "12-slide deck submitted 2026-05-29; finalist July 1 2026",
+      "pitch_anchor": "CARMEN-LC03 D2 failure decode → two-gate solution → SAR445953 patient selection package",
+      "key_claim": "CrisPRO decoded CARMEN-LC03's failure and identified the IHC ≥80% + IO permissiveness gate. For SAR445953: CrisPRO can produce the patient selection package before the trial reads out.",
+      "source": "SANOFI_SOURCE_OF_TRUTH.md; crispro_sanofi_pitch_anchor_v1.mdc"
+    },
+    "what_crispro_proved": [
+      "CARMEN-LC03 (Phase III, N=389): PFS HR 1.14 (P=0.82) at IHC ≥50% — D2 Selection failure decoded",
+      "CEACAM5 IHC ≥80% OS HR=0.71 (post-hoc, directional — CI not published; underpowered)",
+      "CEACAM5 50–79% PFS HR=1.38 (numerically harmful — confirms ≥50% threshold is wrong)",
+      "cCEA ≥100 ORR 41.7% vs 8.1% (P=0.003) in CEACAM5-high NSCLC — liquid biopsy proxy validated",
+      "IHC ↔ cCEA Spearman ρ=0.43 (n=92) — moderate correlation",
+      "PROCEADE-CRC-01 (N=40): ORR 7.5%; IHC Spearman rho=−0.14 (P=0.4) — IHC not predictive in CRC",
+      "CEACAM5 any-positivity in CRC: 98.7% (Jansen et al. Cancers 2024)",
+      "MSS CRC has HIGHER CEACAM5 expression than MSI-H CRC (MMR deficiency reduces CEA, P<0.0001)"
+    ],
+    "what_crispro_can_offer": "For any CEACAM5-targeted program: CrisPRO decoded CARMEN-LC03's D2 Selection failure and identified the two-gate framework (IHC ≥80% + IO permissiveness). For CRC programs: IHC alone is insufficient — Gate 2 is mandatory. CrisPRO can produce an ENRICH/CONSIDER/EXCLUDE stratification table, Vector-Scalpel biomarker ranking, and protocol enrollment language for any CEACAM5 program.",
+    "caveats": [
+      "CEACAM5 ≥80% OS HR=0.71 is post-hoc, underpowered, CI not published — label as directional trend",
+      "cCEA ≥100 data is from NSCLC only — CRC application is by inference",
+      "CEACAM5 ≥80% prevalence in CRC (~28%) is OPEN_ASSUMPTION OA-08 — CARMEN-LC03 NSCLC proxy",
+      "CEACAM5 Target-Lock run has not been executed — EXPECTED, not COMPUTED"
+    ]
+  },
+  "program_ATR_DDR": {
+    "program_id": "ATR_DDR",
+    "program_name": "ATR/DDR Inhibitor Failure Corpus",
+    "admissibility": "external_safe",
+    "glb_set_investment": "$1.95B across 4 decoded trials",
+    "what_ddr_is": {
+      "pathway": "DNA Damage Response (DDR) — the cellular machinery that detects and repairs DNA damage",
+      "key_kinases": {
+        "ATR": "ATR (Ataxia Telangiectasia and Rad3-related) — activated by single-stranded DNA breaks and replication stress. Phosphorylates CHK1 to halt replication and allow repair.",
+        "WEE1": "WEE1 — phosphorylates CDK1/CDK2 to prevent premature mitotic entry when DNA is damaged. WEE1 inhibition forces cells with unrepaired DNA into mitosis → mitotic catastrophe.",
+        "PARP": "PARP1/2 — repairs single-strand breaks via base excision repair. PARP inhibition in BRCA-mutant cells causes synthetic lethality (double-strand breaks cannot be repaired by HRR)."
+      },
+      "replication_stress": "Replication stress (RS) occurs when replication forks stall or collapse — common in cancer cells with oncogene activation (KRAS, MYC, CCNE1). RS-High tumors are dependent on ATR for survival — ATR inhibition kills them selectively.",
+      "why_ddr_fails_in_unselected_populations": "DDR inhibitors are highly effective in the RS-High or HRR-deficient subpopulation but have no activity in RS-Low or HRR-proficient patients. Enrolling unselected populations dilutes the signal to noise — the responder ORR (40%) is hidden inside an overall ORR (17%) that looks marginal."
+    },
+    "rs_score_algorithm": {
+      "description": "Replication Stress (RS) score — classifies patients as RS-High or RS-Low",
+      "what_it_measures": "The degree of replication fork stalling and DNA damage in the tumor. RS-High tumors are dependent on ATR for survival.",
+      "inputs": [
+        "CCNE1 amplification status",
+        "CDK2 activity markers",
+        "RRM2 expression",
+        "CDC45 expression",
+        "CLASPIN expression"
+      ],
+      "output": "RS-High (ATRi-sensitive) vs RS-Low (ATRi-resistant)",
+      "clinical_validation": "Berzosertib: RS-High ORR 40% vs RS-Low ORR 5% — 8× difference. This is the strongest biomarker-stratified signal in the ATR/DDR corpus.",
+      "source": "program_asset_atr_ddr.json; crispro_master_pipeline.json programs[ATR_DDR]"
+    },
+    "trials": [
+      {
+        "trial_name": "Berzosertib (M6620) Phase I/II",
+        "drug": "Berzosertib (M6620) — ATR inhibitor",
+        "sponsor": "Merck KGaA",
+        "indication": "Ovarian cancer (platinum-resistant)",
+        "phase": "I/II",
+        "primary_result": "ORR 17% overall; RS-High subgroup ORR 40% vs RS-Low ORR 5%",
+        "8d_vector": {
+          "D1_biology": {
+            "score": 0.1,
+            "rationale": "ATR is a genuine target in RS-High tumors — biology is sound."
+          },
+          "D2_selection": {
+            "score": 0.9,
+            "rationale": "PRIMARY FAILURE DOMAIN. RS-High gate was not applied at enrollment. RS-High ORR 40% vs RS-Low ORR 5% — 8× difference. The responder subgroup was diluted by RS-Low patients who cannot respond to ATR inhibition."
+          },
+          "D3_architecture": {
+            "score": 0.1,
+            "rationale": "Phase I/II design appropriate for signal-finding."
+          },
+          "D6_resistance": {
+            "score": 0.2,
+            "rationale": "RS-Low patients have intrinsic resistance — not acquired resistance."
+          }
+        },
+        "primary_failure_domain": "D2 — Selection",
+        "responder_subpopulation": "RS-High patients",
+        "responder_result": "ORR 40% (vs 5% in RS-Low)",
+        "transfer_lesson": "Apply RS-High gate at enrollment. RS score must be computed from tumor biopsy before randomization.",
+        "crispro_decode_confidence": "HIGH",
+        "source": "program_asset_atr_ddr.json"
+      },
+      {
+        "trial_name": "Adavosertib (AZD1775) Phase II",
+        "drug": "Adavosertib (AZD1775) — WEE1 inhibitor",
+        "sponsor": "AstraZeneca",
+        "indication": "Ovarian cancer (platinum-resistant)",
+        "phase": "II",
+        "primary_result": "ORR 23% (PTEN-intact) vs 0% (PTEN-loss); PFS HR 0.55 (PTEN-intact) vs 1.82 (PTEN-loss)",
+        "8d_vector": {
+          "D1_biology": {
+            "score": 0.1,
+            "rationale": "WEE1 inhibition is biologically sound in CDK2-active tumors."
+          },
+          "D2_selection": {
+            "score": 0.9,
+            "rationale": "PRIMARY FAILURE DOMAIN. PTEN-loss creates CDK2 dependency that paradoxically PROTECTS against WEE1 inhibition — PTEN-loss cells have alternative CDK2 regulation. PTEN-intact cells are dependent on WEE1 for G2/M checkpoint. Enrolling PTEN-loss patients is not just unhelpful — it is actively harmful (PFS HR 1.82)."
+          },
+          "D6_resistance": {
+            "score": 0.7,
+            "rationale": "PTEN-loss is a resistance mechanism — not acquired but intrinsic. PTEN-loss cells bypass WEE1 inhibition via PI3K/AKT-mediated CDK2 regulation."
+          }
+        },
+        "primary_failure_domain": "D2 — Selection + D6 — Resistance",
+        "responder_subpopulation": "PTEN-intact patients",
+        "responder_result": "ORR 23%, PFS HR 0.55",
+        "harmful_subgroup": "PTEN-loss: ORR 0%, PFS HR 1.82 (HARMFUL)",
+        "transfer_lesson": "PTEN status must be assessed before enrollment. PTEN-loss is a contraindication for WEE1 inhibition. This is the canonical example of a biomarker that is both predictive of benefit AND predictive of harm.",
+        "crispro_decode_confidence": "HIGH",
+        "source": "program_asset_atr_ddr.json"
+      },
+      {
+        "trial_name": "CAPRI Phase II",
+        "drug": "Ceralasertib (ATRi) + Olaparib (PARPi)",
+        "sponsor": "AstraZeneca",
+        "indication": "Ovarian cancer (platinum-resistant)",
+        "phase": "II",
+        "primary_result": "ORR 36% (PARPi-naive) vs 4% (post-PARPi); PFS HR 0.42 (PARPi-naive) vs 1.31 (post-PARPi)",
+        "8d_vector": {
+          "D1_biology": {
+            "score": 0.1,
+            "rationale": "ATR+PARP combination is biologically sound — ATR inhibition creates replication stress that PARP cannot repair."
+          },
+          "D2_selection": {
+            "score": 0.9,
+            "rationale": "PRIMARY FAILURE DOMAIN. Post-PARPi patients have acquired resistance mechanisms that bypass both ATR and PARP inhibition. PARPi-naive patients have intact HRR machinery that is sensitized by ATR inhibition. Enrolling post-PARPi patients dilutes the signal from PARPi-naive patients (ORR 36% vs 4%)."
+          },
+          "D6_resistance": {
+            "score": 0.8,
+            "rationale": "Post-PARPi resistance is the dominant failure mechanism — BRCA reversion mutations, ABCB1 upregulation, and RAD51 restoration all bypass the ATR+PARP combination."
+          }
+        },
+        "primary_failure_domain": "D2 — Selection + D6 — Resistance",
+        "responder_subpopulation": "PARPi-naive patients",
+        "responder_result": "ORR 36%, PFS HR 0.42",
+        "harmful_subgroup": "Post-PARPi: ORR 4%, PFS HR 1.31 (HARMFUL)",
+        "transfer_lesson": "PARPi-naive status must be a mandatory enrollment criterion for ATR+PARP combinations. Post-PARPi patients should be excluded or enrolled in a separate arm with a different combination strategy.",
+        "crispro_decode_confidence": "HIGH",
+        "source": "program_asset_atr_ddr.json"
+      },
+      {
+        "trial_name": "LATIFY (NCT05450692)",
+        "drug": "Ceralasertib (ATRi) + Durvalumab (PD-L1)",
+        "sponsor": "AstraZeneca",
+        "indication": "NSCLC (STK11/KEAP1-mutant)",
+        "phase": "II",
+        "primary_result": "STK11/KEAP1-loss subgroup showed benefit; STK11-intact did not. Preliminary data.",
+        "latify_two_layer_demonstration": {
+          "description": "LATIFY is the ONLY receipted two-layer demonstration of CrisPRO's mechanism fit engine",
+          "layer_1_result": "Target-Lock: ceralasertib targets ATR — confirmed genuine driver in STK11/KEAP1-mutant NSCLC (replication stress elevated)",
+          "layer_2_result": "Mechanism Fit: responder score 0.8936 vs non-responder score 0.6295",
+          "delta_status": "QUARANTINED — CT-03 blocker: patent delta +0.366 vs receipt delta +0.2641 — version conflict unresolved. Do not cite any specific delta value.",
+          "what_to_cite": "Responder score 0.8936 vs non-responder 0.6295 — this is the correct citation",
+          "source": "crispro_master_pipeline.json programs[ATR_DDR]; governance quarantine log"
+        },
+        "8d_vector": {
+          "D2_selection": {
+            "score": 0.7,
+            "rationale": "STK11/KEAP1 gate identifies the responder subpopulation. STK11-intact patients do not respond — the gate is necessary."
+          },
+          "D5_combination": {
+            "score": 0.3,
+            "rationale": "ATRi + IO combination is mechanistically sound — ATR inhibition increases neoantigen presentation and PD-L1 expression, sensitizing tumors to checkpoint blockade."
+          }
+        },
+        "primary_failure_domain": "D2 — Selection (opportunity — gate exists)",
+        "transfer_lesson": "STK11/KEAP1 mutation status must be assessed before enrollment. The two-layer demonstration shows CrisPRO can identify the responder subpopulation before the trial reads out.",
+        "crispro_decode_confidence": "MEDIUM (preliminary data)",
+        "source": "program_asset_atr_ddr.json; crispro_master_pipeline.json"
+      },
+      {
+        "trial_name": "Ceralasertib + Olaparib Phase I/Ib",
+        "drug": "Ceralasertib + Olaparib",
+        "sponsor": "AstraZeneca",
+        "indication": "Solid tumors (dose-finding)",
+        "phase": "I/Ib",
+        "primary_result": "Safety/dose-finding primary — no efficacy endpoint",
+        "8d_vector": {
+          "D3_architecture": {
+            "score": 0.5,
+            "rationale": "Phase I dose-finding — not designed to detect efficacy signal."
+          }
+        },
+        "primary_failure_domain": "D3 — Architecture (by design — Phase I)",
+        "transfer_lesson": "Dose-finding data establishes the safety profile for Phase II. The CAPRI Phase II is the efficacy read-out.",
+        "source": "program_asset_atr_ddr.json"
+      }
+    ],
+    "what_crispro_proved": [
+      "Berzosertib: RS-High ORR 40% vs RS-Low ORR 5% — 8× difference; D2 Selection failure decoded",
+      "Adavosertib: PTEN-intact ORR 23% vs PTEN-loss ORR 0%; PFS HR 0.55 vs 1.82 — PTEN-loss is HARMFUL",
+      "CAPRI: PARPi-naive ORR 36% vs post-PARPi ORR 4%; PFS HR 0.42 vs 1.31 — post-PARPi is HARMFUL",
+      "GLB set: 4 ATR/DDR trials representing $1.95B in failed program investment decoded",
+      "LATIFY: responder score 0.8936 vs non-responder 0.6295 — only receipted two-layer demonstration (delta QUARANTINED)"
+    ],
+    "what_crispro_can_offer": "For any ATR/DDR abstract: identify which biomarker gate is missing (RS-High, PTEN-intact, PARPi-naive) and what the responder ORR would be with correct patient selection. For new DDR programs: apply the 8D framework to predict the failure mode before enrollment. CrisPRO has decoded $1.95B in failed ATR/DDR investment.",
+    "caveats": [
+      "LATIFY delta is QUARANTINED — do not cite a specific delta value",
+      "GLB set IP valuation figures are benchmarks, not guarantees",
+      "RS score algorithm is not publicly available — CrisPRO uses a proprietary implementation"
+    ]
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "program_id": "ATR_DDR",
+  "program_name": "ATR/DDR Inhibitor Failure Corpus",
+  "admissibility": "external_safe",
+  "glb_set_investment": "$1.95B across 4 decoded trials",
+  "what_ddr_is": {
+    "pathway": "DNA Damage Response (DDR) \u2014 the cellular machinery that detects and repairs DNA damage",
+    "key_kinases": {
+      "ATR": "ATR (Ataxia Telangiectasia and Rad3-related) \u2014 activated by single-stranded DNA breaks and replication stress. Phosphorylates CHK1 to halt replication and allow repair.",
+      "WEE1": "WEE1 \u2014 phosphorylates CDK1/CDK2 to prevent premature mitotic entry when DNA is damaged. WEE1 inhibition forces cells with unrepaired DNA into mitosis \u2192 mitotic catastrophe.",
+      "PARP": "PARP1/2 \u2014 repairs single-strand breaks via base excision repair. PARP inhibition in BRCA-mutant cells causes synthetic lethality (double-strand breaks cannot be repaired by HRR)."
+    },
+    "replication_stress": "Replication stress (RS) occurs when replication forks stall or collapse \u2014 common in cancer cells with oncogene activation (KRAS, MYC, CCNE1). RS-High tumors are dependent on ATR for survival \u2014 ATR inhibition kills them selectively.",
+    "why_ddr_fails_in_unselected_populations": "DDR inhibitors are highly effective in the RS-High or HRR-deficient subpopulation but have no activity in RS-Low or HRR-proficient patients. Enrolling unselected populations dilutes the signal to noise \u2014 the responder ORR (40%) is hidden inside an overall ORR (17%) that looks marginal."
+  },
+  "rs_score_algorithm": {
+    "description": "Replication Stress (RS) score \u2014 classifies patients as RS-High or RS-Low",
+    "what_it_measures": "The degree of replication fork stalling and DNA damage in the tumor. RS-High tumors are dependent on ATR for survival.",
+    "inputs": [
+      "CCNE1 amplification status",
+      "CDK2 activity markers",
+      "RRM2 expression",
+      "CDC45 expression",
+      "CLASPIN expression"
+    ],
+    "output": "RS-High (ATRi-sensitive) vs RS-Low (ATRi-resistant)",
+    "clinical_validation": "Berzosertib: RS-High ORR 40% vs RS-Low ORR 5% \u2014 8\u00d7 difference. This is the strongest biomarker-stratified signal in the ATR/DDR corpus.",
+    "source": "program_asset_atr_ddr.json; crispro_master_pipeline.json programs[ATR_DDR]"
+  },
+  "trials": [
+    {
+      "trial_name": "Berzosertib (M6620) Phase I/II",
+      "drug": "Berzosertib (M6620) \u2014 ATR inhibitor",
+      "sponsor": "Merck KGaA",
+      "indication": "Ovarian cancer (platinum-resistant)",
+      "phase": "I/II",
+      "primary_result": "ORR 17% overall; RS-High subgroup ORR 40% vs RS-Low ORR 5%",
+      "8d_vector": {
+        "D1_biology": {
+          "score": 0.1,
+          "rationale": "ATR is a genuine target in RS-High tumors \u2014 biology is sound."
+        },
+        "D2_selection": {
+          "score": 0.9,
+          "rationale": "PRIMARY FAILURE DOMAIN. RS-High gate was not applied at enrollment. RS-High ORR 40% vs RS-Low ORR 5% \u2014 8\u00d7 difference. The responder subgroup was diluted by RS-Low patients who cannot respond to ATR inhibition."
+        },
+        "D3_architecture": {
+          "score": 0.1,
+          "rationale": "Phase I/II design appropriate for signal-finding."
+        },
+        "D6_resistance": {
+          "score": 0.2,
+          "rationale": "RS-Low patients have intrinsic resistance \u2014 not acquired resistance."
+        }
+      },
+      "primary_failure_domain": "D2 \u2014 Selection",
+      "responder_subpopulation": "RS-High patients",
+      "responder_result": "ORR 40% (vs 5% in RS-Low)",
+      "transfer_lesson": "Apply RS-High gate at enrollment. RS score must be computed from tumor biopsy before randomization.",
+      "crispro_decode_confidence": "HIGH",
+      "source": "program_asset_atr_ddr.json"
+    },
+    {
+      "trial_name": "Adavosertib (AZD1775) Phase II",
+      "drug": "Adavosertib (AZD1775) \u2014 WEE1 inhibitor",
+      "sponsor": "AstraZeneca",
+      "indication": "Ovarian cancer (platinum-resistant)",
+      "phase": "II",
+      "primary_result": "ORR 23% (PTEN-intact) vs 0% (PTEN-loss); PFS HR 0.55 (PTEN-intact) vs 1.82 (PTEN-loss)",
+      "8d_vector": {
+        "D1_biology": {
+          "score": 0.1,
+          "rationale": "WEE1 inhibition is biologically sound in CDK2-active tumors."
+        },
+        "D2_selection": {
+          "score": 0.9,
+          "rationale": "PRIMARY FAILURE DOMAIN. PTEN-loss creates CDK2 dependency that paradoxically PROTECTS against WEE1 inhibition \u2014 PTEN-loss cells have alternative CDK2 regulation. PTEN-intact cells are dependent on WEE1 for G2/M checkpoint. Enrolling PTEN-loss patients is not just unhelpful \u2014 it is actively harmful (PFS HR 1.82)."
+        },
+        "D6_resistance": {
+          "score": 0.7,
+          "rationale": "PTEN-loss is a resistance mechanism \u2014 not acquired but intrinsic. PTEN-loss cells bypass WEE1 inhibition via PI3K/AKT-mediated CDK2 regulation."
+        }
+      },
+      "primary_failure_domain": "D2 \u2014 Selection + D6 \u2014 Resistance",
+      "responder_subpopulation": "PTEN-intact patients",
+      "responder_result": "ORR 23%, PFS HR 0.55",
+      "harmful_subgroup": "PTEN-loss: ORR 0%, PFS HR 1.82 (HARMFUL)",
+      "transfer_lesson": "PTEN status must be assessed before enrollment. PTEN-loss is a contraindication for WEE1 inhibition. This is the canonical example of a biomarker that is both predictive of benefit AND predictive of harm.",
+      "crispro_decode_confidence": "HIGH",
+      "source": "program_asset_atr_ddr.json"
+    },
+    {
+      "trial_name": "CAPRI Phase II",
+      "drug": "Ceralasertib (ATRi) + Olaparib (PARPi)",
+      "sponsor": "AstraZeneca",
+      "indication": "Ovarian cancer (platinum-resistant)",
+      "phase": "II",
+      "primary_result": "ORR 36% (PARPi-naive) vs 4% (post-PARPi); PFS HR 0.42 (PARPi-naive) vs 1.31 (post-PARPi)",
+      "8d_vector": {
+        "D1_biology": {
+          "score": 0.1,
+          "rationale": "ATR+PARP combination is biologically sound \u2014 ATR inhibition creates replication stress that PARP cannot repair."
+        },
+        "D2_selection": {
+          "score": 0.9,
+          "rationale": "PRIMARY FAILURE DOMAIN. Post-PARPi patients have acquired resistance mechanisms that bypass both ATR and PARP inhibition. PARPi-naive patients have intact HRR machinery that is sensitized by ATR inhibition. Enrolling post-PARPi patients dilutes the signal from PARPi-naive patients (ORR 36% vs 4%)."
+        },
+        "D6_resistance": {
+          "score": 0.8,
+          "rationale": "Post-PARPi resistance is the dominant failure mechanism \u2014 BRCA reversion mutations, ABCB1 upregulation, and RAD51 restoration all bypass the ATR+PARP combination."
+        }
+      },
+      "primary_failure_domain": "D2 \u2014 Selection + D6 \u2014 Resistance",
+      "responder_subpopulation": "PARPi-naive patients",
+      "responder_result": "ORR 36%, PFS HR 0.42",
+      "harmful_subgroup": "Post-PARPi: ORR 4%, PFS HR 1.31 (HARMFUL)",
+      "transfer_lesson": "PARPi-naive status must be a mandatory enrollment criterion for ATR+PARP combinations. Post-PARPi patients should be excluded or enrolled in a separate arm with a different combination strategy.",
+      "crispro_decode_confidence": "HIGH",
+      "source": "program_asset_atr_ddr.json"
+    },
+    {
+      "trial_name": "LATIFY (NCT05450692)",
+      "drug": "Ceralasertib (ATRi) + Durvalumab (PD-L1)",
+      "sponsor": "AstraZeneca",
+      "indication": "NSCLC (STK11/KEAP1-mutant)",
+      "phase": "II",
+      "primary_result": "STK11/KEAP1-loss subgroup showed benefit; STK11-intact did not. Preliminary data.",
+      "latify_two_layer_demonstration": {
+        "description": "LATIFY is the ONLY receipted two-layer demonstration of CrisPRO's mechanism fit engine",
+        "layer_1_result": "Target-Lock: ceralasertib targets ATR \u2014 confirmed genuine driver in STK11/KEAP1-mutant NSCLC (replication stress elevated)",
+        "layer_2_result": "Mechanism Fit: responder score 0.8936 vs non-responder score 0.6295",
+        "delta_status": "QUARANTINED \u2014 CT-03 blocker: patent delta +0.366 vs receipt delta +0.2641 \u2014 version conflict unresolved. Do not cite any specific delta value.",
+        "what_to_cite": "Responder score 0.8936 vs non-responder 0.6295 \u2014 this is the correct citation",
+        "source": "crispro_master_pipeline.json programs[ATR_DDR]; governance quarantine log"
+      },
+      "8d_vector": {
+        "D2_selection": {
+          "score": 0.7,
+          "rationale": "STK11/KEAP1 gate identifies the responder subpopulation. STK11-intact patients do not respond \u2014 the gate is necessary."
+        },
+        "D5_combination": {
+          "score": 0.3,
+          "rationale": "ATRi + IO combination is mechanistically sound \u2014 ATR inhibition increases neoantigen presentation and PD-L1 expression, sensitizing tumors to checkpoint blockade."
+        }
+      },
+      "primary_failure_domain": "D2 \u2014 Selection (opportunity \u2014 gate exists)",
+      "transfer_lesson": "STK11/KEAP1 mutation status must be assessed before enrollment. The two-layer demonstration shows CrisPRO can identify the responder subpopulation before the trial reads out.",
+      "crispro_decode_confidence": "MEDIUM (preliminary data)",
+      "source": "program_asset_atr_ddr.json; crispro_master_pipeline.json"
+    },
+    {
+      "trial_name": "Ceralasertib + Olaparib Phase I/Ib",
+      "drug": "Ceralasertib + Olaparib",
+      "sponsor": "AstraZeneca",
+      "indication": "Solid tumors (dose-finding)",
+      "phase": "I/Ib",
+      "primary_result": "Safety/dose-finding primary \u2014 no efficacy endpoint",
+      "8d_vector": {
+        "D3_architecture": {
+          "score": 0.5,
+          "rationale": "Phase I dose-finding \u2014 not designed to detect efficacy signal."
+        }
+      },
+      "primary_failure_domain": "D3 \u2014 Architecture (by design \u2014 Phase I)",
+      "transfer_lesson": "Dose-finding data establishes the safety profile for Phase II. The CAPRI Phase II is the efficacy read-out.",
+      "source": "program_asset_atr_ddr.json"
+    }
+  ],
+  "what_crispro_proved": [
+    "Berzosertib: RS-High ORR 40% vs RS-Low ORR 5% \u2014 8\u00d7 difference; D2 Selection failure decoded",
+    "Adavosertib: PTEN-intact ORR 23% vs PTEN-loss ORR 0%; PFS HR 0.55 vs 1.82 \u2014 PTEN-loss is HARMFUL",
+    "CAPRI: PARPi-naive ORR 36% vs post-PARPi ORR 4%; PFS HR 0.42 vs 1.31 \u2014 post-PARPi is HARMFUL",
+    "GLB set: 4 ATR/DDR trials representing $1.95B in failed program investment decoded",
+    "LATIFY: responder score 0.8936 vs non-responder 0.6295 \u2014 only receipted two-layer demonstration (delta QUARANTINED)"
+  ],
+  "what_crispro_can_offer": "For any ATR/DDR abstract: identify which biomarker gate is missing (RS-High, PTEN-intact, PARPi-naive) and what the responder ORR would be with correct patient selection. For new DDR programs: apply the 8D framework to predict the failure mode before enrollment. CrisPRO has decoded $1.95B in failed ATR/DDR investment.",
+  "caveats": [
+    "LATIFY delta is QUARANTINED \u2014 do not cite a specific delta value",
+    "GLB set IP valuation figures are benchmarks, not guarantees",
+    "RS score algorithm is not publicly available \u2014 CrisPRO uses a proprietary implementation"
+  ]
+}

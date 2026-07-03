@@ -1,0 +1,153 @@
+{
+  "program_id": "IO_APPENDIX",
+  "program_name": "MSS CRC IO Supporting Evidence Corpus",
+  "admissibility": "external_safe",
+  "trial_count": 15,
+  "trials": [
+    {
+      "trial_name": "KEYNOTE-177",
+      "drug": "Pembrolizumab (PD-1)",
+      "indication": "MSI-H/dMMR mCRC (1L)",
+      "phase": "III",
+      "primary_result": "PFS HR 0.60; OS HR 0.74. Definitive positive for MSI-H.",
+      "role_in_corpus": "POSITIVE CONTROL \u2014 confirms IO works in MSI-H CRC. Defines the contrast with MSS CRC.",
+      "transfer_lesson": "MSI-H CRC responds to IO (PFS HR 0.60). MSS CRC does not respond to IO in unselected populations. The difference is neoantigen load (high in MSI-H, low in MSS) and TME phenotype (inflamed in MSI-H, excluded/desert in MSS)."
+    },
+    {
+      "trial_name": "CheckMate 142",
+      "drug": "Nivolumab \u00b1 Ipilimumab",
+      "indication": "mCRC (MSS and MSI-H cohorts)",
+      "phase": "II",
+      "primary_result": "MSS cohort ORR 0% (n=74). MSI-H ORR 31% mono, 55% combo.",
+      "role_in_corpus": "NEGATIVE CONTROL \u2014 confirms IO does NOT work in unselected MSS CRC. ORR 0% in 74 MSS patients.",
+      "transfer_lesson": "Unselected MSS CRC: ORR 0%. The responder subgroup (NLM + pTMB \u226528 + inflamed TME) is too small to detect in unselected populations."
+    },
+    {
+      "trial_name": "REGONIVO Phase 2 (US)",
+      "drug": "Regorafenib + Nivolumab",
+      "indication": "MSS mCRC",
+      "phase": "II",
+      "n": 70,
+      "primary_result": "ORR 7% (5/70). All 5 responders had NO liver metastases. Non-liver-met ORR 22% (5/23).",
+      "role_in_corpus": "LIVER METASTASIS EVIDENCE \u2014 confirms liver metastasis as the critical IO stratification variable",
+      "transfer_lesson": "0/5 liver-met responders. Non-liver-met ORR 22%. Liver metastasis is a contraindication for IO in MSS CRC."
+    },
+    {
+      "trial_name": "REGONIVO (EPOC1603)",
+      "drug": "Regorafenib + Nivolumab",
+      "indication": "MSS mCRC (Japan)",
+      "phase": "I/II",
+      "n": 24,
+      "primary_result": "CRC cohort (n=24 MSS): ORR 33%, median PFS 6.3 months. All 8 responders had NO liver metastases.",
+      "role_in_corpus": "LIVER METASTASIS EVIDENCE \u2014 Japan cohort confirms NLM enrichment",
+      "transfer_lesson": "All 8 responders had NO liver metastases. ORR 33% in NLM-enriched cohort vs 7% in unselected US cohort."
+    },
+    {
+      "trial_name": "RIN (Regorafenib + Ipilimumab + Nivolumab)",
+      "drug": "Regorafenib + Ipilimumab + Nivolumab",
+      "indication": "MSS mCRC",
+      "phase": "I/II",
+      "primary_result": "ORR 27.6% overall; NLM cohort ORR ~40%; liver-met ORR ~5%. Median OS 20 months in NLM cohort.",
+      "role_in_corpus": "HIGHEST REPORTED IO ORR IN MSS CRC \u2014 NLM cohort ORR ~40%",
+      "transfer_lesson": "NLM cohort ORR ~40% is the highest reported IO ORR in MSS CRC. This defines the ceiling for IO benefit in the NLM subpopulation."
+    },
+    {
+      "trial_name": "BOT/BAL (Botensilimab + Balstilimab)",
+      "drug": "Botensilimab (anti-CTLA-4 Fc-enhanced) + Balstilimab (anti-PD-1)",
+      "indication": "MSS mCRC (no liver metastases)",
+      "phase": "I/II",
+      "primary_result": "ORR 17% (95% CI 10\u201326%) in no-liver-met MSS mCRC (n=101)",
+      "role_in_corpus": "NLM ENRICHMENT EVIDENCE \u2014 confirms NLM selection strategy",
+      "transfer_lesson": "ORR 17% in NLM-selected MSS mCRC. Botensilimab's Fc-enhanced CTLA-4 blockade (increased ADCC/ADCP) may be more effective than standard CTLA-4 blockade in MSS CRC."
+    },
+    {
+      "trial_name": "STELLAR-303",
+      "drug": "Zanzalintinib (XL092, MET/VEGFR/AXL inhibitor) + Atezolizumab",
+      "indication": "MSS mCRC (refractory)",
+      "phase": "III (ONGOING)",
+      "primary_result": "ONGOING \u2014 no results available",
+      "role_in_corpus": "ONGOING RANDOMIZED PHASE III \u2014 only ongoing randomized Phase III in refractory MSS CRC",
+      "transfer_lesson": "STELLAR-303 is the only ongoing randomized Phase III in refractory MSS CRC. Results will define the new standard of care for 3L+ MSS mCRC."
+    },
+    {
+      "trial_name": "AMPLIFY-201",
+      "drug": "mKRAS vaccine (ELI-002 2P) \u2014 lipid-conjugated KRAS G12D/G12V peptides",
+      "indication": "KRAS-mutant solid tumors (CRC, PDAC)",
+      "phase": "I",
+      "primary_result": "ctDNA clearance in 3/5 CRC patients. mKRAS-specific T-cell responses confirmed.",
+      "role_in_corpus": "PHARMACODYNAMIC DISSOCIATION EVIDENCE \u2014 T-cell responses confirmed but no objective responses",
+      "transfer_lesson": "mKRAS vaccine activates T cells and clears ctDNA but does not produce objective responses. Pharmacodynamic dissociation in MSS CRC."
+    },
+    {
+      "trial_name": "PolyPEPI1018",
+      "drug": "PolyPEPI1018 (multi-neoantigen peptide vaccine)",
+      "indication": "MSS mCRC",
+      "phase": "I/II",
+      "primary_result": "T-cell responses to \u22651 antigen in 100% of patients. No objective responses. Stable disease in some patients.",
+      "role_in_corpus": "PHARMACODYNAMIC DISSOCIATION EVIDENCE",
+      "transfer_lesson": "100% T-cell response rate, 0% ORR. The most extreme pharmacodynamic dissociation example in the corpus."
+    },
+    {
+      "trial_name": "MODUL Cohort 2",
+      "drug": "Atezolizumab + mFOLFOX6 + Bevacizumab (1L)",
+      "indication": "mCRC (all comers, 1L)",
+      "phase": "II (randomized)",
+      "primary_result": "PFS HR 1.04 (95% CI 0.77\u20131.40) \u2014 no benefit. OS HR 0.91 \u2014 no benefit. All biomarker subgroups negative.",
+      "role_in_corpus": "NEGATIVE CONTROL \u2014 IO addition to 1L mFOLFOX6+bev fails in unselected population",
+      "transfer_lesson": "Confirms QUILT-2.004 finding: IO addition to mFOLFOX6+bev in unselected mCRC does not improve outcomes."
+    },
+    {
+      "trial_name": "CAMILLA CRC",
+      "drug": "Durvalumab + Tremelimumab",
+      "indication": "MSS mCRC",
+      "phase": "II",
+      "primary_result": "ORR 27.6% (8/29 evaluable). Median OS 9.1 months. Post-hoc: patients without liver metastases had better outcomes.",
+      "role_in_corpus": "LIVER METASTASIS EVIDENCE \u2014 post-hoc NLM benefit",
+      "transfer_lesson": "ORR 27.6% in small cohort \u2014 likely enriched for NLM patients. Post-hoc NLM benefit consistent with CO.26 and REGONIVO."
+    },
+    {
+      "trial_name": "GVAX + Guadecitabine",
+      "drug": "GVAX + Guadecitabine (DNMT inhibitor)",
+      "indication": "MSS mCRC",
+      "phase": "I/II",
+      "primary_result": "No T-cell increase; no objective responses.",
+      "role_in_corpus": "NEGATIVE CONTROL \u2014 DNMT inhibition does not enhance GVAX in MSS CRC",
+      "transfer_lesson": "Epigenetic priming (DNMT inhibition) does not overcome pharmacodynamic dissociation in MSS CRC."
+    },
+    {
+      "trial_name": "PANVAC + DC vaccine",
+      "drug": "PANVAC (CEA/MUC1 poxvirus vaccine) + Dendritic cell vaccine",
+      "indication": "MSS mCRC",
+      "phase": "II",
+      "primary_result": "No OS benefit; T-cell responses >70% of patients.",
+      "role_in_corpus": "PHARMACODYNAMIC DISSOCIATION EVIDENCE",
+      "transfer_lesson": "T-cell responses >70%, no OS benefit. Pharmacodynamic dissociation confirmed across multiple vaccine platforms."
+    },
+    {
+      "trial_name": "PexaVec + Durvalumab \u00b1 Tremelimumab",
+      "drug": "PexaVec (oncolytic vaccinia virus) + Durvalumab \u00b1 Tremelimumab",
+      "indication": "MSS mCRC",
+      "phase": "I/II",
+      "primary_result": "ORR 0% (0/21).",
+      "role_in_corpus": "NEGATIVE CONTROL \u2014 oncolytic virus + IO fails in unselected MSS CRC",
+      "transfer_lesson": "Oncolytic virus does not overcome immune exclusion in MSS CRC without patient selection."
+    },
+    {
+      "trial_name": "Bintrafusp Alfa in CRC",
+      "drug": "Bintrafusp alfa (PD-L1/TGF-\u03b2 bifunctional)",
+      "indication": "MSS mCRC",
+      "phase": "II",
+      "primary_result": "ORR 0% (n=30).",
+      "role_in_corpus": "NEGATIVE CONTROL \u2014 TGF-\u03b2 + PD-L1 dual blockade fails in unselected MSS CRC",
+      "transfer_lesson": "Even TGF-\u03b2 + PD-L1 dual blockade fails in unselected MSS CRC. Patient selection (immune-excluded vs immune-desert) is required to identify patients who can benefit from stromal barrier disruption."
+    }
+  ],
+  "what_crispro_proved": [
+    "RIN NLM subgroup: ORR ~40%, mOS 20 months \u2014 highest reported IO ORR in MSS CRC",
+    "BOT/BAL Phase 1: ORR 17% (95% CI 10\u201326%) in no-liver-met MSS mCRC (n=101)",
+    "KEYNOTE-177 (MSI-H): PFS HR=0.60 \u2014 positive control confirming IO works in MSI-H",
+    "CheckMate 142 MSS cohort: ORR 0% (n=74) \u2014 confirms immune exclusion in unselected MSS CRC",
+    "STELLAR-303 (zanzalintinib + atezolizumab): only ongoing randomized Phase III in refractory MSS CRC",
+    "Pharmacodynamic dissociation confirmed across 4 vaccine platforms (GVAX, PolyPEPI1018, PANVAC, AMPLIFY-201)"
+  ]
+}

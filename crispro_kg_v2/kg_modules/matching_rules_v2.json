@@ -1,0 +1,202 @@
+[
+  {
+    "rule_id": "R-01",
+    "confidence": "HIGH",
+    "trigger": "indication_keywords contains 'MSS' OR 'pMMR' AND 'colorectal'",
+    "action": "ACTIVATE program_BREAK_CRC_001 + program_IO_CORE + program_CEACAM5",
+    "rationale": "MSS/pMMR CRC is the primary indication for BreAK CRC-001 and the IO Core corpus. CEACAM5 is expressed in 98.7% of CRC.",
+    "evidence": "BreAK CRC-001 NCT06934538; CO.26; TRIBE2"
+  },
+  {
+    "rule_id": "R-02",
+    "confidence": "HIGH",
+    "trigger": "target_keywords contains 'CEACAM5' OR 'CEA'",
+    "action": "ACTIVATE program_CEACAM5; REQUIRE Gate 1 (IHC \u226580%) + Gate 2 (IO permissiveness)",
+    "rationale": "CEACAM5 IHC \u226580% is the validated selection threshold. IHC 50\u201379% is HARMFUL (PFS HR=1.38).",
+    "evidence": "CARMEN-LC03; PROCEADE-CRC-01; gate_arch_v2.md"
+  },
+  {
+    "rule_id": "R-03",
+    "confidence": "HIGH",
+    "trigger": "target_keywords contains 'ATR' OR 'WEE1' OR 'PARP'",
+    "action": "ACTIVATE program_ATR_DDR; REQUIRE RS score + PTEN status",
+    "rationale": "ATR/WEE1/PARP inhibitors require DDR biomarker selection. RS-High ORR 40% vs RS-Low 5% (berzosertib).",
+    "evidence": "Berzosertib; Adavosertib; CAPRI"
+  },
+  {
+    "rule_id": "R-04",
+    "confidence": "HIGH",
+    "trigger": "failure_mode_keywords contains 'liver metastasis' OR 'NLM'",
+    "action": "FLAG GAP-01; REQUIRE liver metastasis stratification; CITE CO.26 Pint=0.02",
+    "rationale": "Liver metastasis is the single most important IO stratification variable in MSS CRC. CO.26 liver-met PFS HR=1.39 (HARMFUL) vs no-LM HR=0.54.",
+    "evidence": "CO.26; REGONIVO US (0/5 liver-met responders)"
+  },
+  {
+    "rule_id": "R-05",
+    "confidence": "HIGH",
+    "trigger": "biomarker_keywords contains 'pTMB' OR 'plasma TMB'",
+    "action": "CITE CO.26 pTMB \u226528 OS HR=0.34; WARN tissue TMB is NOT a substitute (r=0.13, p=0.20)",
+    "rationale": "pTMB \u226528 is the strongest IO enrichment signal in MSS CRC from randomized data. Tissue TMB has poor correlation with pTMB in CRC.",
+    "evidence": "CO.26; SANOFI_SOURCE_OF_TRUTH.md"
+  },
+  {
+    "rule_id": "R-06",
+    "confidence": "HIGH",
+    "trigger": "mechanism_keywords contains 'checkpoint' OR 'PD-1' OR 'PD-L1' AND indication contains 'MSS'",
+    "action": "ACTIVATE program_IO_CORE; CITE three conditions for IO benefit; WARN pharmacodynamic dissociation risk",
+    "rationale": "IO in MSS CRC requires all three conditions: NLM + pTMB \u226528 + inflamed TME. Unselected MSS CRC has <5% ORR to checkpoint inhibitors.",
+    "evidence": "CheckMate 142 MSS (ORR 0%); CO.26; AtezoTRIBE"
+  },
+  {
+    "rule_id": "R-07",
+    "confidence": "HIGH",
+    "trigger": "mechanism_keywords contains 'KRAS' AND 'MEK inhibitor'",
+    "action": "CITE IMblaze370 failure (OS null); WARN cobimetinib suppresses T cell proliferation",
+    "rationale": "MEK inhibition in MSS CRC failed in Phase III (IMblaze370). Cobimetinib is antagonistic to IO.",
+    "evidence": "IMblaze370; IO failure archetype: MEK inhibition failure"
+  },
+  {
+    "rule_id": "R-08",
+    "confidence": "HIGH",
+    "trigger": "mechanism_keywords contains 'BRCA' OR 'PARP' AND failure_mode contains 'post-PARPi'",
+    "action": "ACTIVATE program_ATR_DDR CAPRI; CITE BRCA reversion + ABCB1 + RAD51 restoration resistance mechanisms",
+    "rationale": "Post-PARPi resistance has three mechanisms: BRCA reversion, ABCB1 upregulation, RAD51 restoration. CAPRI ORR 4% post-PARPi vs 36% naive.",
+    "evidence": "CAPRI; program_ATR_DDR"
+  },
+  {
+    "rule_id": "R-09",
+    "confidence": "HIGH",
+    "trigger": "mechanism_keywords contains 'ZEB1' AND indication contains 'ovarian'",
+    "action": "ACTIVATE CAP_07_EscapeMap; CITE HR=1.4803 (continuous Cox); WARN arm interaction p=0.246 (PROGNOSTIC NOT ARM-SPECIFIC)",
+    "rationale": "ZEB1 is a validated prognostic marker in the bevacizumab arm of ovarian cancer. Arm interaction is not significant.",
+    "evidence": "GOG-0218; ovarian_io_verified_metrics.md"
+  },
+  {
+    "rule_id": "R-10",
+    "confidence": "HIGH",
+    "trigger": "mechanism_keywords contains 'ZEB1' AND indication contains 'GBM' OR 'glioblastoma'",
+    "action": "BLOCK \u2014 GBM ZEB1 is PERMANENTLY CLOSED; DO NOT ACTIVATE EscapeMap for GBM",
+    "rationale": "Three datasets all null or contradicted. ZEB1 DECREASES in recurrent GBM \u2014 opposite of escape hypothesis.",
+    "evidence": "GLASS; GSE222515; GSE174554"
+  },
+  {
+    "rule_id": "R-11",
+    "confidence": "MODERATE",
+    "trigger": "mechanism_keywords contains 'vaccine' OR 'whole-cell' OR 'ICD'",
+    "action": "ACTIVATE program_BREAK_CRC_001; CITE QUILT-2.004 design precedent (HR 1.061); REQUIRE three conditions for IO benefit",
+    "rationale": "Whole-cell vaccine mechanisms in MSS CRC require IO permissiveness. QUILT-2.004 failed in unselected MSS CRC.",
+    "evidence": "QUILT-2.004; BreAK CRC-001; STC-1010 mechanism"
+  },
+  {
+    "rule_id": "R-12",
+    "confidence": "MODERATE",
+    "trigger": "mechanism_keywords contains 'bevacizumab' OR 'VEGF' AND indication contains 'CRC'",
+    "action": "CITE TRIBE2 canonical benchmark (mPFS 9.8 mo, ORR 50%, mOS 22.5 mo); WARN BECOME inflates mOS (liver-limited selection)",
+    "rationale": "TRIBE2 is the canonical comparator for mFOLFOX6 + bev in 1L mCRC. BECOME is liver-limited and inflates mOS.",
+    "evidence": "TRIBE2; BECOME; SANOFI_SOURCE_OF_TRUTH.md"
+  },
+  {
+    "rule_id": "R-13",
+    "confidence": "MODERATE",
+    "trigger": "mechanism_keywords contains 'PTEN' AND 'WEE1'",
+    "action": "ACTIVATE program_ATR_DDR Adavosertib; WARN PTEN-loss PFS HR=1.82 (HARMFUL); REQUIRE PTEN status",
+    "rationale": "PTEN-loss creates CDK2 dependency that PROTECTS against WEE1i. PTEN-intact ORR 23% vs PTEN-loss ORR 0%.",
+    "evidence": "Adavosertib; program_ATR_DDR"
+  },
+  {
+    "rule_id": "R-14",
+    "confidence": "MODERATE",
+    "trigger": "mechanism_keywords contains 'synthetic lethality' OR 'CRISPR screen'",
+    "action": "ACTIVATE CAP_06_BRIEF; CITE BRIEF-1 (CRISPR_VALIDATED, deal_ready=true); DISCLOSE BRIEF-2 (COMPUTATIONAL_HYPOTHESIS)",
+    "rationale": "BRIEF-1 and BRIEF-4 are CRISPR-validated SL assets. BRIEF-2 is a computational hypothesis \u2014 mandatory disclosure.",
+    "evidence": "crispro_ip_valuation_glb_v1.mdc; BRIEF program assets"
+  },
+  {
+    "rule_id": "R-15",
+    "confidence": "MODERATE",
+    "trigger": "mechanism_keywords contains 'Immunoscore' OR 'CD8' AND indication contains 'CRC'",
+    "action": "CITE AtezoTRIBE Immunoscore-IC high HR ~0.50 (exploratory); ACTIVATE MOD-05",
+    "rationale": "Immunoscore-IC is the best validated TME profiling tool in CRC. High Immunoscore-IC correlates with IO benefit.",
+    "evidence": "AtezoTRIBE; program_IO_CORE"
+  },
+  {
+    "rule_id": "R-16",
+    "confidence": "MODERATE",
+    "trigger": "mechanism_keywords contains 'regorafenib' AND 'nivolumab'",
+    "action": "ACTIVATE program_IO_CORE REGONIVO; CITE US ORR 7% (5/70); CITE Japan ORR 33% (all 8 responders NLM)",
+    "rationale": "REGONIVO US failed in unselected MSS CRC. Japan success was entirely in NLM patients \u2014 confirms liver metastasis as the key stratification variable.",
+    "evidence": "REGONIVO US; REGONIVO Japan; program_IO_CORE"
+  },
+  {
+    "rule_id": "R-17",
+    "confidence": "MODERATE",
+    "trigger": "mechanism_keywords contains 'CCNE1' OR 'CDK2' OR 'replication stress'",
+    "action": "ACTIVATE program_ATR_DDR Berzosertib; CITE RS score algorithm (CCNE1 amp + CDK2 + RRM2 + CDC45 + CLASPIN)",
+    "rationale": "RS-High patients have CCNE1 amplification and CDK2 overactivity \u2014 they are dependent on ATR for replication stress management.",
+    "evidence": "Berzosertib; program_ATR_DDR"
+  },
+  {
+    "rule_id": "R-18",
+    "confidence": "MODERATE",
+    "trigger": "mechanism_keywords contains 'STK11' OR 'KEAP1'",
+    "action": "ACTIVATE program_ATR_DDR LATIFY; CITE responder 0.8936 vs non-responder 0.6295; DO NOT CITE delta (QUARANTINED)",
+    "rationale": "LATIFY uses STK11/KEAP1 gate for patient selection. Delta values are QUARANTINED \u2014 only cite responder/non-responder scores.",
+    "evidence": "LATIFY; CT-03 quarantine"
+  },
+  {
+    "rule_id": "R-19",
+    "confidence": "MODERATE",
+    "trigger": "mechanism_keywords contains 'TGF-beta' OR 'CAF' OR 'stromal barrier'",
+    "action": "ACTIVATE MOD-15 (Stromal Barrier); CITE immune exclusion domain; WARN pharmacodynamic dissociation risk",
+    "rationale": "TGF-\u03b2 and CAFs create the stromal barrier that excludes T cells from the tumor center. This is the dominant failure mode in immune-excluded MSS CRC.",
+    "evidence": "biomarker_biology_6domains; program_IO_CORE failure archetypes"
+  },
+  {
+    "rule_id": "R-20",
+    "confidence": "MODERATE",
+    "trigger": "mechanism_keywords contains 'GVAX' OR 'guadecitabine'",
+    "action": "CITE GVAX ORR 0% (0/22 despite confirmed T-cell responses); WARN pharmacodynamic dissociation",
+    "rationale": "GVAX confirmed T-cell priming but zero tumor responses \u2014 the canonical pharmacodynamic dissociation example in MSS CRC.",
+    "evidence": "GVAX; program_IO_CORE failure archetypes"
+  },
+  {
+    "rule_id": "R-21",
+    "confidence": "CONDITIONAL",
+    "trigger": "mechanism_keywords contains 'neoantigen' OR 'tumor mutational burden' AND indication contains 'MSS'",
+    "action": "REQUIRE pTMB (GuardantOMNI) \u2014 tissue TMB is NOT a substitute; CITE r=0.13, p=0.20",
+    "rationale": "Tissue TMB has poor correlation with pTMB in CRC. pTMB \u226528 is the validated threshold.",
+    "evidence": "CO.26; SANOFI_SOURCE_OF_TRUTH.md"
+  },
+  {
+    "rule_id": "R-22",
+    "confidence": "CONDITIONAL",
+    "trigger": "mechanism_keywords contains 'CEACAM5' AND 'IHC' AND score_range '50-79%'",
+    "action": "WARN IHC 50\u201379% is HARMFUL (PFS HR=1.38); REQUIRE IHC \u226580% for Gate 1",
+    "rationale": "CARMEN-LC03 showed IHC 50\u201379% is numerically harmful. Only IHC \u226580% showed directional OS benefit.",
+    "evidence": "CARMEN-LC03; gate_arch_v2.md"
+  },
+  {
+    "rule_id": "R-23",
+    "confidence": "CONDITIONAL",
+    "trigger": "mechanism_keywords contains 'PTEN' AND 'ITGAV'",
+    "action": "BLOCK \u2014 BRIEF-2 (PTEN-null\u2192ITGAV) is COMPUTATIONAL HYPOTHESIS; DISCLOSE DepMap NULL; DO NOT RECOMMEND as SL therapy",
+    "rationale": "BRIEF-2 DepMap NULL across all 3 proxies. Not CRISPR-validated. Mandatory disclosure.",
+    "evidence": "crispro_ip_valuation_glb_v1.mdc; BRIEF-2 status"
+  },
+  {
+    "rule_id": "R-24",
+    "confidence": "CONDITIONAL",
+    "trigger": "mechanism_keywords contains 'LATIFY' OR 'NCT05450692'",
+    "action": "CITE responder 0.8936 vs non-responder 0.6295; DO NOT CITE delta (QUARANTINED); CITE STK11/KEAP1 gate",
+    "rationale": "LATIFY delta values are QUARANTINED \u2014 version conflict between patent (+0.366) and receipt (+0.2641) unresolved.",
+    "evidence": "CT-03 quarantine; LATIFY program asset"
+  },
+  {
+    "rule_id": "R-25",
+    "confidence": "CONDITIONAL",
+    "trigger": "mechanism_keywords contains 'BRAF' AND 'BreAK' OR 'STC-1010'",
+    "action": "FLAG SC-001 ACTIVE CONFLICT \u2014 CT26 carries BRAF V600E; BreAK CRC-001 requires BRAF WT; REQUIRE resolution before enrollment",
+    "rationale": "SC-001 is an active scientific conflict that must be resolved before BreAK CRC-001 enrollment.",
+    "evidence": "SC-001 conflict registry; BreAK CRC-001 Exclusion Criterion #7"
+  }
+]

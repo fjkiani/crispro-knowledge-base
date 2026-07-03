@@ -1,0 +1,524 @@
+{
+  "cap_02_mechanism_fit_engine": {
+    "capability_id": "CAP-02",
+    "name": "Mechanism Fit Scoring \u2014 PATH A Engine",
+    "evidence_tier": "COMPUTED",
+    "code_location": "crispro-backend-v3/layer1_engines/mechanism_fit/mechanism_fit_ranker.py",
+    "formula": "fit = clip((p\u00b7t) / \u2016t\u2016\u2082, 0, 1)",
+    "formula_status": "PATH A \u2014 LOCKED 2026-04-28 by Fahad Kiani",
+    "path_b_status": "PROHIBITED \u2014 cosine similarity with \u2016p\u2016\u2082 in denominator is prohibited in all outputs",
+    "algorithm_step_by_step": {
+      "step_1_patient_vector_construction": {
+        "description": "Build an 8-dimensional patient vector p from the patient's genomic and clinical profile",
+        "axes": {
+          "ddr": "DNA damage response pathway activity \u2014 scored from ATM/BRCA1/BRCA2/PTEN mutation status, RS score if available",
+          "mapk": "RAS/RAF/MEK/ERK pathway activity \u2014 scored from KRAS/NRAS/BRAF mutation status and co-mutation context",
+          "pi3k": "PI3K/AKT/mTOR pathway activity \u2014 scored from PIK3CA/PTEN/AKT mutation status",
+          "vegf": "Angiogenesis/VEGF pathway activity \u2014 scored from tumor vascularity, bevacizumab history, HIF1A expression",
+          "her2": "HER2/ERBB2 pathway activity \u2014 scored from HER2 amplification/overexpression status",
+          "io": "Immune oncology permissiveness \u2014 scored from pTMB, Immunoscore-IC, CD8+ TIL density, MSS/MSI-H status, liver metastasis status",
+          "efflux": "Drug efflux/resistance pathway activity \u2014 scored from MDR1/ABCB1 expression, prior chemotherapy resistance",
+          "rss": "Replication stress score \u2014 scored from RS-High/RS-Low classification, CCNE1 amplification, CDK2 activity"
+        },
+        "value_range": "[0, 1] per axis",
+        "source": "brenus_capability_ownership_matrix.md CAP-01; crispro-backend-v3/layer1_engines/mechanism_fit/mechanism_fit_ranker.py"
+      },
+      "step_2_trial_vector_construction": {
+        "description": "Build an 8-dimensional trial vector t from the trial's mechanism of action",
+        "logic": "Each axis value represents how strongly the trial's drug mechanism targets that biological pathway. A checkpoint inhibitor scores high on io axis. A MEK inhibitor scores high on mapk axis. A PARP inhibitor scores high on ddr axis.",
+        "example_break_crc001": {
+          "io": 0.8,
+          "mapk": 0.3,
+          "ddr": 0.1,
+          "pi3k": 0.1,
+          "vegf": 0.2,
+          "her2": 0.0,
+          "efflux": 0.1,
+          "rss": 0.1,
+          "rationale": "STC-1010 is primarily an IO mechanism (whole-cell vaccine activating T-cell response) with secondary mapk relevance (KRAS-mutant CRC context)"
+        }
+      },
+      "step_3_dot_product": {
+        "description": "Compute the dot product p\u00b7t \u2014 the sum of axis-wise products",
+        "formula": "p\u00b7t = \u03a3(p_i \u00d7 t_i) for i in {ddr, mapk, pi3k, vegf, her2, io, efflux, rss}",
+        "what_it_measures": "The raw alignment between patient biology and trial mechanism. High dot product = patient's active pathways match the trial's targeted pathways.",
+        "example_break_crc001": {
+          "io_contribution": "0.40 \u00d7 0.80 = 0.32 (46.7% of total)",
+          "mapk_contribution": "0.70 \u00d7 0.30 = 0.21 (30.7% of total)",
+          "total_dot_product": 0.685
+        }
+      },
+      "step_4_normalization": {
+        "description": "Divide by \u2016t\u2016\u2082 \u2014 the L2 norm of the trial vector",
+        "formula": "\u2016t\u2016\u2082 = sqrt(\u03a3 t_i\u00b2)",
+        "why_normalize_by_trial_not_patient": "Normalizing by \u2016t\u2016\u2082 (not \u2016p\u2016\u2082) means the score measures how well the patient matches the trial's requirements \u2014 not how active the patient's pathways are in absolute terms. A patient with very active pathways but misaligned with the trial still scores low. This is the key distinction from PATH B (cosine similarity), which normalizes by both vectors and loses this directionality.",
+        "example_break_crc001": {
+          "trial_norm": 0.9288,
+          "raw_score": "0.685 / 0.9288 = 0.7375"
+        }
+      },
+      "step_5_clip": {
+        "description": "Clip to [0, 1] \u2014 scores cannot be negative or exceed 1",
+        "formula": "fit = clip(raw_score, 0, 1)",
+        "ceiling": "The theoretical ceiling is 1.0 when p and t are perfectly aligned. The practical ceiling for PATH A is 0.8898 (\u2016p_ref\u2016\u2082 constraint from reference patient vector)."
+      },
+      "step_6_output_labels": {
+        "0.0_to_0.4": "LOW \u2014 high failure risk; patient biology substantially misaligned with trial mechanism",
+        "0.4_to_0.6": "MODERATE \u2014 proceed with caution; partial alignment",
+        "0.6_to_0.8": "MODERATE-HIGH \u2014 favorable alignment; design gaps may still exist",
+        "0.8_to_1.0": "HIGH \u2014 strong fit; patient biology well-matched to trial mechanism"
+      }
+    },
+    "validated_runs": [
+      {
+        "trial": "BreAK CRC-001 (STC-1010)",
+        "fit_score": 0.7375,
+        "label": "MODERATE-HIGH",
+        "primary_driver": "io axis (46.7%)",
+        "secondary_driver": "mapk axis (30.7%)",
+        "dot_product": 0.685,
+        "trial_norm": 0.9288,
+        "source": "crispro_stc1010_fit_gap.json; crispro_master_pipeline.json"
+      },
+      {
+        "trial": "LATIFY (ceralasertib + durvalumab)",
+        "note": "Only receipted two-layer demonstration. Responder score 0.8936 vs non-responder 0.6295. Delta value QUARANTINED (CT-03 \u2014 version conflict unresolved). Do not cite delta.",
+        "source": "crispro_master_pipeline.json programs[ATR_DDR]"
+      }
+    ],
+    "trials_ranked": 609,
+    "source": "repo_census.md REPO 1.1; brenus_capability_ownership_matrix.md"
+  },
+  "cap_04_target_lock": {
+    "capability_id": "CAP-04",
+    "name": "Target-Lock Scoring Engine (Layer 1)",
+    "evidence_tier": "COMPUTED",
+    "code_location": "crispro-backend-v3/layer1_engines/ (Target-Lock module)",
+    "eight_metastasis_steps": {
+      "step_1": "Local invasion \u2014 tumor cells breach basement membrane and invade surrounding stroma",
+      "step_2": "Intravasation \u2014 tumor cells enter blood or lymphatic vessels",
+      "step_3": "Survival in circulation \u2014 tumor cells resist anoikis and immune surveillance in bloodstream",
+      "step_4": "Arrest at distant site \u2014 tumor cells adhere to endothelium at metastatic site",
+      "step_5": "Extravasation \u2014 tumor cells exit vessels at distant site",
+      "step_6": "Micrometastasis formation \u2014 tumor cells survive and proliferate in foreign microenvironment",
+      "step_7": "Colonization \u2014 micrometastases establish vascular supply and immune evasion",
+      "step_8": "Macrometastasis \u2014 clinically detectable metastatic lesion"
+    },
+    "algorithm_step_by_step": {
+      "step_1_evo2_7b": {
+        "model": "Evo2-7B (evolutionary language model)",
+        "what_it_scores": "Evolutionary constraint \u2014 how conserved is this gene across species? Highly conserved genes are more likely to be essential drivers. Evo2-7B computes the likelihood of the wild-type sequence vs. mutant sequence under evolutionary selection pressure.",
+        "output": "Evolutionary likelihood score [0, 1] \u2014 higher = more evolutionarily constrained = more likely to be a genuine driver"
+      },
+      "step_2_enformer": {
+        "model": "Enformer (chromatin accessibility predictor)",
+        "what_it_scores": "Chromatin accessibility and gene regulatory activity \u2014 is this gene actively transcribed in the relevant cancer cell type? Enformer predicts ATAC-seq and ChIP-seq profiles from DNA sequence.",
+        "output": "Regulatory activity score [0, 1] \u2014 higher = more actively regulated in cancer context"
+      },
+      "step_3_alphafold3": {
+        "model": "AlphaFold 3 (structural confidence predictor)",
+        "what_it_scores": "Structural confidence \u2014 does this gene encode a protein with a well-defined 3D structure that can be targeted by a drug? Disordered proteins are harder to drug.",
+        "output": "pLDDT structural confidence score [0, 100] \u2014 higher = more structured = more druggable"
+      },
+      "step_4_composite": {
+        "description": "Composite Target-Lock score from three model outputs",
+        "threshold": "\u22650.35 = genuine metastasis driver",
+        "rationale": "Threshold set to maximize sensitivity for known FDA-approved targets while excluding false positives from the 38-gene panel"
+      }
+    },
+    "validated_performance": {
+      "self_labeled_auroc": "0.976 \u00b1 0.035 (38-gene panel)",
+      "holdout_auprc": "0.790",
+      "msk_met_auroc": "0.689 (N=25,775 \u2014 external validation)",
+      "retroactive_validation": "9 FDA-approved genes validated retroactively in predictions_2024_retroactive.json"
+    },
+    "ceacam5_status": "NOT IN 38-GENE PANEL \u2014 Target-Lock run has not been executed for CEACAM5. Any claim that CEACAM5 scores HIGH is EXPECTED (analyst inference), not COMPUTED. Must be labeled as prospective.",
+    "source": "brenus_capability_ownership_matrix.md CAP-01; crispro_ceacam5_capability_map_v1.md CAP-05"
+  },
+  "three_conditions_io_benefit_mss_crc": {
+    "summary": "CrisPRO's definitive finding: IO benefit in MSS CRC requires ALL THREE conditions simultaneously. Missing any one condition predicts failure.",
+    "condition_1_non_liver_metastatic": {
+      "what": "Patient must NOT have liver metastases at enrollment",
+      "why_biologically": {
+        "mechanism": "The liver is an immunosuppressive organ. Kupffer cells (liver-resident macrophages) constitutively express PD-L1 and secrete IL-10 and TGF-\u03b2, creating a tolerogenic microenvironment. Liver metastases recruit regulatory T cells (Tregs) and myeloid-derived suppressor cells (MDSCs) that suppress CD8+ T cell activity systemically \u2014 not just locally. A patient with liver metastases has systemic immune suppression that checkpoint inhibitors cannot overcome.",
+        "clinical_evidence": [
+          "CO.26: liver-met PFS HR=1.39 (IO HARMFUL) vs no-LM PFS HR=0.54 (IO BENEFICIAL); Pint=0.02",
+          "REGONIVO US: 0/5 liver-met responders; non-liver-met ORR 22% (5/23)",
+          "REGONIVO Japan: all 8 CRC responders had NO liver metastases",
+          "RIN: NLM cohort ORR ~40% vs liver-met ORR ~5%",
+          "CAMILLA: post-hoc \u2014 patients without liver metastases had better outcomes"
+        ],
+        "implication_for_trial_design": "Liver metastasis status must be a pre-specified stratification variable. Trials that do not stratify by liver metastasis status will dilute the IO signal with immunosuppressed patients."
+      },
+      "prevalence_in_mss_mcrc": "~50\u201360% of mCRC patients have liver metastases at diagnosis. Restricting to NLM patients reduces the eligible population by ~50%.",
+      "crispro_module": "MOD-01 (Liver Metastasis Stratification) \u2014 EXECUTABLE_NOW \u2014 CRITICAL priority"
+    },
+    "condition_2_ptmb_28": {
+      "what": "Patient must have plasma TMB \u226528 mutations/Mb (GuardantOMNI assay)",
+      "why_biologically": {
+        "mechanism": "Tumor mutational burden (TMB) is a proxy for neoantigen load \u2014 the number of tumor-specific peptides that can be presented on MHC-I and recognized by T cells. High TMB tumors generate more neoantigens, creating more targets for checkpoint-released T cells. In MSS CRC, most tumors have low TMB \u2014 but the pTMB \u226528 subgroup (~15\u201320% of MSS mCRC) has sufficient neoantigen load for IO benefit.",
+        "why_plasma_not_tissue": "Tissue TMB and plasma TMB are poorly correlated in CRC (Spearman r=0.13, p=0.20 \u2014 CO.26). Tissue TMB is confounded by tumor heterogeneity and archival tissue quality. Plasma TMB (pTMB) from ctDNA captures the mutational landscape of all metastatic sites simultaneously.",
+        "clinical_evidence": [
+          "CO.26: pTMB \u226528 OS HR=0.34 (90% CI 0.18\u20130.63, p=0.022) \u2014 strongest IO signal from randomized data in MSS CRC",
+          "CO.26: pTMB vs tissue TMB Spearman r=0.13 (p=0.20) \u2014 tissue TMB is NOT a substitute",
+          "GRANITE GO-010: ctDNA-low subgroup HR 0.50 (directional benefit)"
+        ],
+        "caveats": [
+          "pTMB \u226528 threshold is data-driven (not pre-specified in CO.26 protocol)",
+          "GuardantOMNI-specific \u2014 not validated on other platforms",
+          "Derived from 2L+ refractory population \u2014 not validated in 1L",
+          "Pint=0.070 (borderline) \u2014 requires prospective validation"
+        ]
+      },
+      "prevalence_in_mss_mcrc": "~15\u201320% of MSS mCRC patients have pTMB \u226528 (estimated from CO.26 subgroup)",
+      "crispro_module": "MOD-02 (pTMB \u226528 Enrichment) \u2014 EXECUTABLE_NOW \u2014 HIGH priority"
+    },
+    "condition_3_immune_inflamed_tme": {
+      "what": "Patient must have an immune-inflamed tumor microenvironment (high Immunoscore-IC, high CD8+ TIL density, low TGF-\u03b2 suppression)",
+      "why_biologically": {
+        "mechanism": "Checkpoint inhibitors release the brakes on T cells \u2014 but T cells must already be present in the tumor to be released. MSS CRC tumors are predominantly 'immune excluded' or 'immune desert' \u2014 T cells are either blocked from entering the tumor or absent entirely. Only 'immune inflamed' tumors (T cells present at the tumor center and invasive margin) can respond to checkpoint blockade.",
+        "three_tme_phenotypes": {
+          "immune_inflamed": "CD8+ T cells present at tumor center AND invasive margin. High Immunoscore-IC. Responds to IO.",
+          "immune_excluded": "CD8+ T cells present at invasive margin but excluded from tumor center by stromal barriers (TGF-\u03b2, CAFs, decorin). Does not respond to IO alone \u2014 needs stromal barrier disruption.",
+          "immune_desert": "CD8+ T cells absent from both tumor center and invasive margin. Does not respond to IO."
+        },
+        "clinical_evidence": [
+          "AtezoTRIBE: Immunoscore-IC high HR ~0.50 (exploratory) vs Immunoscore-IC low HR ~0.90",
+          "MEDITREME: CD8-high + TGF-\u03b2-low subgroup showed best outcomes",
+          "GVAX: T-cell responses confirmed in peripheral blood but ORR 0% \u2014 T cells activated but cannot infiltrate tumor (immune excluded phenotype)"
+        ]
+      },
+      "crispro_module": "MOD-05 (Immunoscore-IC / CD8+ Baseline) \u2014 EXECUTABLE_NOW \u2014 HIGH priority"
+    }
+  },
+  "io_failure_archetypes": {
+    "pharmacodynamic_dissociation": {
+      "definition": "T-cell activation in peripheral blood WITHOUT tumor regression. The immune system is activated but cannot translate activation into tumor killing.",
+      "mechanism": "In MSS CRC, the tumor microenvironment creates multiple barriers between activated T cells and tumor cells: (1) stromal barriers (TGF-\u03b2, CAFs, decorin) physically exclude T cells from the tumor center; (2) immunosuppressive cells (Tregs, MDSCs) suppress T cell activity at the tumor site; (3) tumor cells downregulate MHC-I to avoid T cell recognition. Vaccines and checkpoint inhibitors can activate T cells in the periphery but cannot overcome these barriers.",
+      "canonical_examples": [
+        "GVAX: ORR 0% despite confirmed T-cell responses to vaccine antigens in peripheral blood",
+        "PolyPEPI1018: T-cell responses to \u22651 antigen in 100% of patients; no objective responses",
+        "PANVAC + DC vaccine: T-cell responses >70% of patients; no OS benefit",
+        "AMPLIFY-201: mKRAS-specific T-cell responses confirmed; ctDNA clearance in 3/5 \u2014 but no objective responses"
+      ],
+      "crispro_implication": "Pharmacodynamic dissociation is the dominant failure mode for vaccine programs in MSS CRC. The fix is not a better vaccine \u2014 it is a stromal barrier disruption strategy (TGF-\u03b2 inhibition, anti-FAP, bevacizumab normalization) combined with the vaccine."
+    },
+    "immune_exclusion": {
+      "definition": "T cells are present at the tumor invasive margin but cannot penetrate the tumor center due to stromal barriers.",
+      "mechanism": "Cancer-associated fibroblasts (CAFs) secrete TGF-\u03b2, which: (1) induces epithelial-mesenchymal transition (EMT) in tumor cells, increasing stromal density; (2) suppresses CD8+ T cell activity; (3) promotes regulatory T cell differentiation. Decorin and other extracellular matrix proteins create a physical barrier. The result: T cells accumulate at the tumor edge but cannot kill tumor cells at the center.",
+      "clinical_evidence": "AtezoTRIBE: Immunoscore-IC high subgroup shows benefit (HR ~0.50) \u2014 these are the immune-inflamed patients. Immunoscore-IC low patients (immune excluded + immune desert) do not benefit.",
+      "crispro_implication": "Immune exclusion is addressable \u2014 TGF-\u03b2 inhibition (bintrafusp alfa, SHR-1701), anti-FAP agents, and bevacizumab (vascular normalization) can convert excluded tumors to inflamed. This is the rationale for combination strategies."
+    },
+    "liver_metastasis_suppression": {
+      "definition": "Systemic immune suppression driven by liver metastases that prevents IO benefit even in patients with inflamed primary tumors.",
+      "mechanism": "Liver metastases create a systemic immunosuppressive state through: (1) Kupffer cell PD-L1 expression and IL-10/TGF-\u03b2 secretion; (2) recruitment of MDSCs and Tregs to the liver; (3) systemic elevation of immunosuppressive cytokines that suppress CD8+ T cell activity at all tumor sites. This is not a local effect \u2014 it suppresses immune responses throughout the body.",
+      "clinical_evidence": [
+        "CO.26: liver-met PFS HR=1.39 (IO HARMFUL) vs no-LM PFS HR=0.54; Pint=0.02",
+        "REGONIVO US: 0/5 liver-met responders; non-liver-met ORR 22%",
+        "REGONIVO Japan: all 8 CRC responders had NO liver metastases"
+      ],
+      "crispro_implication": "Liver metastasis is the single most important stratification variable for IO trials in MSS CRC. It is not just a prognostic factor \u2014 it is a predictive biomarker of IO resistance."
+    },
+    "mek_inhibition_failure": {
+      "definition": "MEK inhibition was hypothesized to increase tumor immunogenicity in MSS CRC by upregulating MHC-I and reducing immunosuppressive cytokines. This hypothesis was definitively refuted.",
+      "mechanism_hypothesis": "MEK inhibition was expected to: (1) upregulate MHC-I expression on tumor cells; (2) reduce VEGF and immunosuppressive cytokine production; (3) sensitize tumors to checkpoint blockade. The hypothesis was based on preclinical data.",
+      "why_it_failed": "IMblaze370 (Phase III, N=363): OS no significant difference across all three arms (atezo+cobi vs atezo vs rego). MEK inhibition did not increase tumor immunogenicity in clinical MSS CRC. The preclinical-to-clinical translation failed (D7 \u2014 Translational). Additionally, cobimetinib (MEKi) suppressed T cell proliferation \u2014 the combination was potentially antagonistic.",
+      "clinical_evidence": "IMblaze370: OS atezo+cobi 8.87 months vs atezo 7.10 months vs rego 8.51 months \u2014 no significant difference. D1 Biology (0.9) \u2014 MEK inhibition definitively fails in MSS CRC.",
+      "crispro_implication": "MEK inhibition is not a viable IO sensitization strategy in MSS CRC. Any abstract proposing MEK+IO in MSS CRC should be flagged as repeating a definitively failed hypothesis."
+    }
+  },
+  "stc1010_mechanism": {
+    "platform_name": "STC-1010 \u2014 Stimulated Tumor Cells (STC) allogeneic whole-cell therapeutic vaccine",
+    "developer": "Brenus Pharma",
+    "trial": "BreAK CRC-001 (NCT06934538)",
+    "what_it_is": "STC-1010 is an allogeneic (off-the-shelf) whole-cell therapeutic vaccine composed of three irradiated CRC cell lines (CT26 murine CRC, CMT-93 rectal carcinoma, LTPA pancreatic adenocarcinoma) that have been haptenated with DNFB (2,4-dinitrofluorobenzene) and modified to secrete GM-CSF. The vaccine is designed to activate the immune system against colorectal cancer antigens by exploiting the hapten-specific immune response.",
+    "mechanism_step_by_step": {
+      "step_1_haptenation": {
+        "what": "DNFB (2,4-dinitrofluorobenzene) is covalently conjugated to the surface proteins of the tumor cell lines",
+        "why": "DNFB is a contact sensitizer \u2014 it creates a strong hapten-specific immune response. When DNFB-conjugated tumor cells are injected, the immune system recognizes the DNFB hapten as foreign and mounts a vigorous immune response. This response is then redirected against the tumor antigens on the cell surface.",
+        "mechanism": "DNFB reacts with lysine residues on cell surface proteins, creating DNFB-protein conjugates. These conjugates are recognized by DNFB-specific T cells (pre-sensitized by prior DNFB skin sensitization). The DNFB-specific T cells attack the haptenated tumor cells, releasing tumor antigens that are then processed by dendritic cells.",
+        "sc_001_conflict": "SC-001 ACTIVE CONFLICT: CT26 carries BRAF V600E (ATCC/CCLE/COSMIC). BreAK CRC-001 requires BRAF wild-type patients (Exclusion Criterion #7). This scientific inconsistency must be flagged."
+      },
+      "step_2_gm_csf_secretion": {
+        "what": "The tumor cell lines are modified to secrete GM-CSF (granulocyte-macrophage colony-stimulating factor)",
+        "why": "GM-CSF recruits and activates dendritic cells (DCs) at the injection site. DCs are the professional antigen-presenting cells that process tumor antigens and present them to T cells in the lymph nodes.",
+        "mechanism": "GM-CSF creates a local inflammatory environment that: (1) recruits immature DCs to the injection site; (2) promotes DC maturation and upregulation of MHC-II and co-stimulatory molecules (CD80, CD86); (3) enhances antigen uptake and processing; (4) promotes DC migration to draining lymph nodes."
+      },
+      "step_3_cyclophosphamide_preconditioning": {
+        "what": "Low-dose cyclophosphamide is administered before vaccination",
+        "why": "Cyclophosphamide at low doses selectively depletes regulatory T cells (Tregs) without suppressing effector T cells. Tregs suppress anti-tumor immune responses \u2014 their depletion allows the vaccine-induced T cells to expand and function.",
+        "mechanism": "Tregs express high levels of CD25 (IL-2 receptor alpha) and are more sensitive to cyclophosphamide than effector T cells. Low-dose cyclophosphamide (300 mg/m\u00b2) depletes Tregs by ~50% while preserving effector T cell function."
+      },
+      "step_4_icd_cascade": {
+        "what": "Immunogenic Cell Death (ICD) \u2014 the irradiated, haptenated tumor cells die in a way that activates the immune system",
+        "why": "Not all cell death is immunogenic. ICD releases damage-associated molecular patterns (DAMPs) that activate the innate immune system and promote adaptive immune responses.",
+        "damps_released": {
+          "calreticulin": "Translocates from ER to cell surface \u2014 acts as 'eat me' signal for DCs",
+          "HMGB1": "Released from nucleus \u2014 activates TLR4 on DCs, promoting DC maturation",
+          "ATP": "Released from dying cells \u2014 activates P2X7 receptors on DCs, promoting NLRP3 inflammasome activation and IL-1\u03b2 secretion",
+          "HSP70": "Released from dying cells \u2014 activates TLR2/4 on DCs, promoting DC maturation and antigen cross-presentation"
+        }
+      },
+      "step_5_t_cell_priming": {
+        "what": "Mature DCs migrate to draining lymph nodes and present tumor antigens to naive T cells",
+        "why": "T cell priming requires three signals: (1) antigen presentation (MHC-peptide + TCR); (2) co-stimulation (CD80/86 + CD28); (3) cytokine signal (IL-12 for Th1/CTL differentiation). The vaccine provides all three.",
+        "expected_outcome": "CD8+ cytotoxic T lymphocytes (CTLs) specific for tumor antigens are generated and expand. These CTLs circulate and kill CEACAM5+, CDK1+, EPHA2+ tumor cells."
+      },
+      "step_6_tumor_killing": {
+        "what": "Vaccine-primed CTLs infiltrate the tumor and kill tumor cells",
+        "challenge_in_mss_crc": "This is where pharmacodynamic dissociation occurs. Even if CTLs are generated (step 5), they must: (1) traffic to the tumor; (2) penetrate the stromal barrier; (3) overcome immunosuppression in the TME; (4) kill tumor cells faster than the tumor grows. In MSS CRC, steps 2 and 3 are the primary barriers."
+      }
+    },
+    "key_antigens": {
+      "CEACAM5": "Carcinoembryonic antigen \u2014 expressed in 98.7% of CRC. Primary target.",
+      "CDK1": "Cyclin-dependent kinase 1 \u2014 overexpressed in proliferating tumor cells",
+      "EPHA2": "Ephrin type-A receptor 2 \u2014 promotes tumor invasion and metastasis"
+    },
+    "why_mss_crc_is_hard": "MSS CRC is immunologically 'cold' \u2014 low neoantigen load, immune-excluded or immune-desert TME, high stromal density, liver metastasis-driven systemic immunosuppression. STC-1010 addresses the T-cell priming step but does not directly address the stromal barrier or liver metastasis suppression. This is why the three conditions for IO benefit (NLM, pTMB \u226528, inflamed TME) are critical for BreAK CRC-001.",
+    "source": "crispro_stc1010_fit_gap.json; biomarker_biology_map_agent4.md; Alzeeb et al. 2024 (DOI: 10.3389/fonc.2024.1427428)"
+  },
+  "path_a_fit_derivation_break_crc001": {
+    "trial": "BreAK CRC-001 (STC-1010)",
+    "fit_score": 0.7375,
+    "label": "MODERATE-HIGH",
+    "formula": "fit = clip((p\u00b7t) / \u2016t\u2016\u2082, 0, 1)",
+    "formula_status": "PATH A \u2014 LOCKED 2026-04-28",
+    "patient_vector_p": {
+      "source": "p_vector_locked.json \u2014 MSS mCRC patient profile (Alzeeb et al. 2024 cohort)",
+      "ddr": 0.1,
+      "mapk": 0.7,
+      "pi3k": 0.15,
+      "vegf": 0.25,
+      "her2": 0.05,
+      "io": 0.4,
+      "efflux": 0.1,
+      "rss": 0.1,
+      "axis_rationale": {
+        "ddr": "MSS CRC has low DDR deficiency \u2014 BRCA mutations rare, RS score low in most patients",
+        "mapk": "KRAS mutations in ~40% of MSS mCRC \u2014 high MAPK pathway activity",
+        "pi3k": "PIK3CA mutations in ~15\u201320% of CRC \u2014 moderate PI3K activity",
+        "vegf": "Bevacizumab backbone \u2014 VEGF pathway relevant; liver metastases increase VEGF",
+        "her2": "HER2 amplification rare in MSS CRC (~3\u20135%)",
+        "io": "MSS CRC is IO-cold \u2014 low pTMB, immune-excluded TME. io=0.40 reflects the minority of patients with inflamed TME",
+        "efflux": "Prior chemotherapy exposure \u2014 some efflux resistance expected",
+        "rss": "Low RS score in MSS CRC \u2014 CCNE1 amplification rare"
+      }
+    },
+    "trial_vector_t": {
+      "source": "STC-1010 mechanism of action \u2014 IO-primary, mapk-secondary",
+      "ddr": 0.1,
+      "mapk": 0.3,
+      "pi3k": 0.1,
+      "vegf": 0.2,
+      "her2": 0.0,
+      "io": 0.8,
+      "efflux": 0.1,
+      "rss": 0.1,
+      "axis_rationale": {
+        "io": "STC-1010 is primarily an IO mechanism \u2014 whole-cell vaccine activating T-cell response. io=0.80 reflects the primary mechanism.",
+        "mapk": "KRAS-mutant CRC context \u2014 mapk=0.30 reflects secondary relevance (KRAS-mutant tumors may have different vaccine antigen profiles)",
+        "vegf": "mFOLFOX6 + bevacizumab backbone \u2014 vegf=0.20 reflects bevacizumab component",
+        "ddr": "No DDR component in STC-1010 mechanism"
+      }
+    },
+    "computation": {
+      "dot_product_by_axis": {
+        "ddr": "0.10 \u00d7 0.10 = 0.010",
+        "mapk": "0.70 \u00d7 0.30 = 0.210 (30.7% of total)",
+        "pi3k": "0.15 \u00d7 0.10 = 0.015",
+        "vegf": "0.25 \u00d7 0.20 = 0.050",
+        "her2": "0.05 \u00d7 0.00 = 0.000",
+        "io": "0.40 \u00d7 0.80 = 0.320 (46.7% of total)",
+        "efflux": "0.10 \u00d7 0.10 = 0.010",
+        "rss": "0.10 \u00d7 0.10 = 0.010"
+      },
+      "total_dot_product": 0.685,
+      "trial_norm_l2": 0.9288,
+      "raw_score": "0.685 / 0.9288 = 0.7375",
+      "clipped_score": 0.7375,
+      "primary_driver": "io axis (46.7% of dot product)",
+      "secondary_driver": "mapk axis (30.7% of dot product)"
+    },
+    "interpretation": "MODERATE-HIGH alignment. The io axis is the primary driver \u2014 STC-1010's vaccine mechanism aligns with the io permissiveness of the MSS mCRC patient profile. The mapk axis is secondary \u2014 KRAS-mutant CRC context provides additional alignment. The score of 0.7375 indicates favorable but not optimal alignment \u2014 the 4 design gaps explain why the score is not higher.",
+    "source": "crispro_stc1010_fit_gap.json; block4_8d_path_matrix_v2.csv; crispro_master_pipeline.json"
+  },
+  "gap_analysis_break_crc001": {
+    "gap_1": {
+      "id": "GAP-01",
+      "severity": "CRITICAL",
+      "name": "Liver Metastasis Not Pre-Specified as Stratification Variable",
+      "what": "BreAK CRC-001 does not pre-specify liver metastasis status as a stratification variable in the randomization scheme",
+      "why_critical": "CO.26 showed liver-met PFS HR=1.39 (IO HARMFUL) vs no-LM HR=0.54 (Pint=0.02). REGONIVO US: 0/5 liver-met responders. If BreAK CRC-001 enrolls liver-met patients without stratification, the IO signal from NLM patients will be diluted by immunosuppressed liver-met patients. This is the same failure mode as CO.26.",
+      "consequence_if_not_addressed": "Trial may fail to detect IO benefit even if STC-1010 works in NLM patients. The responder subgroup (NLM + pTMB \u226528) will be diluted.",
+      "fix": "Add liver metastasis status as a pre-specified stratification variable in the randomization scheme. Consider NLM-enriched enrollment (\u226550% NLM patients) or NLM-only cohort.",
+      "crispro_module": "MOD-01 (Liver Metastasis Stratification) \u2014 EXECUTABLE_NOW"
+    },
+    "gap_2": {
+      "id": "GAP-02",
+      "severity": "HIGH",
+      "name": "pTMB Not Collected Prospectively",
+      "what": "BreAK CRC-001 does not include prospective pTMB measurement (GuardantOMNI or equivalent)",
+      "why_high": "CO.26 pTMB \u226528 OS HR=0.34 (90% CI 0.18\u20130.63, p=0.022) \u2014 the strongest IO enrichment signal in MSS CRC from randomized data. Without prospective pTMB collection, BreAK CRC-001 cannot identify the pTMB \u226528 subgroup that is most likely to benefit from STC-1010.",
+      "consequence_if_not_addressed": "Cannot perform the pTMB \u226528 subgroup analysis that would identify the responder subpopulation. Retrospective pTMB from archival plasma is unreliable.",
+      "fix": "Add GuardantOMNI (or equivalent ctDNA panel) at baseline as a mandatory biomarker collection. Pre-specify pTMB \u226528 as an exploratory endpoint.",
+      "crispro_module": "MOD-02 (pTMB \u226528 Enrichment) \u2014 EXECUTABLE_NOW"
+    },
+    "gap_3": {
+      "id": "GAP-03",
+      "severity": "MEDIUM",
+      "name": "IO Axis Alignment Moderate (patient io=0.40 below optimal \u22650.50)",
+      "what": "The patient vector io axis value (0.40) is below the optimal threshold (\u22650.50) for IO-based mechanisms",
+      "why_medium": "The io axis value of 0.40 reflects the MSS CRC population average \u2014 most patients have immune-excluded or immune-desert TME. The optimal patient for STC-1010 has io \u22650.50 (immune-inflamed TME). Enrolling patients with io=0.40 means ~60% of patients have suboptimal TME for vaccine response.",
+      "consequence_if_not_addressed": "Moderate dilution of the IO signal. Not as critical as GAP-01 and GAP-02 because the io axis is already the primary driver.",
+      "fix": "Add Immunoscore-IC or CD8+ TIL density as a baseline biomarker. Consider enriching for Immunoscore-IC high patients.",
+      "crispro_module": "MOD-05 (Immunoscore-IC / CD8+ Baseline) \u2014 EXECUTABLE_NOW"
+    },
+    "gap_4": {
+      "id": "GAP-04",
+      "severity": "HIGH",
+      "name": "No Biomarker Gate for Patient Selection",
+      "what": "BreAK CRC-001 has no pre-specified biomarker gate for patient selection \u2014 all MSS mCRC patients are eligible regardless of IO permissiveness",
+      "why_high": "Without a biomarker gate, the trial enrolls both IO-responsive (NLM + pTMB \u226528 + inflamed TME) and IO-resistant (liver-met + pTMB <28 + excluded TME) patients. The IO-resistant patients dilute the signal from IO-responsive patients.",
+      "consequence_if_not_addressed": "The trial may fail to detect IO benefit even if STC-1010 works in the IO-responsive subpopulation. This is the same failure mode as QUILT-2.004 (HR 1.061, p=0.91).",
+      "fix": "Implement a two-gate patient selection framework: Gate 1 = non-liver-metastatic; Gate 2 = pTMB \u226528 OR Immunoscore-IC high. This reduces the eligible population but increases the probability of detecting a signal.",
+      "crispro_module": "MOD-01 + MOD-02 + MOD-05 combined"
+    }
+  },
+  "biomarker_biology_6domains": {
+    "description": "CrisPRO's 6-domain suppression landscape for MSS CRC \u2014 the biological barriers that prevent IO benefit",
+    "domain_1_immune_exclusion": {
+      "name": "Immune Exclusion",
+      "mechanism": "TGF-\u03b2 secreted by CAFs creates a stromal barrier that physically excludes CD8+ T cells from the tumor center. T cells accumulate at the invasive margin but cannot penetrate.",
+      "key_markers": [
+        "TGF-\u03b2 (serum and IHC)",
+        "CAF density (FAP, \u03b1-SMA)",
+        "Decorin (ECM barrier)",
+        "Immunoscore-IC (CD8+ at center vs margin)"
+      ],
+      "clinical_evidence": "AtezoTRIBE: Immunoscore-IC high HR ~0.50 vs low HR ~0.90. MEDITREME: CD8-high + TGF-\u03b2-low subgroup best outcomes.",
+      "addressable_by": "TGF-\u03b2 inhibition (bintrafusp alfa, SHR-1701), anti-FAP agents, bevacizumab (vascular normalization)"
+    },
+    "domain_2_liver_metastasis_suppression": {
+      "name": "Liver Metastasis Systemic Immunosuppression",
+      "mechanism": "Kupffer cells (liver-resident macrophages) constitutively express PD-L1 and secrete IL-10 and TGF-\u03b2. Liver metastases recruit MDSCs and Tregs systemically.",
+      "key_markers": [
+        "Liver metastasis status (CT/MRI)",
+        "Number of liver metastases",
+        "Liver function tests (ALT, AST, bilirubin)"
+      ],
+      "clinical_evidence": "CO.26: liver-met PFS HR=1.39 (HARMFUL) vs no-LM HR=0.54; Pint=0.02. REGONIVO US: 0/5 liver-met responders.",
+      "addressable_by": "Liver metastasis resection (if feasible), liver-directed therapy (TACE, SBRT), NLM patient selection"
+    },
+    "domain_3_low_neoantigen_load": {
+      "name": "Low Neoantigen Load (MSS)",
+      "mechanism": "MSS CRC has intact mismatch repair \u2014 low mutation rate \u2192 low neoantigen load \u2192 few tumor-specific peptides for T cell recognition. pTMB \u226528 identifies the minority of MSS patients with sufficient neoantigen load.",
+      "key_markers": [
+        "pTMB (GuardantOMNI)",
+        "Tissue TMB (note: poor correlation with pTMB in CRC, r=0.13)",
+        "MSS/MSI-H status"
+      ],
+      "clinical_evidence": "CO.26: pTMB \u226528 OS HR=0.34 (90% CI 0.18\u20130.63). pTMB vs tissue TMB Spearman r=0.13 (p=0.20).",
+      "addressable_by": "pTMB \u226528 patient selection; DNMT inhibition (guadecitabine \u2014 failed in GVAX combination)"
+    },
+    "domain_4_treg_suppression": {
+      "name": "Regulatory T Cell Suppression",
+      "mechanism": "Tregs suppress CD8+ T cell activity in the TME via IL-10, TGF-\u03b2, and CTLA-4-mediated co-stimulation blockade. High Treg density correlates with poor IO response.",
+      "key_markers": [
+        "FOXP3+ Treg density (IHC)",
+        "CD8+/FOXP3+ ratio",
+        "IL-10 serum level"
+      ],
+      "clinical_evidence": "Cyclophosphamide preconditioning in STC-1010 protocol \u2014 low-dose cyclophosphamide depletes Tregs by ~50%.",
+      "addressable_by": "Low-dose cyclophosphamide (STC-1010 protocol), anti-CTLA-4 (ipilimumab, tremelimumab), anti-CCR4 (mogamulizumab)"
+    },
+    "domain_5_mhc_downregulation": {
+      "name": "MHC-I Downregulation",
+      "mechanism": "Tumor cells downregulate MHC-I expression to avoid T cell recognition. This is a common immune escape mechanism in MSS CRC.",
+      "key_markers": [
+        "MHC-I (HLA-A/B/C) IHC",
+        "Beta-2-microglobulin IHC",
+        "B2M mutation status"
+      ],
+      "clinical_evidence": "MHC-I loss is present in ~15\u201320% of CRC tumors. Patients with MHC-I loss cannot respond to T cell-based therapies.",
+      "addressable_by": "DNMT inhibition (upregulates MHC-I), IFN-\u03b3 signaling restoration, B2M mutation exclusion"
+    },
+    "domain_6_mdsc_suppression": {
+      "name": "Myeloid-Derived Suppressor Cell (MDSC) Suppression",
+      "mechanism": "MDSCs are immature myeloid cells that suppress T cell activity via arginase-1, iNOS, and reactive oxygen species. High MDSC density in MSS CRC TME.",
+      "key_markers": [
+        "MDSC density (CD33+CD11b+HLA-DR- IHC)",
+        "Arginase-1 serum level",
+        "IL-6 serum level"
+      ],
+      "clinical_evidence": "High MDSC density correlates with poor IO response in MSS CRC. Liver metastases increase MDSC recruitment.",
+      "addressable_by": "Anti-VEGF (bevacizumab reduces MDSC recruitment), CSF1R inhibitors, IDO inhibitors"
+    }
+  },
+  "escapemap_ov_methodology": {
+    "capability_id": "CAP-07",
+    "name": "EscapeMap \u2014 Bevacizumab Biomarker Stratification (Ovarian)",
+    "evidence_tier": "COMPUTED",
+    "what_escapemap_is": "EscapeMap is CrisPRO's analysis of ZEB1 as a prognostic biomarker in the bevacizumab arm of ovarian cancer trials. It uses Cox regression, median-split, and tertile analyses to characterize the ZEB1-bevacizumab relationship.",
+    "methodology": {
+      "dataset": "GOG-0218 (bevacizumab arm) \u2014 ovarian cancer Phase III trial",
+      "continuous_cox_model": {
+        "description": "Cox proportional hazards model with ZEB1 expression as a continuous variable",
+        "result": "HR=1.4803 (95% CI [1.1188, 1.9586], p=0.006042, c-stat=0.6444) \u2014 bevacizumab arm OS",
+        "interpretation": "Each unit increase in ZEB1 expression is associated with a 48% increase in the hazard of death in the bevacizumab arm. ZEB1-high patients have worse OS on bevacizumab."
+      },
+      "multivariable_cox": {
+        "result": "HR=1.5247 (95% CI [1.1256, 2.0652], p=0.006447) \u2014 adjusted for covariates",
+        "interpretation": "ZEB1 is an independent prognostic factor after adjusting for other clinical variables."
+      },
+      "arm_interaction": {
+        "result": "HR=1.243, p=0.245949",
+        "interpretation": "PROGNOSTIC, NOT ARM-SPECIFIC. The arm interaction p=0.246 means ZEB1 is prognostic (predicts OS regardless of treatment) but NOT predictive of bevacizumab benefit specifically. ZEB1-high patients do worse on bevacizumab, but they also do worse on chemotherapy alone.",
+        "mandatory_wording": "ZEB1 is a prognostic marker in the bevacizumab arm, not a predictive marker of bevacizumab benefit. The arm interaction is not statistically significant (p=0.246)."
+      },
+      "median_split": {
+        "result": "HR=2.500 (95% CI [1.322, 4.727], log-rank p=0.0036, FDR=0.0499) \u2014 bevacizumab arm OS",
+        "interpretation": "ZEB1-high patients (above median) have 2.5\u00d7 higher hazard of death than ZEB1-low patients in the bevacizumab arm."
+      },
+      "tertile_analysis": {
+        "result": "T3 vs T1: HR=2.4932 (95% CI [1.1767, 5.2824], p=0.017093)",
+        "interpretation": "Top tertile ZEB1 vs bottom tertile: 2.5\u00d7 higher hazard of death."
+      },
+      "hif1a_result": {
+        "result": "HR=2.245 (95% CI [1.172, 4.300], p=0.0147) \u2014 bevacizumab arm OS",
+        "interpretation": "HIF1A is also prognostic in the bevacizumab arm \u2014 PLATFORM_COMPRESSION signal (multiple EMT/angiogenesis markers are prognostic)."
+      },
+      "m2_stratum": {
+        "result": "M2 beneficial median OS: 34.4 months (CI 32.7\u201338.8), p=9.52\u00d710\u207b\u2075",
+        "mandatory_wording": "Preparatory M2-bevacizumab biomarker panel for downstream descriptive and conditioning analyses \u2014 not a validated prognostic signature until dbGaP-linked patient-level outcomes are available. (LOCKED 2026-05-12)"
+      }
+    },
+    "gbm_permanently_closed": {
+      "status": "PERMANENTLY CLOSED",
+      "reason": "Three datasets all null or contradicted:",
+      "datasets": [
+        {
+          "dataset": "GLASS",
+          "result": "delta=\u22120.34, p=0.000184, d=\u22120.31 \u2014 ZEB1 DECREASES in recurrent GBM (opposite of escape hypothesis)"
+        },
+        {
+          "dataset": "GSE222515",
+          "result": "delta=\u22120.431, p=0.0334 \u2014 ZEB1 DECREASES in recurrent GBM"
+        },
+        {
+          "dataset": "GSE174554 snRNA-seq",
+          "result": "delta=\u22120.076, p=0.742, d=\u22120.070 \u2014 NULL (not significant)"
+        }
+      ],
+      "operational_meaning": "Do not apply EscapeMap to GBM. Do not reopen without new evidence. GBM ZEB1 is not an escape marker \u2014 it decreases in recurrent GBM, which is the opposite of the escape hypothesis.",
+      "source": "program_asset_gbm_escapemap.json; crispro_master_pipeline.json programs[GBM_ESCAPEMAP]"
+    },
+    "what_crispro_proved": [
+      "OV ZEB1 continuous Cox: HR=1.4803 (95% CI [1.1188, 1.9586], p=0.006042) \u2014 bevacizumab arm OS",
+      "OV ZEB1 multivariable Cox: HR=1.5247 (95% CI [1.1256, 2.0652], p=0.006447)",
+      "OV ZEB1 arm interaction: HR=1.243, p=0.246 \u2014 PROGNOSTIC, NOT ARM-SPECIFIC",
+      "OV ZEB1 median split: HR=2.500 (95% CI [1.322, 4.727], FDR=0.0499)",
+      "OV HIF1A: HR=2.245 (95% CI [1.172, 4.300], p=0.0147) \u2014 PLATFORM_COMPRESSION",
+      "M2 stratum calibration: GEO 74.0% vs published 73.9% (within 0.1%)"
+    ]
+  }
+}

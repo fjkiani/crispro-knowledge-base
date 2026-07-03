@@ -1,0 +1,59 @@
+{
+  "program_id": "HISTORICAL_BENCHMARKS",
+  "program_name": "mFOLFOX6 \u00b1 Bevacizumab Backbone Benchmark Set",
+  "admissibility": "external_safe",
+  "trial_count": 6,
+  "why_tribe2_is_canonical": "TRIBE2 is the canonical comparator for BreAK CRC-001 because: (1) it is the largest randomized trial of mFOLFOX6 + bev in 1L mCRC (N=679); (2) it has the most precise control arm estimates (mPFS 9.8 months, 95% CI 9.0\u201310.5); (3) it is unselected (all comers, not liver-limited); (4) it is the most recent large trial with published control arm data.",
+  "why_become_inflates_mos": "BECOME enrolled liver-limited mCRC patients \u2014 a highly selected population with better prognosis than unselected mCRC. The mOS of 25.7 months in BECOME reflects this selection bias. BreAK CRC-001 enrolls unselected MSS mCRC \u2014 TRIBE2 (mOS 22.5 months) is the appropriate comparator.",
+  "trials": [
+    {
+      "trial_name": "TRIBE2 (control arm)",
+      "drug": "mFOLFOX6 + Bevacizumab",
+      "n": 679,
+      "line": "1L",
+      "primary_result": "mPFS 9.8 months (95% CI 9.0\u201310.5); ORR 50%; mOS 22.5 months",
+      "role": "PRIMARY BENCHMARK \u2014 canonical comparator for BreAK CRC-001",
+      "source": "SANOFI_SOURCE_OF_TRUTH.md; program_asset_historical_benchmark.json"
+    },
+    {
+      "trial_name": "BECOME (bev arm)",
+      "drug": "mFOLFOX6 + Bevacizumab",
+      "n": "Not specified",
+      "line": "1L",
+      "primary_result": "mPFS 9.5 months; ORR 54.5%; mOS 25.7 months",
+      "role": "SECONDARY BENCHMARK \u2014 liver-limited selection inflates mOS",
+      "caveat": "Liver-limited selection \u2014 mOS 25.7 months is NOT comparable to unselected mCRC",
+      "source": "program_asset_historical_benchmark.json"
+    },
+    {
+      "trial_name": "NO16966 (FOLFOX4+bev arm)",
+      "drug": "FOLFOX4 + Bevacizumab",
+      "primary_result": "mPFS ~9.4 months (HR 0.83 vs FOLFOX4 alone); ORR ~38%; mOS 21.0 months",
+      "role": "HISTORICAL REFERENCE \u2014 older FOLFOX4 backbone",
+      "source": "program_asset_historical_benchmark.json"
+    },
+    {
+      "trial_name": "OPTIMOX1 (FOLFOX4 arm)",
+      "drug": "FOLFOX4",
+      "primary_result": "mPFS ~9.0 months; ORR ~58.5%; mOS ~19.4 months",
+      "role": "HISTORICAL REFERENCE \u2014 FOLFOX4 without bevacizumab",
+      "source": "program_asset_historical_benchmark.json"
+    },
+    {
+      "trial_name": "WJOG4407G (mFOLFOX6+bev arm)",
+      "drug": "mFOLFOX6 + Bevacizumab",
+      "primary_result": "mPFS ~11.7 months; ORR ~64%; mOS ~31.4 months",
+      "role": "HISTORICAL REFERENCE \u2014 Japanese population (different baseline characteristics)",
+      "caveat": "Japanese population \u2014 mOS 31.4 months reflects different baseline characteristics vs Western populations",
+      "source": "program_asset_historical_benchmark.json"
+    },
+    {
+      "trial_name": "QUILT-2.004 (design precedent)",
+      "drug": "NANT vaccine + Nivolumab + mFOLFOX6 + Bevacizumab",
+      "primary_result": "PFS HR 1.061 (95% CI 0.380\u20132.966, p=0.91) \u2014 TERMINATED for futility",
+      "role": "DESIGN PRECEDENT \u2014 IO addition to mFOLFOX6+bev fails in unselected MSS CRC",
+      "transfer_lesson": "BreAK CRC-001 must demonstrate how it addresses the QUILT-2.004 failure modes (D1 Biology + D2 Selection)",
+      "source": "program_asset_historical_benchmark.json"
+    }
+  ]
+}

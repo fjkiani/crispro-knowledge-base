@@ -1,0 +1,509 @@
+{
+  "worker": "W2",
+  "produced_by": "w2 machine — IO Core + IO Appendix deep audit",
+  "source_files": [
+    "program_asset_io_core.json",
+    "program_asset_io_appendix.json",
+    "MSS_CRC_IO_comparator_trials_agent3.md",
+    "8d_comparator_vector_matrix.md",
+    "8d_structured_outputs.md",
+    "comparator_matrix_master.md",
+    "proposed_core_7_trials.md"
+  ],
+  "three_conditions_for_io_benefit_in_mss_crc": {
+    "summary": "CrisPRO's definitive finding: IO benefit in MSS CRC requires ALL THREE conditions simultaneously. Missing any one condition predicts failure.",
+    "condition_1_non_liver_metastatic": {
+      "what": "Patient must NOT have liver metastases at enrollment",
+      "why_biologically": {
+        "mechanism": "The liver is an immunosuppressive organ. Kupffer cells (liver-resident macrophages) constitutively express PD-L1 and secrete IL-10 and TGF-β, creating a tolerogenic microenvironment. Liver metastases recruit regulatory T cells (Tregs) and myeloid-derived suppressor cells (MDSCs) that suppress CD8+ T cell activity systemically — not just locally. A patient with liver metastases has systemic immune suppression that checkpoint inhibitors cannot overcome.",
+        "clinical_evidence": [
+          "CO.26: liver-met PFS HR=1.39 (IO HARMFUL) vs no-LM PFS HR=0.54 (IO BENEFICIAL); Pint=0.02",
+          "REGONIVO US: 0/5 liver-met responders; non-liver-met ORR 22% (5/23)",
+          "REGONIVO Japan: all 8 CRC responders had NO liver metastases",
+          "RIN: NLM cohort ORR ~40% vs liver-met ORR ~5%",
+          "CAMILLA: post-hoc — patients without liver metastases had better outcomes"
+        ],
+        "implication_for_trial_design": "Liver metastasis status must be a pre-specified stratification variable. Trials that do not stratify by liver metastasis status will dilute the IO signal with immunosuppressed patients."
+      },
+      "prevalence_in_mss_mcrc": "~50–60% of mCRC patients have liver metastases at diagnosis. Restricting to NLM patients reduces the eligible population by ~50%.",
+      "crispro_module": "MOD-01 (Liver Metastasis Stratification) — EXECUTABLE_NOW — CRITICAL priority"
+    },
+    "condition_2_ptmb_28": {
+      "what": "Patient must have plasma TMB ≥28 mutations/Mb (GuardantOMNI assay)",
+      "why_biologically": {
+        "mechanism": "Tumor mutational burden (TMB) is a proxy for neoantigen load — the number of tumor-specific peptides that can be presented on MHC-I and recognized by T cells. High TMB tumors generate more neoantigens, creating more targets for checkpoint-released T cells. In MSS CRC, most tumors have low TMB — but the pTMB ≥28 subgroup (~15–20% of MSS mCRC) has sufficient neoantigen load for IO benefit.",
+        "why_plasma_not_tissue": "Tissue TMB and plasma TMB are poorly correlated in CRC (Spearman r=0.13, p=0.20 — CO.26). Tissue TMB is confounded by tumor heterogeneity and archival tissue quality. Plasma TMB (pTMB) from ctDNA captures the mutational landscape of all metastatic sites simultaneously.",
+        "clinical_evidence": [
+          "CO.26: pTMB ≥28 OS HR=0.34 (90% CI 0.18–0.63, p=0.022) — strongest IO signal from randomized data in MSS CRC",
+          "CO.26: pTMB vs tissue TMB Spearman r=0.13 (p=0.20) — tissue TMB is NOT a substitute",
+          "GRANITE GO-010: ctDNA-low subgroup HR 0.50 (directional benefit)"
+        ],
+        "caveats": [
+          "pTMB ≥28 threshold is data-driven (not pre-specified in CO.26 protocol)",
+          "GuardantOMNI-specific — not validated on other platforms",
+          "Derived from 2L+ refractory population — not validated in 1L",
+          "Pint=0.070 (borderline) — requires prospective validation"
+        ]
+      },
+      "prevalence_in_mss_mcrc": "~15–20% of MSS mCRC patients have pTMB ≥28 (estimated from CO.26 subgroup)",
+      "crispro_module": "MOD-02 (pTMB ≥28 Enrichment) — EXECUTABLE_NOW — HIGH priority"
+    },
+    "condition_3_immune_inflamed_tme": {
+      "what": "Patient must have an immune-inflamed tumor microenvironment (high Immunoscore-IC, high CD8+ TIL density, low TGF-β suppression)",
+      "why_biologically": {
+        "mechanism": "Checkpoint inhibitors release the brakes on T cells — but T cells must already be present in the tumor to be released. MSS CRC tumors are predominantly 'immune excluded' or 'immune desert' — T cells are either blocked from entering the tumor or absent entirely. Only 'immune inflamed' tumors (T cells present at the tumor center and invasive margin) can respond to checkpoint blockade.",
+        "three_tme_phenotypes": {
+          "immune_inflamed": "CD8+ T cells present at tumor center AND invasive margin. High Immunoscore-IC. Responds to IO.",
+          "immune_excluded": "CD8+ T cells present at invasive margin but excluded from tumor center by stromal barriers (TGF-β, CAFs, decorin). Does not respond to IO alone — needs stromal barrier disruption.",
+          "immune_desert": "CD8+ T cells absent from both tumor center and invasive margin. Does not respond to IO."
+        },
+        "clinical_evidence": [
+          "AtezoTRIBE: Immunoscore-IC high HR ~0.50 (exploratory) vs Immunoscore-IC low HR ~0.90",
+          "MEDITREME: CD8-high + TGF-β-low subgroup showed best outcomes",
+          "GVAX: T-cell responses confirmed in peripheral blood but ORR 0% — T cells activated but cannot infiltrate tumor (immune excluded phenotype)"
+        ]
+      },
+      "crispro_module": "MOD-05 (Immunoscore-IC / CD8+ Baseline) — EXECUTABLE_NOW — HIGH priority"
+    }
+  },
+  "failure_archetypes": {
+    "pharmacodynamic_dissociation": {
+      "definition": "T-cell activation in peripheral blood WITHOUT tumor regression. The immune system is activated but cannot translate activation into tumor killing.",
+      "mechanism": "In MSS CRC, the tumor microenvironment creates multiple barriers between activated T cells and tumor cells: (1) stromal barriers (TGF-β, CAFs, decorin) physically exclude T cells from the tumor center; (2) immunosuppressive cells (Tregs, MDSCs) suppress T cell activity at the tumor site; (3) tumor cells downregulate MHC-I to avoid T cell recognition. Vaccines and checkpoint inhibitors can activate T cells in the periphery but cannot overcome these barriers.",
+      "canonical_examples": [
+        "GVAX: ORR 0% despite confirmed T-cell responses to vaccine antigens in peripheral blood",
+        "PolyPEPI1018: T-cell responses to ≥1 antigen in 100% of patients; no objective responses",
+        "PANVAC + DC vaccine: T-cell responses >70% of patients; no OS benefit",
+        "AMPLIFY-201: mKRAS-specific T-cell responses confirmed; ctDNA clearance in 3/5 — but no objective responses"
+      ],
+      "crispro_implication": "Pharmacodynamic dissociation is the dominant failure mode for vaccine programs in MSS CRC. The fix is not a better vaccine — it is a stromal barrier disruption strategy (TGF-β inhibition, anti-FAP, bevacizumab normalization) combined with the vaccine."
+    },
+    "immune_exclusion": {
+      "definition": "T cells are present at the tumor invasive margin but cannot penetrate the tumor center due to stromal barriers.",
+      "mechanism": "Cancer-associated fibroblasts (CAFs) secrete TGF-β, which: (1) induces epithelial-mesenchymal transition (EMT) in tumor cells, increasing stromal density; (2) suppresses CD8+ T cell activity; (3) promotes regulatory T cell differentiation. Decorin and other extracellular matrix proteins create a physical barrier. The result: T cells accumulate at the tumor edge but cannot kill tumor cells at the center.",
+      "clinical_evidence": "AtezoTRIBE: Immunoscore-IC high subgroup shows benefit (HR ~0.50) — these are the immune-inflamed patients. Immunoscore-IC low patients (immune excluded + immune desert) do not benefit.",
+      "crispro_implication": "Immune exclusion is addressable — TGF-β inhibition (bintrafusp alfa, SHR-1701), anti-FAP agents, and bevacizumab (vascular normalization) can convert excluded tumors to inflamed. This is the rationale for combination strategies."
+    },
+    "liver_metastasis_suppression": {
+      "definition": "Systemic immune suppression driven by liver metastases that prevents IO benefit even in patients with inflamed primary tumors.",
+      "mechanism": "Liver metastases create a systemic immunosuppressive state through: (1) Kupffer cell PD-L1 expression and IL-10/TGF-β secretion; (2) recruitment of MDSCs and Tregs to the liver; (3) systemic elevation of immunosuppressive cytokines that suppress CD8+ T cell activity at all tumor sites. This is not a local effect — it suppresses immune responses throughout the body.",
+      "clinical_evidence": [
+        "CO.26: liver-met PFS HR=1.39 (IO HARMFUL) vs no-LM PFS HR=0.54; Pint=0.02",
+        "REGONIVO US: 0/5 liver-met responders; non-liver-met ORR 22%",
+        "REGONIVO Japan: all 8 CRC responders had NO liver metastases"
+      ],
+      "crispro_implication": "Liver metastasis is the single most important stratification variable for IO trials in MSS CRC. It is not just a prognostic factor — it is a predictive biomarker of IO resistance."
+    },
+    "mek_inhibition_failure": {
+      "definition": "MEK inhibition was hypothesized to increase tumor immunogenicity in MSS CRC by upregulating MHC-I and reducing immunosuppressive cytokines. This hypothesis was definitively refuted.",
+      "mechanism_hypothesis": "MEK inhibition was expected to: (1) upregulate MHC-I expression on tumor cells; (2) reduce VEGF and immunosuppressive cytokine production; (3) sensitize tumors to checkpoint blockade. The hypothesis was based on preclinical data.",
+      "why_it_failed": "IMblaze370 (Phase III, N=363): OS no significant difference across all three arms (atezo+cobi vs atezo vs rego). MEK inhibition did not increase tumor immunogenicity in clinical MSS CRC. The preclinical-to-clinical translation failed (D7 — Translational). Additionally, cobimetinib (MEKi) suppressed T cell proliferation — the combination was potentially antagonistic.",
+      "clinical_evidence": "IMblaze370: OS atezo+cobi 8.87 months vs atezo 7.10 months vs rego 8.51 months — no significant difference. D1 Biology (0.9) — MEK inhibition definitively fails in MSS CRC.",
+      "crispro_implication": "MEK inhibition is not a viable IO sensitization strategy in MSS CRC. Any abstract proposing MEK+IO in MSS CRC should be flagged as repeating a definitively failed hypothesis."
+    }
+  },
+  "program_IO_CORE": {
+    "program_id": "IO_CORE",
+    "program_name": "MSS CRC Immunotherapy Core Failure Corpus",
+    "admissibility": "external_safe",
+    "trial_count": 7,
+    "active_engagement": "Brenus Pharma (BreAK CRC-001, STC-1010) — fit score 0.7375",
+    "trials": [
+      {
+        "trial_name": "CCTG CO.26",
+        "nct_id": "NCT02870920",
+        "drug": "Durvalumab (PD-L1) + Tremelimumab (CTLA-4)",
+        "sponsor": "AstraZeneca / CCTG",
+        "indication": "MSS mCRC",
+        "phase": "II (randomized)",
+        "n": 180,
+        "line": "3L+",
+        "primary_result": "OS HR 0.73 (90% CI 0.55–0.97, p=0.07); median OS 6.6 vs 4.1 months",
+        "primary_met": false,
+        "8d_vector": {
+          "D1_biology": {
+            "score": 0.2,
+            "rationale": "PD-L1+CTLA-4 combination is biologically sound — dual checkpoint blockade."
+          },
+          "D2_selection": {
+            "score": 0.8,
+            "rationale": "PRIMARY FAILURE DOMAIN. Unselected MSS CRC population. pTMB ≥28 subgroup OS HR=0.34 (90% CI 0.18–0.63, p=0.022) — the responder subgroup exists but was diluted. Liver-met patients (HR=1.39) were enrolled alongside NLM patients (HR=0.54), canceling the signal."
+          },
+          "D6_interpretability": {
+            "score": 0.3,
+            "rationale": "pTMB ≥28 threshold was data-driven (not pre-specified) — requires prospective validation."
+          }
+        },
+        "primary_failure_domain": "D2 — Selection",
+        "responder_subpopulations": [
+          {
+            "gate": "pTMB ≥28",
+            "result": "OS HR=0.34 (90% CI 0.18–0.63, p=0.022)",
+            "note": "Strongest IO signal from randomized data in MSS CRC"
+          },
+          {
+            "gate": "Non-liver-metastatic",
+            "result": "PFS HR=0.54 (90% CI 0.35–0.96)",
+            "note": "Pint=0.02 vs liver-met"
+          },
+          {
+            "gate": "Liver-metastatic",
+            "result": "PFS HR=1.39 (90% CI 1.02–1.90)",
+            "note": "IO is HARMFUL in liver-met patients"
+          }
+        ],
+        "transfer_lesson": "Apply BOTH gates simultaneously: pTMB ≥28 AND non-liver-metastatic. The intersection of these two gates defines the IO-responsive subpopulation in MSS CRC.",
+        "crispro_decode_confidence": "HIGH",
+        "source": "SANOFI_SOURCE_OF_TRUTH.md; program_asset_io_core.json"
+      },
+      {
+        "trial_name": "IMblaze370",
+        "nct_id": "NCT02788279",
+        "drug": "Atezolizumab (PD-L1) + Cobimetinib (MEKi) vs Atezolizumab vs Regorafenib",
+        "sponsor": "Roche/Genentech",
+        "indication": "MSS mCRC",
+        "phase": "III",
+        "n": 363,
+        "line": "3L+",
+        "primary_result": "OS: atezo+cobi 8.87 months vs atezo 7.10 months vs rego 8.51 months — no significant difference",
+        "primary_met": false,
+        "8d_vector": {
+          "D1_biology": {
+            "score": 0.9,
+            "rationale": "PRIMARY FAILURE DOMAIN. MEK inhibition definitively fails to increase tumor immunogenicity in clinical MSS CRC. The preclinical hypothesis (MEKi upregulates MHC-I, reduces immunosuppressive cytokines) did not translate. Additionally, cobimetinib suppresses T cell proliferation — the combination may be antagonistic."
+          },
+          "D2_selection": {
+            "score": 0.3,
+            "rationale": "Unselected population — but even with selection, MEK inhibition is not a viable IO sensitization strategy."
+          },
+          "D7_translational": {
+            "score": 0.7,
+            "rationale": "Preclinical-to-clinical translation failure — MEKi immunogenicity effects seen in mouse models did not replicate in humans."
+          }
+        },
+        "primary_failure_domain": "D1 — Biology",
+        "transfer_lesson": "MEK inhibition is NOT a viable IO sensitization strategy in MSS CRC. Any abstract proposing MEK+IO in MSS CRC is repeating a definitively failed hypothesis. Do not pursue.",
+        "crispro_decode_confidence": "HIGH",
+        "source": "program_asset_io_core.json"
+      },
+      {
+        "trial_name": "GVAX + Cyclophosphamide + Pembrolizumab",
+        "drug": "GVAX (GM-CSF-secreting whole-cell vaccine) + Cyclophosphamide + Pembrolizumab",
+        "sponsor": "Johns Hopkins",
+        "indication": "MSS mCRC",
+        "phase": "II",
+        "n": 22,
+        "line": "2L+",
+        "primary_result": "ORR 0% (0/22 evaluable). Confirmed T-cell responses to vaccine antigens in peripheral blood.",
+        "primary_met": false,
+        "8d_vector": {
+          "D1_biology": {
+            "score": 0.8,
+            "rationale": "PRIMARY FAILURE DOMAIN. Pharmacodynamic dissociation — T cells activated in periphery but cannot kill tumor cells. The vaccine mechanism is biologically sound (T-cell activation confirmed) but the TME barriers prevent tumor killing. This is the canonical pharmacodynamic dissociation failure."
+          },
+          "D2_selection": {
+            "score": 0.3,
+            "rationale": "Unselected population — but even with selection, the stromal barrier problem remains."
+          },
+          "D6_interpretability": {
+            "score": 0.4,
+            "rationale": "T-cell responses confirmed but ORR 0% — the disconnect between immune activation and tumor regression is the key finding."
+          }
+        },
+        "primary_failure_domain": "D1 — Biology (pharmacodynamic dissociation)",
+        "key_finding": "T-cell activation ≠ tumor regression in MSS CRC. The stromal barrier is the missing piece.",
+        "transfer_lesson": "Vaccine programs in MSS CRC must address the stromal barrier (TGF-β, CAFs) to convert immune activation into tumor killing. Vaccine alone is insufficient.",
+        "crispro_decode_confidence": "HIGH",
+        "source": "program_asset_io_core.json"
+      },
+      {
+        "trial_name": "AtezoTRIBE",
+        "nct_id": "NCT03721653",
+        "drug": "Atezolizumab + mFOLFOX6 + Bevacizumab",
+        "sponsor": "Roche/Genentech + GONO",
+        "indication": "mCRC (all comers, 1L)",
+        "phase": "II (randomized)",
+        "n": 218,
+        "line": "1L",
+        "primary_result": "ITT PFS HR 0.69 (p=0.0075) — driven by MSI-H patients. pMMR subgroup PFS HR 0.86 (95% CI 0.63–1.17) — NOT significant",
+        "primary_met": false,
+        "8d_vector": {
+          "D2_selection": {
+            "score": 0.7,
+            "rationale": "PRIMARY FAILURE DOMAIN. ITT benefit driven by MSI-H patients (dMMR). pMMR (MSS) subgroup shows no benefit (HR 0.86, not significant). Immunoscore-IC high subgroup shows directional benefit (HR ~0.50) — the immune-inflamed subpopulation within MSS CRC can benefit."
+          },
+          "D1_biology": {
+            "score": 0.3,
+            "rationale": "Atezolizumab mechanism is sound — PD-L1 blockade. The biology works in the right patient."
+          }
+        },
+        "primary_failure_domain": "D2 — Selection",
+        "responder_subpopulations": [
+          {
+            "gate": "MSI-H/dMMR",
+            "result": "PFS HR ~0.40 (estimated from ITT decomposition)",
+            "note": "Positive control — IO works in MSI-H"
+          },
+          {
+            "gate": "Immunoscore-IC high (pMMR)",
+            "result": "PFS HR ~0.50 (exploratory)",
+            "note": "The immune-inflamed MSS subpopulation"
+          },
+          {
+            "gate": "pMMR unselected",
+            "result": "PFS HR 0.86 (NOT significant)",
+            "note": "Unselected MSS CRC does not benefit"
+          }
+        ],
+        "transfer_lesson": "In 1L MSS CRC, IO benefit requires Immunoscore-IC high (immune-inflamed TME). Unselected pMMR patients do not benefit. Liver metastasis interaction: AtezoTRIBE 2025 update shows Pint PFS=0.166 — liver metastasis is not predictive when Immunoscore-IC is high.",
+        "crispro_decode_confidence": "HIGH",
+        "source": "program_asset_io_core.json"
+      },
+      {
+        "trial_name": "QUILT-2.004",
+        "nct_id": "NCT02482441",
+        "drug": "NANT vaccine cocktail + Nivolumab + mFOLFOX6 + Bevacizumab",
+        "sponsor": "NantKwest/ImmunityBio",
+        "indication": "MSS mCRC (1L)",
+        "phase": "II (randomized)",
+        "n": 93,
+        "line": "1L",
+        "primary_result": "PFS HR 1.061 (95% CI 0.380–2.966, p=0.91) — TERMINATED for futility",
+        "primary_met": false,
+        "8d_vector": {
+          "D1_biology": {
+            "score": 0.7,
+            "rationale": "PRIMARY FAILURE DOMAIN. Pharmacodynamic dissociation — vaccine activates T cells but cannot overcome MSS CRC TME barriers. The combination of vaccine + IO + chemo + bev is mechanistically complex but the fundamental problem (immune exclusion in MSS CRC) is not addressed."
+          },
+          "D2_selection": {
+            "score": 0.4,
+            "rationale": "Unselected MSS CRC — no liver metastasis stratification, no pTMB gate."
+          },
+          "D3_architecture": {
+            "score": 0.3,
+            "rationale": "Trial design precedent: adding IO to mFOLFOX6+bev in unselected MSS CRC does not improve PFS. This is the design precedent for BreAK CRC-001."
+          }
+        },
+        "primary_failure_domain": "D1 — Biology (pharmacodynamic dissociation) + D2 — Selection",
+        "transfer_lesson": "QUILT-2.004 is the design precedent for BreAK CRC-001. Adding IO to mFOLFOX6+bev in unselected MSS CRC does not work. Patient selection (liver metastasis, pTMB) is mandatory.",
+        "crispro_decode_confidence": "HIGH",
+        "source": "program_asset_io_core.json"
+      },
+      {
+        "trial_name": "GRANITE GO-010",
+        "nct_id": "NCT03639714",
+        "drug": "GRT-C901/GRT-R902 (personalized neoantigen vaccine) + Atezolizumab",
+        "sponsor": "Gritstone Bio",
+        "indication": "MSS mCRC",
+        "phase": "II",
+        "n": 35,
+        "line": "2L+",
+        "primary_result": "HR 0.73 (90% CI 0.44–1.21) — CI crosses 1.0; data immature at bankruptcy. ctDNA-low subgroup HR 0.50",
+        "primary_met": false,
+        "8d_vector": {
+          "D2_selection": {
+            "score": 0.6,
+            "rationale": "ctDNA-low subgroup HR 0.50 — directional benefit. ctDNA-low patients have lower disease burden and more intact immune function. This is a proxy for the immune-inflamed subpopulation."
+          },
+          "D8_systemic": {
+            "score": 0.5,
+            "rationale": "Gritstone Bio filed Chapter 11 October 2024 — data immature at bankruptcy. Results cannot be fully interpreted."
+          }
+        },
+        "primary_failure_domain": "D2 — Selection (opportunity) + D8 — Systemic (bankruptcy)",
+        "transfer_lesson": "ctDNA-low as a proxy for IO-responsive subpopulation in MSS CRC. Personalized neoantigen vaccines show directional benefit in ctDNA-low patients — this is the immune-inflamed subpopulation.",
+        "crispro_decode_confidence": "LOW (data immature)",
+        "source": "program_asset_io_core.json"
+      },
+      {
+        "trial_name": "MEDITREME",
+        "nct_id": "NCT03202758",
+        "drug": "Durvalumab + Tremelimumab + mFOLFOX6",
+        "sponsor": "AstraZeneca / GERCOR",
+        "indication": "MSS mCRC (1L)",
+        "phase": "II (single-arm)",
+        "n": 31,
+        "line": "1L",
+        "primary_result": "Median PFS 8.2 months (95% CI 5.9–8.6); ORR 64.5%; no randomized control arm",
+        "primary_met": "N/A — no control arm",
+        "8d_vector": {
+          "D3_architecture": {
+            "score": 0.8,
+            "rationale": "PRIMARY LIMITATION. Single-arm design — cannot determine if IO adds benefit over mFOLFOX6 alone (TRIBE2 control arm: mPFS 9.8 months, ORR 50%). ORR 64.5% is higher than TRIBE2 ORR 50% but this may reflect patient selection (1L, good PS) rather than IO benefit."
+          },
+          "D2_selection": {
+            "score": 0.3,
+            "rationale": "CD8-high + TGF-β-low subgroup showed best outcomes — consistent with immune-inflamed hypothesis."
+          }
+        },
+        "primary_failure_domain": "D3 — Architecture (no control arm)",
+        "transfer_lesson": "MEDITREME ORR 64.5% vs TRIBE2 ORR 50% — directional signal but uncontrolled. The CD8-high + TGF-β-low subgroup finding supports the immune-inflamed hypothesis.",
+        "crispro_decode_confidence": "LOW (no control arm)",
+        "source": "program_asset_io_core.json"
+      }
+    ],
+    "what_crispro_proved": [
+      "THREE CONDITIONS for IO benefit in MSS CRC: non-liver-metastatic + pTMB ≥28 + immune-inflamed TME",
+      "CO.26: pTMB ≥28 OS HR=0.34 (90% CI 0.18–0.63, p=0.022) — strongest IO signal from randomized data",
+      "CO.26: liver-met PFS HR=1.39 (HARMFUL) vs no-LM HR=0.54; Pint=0.02",
+      "REGONIVO US: ORR 7% overall; 0/5 liver-met responders; non-liver-met ORR 22%",
+      "GVAX: ORR 0% despite confirmed T-cell responses — pharmacodynamic dissociation",
+      "IMblaze370 (Phase III): OS no significant difference — MEK inhibition definitively fails",
+      "AtezoTRIBE: pMMR PFS HR=0.86 (NOT significant); Immunoscore-IC high HR ~0.50 (exploratory)",
+      "QUILT-2.004: HR 1.061 (p=0.91) — IO addition to mFOLFOX6+bev fails in unselected MSS CRC"
+    ]
+  },
+  "program_IO_APPENDIX": {
+    "program_id": "IO_APPENDIX",
+    "program_name": "MSS CRC IO Supporting Evidence Corpus",
+    "admissibility": "external_safe",
+    "trial_count": 15,
+    "trials": [
+      {
+        "trial_name": "KEYNOTE-177",
+        "drug": "Pembrolizumab (PD-1)",
+        "indication": "MSI-H/dMMR mCRC (1L)",
+        "phase": "III",
+        "primary_result": "PFS HR 0.60; OS HR 0.74. Definitive positive for MSI-H.",
+        "role_in_corpus": "POSITIVE CONTROL — confirms IO works in MSI-H CRC. Defines the contrast with MSS CRC.",
+        "transfer_lesson": "MSI-H CRC responds to IO (PFS HR 0.60). MSS CRC does not respond to IO in unselected populations. The difference is neoantigen load (high in MSI-H, low in MSS) and TME phenotype (inflamed in MSI-H, excluded/desert in MSS)."
+      },
+      {
+        "trial_name": "CheckMate 142",
+        "drug": "Nivolumab ± Ipilimumab",
+        "indication": "mCRC (MSS and MSI-H cohorts)",
+        "phase": "II",
+        "primary_result": "MSS cohort ORR 0% (n=74). MSI-H ORR 31% mono, 55% combo.",
+        "role_in_corpus": "NEGATIVE CONTROL — confirms IO does NOT work in unselected MSS CRC. ORR 0% in 74 MSS patients.",
+        "transfer_lesson": "Unselected MSS CRC: ORR 0%. The responder subgroup (NLM + pTMB ≥28 + inflamed TME) is too small to detect in unselected populations."
+      },
+      {
+        "trial_name": "REGONIVO Phase 2 (US)",
+        "drug": "Regorafenib + Nivolumab",
+        "indication": "MSS mCRC",
+        "phase": "II",
+        "n": 70,
+        "primary_result": "ORR 7% (5/70). All 5 responders had NO liver metastases. Non-liver-met ORR 22% (5/23).",
+        "role_in_corpus": "LIVER METASTASIS EVIDENCE — confirms liver metastasis as the critical IO stratification variable",
+        "transfer_lesson": "0/5 liver-met responders. Non-liver-met ORR 22%. Liver metastasis is a contraindication for IO in MSS CRC."
+      },
+      {
+        "trial_name": "REGONIVO (EPOC1603)",
+        "drug": "Regorafenib + Nivolumab",
+        "indication": "MSS mCRC (Japan)",
+        "phase": "I/II",
+        "n": 24,
+        "primary_result": "CRC cohort (n=24 MSS): ORR 33%, median PFS 6.3 months. All 8 responders had NO liver metastases.",
+        "role_in_corpus": "LIVER METASTASIS EVIDENCE — Japan cohort confirms NLM enrichment",
+        "transfer_lesson": "All 8 responders had NO liver metastases. ORR 33% in NLM-enriched cohort vs 7% in unselected US cohort."
+      },
+      {
+        "trial_name": "RIN (Regorafenib + Ipilimumab + Nivolumab)",
+        "drug": "Regorafenib + Ipilimumab + Nivolumab",
+        "indication": "MSS mCRC",
+        "phase": "I/II",
+        "primary_result": "ORR 27.6% overall; NLM cohort ORR ~40%; liver-met ORR ~5%. Median OS 20 months in NLM cohort.",
+        "role_in_corpus": "HIGHEST REPORTED IO ORR IN MSS CRC — NLM cohort ORR ~40%",
+        "transfer_lesson": "NLM cohort ORR ~40% is the highest reported IO ORR in MSS CRC. This defines the ceiling for IO benefit in the NLM subpopulation."
+      },
+      {
+        "trial_name": "BOT/BAL (Botensilimab + Balstilimab)",
+        "drug": "Botensilimab (anti-CTLA-4 Fc-enhanced) + Balstilimab (anti-PD-1)",
+        "indication": "MSS mCRC (no liver metastases)",
+        "phase": "I/II",
+        "primary_result": "ORR 17% (95% CI 10–26%) in no-liver-met MSS mCRC (n=101)",
+        "role_in_corpus": "NLM ENRICHMENT EVIDENCE — confirms NLM selection strategy",
+        "transfer_lesson": "ORR 17% in NLM-selected MSS mCRC. Botensilimab's Fc-enhanced CTLA-4 blockade (increased ADCC/ADCP) may be more effective than standard CTLA-4 blockade in MSS CRC."
+      },
+      {
+        "trial_name": "STELLAR-303",
+        "drug": "Zanzalintinib (XL092, MET/VEGFR/AXL inhibitor) + Atezolizumab",
+        "indication": "MSS mCRC (refractory)",
+        "phase": "III (ONGOING)",
+        "primary_result": "ONGOING — no results available",
+        "role_in_corpus": "ONGOING RANDOMIZED PHASE III — only ongoing randomized Phase III in refractory MSS CRC",
+        "transfer_lesson": "STELLAR-303 is the only ongoing randomized Phase III in refractory MSS CRC. Results will define the new standard of care for 3L+ MSS mCRC."
+      },
+      {
+        "trial_name": "AMPLIFY-201",
+        "drug": "mKRAS vaccine (ELI-002 2P) — lipid-conjugated KRAS G12D/G12V peptides",
+        "indication": "KRAS-mutant solid tumors (CRC, PDAC)",
+        "phase": "I",
+        "primary_result": "ctDNA clearance in 3/5 CRC patients. mKRAS-specific T-cell responses confirmed.",
+        "role_in_corpus": "PHARMACODYNAMIC DISSOCIATION EVIDENCE — T-cell responses confirmed but no objective responses",
+        "transfer_lesson": "mKRAS vaccine activates T cells and clears ctDNA but does not produce objective responses. Pharmacodynamic dissociation in MSS CRC."
+      },
+      {
+        "trial_name": "PolyPEPI1018",
+        "drug": "PolyPEPI1018 (multi-neoantigen peptide vaccine)",
+        "indication": "MSS mCRC",
+        "phase": "I/II",
+        "primary_result": "T-cell responses to ≥1 antigen in 100% of patients. No objective responses. Stable disease in some patients.",
+        "role_in_corpus": "PHARMACODYNAMIC DISSOCIATION EVIDENCE",
+        "transfer_lesson": "100% T-cell response rate, 0% ORR. The most extreme pharmacodynamic dissociation example in the corpus."
+      },
+      {
+        "trial_name": "MODUL Cohort 2",
+        "drug": "Atezolizumab + mFOLFOX6 + Bevacizumab (1L)",
+        "indication": "mCRC (all comers, 1L)",
+        "phase": "II (randomized)",
+        "primary_result": "PFS HR 1.04 (95% CI 0.77–1.40) — no benefit. OS HR 0.91 — no benefit. All biomarker subgroups negative.",
+        "role_in_corpus": "NEGATIVE CONTROL — IO addition to 1L mFOLFOX6+bev fails in unselected population",
+        "transfer_lesson": "Confirms QUILT-2.004 finding: IO addition to mFOLFOX6+bev in unselected mCRC does not improve outcomes."
+      },
+      {
+        "trial_name": "CAMILLA CRC",
+        "drug": "Durvalumab + Tremelimumab",
+        "indication": "MSS mCRC",
+        "phase": "II",
+        "primary_result": "ORR 27.6% (8/29 evaluable). Median OS 9.1 months. Post-hoc: patients without liver metastases had better outcomes.",
+        "role_in_corpus": "LIVER METASTASIS EVIDENCE — post-hoc NLM benefit",
+        "transfer_lesson": "ORR 27.6% in small cohort — likely enriched for NLM patients. Post-hoc NLM benefit consistent with CO.26 and REGONIVO."
+      },
+      {
+        "trial_name": "GVAX + Guadecitabine",
+        "drug": "GVAX + Guadecitabine (DNMT inhibitor)",
+        "indication": "MSS mCRC",
+        "phase": "I/II",
+        "primary_result": "No T-cell increase; no objective responses.",
+        "role_in_corpus": "NEGATIVE CONTROL — DNMT inhibition does not enhance GVAX in MSS CRC",
+        "transfer_lesson": "Epigenetic priming (DNMT inhibition) does not overcome pharmacodynamic dissociation in MSS CRC."
+      },
+      {
+        "trial_name": "PANVAC + DC vaccine",
+        "drug": "PANVAC (CEA/MUC1 poxvirus vaccine) + Dendritic cell vaccine",
+        "indication": "MSS mCRC",
+        "phase": "II",
+        "primary_result": "No OS benefit; T-cell responses >70% of patients.",
+        "role_in_corpus": "PHARMACODYNAMIC DISSOCIATION EVIDENCE",
+        "transfer_lesson": "T-cell responses >70%, no OS benefit. Pharmacodynamic dissociation confirmed across multiple vaccine platforms."
+      },
+      {
+        "trial_name": "PexaVec + Durvalumab ± Tremelimumab",
+        "drug": "PexaVec (oncolytic vaccinia virus) + Durvalumab ± Tremelimumab",
+        "indication": "MSS mCRC",
+        "phase": "I/II",
+        "primary_result": "ORR 0% (0/21).",
+        "role_in_corpus": "NEGATIVE CONTROL — oncolytic virus + IO fails in unselected MSS CRC",
+        "transfer_lesson": "Oncolytic virus does not overcome immune exclusion in MSS CRC without patient selection."
+      },
+      {
+        "trial_name": "Bintrafusp Alfa in CRC",
+        "drug": "Bintrafusp alfa (PD-L1/TGF-β bifunctional)",
+        "indication": "MSS mCRC",
+        "phase": "II",
+        "primary_result": "ORR 0% (n=30).",
+        "role_in_corpus": "NEGATIVE CONTROL — TGF-β + PD-L1 dual blockade fails in unselected MSS CRC",
+        "transfer_lesson": "Even TGF-β + PD-L1 dual blockade fails in unselected MSS CRC. Patient selection (immune-excluded vs immune-desert) is required to identify patients who can benefit from stromal barrier disruption."
+      }
+    ],
+    "what_crispro_proved": [
+      "RIN NLM subgroup: ORR ~40%, mOS 20 months — highest reported IO ORR in MSS CRC",
+      "BOT/BAL Phase 1: ORR 17% (95% CI 10–26%) in no-liver-met MSS mCRC (n=101)",
+      "KEYNOTE-177 (MSI-H): PFS HR=0.60 — positive control confirming IO works in MSI-H",
+      "CheckMate 142 MSS cohort: ORR 0% (n=74) — confirms immune exclusion in unselected MSS CRC",
+      "STELLAR-303 (zanzalintinib + atezolizumab): only ongoing randomized Phase III in refractory MSS CRC",
+      "Pharmacodynamic dissociation confirmed across 4 vaccine platforms (GVAX, PolyPEPI1018, PANVAC, AMPLIFY-201)"
+    ]
+  }
+}

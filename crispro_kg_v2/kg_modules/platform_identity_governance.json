@@ -1,0 +1,198 @@
+{
+  "platform_identity": {
+    "name": "CrisPRO",
+    "tagline": "Mechanism-Alignment Engine for Clinical Trial Stratification",
+    "version": "v3 (production)",
+    "backend_repo": "crispro-backend-v3",
+    "what_crispro_is": "CrisPRO is a computational platform that encodes patient biology and therapeutic intervention mechanisms in a shared 8-dimensional biological vector space, computes quantitative alignment between patient and trial, and produces ranked trial recommendations with mechanistic rationale. It is NOT a clinical decision support tool, NOT a diagnostic, and NOT a drug discovery platform.",
+    "two_layer_architecture": {
+      "layer_1_mechanism_fit": {
+        "name": "Mechanism Fit Engine (PATH A)",
+        "what_it_does": "Encodes patient biology as an 8D vector (p) and trial mechanism as an 8D vector (t). Computes fit = clip((p\u00b7t)/\u2016t\u2016\u2082, 0, 1). Outputs a fit score [0,1] with axis-level contribution breakdown.",
+        "code_location": "crispro-backend-v3/layer1_engines/mechanism_fit/mechanism_fit_ranker.py",
+        "formula": "fit = clip((p\u00b7t) / \u2016t\u2016\u2082, 0, 1)",
+        "formula_status": "PATH A \u2014 LOCKED 2026-04-28 by Fahad Kiani",
+        "path_b_status": "PROHIBITED \u2014 cosine similarity with \u2016p\u2016\u2082 in denominator"
+      },
+      "layer_2_holistic_score": {
+        "name": "Holistic Score Engine",
+        "what_it_does": "Combines mechanism fit with eligibility, pharmacogenomic safety, and resistance risk into a single holistic score.",
+        "formula": "holistic = 0.4\u00d7mechanism_fit + 0.3\u00d7eligibility + 0.15\u00d7pgx_safety + 0.15\u00d7resistance_risk",
+        "code_location": "crispro-backend-v3/layer1_engines/holistic_score/models.py",
+        "source": "VC-15 \u2014 verified claim"
+      }
+    },
+    "8d_framework": {
+      "axes": {
+        "ddr": {
+          "index": 0,
+          "full_name": "DNA Damage Response",
+          "key_genes": [
+            "ATM",
+            "BRCA1",
+            "BRCA2",
+            "PTEN",
+            "ATR",
+            "WEE1"
+          ],
+          "source": "mechanism_fit_ranker.py L50\u201351"
+        },
+        "mapk": {
+          "index": 1,
+          "full_name": "MAPK/RAS Pathway",
+          "key_genes": [
+            "KRAS",
+            "NRAS",
+            "BRAF",
+            "MEK",
+            "ERK"
+          ],
+          "source": "mechanism_fit_ranker.py L50\u201351"
+        },
+        "pi3k": {
+          "index": 2,
+          "full_name": "PI3K/AKT/mTOR Pathway",
+          "key_genes": [
+            "PIK3CA",
+            "PTEN",
+            "AKT",
+            "mTOR"
+          ],
+          "source": "mechanism_fit_ranker.py L50\u201351"
+        },
+        "vegf": {
+          "index": 3,
+          "full_name": "VEGF/Angiogenesis",
+          "key_genes": [
+            "VEGFA",
+            "VEGFR1",
+            "VEGFR2",
+            "HIF1A"
+          ],
+          "source": "mechanism_fit_ranker.py L50\u201351"
+        },
+        "her2": {
+          "index": 4,
+          "full_name": "HER2/ERBB2 Pathway",
+          "key_genes": [
+            "ERBB2",
+            "ERBB3",
+            "EGFR"
+          ],
+          "source": "mechanism_fit_ranker.py L50\u201351"
+        },
+        "io": {
+          "index": 5,
+          "full_name": "Immune Oncology / TME",
+          "key_markers": [
+            "pTMB",
+            "Immunoscore-IC",
+            "CD8+ TIL",
+            "MSS/MSI-H",
+            "liver metastasis"
+          ],
+          "source": "mechanism_fit_ranker.py L50\u201351"
+        },
+        "efflux": {
+          "index": 6,
+          "full_name": "Drug Efflux / Resistance",
+          "key_genes": [
+            "ABCB1",
+            "ABCG2",
+            "MDR1"
+          ],
+          "source": "mechanism_fit_ranker.py L50\u201351"
+        },
+        "rss": {
+          "index": 7,
+          "full_name": "Replication Stress / Cell Cycle",
+          "key_genes": [
+            "CCNE1",
+            "CDK2",
+            "CDC45",
+            "CLASPIN",
+            "RRM2"
+          ],
+          "source": "mechanism_fit_ranker.py L50\u201351"
+        }
+      },
+      "vector_version": "8D.v1",
+      "practical_ceiling": 0.8898,
+      "ceiling_explanation": "The practical ceiling of 0.8898 arises from the \u2016p_ref\u2016\u2082 constraint \u2014 a patient vector with all axes at 1.0 would score 1.0, but real patient vectors have heterogeneous axis values. The reference patient vector \u2016p_ref\u2016\u2082 \u2248 0.8898 sets the practical maximum."
+    },
+    "what_crispro_never_does": [
+      "Does NOT predict individual patient outcomes",
+      "Does NOT replace clinical judgment",
+      "Does NOT generate novel drug candidates",
+      "Does NOT claim FDA-cleared diagnostic status",
+      "Does NOT use PATH B formula (cosine similarity with \u2016p\u2016\u2082 in denominator) \u2014 PROHIBITED",
+      "Does NOT cite LATIFY delta values (QUARANTINED \u2014 version conflict unresolved)",
+      "Does NOT claim GBM ZEB1 as an escape marker (PERMANENTLY CLOSED)",
+      "Does NOT claim BRIEF-2 (PTEN-null\u2192ITGAV) is CRISPR-validated (COMPUTATIONAL HYPOTHESIS)"
+    ]
+  },
+  "governance_guardrails": {
+    "formula_governance": {
+      "path_a_status": "LOCKED \u2014 approved by Fahad Kiani 2026-04-28",
+      "path_a_formula": "fit = clip((p\u00b7t) / \u2016t\u2016\u2082, 0, 1)",
+      "path_b_status": "PROHIBITED \u2014 cosine similarity with \u2016p\u2016\u2082 in denominator",
+      "path_b_prohibition": "PATH B is prohibited in ALL outputs. Any output using \u2016p\u2016\u2082 in the denominator is invalid.",
+      "source": "formula_governance/path_a_manager_decision_record.md"
+    },
+    "quarantined_items": {
+      "DL_07": {
+        "item": "DDR 0.983 figure",
+        "status": "QUARANTINED \u2014 publication-blocking",
+        "reason": "DDR axis value 0.983 is implausibly high \u2014 likely a computation error. Cannot be published until resolved.",
+        "action_required": "Recompute DDR axis value from source data"
+      },
+      "CT_03_DL_05_PC_06": {
+        "item": "LATIFY delta values",
+        "status": "QUARANTINED \u2014 vector version conflict",
+        "reason": "Patent cites delta +0.366; receipt cites delta +0.2641. Vector version unresolved.",
+        "action_required": "Resolve vector version conflict before citing any LATIFY delta value",
+        "safe_to_cite": "Responder score 0.8936 vs non-responder 0.6295 \u2014 CORRECT CITATION"
+      },
+      "PC_02": {
+        "item": "retroactive_prediction_run.py --trial-vectors",
+        "status": "PERMANENTLY DOWNGRADED",
+        "reason": "Script does not reproduce documented deltas cleanly",
+        "action_required": "Fix retroactive_prediction_run.py before any claim about retroactive prediction accuracy"
+      }
+    },
+    "active_conflicts": {
+      "SC_001": {
+        "conflict": "CT26 carries BRAF V600E (ATCC/CCLE/COSMIC). BreAK CRC-001 Exclusion Criterion #7 requires BRAF wild-type patients.",
+        "status": "ACTIVE CONFLICT \u2014 must be resolved before enrollment",
+        "action_required": "Brenus Pharma must address CT26 BRAF V600E in the STC-1010 IND"
+      }
+    },
+    "permanently_closed": {
+      "GBM_ZEB1": {
+        "status": "PERMANENTLY CLOSED",
+        "reason": "Three datasets all null or contradicted: GLASS (delta=\u22120.34, p=0.000184), GSE222515 (delta=\u22120.431, p=0.0334), GSE174554 snRNA-seq (delta=\u22120.076, p=0.742)",
+        "operational_meaning": "Do not apply EscapeMap to GBM. Do not reopen without new evidence."
+      }
+    },
+    "mandatory_disclosures": [
+      "BRIEF-2 (PTEN-null\u2192ITGAV) is a COMPUTATIONAL HYPOTHESIS \u2014 DepMap NULL across all 3 proxies \u2014 not CRISPR-validated. Must disclose in every context.",
+      "BRIEF-3 correlation r=0.050, p=0.780 is statistically insignificant. BRIEF-3 is MECHANISTICALLY_GROUNDED, not CRISPR_VALIDATED.",
+      "LATIFY delta values are QUARANTINED \u2014 do not cite any specific delta value.",
+      "GBM ZEB1 is PERMANENTLY CLOSED \u2014 do not claim ZEB1 as a GBM escape marker.",
+      "OV ZEB1 arm interaction p=0.246 \u2014 ZEB1 is PROGNOSTIC, NOT ARM-SPECIFIC.",
+      "Gate 1 fraction (28%) is OPEN_ASSUMPTION OA-08 \u2014 not validated in prospective data.",
+      "All deal figures are benchmarks from comparable transactions \u2014 not guaranteed outcomes.",
+      "CrisPRO does NOT predict individual patient outcomes and is NOT a clinical decision support tool."
+    ],
+    "prohibited_claims": [
+      "CrisPRO predicts individual patient outcomes",
+      "CrisPRO is FDA-cleared or CE-marked",
+      "BRIEF-2 (PTEN-null\u2192ITGAV) is CRISPR-validated",
+      "GBM ZEB1 is an escape marker",
+      "LATIFY delta is [any specific value]",
+      "PATH B formula is acceptable",
+      "DDR 0.983 is a validated figure",
+      "retroactive_prediction_run.py reproduces documented deltas"
+    ]
+  }
+}

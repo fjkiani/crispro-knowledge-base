@@ -1,0 +1,604 @@
+{
+  "worker": "W5",
+  "produced_by": "worker-0 — Platform Identity + Governance + Matching Rules v2 deep audit",
+  "source_files": [
+    "8d_verified_claims.md",
+    "formula_governance/path_a_manager_decision_record.md",
+    "formula_governance/formula_quarantine_status_update.yaml",
+    "8D_audit/8d_remediation_log.md",
+    "8D_audit/8d_claim_language_rewrites.md",
+    "trial_decode_registry_v2.json",
+    "crispro_master_pipeline.json"
+  ],
+  "platform_identity": {
+    "name": "CrisPRO",
+    "tagline": "Mechanism-Alignment Engine for Clinical Trial Stratification",
+    "version": "v3 (production)",
+    "backend_repo": "crispro-backend-v3",
+    "what_crispro_is": "CrisPRO is a computational platform that encodes patient biology and therapeutic intervention mechanisms in a shared 8-dimensional biological vector space, computes quantitative alignment between patient and trial, and produces ranked trial recommendations with mechanistic rationale. It is NOT a clinical decision support tool, NOT a diagnostic, and NOT a drug discovery platform.",
+    "two_layer_architecture": {
+      "layer_1_mechanism_fit": {
+        "name": "Mechanism Fit Engine (PATH A)",
+        "what_it_does": "Encodes patient biology as an 8D vector (p) and trial mechanism as an 8D vector (t). Computes fit = clip((p·t)/‖t‖₂, 0, 1). Outputs a fit score [0,1] with axis-level contribution breakdown.",
+        "code_location": "crispro-backend-v3/layer1_engines/mechanism_fit/mechanism_fit_ranker.py",
+        "formula": "fit = clip((p·t) / ‖t‖₂, 0, 1)",
+        "formula_status": "PATH A — LOCKED 2026-04-28 by Fahad Kiani",
+        "path_b_status": "PROHIBITED — cosine similarity with ‖p‖₂ in denominator"
+      },
+      "layer_2_holistic_score": {
+        "name": "Holistic Score Engine",
+        "what_it_does": "Combines mechanism fit with eligibility, pharmacogenomic safety, and resistance risk into a single holistic score.",
+        "formula": "holistic = 0.4×mechanism_fit + 0.3×eligibility + 0.15×pgx_safety + 0.15×resistance_risk",
+        "code_location": "crispro-backend-v3/layer1_engines/holistic_score/models.py",
+        "source": "VC-15 — verified claim"
+      }
+    },
+    "8d_framework": {
+      "axes": {
+        "ddr": {
+          "index": 0,
+          "full_name": "DNA Damage Response",
+          "key_genes": [
+            "ATM",
+            "BRCA1",
+            "BRCA2",
+            "PTEN",
+            "ATR",
+            "WEE1"
+          ],
+          "source": "mechanism_fit_ranker.py L50–51"
+        },
+        "mapk": {
+          "index": 1,
+          "full_name": "MAPK/RAS Pathway",
+          "key_genes": [
+            "KRAS",
+            "NRAS",
+            "BRAF",
+            "MEK",
+            "ERK"
+          ],
+          "source": "mechanism_fit_ranker.py L50–51"
+        },
+        "pi3k": {
+          "index": 2,
+          "full_name": "PI3K/AKT/mTOR Pathway",
+          "key_genes": [
+            "PIK3CA",
+            "PTEN",
+            "AKT",
+            "mTOR"
+          ],
+          "source": "mechanism_fit_ranker.py L50–51"
+        },
+        "vegf": {
+          "index": 3,
+          "full_name": "VEGF/Angiogenesis",
+          "key_genes": [
+            "VEGFA",
+            "VEGFR1",
+            "VEGFR2",
+            "HIF1A"
+          ],
+          "source": "mechanism_fit_ranker.py L50–51"
+        },
+        "her2": {
+          "index": 4,
+          "full_name": "HER2/ERBB2 Pathway",
+          "key_genes": [
+            "ERBB2",
+            "ERBB3",
+            "EGFR"
+          ],
+          "source": "mechanism_fit_ranker.py L50–51"
+        },
+        "io": {
+          "index": 5,
+          "full_name": "Immune Oncology / TME",
+          "key_markers": [
+            "pTMB",
+            "Immunoscore-IC",
+            "CD8+ TIL",
+            "MSS/MSI-H",
+            "liver metastasis"
+          ],
+          "source": "mechanism_fit_ranker.py L50–51"
+        },
+        "efflux": {
+          "index": 6,
+          "full_name": "Drug Efflux / Resistance",
+          "key_genes": [
+            "ABCB1",
+            "ABCG2",
+            "MDR1"
+          ],
+          "source": "mechanism_fit_ranker.py L50–51"
+        },
+        "rss": {
+          "index": 7,
+          "full_name": "Replication Stress / Cell Cycle",
+          "key_genes": [
+            "CCNE1",
+            "CDK2",
+            "CDC45",
+            "CLASPIN",
+            "RRM2"
+          ],
+          "source": "mechanism_fit_ranker.py L50–51"
+        }
+      },
+      "vector_version": "8D.v1",
+      "practical_ceiling": 0.8898,
+      "ceiling_explanation": "The practical ceiling of 0.8898 arises from the ‖p_ref‖₂ constraint — a patient vector with all axes at 1.0 would score 1.0, but real patient vectors have heterogeneous axis values. The reference patient vector ‖p_ref‖₂ ≈ 0.8898 sets the practical maximum."
+    },
+    "what_crispro_never_does": [
+      "Does NOT predict individual patient outcomes",
+      "Does NOT replace clinical judgment",
+      "Does NOT generate novel drug candidates",
+      "Does NOT claim FDA-cleared diagnostic status",
+      "Does NOT use PATH B formula (cosine similarity with ‖p‖₂ in denominator) — PROHIBITED",
+      "Does NOT cite LATIFY delta values (QUARANTINED — version conflict unresolved)",
+      "Does NOT claim GBM ZEB1 as an escape marker (PERMANENTLY CLOSED)",
+      "Does NOT claim BRIEF-2 (PTEN-null→ITGAV) is CRISPR-validated (COMPUTATIONAL HYPOTHESIS)"
+    ]
+  },
+  "capability_registry": {
+    "CAP_01": {
+      "id": "CAP-01",
+      "name": "8D Patient Vector Construction",
+      "what_it_does": "Constructs an 8-dimensional patient biology vector from molecular profiling data (NGS, IHC, ctDNA, imaging)",
+      "inputs": [
+        "NGS panel (KRAS, NRAS, BRAF, ATM, BRCA1/2, PTEN, PIK3CA, CCNE1)",
+        "IHC (PD-L1, CEACAM5, CD8+, FOXP3)",
+        "ctDNA (pTMB, VAF)",
+        "Imaging (liver metastasis status)"
+      ],
+      "output": "8D patient vector p = [ddr, mapk, pi3k, vegf, her2, io, efflux, rss] ∈ [0,1]⁸",
+      "evidence_tier": "COMPUTED",
+      "validated_on": [
+        "BreAK CRC-001 (p_vector_locked.json)",
+        "LATIFY (responder 0.8936 vs non-responder 0.6295)"
+      ],
+      "cannot_do": "Cannot construct patient vector without molecular profiling data. Cannot infer axis values from clinical features alone.",
+      "source": "mechanism_fit_ranker.py; 8d_verified_claims.md V1"
+    },
+    "CAP_02": {
+      "id": "CAP-02",
+      "name": "Mechanism Fit Engine (PATH A)",
+      "what_it_does": "Computes fit = clip((p·t)/‖t‖₂, 0, 1) between patient vector p and trial vector t. Returns fit score, axis contributions, and fit label.",
+      "formula": "fit = clip((p·t) / ‖t‖₂, 0, 1)",
+      "formula_status": "PATH A — LOCKED 2026-04-28",
+      "output_labels": {
+        "0.0-0.4": "LOW",
+        "0.4-0.6": "MODERATE",
+        "0.6-0.8": "MODERATE-HIGH",
+        "0.8-1.0": "HIGH"
+      },
+      "evidence_tier": "COMPUTED",
+      "validated_on": [
+        "BreAK CRC-001: fit=0.7375 (MODERATE-HIGH)",
+        "LATIFY: responder 0.8936 vs non-responder 0.6295"
+      ],
+      "cannot_do": "Cannot compute fit without both patient vector and trial vector. PATH B formula is PROHIBITED.",
+      "source": "mechanism_fit_ranker.py; 8d_verified_claims.md V2–V5"
+    },
+    "CAP_03": {
+      "id": "CAP-03",
+      "name": "Trial Vector Library",
+      "what_it_does": "Maintains a curated library of 8D trial mechanism vectors for all programs in the CrisPRO corpus (22+ trials)",
+      "trial_count": 22,
+      "evidence_tier": "COMPUTED",
+      "validated_on": [
+        "Block4 8D path matrix v2 (8 trials)",
+        "IO Core (7 trials)",
+        "IO Appendix (15 trials)",
+        "CEACAM5 (5 trials)",
+        "ATR/DDR (5 trials)"
+      ],
+      "cannot_do": "Cannot generate trial vectors for trials not in the corpus without manual curation.",
+      "source": "block4_8d_path_matrix_v2.csv; program_asset_*.json files"
+    },
+    "CAP_04": {
+      "id": "CAP-04",
+      "name": "Target-Lock (Metastasis Driver Identification)",
+      "what_it_does": "Identifies genuine metastasis drivers using a composite algorithm: Evo2-7B (evolutionary constraint) + Enformer (chromatin accessibility) + AlphaFold 3 (structural confidence). Composite threshold ≥0.35 = genuine driver.",
+      "algorithm": {
+        "evo2_7b": "Evolutionary constraint — likelihood of WT vs mutant under evolutionary selection. High constraint = gene is under purifying selection = likely essential.",
+        "enformer": "Chromatin accessibility and gene regulatory activity — predicts ATAC-seq/ChIP-seq from DNA sequence. High activity = gene is actively transcribed in the tumor.",
+        "alphafold3": "Structural confidence (pLDDT score [0,100]) — higher = more structured = more druggable."
+      },
+      "evidence_tier": "COMPUTED",
+      "validated_on": [
+        "OV ZEB1: HR=1.4803 (continuous Cox, bevacizumab arm OS)",
+        "CEACAM5 IHC ↔ cCEA Spearman ρ=0.43 (n=92)"
+      ],
+      "cannot_do": "CEACAM5 is NOT in the 38-gene panel — Target-Lock run not executed for CEACAM5. GBM ZEB1 is PERMANENTLY CLOSED.",
+      "source": "ceacam5_cap_map.md; gate_arch_v2.md; program_asset_gbm_escapemap.json"
+    },
+    "CAP_05": {
+      "id": "CAP-05",
+      "name": "SL Therapy Bridge v3",
+      "what_it_does": "Maps patient SL vulnerabilities to actionable drugs with ALLOW/WARN/DISALLOW policy overlay. 20/20 tests PASS.",
+      "evidence_tier": "COMPUTED",
+      "validated_on": [
+        "20/20 unit tests PASS (crispro_v3_sl_bridge_audit.md)"
+      ],
+      "cannot_do": "TP53 and genes not in SL_THERAPY_MAP return no sl_indicated_drugs. BRIEF-2 (PTEN-null→ITGAV) is NOT in SL_THERAPY_MAP.",
+      "source": "crispro_v3_sl_bridge_audit.md; PR #5"
+    },
+    "CAP_06": {
+      "id": "CAP-06",
+      "name": "BRIEF Program Asset Generation",
+      "what_it_does": "Identifies synthetic lethality pairs from CRISPR functional genomics (DepMap), computes delta scores, applies FDR correction, and validates with targeted CRISPR experiments.",
+      "evidence_tier": "CRISPR_VALIDATED (BRIEF-1, BRIEF-4) / COMPUTATIONAL_HYPOTHESIS (BRIEF-2) / MECHANISTICALLY_GROUNDED (BRIEF-3)",
+      "validated_on": [
+        "BRIEF-1: ZEB1→ITGAV, delta=−0.7184, FDR=0.001203, CRISPR_VALIDATED",
+        "BRIEF-4: SPP1→NRF2, delta=−0.7326, FDR=8×10⁻⁶, CRISPR_VALIDATED"
+      ],
+      "cannot_do": "BRIEF-2 (PTEN-null→ITGAV) is COMPUTATIONAL HYPOTHESIS — DepMap NULL. Must disclose in every context.",
+      "source": "crispro_ip_valuation_glb_v1.mdc; crispro_master_pipeline.json ip_estate"
+    },
+    "CAP_07": {
+      "id": "CAP-07",
+      "name": "EscapeMap (Bevacizumab Biomarker Stratification)",
+      "what_it_does": "Characterizes ZEB1 as a prognostic biomarker in the bevacizumab arm using Cox regression, median-split, and tertile analyses.",
+      "evidence_tier": "COMPUTED",
+      "validated_on": [
+        "OV ZEB1 continuous Cox: HR=1.4803 (95% CI [1.1188, 1.9586], p=0.006042)",
+        "OV ZEB1 median split: HR=2.500 (FDR=0.0499)",
+        "M2 stratum calibration: GEO 74.0% vs published 73.9%"
+      ],
+      "cannot_do": "GBM ZEB1 is PERMANENTLY CLOSED — 3 datasets all null/contradicted. Arm interaction p=0.246 — ZEB1 is PROGNOSTIC, NOT ARM-SPECIFIC.",
+      "source": "ovarian_io_verified_metrics.md; program_asset_gbm_escapemap.json"
+    },
+    "CAP_08": {
+      "id": "CAP-08",
+      "name": "Two-Gate Patient Selection Framework",
+      "what_it_does": "Implements a two-gate patient selection framework for CEACAM5-targeted therapies: Gate 1 = IHC ≥80% (~28% of MSS mCRC); Gate 2 = IO permissiveness (pTMB ≥28 OR Immunoscore-IC high OR CD8+ TIL density high).",
+      "evidence_tier": "COMPUTED",
+      "validated_on": [
+        "CARMEN-LC03: IHC ≥80% OS HR=0.71 (post-hoc) vs IHC 50–79% PFS HR=1.38 (harmful)",
+        "CO.26: pTMB ≥28 OS HR=0.34 (90% CI 0.18–0.63)"
+      ],
+      "cannot_do": "Gate 1 fraction (28%) is OPEN_ASSUMPTION OA-08 — not validated in prospective data.",
+      "source": "ceacam5_cap_map.md; gate_arch_v2.md; SANOFI_SOURCE_OF_TRUTH.md"
+    },
+    "CAP_09": {
+      "id": "CAP-09",
+      "name": "Vector-Scalpel Biomarker Ranking",
+      "what_it_does": "Ranks biomarkers by their discriminative power for patient selection using the Vector-Scalpel algorithm.",
+      "evidence_tier": "COMPUTED",
+      "validated_on": [
+        "CEACAM5 ranking: cCEA (27/33) > pTMB (23/33) > IHC (20/33) > Immunoscore (19/33) > DetermaIO (15/33)"
+      ],
+      "cannot_do": "Ranking is specific to the CEACAM5 program — not generalizable to other programs without re-running.",
+      "source": "ceacam5_cap_map.md; gate_arch_v2.md"
+    },
+    "CAP_10": {
+      "id": "CAP-10",
+      "name": "Holistic Score Engine",
+      "what_it_does": "Combines mechanism fit (40%), eligibility (30%), pharmacogenomic safety (15%), and resistance risk (15%) into a single holistic score.",
+      "formula": "holistic = 0.4×mechanism_fit + 0.3×eligibility + 0.15×pgx_safety + 0.15×resistance_risk",
+      "evidence_tier": "COMPUTED",
+      "validated_on": [
+        "VC-15 — verified claim from crispro-backend-v3/layer1_engines/holistic_score/models.py"
+      ],
+      "cannot_do": "Cannot compute holistic score without all four component scores.",
+      "source": "crispro-backend-v3/layer1_engines/holistic_score/models.py (VC-15)"
+    }
+  },
+  "governance_guardrails": {
+    "formula_governance": {
+      "path_a_status": "LOCKED — approved by Fahad Kiani 2026-04-28",
+      "path_a_formula": "fit = clip((p·t) / ‖t‖₂, 0, 1)",
+      "path_b_status": "PROHIBITED — cosine similarity with ‖p‖₂ in denominator",
+      "path_b_prohibition": "PATH B is prohibited in ALL outputs. Any output using ‖p‖₂ in the denominator is invalid.",
+      "source": "formula_governance/path_a_manager_decision_record.md"
+    },
+    "quarantined_items": {
+      "DL_07": {
+        "item": "DDR 0.983 figure",
+        "status": "QUARANTINED — publication-blocking",
+        "reason": "DDR axis value 0.983 is implausibly high — likely a computation error. Cannot be published until resolved.",
+        "action_required": "Recompute DDR axis value from source data"
+      },
+      "CT_03_DL_05_PC_06": {
+        "item": "LATIFY delta values",
+        "status": "QUARANTINED — vector version conflict",
+        "reason": "Patent cites delta +0.366; receipt cites delta +0.2641. Vector version unresolved.",
+        "action_required": "Resolve vector version conflict before citing any LATIFY delta value",
+        "safe_to_cite": "Responder score 0.8936 vs non-responder 0.6295 — CORRECT CITATION"
+      },
+      "PC_02": {
+        "item": "retroactive_prediction_run.py --trial-vectors",
+        "status": "PERMANENTLY DOWNGRADED",
+        "reason": "Script does not reproduce documented deltas cleanly",
+        "action_required": "Fix retroactive_prediction_run.py before any claim about retroactive prediction accuracy"
+      }
+    },
+    "active_conflicts": {
+      "SC_001": {
+        "conflict": "CT26 carries BRAF V600E (ATCC/CCLE/COSMIC). BreAK CRC-001 Exclusion Criterion #7 requires BRAF wild-type patients.",
+        "status": "ACTIVE CONFLICT — must be resolved before enrollment",
+        "action_required": "Brenus Pharma must address CT26 BRAF V600E in the STC-1010 IND"
+      }
+    },
+    "permanently_closed": {
+      "GBM_ZEB1": {
+        "status": "PERMANENTLY CLOSED",
+        "reason": "Three datasets all null or contradicted: GLASS (delta=−0.34, p=0.000184), GSE222515 (delta=−0.431, p=0.0334), GSE174554 snRNA-seq (delta=−0.076, p=0.742)",
+        "operational_meaning": "Do not apply EscapeMap to GBM. Do not reopen without new evidence."
+      }
+    },
+    "mandatory_disclosures": [
+      "BRIEF-2 (PTEN-null→ITGAV) is a COMPUTATIONAL HYPOTHESIS — DepMap NULL across all 3 proxies — not CRISPR-validated. Must disclose in every context.",
+      "BRIEF-3 correlation r=0.050, p=0.780 is statistically insignificant. BRIEF-3 is MECHANISTICALLY_GROUNDED, not CRISPR_VALIDATED.",
+      "LATIFY delta values are QUARANTINED — do not cite any specific delta value.",
+      "GBM ZEB1 is PERMANENTLY CLOSED — do not claim ZEB1 as a GBM escape marker.",
+      "OV ZEB1 arm interaction p=0.246 — ZEB1 is PROGNOSTIC, NOT ARM-SPECIFIC.",
+      "Gate 1 fraction (28%) is OPEN_ASSUMPTION OA-08 — not validated in prospective data.",
+      "All deal figures are benchmarks from comparable transactions — not guaranteed outcomes.",
+      "CrisPRO does NOT predict individual patient outcomes and is NOT a clinical decision support tool."
+    ],
+    "prohibited_claims": [
+      "CrisPRO predicts individual patient outcomes",
+      "CrisPRO is FDA-cleared or CE-marked",
+      "BRIEF-2 (PTEN-null→ITGAV) is CRISPR-validated",
+      "GBM ZEB1 is an escape marker",
+      "LATIFY delta is [any specific value]",
+      "PATH B formula is acceptable",
+      "DDR 0.983 is a validated figure",
+      "retroactive_prediction_run.py reproduces documented deltas"
+    ]
+  },
+  "matching_rules_v2": [
+    {
+      "rule_id": "R-01",
+      "confidence": "HIGH",
+      "trigger": "indication_keywords contains 'MSS' OR 'pMMR' AND 'colorectal'",
+      "action": "ACTIVATE program_BREAK_CRC_001 + program_IO_CORE + program_CEACAM5",
+      "rationale": "MSS/pMMR CRC is the primary indication for BreAK CRC-001 and the IO Core corpus. CEACAM5 is expressed in 98.7% of CRC.",
+      "evidence": "BreAK CRC-001 NCT06934538; CO.26; TRIBE2"
+    },
+    {
+      "rule_id": "R-02",
+      "confidence": "HIGH",
+      "trigger": "target_keywords contains 'CEACAM5' OR 'CEA'",
+      "action": "ACTIVATE program_CEACAM5; REQUIRE Gate 1 (IHC ≥80%) + Gate 2 (IO permissiveness)",
+      "rationale": "CEACAM5 IHC ≥80% is the validated selection threshold. IHC 50–79% is HARMFUL (PFS HR=1.38).",
+      "evidence": "CARMEN-LC03; PROCEADE-CRC-01; gate_arch_v2.md"
+    },
+    {
+      "rule_id": "R-03",
+      "confidence": "HIGH",
+      "trigger": "target_keywords contains 'ATR' OR 'WEE1' OR 'PARP'",
+      "action": "ACTIVATE program_ATR_DDR; REQUIRE RS score + PTEN status",
+      "rationale": "ATR/WEE1/PARP inhibitors require DDR biomarker selection. RS-High ORR 40% vs RS-Low 5% (berzosertib).",
+      "evidence": "Berzosertib; Adavosertib; CAPRI"
+    },
+    {
+      "rule_id": "R-04",
+      "confidence": "HIGH",
+      "trigger": "failure_mode_keywords contains 'liver metastasis' OR 'NLM'",
+      "action": "FLAG GAP-01; REQUIRE liver metastasis stratification; CITE CO.26 Pint=0.02",
+      "rationale": "Liver metastasis is the single most important IO stratification variable in MSS CRC. CO.26 liver-met PFS HR=1.39 (HARMFUL) vs no-LM HR=0.54.",
+      "evidence": "CO.26; REGONIVO US (0/5 liver-met responders)"
+    },
+    {
+      "rule_id": "R-05",
+      "confidence": "HIGH",
+      "trigger": "biomarker_keywords contains 'pTMB' OR 'plasma TMB'",
+      "action": "CITE CO.26 pTMB ≥28 OS HR=0.34; WARN tissue TMB is NOT a substitute (r=0.13, p=0.20)",
+      "rationale": "pTMB ≥28 is the strongest IO enrichment signal in MSS CRC from randomized data. Tissue TMB has poor correlation with pTMB in CRC.",
+      "evidence": "CO.26; SANOFI_SOURCE_OF_TRUTH.md"
+    },
+    {
+      "rule_id": "R-06",
+      "confidence": "HIGH",
+      "trigger": "mechanism_keywords contains 'checkpoint' OR 'PD-1' OR 'PD-L1' AND indication contains 'MSS'",
+      "action": "ACTIVATE program_IO_CORE; CITE three conditions for IO benefit; WARN pharmacodynamic dissociation risk",
+      "rationale": "IO in MSS CRC requires all three conditions: NLM + pTMB ≥28 + inflamed TME. Unselected MSS CRC has <5% ORR to checkpoint inhibitors.",
+      "evidence": "CheckMate 142 MSS (ORR 0%); CO.26; AtezoTRIBE"
+    },
+    {
+      "rule_id": "R-07",
+      "confidence": "HIGH",
+      "trigger": "mechanism_keywords contains 'KRAS' AND 'MEK inhibitor'",
+      "action": "CITE IMblaze370 failure (OS null); WARN cobimetinib suppresses T cell proliferation",
+      "rationale": "MEK inhibition in MSS CRC failed in Phase III (IMblaze370). Cobimetinib is antagonistic to IO.",
+      "evidence": "IMblaze370; IO failure archetype: MEK inhibition failure"
+    },
+    {
+      "rule_id": "R-08",
+      "confidence": "HIGH",
+      "trigger": "mechanism_keywords contains 'BRCA' OR 'PARP' AND failure_mode contains 'post-PARPi'",
+      "action": "ACTIVATE program_ATR_DDR CAPRI; CITE BRCA reversion + ABCB1 + RAD51 restoration resistance mechanisms",
+      "rationale": "Post-PARPi resistance has three mechanisms: BRCA reversion, ABCB1 upregulation, RAD51 restoration. CAPRI ORR 4% post-PARPi vs 36% naive.",
+      "evidence": "CAPRI; program_ATR_DDR"
+    },
+    {
+      "rule_id": "R-09",
+      "confidence": "HIGH",
+      "trigger": "mechanism_keywords contains 'ZEB1' AND indication contains 'ovarian'",
+      "action": "ACTIVATE CAP_07_EscapeMap; CITE HR=1.4803 (continuous Cox); WARN arm interaction p=0.246 (PROGNOSTIC NOT ARM-SPECIFIC)",
+      "rationale": "ZEB1 is a validated prognostic marker in the bevacizumab arm of ovarian cancer. Arm interaction is not significant.",
+      "evidence": "GOG-0218; ovarian_io_verified_metrics.md"
+    },
+    {
+      "rule_id": "R-10",
+      "confidence": "HIGH",
+      "trigger": "mechanism_keywords contains 'ZEB1' AND indication contains 'GBM' OR 'glioblastoma'",
+      "action": "BLOCK — GBM ZEB1 is PERMANENTLY CLOSED; DO NOT ACTIVATE EscapeMap for GBM",
+      "rationale": "Three datasets all null or contradicted. ZEB1 DECREASES in recurrent GBM — opposite of escape hypothesis.",
+      "evidence": "GLASS; GSE222515; GSE174554"
+    },
+    {
+      "rule_id": "R-11",
+      "confidence": "MODERATE",
+      "trigger": "mechanism_keywords contains 'vaccine' OR 'whole-cell' OR 'ICD'",
+      "action": "ACTIVATE program_BREAK_CRC_001; CITE QUILT-2.004 design precedent (HR 1.061); REQUIRE three conditions for IO benefit",
+      "rationale": "Whole-cell vaccine mechanisms in MSS CRC require IO permissiveness. QUILT-2.004 failed in unselected MSS CRC.",
+      "evidence": "QUILT-2.004; BreAK CRC-001; STC-1010 mechanism"
+    },
+    {
+      "rule_id": "R-12",
+      "confidence": "MODERATE",
+      "trigger": "mechanism_keywords contains 'bevacizumab' OR 'VEGF' AND indication contains 'CRC'",
+      "action": "CITE TRIBE2 canonical benchmark (mPFS 9.8 mo, ORR 50%, mOS 22.5 mo); WARN BECOME inflates mOS (liver-limited selection)",
+      "rationale": "TRIBE2 is the canonical comparator for mFOLFOX6 + bev in 1L mCRC. BECOME is liver-limited and inflates mOS.",
+      "evidence": "TRIBE2; BECOME; SANOFI_SOURCE_OF_TRUTH.md"
+    },
+    {
+      "rule_id": "R-13",
+      "confidence": "MODERATE",
+      "trigger": "mechanism_keywords contains 'PTEN' AND 'WEE1'",
+      "action": "ACTIVATE program_ATR_DDR Adavosertib; WARN PTEN-loss PFS HR=1.82 (HARMFUL); REQUIRE PTEN status",
+      "rationale": "PTEN-loss creates CDK2 dependency that PROTECTS against WEE1i. PTEN-intact ORR 23% vs PTEN-loss ORR 0%.",
+      "evidence": "Adavosertib; program_ATR_DDR"
+    },
+    {
+      "rule_id": "R-14",
+      "confidence": "MODERATE",
+      "trigger": "mechanism_keywords contains 'synthetic lethality' OR 'CRISPR screen'",
+      "action": "ACTIVATE CAP_06_BRIEF; CITE BRIEF-1 (CRISPR_VALIDATED, deal_ready=true); DISCLOSE BRIEF-2 (COMPUTATIONAL_HYPOTHESIS)",
+      "rationale": "BRIEF-1 and BRIEF-4 are CRISPR-validated SL assets. BRIEF-2 is a computational hypothesis — mandatory disclosure.",
+      "evidence": "crispro_ip_valuation_glb_v1.mdc; BRIEF program assets"
+    },
+    {
+      "rule_id": "R-15",
+      "confidence": "MODERATE",
+      "trigger": "mechanism_keywords contains 'Immunoscore' OR 'CD8' AND indication contains 'CRC'",
+      "action": "CITE AtezoTRIBE Immunoscore-IC high HR ~0.50 (exploratory); ACTIVATE MOD-05",
+      "rationale": "Immunoscore-IC is the best validated TME profiling tool in CRC. High Immunoscore-IC correlates with IO benefit.",
+      "evidence": "AtezoTRIBE; program_IO_CORE"
+    },
+    {
+      "rule_id": "R-16",
+      "confidence": "MODERATE",
+      "trigger": "mechanism_keywords contains 'regorafenib' AND 'nivolumab'",
+      "action": "ACTIVATE program_IO_CORE REGONIVO; CITE US ORR 7% (5/70); CITE Japan ORR 33% (all 8 responders NLM)",
+      "rationale": "REGONIVO US failed in unselected MSS CRC. Japan success was entirely in NLM patients — confirms liver metastasis as the key stratification variable.",
+      "evidence": "REGONIVO US; REGONIVO Japan; program_IO_CORE"
+    },
+    {
+      "rule_id": "R-17",
+      "confidence": "MODERATE",
+      "trigger": "mechanism_keywords contains 'CCNE1' OR 'CDK2' OR 'replication stress'",
+      "action": "ACTIVATE program_ATR_DDR Berzosertib; CITE RS score algorithm (CCNE1 amp + CDK2 + RRM2 + CDC45 + CLASPIN)",
+      "rationale": "RS-High patients have CCNE1 amplification and CDK2 overactivity — they are dependent on ATR for replication stress management.",
+      "evidence": "Berzosertib; program_ATR_DDR"
+    },
+    {
+      "rule_id": "R-18",
+      "confidence": "MODERATE",
+      "trigger": "mechanism_keywords contains 'STK11' OR 'KEAP1'",
+      "action": "ACTIVATE program_ATR_DDR LATIFY; CITE responder 0.8936 vs non-responder 0.6295; DO NOT CITE delta (QUARANTINED)",
+      "rationale": "LATIFY uses STK11/KEAP1 gate for patient selection. Delta values are QUARANTINED — only cite responder/non-responder scores.",
+      "evidence": "LATIFY; CT-03 quarantine"
+    },
+    {
+      "rule_id": "R-19",
+      "confidence": "MODERATE",
+      "trigger": "mechanism_keywords contains 'TGF-beta' OR 'CAF' OR 'stromal barrier'",
+      "action": "ACTIVATE MOD-15 (Stromal Barrier); CITE immune exclusion domain; WARN pharmacodynamic dissociation risk",
+      "rationale": "TGF-β and CAFs create the stromal barrier that excludes T cells from the tumor center. This is the dominant failure mode in immune-excluded MSS CRC.",
+      "evidence": "biomarker_biology_6domains; program_IO_CORE failure archetypes"
+    },
+    {
+      "rule_id": "R-20",
+      "confidence": "MODERATE",
+      "trigger": "mechanism_keywords contains 'GVAX' OR 'guadecitabine'",
+      "action": "CITE GVAX ORR 0% (0/22 despite confirmed T-cell responses); WARN pharmacodynamic dissociation",
+      "rationale": "GVAX confirmed T-cell priming but zero tumor responses — the canonical pharmacodynamic dissociation example in MSS CRC.",
+      "evidence": "GVAX; program_IO_CORE failure archetypes"
+    },
+    {
+      "rule_id": "R-21",
+      "confidence": "CONDITIONAL",
+      "trigger": "mechanism_keywords contains 'neoantigen' OR 'tumor mutational burden' AND indication contains 'MSS'",
+      "action": "REQUIRE pTMB (GuardantOMNI) — tissue TMB is NOT a substitute; CITE r=0.13, p=0.20",
+      "rationale": "Tissue TMB has poor correlation with pTMB in CRC. pTMB ≥28 is the validated threshold.",
+      "evidence": "CO.26; SANOFI_SOURCE_OF_TRUTH.md"
+    },
+    {
+      "rule_id": "R-22",
+      "confidence": "CONDITIONAL",
+      "trigger": "mechanism_keywords contains 'CEACAM5' AND 'IHC' AND score_range '50-79%'",
+      "action": "WARN IHC 50–79% is HARMFUL (PFS HR=1.38); REQUIRE IHC ≥80% for Gate 1",
+      "rationale": "CARMEN-LC03 showed IHC 50–79% is numerically harmful. Only IHC ≥80% showed directional OS benefit.",
+      "evidence": "CARMEN-LC03; gate_arch_v2.md"
+    },
+    {
+      "rule_id": "R-23",
+      "confidence": "CONDITIONAL",
+      "trigger": "mechanism_keywords contains 'PTEN' AND 'ITGAV'",
+      "action": "BLOCK — BRIEF-2 (PTEN-null→ITGAV) is COMPUTATIONAL HYPOTHESIS; DISCLOSE DepMap NULL; DO NOT RECOMMEND as SL therapy",
+      "rationale": "BRIEF-2 DepMap NULL across all 3 proxies. Not CRISPR-validated. Mandatory disclosure.",
+      "evidence": "crispro_ip_valuation_glb_v1.mdc; BRIEF-2 status"
+    },
+    {
+      "rule_id": "R-24",
+      "confidence": "CONDITIONAL",
+      "trigger": "mechanism_keywords contains 'LATIFY' OR 'NCT05450692'",
+      "action": "CITE responder 0.8936 vs non-responder 0.6295; DO NOT CITE delta (QUARANTINED); CITE STK11/KEAP1 gate",
+      "rationale": "LATIFY delta values are QUARANTINED — version conflict between patent (+0.366) and receipt (+0.2641) unresolved.",
+      "evidence": "CT-03 quarantine; LATIFY program asset"
+    },
+    {
+      "rule_id": "R-25",
+      "confidence": "CONDITIONAL",
+      "trigger": "mechanism_keywords contains 'BRAF' AND 'BreAK' OR 'STC-1010'",
+      "action": "FLAG SC-001 ACTIVE CONFLICT — CT26 carries BRAF V600E; BreAK CRC-001 requires BRAF WT; REQUIRE resolution before enrollment",
+      "rationale": "SC-001 is an active scientific conflict that must be resolved before BreAK CRC-001 enrollment.",
+      "evidence": "SC-001 conflict registry; BreAK CRC-001 Exclusion Criterion #7"
+    }
+  ],
+  "offering_catalog": [
+    {
+      "offering_id": "OFF-01",
+      "name": "Fit-Gap Analysis",
+      "description": "Full PATH A fit score computation + 4-gap design risk inventory for a specific trial",
+      "deliverable": "Fit score, axis contributions, gap inventory, module recommendations",
+      "turnaround": "5–7 business days",
+      "evidence_anchor": "BreAK CRC-001: fit=0.7375, 4 gaps identified, 15 modules defined",
+      "pitch_template": "CrisPRO computed a 0.7375 MODERATE-HIGH fit score for BreAK CRC-001 and identified 4 design gaps — including a CRITICAL gap in liver metastasis stratification that mirrors the CO.26 failure mode. We can run the same analysis for [trial name] in 5–7 business days."
+    },
+    {
+      "offering_id": "OFF-02",
+      "name": "Biomarker Strategy Package",
+      "description": "Two-gate patient selection framework + biomarker ranking + prospective collection plan",
+      "deliverable": "Gate 1 + Gate 2 framework, Vector-Scalpel biomarker ranking, collection protocol",
+      "turnaround": "7–10 business days",
+      "evidence_anchor": "CEACAM5: cCEA (27/33) > pTMB (23/33) > IHC (20/33) > Immunoscore (19/33) > DetermaIO (15/33)",
+      "pitch_template": "CrisPRO's Vector-Scalpel ranked 5 CEACAM5 biomarkers by discriminative power — cCEA outperformed IHC in 27/33 comparisons. We can run the same ranking for [biomarker set] in 7–10 business days."
+    },
+    {
+      "offering_id": "OFF-03",
+      "name": "Comparator Trial Decode",
+      "description": "Full 8D vector decode of comparator trials with failure mode analysis and transfer lessons",
+      "deliverable": "8D vectors for all comparator trials, failure mode taxonomy, transfer lessons",
+      "turnaround": "5–7 business days",
+      "evidence_anchor": "22+ trials decoded across IO Core, IO Appendix, CEACAM5, ATR/DDR, BreAK CRC programs",
+      "pitch_template": "CrisPRO decoded 22+ trials in the MSS CRC IO space and identified 4 failure archetypes. We can decode [trial set] and identify the failure modes relevant to [program] in 5–7 business days."
+    },
+    {
+      "offering_id": "OFF-04",
+      "name": "SL Asset Identification",
+      "description": "BRIEF program generation — CRISPR functional genomics analysis to identify synthetic lethality pairs",
+      "deliverable": "Delta scores, FDR values, CRISPR validation status, licensing readiness assessment",
+      "turnaround": "2–4 weeks",
+      "evidence_anchor": "BRIEF-1: ZEB1→ITGAV, delta=−0.7184, FDR=0.001203, CRISPR_VALIDATED, DEAL_READY",
+      "pitch_template": "CrisPRO identified BRIEF-1 (ZEB1→ITGAV) as a CRISPR-validated SL asset with delta=−0.7184 and FDR=0.001203. We can run the same analysis for [gene pair / indication] in 2–4 weeks."
+    },
+    {
+      "offering_id": "OFF-05",
+      "name": "EscapeMap Biomarker Analysis",
+      "description": "Cox regression + median-split + tertile analysis for a prognostic biomarker in a specific trial arm",
+      "deliverable": "Continuous Cox HR, multivariable Cox HR, arm interaction test, median-split HR, tertile analysis",
+      "turnaround": "1–2 weeks",
+      "evidence_anchor": "OV ZEB1: HR=1.4803 (continuous Cox), HR=2.500 (median split, FDR=0.0499), arm interaction p=0.246",
+      "pitch_template": "CrisPRO characterized ZEB1 as a prognostic marker in the GOG-0218 bevacizumab arm with HR=1.4803 (continuous Cox). We can run the same analysis for [biomarker] in [trial] in 1–2 weeks."
+    }
+  ],
+  "snippet_v2_content": "# CrisPRO Knowledge Graph v2 — System Prompt Snippet\n\n## ROLE\nYou are a CrisPRO-grounded scientific assistant. CrisPRO is a mechanism-alignment engine that encodes patient biology and trial mechanisms in a shared 8D vector space and computes fit = clip((p·t)/‖t‖₂, 0, 1) [PATH A, LOCKED 2026-04-28].\n\n## 8D AXES\nddr | mapk | pi3k | vegf | her2 | io | efflux | rss\n\n## PROGRAMS (7)\n| Program | Indication | Key Fit/Result | Primary Failure Risk |\n|---|---|---|---|\n| BREAK_CRC_001 | 1L MSS mCRC | fit=0.7375 (MODERATE-HIGH) | D2 Selection (GAP-01 liver-met, GAP-02 pTMB) |\n| IO_CORE | MSS mCRC IO | 3 conditions: NLM + pTMB≥28 + inflamed TME | D1 Biology (pharmacodynamic dissociation) |\n| CEACAM5 | MSS mCRC / NSCLC | Gate1: IHC≥80%; Gate2: IO permissive | D2 Selection (IHC 50-79% HARMFUL HR=1.38) |\n| ATR_DDR | DDR-deficient solid tumors | RS-High ORR 40% vs RS-Low 5% | D2 Selection (PTEN-loss HARMFUL HR=1.82) |\n| BRIEF_SL | NSCLC BrM | BRIEF-1: ZEB1→ITGAV, delta=−0.7184, CRISPR_VALIDATED | BRIEF-2: COMPUTATIONAL_HYPOTHESIS (DepMap NULL) |\n| ESCAPEMAP_OV | Ovarian (bev arm) | ZEB1 HR=1.4803 (continuous Cox) | Arm interaction p=0.246 (PROGNOSTIC NOT ARM-SPECIFIC) |\n| HISTORICAL_BENCHMARKS | 1L mCRC | TRIBE2: mPFS 9.8mo, ORR 50%, mOS 22.5mo | BECOME inflates mOS (liver-limited selection) |\n\n## 4-STEP MATCHING WORKFLOW\n1. Extract indication + target + mechanism + failure mode keywords from abstract\n2. Apply matching rules R-01 through R-25 (see matching_rules_v2)\n3. Activate relevant programs; compute fit score if patient vector available\n4. Apply governance guardrails: check quarantine list, mandatory disclosures, prohibited claims\n\n## GOVERNANCE GUARDRAILS (MANDATORY)\n- PATH B: PROHIBITED\n- LATIFY delta: QUARANTINED (cite responder 0.8936 vs non-responder 0.6295 only)\n- GBM ZEB1: PERMANENTLY CLOSED\n- BRIEF-2: COMPUTATIONAL HYPOTHESIS — disclose in every context\n- DL-07 (DDR 0.983): QUARANTINED\n- SC-001: ACTIVE CONFLICT (CT26 BRAF V600E vs BreAK CRC-001 BRAF WT requirement)\n\n## KEY QUANTITATIVE ANCHORS\n- CO.26 pTMB≥28 OS HR: 0.34 (90% CI 0.18–0.63, p=0.022)\n- CO.26 liver-met PFS HR: 1.39 (HARMFUL) vs no-LM HR: 0.54 (Pint=0.02)\n- TRIBE2 control: mPFS 9.8mo (95% CI 9.0–10.5), ORR 50%, mOS 22.5mo\n- BRIEF-1: delta=−0.7184, FDR=0.001203, CRISPR_VALIDATED\n- BRIEF-4: delta=−0.7326, FDR=8×10⁻⁶, CRISPR_VALIDATED\n- OV ZEB1 continuous Cox: HR=1.4803 (95% CI [1.1188, 1.9586], p=0.006042)\n- REGONIVO US: ORR 7% (5/70); liver-met responders 0/5; no-LM ORR 22% (5/23)\n- CEACAM5 any-positivity in CRC: 98.7% (Jansen et al. Cancers 2024)\n- pTMB vs tissue TMB Spearman r: 0.13 (p=0.20) — tissue is NOT a substitute\n"
+}

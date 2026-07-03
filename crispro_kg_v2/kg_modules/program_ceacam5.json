@@ -1,0 +1,274 @@
+{
+  "program_id": "CEACAM5",
+  "program_name": "CEACAM5-Targeted Therapy Failure Corpus",
+  "admissibility": "external_safe",
+  "glb_set_investment": "Not quantified in source files \u2014 5 trials",
+  "active_engagement": "Sanofi (SAR445953 + SAR445877) \u2014 finalist pitch July 1 2026",
+  "what_ceacam5_is": {
+    "full_name": "Carcinoembryonic antigen-related cell adhesion molecule 5",
+    "biology": "CEACAM5 is a GPI-anchored glycoprotein overexpressed on the surface of colorectal, lung, gastric, and pancreatic cancer cells. It mediates cell-cell adhesion, promotes invasion and metastasis, and suppresses immune recognition by binding inhibitory receptors on NK cells and T cells. In normal tissue, CEACAM5 expression is restricted to the apical surface of intestinal epithelium \u2014 making it a tumor-selective target with a therapeutic window.",
+    "why_it_matters_in_crc": "CEACAM5 is expressed in 98.7% of CRC tumors (Jansen et al. Cancers 2024). MSS CRC has HIGHER CEACAM5 expression than MSI-H CRC (MMR deficiency reduces CEA production, P<0.0001). This makes CEACAM5 one of the most tumor-selective targets in MSS mCRC \u2014 the challenge is not target expression but patient selection threshold.",
+    "serum_cea_as_proxy": "Serum CEA (cCEA) is a liquid biopsy proxy for CEACAM5 IHC expression. cCEA \u2265100 ng/mL correlates with IHC high-expressing tumors (Spearman \u03c1=0.43, n=92). In NSCLC: cCEA \u2265100 ORR 41.7% vs 8.1% (P=0.003) in CEACAM5-high patients."
+  },
+  "two_gate_architecture": {
+    "description": "CrisPRO's two-gate patient selection framework for CEACAM5-targeted programs",
+    "gate_1": {
+      "name": "CEACAM5 Expression Gate",
+      "threshold": "IHC \u226580% (H-score or percentage of cells staining \u22652+)",
+      "rationale": "CARMEN-LC03 enrolled at IHC \u226550% \u2014 this captured 72% of patients who could not respond. The \u226580% subgroup showed directional OS benefit (HR=0.71, post-hoc). The \u226550\u201379% subgroup showed numerically harmful PFS (HR=1.38). The gate must be \u226580% to enrich for responders.",
+      "population_fraction": "~28% of MSS mCRC patients (OPEN_ASSUMPTION OA-08 \u2014 CARMEN-LC03 NSCLC proxy; CRC-specific data not available)",
+      "liquid_biopsy_proxy": "cCEA \u2265100 ng/mL (NSCLC data only \u2014 CRC application by inference)",
+      "crc_caveat": "In PROCEADE-CRC-01 (N=40), IHC Spearman rho=\u22120.14 (P=0.4) \u2014 IHC is NOT predictive in CRC at any threshold tested. The second gate is mandatory for CRC programs."
+    },
+    "gate_2": {
+      "name": "IO Permissiveness Gate",
+      "threshold": "pTMB \u226528 OR Immunoscore-IC high OR CD8+ TIL density high",
+      "rationale": "CEACAM5-targeted ADCs kill tumor cells but do not activate the immune system. In MSS CRC, the tumor microenvironment is immunosuppressive \u2014 killed cells are not immunogenic without an inflamed TME. Gate 2 selects patients whose TME can amplify the ADC's cytotoxic effect through immune activation.",
+      "why_gate_2_is_mandatory_in_crc": "PROCEADE-CRC-01 showed IHC is not predictive in CRC. The responder subgroup (3/40 = 7.5% ORR) likely had both high CEACAM5 expression AND an inflamed TME. Without Gate 2, the signal is diluted by immunosuppressed patients."
+    },
+    "vector_scalpel_ranking": {
+      "description": "11-dimension biomarker ranking for CEACAM5 patient selection \u2014 which biomarker best identifies the responder subpopulation",
+      "ranking": [
+        {
+          "rank": 1,
+          "biomarker": "cCEA \u2265100 ng/mL",
+          "score": "27/33",
+          "rationale": "Liquid biopsy \u2014 no biopsy required, real-time monitoring, correlates with IHC"
+        },
+        {
+          "rank": 2,
+          "biomarker": "pTMB \u226528",
+          "score": "23/33",
+          "rationale": "Strongest IO enrichment signal in MSS CRC from randomized data (CO.26 OS HR=0.34)"
+        },
+        {
+          "rank": 3,
+          "biomarker": "CEACAM5 IHC \u226580%",
+          "score": "20/33",
+          "rationale": "Tissue-based \u2014 requires biopsy, archival tissue may not reflect current expression"
+        },
+        {
+          "rank": 4,
+          "biomarker": "Immunoscore-IC high",
+          "score": "19/33",
+          "rationale": "CD8+ TIL density at tumor center and invasive margin"
+        },
+        {
+          "rank": 5,
+          "biomarker": "DetermaIO high",
+          "score": "15/33",
+          "rationale": "Gene expression-based IO permissiveness score"
+        }
+      ],
+      "source": "crispro_ceacam5_capability_map_v1.md CAP-02; crispro_ceacam5_gate_architecture_mdc_v2.md"
+    }
+  },
+  "trials": [
+    {
+      "trial_name": "CARMEN-LC03",
+      "nct_id": "NCT04524689",
+      "drug": "Tusamitamab ravtansine (SAR408701) \u2014 CEACAM5-DM4 ADC",
+      "sponsor": "Sanofi",
+      "indication": "NSCLC (non-squamous)",
+      "phase": "III",
+      "n": 389,
+      "line": "2L+",
+      "primary_result": "PFS HR 1.14 (95% CI 0.86\u20131.51; P=0.8204) \u2014 FAILED primary endpoint",
+      "primary_met": false,
+      "8d_vector": {
+        "D1_biology": {
+          "score": 0.2,
+          "rationale": "CEACAM5 is a genuine surface target \u2014 biology is sound. Low D1 score because the target is real."
+        },
+        "D2_selection": {
+          "score": 0.9,
+          "rationale": "PRIMARY FAILURE DOMAIN. IHC \u226550% threshold enrolled 72% of patients who could not respond. The \u226550\u201379% subgroup showed numerically harmful PFS (HR=1.38). The responder subgroup (IHC \u226580%) was diluted by non-responders. This is the canonical D2 Selection failure."
+        },
+        "D3_architecture": {
+          "score": 0.1,
+          "rationale": "Phase III design was appropriate \u2014 randomized, powered, pre-specified endpoint."
+        },
+        "D4_timing": {
+          "score": 0.1,
+          "rationale": "2L+ timing is appropriate for this mechanism."
+        },
+        "D5_combination": {
+          "score": 0.1,
+          "rationale": "Single agent \u2014 no combination failure."
+        },
+        "D6_resistance": {
+          "score": 0.2,
+          "rationale": "DM4 payload resistance possible but not the primary driver."
+        },
+        "D7_translational": {
+          "score": 0.1,
+          "rationale": "ADC technology is clinically validated."
+        },
+        "D8_systemic": {
+          "score": 0.0,
+          "rationale": "No safety hold or regulatory issue."
+        }
+      },
+      "primary_failure_domain": "D2 \u2014 Selection",
+      "responder_subpopulation": "CEACAM5 IHC \u226580% (~28% of enrolled)",
+      "responder_result": "OS HR=0.71 (post-hoc, directional \u2014 CI not published; underpowered)",
+      "harmful_subgroup": "CEACAM5 IHC 50\u201379%: PFS HR=1.38 (numerically harmful)",
+      "transfer_lesson": "Set IHC \u226580% as the enrollment gate. Add IO permissiveness as Gate 2. Consider cCEA \u2265100 as liquid biopsy screening tool.",
+      "crispro_decode_confidence": "HIGH",
+      "source": "SANOFI_SOURCE_OF_TRUTH.md; program_asset_ceacam5.json"
+    },
+    {
+      "trial_name": "PROCEADE-CRC-01",
+      "nct_id": "NCT04524689",
+      "drug": "Tusamitamab ravtansine (SAR408701)",
+      "sponsor": "Sanofi",
+      "indication": "mCRC (MSS)",
+      "phase": "II",
+      "n": 40,
+      "line": "2L+",
+      "primary_result": "Confirmed ORR 7.5% (3/40); mPFS 5.9 months",
+      "primary_met": false,
+      "8d_vector": {
+        "D1_biology": {
+          "score": 0.2,
+          "rationale": "CEACAM5 is expressed in 98.7% of CRC \u2014 biology is sound."
+        },
+        "D2_selection": {
+          "score": 0.8,
+          "rationale": "IHC Spearman rho=\u22120.14 (P=0.4) \u2014 IHC is NOT predictive in CRC at any threshold. The 3 responders likely had both high CEACAM5 AND inflamed TME. Without Gate 2 (IO permissiveness), the signal is diluted."
+        },
+        "D3_architecture": {
+          "score": 0.1,
+          "rationale": "Phase II single-arm \u2014 appropriate for signal-finding."
+        },
+        "D4_timing": {
+          "score": 0.1,
+          "rationale": "2L+ appropriate."
+        },
+        "D5_combination": {
+          "score": 0.1,
+          "rationale": "Single agent."
+        },
+        "D6_resistance": {
+          "score": 0.3,
+          "rationale": "MSS CRC TME is immunosuppressive \u2014 DM4 payload may not trigger immunogenic cell death in this context."
+        },
+        "D7_translational": {
+          "score": 0.2,
+          "rationale": "NSCLC data does not directly translate to CRC \u2014 different TME biology."
+        },
+        "D8_systemic": {
+          "score": 0.0,
+          "rationale": "No safety hold."
+        }
+      },
+      "primary_failure_domain": "D2 \u2014 Selection",
+      "key_finding": "IHC is not predictive in CRC \u2014 Gate 2 (IO permissiveness) is mandatory",
+      "transfer_lesson": "For CRC CEACAM5 programs: IHC alone is insufficient. Must add IO permissiveness gate (pTMB \u226528 or Immunoscore-IC high).",
+      "crispro_decode_confidence": "HIGH",
+      "source": "SANOFI_SOURCE_OF_TRUTH.md; program_asset_ceacam5.json"
+    },
+    {
+      "trial_name": "Labetuzumab govitecan (IMMU-130) Phase I/II",
+      "drug": "Labetuzumab govitecan \u2014 CEACAM5-SN-38 ADC",
+      "sponsor": "Immunomedics",
+      "indication": "mCRC",
+      "phase": "I/II",
+      "primary_result": "ORR 1.2% (1/86 confirmed PR); mPFS 3.6 months; mOS 6.9 months",
+      "8d_vector": {
+        "D1_biology": {
+          "score": 0.2,
+          "rationale": "CEACAM5 target is real."
+        },
+        "D2_selection": {
+          "score": 0.6,
+          "rationale": "Unselected population \u2014 no IHC threshold, no IO gate."
+        },
+        "D5_combination": {
+          "score": 0.1,
+          "rationale": "Single agent."
+        },
+        "D6_resistance": {
+          "score": 0.5,
+          "rationale": "SN-38 payload \u2014 topoisomerase I inhibitor. Resistance mechanisms well-characterized. Govitecan (SN-38) is less potent than Topo1i payloads in newer ADCs."
+        },
+        "D7_translational": {
+          "score": 0.4,
+          "rationale": "Older ADC technology \u2014 linker stability and bystander effect inferior to newer platforms."
+        }
+      },
+      "primary_failure_domain": "D6 \u2014 Resistance (payload) + D2 \u2014 Selection",
+      "transfer_lesson": "Payload matters as much as target. SN-38 is inferior to DM4 and Topo1i for CEACAM5 ADCs. Next-generation programs (SAR445953 \u2014 Topo1i payload) address this.",
+      "source": "program_asset_ceacam5.json"
+    },
+    {
+      "trial_name": "Cibisatamab + FAP-4-1BBL (BP42675)",
+      "drug": "Cibisatamab (CEA-TCB) + FAP-4-1BBL \u2014 bispecific T-cell engager + costimulatory",
+      "sponsor": "Roche/Genentech",
+      "indication": "mCRC",
+      "phase": "I",
+      "primary_result": "Confirmed ORR 13.5% (7/52; 95% CI 6\u201326); DCR 50.0%; CRS 57.7% (grade \u22653: 3.8%)",
+      "8d_vector": {
+        "D1_biology": {
+          "score": 0.2,
+          "rationale": "CEA-TCB mechanism is biologically sound \u2014 redirects T cells to CEACAM5+ tumor cells."
+        },
+        "D2_selection": {
+          "score": 0.5,
+          "rationale": "Phase I \u2014 no selection gate applied. 13.5% ORR in unselected population suggests a responder subgroup exists."
+        },
+        "D8_systemic": {
+          "score": 0.4,
+          "rationale": "CRS 57.7% \u2014 significant safety signal. Grade \u22653 CRS 3.8% is manageable but requires careful monitoring."
+        }
+      },
+      "primary_failure_domain": "D2 \u2014 Selection (opportunity) + D8 \u2014 Systemic (safety)",
+      "transfer_lesson": "13.5% ORR in unselected mCRC is the highest CEACAM5 ORR in CRC to date. With Gate 2 (IO permissiveness), the responder ORR could be substantially higher. CRS management is the key safety challenge.",
+      "source": "program_asset_ceacam5.json; SANOFI_SOURCE_OF_TRUTH.md"
+    },
+    {
+      "trial_name": "Tusamitamab sonditecan (SGN-CEACAM5C) Phase I",
+      "drug": "SGN-CEACAM5C \u2014 CEACAM5-Topo1i ADC (next-generation payload)",
+      "sponsor": "Sanofi/Seagen",
+      "indication": "Solid tumors including CRC",
+      "phase": "I",
+      "primary_result": "EU clinical hold \u2014 no efficacy data published",
+      "8d_vector": {
+        "D8_systemic": {
+          "score": 0.8,
+          "rationale": "EU clinical hold \u2014 regulatory/safety issue. No efficacy data available."
+        }
+      },
+      "primary_failure_domain": "D8 \u2014 Systemic (EU clinical hold)",
+      "transfer_lesson": "Next-generation Topo1i payload (SAR445953) is the successor program. SGN-CEACAM5C EU hold does not invalidate the CEACAM5 target \u2014 it validates the need for better payload selection.",
+      "source": "program_asset_ceacam5.json"
+    }
+  ],
+  "sanofi_engagement_specifics": {
+    "programs": [
+      "SAR445953 (CEACAM5-Topo1i ADC)",
+      "SAR445877 (CEACAM5 bispecific)"
+    ],
+    "crispro_pitch": "12-slide deck submitted 2026-05-29; finalist July 1 2026",
+    "pitch_anchor": "CARMEN-LC03 D2 failure decode \u2192 two-gate solution \u2192 SAR445953 patient selection package",
+    "key_claim": "CrisPRO decoded CARMEN-LC03's failure and identified the IHC \u226580% + IO permissiveness gate. For SAR445953: CrisPRO can produce the patient selection package before the trial reads out.",
+    "source": "SANOFI_SOURCE_OF_TRUTH.md; crispro_sanofi_pitch_anchor_v1.mdc"
+  },
+  "what_crispro_proved": [
+    "CARMEN-LC03 (Phase III, N=389): PFS HR 1.14 (P=0.82) at IHC \u226550% \u2014 D2 Selection failure decoded",
+    "CEACAM5 IHC \u226580% OS HR=0.71 (post-hoc, directional \u2014 CI not published; underpowered)",
+    "CEACAM5 50\u201379% PFS HR=1.38 (numerically harmful \u2014 confirms \u226550% threshold is wrong)",
+    "cCEA \u2265100 ORR 41.7% vs 8.1% (P=0.003) in CEACAM5-high NSCLC \u2014 liquid biopsy proxy validated",
+    "IHC \u2194 cCEA Spearman \u03c1=0.43 (n=92) \u2014 moderate correlation",
+    "PROCEADE-CRC-01 (N=40): ORR 7.5%; IHC Spearman rho=\u22120.14 (P=0.4) \u2014 IHC not predictive in CRC",
+    "CEACAM5 any-positivity in CRC: 98.7% (Jansen et al. Cancers 2024)",
+    "MSS CRC has HIGHER CEACAM5 expression than MSI-H CRC (MMR deficiency reduces CEA, P<0.0001)"
+  ],
+  "what_crispro_can_offer": "For any CEACAM5-targeted program: CrisPRO decoded CARMEN-LC03's D2 Selection failure and identified the two-gate framework (IHC \u226580% + IO permissiveness). For CRC programs: IHC alone is insufficient \u2014 Gate 2 is mandatory. CrisPRO can produce an ENRICH/CONSIDER/EXCLUDE stratification table, Vector-Scalpel biomarker ranking, and protocol enrollment language for any CEACAM5 program.",
+  "caveats": [
+    "CEACAM5 \u226580% OS HR=0.71 is post-hoc, underpowered, CI not published \u2014 label as directional trend",
+    "cCEA \u2265100 data is from NSCLC only \u2014 CRC application is by inference",
+    "CEACAM5 \u226580% prevalence in CRC (~28%) is OPEN_ASSUMPTION OA-08 \u2014 CARMEN-LC03 NSCLC proxy",
+    "CEACAM5 Target-Lock run has not been executed \u2014 EXPECTED, not COMPUTED"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "program_id": "BREAK_CRC_001",
+  "program_name": "BreAK CRC-001 \u2014 Active Phase I/II Trial Asset",
+  "admissibility": "external_safe",
+  "active_engagement": "Brenus Pharma \u2014 ACTIVE",
+  "nct": "NCT06934538",
+  "fit_score": 0.7375,
+  "fit_label": "MODERATE-HIGH",
+  "trial_data": {
+    "trial_name": "BreAK CRC-001",
+    "drug": "STC-1010 (DNFB-haptenated whole-cell vaccine) + mFOLFOX6 \u00b1 Bevacizumab",
+    "sponsor": "Brenus Pharma",
+    "indication": "1L MSS/pMMR mCRC",
+    "phase": "I/II",
+    "line": "1L",
+    "primary_endpoint": "Safety (Phase I); PFS (Phase II)",
+    "8d_vector": {
+      "D1_biology": {
+        "score": 0.4,
+        "rationale": "STC-1010 mechanism is biologically sound (ICD, T-cell priming) but pharmacodynamic dissociation is the dominant risk in MSS CRC. io axis is the primary driver (46.7%)."
+      },
+      "D2_selection": {
+        "score": 0.7,
+        "rationale": "GAP-01 (liver metastasis not stratified), GAP-02 (pTMB not collected), GAP-04 (no biomarker gate) \u2014 three selection gaps that could dilute the IO signal."
+      },
+      "D3_architecture": {
+        "score": 0.3,
+        "rationale": "Phase I/II design is appropriate. QUILT-2.004 design precedent (HR 1.061) must be addressed."
+      },
+      "D5_combination": {
+        "score": 0.2,
+        "rationale": "mFOLFOX6 + bev backbone is appropriate. Cyclophosphamide preconditioning addresses Treg suppression."
+      },
+      "D8_systemic": {
+        "score": 0.3,
+        "rationale": "SC-001 ACTIVE CONFLICT: CT26 carries BRAF V600E; BreAK CRC-001 requires BRAF WT patients."
+      }
+    },
+    "primary_failure_risk": "D2 \u2014 Selection (GAP-01, GAP-02, GAP-04) + D1 \u2014 Biology (pharmacodynamic dissociation risk)",
+    "sc_001_flag": "ACTIVE CONFLICT \u2014 CT26 carries BRAF V600E (ATCC/CCLE/COSMIC). BreAK CRC-001 Exclusion Criterion #7 requires BRAF wild-type patients. Must be resolved before enrollment."
+  },
+  "what_crispro_proved": [
+    "PATH A fit score: 0.7375 (MODERATE-HIGH alignment)",
+    "io axis: PRIMARY DRIVER (46.7% of dot product); mapk: SECONDARY (30.7%)",
+    "GAP-01 CRITICAL: liver metastasis not pre-specified as stratification variable",
+    "GAP-02 HIGH: pTMB not collected prospectively",
+    "GAP-03 MEDIUM: io axis alignment moderate (patient io=0.40 below optimal \u22650.50)",
+    "GAP-04 HIGH: no biomarker gate for patient selection",
+    "15 executable CrisPRO modules defined",
+    "SC-001 ACTIVE CONFLICT: CT26 carries BRAF V600E; BreAK CRC-001 requires BRAF WT"
+  ],
+  "what_crispro_can_offer": "CrisPRO has the most detailed fit-gap analysis of ICD-based whole-cell vaccine mechanisms in MSS CRC. For BreAK CRC-001: CrisPRO can execute all 15 modules, implement the two-gate patient selection framework (GAP-01 + GAP-02), and provide the QUILT-2.004 design precedent analysis."
+}

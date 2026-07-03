@@ -1,0 +1,333 @@
+{
+  "worker": "W4",
+  "produced_by": "w4 machine — BRIEF SL + Target-Lock + SL Bridge + IP/Patent deep audit",
+  "source_files": [
+    "crispro_ip_valuation_glb_v1.mdc",
+    "program_asset_gbm_escapemap.json",
+    "14-provisional-patent-8d-vector-HARDENED.md",
+    "crispro_v3_sl_bridge_audit.md",
+    "brenus_capability_ownership_matrix.md",
+    "repo_census.md",
+    "verified_8d_claims.md",
+    "8d_claim_language_rewrites.md",
+    "patent_submission/HANDOFF.md"
+  ],
+  "CAP_06_brief_generation_algorithm": {
+    "capability_id": "CAP-06",
+    "name": "BRIEF Program Asset Generation",
+    "evidence_tier": "COMPUTED (BRIEF-1, BRIEF-4) / COMPUTATIONAL_HYPOTHESIS (BRIEF-2) / MECHANISTICALLY_GROUNDED (BRIEF-3)",
+    "what_synthetic_lethality_is": "Synthetic lethality (SL) occurs when two genes are individually non-essential but their simultaneous loss or inhibition is lethal. In cancer, one gene is already lost/mutated (the cancer driver). The SL partner is the therapeutic target — inhibiting it kills only cancer cells (which have lost the first gene) while sparing normal cells (which retain both genes).",
+    "brief_generation_algorithm": {
+      "step_1_crispr_screen_data": {
+        "description": "Input: CRISPR functional genomics data from DepMap (Broad Institute Cancer Dependency Map)",
+        "what_depmap_measures": "DepMap performs genome-wide CRISPR knockout screens across hundreds of cancer cell lines. For each gene knockout, it measures the effect on cell viability (CERES score). Negative CERES score = gene is essential for cell survival (knockout kills the cell). Zero = gene is non-essential.",
+        "data_source": "DepMap 24Q4 — functional genomics data across n≥24 cell lines per gene",
+        "input_to_brief": "CERES scores for all genes across CRC, NSCLC, and brain metastasis cell lines"
+      },
+      "step_2_sl_pair_identification": {
+        "description": "Identify gene pairs where one gene's loss sensitizes cells to the other gene's knockout",
+        "method": "Conditional essentiality analysis — compare CERES scores in cells with vs. without the driver gene mutation/loss",
+        "example": "ZEB1-high cells: is ITGAV more essential (more negative CERES score) in ZEB1-high cells than ZEB1-low cells? If yes, ZEB1→ITGAV is a candidate SL pair.",
+        "statistical_test": "Two-sample t-test or Mann-Whitney U test comparing CERES scores between ZEB1-high and ZEB1-low cell lines"
+      },
+      "step_3_delta_computation": {
+        "description": "Compute the delta score — the difference in CERES scores between the two groups",
+        "formula": "delta = mean(CERES_ZEB1_high) - mean(CERES_ZEB1_low)",
+        "what_delta_means": {
+          "negative_delta": "The SL partner gene is MORE essential in cells with the driver mutation/loss. Negative delta = the SL pair is real — the driver creates dependency on the partner.",
+          "scale": "Delta of −0.7 means the SL partner gene is 0.7 CERES units more essential in driver-positive cells. CERES scores range from ~0 (non-essential) to ~−2 (strongly essential). A delta of −0.7 is a large, biologically meaningful effect.",
+          "brief_1_delta": "BRIEF-1 delta = −0.7184 — ITGAV is 0.7184 CERES units more essential in ZEB1-high NSCLC/BrM cells than ZEB1-low cells",
+          "brief_4_delta": "BRIEF-4 delta = −0.7326 — NRF2 is 0.7326 CERES units more essential in SPP1-high cells than SPP1-low cells"
+        }
+      },
+      "step_4_fdr_calculation": {
+        "description": "Compute FDR (False Discovery Rate) to correct for multiple testing across all gene pairs",
+        "method": "Benjamini-Hochberg FDR correction across all tested gene pairs",
+        "thresholds": {
+          "BRIEF_1": "FDR = 0.001203 — highly significant (1 in 1000 chance of false positive)",
+          "BRIEF_4": "FDR = 8×10⁻⁶ — extremely significant (8 in 1 million chance of false positive)"
+        },
+        "what_fdr_means": "FDR < 0.01 means the SL pair is statistically robust — the delta is unlikely to be a random artifact of the DepMap data."
+      },
+      "step_5_crispr_validation": {
+        "description": "Experimental validation of the SL pair using targeted CRISPR knockout in cell lines",
+        "what_it_confirms": "The DepMap analysis is computational — it uses existing CRISPR screen data. CRISPR validation means performing a new, targeted experiment: (1) create ZEB1-high and ZEB1-low cell lines; (2) knock out ITGAV in both; (3) measure cell viability. If ZEB1-high cells die and ZEB1-low cells survive, the SL pair is validated.",
+        "brief_1_status": "CRISPR_VALIDATED — experimental validation confirmed",
+        "brief_4_status": "CRISPR_VALIDATED — experimental validation confirmed",
+        "brief_2_status": "NOT VALIDATED — DepMap NULL across all 3 proxies. PTEN-null→ITGAV is a computational hypothesis only.",
+        "brief_3_status": "MECHANISTICALLY_GROUNDED — not CRISPR-validated; supported by mechanistic literature"
+      }
+    },
+    "brief_programs": [
+      {
+        "id": "BRIEF-1",
+        "axis": "ZEB1 → ITGAV (synthetic lethality)",
+        "evidence_tier": "CRISPR_VALIDATED",
+        "deal_ready": true,
+        "delta": -0.7184,
+        "fdr": 0.001203,
+        "status": "DEAL_READY",
+        "indication": "NSCLC brain metastasis (BrM)",
+        "what_zeb1_is": "ZEB1 (Zinc finger E-box binding homeobox 1) is a master regulator of epithelial-mesenchymal transition (EMT). In NSCLC/BrM, ZEB1-high tumors have undergone EMT — they are more invasive, more metastatic, and more resistant to chemotherapy. ZEB1-high is a marker of aggressive disease.",
+        "what_itgav_is": "ITGAV (Integrin alpha-V) is a cell surface receptor that mediates cell adhesion to the extracellular matrix. In ZEB1-high cells, ITGAV becomes essential for survival — ZEB1-high cells depend on integrin signaling for anoikis resistance and survival in the metastatic niche.",
+        "why_sl_makes_sense": "ZEB1-high cells have undergone EMT and lost epithelial adhesion molecules (E-cadherin). They become dependent on mesenchymal adhesion molecules (integrins, including ITGAV) for survival. Inhibiting ITGAV in ZEB1-high cells removes their survival scaffold — they die. ZEB1-low cells retain E-cadherin and are not dependent on ITGAV.",
+        "licensing_value": "Benchmark: Roche paid $125M upfront for Repare's camonsertib (ATRi) — one CRISPR-validated SL asset. BRIEF-1 is a CRISPR-validated SL asset in a different indication (NSCLC/BrM). Licensing target: $8–15M upfront (Months 6–12 per $500M roadmap).",
+        "admissibility_note": "Delta and FDR values are trade secrets — do not publish in external outputs without NDA",
+        "source": "crispro_ip_valuation_glb_v1.mdc; crispro_master_pipeline.json ip_estate.brief_programs[0]"
+      },
+      {
+        "id": "BRIEF-4",
+        "axis": "SPP1 → NRF2 (synthetic lethality)",
+        "evidence_tier": "CRISPR_VALIDATED",
+        "deal_ready": false,
+        "delta": -0.7326,
+        "fdr": 8e-06,
+        "status": "COMPUTATIONAL_LEAD",
+        "indication": "NSCLC brain metastasis (BrM)",
+        "what_spp1_is": "SPP1 (Secreted Phosphoprotein 1, also known as Osteopontin) is a secreted glycoprotein that promotes tumor invasion, metastasis, and immune evasion. SPP1-high tumors have an immunosuppressive TME — SPP1 recruits MDSCs and promotes M2 macrophage polarization.",
+        "what_nrf2_is": "NRF2 (Nuclear factor erythroid 2-related factor 2) is a transcription factor that regulates the antioxidant response. In SPP1-high cells, NRF2 becomes essential for managing oxidative stress — SPP1-high cells generate more reactive oxygen species (ROS) and depend on NRF2 for survival.",
+        "why_sl_makes_sense": "SPP1-high cells have elevated oxidative stress from their pro-inflammatory, pro-metastatic activity. They become dependent on NRF2 for ROS management. Inhibiting NRF2 in SPP1-high cells overwhelms their antioxidant capacity — they die from oxidative stress. SPP1-low cells have lower ROS and are not dependent on NRF2.",
+        "status_note": "COMPUTATIONAL_LEAD — CRISPR-validated but not yet deal-ready. Requires additional validation before licensing discussion.",
+        "source": "crispro_ip_valuation_glb_v1.mdc; crispro_master_pipeline.json ip_estate.brief_programs[3]"
+      },
+      {
+        "id": "BRIEF-3",
+        "axis": "ZEB1-high + PD-1 blockade combination",
+        "evidence_tier": "MECHANISTICALLY_GROUNDED",
+        "deal_ready": "conditional",
+        "status": "CONDITIONAL_ONE_GAP",
+        "indication": "NSCLC brain metastasis (BrM)",
+        "rationale": "ZEB1-high tumors upregulate PD-L1 expression (ZEB1 directly transcribes PD-L1). ZEB1-high + PD-1 blockade is mechanistically grounded — ZEB1-high tumors should be more responsive to checkpoint blockade.",
+        "correlation_result": "GSE271259 (n=34): r=0.050, p=0.780 — statistically INSIGNIFICANT. The correlation between ZEB1 expression and PD-1 response is not supported by this dataset.",
+        "mandatory_disclosure": "BRIEF-3 correlation r=0.050, p=0.780 is statistically insignificant. BRIEF-3 is MECHANISTICALLY_GROUNDED, not CRISPR_VALIDATED. The combination hypothesis is supported by mechanistic literature but not by the GSE271259 correlation.",
+        "source": "crispro_ip_valuation_glb_v1.mdc; crispro_master_pipeline.json ip_estate.brief_programs[2]"
+      },
+      {
+        "id": "BRIEF-2",
+        "axis": "PTEN-null → ITGAV",
+        "evidence_tier": "COMPUTATIONAL_HYPOTHESIS",
+        "deal_ready": false,
+        "status": "VALIDATION_REQUIRED",
+        "indication": "NSCLC brain metastasis (BrM)",
+        "rationale": "PTEN-null cells lose PI3K/AKT regulation and may become dependent on integrin signaling (ITGAV) for survival — similar to ZEB1-high cells.",
+        "depmap_result": "DepMap NULL across all 3 proxies — ITGAV is NOT more essential in PTEN-null cells than PTEN-intact cells in the DepMap data.",
+        "mandatory_disclosure": "BRIEF-2 (PTEN-null→ITGAV) is a COMPUTATIONAL HYPOTHESIS. DepMap shows NULL essentiality across all 3 proxies. Not CRISPR-validated. Requires experimental validation before any licensing discussion. Must be disclosed in every context where BRIEF-2 appears.",
+        "source": "crispro_ip_valuation_glb_v1.mdc"
+      }
+    ]
+  },
+  "CAP_05_sl_therapy_bridge": {
+    "capability_id": "CAP-05",
+    "name": "SL Therapy Bridge v3",
+    "evidence_tier": "COMPUTED",
+    "code_location": "crispro-backend-v2/api/services/sl_therapy_bridge/",
+    "test_status": "20/20 tests PASS",
+    "pr": "https://github.com/fjkiani/crispro-backend-v2/pull/5",
+    "what_it_does": "The SL Therapy Bridge sits between the SL vulnerability detection layer and the therapy fit scoring layer. It takes a patient's SL vulnerabilities (broken pathways, SL gene pairs) and maps them to actionable drugs with a policy overlay (ALLOW/WARN/DISALLOW).",
+    "architecture": {
+      "before_v3": "Two disconnected layers: (1) SL layer identified vulnerabilities but returned a flat list of drug names with no mechanism context; (2) Therapy Fit layer scored drugs but had no awareness of which drugs were SL-indicated vs. mechanism-aligned vs. false-positive traps.",
+      "v3_bridge": "Additive bridge layer that produces a sl_therapy_bridge payload in the /bundle response. Does NOT modify existing keys or scores — purely additive.",
+      "files": {
+        "models.py": "Dataclasses: SLIndicatedDrug, PolicyOverlay, GapSummary, SLTherapyBridgeResult",
+        "policy_engine.py": "SLPolicyEngine + SL_THERAPY_MAP (curated, versioned, non-ML)",
+        "bridge.py": "SLTherapyBridge.compute() — orchestrates vulnerability detection, policy evaluation, gap summary"
+      }
+    },
+    "allow_warn_disallow_logic": {
+      "ALLOW": "Drug is SL-indicated for this vulnerability AND has clinical validation. Safe to recommend. Example: olaparib for BRCA2-mut (ALLOW — FDA-approved, validated SL).",
+      "WARN": "Drug is SL-indicated but has a known resistance mechanism or safety concern. Recommend with caution. Example: PTEN-null → mTOR inhibitors (WARN — PTEN-loss creates PI3K dependency but mTOR inhibitors have limited single-agent activity in CRC).",
+      "DISALLOW": "Drug is NOT SL-indicated for this vulnerability — recommending it would be a false positive. Example: KRAS-mut → EGFR TKIs (DISALLOW — KRAS mutation is a contraindication for EGFR TKI benefit).",
+      "PRECLINICAL_ONLY": "Drug is SL-indicated but only has preclinical evidence. Not ready for clinical recommendation. Example: SMARCA4-mut → FHD-909 (ALLOW, PRECLINICAL_ONLY)."
+    },
+    "sl_therapy_map": {
+      "BRCA2_mut": {
+        "drugs": [
+          "olaparib",
+          "niraparib",
+          "rucaparib"
+        ],
+        "tier": "ALLOW",
+        "evidence": "FDA-approved, validated SL"
+      },
+      "BRCA1_mut": {
+        "drugs": [
+          "olaparib",
+          "niraparib",
+          "rucaparib"
+        ],
+        "tier": "ALLOW",
+        "evidence": "FDA-approved, validated SL"
+      },
+      "ATM_mut": {
+        "drugs": [
+          "ceralasertib",
+          "berzosertib"
+        ],
+        "tier": "ALLOW",
+        "evidence": "Clinical validation in ATM-mut tumors"
+      },
+      "ARID1A_mut": {
+        "drugs": [
+          "tazemetostat"
+        ],
+        "tier": "ALLOW",
+        "evidence": "EZH2 SL with ARID1A — clinical validation"
+      },
+      "SMARCA4_mut": {
+        "drugs": [
+          "FHD-909"
+        ],
+        "tier": "ALLOW_PRECLINICAL_ONLY",
+        "evidence": "Preclinical only"
+      },
+      "CCNE1_AMP": {
+        "drugs": [
+          "CDK2 inhibitors"
+        ],
+        "tier": "ALLOW",
+        "evidence": "CDK2 dependency in CCNE1-amp tumors"
+      },
+      "KRAS_mut": {
+        "drugs": [
+          "EGFR TKIs"
+        ],
+        "tier": "DISALLOW",
+        "evidence": "KRAS mutation is a contraindication for EGFR TKI benefit"
+      },
+      "PTEN_null": {
+        "drugs": [
+          "mTOR inhibitors",
+          "PI3K inhibitors"
+        ],
+        "tier": "WARN",
+        "evidence": "Limited single-agent activity; combination strategies preferred"
+      }
+    },
+    "gap_summary_output": {
+      "description": "The GapSummary identifies drugs that are SL-indicated but blocked by the policy overlay",
+      "fields": {
+        "top_fit_blocked_count": "Number of top-ranked drugs that are DISALLOW or WARN",
+        "best_actionable_rank": "Rank of the highest-ranked ALLOW drug",
+        "gap_description": "Plain-language explanation of why top drugs are blocked"
+      }
+    },
+    "what_it_cannot_do": "TP53 and other genes not in SL_THERAPY_MAP return no sl_indicated_drugs — no crash, no hallucination. PTEN-null → ITGAV (BRIEF-2) is COMPUTATIONAL_HYPOTHESIS — not in SL_THERAPY_MAP.",
+    "source": "crispro_v3_sl_bridge_audit.md; 20/20 tests PASS"
+  },
+  "CAP_07_escapemap_ov": {
+    "capability_id": "CAP-07",
+    "name": "EscapeMap — Bevacizumab Biomarker Stratification (Ovarian)",
+    "evidence_tier": "COMPUTED",
+    "what_escapemap_is": "EscapeMap is CrisPRO's analysis of ZEB1 as a prognostic biomarker in the bevacizumab arm of ovarian cancer trials. It uses Cox regression, median-split, and tertile analyses to characterize the ZEB1-bevacizumab relationship.",
+    "methodology": {
+      "dataset": "GOG-0218 (bevacizumab arm) — ovarian cancer Phase III trial",
+      "continuous_cox_model": {
+        "description": "Cox proportional hazards model with ZEB1 expression as a continuous variable",
+        "result": "HR=1.4803 (95% CI [1.1188, 1.9586], p=0.006042, c-stat=0.6444) — bevacizumab arm OS",
+        "interpretation": "Each unit increase in ZEB1 expression is associated with a 48% increase in the hazard of death in the bevacizumab arm. ZEB1-high patients have worse OS on bevacizumab."
+      },
+      "multivariable_cox": {
+        "result": "HR=1.5247 (95% CI [1.1256, 2.0652], p=0.006447) — adjusted for covariates",
+        "interpretation": "ZEB1 is an independent prognostic factor after adjusting for other clinical variables."
+      },
+      "arm_interaction": {
+        "result": "HR=1.243, p=0.245949",
+        "interpretation": "PROGNOSTIC, NOT ARM-SPECIFIC. The arm interaction p=0.246 means ZEB1 is prognostic (predicts OS regardless of treatment) but NOT predictive of bevacizumab benefit specifically. ZEB1-high patients do worse on bevacizumab, but they also do worse on chemotherapy alone.",
+        "mandatory_wording": "ZEB1 is a prognostic marker in the bevacizumab arm, not a predictive marker of bevacizumab benefit. The arm interaction is not statistically significant (p=0.246)."
+      },
+      "median_split": {
+        "result": "HR=2.500 (95% CI [1.322, 4.727], log-rank p=0.0036, FDR=0.0499) — bevacizumab arm OS",
+        "interpretation": "ZEB1-high patients (above median) have 2.5× higher hazard of death than ZEB1-low patients in the bevacizumab arm."
+      },
+      "tertile_analysis": {
+        "result": "T3 vs T1: HR=2.4932 (95% CI [1.1767, 5.2824], p=0.017093)",
+        "interpretation": "Top tertile ZEB1 vs bottom tertile: 2.5× higher hazard of death."
+      },
+      "hif1a_result": {
+        "result": "HR=2.245 (95% CI [1.172, 4.300], p=0.0147) — bevacizumab arm OS",
+        "interpretation": "HIF1A is also prognostic in the bevacizumab arm — PLATFORM_COMPRESSION signal (multiple EMT/angiogenesis markers are prognostic)."
+      },
+      "m2_stratum": {
+        "result": "M2 beneficial median OS: 34.4 months (CI 32.7–38.8), p=9.52×10⁻⁵",
+        "mandatory_wording": "Preparatory M2-bevacizumab biomarker panel for downstream descriptive and conditioning analyses — not a validated prognostic signature until dbGaP-linked patient-level outcomes are available. (LOCKED 2026-05-12)"
+      }
+    },
+    "gbm_permanently_closed": {
+      "status": "PERMANENTLY CLOSED",
+      "reason": "Three datasets all null or contradicted:",
+      "datasets": [
+        {
+          "dataset": "GLASS",
+          "result": "delta=−0.34, p=0.000184, d=−0.31 — ZEB1 DECREASES in recurrent GBM (opposite of escape hypothesis)"
+        },
+        {
+          "dataset": "GSE222515",
+          "result": "delta=−0.431, p=0.0334 — ZEB1 DECREASES in recurrent GBM"
+        },
+        {
+          "dataset": "GSE174554 snRNA-seq",
+          "result": "delta=−0.076, p=0.742, d=−0.070 — NULL (not significant)"
+        }
+      ],
+      "operational_meaning": "Do not apply EscapeMap to GBM. Do not reopen without new evidence. GBM ZEB1 is not an escape marker — it decreases in recurrent GBM, which is the opposite of the escape hypothesis.",
+      "source": "program_asset_gbm_escapemap.json; crispro_master_pipeline.json programs[GBM_ESCAPEMAP]"
+    },
+    "what_crispro_proved": [
+      "OV ZEB1 continuous Cox: HR=1.4803 (95% CI [1.1188, 1.9586], p=0.006042) — bevacizumab arm OS",
+      "OV ZEB1 multivariable Cox: HR=1.5247 (95% CI [1.1256, 2.0652], p=0.006447)",
+      "OV ZEB1 arm interaction: HR=1.243, p=0.246 — PROGNOSTIC, NOT ARM-SPECIFIC",
+      "OV ZEB1 median split: HR=2.500 (95% CI [1.322, 4.727], FDR=0.0499)",
+      "OV HIF1A: HR=2.245 (95% CI [1.172, 4.300], p=0.0147) — PLATFORM_COMPRESSION",
+      "M2 stratum calibration: GEO 74.0% vs published 73.9% (within 0.1%)"
+    ]
+  },
+  "provisional_patent_summary": {
+    "title": "System and Method for Predictive Patient-to-Intervention Mechanism Alignment for Clinical Trial Stratification, Arm Selection, and Cohort Enrichment Using Shared Multi-Dimensional Biological Vector Spaces",
+    "inventors": "Fahad Kiani",
+    "filing_target": "U.S. Provisional Patent Application (35 U.S.C. §111(b))",
+    "version": "HARDENED v0.4 — 2026-05-20",
+    "cpc_class": "G16H 50/20",
+    "what_is_patented": {
+      "core_invention": "A computer-implemented method for encoding a patient state and a therapeutic intervention state in a shared biologically defined mechanism space, computing alignment between the encoded states, and using the resulting outputs for trial ranking, arm selection, eligibility-gated stratification, cohort enrichment, and adaptive trial operations.",
+      "key_claims": [
+        "Claim 1: Computer-implemented method for improving clinical trial enrollment efficiency using multi-dimensional biological mechanism space vectors",
+        "Claim 2: The method of Claim 1, wherein the mechanism space dimensions correspond to DDR, MAPK, PI3K, VEGF, HER2, IO, efflux, and RSS pathways",
+        "Claim 3: The method of Claim 1, wherein alignment is computed as clip((p·t)/‖t‖₂, 0, 1) — PATH A formula",
+        "Claim 4: The method of Claim 1, applied to synthetic lethality asset identification (BRIEF programs)"
+      ],
+      "what_prior_art_cannot_do": [
+        "ClinicalTrials.gov keyword matching: Boolean match only — no quantitative alignment score",
+        "OncoKB/CIVIC: Map mutations to drugs but no patient-trial alignment scoring",
+        "Standard biomarker matching: Single-gene matching — no multi-dimensional mechanism space"
+      ]
+    },
+    "ip_moat": "The patent covers the multi-dimensional mechanism space approach — not just the formula. Any system that encodes patient biology and trial mechanism in a shared vector space and computes alignment falls within the claims. This is broader than the specific PATH A formula.",
+    "source": "14-provisional-patent-8d-vector-HARDENED.md; patent_submission/HANDOFF.md"
+  },
+  "ip_valuation_summary": {
+    "thesis": "Pharma spent $1.95 billion running six brain cancer trials that failed for reasons a CRISPR functional genomics engine could have identified before a single patient was enrolled. CrisPRO decoded all six failures, identified the correct patient populations, and filed four patent claims covering the corrected indications.",
+    "brief_1_licensing_value": {
+      "asset": "BRIEF-1 (ZEB1→ITGAV, CRISPR_VALIDATED, DEAL_READY)",
+      "benchmark": "Roche paid $125M upfront for Repare's camonsertib (ATRi) — one CRISPR-validated SL asset in a different indication",
+      "licensing_target": "$8–15M upfront (Months 6–12 per $500M roadmap)",
+      "note": "All deal figures are benchmarks from comparable transactions — not projections or guarantees"
+    },
+    "series_a_target": "$150–200M valuation (Month 11)",
+    "series_b_target": "$500M valuation (Month 30–36)",
+    "repare_benchmark": "~$400M Series B on ONE CRISPR-validated SL asset",
+    "governance": {
+      "formula": "PATH A only — fit = clip((p·t) / ‖t‖₂, 0, 1)",
+      "path_b": "PROHIBITED",
+      "quarantined": [
+        "DL-07",
+        "CT-03",
+        "DL-05",
+        "PC-06",
+        "PC-02"
+      ],
+      "pten_null_status": "COMPUTATIONAL HYPOTHESIS — DepMap NULL across all 3 proxies — not CRISPR-validated",
+      "deal_structures": "All deal figures are benchmarks from comparable transactions — not guaranteed outcomes"
+    },
+    "source": "crispro_ip_valuation_glb_v1.mdc; crispro_500m_roadmap_v1.mdc"
+  }
+}

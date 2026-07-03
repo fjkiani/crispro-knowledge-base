@@ -1,0 +1,111 @@
+{
+  "program_id": "BRIEF_SL",
+  "program_name": "BRIEF Synthetic Lethality Program",
+  "admissibility": "trade_secret \u2014 NDA required for delta/FDR values",
+  "programs": [
+    {
+      "id": "BRIEF-1",
+      "axis": "ZEB1 \u2192 ITGAV (synthetic lethality)",
+      "evidence_tier": "CRISPR_VALIDATED",
+      "deal_ready": true,
+      "delta": -0.7184,
+      "fdr": 0.001203,
+      "status": "DEAL_READY",
+      "indication": "NSCLC brain metastasis (BrM)",
+      "what_zeb1_is": "ZEB1 (Zinc finger E-box binding homeobox 1) is a master regulator of epithelial-mesenchymal transition (EMT). In NSCLC/BrM, ZEB1-high tumors have undergone EMT \u2014 they are more invasive, more metastatic, and more resistant to chemotherapy. ZEB1-high is a marker of aggressive disease.",
+      "what_itgav_is": "ITGAV (Integrin alpha-V) is a cell surface receptor that mediates cell adhesion to the extracellular matrix. In ZEB1-high cells, ITGAV becomes essential for survival \u2014 ZEB1-high cells depend on integrin signaling for anoikis resistance and survival in the metastatic niche.",
+      "why_sl_makes_sense": "ZEB1-high cells have undergone EMT and lost epithelial adhesion molecules (E-cadherin). They become dependent on mesenchymal adhesion molecules (integrins, including ITGAV) for survival. Inhibiting ITGAV in ZEB1-high cells removes their survival scaffold \u2014 they die. ZEB1-low cells retain E-cadherin and are not dependent on ITGAV.",
+      "licensing_value": "Benchmark: Roche paid $125M upfront for Repare's camonsertib (ATRi) \u2014 one CRISPR-validated SL asset. BRIEF-1 is a CRISPR-validated SL asset in a different indication (NSCLC/BrM). Licensing target: $8\u201315M upfront (Months 6\u201312 per $500M roadmap).",
+      "admissibility_note": "Delta and FDR values are trade secrets \u2014 do not publish in external outputs without NDA",
+      "source": "crispro_ip_valuation_glb_v1.mdc; crispro_master_pipeline.json ip_estate.brief_programs[0]"
+    },
+    {
+      "id": "BRIEF-4",
+      "axis": "SPP1 \u2192 NRF2 (synthetic lethality)",
+      "evidence_tier": "CRISPR_VALIDATED",
+      "deal_ready": false,
+      "delta": -0.7326,
+      "fdr": 8e-06,
+      "status": "COMPUTATIONAL_LEAD",
+      "indication": "NSCLC brain metastasis (BrM)",
+      "what_spp1_is": "SPP1 (Secreted Phosphoprotein 1, also known as Osteopontin) is a secreted glycoprotein that promotes tumor invasion, metastasis, and immune evasion. SPP1-high tumors have an immunosuppressive TME \u2014 SPP1 recruits MDSCs and promotes M2 macrophage polarization.",
+      "what_nrf2_is": "NRF2 (Nuclear factor erythroid 2-related factor 2) is a transcription factor that regulates the antioxidant response. In SPP1-high cells, NRF2 becomes essential for managing oxidative stress \u2014 SPP1-high cells generate more reactive oxygen species (ROS) and depend on NRF2 for survival.",
+      "why_sl_makes_sense": "SPP1-high cells have elevated oxidative stress from their pro-inflammatory, pro-metastatic activity. They become dependent on NRF2 for ROS management. Inhibiting NRF2 in SPP1-high cells overwhelms their antioxidant capacity \u2014 they die from oxidative stress. SPP1-low cells have lower ROS and are not dependent on NRF2.",
+      "status_note": "COMPUTATIONAL_LEAD \u2014 CRISPR-validated but not yet deal-ready. Requires additional validation before licensing discussion.",
+      "source": "crispro_ip_valuation_glb_v1.mdc; crispro_master_pipeline.json ip_estate.brief_programs[3]"
+    },
+    {
+      "id": "BRIEF-3",
+      "axis": "ZEB1-high + PD-1 blockade combination",
+      "evidence_tier": "MECHANISTICALLY_GROUNDED",
+      "deal_ready": "conditional",
+      "status": "CONDITIONAL_ONE_GAP",
+      "indication": "NSCLC brain metastasis (BrM)",
+      "rationale": "ZEB1-high tumors upregulate PD-L1 expression (ZEB1 directly transcribes PD-L1). ZEB1-high + PD-1 blockade is mechanistically grounded \u2014 ZEB1-high tumors should be more responsive to checkpoint blockade.",
+      "correlation_result": "GSE271259 (n=34): r=0.050, p=0.780 \u2014 statistically INSIGNIFICANT. The correlation between ZEB1 expression and PD-1 response is not supported by this dataset.",
+      "mandatory_disclosure": "BRIEF-3 correlation r=0.050, p=0.780 is statistically insignificant. BRIEF-3 is MECHANISTICALLY_GROUNDED, not CRISPR_VALIDATED. The combination hypothesis is supported by mechanistic literature but not by the GSE271259 correlation.",
+      "source": "crispro_ip_valuation_glb_v1.mdc; crispro_master_pipeline.json ip_estate.brief_programs[2]"
+    },
+    {
+      "id": "BRIEF-2",
+      "axis": "PTEN-null \u2192 ITGAV",
+      "evidence_tier": "COMPUTATIONAL_HYPOTHESIS",
+      "deal_ready": false,
+      "status": "VALIDATION_REQUIRED",
+      "indication": "NSCLC brain metastasis (BrM)",
+      "rationale": "PTEN-null cells lose PI3K/AKT regulation and may become dependent on integrin signaling (ITGAV) for survival \u2014 similar to ZEB1-high cells.",
+      "depmap_result": "DepMap NULL across all 3 proxies \u2014 ITGAV is NOT more essential in PTEN-null cells than PTEN-intact cells in the DepMap data.",
+      "mandatory_disclosure": "BRIEF-2 (PTEN-null\u2192ITGAV) is a COMPUTATIONAL HYPOTHESIS. DepMap shows NULL essentiality across all 3 proxies. Not CRISPR-validated. Requires experimental validation before any licensing discussion. Must be disclosed in every context where BRIEF-2 appears.",
+      "source": "crispro_ip_valuation_glb_v1.mdc"
+    }
+  ],
+  "ip_valuation": {
+    "thesis": "Pharma spent $1.95 billion running six brain cancer trials that failed for reasons a CRISPR functional genomics engine could have identified before a single patient was enrolled. CrisPRO decoded all six failures, identified the correct patient populations, and filed four patent claims covering the corrected indications.",
+    "brief_1_licensing_value": {
+      "asset": "BRIEF-1 (ZEB1\u2192ITGAV, CRISPR_VALIDATED, DEAL_READY)",
+      "benchmark": "Roche paid $125M upfront for Repare's camonsertib (ATRi) \u2014 one CRISPR-validated SL asset in a different indication",
+      "licensing_target": "$8\u201315M upfront (Months 6\u201312 per $500M roadmap)",
+      "note": "All deal figures are benchmarks from comparable transactions \u2014 not projections or guarantees"
+    },
+    "series_a_target": "$150\u2013200M valuation (Month 11)",
+    "series_b_target": "$500M valuation (Month 30\u201336)",
+    "repare_benchmark": "~$400M Series B on ONE CRISPR-validated SL asset",
+    "governance": {
+      "formula": "PATH A only \u2014 fit = clip((p\u00b7t) / \u2016t\u2016\u2082, 0, 1)",
+      "path_b": "PROHIBITED",
+      "quarantined": [
+        "DL-07",
+        "CT-03",
+        "DL-05",
+        "PC-06",
+        "PC-02"
+      ],
+      "pten_null_status": "COMPUTATIONAL HYPOTHESIS \u2014 DepMap NULL across all 3 proxies \u2014 not CRISPR-validated",
+      "deal_structures": "All deal figures are benchmarks from comparable transactions \u2014 not guaranteed outcomes"
+    },
+    "source": "crispro_ip_valuation_glb_v1.mdc; crispro_500m_roadmap_v1.mdc"
+  },
+  "patent": {
+    "title": "System and Method for Predictive Patient-to-Intervention Mechanism Alignment for Clinical Trial Stratification, Arm Selection, and Cohort Enrichment Using Shared Multi-Dimensional Biological Vector Spaces",
+    "inventors": "Fahad Kiani",
+    "filing_target": "U.S. Provisional Patent Application (35 U.S.C. \u00a7111(b))",
+    "version": "HARDENED v0.4 \u2014 2026-05-20",
+    "cpc_class": "G16H 50/20",
+    "what_is_patented": {
+      "core_invention": "A computer-implemented method for encoding a patient state and a therapeutic intervention state in a shared biologically defined mechanism space, computing alignment between the encoded states, and using the resulting outputs for trial ranking, arm selection, eligibility-gated stratification, cohort enrichment, and adaptive trial operations.",
+      "key_claims": [
+        "Claim 1: Computer-implemented method for improving clinical trial enrollment efficiency using multi-dimensional biological mechanism space vectors",
+        "Claim 2: The method of Claim 1, wherein the mechanism space dimensions correspond to DDR, MAPK, PI3K, VEGF, HER2, IO, efflux, and RSS pathways",
+        "Claim 3: The method of Claim 1, wherein alignment is computed as clip((p\u00b7t)/\u2016t\u2016\u2082, 0, 1) \u2014 PATH A formula",
+        "Claim 4: The method of Claim 1, applied to synthetic lethality asset identification (BRIEF programs)"
+      ],
+      "what_prior_art_cannot_do": [
+        "ClinicalTrials.gov keyword matching: Boolean match only \u2014 no quantitative alignment score",
+        "OncoKB/CIVIC: Map mutations to drugs but no patient-trial alignment scoring",
+        "Standard biomarker matching: Single-gene matching \u2014 no multi-dimensional mechanism space"
+      ]
+    },
+    "ip_moat": "The patent covers the multi-dimensional mechanism space approach \u2014 not just the formula. Any system that encodes patient biology and trial mechanism in a shared vector space and computes alignment falls within the claims. This is broader than the specific PATH A formula.",
+    "source": "14-provisional-patent-8d-vector-HARDENED.md; patent_submission/HANDOFF.md"
+  }
+}
