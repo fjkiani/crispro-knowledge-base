@@ -1,0 +1,49 @@
+{
+  "id": "moat:synergy_quantification_methodology",
+  "type": "moat_dimension",
+  "name": "Synergy quantification methodology",
+  "what_it_solves": "Synergy quantification methodology",
+  "how_it_solves": "CrisPRO does not currently perform wet-lab synergy quantification — relies on GDSC2 single-agent IC50 / AUC + DepMap CRISPR dependency for axis ranking.",
+  "why_it_exists": "Encoded gap between CrisPRO methodology and Bev2026.",
+  "attributes": {
+    "moat_status": "Bev2026 ADVANTAGE on wet-lab synergy measurement methodology. CrisPRO can offer in-silico drug-combination ranking via GDSC2 axis pairing (e.g., ATR-inhibitor × cytidine-analog combination predictions for MBD4-LOF), but does not generate primary synergy scores.",
+    "Bev2026_implementation": null,
+    "Bev2026_approach_verbatim": "Synergy was calculated with two models (HSA and Bliss) using SynergyFinder 3.1, and HSA synergy scores and summary synergy scores with 95% confidence interval for the CCK-8 experiments are shown.",
+    "Bev2026_approach_verbatim_source": "Bev2026 PDF, Fig 3 caption (page 7)",
+    "verification_status": "",
+    "raw_dimension_record": {
+      "dimension": "Synergy quantification methodology",
+      "Bev2026_approach_verbatim": "Synergy was calculated with two models (HSA and Bliss) using SynergyFinder 3.1, and HSA synergy scores and summary synergy scores with 95% confidence interval for the CCK-8 experiments are shown.",
+      "Bev2026_approach_verbatim_source": "Bev2026 PDF, Fig 3 caption (page 7)",
+      "Bev2026_software_note": "Paper uses SynergyFinder 3.1, but cites reference 21 (Ianevski et al. 2022 Nucleic Acids Res 50:W739-W743) which is the SynergyFinder 3.0 publication. The 3.1 release apparently postdates the original publication and is referenced by version number only in the figure caption.",
+      "CrisPRO_approach": "CrisPRO does not currently perform wet-lab synergy quantification — relies on GDSC2 single-agent IC50 / AUC + DepMap CRISPR dependency for axis ranking.",
+      "moat_status": "Bev2026 ADVANTAGE on wet-lab synergy measurement methodology. CrisPRO can offer in-silico drug-combination ranking via GDSC2 axis pairing (e.g., ATR-inhibitor × cytidine-analog combination predictions for MBD4-LOF), but does not generate primary synergy scores.",
+      "complementary_value": "If CrisPRO computational ranking nominates a combination, Bev2026's published HSA/Bliss methodology with 95% CI is the reproducible gold-standard for wet-lab validation."
+    }
+  },
+  "verbatim_evidence": [
+    {
+      "quote": "Synergy was calculated with two models (HSA and Bliss) using SynergyFinder 3.1, and HSA synergy scores and summary synergy scores with 95% confidence interval for the CCK-8 experiments are shown.",
+      "file": "Bev2026 PDF (external, not in this KB corpus)",
+      "context": "Bev2026 PDF, Fig 3 caption (page 7)",
+      "note": "Verbatim quote from Bev2026 as reproduced in moat_comparison.json; verification_status: "
+    }
+  ],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00",
+      "span_extracted": "comparison_dimensions[7]"
+    }
+  ],
+  "cross_refs": [
+    "governance:8d_remediation",
+    "governance:path_a_formula",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "moat_and_governance"
+}

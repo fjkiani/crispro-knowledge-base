@@ -1,0 +1,49 @@
+{
+  "id": "moat:stress_testing_confound_robustness",
+  "type": "moat_dimension",
+  "name": "Stress testing / confound robustness",
+  "what_it_solves": "Stress testing / confound robustness",
+  "how_it_solves": "See moat_comparison.json for the full crispro-vs-comparator table.",
+  "why_it_exists": "Encoded gap between CrisPRO methodology and Bev2026.",
+  "attributes": {
+    "moat_status": "CrisPRO ADVANTAGE for systematic confound testing across stratifiers. Bev2026 validates across systems; CrisPRO validates across statistical stratifiers within one dataset. Both are necessary, but CrisPRO's approach can be applied PRE-publication to triage hypotheses.",
+    "Bev2026_implementation": null,
+    "Bev2026_approach_verbatim": null,
+    "Bev2026_approach_verbatim_source": "",
+    "verification_status": "Bev2026 from PDF §Results + Supp Fig 1A, 1F, 6A. CrisPRO from canonical_atr_wee1_rerun.json frozen 2026-04-05, full-precision JSON in transcript indices 991/1010 + user-provided 'precise numbers' message line 12288.",
+    "raw_dimension_record": {
+      "dimension": "Stress testing / confound robustness",
+      "Bev2026_approach": "(a) Test in 2 independent isogenic clone pairs per cell line (Fig 1F, 1G) to exclude clone-selection artifact. (b) Test in T24 (second cell line) and PDOs (2 patient sources) to exclude cell-line artifact. (c) Test in pancreatic adenocarcinoma + mesothelioma to exclude lineage artifact.",
+      "Bev2026_evidence_quality": "Strong cellular validation across systems but no formal stratifier analysis with explicit n breakdowns.",
+      "CrisPRO_approach_with_receipts": [
+        "Stress #1 (MSI purge): exclude ModelSubtypeFeatures containing 'MSI' from both arms. Effect STRENGTHENS: n_LOF=10/n_WT=906, Δ=-0.9095277046357615, p=0.015328932966132268, d=-0.6227047947387747. Rules out: MSI-H as confounder.",
+        "Stress #2 (TP53 stratification): MBD4-LOF∩TP53-mut vs MBD4-WT(Methods)∩TP53-mut. Effect is LARGEST: n_LOF=11/n_WT=619, LN_IC50 Δ=-1.0692019443383756, p=0.003002668797799231, d=-0.7404782024497254. AUC Δ=-0.08694390659421358, p=0.0008734372333767206, d=-0.8888045345020856. Rules out: TP53 dependency; relevant because >95% of HGSOC is TP53-mutant.",
+        "Stress #3 (Leave-one-out × 14): Max p across 14 iterations = 0.045165724128583974. All 14/14 iterations p<0.05. Rules out: Single-line driver.",
+        "Stress #4 (Non-bowel lineage): n_LOF=9/n_WT=873, Δ=-0.8706814558991984, p=0.02533035508952329, d=-0.5988100454283156. Rules out: Bowel-lineage artifact (bowel-only n_LOF=5, p=0.12638007986845198 underpowered).",
+        "Primary endpoint (Methods_no_somatic_MBD4 rule, ceralasertib LN_IC50): n_LOF=14, n_WT=914, Δ=-0.7324529879649893, p=0.021484496737088882, d=-0.5032867186922607.",
+        "Primary endpoint AUC partner: Δ=-0.05564297952485164, p=0.012941267483990927, d=-0.5569455208182712."
+      ],
+      "moat_status": "CrisPRO ADVANTAGE for systematic confound testing across stratifiers. Bev2026 validates across systems; CrisPRO validates across statistical stratifiers within one dataset. Both are necessary, but CrisPRO's approach can be applied PRE-publication to triage hypotheses.",
+      "verification_status": "Bev2026 from PDF §Results + Supp Fig 1A, 1F, 6A. CrisPRO from canonical_atr_wee1_rerun.json frozen 2026-04-05, full-precision JSON in transcript indices 991/1010 + user-provided 'precise numbers' message line 12288.",
+      "CrisPRO_receipts_source": "canonical_atr_wee1_rerun.json frozen 2026-04-05. Full content retrievable from transcript indices 991/1010 (raw.githubusercontent.com/fjkiani/Synthetic-Lethality/feat/mbd4-rxiv-manuscript-942-baseline/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/canonical_atr_wee1_rerun.json) + user-provided 'precise numbers' message at transcript line 12288 (i=11560)."
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00",
+      "span_extracted": "comparison_dimensions[2]"
+    }
+  ],
+  "cross_refs": [
+    "governance:8d_remediation",
+    "governance:path_a_formula",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "moat_and_governance"
+}

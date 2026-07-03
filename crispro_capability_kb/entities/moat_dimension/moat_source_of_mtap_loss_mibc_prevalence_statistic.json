@@ -1,0 +1,46 @@
+{
+  "id": "moat:source_of_mtap_loss_mibc_prevalence_statistic",
+  "type": "moat_dimension",
+  "name": "Source of MTAP-loss MIBC prevalence statistic",
+  "what_it_solves": "Source of MTAP-loss MIBC prevalence statistic",
+  "how_it_solves": "Reproduces and cites Bev2026's 26% figure for MTAP/CDKN2A/CDKN2B co-deletion. The 22% figure (CDKN2A-alone in MIBC, Robertson 2017) is also cited as a complementary endpoint when MTAP-status is not specified. CrisPRO has NOT independently reproduced either number — both are taken from external citations.",
+  "why_it_exists": "Encoded gap between CrisPRO methodology and Bev2026.",
+  "attributes": {
+    "moat_status": "NEUTRAL — both numbers are Bev2026 + Robertson/Lindskrog original findings. CrisPRO cites them appropriately.",
+    "Bev2026_implementation": null,
+    "Bev2026_approach_verbatim": null,
+    "Bev2026_approach_verbatim_source": "",
+    "verification_status": "All three verbatim quotes confirmed by direct PDF read 2026-06-24 (pages 2, 12 of PDF). Specific pages cited per quote.",
+    "raw_dimension_record": {
+      "dimension": "Source of MTAP-loss MIBC prevalence statistic",
+      "Bev2026_approach_verbatim_1": "Our analysis of the TCGA MIBC cohort showed that approximately 26% of patients harbor homozygous deletion of CDKN2A/CDKN2B/MTAP, while only a minority (approximately 5%) harbor homozygous deletions of only CDKN2A/2B.",
+      "Bev2026_approach_verbatim_source_1": "Bev2026 PDF, Results section (page 2)",
+      "Bev2026_approach_verbatim_2": "Co-occurrence of CDKN2A/2B and MTAP deletions interests 26% of TCGA MIBC patients (p value < 0.001 based on...",
+      "Bev2026_approach_verbatim_source_2": "Bev2026 PDF, Discussion section (page 12)",
+      "Bev2026_approach_verbatim_3": "Several studies have investigated the molecular landscape of NMIBC and MIBC, revealing that CDKN2A loss at chromosome 9p21 is the most common copy number alteration in BLCA, occurring in approximately 42 and 22% of NMIBC and MIBC, respectively13,14.",
+      "Bev2026_approach_verbatim_source_3": "Bev2026 PDF, Introduction (page 2), refs 13 (Lindskrog 2021) and 14 (Robertson 2017)",
+      "CrisPRO_approach": "Reproduces and cites Bev2026's 26% figure for MTAP/CDKN2A/CDKN2B co-deletion. The 22% figure (CDKN2A-alone in MIBC, Robertson 2017) is also cited as a complementary endpoint when MTAP-status is not specified. CrisPRO has NOT independently reproduced either number — both are taken from external citations.",
+      "moat_status": "NEUTRAL — both numbers are Bev2026 + Robertson/Lindskrog original findings. CrisPRO cites them appropriately.",
+      "attribution_clarity": "Important: 26% (Bev2026 = MTAP+CDKN2A/B co-deletion) ≠ 22% (Robertson 2017 = CDKN2A loss alone, MTAP status not specified). Conflating them would be a methodological error.",
+      "verification_status": "All three verbatim quotes confirmed by direct PDF read 2026-06-24 (pages 2, 12 of PDF). Specific pages cited per quote."
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00",
+      "span_extracted": "comparison_dimensions[8]"
+    }
+  ],
+  "cross_refs": [
+    "governance:8d_remediation",
+    "governance:path_a_formula",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "moat_and_governance"
+}

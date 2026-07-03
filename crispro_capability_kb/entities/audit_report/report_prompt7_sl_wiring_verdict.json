@@ -1,0 +1,26 @@
+{
+  "id": "report:prompt7_sl_wiring_verdict",
+  "type": "audit_report",
+  "name": "Prompt-7 SL wiring verdict",
+  "what_it_solves": "Verdict report on whether the SL engine is wired correctly end-to-end (prompt 7 in the gap-exploit suite).",
+  "how_it_solves": "Traces a real request through orchestrator → SL engine → fuser → tier → response and grades each hop.",
+  "why_it_exists": "Answers 'is the pipeline actually wired the way the roadmap claims?' — one report per prompt keeps the answer surgical.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/report_prompt7_sl_wiring_verdict.md",
+      "exists": true,
+      "bytes": 11847,
+      "sha256": "18ea7729e52c0242f721f8a114fc673286226b6c73bfdffd6b38f37947bce875",
+      "mtime_iso": "2026-05-09T17:01:20+00:00"
+    }
+  ],
+  "cross_refs": [
+    "audit:gap_exploit_prompts",
+    "engine:synthetic_lethality",
+    "component:orchestrator"
+  ],
+  "gaps_still_open": [],
+  "_stream": "operations_and_access"
+}

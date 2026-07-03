@@ -1,0 +1,37 @@
+{
+  "id": "evidence:a5",
+  "type": "evidence_analysis",
+  "name": "MBD4/ATR analysis A5 — Literature evidence pack",
+  "what_it_solves": "Analysis 'A5' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+  "how_it_solves": "Curated literature evidence supporting the MBD4 mechanism claim.",
+  "why_it_exists": "Bridges computational signals to published biology (dedicated A5_literature/ subfolder).",
+  "attributes": {
+    "files": [
+      "A5_literature",
+      "A5_ucec_survival_mbd4_lof.png"
+    ],
+    "file_count": 2
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A5_literature",
+      "is_dir": true,
+      "exists": true
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A5_ucec_survival_mbd4_lof.png",
+      "exists": true,
+      "bytes": 73071,
+      "sha256": "f8e25cfbca9f0e1d4fafb48f714e4f41675c57d38578b57f9e6f245d00005dd2",
+      "mtime_iso": "2026-04-25T07:30:07+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2",
+    "axis:ATR_WEE1",
+    "framework:rs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "evidence_and_receipts"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "endpoint:bundle",
+  "type": "endpoint",
+  "name": "POST /api/ayesha/therapy-fit/bundle?level=l1&include_synthetic_lethality=true",
+  "what_it_solves": "Composite therapy-fit bundle endpoint — the front-end's primary read.",
+  "how_it_solves": "Live commit + response body captured in bundle_endpoint_mbd4_live.json. Top-level keys observed: ['contract_version', 'patient_id', 'requested_levels', 'generated_at', 'levels', 'tests_needed', 'patient_context', 'synthetic_lethality', 'sl_status']",
+  "why_it_exists": "Single call for the clinician UI: bundles SL + safety + trials + SOC + biomarkers behind one contract.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/crispro_live_api_proof.json",
+      "exists": true,
+      "bytes": 4103,
+      "sha256": "e2dbc0ec6c59e92b0be8ff2a49a98a522e095d978c1f29d3e49cdcf10e36665b",
+      "mtime_iso": "2026-06-06T21:01:49+00:00"
+    },
+    {
+      "path": "/mnt/results/bundle_endpoint_mbd4_live.json",
+      "exists": true,
+      "bytes": 171815,
+      "sha256": "7caf61b0df24cddab133485678558d5c0ea148c33782c5f605c442c1a79f18e4",
+      "mtime_iso": "2026-06-06T21:01:06+00:00"
+    }
+  ],
+  "cross_refs": [
+    "component:ayesha_bundle_waterfall",
+    "layer:output",
+    "receipt:crispro_live_api_proof"
+  ],
+  "gaps_still_open": [],
+  "_stream": "evidence_and_receipts"
+}

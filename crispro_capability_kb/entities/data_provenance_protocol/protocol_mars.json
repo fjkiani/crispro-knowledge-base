@@ -1,0 +1,68 @@
+{
+  "id": "protocol:mars",
+  "type": "data_provenance_protocol",
+  "name": "Mars Protocol — approved knowledge-base sources",
+  "what_it_solves": "Data governance protocol enumerating which external KBs can be ingested into the SL engine's kb/.",
+  "how_it_solves": "Approved sources: CIViC (CC0), CGI (CC0), JAX (curated seed), ClinVar (public), DepMap (CC-BY 4.0), PRISM (CC-BY 4.0), GDSC (open access), PubMed/PMC (public). Excluded: OncoKB, Synapse (paywalled), COSMIC, cBioPortal.",
+  "why_it_exists": "Prevents the pipeline from silently depending on paywalled or license-restricted sources — every claim must be traceable to an open receipt.",
+  "attributes": {
+    "approved_sources": [
+      {
+        "name": "CIViC",
+        "license": "CC0"
+      },
+      {
+        "name": "CGI",
+        "license": "CC0"
+      },
+      {
+        "name": "JAX",
+        "license": "curated seed"
+      },
+      {
+        "name": "ClinVar",
+        "license": "public"
+      },
+      {
+        "name": "DepMap",
+        "license": "CC-BY 4.0"
+      },
+      {
+        "name": "PRISM",
+        "license": "CC-BY 4.0"
+      },
+      {
+        "name": "GDSC",
+        "license": "open access"
+      },
+      {
+        "name": "PubMed/PMC",
+        "license": "public"
+      }
+    ],
+    "excluded_sources": [
+      "OncoKB",
+      "Synapse",
+      "COSMIC",
+      "cBioPortal"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "Mars Protocol section"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality",
+    "governance:8d_remediation",
+    "invariant:kb_read_only"
+  ],
+  "gaps_still_open": [],
+  "_stream": "moat_and_governance"
+}

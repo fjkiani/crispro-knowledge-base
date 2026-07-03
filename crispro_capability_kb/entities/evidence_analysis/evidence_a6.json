@@ -1,0 +1,39 @@
+{
+  "id": "evidence:a6",
+  "type": "evidence_analysis",
+  "name": "MBD4/ATR analysis A6 — MSI-stratified CRISPR (deconfounding attempt)",
+  "what_it_solves": "Analysis 'A6' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+  "how_it_solves": "Stratify MBD4-LOF vs WT WITHIN MSI-H to see if MBD4-specific signal exists beyond MSI.",
+  "why_it_exists": "Addresses the MSI-H collinearity confounder that is the primary blocker on STRONG tier.",
+  "attributes": {
+    "files": [
+      "A6_msi_stratified_atr_crispr.csv",
+      "A6_msi_stratified_violin.png"
+    ],
+    "file_count": 2
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A6_msi_stratified_atr_crispr.csv",
+      "exists": true,
+      "bytes": 1214,
+      "sha256": "1b7db9da70d53ef30641326f639a1e1a75921225734f0a764b5e63dd3fc51586",
+      "mtime_iso": "2026-04-26T06:24:33+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A6_msi_stratified_violin.png",
+      "exists": true,
+      "bytes": 309000,
+      "sha256": "3de42fff3ee6ef3ba4de79038e69c99b8fdce8ccf3182c248a1022f9c1e9939f",
+      "mtime_iso": "2026-04-26T06:24:34+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2",
+    "axis:ATR_WEE1",
+    "framework:rs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "evidence_and_receipts"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "layer:contracts",
+  "type": "layer",
+  "name": "Layer 0 — Contracts",
+  "what_it_solves": "Typed Pydantic models that every engine reads/writes — the API surface between engines.",
+  "how_it_solves": "PatientState, SomaticMutation, CaseResolution, RankedIntervention, RSFeatureSet are versioned dataclasses/Pydantic models. Every engine boundary is a contract transition; nothing crosses layers as loose dicts.",
+  "why_it_exists": "Prevents drift: if two engines share a field name, they share the model. No 'stringly-typed' RS scores.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+      "exists": true,
+      "bytes": 17877,
+      "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+      "mtime_iso": "2026-05-05T06:14:00+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "Ch 3.1–3.4"
+    }
+  ],
+  "cross_refs": [
+    "repo:crispro-backend-v3"
+  ],
+  "gaps_still_open": [],
+  "_stream": "architecture"
+}

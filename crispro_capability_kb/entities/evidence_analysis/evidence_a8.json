@@ -1,0 +1,39 @@
+{
+  "id": "evidence:a8",
+  "type": "evidence_analysis",
+  "name": "MBD4/ATR analysis A8 — Dependency probability bar",
+  "what_it_solves": "Analysis 'A8' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+  "how_it_solves": "Binary >0.5 dependency probability across ATR/CHEK1/WEE1 in MBD4-LOF vs WT.",
+  "why_it_exists": "Complements A1b: does the standard DepMap 'essential' cutoff show MBD4-LOF enrichment?",
+  "attributes": {
+    "files": [
+      "A8_dependency_probability.csv",
+      "A8_dependency_probability_bar.png"
+    ],
+    "file_count": 2
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A8_dependency_probability.csv",
+      "exists": true,
+      "bytes": 819,
+      "sha256": "c9bec4f53c68a73ba32bc008774c7a69e1fab36f0ffcaf21b2b473845afc86ff",
+      "mtime_iso": "2026-04-26T06:24:37+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A8_dependency_probability_bar.png",
+      "exists": true,
+      "bytes": 178384,
+      "sha256": "9ce2f30b575fdb3c8df2e98121ab5d061d922432b72471cf0d14db798a9200cd",
+      "mtime_iso": "2026-04-26T06:24:38+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2",
+    "axis:ATR_WEE1",
+    "framework:rs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "evidence_and_receipts"
+}

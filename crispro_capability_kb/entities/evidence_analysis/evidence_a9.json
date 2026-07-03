@@ -1,0 +1,55 @@
+{
+  "id": "evidence:a9",
+  "type": "evidence_analysis",
+  "name": "MBD4/ATR analysis A9 — AZD6738 / pharmacology benchmark",
+  "what_it_solves": "Analysis 'A9' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+  "how_it_solves": "GDSC2 AZD6738 AUC violin + effect-size benchmark.",
+  "why_it_exists": "Turns 'checkpoint inhibitor sensitivity' into a specific drug-level receipt.",
+  "attributes": {
+    "files": [
+      "A9_azd6738_auc_violin.png",
+      "A9_benchmark_comparator.md",
+      "A9_gdsc2_pharmacology_benchmark.csv",
+      "A9_pharmacology_effect_sizes.png"
+    ],
+    "file_count": 4
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A9_azd6738_auc_violin.png",
+      "exists": true,
+      "bytes": 247975,
+      "sha256": "31b1fea545ce00efc34b0468199cc1066ae259a7abd6d6955adda2c098162fd3",
+      "mtime_iso": "2026-04-27T04:31:12+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A9_benchmark_comparator.md",
+      "exists": true,
+      "bytes": 4799,
+      "sha256": "fddf4d439db6e55a36d0ab7e86e88604fb275cc2999b09084b3d4b65e43289dc",
+      "mtime_iso": "2026-04-27T04:33:26+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A9_gdsc2_pharmacology_benchmark.csv",
+      "exists": true,
+      "bytes": 3119,
+      "sha256": "856810e67d2c3c5a609d939a764358a5301d235e5b5e4f34c3d3f151a71802a4",
+      "mtime_iso": "2026-04-27T04:30:45+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A9_pharmacology_effect_sizes.png",
+      "exists": true,
+      "bytes": 138193,
+      "sha256": "efd4fca1ebe05d045e5078788bd7a0c77c3ca6f343409b17b7e4fc76d6cb708f",
+      "mtime_iso": "2026-04-27T04:32:28+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2",
+    "axis:ATR_WEE1",
+    "framework:rs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "evidence_and_receipts"
+}

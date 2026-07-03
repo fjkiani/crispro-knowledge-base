@@ -1,0 +1,25 @@
+{
+  "id": "report:gap_lineage",
+  "type": "audit_report",
+  "name": "Gap lineage report",
+  "what_it_solves": "Report tracing how each identified gap in the SL engine maps back to the originating exploit or audit.",
+  "how_it_solves": "Structured markdown: gap ID → source audit → status → owner.",
+  "why_it_exists": "Answers 'where did this gap come from?' in one place — prevents duplicate gaps from re-appearing under new IDs.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/report_gap_lineage.md",
+      "exists": true,
+      "bytes": 19836,
+      "sha256": "9ba37aa4d614b8686a5203c00fdc666008996b1ce358b847fca0fec66c3c2556",
+      "mtime_iso": "2026-06-05T16:15:56+00:00"
+    }
+  ],
+  "cross_refs": [
+    "audit:gap_exploit_prompts",
+    "artifact:flag_remediation_memo"
+  ],
+  "gaps_still_open": [],
+  "_stream": "operations_and_access"
+}

@@ -1,0 +1,203 @@
+{
+  "id": "receipt:crispro_live_api_proof",
+  "type": "canonical_receipt",
+  "name": "CrisPRO live API proof (commit-anchored)",
+  "what_it_solves": "Endpoint-level proof that the deployed crispro-backend-v3 exposes the SL + bundle routes at a specific commit.",
+  "how_it_solves": "crispro_live_api_proof.json records commit SHA + endpoint paths. Companion files sl_endpoint_mbd4_live.json / bundle_endpoint_mbd4_live.json store the actual JSON returned for the MBD4 test case.",
+  "why_it_exists": "Turns the roadmap's claimed endpoints into observable receipts. Any drift between roadmap and deployment shows up as a diff against this file.",
+  "attributes": {
+    "live_proof_content": {
+      "commit": "9190a1f3",
+      "endpoints_called": {
+        "sl_endpoint": "POST /api/agents/synthetic_lethality",
+        "bundle_endpoint": "POST /api/ayesha/therapy-fit/bundle?level=l1&include_synthetic_lethality=true"
+      },
+      "request_payload": {
+        "patient_id": "MBD4-TEST-001",
+        "disease": "colorectal_cancer",
+        "mutations": [
+          {
+            "gene": "MBD4",
+            "hgvs_p": "p.R438*"
+          }
+        ],
+        "options": {
+          "primary_sl_gene": "MBD4",
+          "include_explanations": false,
+          "true_scoring_required": true,
+          "rs_features": {
+            "mbd4_lof": true,
+            "msi_h": true,
+            "ccne1_amplified": false,
+            "myc_amplified": false,
+            "arid1a_lof": false,
+            "tp53_lof": false,
+            "high_ploidy": false
+          }
+        }
+      },
+      "fix_1_gdsc_receipt": {
+        "axis": "atr_wee1",
+        "gdsc_cell": {
+          "status": "positive",
+          "p_value": 0.021,
+          "delta_ic50_log2": -0.74,
+          "n_mut": 14,
+          "n_wt": 914,
+          "pmids": [
+            "internal:crispro-mbd4-atr-gdsc-v1"
+          ],
+          "drug_screen_dataset": "GDSC1",
+          "stratifier": "MBD4_LOF_vs_WT"
+        },
+        "tier_result": {
+          "recommendation_tier": "Mechanistic candidate only",
+          "overall_evidence_level": "Mechanistic-only",
+          "tier_fusion_rule_id": "base_fallback_mechanistic_candidate_else_branch",
+          "bridge_recommended_drugs_policy": "eligible_matrix_positive_tier",
+          "weighted_score": 2.0,
+          "n_positive_modalities": 1
+        },
+        "pre_fix_tier": "Not supported / negative",
+        "pre_fix_bridge_policy": "excluded_negative_tier",
+        "verdict": "PASS — GDSC receipt overrides pharmacologic NEGATIVE, tier upgrades to Mechanistic candidate only"
+      },
+      "fix_2_rs_features": {
+        "sl_endpoint_rs_score": {
+          "score": 0.2,
+          "level": "moderate",
+          "contributing_features": [
+            "msi_h",
+            "mbd4_lof"
+          ],
+          "weights_applied": {
+            "msi_h": 0.15,
+            "mbd4_lof": 0.05
+          }
+        },
+        "bundle_endpoint_rs_score": {
+          "score": 0.2,
+          "level": "moderate",
+          "contributing_features": [
+            "msi_h",
+            "mbd4_lof"
+          ],
+          "weights_applied": {
+            "msi_h": 0.15,
+            "mbd4_lof": 0.05
+          }
+        },
+        "constructors_wired": [
+          "api/routers/agents.py L649",
+          "api/services/efficacy_orchestrator/orchestrator.py L284",
+          "api/services/ayesha_fit/service.py L354/377"
+        ],
+        "bundle_request_model": "api/routers/ayesha_therapy_fit.py L148 (field) + L420 (call site)",
+        "verdict": "PASS — rs_features flows through all three SLRequest constructors and the BundleRequest model"
+      },
+      "fix_3_matrix_dictatorship": {
+        "axis_tiers": {
+          "cytidine_analogs": "Validated SL therapeutic lever",
+          "parp_inhibitors": "Mechanistic candidate only",
+          "atr_wee1": "Mechanistic candidate only",
+          "wrn": "Not supported / negative",
+          "immunotherapy": "Mechanistic candidate only",
+          "pkmyt1": "Not supported / negative"
+        },
+        "recommended_drugs": [
+          {
+            "drug_name": "Cytidine Analogs (gemcitabine, cytarabine)",
+            "matrix_axis": "cytidine_analogs",
+            "evidence_tier": "Supported",
+            "confidence": 0.88
+          },
+          {
+            "drug_name": "PARP Inhibitors (olaparib, niraparib, talazoparib, rucaparib)",
+            "matrix_axis": "parp_inhibitors",
+            "evidence_tier": "Mechanistic",
+            "confidence": 0.56
+          },
+          {
+            "drug_name": "ATR / WEE1 Inhibitors (berzosertib, adavosertib, ceralasertib)",
+            "matrix_axis": "atr_wee1",
+            "evidence_tier": "Mechanistic",
+            "confidence": 0.56
+          },
+          {
+            "drug_name": "Immunotherapy / Checkpoint Inhibitors (PD-1/PD-L1)",
+            "matrix_axis": "immunotherapy",
+            "evidence_tier": "Mechanistic",
+            "confidence": 0.56
+          }
+        ],
+        "negative_axes": [
+          "wrn",
+          "pkmyt1"
+        ],
+        "ghost_payload_leaked": [],
+        "suppression_mechanism": "continue (skip drugs_out.append) — not confidence=0.0",
+        "verdict": "PASS — WRN and PKMYT1 drugs fully dropped from panel, no ghost payload"
+      }
+    },
+    "sl_endpoint_response_keys": [
+      "patient_id",
+      "disease",
+      "gating",
+      "evidence_matrix",
+      "synthetic_lethality_detected",
+      "double_hit_description",
+      "essentiality_scores",
+      "broken_pathways",
+      "essential_pathways",
+      "recommended_drugs",
+      "suggested_therapy",
+      "explanation",
+      "calculation_time_ms",
+      "evo2_used",
+      "provenance"
+    ],
+    "bundle_endpoint_response_keys": [
+      "contract_version",
+      "patient_id",
+      "requested_levels",
+      "generated_at",
+      "levels",
+      "tests_needed",
+      "patient_context",
+      "synthetic_lethality",
+      "sl_status"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/crispro_live_api_proof.json",
+      "exists": true,
+      "bytes": 4103,
+      "sha256": "e2dbc0ec6c59e92b0be8ff2a49a98a522e095d978c1f29d3e49cdcf10e36665b",
+      "mtime_iso": "2026-06-06T21:01:49+00:00"
+    },
+    {
+      "path": "/mnt/results/sl_endpoint_mbd4_live.json",
+      "exists": true,
+      "bytes": 92823,
+      "sha256": "17f54734d4c9b8ac61210516d089e255960e06ca20cfc42caf66ab467d36e0c9",
+      "mtime_iso": "2026-06-06T21:00:33+00:00"
+    },
+    {
+      "path": "/mnt/results/bundle_endpoint_mbd4_live.json",
+      "exists": true,
+      "bytes": 171815,
+      "sha256": "7caf61b0df24cddab133485678558d5c0ea148c33782c5f605c442c1a79f18e4",
+      "mtime_iso": "2026-06-06T21:01:06+00:00"
+    }
+  ],
+  "cross_refs": [
+    "endpoint:sl",
+    "endpoint:bundle",
+    "engine:synthetic_lethality",
+    "layer:output"
+  ],
+  "gaps_still_open": [],
+  "_stream": "evidence_and_receipts"
+}

@@ -1,0 +1,108 @@
+{
+  "overall_pass": true,
+  "generated_at_utc": "2026-07-03T21:10:55.016277+00:00",
+  "self_audit_checks": {
+    "A_receipt_existence": {
+      "pass": true,
+      "failure_count": 0,
+      "failures": []
+    },
+    "B_verbatim_lookups": {
+      "pass": true,
+      "checked": 10,
+      "failure_count": 0,
+      "failures": []
+    },
+    "C_duplicate_ids": {
+      "pass": true,
+      "duplicates": {}
+    },
+    "D_correction_lock_traps": {
+      "pass": true,
+      "failure_count": 0,
+      "failures": []
+    },
+    "E_cross_ref_integrity": {
+      "pass": true,
+      "failure_count": 0,
+      "failures": []
+    },
+    "F_what_how_why_present": {
+      "pass": true,
+      "failure_count": 0,
+      "failures": []
+    }
+  },
+  "audit_method_declaration": {
+    "grounding_rule": "Every entity is derived from an on-disk file (or explicitly-external reference). No entity was reconstructed from memory or from the compaction summary.",
+    "verbatim_rule": "For high-stakes claims (thresholds, formulas, invariants, tier statements), a literal substring lookup is performed against the source file at generation time; results are stored in verbatim_evidence[].",
+    "correction_lock": "The MBD4/ATR-WEE1 canonical tier and MRTX1719 axis-bug status are hardcoded traps in check D; any drift causes overall_pass=false.",
+    "no_summary_fabrication": "Numbers, endpoints, and code blocks were verified against the file at generation time — not copied from the earlier compaction summary."
+  },
+  "summary": {
+    "total_entities": 129,
+    "total_files_audited": 144,
+    "by_type": {
+      "agent_prompt": 1,
+      "analysis_summary": 1,
+      "audit_artifact": 3,
+      "audit_report": 2,
+      "business_artifact": 1,
+      "calibration_document": 1,
+      "cancer_context": 8,
+      "candidate_axis": 8,
+      "canonical_receipt": 2,
+      "closed_gap": 5,
+      "competitor_artifact": 1,
+      "contract_model": 5,
+      "data_access_pack": 4,
+      "data_discovery_pack": 1,
+      "data_provenance_protocol": 1,
+      "deliverable_pipeline": 1,
+      "dependency_map": 2,
+      "diligence_module": 1,
+      "endpoint": 2,
+      "engine": 2,
+      "engine_component": 2,
+      "evidence_analysis": 11,
+      "evidence_case_study": 1,
+      "evidence_modality": 7,
+      "evidence_tier": 4,
+      "experimental_design": 1,
+      "figure": 2,
+      "frontend_component": 1,
+      "governance_decision": 2,
+      "intelligence_report": 1,
+      "invariant": 8,
+      "known_bug": 1,
+      "layer": 4,
+      "lead_tracker": 1,
+      "manuscript": 1,
+      "manuscript_artifact": 1,
+      "moat_aggregate": 1,
+      "moat_dimension": 9,
+      "operations_artifact": 2,
+      "operations_plan": 1,
+      "orchestrator": 1,
+      "pipeline_component": 1,
+      "pitch_directive": 1,
+      "provenance_artifact": 2,
+      "remediation_artifact": 1,
+      "repo_gauntlet": 1,
+      "repository": 4,
+      "schema_master": 1,
+      "scoring_framework": 1,
+      "strategic_roadmap": 1,
+      "wet_lab_protocol": 1,
+      "working_document": 1
+    },
+    "by_stream": {
+      "architecture": 10,
+      "brenus_and_deliverables": 12,
+      "evidence_and_receipts": 21,
+      "moat_and_governance": 26,
+      "operations_and_access": 13,
+      "synthetic_lethality": 47
+    }
+  }
+}

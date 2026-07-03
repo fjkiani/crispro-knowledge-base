@@ -1,0 +1,26 @@
+{
+  "id": "doc:computational_cancer_cure_roadmap",
+  "type": "strategic_roadmap",
+  "name": "Computational Cancer Cure roadmap",
+  "what_it_solves": "Strategic-level roadmap situating the SL engine + RS framework within a longer-horizon 'computational cancer cure' program.",
+  "how_it_solves": "32KB narrative anchored in the CRISPRO_SL_PHD_ROADMAP; connects sprint-level engine work to multi-year outcomes.",
+  "why_it_exists": "Prevents the SL engine from being read as a point tool — it's positioned as one leg of a broader capability build.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/crispro_docs/COMPUTATIONAL_CANCER_CURE_ROADMAP.md",
+      "exists": true,
+      "bytes": 32179,
+      "sha256": "c9a2919408cc22cefb9d5d079682e6df9b4e91706e6c2f79ef40f236451a88f6",
+      "mtime_iso": "2026-04-13T20:11:12+00:00"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality",
+    "framework:rs",
+    "moat:aggregate"
+  ],
+  "gaps_still_open": [],
+  "_stream": "operations_and_access"
+}

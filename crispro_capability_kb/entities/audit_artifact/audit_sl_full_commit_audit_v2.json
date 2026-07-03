@@ -1,0 +1,40 @@
+{
+  "id": "audit:sl_full_commit_audit_v2",
+  "type": "audit_artifact",
+  "name": "SL audit — all commits (v2)",
+  "what_it_solves": "Per-commit audit of the SL engine repo history, capturing which invariants each commit introduced/regressed.",
+  "how_it_solves": "agent_full_audit_all_commits_v2.json records commit → invariant coverage; crispro_sl_audit_findings.json is the summarised findings register.",
+  "why_it_exists": "Answers 'when did each invariant become real?' — used to justify claims about Sprint 4S closure at commit 474b812.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/agent_full_audit_all_commits.json",
+      "exists": true,
+      "bytes": 24632,
+      "sha256": "afb71218918a89091a42ebeb2213abcc75275810a103a8d52b1a1c4acae188f2",
+      "mtime_iso": "2026-06-06T08:02:20+00:00"
+    },
+    {
+      "path": "/mnt/results/agent_full_audit_all_commits_v2.json",
+      "exists": true,
+      "bytes": 25754,
+      "sha256": "78167e9a931458bc0130da6ee2519ec2d779a410634e46f221e303e96f612e18",
+      "mtime_iso": "2026-06-06T08:46:53+00:00"
+    },
+    {
+      "path": "/mnt/results/crispro_sl_audit_findings.json",
+      "exists": true,
+      "bytes": 39934,
+      "sha256": "d088aa94b3035f814464f51aeaf5bec53c16d70b2dd1fd23e408ca111b6a32ad",
+      "mtime_iso": "2026-06-06T18:03:53+00:00"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality",
+    "gap:mbd4_cytidine_tier_fix",
+    "gap:validated_guard"
+  ],
+  "gaps_still_open": [],
+  "_stream": "synthetic_lethality"
+}

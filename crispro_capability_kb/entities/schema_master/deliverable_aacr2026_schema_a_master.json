@@ -1,0 +1,35 @@
+{
+  "id": "deliverable:aacr2026_schema_a_master",
+  "type": "schema_master",
+  "name": "AACR 2026 schema A master JSON",
+  "what_it_solves": "Master schema JSON that describes the AACR 2026 outreach schema (fields, controlled vocabularies, join keys).",
+  "how_it_solves": "aacr2026_schema_a_master.json is the source-of-truth schema; GTM_SCHEMA_B_BRIDGE.md documents the bridge to schema B (GTM view).",
+  "why_it_exists": "Prevents lead-tracker column drift by pinning schema in JSON; GTM consumers use schema B via the bridge, not the raw tracker.",
+  "attributes": {
+    "top_level_keys_or_shape": [
+      "[list of 862]"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/aacr2026_schema_a_master.json",
+      "exists": true,
+      "bytes": 4038664,
+      "sha256": "c6be802f87bf5b730a05fd67531aa9db7ae0ae21f066bb9695438b9d7adef588",
+      "mtime_iso": "2026-06-14T22:02:43+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/GTM_SCHEMA_B_BRIDGE.md",
+      "exists": true,
+      "bytes": 9902,
+      "sha256": "8248a6f0f2b0301cc0d031efc9280e61aeb98509233d0355d483818790494693",
+      "mtime_iso": "2026-07-02T15:29:52+00:00"
+    }
+  ],
+  "cross_refs": [
+    "deliverable:aacr2026_lead_audit_tracker"
+  ],
+  "gaps_still_open": [],
+  "_stream": "brenus_and_deliverables"
+}

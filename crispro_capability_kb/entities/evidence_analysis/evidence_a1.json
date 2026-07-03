@@ -1,0 +1,72 @@
+{
+  "id": "evidence:a1",
+  "type": "evidence_analysis",
+  "name": "MBD4/ATR analysis A1 — Co-dependency (pan-cancer + lineage)",
+  "what_it_solves": "Analysis 'A1' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+  "how_it_solves": "DepMap CRISPR co-dependency scan for MBD4 across cell lines and lineages; scatter + tables.",
+  "why_it_exists": "Tests whether cells needing MBD4 also need ATR/WEE1 (the SL premise).",
+  "attributes": {
+    "files": [
+      "A1_codependency_lineage_results_REAL.csv",
+      "A1_codependency_pancancer_results_REAL.csv",
+      "A1_codependency_scatter.png",
+      "A1_crispr_results_REAL.csv",
+      "A1_depmap_crispr_mbd4_groups.png",
+      "A1b_depmap_mbd4_lof_crispr_violin.png",
+      "A1b_mbd4_lof_crispr_results.csv"
+    ],
+    "file_count": 7
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1_codependency_lineage_results_REAL.csv",
+      "exists": true,
+      "bytes": 5150,
+      "sha256": "d774850782e3da43a9ebb43d4b6493695b85baa1c43740da6bc3df0d1a2596bd",
+      "mtime_iso": "2026-04-25T07:17:07+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1_codependency_pancancer_results_REAL.csv",
+      "exists": true,
+      "bytes": 282,
+      "sha256": "5cc36c8831eaa7cfb9d5e5978b40e1ee1a4598a1f0a85ba8584ae89561bfda00",
+      "mtime_iso": "2026-04-25T07:17:07+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1_codependency_scatter.png",
+      "exists": true,
+      "bytes": 369842,
+      "sha256": "12f95943fa425abdb4b01103e3b8ae93ddde0cd7e0b833295649a01852fa8de4",
+      "mtime_iso": "2026-04-25T07:17:05+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1_crispr_results_REAL.csv",
+      "exists": true,
+      "bytes": 1300,
+      "sha256": "fff0a044318fc1c046348950c2db029651a915e91f72ec1350ea857a83847b04",
+      "mtime_iso": "2026-04-25T07:09:03+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1_depmap_crispr_mbd4_groups.png",
+      "exists": true,
+      "bytes": 163475,
+      "sha256": "7790587477da6b728d6e4ecfe5b38becbe1b7511a7e8d1206d7cfda2988951d5",
+      "mtime_iso": "2026-04-25T07:09:03+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1b_depmap_mbd4_lof_crispr_violin.png",
+      "exists": true,
+      "bytes": 155949,
+      "sha256": "34b7865f75f123c44fbc7a14eeac1e8e6947b3b154ea286eca128bc7770aeb32",
+      "mtime_iso": "2026-04-25T08:07:09+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2",
+    "axis:ATR_WEE1",
+    "framework:rs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "evidence_and_receipts"
+}

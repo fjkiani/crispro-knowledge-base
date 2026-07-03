@@ -1,0 +1,28 @@
+{
+  "id": "deliverable:breakcrc001_benchmark_calibration",
+  "type": "calibration_document",
+  "name": "BreAK CRC-001 benchmark calibration (PDF)",
+  "what_it_solves": "Benchmark calibration document for the BreAK CRC-001 trial — how CrisPRO's predictions map to the trial's efficacy assumptions.",
+  "how_it_solves": "PDF pairs each trial arm's assumed effect with the CrisPRO-predicted axis dependencies; deltas are quarantined until PATH A recomputation.",
+  "why_it_exists": "Provides the diligence backbone: any Brenus claim about BreAK CRC-001 outcomes is checked against this calibration PDF, not the pitch deck.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/BreAK_CRC-001_Benchmark_Calibration (2).pdf",
+      "exists": true,
+      "bytes": 2131238,
+      "sha256": "ddf597724746322c1d31be87ad897f4cdda1cda3985b4aebab8b6e944d21626c",
+      "mtime_iso": "2026-05-28T20:58:48+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:brenus_diligence",
+    "governance:path_a_formula"
+  ],
+  "gaps_still_open": [
+    "LATIFY deltas (CT-03/DL-05/PC-06) remain quarantined until vector version resolved.",
+    "PC-02 permanently downgraded until retroactive prediction reproduction."
+  ],
+  "_stream": "brenus_and_deliverables"
+}

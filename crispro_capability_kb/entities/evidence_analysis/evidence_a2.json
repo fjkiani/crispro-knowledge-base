@@ -1,0 +1,39 @@
+{
+  "id": "evidence:a2",
+  "type": "evidence_analysis",
+  "name": "MBD4/ATR analysis A2 — PRISM drug-viability screen",
+  "what_it_solves": "Analysis 'A2' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+  "how_it_solves": "AUC vs MBD4 expression for ATRi/WEE1i in PRISM screen.",
+  "why_it_exists": "Pharmacology mirror of A1 — does drug knockdown recapitulate genetic knockdown?",
+  "attributes": {
+    "files": [
+      "A2_prism_auc_vs_mbd4.png",
+      "A2_prism_results_REAL.csv"
+    ],
+    "file_count": 2
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A2_prism_auc_vs_mbd4.png",
+      "exists": true,
+      "bytes": 143439,
+      "sha256": "bf58066f7628e318c29166540db4e88649b10d0be44d7b8250b61f0d3c26e841",
+      "mtime_iso": "2026-04-25T07:20:55+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A2_prism_results_REAL.csv",
+      "exists": true,
+      "bytes": 1164,
+      "sha256": "6da76477cd1791dc3bed8806a390659b7db771ac30aafb42b2bceac254e36248",
+      "mtime_iso": "2026-04-25T07:20:57+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2",
+    "axis:ATR_WEE1",
+    "framework:rs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "evidence_and_receipts"
+}

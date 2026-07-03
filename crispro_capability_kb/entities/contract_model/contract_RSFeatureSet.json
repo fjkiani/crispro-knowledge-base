@@ -1,0 +1,37 @@
+{
+  "id": "contract:RSFeatureSet",
+  "type": "contract_model",
+  "name": "RSFeatureSet",
+  "what_it_solves": "Layer-0 Pydantic/dataclass contract carried by every engine boundary that references RSFeatureSet.",
+  "how_it_solves": "Fields (canonical set): ['CCNE1_amplified', 'ARID1A_LOF', 'MYC_amplified', 'MSI_H', 'TP53_LOF', 'MBD4_LOF', 'rs_score', 'rs_class']. See CRISPRO_SL_PHD_ROADMAP.txt Ch 3.2 for the exact schema.",
+  "why_it_exists": "6 binary features + composite RS score; single point of truth for replication-stress phenotyping.",
+  "attributes": {
+    "fields": [
+      "CCNE1_amplified",
+      "ARID1A_LOF",
+      "MYC_amplified",
+      "MSI_H",
+      "TP53_LOF",
+      "MBD4_LOF",
+      "rs_score",
+      "rs_class"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "Ch 3.2 — Contract Models"
+    }
+  ],
+  "cross_refs": [
+    "layer:contracts",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "synthetic_lethality"
+}

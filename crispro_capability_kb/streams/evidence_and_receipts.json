@@ -1,0 +1,1567 @@
+{
+  "stream_id": "evidence_and_receipts",
+  "stream_name": "Evidence corpus + canonical receipts (MBD4/ATR + live API proofs)",
+  "generated_at_utc": "2026-07-03T21:05:50.660677+00:00",
+  "files_audited": [
+    {
+      "path": "/mnt/results/crispro_live_api_proof.json",
+      "exists": true,
+      "bytes": 4103,
+      "sha256": "e2dbc0ec6c59e92b0be8ff2a49a98a522e095d978c1f29d3e49cdcf10e36665b",
+      "mtime_iso": "2026-06-06T21:01:49+00:00"
+    },
+    {
+      "path": "/mnt/results/sl_endpoint_mbd4_live.json",
+      "exists": true,
+      "bytes": 92823,
+      "sha256": "17f54734d4c9b8ac61210516d089e255960e06ca20cfc42caf66ab467d36e0c9",
+      "mtime_iso": "2026-06-06T21:00:33+00:00"
+    },
+    {
+      "path": "/mnt/results/bundle_endpoint_mbd4_live.json",
+      "exists": true,
+      "bytes": 171815,
+      "sha256": "7caf61b0df24cddab133485678558d5c0ea148c33782c5f605c442c1a79f18e4",
+      "mtime_iso": "2026-06-06T21:01:06+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/evidence_matrix_final_v2.json",
+      "exists": true,
+      "bytes": 11865,
+      "sha256": "34d08da92f2928ea016fceb1fb16cb1d675c69173da2caa30eecbe58064779ef",
+      "mtime_iso": "2026-04-26T06:24:39+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/evidence_matrix_final.json",
+      "exists": true,
+      "bytes": 6145,
+      "sha256": "2bd9ffd2fac0754926744fe472d6ce42b4676e96b18ffb6d1ca636d1b7ade168",
+      "mtime_iso": "2026-04-25T07:58:33+00:00"
+    },
+    {
+      "path": "/mnt/results/AK_MBD4_SL_FULL_EXTRACTION.md",
+      "exists": true,
+      "bytes": 32960,
+      "sha256": "df3ac2a1c9dc98ee08aceef386460a1fac655128c4d6d2d1f565acadeba242dc",
+      "mtime_iso": "2026-06-04T16:14:31+00:00"
+    },
+    {
+      "path": "/mnt/results/crispro_remediation_redo_deliverable.json",
+      "exists": true,
+      "bytes": 4719,
+      "sha256": "6f0a6d480a8bfa96cb0ad7b5a4836fbf701f25afea8eabfe59621281703a53db",
+      "mtime_iso": "2026-06-06T20:36:48+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1_codependency_lineage_results_REAL.csv",
+      "exists": true,
+      "bytes": 5150,
+      "sha256": "d774850782e3da43a9ebb43d4b6493695b85baa1c43740da6bc3df0d1a2596bd",
+      "mtime_iso": "2026-04-25T07:17:07+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1_codependency_pancancer_results_REAL.csv",
+      "exists": true,
+      "bytes": 282,
+      "sha256": "5cc36c8831eaa7cfb9d5e5978b40e1ee1a4598a1f0a85ba8584ae89561bfda00",
+      "mtime_iso": "2026-04-25T07:17:07+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1_codependency_scatter.png",
+      "exists": true,
+      "bytes": 369842,
+      "sha256": "12f95943fa425abdb4b01103e3b8ae93ddde0cd7e0b833295649a01852fa8de4",
+      "mtime_iso": "2026-04-25T07:17:05+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1_crispr_results_REAL.csv",
+      "exists": true,
+      "bytes": 1300,
+      "sha256": "fff0a044318fc1c046348950c2db029651a915e91f72ec1350ea857a83847b04",
+      "mtime_iso": "2026-04-25T07:09:03+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1_depmap_crispr_mbd4_groups.png",
+      "exists": true,
+      "bytes": 163475,
+      "sha256": "7790587477da6b728d6e4ecfe5b38becbe1b7511a7e8d1206d7cfda2988951d5",
+      "mtime_iso": "2026-04-25T07:09:03+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1b_depmap_mbd4_lof_crispr_violin.png",
+      "exists": true,
+      "bytes": 155949,
+      "sha256": "34b7865f75f123c44fbc7a14eeac1e8e6947b3b154ea286eca128bc7770aeb32",
+      "mtime_iso": "2026-04-25T08:07:09+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A1b_mbd4_lof_crispr_results.csv",
+      "exists": true,
+      "bytes": 289,
+      "sha256": "7c19334c2fef48030de6a9f41e86a2bce5d5127eaeda7d2364c4c7c2f2a5bb53",
+      "mtime_iso": "2026-04-25T08:07:11+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A2_prism_auc_vs_mbd4.png",
+      "exists": true,
+      "bytes": 143439,
+      "sha256": "bf58066f7628e318c29166540db4e88649b10d0be44d7b8250b61f0d3c26e841",
+      "mtime_iso": "2026-04-25T07:20:55+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A2_prism_results_REAL.csv",
+      "exists": true,
+      "bytes": 1164,
+      "sha256": "6da76477cd1791dc3bed8806a390659b7db771ac30aafb42b2bceac254e36248",
+      "mtime_iso": "2026-04-25T07:20:57+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A3_tcga_ov_results_REAL.csv",
+      "exists": true,
+      "bytes": 465,
+      "sha256": "b06ab4c9dc72d6593961bd875daadee11de2c6aeb69b5115c23688d059011541",
+      "mtime_iso": "2026-04-25T07:23:59+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A3_tcga_ov_rs_score.png",
+      "exists": true,
+      "bytes": 214100,
+      "sha256": "a87c0db5c2bbafecf791f232ece8232e53f3cd54ec9d8b4b0e8b2b815cdd9744",
+      "mtime_iso": "2026-04-25T07:24:40+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A4_pancancer_mbd4_lof_frequency.png",
+      "exists": true,
+      "bytes": 97676,
+      "sha256": "780bc2244092fd0dcf4874b1b06c15ce4427293f3f66e369c1ec80150e1a9cf6",
+      "mtime_iso": "2026-04-25T07:28:58+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A4_pancancer_mbd4_lof_results.csv",
+      "exists": true,
+      "bytes": 1784,
+      "sha256": "1ca4675419054d2918ceb48f83f4606dd1a65c99baaf975a9e8f38e82d1805ab",
+      "mtime_iso": "2026-04-25T07:29:37+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A5_literature",
+      "is_dir": true,
+      "exists": true
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A5_ucec_survival_mbd4_lof.png",
+      "exists": true,
+      "bytes": 73071,
+      "sha256": "f8e25cfbca9f0e1d4fafb48f714e4f41675c57d38578b57f9e6f245d00005dd2",
+      "mtime_iso": "2026-04-25T07:30:07+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A6_msi_stratified_atr_crispr.csv",
+      "exists": true,
+      "bytes": 1214,
+      "sha256": "1b7db9da70d53ef30641326f639a1e1a75921225734f0a764b5e63dd3fc51586",
+      "mtime_iso": "2026-04-26T06:24:33+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A6_msi_stratified_violin.png",
+      "exists": true,
+      "bytes": 309000,
+      "sha256": "3de42fff3ee6ef3ba4de79038e69c99b8fdce8ccf3182c248a1022f9c1e9939f",
+      "mtime_iso": "2026-04-26T06:24:34+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A7_ucec_rs_scatter.png",
+      "exists": true,
+      "bytes": 240853,
+      "sha256": "31d40c383e067b5fbec9624b142b1a969ca0387c27080560b5133db153b3c16f",
+      "mtime_iso": "2026-04-26T06:24:35+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A7_ucec_rs_signature.csv",
+      "exists": true,
+      "bytes": 6155,
+      "sha256": "6397dc9094f9982d17a2faec09be282a72e5f8fe14223db669857d2ad02fbc2d",
+      "mtime_iso": "2026-04-26T06:24:36+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A8_dependency_probability.csv",
+      "exists": true,
+      "bytes": 819,
+      "sha256": "c9bec4f53c68a73ba32bc008774c7a69e1fab36f0ffcaf21b2b473845afc86ff",
+      "mtime_iso": "2026-04-26T06:24:37+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A8_dependency_probability_bar.png",
+      "exists": true,
+      "bytes": 178384,
+      "sha256": "9ce2f30b575fdb3c8df2e98121ab5d061d922432b72471cf0d14db798a9200cd",
+      "mtime_iso": "2026-04-26T06:24:38+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A9_azd6738_auc_violin.png",
+      "exists": true,
+      "bytes": 247975,
+      "sha256": "31b1fea545ce00efc34b0468199cc1066ae259a7abd6d6955adda2c098162fd3",
+      "mtime_iso": "2026-04-27T04:31:12+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A9_benchmark_comparator.md",
+      "exists": true,
+      "bytes": 4799,
+      "sha256": "fddf4d439db6e55a36d0ab7e86e88604fb275cc2999b09084b3d4b65e43289dc",
+      "mtime_iso": "2026-04-27T04:33:26+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A9_gdsc2_pharmacology_benchmark.csv",
+      "exists": true,
+      "bytes": 3119,
+      "sha256": "856810e67d2c3c5a609d939a764358a5301d235e5b5e4f34c3d3f151a71802a4",
+      "mtime_iso": "2026-04-27T04:30:45+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A9_pharmacology_effect_sizes.png",
+      "exists": true,
+      "bytes": 138193,
+      "sha256": "efd4fca1ebe05d045e5078788bd7a0c77c3ca6f343409b17b7e4fc76d6cb708f",
+      "mtime_iso": "2026-04-27T04:32:28+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/ATM_benchmark_MSS_only.csv",
+      "exists": true,
+      "bytes": 542,
+      "sha256": "1c69dc47476a81f2bd53bbdf1260e3a058f1680d299ccb73411f04b61dcaecc7",
+      "mtime_iso": "2026-04-27T02:36:23+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/ATM_benchmark_effect_sizes.png",
+      "exists": true,
+      "bytes": 100931,
+      "sha256": "8e1fdae9b8f8f239c7462715e0e55c271cd5113cfb6f8f10aef6cfd623bbb726",
+      "mtime_iso": "2026-04-27T02:37:05+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/ATM_benchmark_pancancer.csv",
+      "exists": true,
+      "bytes": 850,
+      "sha256": "688ad48d369729fd7b3a4fdd5c16188f6ead7a61a72b22bb1bdcbd1cb5fe10eb",
+      "mtime_iso": "2026-04-27T02:36:23+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/ATM_benchmark_violin.png",
+      "exists": true,
+      "bytes": 330444,
+      "sha256": "802680451b3559608f8ecd8295fbe25dbd8a8a738619d36bfd4308fffef38a41",
+      "mtime_iso": "2026-04-27T02:36:48+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/MBD4_ATRi_IC50_Protocol.md",
+      "exists": true,
+      "bytes": 12486,
+      "sha256": "6e956320f15798880c740c91966b82a8d8ab01bf6e23e282180394e1ec73f837",
+      "mtime_iso": "2026-04-27T04:59:54+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/MBD4_Full_Intelligence_Report.md",
+      "exists": true,
+      "bytes": 10798,
+      "sha256": "62d8d6d80e3bac3f4fcb3f1bcb3c265ae4895556d85c7aacaaf3752dc3e1ed06",
+      "mtime_iso": "2026-04-25T08:09:26+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/MBD4_Full_Intelligence_Report_v2.md",
+      "exists": true,
+      "bytes": 17065,
+      "sha256": "67eb871bac84b41be4ac92ae215f8f042927e4dfdb892ced319c4fa9af9f18c2",
+      "mtime_iso": "2026-04-26T06:28:04+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/MBD4_Full_Intelligence_Report_v3.md",
+      "exists": true,
+      "bytes": 24250,
+      "sha256": "fcd90cabbd317174c813ea8d81bd0400abb480b7d0e0a84aa5b253bfba723068",
+      "mtime_iso": "2026-04-27T04:58:26+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/SL_REPO_GAUNTLET_PREFLIGHT.md",
+      "exists": true,
+      "bytes": 50603,
+      "sha256": "461e5d018c52073f5b96777a5f04dfe8ea0530a617341dc4cca0620798dde1f0",
+      "mtime_iso": "2026-05-02T18:03:56+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/SUPPLEMENTAL_DATA_PROVENANCE_v2.md",
+      "exists": true,
+      "bytes": 8609,
+      "sha256": "1dd7b34ea07436423d7a8114e36a0242647a83b9635e93c00c84ec524df326a0",
+      "mtime_iso": "2026-04-27T06:12:43+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/SUPPLEMENTAL_DATA_PROVENANCE_v3.md",
+      "exists": true,
+      "bytes": 9804,
+      "sha256": "8c877722b76073deed15ec50f8f5e5f0d19553015b7d7b4a32561fb071a72c87",
+      "mtime_iso": "2026-04-27T06:43:02+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/depmap_mbd4_lof_cell_lines.csv",
+      "exists": true,
+      "bytes": 2013,
+      "sha256": "757d4741435ace860169ba497912b846a129025ce8245597691c78df2ab0f819",
+      "mtime_iso": "2026-04-25T08:05:50+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/diagram1_mbd4_normal_vs_broken.png",
+      "exists": true,
+      "bytes": 158988,
+      "sha256": "6dbb8b4c6dca19c3698187eae3ea0b35cc2fa28774bd5ea132eaa3d6d5f05620",
+      "mtime_iso": "2026-05-19T23:24:46+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/diagram2_double_hit_synthetic_lethality.png",
+      "exists": true,
+      "bytes": 205320,
+      "sha256": "4d9b701ca8015f6ffe58d91084b40390faf3f1850a7484889c332539112ca9b0",
+      "mtime_iso": "2026-05-19T23:29:46+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/diagram3_cytidine_analog_mechanism.png",
+      "exists": true,
+      "bytes": 176730,
+      "sha256": "2ba2b7ed6feac0a21c02f19a7c8e9096aba3d057cea5a59febe748c0c2b11807",
+      "mtime_iso": "2026-05-19T23:27:01+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/diagram4_patient_ak_treatment_map.png",
+      "exists": true,
+      "bytes": 251173,
+      "sha256": "8aca1352c7e6755addcb6226d1ab63f30cfca2c358246379a09ea023abc9d2c4",
+      "mtime_iso": "2026-05-19T23:30:34+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/evidence_matrix_complete.png",
+      "exists": true,
+      "bytes": 301077,
+      "sha256": "4ccbffd17d54a1ab39437691ec720084c61e3f514b45652221b48c36b4f5c0d8",
+      "mtime_iso": "2026-04-26T06:25:51+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/evidence_matrix_final.json",
+      "exists": true,
+      "bytes": 6145,
+      "sha256": "2bd9ffd2fac0754926744fe472d6ce42b4676e96b18ffb6d1ca636d1b7ade168",
+      "mtime_iso": "2026-04-25T07:58:33+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/evidence_matrix_final_v2.json",
+      "exists": true,
+      "bytes": 11865,
+      "sha256": "34d08da92f2928ea016fceb1fb16cb1d675c69173da2caa30eecbe58064779ef",
+      "mtime_iso": "2026-04-26T06:24:39+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/evidence_summary_all_analyses.csv",
+      "exists": true,
+      "bytes": 1128,
+      "sha256": "22147253eff5aa067e1b1cf59ae8cd02f4e0d57e1ba03a146f5887ca35d16bf6",
+      "mtime_iso": "2026-04-25T07:30:42+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/fig1_mbd4_biology.png",
+      "exists": true,
+      "bytes": 186572,
+      "sha256": "e3fa052e7aec0e24698d1f87710fc7640660b32c64b7d94e8781d0e690cc2300",
+      "mtime_iso": "2026-05-20T17:33:25+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/fig2_synthetic_lethality.png",
+      "exists": true,
+      "bytes": 265897,
+      "sha256": "93088c4555066bcebd1b5c67cd40258212759ca87532637fbd8139cea1bf0874",
+      "mtime_iso": "2026-05-20T17:34:25+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/fig3_cytidine_analog.png",
+      "exists": true,
+      "bytes": 216216,
+      "sha256": "a58acec6d9eb4c89daa398ebdb7ca5ae73a5a32e7519c72608c49b93a0a10d66",
+      "mtime_iso": "2026-05-20T17:35:17+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/fig4_atr_data_summary.png",
+      "exists": true,
+      "bytes": 310884,
+      "sha256": "cc1a90c8adeb6d158bff91c96ca3789b7b8e3ec27e9ba60616c8ef635b9ce36b",
+      "mtime_iso": "2026-05-20T17:40:44+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/fig5_patient_ak_gap.png",
+      "exists": true,
+      "bytes": 314313,
+      "sha256": "4cc3713c43a097af5a8af83c87ab375b80ad50c0a6b29bbe3e97edf6033fabd6",
+      "mtime_iso": "2026-05-20T17:37:22+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/fig6_evidence_tiers.png",
+      "exists": true,
+      "bytes": 430834,
+      "sha256": "1430e9f896c599ab2673cb2bb27aabda52a22ec4e5a02683f37c623225df03be",
+      "mtime_iso": "2026-05-20T17:38:26+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/manuscript_diff_v1.md",
+      "exists": true,
+      "bytes": 12463,
+      "sha256": "928b305949bbe7fd3a5f8012627e0469b5384c45e73c04f0287d41a75a2f6056",
+      "mtime_iso": "2026-04-27T06:07:12+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/manuscript_diff_v2.md",
+      "exists": true,
+      "bytes": 6683,
+      "sha256": "cbc891aa5b1d283dd4a39d9a150cfb6b2940fe9a5c340c2b7c0f5b4ff68be3b3",
+      "mtime_iso": "2026-04-27T06:44:04+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/manuscript_v2.md",
+      "exists": true,
+      "bytes": 33167,
+      "sha256": "77d21d05bfe5a901b6a2de0b16262801a4301b19d98bc98ad14b2d266011000e",
+      "mtime_iso": "2026-04-27T06:10:55+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/manuscript_v2_plain.md",
+      "exists": true,
+      "bytes": 36863,
+      "sha256": "15db7957bc399b2eed5c9c32c39fa31556e563c21f66f24c6dd76ec45381784e",
+      "mtime_iso": "2026-05-20T03:28:35+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/manuscript_v3.md",
+      "exists": true,
+      "bytes": 33555,
+      "sha256": "3382a71a9d7d48c921163cd7056afb23aecdfc7ca5fa4f425583d8697da4bf82",
+      "mtime_iso": "2026-04-27T06:41:11+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/manuscript_v4.md",
+      "exists": true,
+      "bytes": 34247,
+      "sha256": "6d6ba103ddea1422211fcaad4515ddb7f3a793ee691c0112b334c9eb467e672b",
+      "mtime_iso": "2026-05-07T05:00:37+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/mbd4_manuscript_v2.pdf",
+      "exists": true,
+      "bytes": 1621210,
+      "sha256": "3dcb881263a65abc2afb3702d4f56aef5174a0d42d4ffe1a1e2c4277a0229dde",
+      "mtime_iso": "2026-05-16T02:31:13+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/mbd4_manuscript_v2_corrected.pdf",
+      "exists": true,
+      "bytes": 1632273,
+      "sha256": "44033ea3fe43983dc72a7b7e9f7fa96305638877264f5441dc48011d84a20e2a",
+      "mtime_iso": "2026-05-20T03:31:39+00:00"
+    }
+  ],
+  "audit_method": {
+    "approach": "Every canonical receipt has its JSON re-parsed at generation time. High-stakes claims (tier, verdict, endpoint SHA) are read directly from the file — never reconstructed from memory or summary.",
+    "correction_lock": {
+      "issue": "Prior session drafted claims about MBD4/ATR-WEE1 that conflated the axis's TARGET tier (Strong) with its current tier.",
+      "canonical_source": "/mnt/results/mbd4_atr_evidence/evidence_matrix_final_v2.json",
+      "canonical_answer_verified_at_generation": "NO CHANGE"
+    },
+    "verbatim_policy": "For MBD4/ATR claims, all downstream text must read from receipt:mbd4_atr_evidence_matrix_v2.attributes.canonical_state; no free-text tier assertions."
+  },
+  "entities": [
+    {
+      "id": "receipt:mbd4_atr_evidence_matrix_v2",
+      "type": "canonical_receipt",
+      "name": "MBD4 × ATR/WEE1 evidence matrix (v2)",
+      "what_it_solves": "The canonical evidence receipt for the MBD4 × ATR/WEE1 axis — the highest-stakes claim CrisPRO makes for this bundle.",
+      "how_it_solves": "Structured JSON with one modality_cell per evidence source (CRISPR co-dependency, CRISPR MSI-stratified, PRISM, GDSC2, TCGA-OV, UCEC survival, pan-cancer LOF, dependency probability). Each cell has a verdict + why-it-does-not-support-STRONG. The overall_verdict block is the ground truth for the tier statement.",
+      "why_it_exists": "Prevents any downstream summariser from silently upgrading MBD4 × ATR/WEE1 to STRONG. Every module reads the receipt, not memory.",
+      "attributes": {
+        "canonical_state": {
+          "gene": "MBD4",
+          "therapeutic_axis": "ATR/WEE1 (replication stress checkpoint)",
+          "current_tier": "Mechanistic candidate only",
+          "target_tier": "Strong candidate dependency axis",
+          "overall_verdict": {
+            "tier_change": "NO CHANGE",
+            "current_tier": "Mechanistic candidate only",
+            "justification": "All 5 computational modalities return NULL or MISSING. The one marginal signal (TCGA-OV RS score Wilcoxon p=0.016) uses expression as a proxy and does not survive Spearman correlation. MBD4-LOF is too rare in all public datasets (0.19% pan-cancer, 1.02% in DepMap) to power any statistical test. No published clinical trial has tested ATRi/WEE1i in MBD4-LOF patients.",
+            "fundamental_limitation": "MBD4 is a DNA repair gene — its LOF cannot be reliably proxied by expression level. The correct experimental model (isogenic MBD4-KO) is not represented in any public dataset.",
+            "path_to_upgrade": [
+              "HAP1-MBD4-KO isogenic ATRi/WEE1i IC50 assay (ceralasertib + berzosertib vs parental)",
+              "γH2AX + pCHK1 western blot at baseline in HAP1-MBD4-KO (RS marker confirmation)",
+              "MBD4-KO organoid ATRi dose-response (patient-derived, UCEC preferred)",
+              "PATRIOT data access request to query MBD4 status in responders",
+              "Prospective UCEC trial with MBD4-LOF enrichment arm"
+            ]
+          },
+          "tier_upgrade_assessment": {
+            "upgrade_rule": "BH-adjusted p < 0.05 AND Cohen's d < -0.5 for A6 Group A vs Group B (ATR)",
+            "a6_padj_AvB": 0.229,
+            "a6_cohens_d_AvB": -0.129,
+            "criterion_padj_met": false,
+            "criterion_cohens_d_met": false,
+            "upgrade_criterion_met": false,
+            "tier_after_A6_A7_A8": "Mechanistic candidate only",
+            "rationale": "Upgrade criterion NOT met. A6 ATR A vs B: padj=0.229 (>0.05), Cohen's d=-0.129 (>-0.5). A7 is DESCRIPTIVE (n=2 LOF, no inferential test, inconsistent RS direction). A8 is NEGATIVE (pan-essentiality ceiling effect, CHEK1/WEE1 wrong direction). Overall tier remains: Mechanistic candidate only."
+          },
+          "modality_cell_count": 9
+        },
+        "CORRECTION_LOCK": {
+          "prior_session_claim": "STRONG-tier upgrade",
+          "actual_from_file": "NO CHANGE",
+          "canonical_current_tier": "Mechanistic candidate only",
+          "canonical_target_tier": "Strong candidate dependency axis"
+        }
+      },
+      "verbatim_evidence": [
+        {
+          "quote": "NO CHANGE",
+          "file": "/mnt/results/mbd4_atr_evidence/evidence_matrix_final_v2.json",
+          "context": "overall_verdict.tier_change value — canonical answer to 'did the tier change?'"
+        },
+        {
+          "quote": "Mechanistic candidate only",
+          "file": "/mnt/results/mbd4_atr_evidence/evidence_matrix_final_v2.json",
+          "context": "current_tier top-level field"
+        },
+        {
+          "quote": "Strong candidate dependency axis",
+          "file": "/mnt/results/mbd4_atr_evidence/evidence_matrix_final_v2.json",
+          "context": "target_tier top-level field — what upgrade WOULD be, not what is."
+        }
+      ],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/evidence_matrix_final_v2.json",
+          "exists": true,
+          "bytes": 11865,
+          "sha256": "34d08da92f2928ea016fceb1fb16cb1d675c69173da2caa30eecbe58064779ef",
+          "mtime_iso": "2026-04-26T06:24:39+00:00",
+          "span_extracted": "overall_verdict + modality_cells"
+        }
+      ],
+      "cross_refs": [
+        "axis:ATR_WEE1",
+        "tier:MECHANISTIC",
+        "tier:STRONG",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [
+        "MBD4-LOF cannot be reliably proxied by expression level (fundamental limitation noted in overall_verdict).",
+        "No clinical readout: no ATRi/WEE1i trial has published MBD4-LOF stratified data.",
+        "CRISPR MBD4-LOF vs WT contrast is confounded by MSI-H collinearity."
+      ],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "receipt:crispro_live_api_proof",
+      "type": "canonical_receipt",
+      "name": "CrisPRO live API proof (commit-anchored)",
+      "what_it_solves": "Endpoint-level proof that the deployed crispro-backend-v3 exposes the SL + bundle routes at a specific commit.",
+      "how_it_solves": "crispro_live_api_proof.json records commit SHA + endpoint paths. Companion files sl_endpoint_mbd4_live.json / bundle_endpoint_mbd4_live.json store the actual JSON returned for the MBD4 test case.",
+      "why_it_exists": "Turns the roadmap's claimed endpoints into observable receipts. Any drift between roadmap and deployment shows up as a diff against this file.",
+      "attributes": {
+        "live_proof_content": {
+          "commit": "9190a1f3",
+          "endpoints_called": {
+            "sl_endpoint": "POST /api/agents/synthetic_lethality",
+            "bundle_endpoint": "POST /api/ayesha/therapy-fit/bundle?level=l1&include_synthetic_lethality=true"
+          },
+          "request_payload": {
+            "patient_id": "MBD4-TEST-001",
+            "disease": "colorectal_cancer",
+            "mutations": [
+              {
+                "gene": "MBD4",
+                "hgvs_p": "p.R438*"
+              }
+            ],
+            "options": {
+              "primary_sl_gene": "MBD4",
+              "include_explanations": false,
+              "true_scoring_required": true,
+              "rs_features": {
+                "mbd4_lof": true,
+                "msi_h": true,
+                "ccne1_amplified": false,
+                "myc_amplified": false,
+                "arid1a_lof": false,
+                "tp53_lof": false,
+                "high_ploidy": false
+              }
+            }
+          },
+          "fix_1_gdsc_receipt": {
+            "axis": "atr_wee1",
+            "gdsc_cell": {
+              "status": "positive",
+              "p_value": 0.021,
+              "delta_ic50_log2": -0.74,
+              "n_mut": 14,
+              "n_wt": 914,
+              "pmids": [
+                "internal:crispro-mbd4-atr-gdsc-v1"
+              ],
+              "drug_screen_dataset": "GDSC1",
+              "stratifier": "MBD4_LOF_vs_WT"
+            },
+            "tier_result": {
+              "recommendation_tier": "Mechanistic candidate only",
+              "overall_evidence_level": "Mechanistic-only",
+              "tier_fusion_rule_id": "base_fallback_mechanistic_candidate_else_branch",
+              "bridge_recommended_drugs_policy": "eligible_matrix_positive_tier",
+              "weighted_score": 2.0,
+              "n_positive_modalities": 1
+            },
+            "pre_fix_tier": "Not supported / negative",
+            "pre_fix_bridge_policy": "excluded_negative_tier",
+            "verdict": "PASS — GDSC receipt overrides pharmacologic NEGATIVE, tier upgrades to Mechanistic candidate only"
+          },
+          "fix_2_rs_features": {
+            "sl_endpoint_rs_score": {
+              "score": 0.2,
+              "level": "moderate",
+              "contributing_features": [
+                "msi_h",
+                "mbd4_lof"
+              ],
+              "weights_applied": {
+                "msi_h": 0.15,
+                "mbd4_lof": 0.05
+              }
+            },
+            "bundle_endpoint_rs_score": {
+              "score": 0.2,
+              "level": "moderate",
+              "contributing_features": [
+                "msi_h",
+                "mbd4_lof"
+              ],
+              "weights_applied": {
+                "msi_h": 0.15,
+                "mbd4_lof": 0.05
+              }
+            },
+            "constructors_wired": [
+              "api/routers/agents.py L649",
+              "api/services/efficacy_orchestrator/orchestrator.py L284",
+              "api/services/ayesha_fit/service.py L354/377"
+            ],
+            "bundle_request_model": "api/routers/ayesha_therapy_fit.py L148 (field) + L420 (call site)",
+            "verdict": "PASS — rs_features flows through all three SLRequest constructors and the BundleRequest model"
+          },
+          "fix_3_matrix_dictatorship": {
+            "axis_tiers": {
+              "cytidine_analogs": "Validated SL therapeutic lever",
+              "parp_inhibitors": "Mechanistic candidate only",
+              "atr_wee1": "Mechanistic candidate only",
+              "wrn": "Not supported / negative",
+              "immunotherapy": "Mechanistic candidate only",
+              "pkmyt1": "Not supported / negative"
+            },
+            "recommended_drugs": [
+              {
+                "drug_name": "Cytidine Analogs (gemcitabine, cytarabine)",
+                "matrix_axis": "cytidine_analogs",
+                "evidence_tier": "Supported",
+                "confidence": 0.88
+              },
+              {
+                "drug_name": "PARP Inhibitors (olaparib, niraparib, talazoparib, rucaparib)",
+                "matrix_axis": "parp_inhibitors",
+                "evidence_tier": "Mechanistic",
+                "confidence": 0.56
+              },
+              {
+                "drug_name": "ATR / WEE1 Inhibitors (berzosertib, adavosertib, ceralasertib)",
+                "matrix_axis": "atr_wee1",
+                "evidence_tier": "Mechanistic",
+                "confidence": 0.56
+              },
+              {
+                "drug_name": "Immunotherapy / Checkpoint Inhibitors (PD-1/PD-L1)",
+                "matrix_axis": "immunotherapy",
+                "evidence_tier": "Mechanistic",
+                "confidence": 0.56
+              }
+            ],
+            "negative_axes": [
+              "wrn",
+              "pkmyt1"
+            ],
+            "ghost_payload_leaked": [],
+            "suppression_mechanism": "continue (skip drugs_out.append) — not confidence=0.0",
+            "verdict": "PASS — WRN and PKMYT1 drugs fully dropped from panel, no ghost payload"
+          }
+        },
+        "sl_endpoint_response_keys": [
+          "patient_id",
+          "disease",
+          "gating",
+          "evidence_matrix",
+          "synthetic_lethality_detected",
+          "double_hit_description",
+          "essentiality_scores",
+          "broken_pathways",
+          "essential_pathways",
+          "recommended_drugs",
+          "suggested_therapy",
+          "explanation",
+          "calculation_time_ms",
+          "evo2_used",
+          "provenance"
+        ],
+        "bundle_endpoint_response_keys": [
+          "contract_version",
+          "patient_id",
+          "requested_levels",
+          "generated_at",
+          "levels",
+          "tests_needed",
+          "patient_context",
+          "synthetic_lethality",
+          "sl_status"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/crispro_live_api_proof.json",
+          "exists": true,
+          "bytes": 4103,
+          "sha256": "e2dbc0ec6c59e92b0be8ff2a49a98a522e095d978c1f29d3e49cdcf10e36665b",
+          "mtime_iso": "2026-06-06T21:01:49+00:00"
+        },
+        {
+          "path": "/mnt/results/sl_endpoint_mbd4_live.json",
+          "exists": true,
+          "bytes": 92823,
+          "sha256": "17f54734d4c9b8ac61210516d089e255960e06ca20cfc42caf66ab467d36e0c9",
+          "mtime_iso": "2026-06-06T21:00:33+00:00"
+        },
+        {
+          "path": "/mnt/results/bundle_endpoint_mbd4_live.json",
+          "exists": true,
+          "bytes": 171815,
+          "sha256": "7caf61b0df24cddab133485678558d5c0ea148c33782c5f605c442c1a79f18e4",
+          "mtime_iso": "2026-06-06T21:01:06+00:00"
+        }
+      ],
+      "cross_refs": [
+        "endpoint:sl",
+        "endpoint:bundle",
+        "engine:synthetic_lethality",
+        "layer:output"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "endpoint:sl",
+      "type": "endpoint",
+      "name": "POST /api/agents/synthetic_lethality",
+      "what_it_solves": "Direct SL engine endpoint — returns tier-assigned axis results for a PatientState.",
+      "how_it_solves": "Live commit + response body captured in sl_endpoint_mbd4_live.json. Top-level keys observed in this response: ['patient_id', 'disease', 'gating', 'evidence_matrix', 'synthetic_lethality_detected', 'double_hit_description', 'essentiality_scores', 'broken_pathways', 'essential_pathways', 'recommended_drugs', 'suggested_therapy', 'explanation', 'calculation_time_ms', 'evo2_used', 'provenance']",
+      "why_it_exists": "Exposes the engine as a peer-callable service (used by the Ayesha bundle and by direct API consumers).",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/crispro_live_api_proof.json",
+          "exists": true,
+          "bytes": 4103,
+          "sha256": "e2dbc0ec6c59e92b0be8ff2a49a98a522e095d978c1f29d3e49cdcf10e36665b",
+          "mtime_iso": "2026-06-06T21:01:49+00:00"
+        },
+        {
+          "path": "/mnt/results/sl_endpoint_mbd4_live.json",
+          "exists": true,
+          "bytes": 92823,
+          "sha256": "17f54734d4c9b8ac61210516d089e255960e06ca20cfc42caf66ab467d36e0c9",
+          "mtime_iso": "2026-06-06T21:00:33+00:00"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "layer:output",
+        "receipt:crispro_live_api_proof"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "endpoint:bundle",
+      "type": "endpoint",
+      "name": "POST /api/ayesha/therapy-fit/bundle?level=l1&include_synthetic_lethality=true",
+      "what_it_solves": "Composite therapy-fit bundle endpoint — the front-end's primary read.",
+      "how_it_solves": "Live commit + response body captured in bundle_endpoint_mbd4_live.json. Top-level keys observed: ['contract_version', 'patient_id', 'requested_levels', 'generated_at', 'levels', 'tests_needed', 'patient_context', 'synthetic_lethality', 'sl_status']",
+      "why_it_exists": "Single call for the clinician UI: bundles SL + safety + trials + SOC + biomarkers behind one contract.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/crispro_live_api_proof.json",
+          "exists": true,
+          "bytes": 4103,
+          "sha256": "e2dbc0ec6c59e92b0be8ff2a49a98a522e095d978c1f29d3e49cdcf10e36665b",
+          "mtime_iso": "2026-06-06T21:01:49+00:00"
+        },
+        {
+          "path": "/mnt/results/bundle_endpoint_mbd4_live.json",
+          "exists": true,
+          "bytes": 171815,
+          "sha256": "7caf61b0df24cddab133485678558d5c0ea148c33782c5f605c442c1a79f18e4",
+          "mtime_iso": "2026-06-06T21:01:06+00:00"
+        }
+      ],
+      "cross_refs": [
+        "component:ayesha_bundle_waterfall",
+        "layer:output",
+        "receipt:crispro_live_api_proof"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "evidence:a1",
+      "type": "evidence_analysis",
+      "name": "MBD4/ATR analysis A1 — Co-dependency (pan-cancer + lineage)",
+      "what_it_solves": "Analysis 'A1' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+      "how_it_solves": "DepMap CRISPR co-dependency scan for MBD4 across cell lines and lineages; scatter + tables.",
+      "why_it_exists": "Tests whether cells needing MBD4 also need ATR/WEE1 (the SL premise).",
+      "attributes": {
+        "files": [
+          "A1_codependency_lineage_results_REAL.csv",
+          "A1_codependency_pancancer_results_REAL.csv",
+          "A1_codependency_scatter.png",
+          "A1_crispr_results_REAL.csv",
+          "A1_depmap_crispr_mbd4_groups.png",
+          "A1b_depmap_mbd4_lof_crispr_violin.png",
+          "A1b_mbd4_lof_crispr_results.csv"
+        ],
+        "file_count": 7
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A1_codependency_lineage_results_REAL.csv",
+          "exists": true,
+          "bytes": 5150,
+          "sha256": "d774850782e3da43a9ebb43d4b6493695b85baa1c43740da6bc3df0d1a2596bd",
+          "mtime_iso": "2026-04-25T07:17:07+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A1_codependency_pancancer_results_REAL.csv",
+          "exists": true,
+          "bytes": 282,
+          "sha256": "5cc36c8831eaa7cfb9d5e5978b40e1ee1a4598a1f0a85ba8584ae89561bfda00",
+          "mtime_iso": "2026-04-25T07:17:07+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A1_codependency_scatter.png",
+          "exists": true,
+          "bytes": 369842,
+          "sha256": "12f95943fa425abdb4b01103e3b8ae93ddde0cd7e0b833295649a01852fa8de4",
+          "mtime_iso": "2026-04-25T07:17:05+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A1_crispr_results_REAL.csv",
+          "exists": true,
+          "bytes": 1300,
+          "sha256": "fff0a044318fc1c046348950c2db029651a915e91f72ec1350ea857a83847b04",
+          "mtime_iso": "2026-04-25T07:09:03+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A1_depmap_crispr_mbd4_groups.png",
+          "exists": true,
+          "bytes": 163475,
+          "sha256": "7790587477da6b728d6e4ecfe5b38becbe1b7511a7e8d1206d7cfda2988951d5",
+          "mtime_iso": "2026-04-25T07:09:03+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A1b_depmap_mbd4_lof_crispr_violin.png",
+          "exists": true,
+          "bytes": 155949,
+          "sha256": "34b7865f75f123c44fbc7a14eeac1e8e6947b3b154ea286eca128bc7770aeb32",
+          "mtime_iso": "2026-04-25T08:07:09+00:00"
+        }
+      ],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2",
+        "axis:ATR_WEE1",
+        "framework:rs"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "evidence:a1b",
+      "type": "evidence_analysis",
+      "name": "MBD4/ATR analysis A1b — MBD4-LOF stratified CRISPR (violin)",
+      "what_it_solves": "Analysis 'A1b' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+      "how_it_solves": "Violin plot + CSV of ATR/CHEK1/WEE1 CRISPR score in MBD4-LOF vs WT lines.",
+      "why_it_exists": "Directly tests 'is checkpoint machinery MORE essential when MBD4 is LOF?'",
+      "attributes": {
+        "files": [
+          "A1b_depmap_mbd4_lof_crispr_violin.png",
+          "A1b_mbd4_lof_crispr_results.csv"
+        ],
+        "file_count": 2
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A1b_depmap_mbd4_lof_crispr_violin.png",
+          "exists": true,
+          "bytes": 155949,
+          "sha256": "34b7865f75f123c44fbc7a14eeac1e8e6947b3b154ea286eca128bc7770aeb32",
+          "mtime_iso": "2026-04-25T08:07:09+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A1b_mbd4_lof_crispr_results.csv",
+          "exists": true,
+          "bytes": 289,
+          "sha256": "7c19334c2fef48030de6a9f41e86a2bce5d5127eaeda7d2364c4c7c2f2a5bb53",
+          "mtime_iso": "2026-04-25T08:07:11+00:00"
+        }
+      ],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2",
+        "axis:ATR_WEE1",
+        "framework:rs"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "evidence:a2",
+      "type": "evidence_analysis",
+      "name": "MBD4/ATR analysis A2 — PRISM drug-viability screen",
+      "what_it_solves": "Analysis 'A2' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+      "how_it_solves": "AUC vs MBD4 expression for ATRi/WEE1i in PRISM screen.",
+      "why_it_exists": "Pharmacology mirror of A1 — does drug knockdown recapitulate genetic knockdown?",
+      "attributes": {
+        "files": [
+          "A2_prism_auc_vs_mbd4.png",
+          "A2_prism_results_REAL.csv"
+        ],
+        "file_count": 2
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A2_prism_auc_vs_mbd4.png",
+          "exists": true,
+          "bytes": 143439,
+          "sha256": "bf58066f7628e318c29166540db4e88649b10d0be44d7b8250b61f0d3c26e841",
+          "mtime_iso": "2026-04-25T07:20:55+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A2_prism_results_REAL.csv",
+          "exists": true,
+          "bytes": 1164,
+          "sha256": "6da76477cd1791dc3bed8806a390659b7db771ac30aafb42b2bceac254e36248",
+          "mtime_iso": "2026-04-25T07:20:57+00:00"
+        }
+      ],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2",
+        "axis:ATR_WEE1",
+        "framework:rs"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "evidence:a3",
+      "type": "evidence_analysis",
+      "name": "MBD4/ATR analysis A3 — TCGA-OV replication-stress score",
+      "what_it_solves": "Analysis 'A3' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+      "how_it_solves": "TCGA ovarian cohort RS score computation + MBD4 status.",
+      "why_it_exists": "Grounds the RS framework in a real clinical cohort (ovarian is the seed cancer).",
+      "attributes": {
+        "files": [
+          "A3_tcga_ov_results_REAL.csv",
+          "A3_tcga_ov_rs_score.png"
+        ],
+        "file_count": 2
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A3_tcga_ov_results_REAL.csv",
+          "exists": true,
+          "bytes": 465,
+          "sha256": "b06ab4c9dc72d6593961bd875daadee11de2c6aeb69b5115c23688d059011541",
+          "mtime_iso": "2026-04-25T07:23:59+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A3_tcga_ov_rs_score.png",
+          "exists": true,
+          "bytes": 214100,
+          "sha256": "a87c0db5c2bbafecf791f232ece8232e53f3cd54ec9d8b4b0e8b2b815cdd9744",
+          "mtime_iso": "2026-04-25T07:24:40+00:00"
+        }
+      ],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2",
+        "axis:ATR_WEE1",
+        "framework:rs"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "evidence:a4",
+      "type": "evidence_analysis",
+      "name": "MBD4/ATR analysis A4 — Pan-cancer MBD4-LOF frequency",
+      "what_it_solves": "Analysis 'A4' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+      "how_it_solves": "Descriptive frequency of MBD4-LOF across TCGA tumor types.",
+      "why_it_exists": "Establishes the addressable population size — critical for later 'can we ever power a clinical trial?' question.",
+      "attributes": {
+        "files": [
+          "A4_pancancer_mbd4_lof_frequency.png",
+          "A4_pancancer_mbd4_lof_results.csv"
+        ],
+        "file_count": 2
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A4_pancancer_mbd4_lof_frequency.png",
+          "exists": true,
+          "bytes": 97676,
+          "sha256": "780bc2244092fd0dcf4874b1b06c15ce4427293f3f66e369c1ec80150e1a9cf6",
+          "mtime_iso": "2026-04-25T07:28:58+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A4_pancancer_mbd4_lof_results.csv",
+          "exists": true,
+          "bytes": 1784,
+          "sha256": "1ca4675419054d2918ceb48f83f4606dd1a65c99baaf975a9e8f38e82d1805ab",
+          "mtime_iso": "2026-04-25T07:29:37+00:00"
+        }
+      ],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2",
+        "axis:ATR_WEE1",
+        "framework:rs"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "evidence:a5",
+      "type": "evidence_analysis",
+      "name": "MBD4/ATR analysis A5 — Literature evidence pack",
+      "what_it_solves": "Analysis 'A5' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+      "how_it_solves": "Curated literature evidence supporting the MBD4 mechanism claim.",
+      "why_it_exists": "Bridges computational signals to published biology (dedicated A5_literature/ subfolder).",
+      "attributes": {
+        "files": [
+          "A5_literature",
+          "A5_ucec_survival_mbd4_lof.png"
+        ],
+        "file_count": 2
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A5_literature",
+          "is_dir": true,
+          "exists": true
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A5_ucec_survival_mbd4_lof.png",
+          "exists": true,
+          "bytes": 73071,
+          "sha256": "f8e25cfbca9f0e1d4fafb48f714e4f41675c57d38578b57f9e6f245d00005dd2",
+          "mtime_iso": "2026-04-25T07:30:07+00:00"
+        }
+      ],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2",
+        "axis:ATR_WEE1",
+        "framework:rs"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "evidence:a6",
+      "type": "evidence_analysis",
+      "name": "MBD4/ATR analysis A6 — MSI-stratified CRISPR (deconfounding attempt)",
+      "what_it_solves": "Analysis 'A6' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+      "how_it_solves": "Stratify MBD4-LOF vs WT WITHIN MSI-H to see if MBD4-specific signal exists beyond MSI.",
+      "why_it_exists": "Addresses the MSI-H collinearity confounder that is the primary blocker on STRONG tier.",
+      "attributes": {
+        "files": [
+          "A6_msi_stratified_atr_crispr.csv",
+          "A6_msi_stratified_violin.png"
+        ],
+        "file_count": 2
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A6_msi_stratified_atr_crispr.csv",
+          "exists": true,
+          "bytes": 1214,
+          "sha256": "1b7db9da70d53ef30641326f639a1e1a75921225734f0a764b5e63dd3fc51586",
+          "mtime_iso": "2026-04-26T06:24:33+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A6_msi_stratified_violin.png",
+          "exists": true,
+          "bytes": 309000,
+          "sha256": "3de42fff3ee6ef3ba4de79038e69c99b8fdce8ccf3182c248a1022f9c1e9939f",
+          "mtime_iso": "2026-04-26T06:24:34+00:00"
+        }
+      ],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2",
+        "axis:ATR_WEE1",
+        "framework:rs"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "evidence:a7",
+      "type": "evidence_analysis",
+      "name": "MBD4/ATR analysis A7 — UCEC RS-score scatter",
+      "what_it_solves": "Analysis 'A7' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+      "how_it_solves": "UCEC-specific RS signature vs MBD4 correlation.",
+      "why_it_exists": "Second cohort test after TCGA-OV — checks whether the RS-MBD4 signal generalises.",
+      "attributes": {
+        "files": [
+          "A7_ucec_rs_scatter.png",
+          "A7_ucec_rs_signature.csv"
+        ],
+        "file_count": 2
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A7_ucec_rs_scatter.png",
+          "exists": true,
+          "bytes": 240853,
+          "sha256": "31d40c383e067b5fbec9624b142b1a969ca0387c27080560b5133db153b3c16f",
+          "mtime_iso": "2026-04-26T06:24:35+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A7_ucec_rs_signature.csv",
+          "exists": true,
+          "bytes": 6155,
+          "sha256": "6397dc9094f9982d17a2faec09be282a72e5f8fe14223db669857d2ad02fbc2d",
+          "mtime_iso": "2026-04-26T06:24:36+00:00"
+        }
+      ],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2",
+        "axis:ATR_WEE1",
+        "framework:rs"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "evidence:a8",
+      "type": "evidence_analysis",
+      "name": "MBD4/ATR analysis A8 — Dependency probability bar",
+      "what_it_solves": "Analysis 'A8' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+      "how_it_solves": "Binary >0.5 dependency probability across ATR/CHEK1/WEE1 in MBD4-LOF vs WT.",
+      "why_it_exists": "Complements A1b: does the standard DepMap 'essential' cutoff show MBD4-LOF enrichment?",
+      "attributes": {
+        "files": [
+          "A8_dependency_probability.csv",
+          "A8_dependency_probability_bar.png"
+        ],
+        "file_count": 2
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A8_dependency_probability.csv",
+          "exists": true,
+          "bytes": 819,
+          "sha256": "c9bec4f53c68a73ba32bc008774c7a69e1fab36f0ffcaf21b2b473845afc86ff",
+          "mtime_iso": "2026-04-26T06:24:37+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A8_dependency_probability_bar.png",
+          "exists": true,
+          "bytes": 178384,
+          "sha256": "9ce2f30b575fdb3c8df2e98121ab5d061d922432b72471cf0d14db798a9200cd",
+          "mtime_iso": "2026-04-26T06:24:38+00:00"
+        }
+      ],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2",
+        "axis:ATR_WEE1",
+        "framework:rs"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "evidence:a9",
+      "type": "evidence_analysis",
+      "name": "MBD4/ATR analysis A9 — AZD6738 / pharmacology benchmark",
+      "what_it_solves": "Analysis 'A9' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+      "how_it_solves": "GDSC2 AZD6738 AUC violin + effect-size benchmark.",
+      "why_it_exists": "Turns 'checkpoint inhibitor sensitivity' into a specific drug-level receipt.",
+      "attributes": {
+        "files": [
+          "A9_azd6738_auc_violin.png",
+          "A9_benchmark_comparator.md",
+          "A9_gdsc2_pharmacology_benchmark.csv",
+          "A9_pharmacology_effect_sizes.png"
+        ],
+        "file_count": 4
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A9_azd6738_auc_violin.png",
+          "exists": true,
+          "bytes": 247975,
+          "sha256": "31b1fea545ce00efc34b0468199cc1066ae259a7abd6d6955adda2c098162fd3",
+          "mtime_iso": "2026-04-27T04:31:12+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A9_benchmark_comparator.md",
+          "exists": true,
+          "bytes": 4799,
+          "sha256": "fddf4d439db6e55a36d0ab7e86e88604fb275cc2999b09084b3d4b65e43289dc",
+          "mtime_iso": "2026-04-27T04:33:26+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A9_gdsc2_pharmacology_benchmark.csv",
+          "exists": true,
+          "bytes": 3119,
+          "sha256": "856810e67d2c3c5a609d939a764358a5301d235e5b5e4f34c3d3f151a71802a4",
+          "mtime_iso": "2026-04-27T04:30:45+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/A9_pharmacology_effect_sizes.png",
+          "exists": true,
+          "bytes": 138193,
+          "sha256": "efd4fca1ebe05d045e5078788bd7a0c77c3ca6f343409b17b7e4fc76d6cb708f",
+          "mtime_iso": "2026-04-27T04:32:28+00:00"
+        }
+      ],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2",
+        "axis:ATR_WEE1",
+        "framework:rs"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "evidence:atm_benchmark",
+      "type": "evidence_analysis",
+      "name": "ATM benchmark (MSS-only + pan-cancer)",
+      "what_it_solves": "Positive-control comparator: ATM-LOF is a well-established checkpoint dependency, so it is used to calibrate the MBD4-LOF pipeline.",
+      "how_it_solves": "ATM_benchmark_MSS_only.csv + ATM_benchmark_pancancer.csv show effect sizes ATM-LOF vs WT for the same pipeline used on MBD4.",
+      "why_it_exists": "If the pipeline can detect the known ATM signal, absence of MBD4 signal is a real biological finding, not a pipeline artefact.",
+      "attributes": {
+        "files": [
+          "ATM_benchmark_MSS_only.csv",
+          "ATM_benchmark_effect_sizes.png",
+          "ATM_benchmark_pancancer.csv",
+          "ATM_benchmark_violin.png"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/ATM_benchmark_MSS_only.csv",
+          "exists": true,
+          "bytes": 542,
+          "sha256": "1c69dc47476a81f2bd53bbdf1260e3a058f1680d299ccb73411f04b61dcaecc7",
+          "mtime_iso": "2026-04-27T02:36:23+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/ATM_benchmark_effect_sizes.png",
+          "exists": true,
+          "bytes": 100931,
+          "sha256": "8e1fdae9b8f8f239c7462715e0e55c271cd5113cfb6f8f10aef6cfd623bbb726",
+          "mtime_iso": "2026-04-27T02:37:05+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/ATM_benchmark_pancancer.csv",
+          "exists": true,
+          "bytes": 850,
+          "sha256": "688ad48d369729fd7b3a4fdd5c16188f6ead7a61a72b22bb1bdcbd1cb5fe10eb",
+          "mtime_iso": "2026-04-27T02:36:23+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/ATM_benchmark_violin.png",
+          "exists": true,
+          "bytes": 330444,
+          "sha256": "802680451b3559608f8ecd8295fbe25dbd8a8a738619d36bfd4308fffef38a41",
+          "mtime_iso": "2026-04-27T02:36:48+00:00"
+        }
+      ],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2",
+        "axis:ATR_WEE1"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "evidence:patient_ak_case",
+      "type": "evidence_case_study",
+      "name": "Patient AK — MBD4 SL full extraction + treatment map",
+      "what_it_solves": "The seed case study that motivated the MBD4/ATR-WEE1 axis: a real patient with MBD4-LOF ovarian cancer.",
+      "how_it_solves": "AK_MBD4_SL_FULL_EXTRACTION.md is the full case narrative; fig5_patient_ak_gap.png and diagram4_patient_ak_treatment_map.png visualise the treatment gap.",
+      "why_it_exists": "Anchors the abstract SL work in a concrete patient — the 'if we had this earlier' motivator for every downstream artefact.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/diagram4_patient_ak_treatment_map.png",
+          "exists": true,
+          "bytes": 251173,
+          "sha256": "8aca1352c7e6755addcb6226d1ab63f30cfca2c358246379a09ea023abc9d2c4",
+          "mtime_iso": "2026-05-19T23:30:34+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/fig5_patient_ak_gap.png",
+          "exists": true,
+          "bytes": 314313,
+          "sha256": "4cc3713c43a097af5a8af83c87ab375b80ad50c0a6b29bbe3e97edf6033fabd6",
+          "mtime_iso": "2026-05-20T17:37:22+00:00"
+        },
+        {
+          "path": "/mnt/results/AK_MBD4_SL_FULL_EXTRACTION.md",
+          "exists": true,
+          "bytes": 32960,
+          "sha256": "df3ac2a1c9dc98ee08aceef386460a1fac655128c4d6d2d1f565acadeba242dc",
+          "mtime_iso": "2026-06-04T16:14:31+00:00"
+        }
+      ],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2",
+        "axis:ATR_WEE1",
+        "axis:CYTIDINE_ANALOGS"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "evidence:mbd4_atri_ic50_protocol",
+      "type": "wet_lab_protocol",
+      "name": "MBD4 × ATRi IC50 protocol",
+      "what_it_solves": "Wet-lab protocol design for validating the MBD4/ATR SL axis in cell lines.",
+      "how_it_solves": "Step-by-step IC50 protocol targeting the specific MBD4-LOF vs WT contrast the computational evidence could not resolve.",
+      "why_it_exists": "The computational modality cells cannot deconfound MBD4 from MSI-H — wet-lab is the only path to STRONG tier for this axis.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/MBD4_ATRi_IC50_Protocol.md",
+          "exists": true,
+          "bytes": 12486,
+          "sha256": "6e956320f15798880c740c91966b82a8d8ab01bf6e23e282180394e1ec73f837",
+          "mtime_iso": "2026-04-27T04:59:54+00:00"
+        }
+      ],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2",
+        "axis:ATR_WEE1"
+      ],
+      "gaps_still_open": [
+        "Protocol authored but not executed as of the receipt snapshot."
+      ],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "artifact:supplemental_data_provenance",
+      "type": "provenance_artifact",
+      "name": "Supplemental data provenance",
+      "what_it_solves": "Structured record of data lineage for every supplemental table/figure in the MBD4/ATR bundle.",
+      "how_it_solves": "SUPPLEMENTAL_DATA_PROVENANCE_v2.md and v3.md list source dataset → filter → derived file for each artefact.",
+      "why_it_exists": "Publication-grade requirement: reviewer must be able to reconstruct every value from a public dataset ID.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/SUPPLEMENTAL_DATA_PROVENANCE_v2.md",
+          "exists": true,
+          "bytes": 8609,
+          "sha256": "1dd7b34ea07436423d7a8114e36a0242647a83b9635e93c00c84ec524df326a0",
+          "mtime_iso": "2026-04-27T06:12:43+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/SUPPLEMENTAL_DATA_PROVENANCE_v3.md",
+          "exists": true,
+          "bytes": 9804,
+          "sha256": "8c877722b76073deed15ec50f8f5e5f0d19553015b7d7b4a32561fb071a72c87",
+          "mtime_iso": "2026-04-27T06:43:02+00:00"
+        }
+      ],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "artifact:mbd4_manuscript_versions",
+      "type": "manuscript_artifact",
+      "name": "MBD4/ATR manuscript versions (v2 → v4)",
+      "what_it_solves": "Version chain of the MBD4/ATR manuscript, with paired diff files.",
+      "how_it_solves": "manuscript_v2 → v3 → v4 (latest); manuscript_diff_v1 and _v2 capture the reasoning behind each revision.",
+      "why_it_exists": "Living document tracking how the tier claim evolved as evidence accumulated (or failed to).",
+      "attributes": {
+        "latest": "manuscript_v4.md",
+        "version_chain": [
+          "manuscript_diff_v1.md",
+          "manuscript_diff_v2.md",
+          "manuscript_v2.md",
+          "manuscript_v2_plain.md",
+          "manuscript_v3.md",
+          "manuscript_v4.md"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/manuscript_diff_v1.md",
+          "exists": true,
+          "bytes": 12463,
+          "sha256": "928b305949bbe7fd3a5f8012627e0469b5384c45e73c04f0287d41a75a2f6056",
+          "mtime_iso": "2026-04-27T06:07:12+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/manuscript_diff_v2.md",
+          "exists": true,
+          "bytes": 6683,
+          "sha256": "cbc891aa5b1d283dd4a39d9a150cfb6b2940fe9a5c340c2b7c0f5b4ff68be3b3",
+          "mtime_iso": "2026-04-27T06:44:04+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/manuscript_v2.md",
+          "exists": true,
+          "bytes": 33167,
+          "sha256": "77d21d05bfe5a901b6a2de0b16262801a4301b19d98bc98ad14b2d266011000e",
+          "mtime_iso": "2026-04-27T06:10:55+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/manuscript_v2_plain.md",
+          "exists": true,
+          "bytes": 36863,
+          "sha256": "15db7957bc399b2eed5c9c32c39fa31556e563c21f66f24c6dd76ec45381784e",
+          "mtime_iso": "2026-05-20T03:28:35+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/manuscript_v3.md",
+          "exists": true,
+          "bytes": 33555,
+          "sha256": "3382a71a9d7d48c921163cd7056afb23aecdfc7ca5fa4f425583d8697da4bf82",
+          "mtime_iso": "2026-04-27T06:41:11+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/manuscript_v4.md",
+          "exists": true,
+          "bytes": 34247,
+          "sha256": "6d6ba103ddea1422211fcaad4515ddb7f3a793ee691c0112b334c9eb467e672b",
+          "mtime_iso": "2026-05-07T05:00:37+00:00"
+        }
+      ],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2",
+        "evidence:patient_ak_case"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "artifact:mbd4_intel_reports",
+      "type": "intelligence_report",
+      "name": "MBD4 Full Intelligence Report (v1 → v3)",
+      "what_it_solves": "Narrative summary of the MBD4/ATR SL evidence for non-technical readers.",
+      "how_it_solves": "MBD4_Full_Intelligence_Report v1/v2/v3 — v3 is latest and reflects the NO-CHANGE tier verdict.",
+      "why_it_exists": "Bridge document from evidence matrix to stakeholders who won't read modality cells.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/MBD4_Full_Intelligence_Report.md",
+          "exists": true,
+          "bytes": 10798,
+          "sha256": "62d8d6d80e3bac3f4fcb3f1bcb3c265ae4895556d85c7aacaaf3752dc3e1ed06",
+          "mtime_iso": "2026-04-25T08:09:26+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/MBD4_Full_Intelligence_Report_v2.md",
+          "exists": true,
+          "bytes": 17065,
+          "sha256": "67eb871bac84b41be4ac92ae215f8f042927e4dfdb892ced319c4fa9af9f18c2",
+          "mtime_iso": "2026-04-26T06:28:04+00:00"
+        },
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/MBD4_Full_Intelligence_Report_v3.md",
+          "exists": true,
+          "bytes": 24250,
+          "sha256": "fcd90cabbd317174c813ea8d81bd0400abb480b7d0e0a84aa5b253bfba723068",
+          "mtime_iso": "2026-04-27T04:58:26+00:00"
+        }
+      ],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2",
+        "artifact:mbd4_manuscript_versions"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    },
+    {
+      "id": "artifact:sl_repo_gauntlet_preflight",
+      "type": "repo_gauntlet",
+      "name": "SL repo gauntlet preflight",
+      "what_it_solves": "Preflight checklist run against the SL engine repo before allowing the MBD4/ATR receipt to be published as canon.",
+      "how_it_solves": "50KB checklist enumerating every invariant + evidence-cell status; a red row anywhere blocks canonisation.",
+      "why_it_exists": "Prevents 'publish first, discover the invariant regression later' failure mode.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/mbd4_atr_evidence/SL_REPO_GAUNTLET_PREFLIGHT.md",
+          "exists": true,
+          "bytes": 50603,
+          "sha256": "461e5d018c52073f5b96777a5f04dfe8ea0530a617341dc4cca0620798dde1f0",
+          "mtime_iso": "2026-05-02T18:03:56+00:00"
+        }
+      ],
+      "cross_refs": [
+        "receipt:mbd4_atr_evidence_matrix_v2",
+        "engine:synthetic_lethality",
+        "invariant:validated_never_auto",
+        "invariant:tier_clamp_no_clinical",
+        "invariant:pole_guard"
+      ],
+      "gaps_still_open": [],
+      "_stream": "evidence_and_receipts"
+    }
+  ],
+  "gaps_still_open_stream_level": [
+    "MBD4/ATR-WEE1 axis remains MECHANISTIC (NO CHANGE verdict). STRONG-tier path requires wet-lab IC50 to deconfound from MSI-H collinearity.",
+    "MBD4 LOF cannot be reliably proxied by expression — pipeline limitation, not a computational bug.",
+    "Live endpoint response keys were captured but per-key semantic labels are not yet inventoried; ingestion of sl_endpoint_mbd4_live keys is a follow-up."
+  ],
+  "cross_stream_refs": [
+    "See stream_sl.json for the engine that produces axis tiers — the receipts here are what those tiers point to.",
+    "See stream_brenus.json for downstream manuscript/deck consumers of these receipts.",
+    "See stream_moat.json for governance decisions that determine which receipts are canon."
+  ]
+}

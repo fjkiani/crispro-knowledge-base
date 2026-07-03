@@ -1,0 +1,33 @@
+{
+  "id": "deliverable:sanofi_pitch_deck_directive",
+  "type": "pitch_directive",
+  "name": "Sanofi pitch deck directive (v1.0.1)",
+  "what_it_solves": "Directive JSON that generates the Sanofi pitch deck — anchor asset SAR445953 (SGN-CEACAM5C).",
+  "how_it_solves": "sanofiPitchDeckDirective.json enumerates each slide's canon (asset details, evidence receipts to cite, claims allowed).",
+  "why_it_exists": "Prevents slide-authoring drift by making the pitch deck a downstream artefact of a canonical JSON, not a hand-crafted document.",
+  "attributes": {
+    "version": "v1.0.1",
+    "anchor_asset": "SAR445953 (SGN-CEACAM5C)",
+    "top_level_keys": [
+      "_document_metadata",
+      "slides"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/sanofiPitchDeckDirective.json",
+      "exists": true,
+      "bytes": 54645,
+      "sha256": "281c15882038ec8ca192b5581453ed5a683725db527dee43db79b2461d46ef10",
+      "mtime_iso": "2026-06-15T22:24:00+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:brenus_diligence",
+    "engine:synthetic_lethality",
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "brenus_and_deliverables"
+}

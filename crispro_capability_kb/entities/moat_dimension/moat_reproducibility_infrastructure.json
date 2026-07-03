@@ -1,0 +1,42 @@
+{
+  "id": "moat:reproducibility_infrastructure",
+  "type": "moat_dimension",
+  "name": "Reproducibility infrastructure",
+  "what_it_solves": "Reproducibility infrastructure",
+  "how_it_solves": "Repo crispro-backend-v2 + Synthetic-Lethality (public on GitHub). Canonical artifact provenance documented at e.g., 'github.com/fjkiani/crispro@d33f640:publications/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/canonical_atr_wee1_rerun.json'. Test coverage 10 unit tests at tests/synthetic_lethality/v3/multimodal/test_mbd4_atr_promotion.py at HEAD bfd6d11f.",
+  "why_it_exists": "Encoded gap between CrisPRO methodology and Bev2026.",
+  "attributes": {
+    "moat_status": "CrisPRO ADVANTAGE on code/artifact transparency. Bev2026's data deposition is strong; code withhold is a published limitation.",
+    "Bev2026_implementation": null,
+    "Bev2026_approach_verbatim": null,
+    "Bev2026_approach_verbatim_source": "",
+    "verification_status": "Bev2026 Code Availability verbatim from PDF page 15. CrisPRO repo content from user-provided audit report transcript line 12288 + earlier worker-mounted verification.",
+    "raw_dimension_record": {
+      "dimension": "Reproducibility infrastructure",
+      "Bev2026_approach": "Raw drug-screen data deposited to Zenodo 10.5281/zenodo.18957959. Code statement (verbatim): 'The underlying code for this study to pre-process drug screening image data is not publicly available but may be made available to qualified researchers on reasonable request from the corresponding authors.'",
+      "Bev2026_score": "DATA SHARED, CODE WITHHELD. Partial reproducibility.",
+      "CrisPRO_approach": "Repo crispro-backend-v2 + Synthetic-Lethality (public on GitHub). Canonical artifact provenance documented at e.g., 'github.com/fjkiani/crispro@d33f640:publications/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/canonical_atr_wee1_rerun.json'. Test coverage 10 unit tests at tests/synthetic_lethality/v3/multimodal/test_mbd4_atr_promotion.py at HEAD bfd6d11f.",
+      "CrisPRO_score": "OPEN CODE + CANONICAL ARTIFACT PROVENANCE. Higher reproducibility surface.",
+      "moat_status": "CrisPRO ADVANTAGE on code/artifact transparency. Bev2026's data deposition is strong; code withhold is a published limitation.",
+      "verification_status": "Bev2026 Code Availability verbatim from PDF page 15. CrisPRO repo content from user-provided audit report transcript line 12288 + earlier worker-mounted verification."
+    }
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/moat_comparison.json",
+      "exists": true,
+      "bytes": 33172,
+      "sha256": "6ad260f2685511316fe05f842272513da1bfc1f0498c1ccebce5e058fde36879",
+      "mtime_iso": "2026-06-25T01:41:15+00:00",
+      "span_extracted": "comparison_dimensions[6]"
+    }
+  ],
+  "cross_refs": [
+    "governance:8d_remediation",
+    "governance:path_a_formula",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "moat_and_governance"
+}

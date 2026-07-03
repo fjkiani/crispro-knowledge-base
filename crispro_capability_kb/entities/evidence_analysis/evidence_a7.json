@@ -1,0 +1,39 @@
+{
+  "id": "evidence:a7",
+  "type": "evidence_analysis",
+  "name": "MBD4/ATR analysis A7 — UCEC RS-score scatter",
+  "what_it_solves": "Analysis 'A7' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+  "how_it_solves": "UCEC-specific RS signature vs MBD4 correlation.",
+  "why_it_exists": "Second cohort test after TCGA-OV — checks whether the RS-MBD4 signal generalises.",
+  "attributes": {
+    "files": [
+      "A7_ucec_rs_scatter.png",
+      "A7_ucec_rs_signature.csv"
+    ],
+    "file_count": 2
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A7_ucec_rs_scatter.png",
+      "exists": true,
+      "bytes": 240853,
+      "sha256": "31d40c383e067b5fbec9624b142b1a969ca0387c27080560b5133db153b3c16f",
+      "mtime_iso": "2026-04-26T06:24:35+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A7_ucec_rs_signature.csv",
+      "exists": true,
+      "bytes": 6155,
+      "sha256": "6397dc9094f9982d17a2faec09be282a72e5f8fe14223db669857d2ad02fbc2d",
+      "mtime_iso": "2026-04-26T06:24:36+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2",
+    "axis:ATR_WEE1",
+    "framework:rs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "evidence_and_receipts"
+}

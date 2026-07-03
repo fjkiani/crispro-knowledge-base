@@ -1,0 +1,33 @@
+{
+  "id": "axis:WRN",
+  "type": "candidate_axis",
+  "name": "WRN",
+  "what_it_solves": "CandidateAxis enum member — evaluated per-patient by the SL engine.",
+  "how_it_solves": "Fed through modality_fuser + tier_assign; if is_rs_sensitive=True and RS score ≥ 0.40, apply_rs_promotion() may lift MECHANISTIC→STRONG when independent evidence exists.",
+  "why_it_exists": "MSI-H specific WRN dependency.",
+  "attributes": {
+    "exemplar_drugs": [
+      "VX-803",
+      "HRO-761"
+    ],
+    "is_rs_sensitive": false
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "Ch 1.2 — CandidateAxis enum"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality",
+    "framework:rs",
+    "component:tier_promotion"
+  ],
+  "gaps_still_open": [],
+  "_stream": "synthetic_lethality"
+}

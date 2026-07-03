@@ -1,0 +1,24 @@
+{
+  "id": "deliverable:intel_faceted_filtering",
+  "type": "operations_artifact",
+  "name": "Intel faceted filtering spec",
+  "what_it_solves": "Spec for faceted filtering over the CRM/intel corpus — how to slice leads by tumor type / axis / stage.",
+  "how_it_solves": "INTEL_FACETED_FILTERING.md defines each facet with its controlled vocabulary and mapping back to schema A/B.",
+  "why_it_exists": "Prevents ad-hoc lead segmentation queries by making the facet catalogue explicit.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/INTEL_FACETED_FILTERING.md",
+      "exists": true,
+      "bytes": 10799,
+      "sha256": "3b86630f7a064a753c9a133bab1e6867f6614787e2ce6ee7271b478104d84c86",
+      "mtime_iso": "2026-07-02T15:30:00+00:00"
+    }
+  ],
+  "cross_refs": [
+    "deliverable:aacr2026_schema_a_master"
+  ],
+  "gaps_still_open": [],
+  "_stream": "brenus_and_deliverables"
+}

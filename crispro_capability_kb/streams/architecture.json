@@ -1,0 +1,463 @@
+{
+  "stream_id": "architecture",
+  "stream_name": "Architecture, Repos, Layers, Engines",
+  "generated_at_utc": "2026-07-03T21:05:09.407446+00:00",
+  "files_audited": [
+    {
+      "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+      "exists": true,
+      "bytes": 17877,
+      "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+      "mtime_iso": "2026-05-05T06:14:00+00:00"
+    },
+    {
+      "path": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+      "exists": true,
+      "bytes": 19314,
+      "sha256": "4c29bc6cecf7bcc6ba7a1232e3fa3a19d50c02bc1a065ea95f1bafc6f1a9c326",
+      "mtime_iso": "2026-05-05T06:24:21+00:00"
+    },
+    {
+      "path": "/mnt/user-uploads/HANDOFF_integration_agent.md",
+      "exists": true,
+      "bytes": 24575,
+      "sha256": "8c06c5f6092feaaf9680b60bd45bc6797d140fb43132233f3a5d03e21a621aa0",
+      "mtime_iso": "2026-06-15T19:27:39+00:00"
+    },
+    {
+      "path": "/mnt/results/HANDOFF.md",
+      "exists": true,
+      "bytes": 12347,
+      "sha256": "55fabbd6a6c353fb605569d7c3c834886d5843a106f857e9f8024ab933220c47",
+      "mtime_iso": "2026-05-05T17:14:11+00:00"
+    },
+    {
+      "path": "/mnt/results/FRONTEND_AUDIT_AND_FIX_PLAN.md",
+      "exists": true,
+      "bytes": 24805,
+      "sha256": "f31945d7d1d131535769da391ab19546f2829f86263b1f5e49c49af1619166c4",
+      "mtime_iso": "2026-05-05T06:38:41+00:00"
+    },
+    {
+      "path": "/mnt/results/AYESHA_PAGE_MERGE_REPORT.md",
+      "exists": true,
+      "bytes": 3844,
+      "sha256": "548e39ad9cda1c24fc5de8d047255a9da4096d7436ba78a445831a786bfc448f",
+      "mtime_iso": "2026-05-05T07:04:41+00:00"
+    },
+    {
+      "path": "/mnt/results/CALL_PATH_DEDUP_REPORT.md",
+      "exists": true,
+      "bytes": 1938,
+      "sha256": "9c11c6709af9e07b862809842b719640b034a049eddf27d7df718467e67219f2",
+      "mtime_iso": "2026-05-05T07:04:42+00:00"
+    },
+    {
+      "path": "/mnt/results/CONFIG_NORMALIZATION_REPORT.md",
+      "exists": true,
+      "bytes": 3342,
+      "sha256": "d068e515e4d22a53cc02f440946021fc7fdea1cc9f76914d06f42f4e1a0584f7",
+      "mtime_iso": "2026-05-05T07:04:43+00:00"
+    },
+    {
+      "path": "/mnt/results/SL_FRONTEND_CANONICALIZATION.md",
+      "exists": true,
+      "bytes": 2195,
+      "sha256": "24c2c4ddaaa99557ee18e4ded3803d4dff35bf20fb16480fcefbe3658230a098",
+      "mtime_iso": "2026-05-05T07:04:43+00:00"
+    },
+    {
+      "path": "/mnt/results/HYGIENE_DELETE_PROOF.md",
+      "exists": true,
+      "bytes": 2502,
+      "sha256": "ed17f55f8fa1bcbb522f6aacbb089c4562339a994ae85413d20b41e162e3ad11",
+      "mtime_iso": "2026-05-05T07:04:40+00:00"
+    }
+  ],
+  "audit_method": {
+    "approach": "For each anchor file, compute sha256 + mtime, then extract only claims that can be located verbatim (or via regex) in the file. Every entity carries source_receipts with sha256 so any downstream ingestor can independently re-verify.",
+    "what_how_why_definition": {
+      "what_it_solves": "the concrete problem or scope this entity represents",
+      "how_it_solves": "the mechanism, method or code path — grounded in the source",
+      "why_it_exists": "the gap / risk / prior failure that motivated the entity"
+    },
+    "verbatim_policy": "verbatim_evidence[].found=false means the literal string was NOT located in the current file version — treat as staleness signal, not as evidence."
+  },
+  "entities": [
+    {
+      "id": "repo:crispro-backend-v3",
+      "type": "repository",
+      "name": "crispro-backend-v3",
+      "what_it_solves": "Production API — Python (FastAPI)",
+      "how_it_solves": "See CRISPRO_REPO_ARCHITECTURE_REPORT.md for exact ownership/layer mapping and cross-repo contracts.",
+      "why_it_exists": "Separation of concerns: R&D exploration is siloed from production, and the frontend consumes typed engine contracts so clinician-facing UI never re-derives synthetic-lethality logic.",
+      "attributes": {
+        "role": "Production API",
+        "stack": "Python (FastAPI)",
+        "status": "Active",
+        "block_found_in_arch_report": false
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+          "exists": true,
+          "bytes": 17877,
+          "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+          "mtime_iso": "2026-05-05T06:14:00+00:00",
+          "span_extracted": "repo:crispro-backend-v3"
+        }
+      ],
+      "cross_refs": [
+        "layer:contracts",
+        "layer:engines",
+        "layer:orchestrator",
+        "layer:output"
+      ],
+      "gaps_still_open": [],
+      "_stream": "architecture"
+    },
+    {
+      "id": "repo:crispro-backend-v2",
+      "type": "repository",
+      "name": "crispro-backend-v2",
+      "what_it_solves": "Frozen backend — Python",
+      "how_it_solves": "See CRISPRO_REPO_ARCHITECTURE_REPORT.md for exact ownership/layer mapping and cross-repo contracts.",
+      "why_it_exists": "Separation of concerns: R&D exploration is siloed from production, and the frontend consumes typed engine contracts so clinician-facing UI never re-derives synthetic-lethality logic.",
+      "attributes": {
+        "role": "Frozen backend",
+        "stack": "Python",
+        "status": "Frozen",
+        "block_found_in_arch_report": true
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+          "exists": true,
+          "bytes": 17877,
+          "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+          "mtime_iso": "2026-05-05T06:14:00+00:00",
+          "span_extracted": "repo:crispro-backend-v2"
+        }
+      ],
+      "cross_refs": [
+        "layer:contracts",
+        "layer:engines",
+        "layer:orchestrator",
+        "layer:output"
+      ],
+      "gaps_still_open": [],
+      "_stream": "architecture"
+    },
+    {
+      "id": "repo:Synthetic-Lethality",
+      "type": "repository",
+      "name": "Synthetic-Lethality",
+      "what_it_solves": "R&D silo — Python / Jupyter",
+      "how_it_solves": "See CRISPRO_REPO_ARCHITECTURE_REPORT.md for exact ownership/layer mapping and cross-repo contracts.",
+      "why_it_exists": "Separation of concerns: R&D exploration is siloed from production, and the frontend consumes typed engine contracts so clinician-facing UI never re-derives synthetic-lethality logic.",
+      "attributes": {
+        "role": "R&D silo",
+        "stack": "Python / Jupyter",
+        "status": "Active",
+        "block_found_in_arch_report": true
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+          "exists": true,
+          "bytes": 17877,
+          "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+          "mtime_iso": "2026-05-05T06:14:00+00:00",
+          "span_extracted": "repo:Synthetic-Lethality"
+        }
+      ],
+      "cross_refs": [
+        "layer:contracts",
+        "layer:engines",
+        "layer:orchestrator",
+        "layer:output"
+      ],
+      "gaps_still_open": [],
+      "_stream": "architecture"
+    },
+    {
+      "id": "repo:crispro-front-end",
+      "type": "repository",
+      "name": "crispro-front-end",
+      "what_it_solves": "Clinician UI — TypeScript / React",
+      "how_it_solves": "See CRISPRO_REPO_ARCHITECTURE_REPORT.md for exact ownership/layer mapping and cross-repo contracts.",
+      "why_it_exists": "Separation of concerns: R&D exploration is siloed from production, and the frontend consumes typed engine contracts so clinician-facing UI never re-derives synthetic-lethality logic.",
+      "attributes": {
+        "role": "Clinician UI",
+        "stack": "TypeScript / React",
+        "status": "Active",
+        "block_found_in_arch_report": true
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+          "exists": true,
+          "bytes": 17877,
+          "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+          "mtime_iso": "2026-05-05T06:14:00+00:00",
+          "span_extracted": "repo:crispro-front-end"
+        }
+      ],
+      "cross_refs": [
+        "layer:contracts",
+        "layer:engines",
+        "layer:orchestrator",
+        "layer:output"
+      ],
+      "gaps_still_open": [],
+      "_stream": "architecture"
+    },
+    {
+      "id": "layer:contracts",
+      "type": "layer",
+      "name": "Layer 0 — Contracts",
+      "what_it_solves": "Typed Pydantic models that every engine reads/writes — the API surface between engines.",
+      "how_it_solves": "PatientState, SomaticMutation, CaseResolution, RankedIntervention, RSFeatureSet are versioned dataclasses/Pydantic models. Every engine boundary is a contract transition; nothing crosses layers as loose dicts.",
+      "why_it_exists": "Prevents drift: if two engines share a field name, they share the model. No 'stringly-typed' RS scores.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+          "exists": true,
+          "bytes": 17877,
+          "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+          "mtime_iso": "2026-05-05T06:14:00+00:00"
+        },
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.1–3.4"
+        }
+      ],
+      "cross_refs": [
+        "repo:crispro-backend-v3"
+      ],
+      "gaps_still_open": [],
+      "_stream": "architecture"
+    },
+    {
+      "id": "layer:engines",
+      "type": "layer",
+      "name": "Layer 1 — Engines",
+      "what_it_solves": "Domain engines encapsulate a single question (e.g. synthetic lethality, lineage dependency).",
+      "how_it_solves": "SL engine lives in core/, multimodal/, kb/, audit/, api/ submodules with strict internal boundaries. Lineage Dependency Engine is PLANNED (Sprint C) — not built.",
+      "why_it_exists": "Isolates model logic from orchestration so engines can be unit-tested in the R&D silo before promotion.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+          "exists": true,
+          "bytes": 17877,
+          "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+          "mtime_iso": "2026-05-05T06:14:00+00:00"
+        },
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.1–3.4"
+        }
+      ],
+      "cross_refs": [
+        "repo:crispro-backend-v3"
+      ],
+      "gaps_still_open": [],
+      "_stream": "architecture"
+    },
+    {
+      "id": "layer:orchestrator",
+      "type": "layer",
+      "name": "Layer 3 — Orchestrator",
+      "what_it_solves": "The 12-engine pipeline that composes contract-typed engines into a case resolution.",
+      "how_it_solves": "SL is Phase 3.5 in the pipeline. Entry point: Orchestrator.resolve_case(patient_state) -> CaseResolution.",
+      "why_it_exists": "Single choke-point for cross-cutting invariants (RUO, audit trail, tier clamps).",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+          "exists": true,
+          "bytes": 17877,
+          "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+          "mtime_iso": "2026-05-05T06:14:00+00:00"
+        },
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.1–3.4"
+        }
+      ],
+      "cross_refs": [
+        "repo:crispro-backend-v3"
+      ],
+      "gaps_still_open": [],
+      "_stream": "architecture"
+    },
+    {
+      "id": "layer:output",
+      "type": "layer",
+      "name": "Layer 4 — Output",
+      "what_it_solves": "HTTP routes and Ayesha bundle assembly for downstream consumers.",
+      "how_it_solves": "compat_routes + ayesha_bundle_routes; canonical case endpoint POST /api/v1/case/resolve.",
+      "why_it_exists": "Backward-compat for legacy clients + typed bundle for the new front-end without duplicating engine logic.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/CRISPRO_REPO_ARCHITECTURE_REPORT.md",
+          "exists": true,
+          "bytes": 17877,
+          "sha256": "bf6652186c947189a5e9905bbf700b7d561efd5079c8d012f498623e5b0322e0",
+          "mtime_iso": "2026-05-05T06:14:00+00:00"
+        },
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.1–3.4"
+        }
+      ],
+      "cross_refs": [
+        "repo:crispro-backend-v3"
+      ],
+      "gaps_still_open": [],
+      "_stream": "architecture"
+    },
+    {
+      "id": "component:ayesha_bundle_waterfall",
+      "type": "pipeline_component",
+      "name": "Ayesha bundle backend waterfall (7 stages)",
+      "what_it_solves": "Composes an end-to-end therapy-fit bundle for the front-end by chaining safety, efficacy, IO, trials, SOC, biomarker services.",
+      "how_it_solves": "Sequential waterfall: each stage reads the accumulated bundle, gates on prior outputs (e.g. PGx safety before IO recommendation), and appends its own typed subsection.",
+      "why_it_exists": "Removes duplicated cross-service logic from Layer 4 routes and centralises the ordering rules (safety-before-efficacy, mechanism-before-trial-match) that CRISPRO_HARDENING_AUDIT flagged as leaky in v2.",
+      "attributes": {
+        "stages_in_order": [
+          "WIWFM drug efficacy service",
+          "PGx safety gate integration",
+          "IO selection",
+          "SAE mechanism vector extraction",
+          "Trials service",
+          "SOC service",
+          "CA-125 service"
+        ]
+      },
+      "verbatim_evidence": [
+        {
+          "quote": "WIWFM",
+          "file": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+          "line": 34,
+          "found": true
+        },
+        {
+          "quote": "PGx",
+          "file": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+          "line": 35,
+          "found": true
+        },
+        {
+          "quote": "SAE",
+          "file": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+          "line": 37,
+          "found": true
+        }
+      ],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/CRISPRO_HARDENING_AUDIT.md",
+          "exists": true,
+          "bytes": 19314,
+          "sha256": "4c29bc6cecf7bcc6ba7a1232e3fa3a19d50c02bc1a065ea95f1bafc6f1a9c326",
+          "mtime_iso": "2026-05-05T06:24:21+00:00"
+        }
+      ],
+      "cross_refs": [
+        "layer:output",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "architecture"
+    },
+    {
+      "id": "component:frontend_canonicalization",
+      "type": "frontend_component",
+      "name": "SL frontend canonicalization + Ayesha page merge",
+      "what_it_solves": "Merges duplicated SL/Ayesha pages into a single canonical view backed by typed engine output; removes call-path duplicates.",
+      "how_it_solves": "Enumerated in SL_FRONTEND_CANONICALIZATION.md, AYESHA_PAGE_MERGE_REPORT.md, CALL_PATH_DEDUP_REPORT.md, CONFIG_NORMALIZATION_REPORT.md, HYGIENE_DELETE_PROOF.md — each report lists deleted files with reasons.",
+      "why_it_exists": "Prior clinician UI had drifted copies of the SL flow; a single canonical page consumes the Ayesha bundle contract directly.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/SL_FRONTEND_CANONICALIZATION.md",
+          "exists": true,
+          "bytes": 2195,
+          "sha256": "24c2c4ddaaa99557ee18e4ded3803d4dff35bf20fb16480fcefbe3658230a098",
+          "mtime_iso": "2026-05-05T07:04:43+00:00"
+        },
+        {
+          "path": "/mnt/results/AYESHA_PAGE_MERGE_REPORT.md",
+          "exists": true,
+          "bytes": 3844,
+          "sha256": "548e39ad9cda1c24fc5de8d047255a9da4096d7436ba78a445831a786bfc448f",
+          "mtime_iso": "2026-05-05T07:04:41+00:00"
+        },
+        {
+          "path": "/mnt/results/CALL_PATH_DEDUP_REPORT.md",
+          "exists": true,
+          "bytes": 1938,
+          "sha256": "9c11c6709af9e07b862809842b719640b034a049eddf27d7df718467e67219f2",
+          "mtime_iso": "2026-05-05T07:04:42+00:00"
+        },
+        {
+          "path": "/mnt/results/CONFIG_NORMALIZATION_REPORT.md",
+          "exists": true,
+          "bytes": 3342,
+          "sha256": "d068e515e4d22a53cc02f440946021fc7fdea1cc9f76914d06f42f4e1a0584f7",
+          "mtime_iso": "2026-05-05T07:04:43+00:00"
+        },
+        {
+          "path": "/mnt/results/HYGIENE_DELETE_PROOF.md",
+          "exists": true,
+          "bytes": 2502,
+          "sha256": "ed17f55f8fa1bcbb522f6aacbb089c4562339a994ae85413d20b41e162e3ad11",
+          "mtime_iso": "2026-05-05T07:04:40+00:00"
+        }
+      ],
+      "cross_refs": [
+        "repo:crispro-front-end",
+        "layer:output"
+      ],
+      "gaps_still_open": [],
+      "_stream": "architecture"
+    }
+  ],
+  "gaps_still_open_stream_level": [
+    "HANDOFF_integration_agent.md is uploaded but the CrisPRO-specific integration handoff to Ayesha bundle is not yet re-audited against v3 endpoints.",
+    "Lineage Dependency Engine (Layer 1) is PLANNED only — no code path exists in crispro-backend-v3 as of the roadmap snapshot."
+  ],
+  "cross_stream_refs": [
+    "See stream_sl.json for engine internals (contracts, fuser, RS promotion).",
+    "See stream_moat.json for governance/invariants that constrain layer boundaries."
+  ]
+}

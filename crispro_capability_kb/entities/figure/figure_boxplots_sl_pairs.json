@@ -1,0 +1,24 @@
+{
+  "id": "figure:boxplots_sl_pairs",
+  "type": "figure",
+  "name": "Boxplots: SL pairs",
+  "what_it_solves": "Boxplot visualisation of SL gene-pair dependency distributions.",
+  "how_it_solves": "One box per SL pair, capturing effect distribution across the pan-cancer lineage.",
+  "why_it_exists": "Effect-size sanity check across all SL pairs — flags outlier pairs for follow-up.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/boxplots_sl_pairs.png",
+      "exists": true,
+      "bytes": 130787,
+      "sha256": "6ba16b091936d58700e9005cf0433c17a7ba0303758aaa27a173c86c9a68d3c2",
+      "mtime_iso": "2026-04-13T03:55:45+00:00"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "operations_and_access"
+}

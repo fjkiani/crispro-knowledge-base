@@ -1,0 +1,26 @@
+{
+  "id": "figure:heatmap_ovarian_sl_genes",
+  "type": "figure",
+  "name": "Heatmap: ovarian SL genes",
+  "what_it_solves": "Heatmap visualising SL gene profile across the ovarian cohort.",
+  "how_it_solves": "Rendered from DepMap + TCGA-OV data; complements the A3/A7 analyses in the MBD4/ATR bundle.",
+  "why_it_exists": "Fast-look visualisation for the ovarian seed cancer — used in slide decks and manuscript figures.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/heatmap_ovarian_sl_genes.png",
+      "exists": true,
+      "bytes": 220207,
+      "sha256": "2bbeda48b7638da636f065e97dfe6f2aed29aee54d5400ea83e8d7c07214bcd8",
+      "mtime_iso": "2026-04-13T03:54:31+00:00"
+    }
+  ],
+  "cross_refs": [
+    "evidence:a3",
+    "evidence:a7",
+    "cancer:ovarian"
+  ],
+  "gaps_still_open": [],
+  "_stream": "operations_and_access"
+}

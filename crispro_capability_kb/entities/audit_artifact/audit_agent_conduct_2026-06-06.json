@@ -1,0 +1,26 @@
+{
+  "id": "audit:agent_conduct_2026-06-06",
+  "type": "audit_artifact",
+  "name": "Agent conduct audit 2026-06-06",
+  "what_it_solves": "External audit of the SL API's conduct against the invariants (RUO stamping, tier assignments, promotion source tags).",
+  "how_it_solves": "See agent_conduct_audit_2026-06-06.json for structured pass/fail per invariant.",
+  "why_it_exists": "Independent confirmation that the code path enforces the roadmap invariants at request time (not just in unit tests).",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/agent_conduct_audit_2026-06-06.json",
+      "exists": true,
+      "bytes": 8172,
+      "sha256": "8bffe08a4caf18921ea40c9c03dbf18b26e2326d8ea6e572874182d136c49792",
+      "mtime_iso": "2026-06-06T07:41:59+00:00"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality",
+    "invariant:ruo_middleware",
+    "invariant:audit_trail"
+  ],
+  "gaps_still_open": [],
+  "_stream": "synthetic_lethality"
+}

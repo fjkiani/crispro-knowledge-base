@@ -1,0 +1,39 @@
+{
+  "id": "evidence:a4",
+  "type": "evidence_analysis",
+  "name": "MBD4/ATR analysis A4 — Pan-cancer MBD4-LOF frequency",
+  "what_it_solves": "Analysis 'A4' contributing modality evidence to the MBD4/ATR-WEE1 receipt.",
+  "how_it_solves": "Descriptive frequency of MBD4-LOF across TCGA tumor types.",
+  "why_it_exists": "Establishes the addressable population size — critical for later 'can we ever power a clinical trial?' question.",
+  "attributes": {
+    "files": [
+      "A4_pancancer_mbd4_lof_frequency.png",
+      "A4_pancancer_mbd4_lof_results.csv"
+    ],
+    "file_count": 2
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A4_pancancer_mbd4_lof_frequency.png",
+      "exists": true,
+      "bytes": 97676,
+      "sha256": "780bc2244092fd0dcf4874b1b06c15ce4427293f3f66e369c1ec80150e1a9cf6",
+      "mtime_iso": "2026-04-25T07:28:58+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/A4_pancancer_mbd4_lof_results.csv",
+      "exists": true,
+      "bytes": 1784,
+      "sha256": "1ca4675419054d2918ceb48f83f4606dd1a65c99baaf975a9e8f38e82d1805ab",
+      "mtime_iso": "2026-04-25T07:29:37+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2",
+    "axis:ATR_WEE1",
+    "framework:rs"
+  ],
+  "gaps_still_open": [],
+  "_stream": "evidence_and_receipts"
+}

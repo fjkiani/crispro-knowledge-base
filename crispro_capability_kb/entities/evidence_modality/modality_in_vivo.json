@@ -1,0 +1,28 @@
+{
+  "id": "modality:in_vivo",
+  "type": "evidence_modality",
+  "name": "in_vivo",
+  "what_it_solves": "Evidence modality 'in_vivo' consumed by the multimodal fuser.",
+  "how_it_solves": "Contributes weight 3 to the fused score. Positive/negative/null verdicts are aggregated with signed contributions.",
+  "why_it_exists": "Weights are hard-coded to reflect scientific hierarchy — clinical evidence dominates cell-line signals; CRISPR + expression are supporting only.",
+  "attributes": {
+    "weight": 3
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "Ch 3.4 — modality_fuser MODALITY_WEIGHTS"
+    }
+  ],
+  "cross_refs": [
+    "component:modality_fuser",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "synthetic_lethality"
+}

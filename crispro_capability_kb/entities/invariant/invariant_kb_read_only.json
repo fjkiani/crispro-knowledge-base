@@ -1,0 +1,27 @@
+{
+  "id": "invariant:kb_read_only",
+  "type": "invariant",
+  "name": "KB read-only direction",
+  "what_it_solves": "Non-negotiable engine rule: 'KB read-only direction'",
+  "how_it_solves": "Engines have read handles into the KB; write access is confined to admin ingestion scripts, not the API pipeline.",
+  "why_it_exists": "Blocks accidental production writes from a live case resolution.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "Ch 3.5–3.7 — 8 Sprint 4S invariants"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality",
+    "component:tier_promotion",
+    "component:modality_fuser"
+  ],
+  "gaps_still_open": [],
+  "_stream": "synthetic_lethality"
+}

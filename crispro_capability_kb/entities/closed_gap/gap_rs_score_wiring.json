@@ -1,0 +1,28 @@
+{
+  "id": "gap:rs_score_wiring",
+  "type": "closed_gap",
+  "name": "RS score wiring",
+  "what_it_solves": "Sprint 4S closed gap: RS score wiring",
+  "how_it_solves": "RSFeatureSet fully wired into apply_rs_promotion; RS_score becomes a first-class field on CaseResolution.",
+  "why_it_exists": "Prior sprints shipped the SL engine without these hardening rules; Sprint 4S closed the identified holes.",
+  "attributes": {
+    "closure_commit": "474b812",
+    "sprint": "4S"
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "Ch 3.5 — Sprint 4S closed gaps at commit 474b812"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "synthetic_lethality"
+}

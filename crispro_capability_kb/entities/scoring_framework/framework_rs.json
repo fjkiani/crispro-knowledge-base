@@ -1,0 +1,52 @@
+{
+  "id": "framework:rs",
+  "type": "scoring_framework",
+  "name": "Replication Stress (RS) Framework",
+  "what_it_solves": "Composite RS_score built from 6 binary features that classifies a tumor as RS_high / RS_med / RS_low.",
+  "how_it_solves": "rs_score = sum(feature_weight if feature else 0). Bands: high ≥ 0.40, medium ≥ 0.20, low < 0.20. RS_high tumors are eligible for rs_promotion on RS-sensitive axes.",
+  "why_it_exists": "Encodes 'this tumor has enough replication stress to make checkpoint inhibition rational' as a first-class, per-patient feature — instead of scattering CCNE1/MYC/TP53 checks across engines.",
+  "attributes": {
+    "feature_weights": {
+      "CCNE1_amplified": 0.3,
+      "ARID1A_LOF": 0.2,
+      "MYC_amplified": 0.2,
+      "MSI_H": 0.15,
+      "TP53_LOF": 0.1,
+      "MBD4_LOF": 0.05
+    },
+    "band_thresholds": {
+      "high_gte": 0.4,
+      "medium_gte": 0.2
+    }
+  },
+  "verbatim_evidence": [
+    {
+      "quote": "CCNE1_amplified",
+      "file": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "line": 236,
+      "found": true
+    },
+    {
+      "quote": "MBD4_LOF",
+      "file": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "line": 256,
+      "found": true
+    }
+  ],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00",
+      "span_extracted": "Ch 1.5 — RSFeatureSet + weights"
+    }
+  ],
+  "cross_refs": [
+    "contract:RSFeatureSet",
+    "component:tier_promotion"
+  ],
+  "gaps_still_open": [],
+  "_stream": "synthetic_lethality"
+}

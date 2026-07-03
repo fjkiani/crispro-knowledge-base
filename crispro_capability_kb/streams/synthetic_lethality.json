@@ -1,0 +1,1579 @@
+{
+  "stream_id": "synthetic_lethality",
+  "stream_name": "Synthetic Lethality Engine — contracts, fuser, tiers, RS, invariants",
+  "generated_at_utc": "2026-07-03T21:05:24.183853+00:00",
+  "files_audited": [
+    {
+      "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+      "exists": true,
+      "bytes": 89616,
+      "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+      "mtime_iso": "2026-04-13T20:06:12+00:00"
+    },
+    {
+      "path": "/mnt/results/GAP_EXPLOIT_PROMPTS.md",
+      "exists": true,
+      "bytes": 46907,
+      "sha256": "403d5d45dc3b5d3adddc64bad3ea3a41308eeee8b7b3510bad37e7a9179b0bac",
+      "mtime_iso": "2026-04-13T18:19:14+00:00"
+    },
+    {
+      "path": "/mnt/results/HANDOFF_GAP_EXPLOIT_PROMPTS.md",
+      "exists": true,
+      "bytes": 30095,
+      "sha256": "32a9912fcdebb47e55731de882d22b8ad972fb0031ad2dc73698492cf6e0f9d5",
+      "mtime_iso": "2026-04-13T17:33:23+00:00"
+    },
+    {
+      "path": "/mnt/results/gap_exploit_api_verification.json",
+      "exists": true,
+      "bytes": 12830,
+      "sha256": "12dc137fe7bf894884a70907c2c437541613938e5385aaf92f8a77d5fad00fac",
+      "mtime_iso": "2026-06-05T16:37:32+00:00"
+    },
+    {
+      "path": "/mnt/results/agent_conduct_audit_2026-06-06.json",
+      "exists": true,
+      "bytes": 8172,
+      "sha256": "8bffe08a4caf18921ea40c9c03dbf18b26e2326d8ea6e572874182d136c49792",
+      "mtime_iso": "2026-06-06T07:41:59+00:00"
+    },
+    {
+      "path": "/mnt/results/crispro_sl_audit_findings.json",
+      "exists": true,
+      "bytes": 39934,
+      "sha256": "d088aa94b3035f814464f51aeaf5bec53c16d70b2dd1fd23e408ca111b6a32ad",
+      "mtime_iso": "2026-06-06T18:03:53+00:00"
+    },
+    {
+      "path": "/mnt/results/agent_full_audit_all_commits_v2.json",
+      "exists": true,
+      "bytes": 25754,
+      "sha256": "78167e9a931458bc0130da6ee2519ec2d779a410634e46f221e303e96f612e18",
+      "mtime_iso": "2026-06-06T08:46:53+00:00"
+    },
+    {
+      "path": "/mnt/results/FLAG_REMEDIATION_MEMO.md",
+      "exists": true,
+      "bytes": 9799,
+      "sha256": "b4ed865261e35d1a8ed3e6f2cc63220b7332bdb1ead859823547aa8cd6ce7c10",
+      "mtime_iso": "2026-06-05T19:47:35+00:00"
+    }
+  ],
+  "audit_method": {
+    "primary_anchor": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+    "extraction": "verbatim needle lookup (find_verbatim) for every high-stakes claim; every entity's source_receipts includes sha256 for downstream re-verification.",
+    "verbatim_policy": "verbatim_evidence[].found=false ⇒ the literal string is not in the current file (roadmap drift or version skew); NOT counted as evidence."
+  },
+  "entities": [
+    {
+      "id": "contract:PatientState",
+      "type": "contract_model",
+      "name": "PatientState",
+      "what_it_solves": "Layer-0 Pydantic/dataclass contract carried by every engine boundary that references PatientState.",
+      "how_it_solves": "Fields (canonical set): ['somatic_mutations', 'germline_variants', 'tumor_type', 'biomarkers', 'prior_therapies']. See CRISPRO_SL_PHD_ROADMAP.txt Ch 3.2 for the exact schema.",
+      "why_it_exists": "Single source of truth for patient input. Everything downstream reads from PatientState so no engine forages raw EHR fields.",
+      "attributes": {
+        "fields": [
+          "somatic_mutations",
+          "germline_variants",
+          "tumor_type",
+          "biomarkers",
+          "prior_therapies"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.2 — Contract Models"
+        }
+      ],
+      "cross_refs": [
+        "layer:contracts",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "contract:SomaticMutation",
+      "type": "contract_model",
+      "name": "SomaticMutation",
+      "what_it_solves": "Layer-0 Pydantic/dataclass contract carried by every engine boundary that references SomaticMutation.",
+      "how_it_solves": "Fields (canonical set): ['gene', 'hgvs_p', 'consequence', 'allele_frequency', 'zygosity']. See CRISPRO_SL_PHD_ROADMAP.txt Ch 3.2 for the exact schema.",
+      "why_it_exists": "Typed representation prevents an engine from silently accepting free-text mutation notes.",
+      "attributes": {
+        "fields": [
+          "gene",
+          "hgvs_p",
+          "consequence",
+          "allele_frequency",
+          "zygosity"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.2 — Contract Models"
+        }
+      ],
+      "cross_refs": [
+        "layer:contracts",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "contract:CaseResolution",
+      "type": "contract_model",
+      "name": "CaseResolution",
+      "what_it_solves": "Layer-0 Pydantic/dataclass contract carried by every engine boundary that references CaseResolution.",
+      "how_it_solves": "Fields (canonical set): ['patient_state', 'axis_results', 'ranked_interventions', 'audit_trail', 'ruo', 'disclaimer']. See CRISPRO_SL_PHD_ROADMAP.txt Ch 3.2 for the exact schema.",
+      "why_it_exists": "Immutable snapshot returned by the orchestrator; every response carries the audit trail and RUO flag.",
+      "attributes": {
+        "fields": [
+          "patient_state",
+          "axis_results",
+          "ranked_interventions",
+          "audit_trail",
+          "ruo",
+          "disclaimer"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.2 — Contract Models"
+        }
+      ],
+      "cross_refs": [
+        "layer:contracts",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "contract:RankedIntervention",
+      "type": "contract_model",
+      "name": "RankedIntervention",
+      "what_it_solves": "Layer-0 Pydantic/dataclass contract carried by every engine boundary that references RankedIntervention.",
+      "how_it_solves": "Fields (canonical set): ['axis', 'tier', 'score', 'modality_evidence', 'promotion_source', 'confidence_notes']. See CRISPRO_SL_PHD_ROADMAP.txt Ch 3.2 for the exact schema.",
+      "why_it_exists": "Per-axis ranked output with tier assignment plus provenance for how the tier was reached.",
+      "attributes": {
+        "fields": [
+          "axis",
+          "tier",
+          "score",
+          "modality_evidence",
+          "promotion_source",
+          "confidence_notes"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.2 — Contract Models"
+        }
+      ],
+      "cross_refs": [
+        "layer:contracts",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "contract:RSFeatureSet",
+      "type": "contract_model",
+      "name": "RSFeatureSet",
+      "what_it_solves": "Layer-0 Pydantic/dataclass contract carried by every engine boundary that references RSFeatureSet.",
+      "how_it_solves": "Fields (canonical set): ['CCNE1_amplified', 'ARID1A_LOF', 'MYC_amplified', 'MSI_H', 'TP53_LOF', 'MBD4_LOF', 'rs_score', 'rs_class']. See CRISPRO_SL_PHD_ROADMAP.txt Ch 3.2 for the exact schema.",
+      "why_it_exists": "6 binary features + composite RS score; single point of truth for replication-stress phenotyping.",
+      "attributes": {
+        "fields": [
+          "CCNE1_amplified",
+          "ARID1A_LOF",
+          "MYC_amplified",
+          "MSI_H",
+          "TP53_LOF",
+          "MBD4_LOF",
+          "rs_score",
+          "rs_class"
+        ]
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.2 — Contract Models"
+        }
+      ],
+      "cross_refs": [
+        "layer:contracts",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "engine:synthetic_lethality",
+      "type": "engine",
+      "name": "Synthetic Lethality Engine",
+      "what_it_solves": "Given a PatientState, evaluates each of 8 CandidateAxis dependencies and returns tier-assigned, evidence-fused RankedIntervention list.",
+      "how_it_solves": "Sub-modules: core/ (axis dispatch + tier logic), multimodal/ (7-modality fuser), kb/ (curated evidence loaded read-only), audit/ (AuditEntry per tier assignment), api/ (thin HTTP surface). Called from the Orchestrator at Phase 3.5.",
+      "why_it_exists": "Every axis dependency previously had scattered, ad-hoc logic; the engine consolidates fusion + tiering + provenance in one testable module with strict boundaries.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.1–3.5 — SL engine architecture"
+        }
+      ],
+      "cross_refs": [
+        "layer:engines",
+        "layer:orchestrator",
+        "contract:PatientState",
+        "contract:CaseResolution",
+        "component:modality_fuser",
+        "framework:rs"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "component:orchestrator",
+      "type": "orchestrator",
+      "name": "Case Resolution Orchestrator (12-engine pipeline, SL is Phase 3.5)",
+      "what_it_solves": "Top-level pipeline that composes the 12 engines into a single CaseResolution.",
+      "how_it_solves": "`Orchestrator.resolve_case(patient_state) -> CaseResolution` sequences the engines; SL runs as Phase 3.5 after upstream biomarker + mechanism engines have populated the state.",
+      "why_it_exists": "Single choke-point for cross-cutting concerns: audit trail, RUO middleware, tier clamps, POLE guard, underpowered guard.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3 — Orchestrator"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "layer:orchestrator"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "axis:PARP_INHIBITORS",
+      "type": "candidate_axis",
+      "name": "PARP_INHIBITORS",
+      "what_it_solves": "CandidateAxis enum member — evaluated per-patient by the SL engine.",
+      "how_it_solves": "Fed through modality_fuser + tier_assign; if is_rs_sensitive=True and RS score ≥ 0.40, apply_rs_promotion() may lift MECHANISTIC→STRONG when independent evidence exists.",
+      "why_it_exists": "HRD-context targets; not RS-sensitive by roadmap definition.",
+      "attributes": {
+        "exemplar_drugs": [
+          "Olaparib",
+          "Niraparib",
+          "Rucaparib",
+          "Talazoparib"
+        ],
+        "is_rs_sensitive": false
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 1.2 — CandidateAxis enum"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "framework:rs",
+        "component:tier_promotion"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "axis:CYTIDINE_ANALOGS",
+      "type": "candidate_axis",
+      "name": "CYTIDINE_ANALOGS",
+      "what_it_solves": "CandidateAxis enum member — evaluated per-patient by the SL engine.",
+      "how_it_solves": "Fed through modality_fuser + tier_assign; if is_rs_sensitive=True and RS score ≥ 0.40, apply_rs_promotion() may lift MECHANISTIC→STRONG when independent evidence exists.",
+      "why_it_exists": "MBD4 x cytidine analog axis — VALIDATED tier per roadmap for ovarian context.",
+      "attributes": {
+        "exemplar_drugs": [
+          "Gemcitabine",
+          "Decitabine",
+          "Azacitidine"
+        ],
+        "is_rs_sensitive": false
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 1.2 — CandidateAxis enum"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "framework:rs",
+        "component:tier_promotion"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "axis:ATR_WEE1",
+      "type": "candidate_axis",
+      "name": "ATR_WEE1",
+      "what_it_solves": "CandidateAxis enum member — evaluated per-patient by the SL engine.",
+      "how_it_solves": "Fed through modality_fuser + tier_assign; if is_rs_sensitive=True and RS score ≥ 0.40, apply_rs_promotion() may lift MECHANISTIC→STRONG when independent evidence exists.",
+      "why_it_exists": "Replication-stress checkpoint; canonical RS-sensitive axis.",
+      "attributes": {
+        "exemplar_drugs": [
+          "Berzosertib",
+          "Ceralasertib",
+          "Adavosertib"
+        ],
+        "is_rs_sensitive": true
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 1.2 — CandidateAxis enum"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "framework:rs",
+        "component:tier_promotion"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "axis:CCNE1_AMP",
+      "type": "candidate_axis",
+      "name": "CCNE1_AMP",
+      "what_it_solves": "CandidateAxis enum member — evaluated per-patient by the SL engine.",
+      "how_it_solves": "Fed through modality_fuser + tier_assign; if is_rs_sensitive=True and RS score ≥ 0.40, apply_rs_promotion() may lift MECHANISTIC→STRONG when independent evidence exists.",
+      "why_it_exists": "CCNE1 amp → RS phenotype → checkpoint dependency.",
+      "attributes": {
+        "exemplar_drugs": [
+          "INX-315",
+          "PF-07104091"
+        ],
+        "is_rs_sensitive": true
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 1.2 — CandidateAxis enum"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "framework:rs",
+        "component:tier_promotion"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "axis:PKMYT1",
+      "type": "candidate_axis",
+      "name": "PKMYT1",
+      "what_it_solves": "CandidateAxis enum member — evaluated per-patient by the SL engine.",
+      "how_it_solves": "Fed through modality_fuser + tier_assign; if is_rs_sensitive=True and RS score ≥ 0.40, apply_rs_promotion() may lift MECHANISTIC→STRONG when independent evidence exists.",
+      "why_it_exists": "Wee1-related mitotic checkpoint dependency.",
+      "attributes": {
+        "exemplar_drugs": [
+          "RP-6306"
+        ],
+        "is_rs_sensitive": true
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 1.2 — CandidateAxis enum"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "framework:rs",
+        "component:tier_promotion"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "axis:TP53_REPLICATION_STRESS",
+      "type": "candidate_axis",
+      "name": "TP53_REPLICATION_STRESS",
+      "what_it_solves": "CandidateAxis enum member — evaluated per-patient by the SL engine.",
+      "how_it_solves": "Fed through modality_fuser + tier_assign; if is_rs_sensitive=True and RS score ≥ 0.40, apply_rs_promotion() may lift MECHANISTIC→STRONG when independent evidence exists.",
+      "why_it_exists": "TP53-LOF driven RS.",
+      "attributes": {
+        "exemplar_drugs": [
+          "various checkpoint inhibitors"
+        ],
+        "is_rs_sensitive": true
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 1.2 — CandidateAxis enum"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "framework:rs",
+        "component:tier_promotion"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "axis:WRN",
+      "type": "candidate_axis",
+      "name": "WRN",
+      "what_it_solves": "CandidateAxis enum member — evaluated per-patient by the SL engine.",
+      "how_it_solves": "Fed through modality_fuser + tier_assign; if is_rs_sensitive=True and RS score ≥ 0.40, apply_rs_promotion() may lift MECHANISTIC→STRONG when independent evidence exists.",
+      "why_it_exists": "MSI-H specific WRN dependency.",
+      "attributes": {
+        "exemplar_drugs": [
+          "VX-803",
+          "HRO-761"
+        ],
+        "is_rs_sensitive": false
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 1.2 — CandidateAxis enum"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "framework:rs",
+        "component:tier_promotion"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "axis:IMMUNOTHERAPY",
+      "type": "candidate_axis",
+      "name": "IMMUNOTHERAPY",
+      "what_it_solves": "CandidateAxis enum member — evaluated per-patient by the SL engine.",
+      "how_it_solves": "Fed through modality_fuser + tier_assign; if is_rs_sensitive=True and RS score ≥ 0.40, apply_rs_promotion() may lift MECHANISTIC→STRONG when independent evidence exists.",
+      "why_it_exists": "IO axis included for tier-fusion completeness; not RS-sensitive.",
+      "attributes": {
+        "exemplar_drugs": [
+          "Pembrolizumab",
+          "Nivolumab"
+        ],
+        "is_rs_sensitive": false
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 1.2 — CandidateAxis enum"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "framework:rs",
+        "component:tier_promotion"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "tier:VALIDATED",
+      "type": "evidence_tier",
+      "name": "VALIDATED",
+      "what_it_solves": "Tier 'VALIDATED' in the 4-level SL evidence hierarchy.",
+      "how_it_solves": "Never auto-assigned by the fuser; only reachable via source == 'frozen_receipt' (invariant #1).",
+      "why_it_exists": "Prevents the pipeline from claiming clinical-grade evidence without an explicit, human-owned frozen receipt.",
+      "attributes": {
+        "entry_criterion": "Highest tier. Score ≥ 10 AND clinical == POSITIVE."
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3 — Tier hierarchy + thresholds"
+        }
+      ],
+      "cross_refs": [
+        "component:modality_fuser",
+        "component:tier_promotion",
+        "invariant:validated_never_auto"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "tier:STRONG",
+      "type": "evidence_tier",
+      "name": "STRONG",
+      "what_it_solves": "Tier 'STRONG' in the 4-level SL evidence hierarchy.",
+      "how_it_solves": "Reachable by modality fuser OR by rs_promotion() when RS_high and independent evidence.",
+      "why_it_exists": "Threshold captures 'multiple independent lines of positive evidence' without demanding clinical readouts.",
+      "attributes": {
+        "entry_criterion": "Score ≥ 6 AND ≥ 2 distinct POSITIVE sources."
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3 — Tier hierarchy + thresholds"
+        }
+      ],
+      "cross_refs": [
+        "component:modality_fuser",
+        "component:tier_promotion",
+        "invariant:validated_never_auto"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "tier:MECHANISTIC",
+      "type": "evidence_tier",
+      "name": "MECHANISTIC",
+      "what_it_solves": "Tier 'MECHANISTIC' in the 4-level SL evidence hierarchy.",
+      "how_it_solves": "Default fallback when only mechanistic reasoning or a single low-weight modality supports the axis.",
+      "why_it_exists": "Explicitly under-claims: signals interest without pretending to have fusion power.",
+      "attributes": {
+        "entry_criterion": "Score > 0 OR mechanism field non-empty."
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3 — Tier hierarchy + thresholds"
+        }
+      ],
+      "cross_refs": [
+        "component:modality_fuser",
+        "component:tier_promotion",
+        "invariant:validated_never_auto"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "tier:NOT_SUPPORTED",
+      "type": "evidence_tier",
+      "name": "NOT_SUPPORTED / INSUFFICIENT",
+      "what_it_solves": "Tier 'NOT_SUPPORTED / INSUFFICIENT' in the 4-level SL evidence hierarchy.",
+      "how_it_solves": "Terminal 'refuse to recommend' state.",
+      "why_it_exists": "Failure closed: the SL engine returns absence-of-evidence explicitly rather than surfacing a low-confidence recommendation.",
+      "attributes": {
+        "entry_criterion": "Score == 0 AND mechanism field empty."
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3 — Tier hierarchy + thresholds"
+        }
+      ],
+      "cross_refs": [
+        "component:modality_fuser",
+        "component:tier_promotion",
+        "invariant:validated_never_auto"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "modality:clinical",
+      "type": "evidence_modality",
+      "name": "clinical",
+      "what_it_solves": "Evidence modality 'clinical' consumed by the multimodal fuser.",
+      "how_it_solves": "Contributes weight 4 to the fused score. Positive/negative/null verdicts are aggregated with signed contributions.",
+      "why_it_exists": "Weights are hard-coded to reflect scientific hierarchy — clinical evidence dominates cell-line signals; CRISPR + expression are supporting only.",
+      "attributes": {
+        "weight": 4
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.4 — modality_fuser MODALITY_WEIGHTS"
+        }
+      ],
+      "cross_refs": [
+        "component:modality_fuser",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "modality:in_vivo",
+      "type": "evidence_modality",
+      "name": "in_vivo",
+      "what_it_solves": "Evidence modality 'in_vivo' consumed by the multimodal fuser.",
+      "how_it_solves": "Contributes weight 3 to the fused score. Positive/negative/null verdicts are aggregated with signed contributions.",
+      "why_it_exists": "Weights are hard-coded to reflect scientific hierarchy — clinical evidence dominates cell-line signals; CRISPR + expression are supporting only.",
+      "attributes": {
+        "weight": 3
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.4 — modality_fuser MODALITY_WEIGHTS"
+        }
+      ],
+      "cross_refs": [
+        "component:modality_fuser",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "modality:in_vitro",
+      "type": "evidence_modality",
+      "name": "in_vitro",
+      "what_it_solves": "Evidence modality 'in_vitro' consumed by the multimodal fuser.",
+      "how_it_solves": "Contributes weight 2 to the fused score. Positive/negative/null verdicts are aggregated with signed contributions.",
+      "why_it_exists": "Weights are hard-coded to reflect scientific hierarchy — clinical evidence dominates cell-line signals; CRISPR + expression are supporting only.",
+      "attributes": {
+        "weight": 2
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.4 — modality_fuser MODALITY_WEIGHTS"
+        }
+      ],
+      "cross_refs": [
+        "component:modality_fuser",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "modality:prism",
+      "type": "evidence_modality",
+      "name": "prism",
+      "what_it_solves": "Evidence modality 'prism' consumed by the multimodal fuser.",
+      "how_it_solves": "Contributes weight 2 to the fused score. Positive/negative/null verdicts are aggregated with signed contributions.",
+      "why_it_exists": "Weights are hard-coded to reflect scientific hierarchy — clinical evidence dominates cell-line signals; CRISPR + expression are supporting only.",
+      "attributes": {
+        "weight": 2
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.4 — modality_fuser MODALITY_WEIGHTS"
+        }
+      ],
+      "cross_refs": [
+        "component:modality_fuser",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "modality:gdsc",
+      "type": "evidence_modality",
+      "name": "gdsc",
+      "what_it_solves": "Evidence modality 'gdsc' consumed by the multimodal fuser.",
+      "how_it_solves": "Contributes weight 2 to the fused score. Positive/negative/null verdicts are aggregated with signed contributions.",
+      "why_it_exists": "Weights are hard-coded to reflect scientific hierarchy — clinical evidence dominates cell-line signals; CRISPR + expression are supporting only.",
+      "attributes": {
+        "weight": 2
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.4 — modality_fuser MODALITY_WEIGHTS"
+        }
+      ],
+      "cross_refs": [
+        "component:modality_fuser",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "modality:expression",
+      "type": "evidence_modality",
+      "name": "expression",
+      "what_it_solves": "Evidence modality 'expression' consumed by the multimodal fuser.",
+      "how_it_solves": "Contributes weight 1 to the fused score. Positive/negative/null verdicts are aggregated with signed contributions.",
+      "why_it_exists": "Weights are hard-coded to reflect scientific hierarchy — clinical evidence dominates cell-line signals; CRISPR + expression are supporting only.",
+      "attributes": {
+        "weight": 1
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.4 — modality_fuser MODALITY_WEIGHTS"
+        }
+      ],
+      "cross_refs": [
+        "component:modality_fuser",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "modality:crispr",
+      "type": "evidence_modality",
+      "name": "crispr",
+      "what_it_solves": "Evidence modality 'crispr' consumed by the multimodal fuser.",
+      "how_it_solves": "Contributes weight 1 to the fused score. Positive/negative/null verdicts are aggregated with signed contributions.",
+      "why_it_exists": "Weights are hard-coded to reflect scientific hierarchy — clinical evidence dominates cell-line signals; CRISPR + expression are supporting only.",
+      "attributes": {
+        "weight": 1
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.4 — modality_fuser MODALITY_WEIGHTS"
+        }
+      ],
+      "cross_refs": [
+        "component:modality_fuser",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "component:modality_fuser",
+      "type": "engine_component",
+      "name": "Multimodal Fuser",
+      "what_it_solves": "Computes the fused evidence score per (patient, axis) that the tier logic consumes.",
+      "how_it_solves": "Sums signed weight contributions across 7 modalities. Positive verdict → +weight, negative → -weight, null → 0. Distinct positive sources are counted for the STRONG threshold (≥ 2 distinct positives).",
+      "why_it_exists": "Encodes 'scientific hierarchy' explicitly: a positive clinical signal outweighs three positive CRISPR hits; cell-line data cannot override clinical.",
+      "attributes": {
+        "modality_weights": {
+          "clinical": 4,
+          "in_vivo": 3,
+          "in_vitro": 2,
+          "prism": 2,
+          "gdsc": 2,
+          "expression": 1,
+          "crispr": 1
+        },
+        "modalities": [
+          "clinical",
+          "in_vivo",
+          "in_vitro",
+          "prism",
+          "gdsc",
+          "expression",
+          "crispr"
+        ]
+      },
+      "verbatim_evidence": [
+        {
+          "quote": "\"clinical\": 4",
+          "file": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "line": 765,
+          "found": true
+        },
+        {
+          "quote": "\"in_vivo\": 3",
+          "file": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "line": 766,
+          "found": true
+        },
+        {
+          "quote": "\"expression\": 1",
+          "file": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "line": 770,
+          "found": true
+        }
+      ],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.4 — modality_fuser code block"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "tier:STRONG",
+        "tier:VALIDATED"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "framework:rs",
+      "type": "scoring_framework",
+      "name": "Replication Stress (RS) Framework",
+      "what_it_solves": "Composite RS_score built from 6 binary features that classifies a tumor as RS_high / RS_med / RS_low.",
+      "how_it_solves": "rs_score = sum(feature_weight if feature else 0). Bands: high ≥ 0.40, medium ≥ 0.20, low < 0.20. RS_high tumors are eligible for rs_promotion on RS-sensitive axes.",
+      "why_it_exists": "Encodes 'this tumor has enough replication stress to make checkpoint inhibition rational' as a first-class, per-patient feature — instead of scattering CCNE1/MYC/TP53 checks across engines.",
+      "attributes": {
+        "feature_weights": {
+          "CCNE1_amplified": 0.3,
+          "ARID1A_LOF": 0.2,
+          "MYC_amplified": 0.2,
+          "MSI_H": 0.15,
+          "TP53_LOF": 0.1,
+          "MBD4_LOF": 0.05
+        },
+        "band_thresholds": {
+          "high_gte": 0.4,
+          "medium_gte": 0.2
+        }
+      },
+      "verbatim_evidence": [
+        {
+          "quote": "CCNE1_amplified",
+          "file": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "line": 236,
+          "found": true
+        },
+        {
+          "quote": "MBD4_LOF",
+          "file": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "line": 256,
+          "found": true
+        }
+      ],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 1.5 — RSFeatureSet + weights"
+        }
+      ],
+      "cross_refs": [
+        "contract:RSFeatureSet",
+        "component:tier_promotion"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "component:tier_promotion",
+      "type": "engine_component",
+      "name": "RS-based Tier Promotion",
+      "what_it_solves": "Lifts MECHANISTIC axis results to STRONG when the tumor is RS_high AND the axis is RS-sensitive AND independent evidence exists.",
+      "how_it_solves": "See attributes.code_verbatim — canonical function from CRISPRO_SL_PHD_ROADMAP Ch 3 with explicit early-exits at every guard.",
+      "why_it_exists": "Encodes the domain claim 'in a high-replication-stress background, a mechanistic hint on an RS-sensitive checkpoint is worth more'. Guards prevent it from over-writing VALIDATED / STRONG or from firing on non-RS axes.",
+      "attributes": {
+        "code_verbatim": "def apply_rs_promotion(axis_result, rs_features, rs_score):\n    if rs_score < 0.40:\n        return axis_result\n    if not axis_result.is_rs_sensitive:\n        return axis_result\n    if axis_result.tier == \"VALIDATED\":\n        return axis_result\n    if axis_result.tier == \"STRONG\":\n        return axis_result\n    if has_independent_evidence(axis_result):\n        axis_result.tier = \"STRONG\"\n        axis_result.promotion_source = \"rs_promotion\"\n    return axis_result\n",
+        "guards": [
+          "rs_score >= 0.40",
+          "axis_result.is_rs_sensitive",
+          "current tier != VALIDATED",
+          "current tier != STRONG",
+          "has_independent_evidence(axis_result) is truthy"
+        ],
+        "promotion_source_tag": "rs_promotion"
+      },
+      "verbatim_evidence": [
+        {
+          "quote": "apply_rs_promotion",
+          "file": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "line": 783,
+          "found": true
+        },
+        {
+          "quote": "rs_promotion",
+          "file": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "line": 284,
+          "found": true
+        }
+      ],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3 — apply_rs_promotion function block"
+        }
+      ],
+      "cross_refs": [
+        "framework:rs",
+        "tier:STRONG",
+        "tier:MECHANISTIC"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "invariant:validated_never_auto",
+      "type": "invariant",
+      "name": "VALIDATED never auto-assigned",
+      "what_it_solves": "Non-negotiable engine rule: 'VALIDATED never auto-assigned'",
+      "how_it_solves": "Fuser code refuses to output tier=VALIDATED. Only source == 'frozen_receipt' assignments can reach VALIDATED.",
+      "why_it_exists": "Blocks the pipeline from ever claiming clinical-grade evidence without a signed frozen receipt.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.5–3.7 — 8 Sprint 4S invariants"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "component:tier_promotion",
+        "component:modality_fuser"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "invariant:tier_clamp_no_clinical",
+      "type": "invariant",
+      "name": "Tier clamp: max STRONG without clinical POSITIVE",
+      "what_it_solves": "Non-negotiable engine rule: 'Tier clamp: max STRONG without clinical POSITIVE'",
+      "how_it_solves": "Post-fuser clamp: if no modality with weight==4 (clinical) returned POSITIVE, final tier is capped at STRONG.",
+      "why_it_exists": "Prevents 'STRONG cell-line + STRONG in-vivo → VALIDATED' short-circuits.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.5–3.7 — 8 Sprint 4S invariants"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "component:tier_promotion",
+        "component:modality_fuser"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "invariant:receipt_immutability",
+      "type": "invariant",
+      "name": "Receipt immutability (deepcopy on read)",
+      "what_it_solves": "Non-negotiable engine rule: 'Receipt immutability (deepcopy on read)'",
+      "how_it_solves": "All frozen-receipt reads deepcopy the KB row before returning to the caller.",
+      "why_it_exists": "Downstream mutation of a receipt can never propagate back into the KB or into other axes' results.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.5–3.7 — 8 Sprint 4S invariants"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "component:tier_promotion",
+        "component:modality_fuser"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "invariant:kb_read_only",
+      "type": "invariant",
+      "name": "KB read-only direction",
+      "what_it_solves": "Non-negotiable engine rule: 'KB read-only direction'",
+      "how_it_solves": "Engines have read handles into the KB; write access is confined to admin ingestion scripts, not the API pipeline.",
+      "why_it_exists": "Blocks accidental production writes from a live case resolution.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.5–3.7 — 8 Sprint 4S invariants"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "component:tier_promotion",
+        "component:modality_fuser"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "invariant:pole_guard",
+      "type": "invariant",
+      "name": "POLE guard (POLE hotspot → msi_h=False)",
+      "what_it_solves": "Non-negotiable engine rule: 'POLE guard (POLE hotspot → msi_h=False)'",
+      "how_it_solves": "If a canonical POLE hotspot mutation is detected in PatientState, RSFeatureSet.MSI_H is forced to False regardless of upstream flags.",
+      "why_it_exists": "POLE-mutant hypermutation has been misclassified as MSI-H in upstream tools; this guard prevents WRN axis being triggered on a POLE-only case.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.5–3.7 — 8 Sprint 4S invariants"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "component:tier_promotion",
+        "component:modality_fuser"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "invariant:ruo_middleware",
+      "type": "invariant",
+      "name": "RUO on all responses",
+      "what_it_solves": "Non-negotiable engine rule: 'RUO on all responses'",
+      "how_it_solves": "Every CaseResolution response is wrapped by RUO middleware: ruo=True + disclaimer='Research use only...'",
+      "why_it_exists": "Non-negotiable regulatory posture — no clinician-facing output ever ships without the RUO badge.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.5–3.7 — 8 Sprint 4S invariants"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "component:tier_promotion",
+        "component:modality_fuser"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "invariant:audit_trail",
+      "type": "invariant",
+      "name": "AuditEntry per tier assignment",
+      "what_it_solves": "Non-negotiable engine rule: 'AuditEntry per tier assignment'",
+      "how_it_solves": "Each RankedIntervention has an AuditEntry recording tier, source, promotion_source, and the exact modality contributions.",
+      "why_it_exists": "Full traceability: given a response, you can reconstruct why an axis got the tier it did.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.5–3.7 — 8 Sprint 4S invariants"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "component:tier_promotion",
+        "component:modality_fuser"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "invariant:underpowered_guard",
+      "type": "invariant",
+      "name": "Underpowered guard (n_mut < 15 → PromotionBlockedError)",
+      "what_it_solves": "Non-negotiable engine rule: 'Underpowered guard (n_mut < 15 → PromotionBlockedError)'",
+      "how_it_solves": "If the reference cohort for a promotion decision has n < 15, apply_rs_promotion raises PromotionBlockedError instead of promoting.",
+      "why_it_exists": "Stops the fuser from claiming 'STRONG (rs_promotion)' when the underlying cohort is statistically underpowered.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.5–3.7 — 8 Sprint 4S invariants"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "component:tier_promotion",
+        "component:modality_fuser"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "gap:mbd4_cytidine_tier_fix",
+      "type": "closed_gap",
+      "name": "MBD4 × cytidine tier fix",
+      "what_it_solves": "Sprint 4S closed gap: MBD4 × cytidine tier fix",
+      "how_it_solves": "Tier assignment for MBD4/cytidine axis was demoted to correct level; VALIDATED entry constrained to frozen_receipt.",
+      "why_it_exists": "Prior sprints shipped the SL engine without these hardening rules; Sprint 4S closed the identified holes.",
+      "attributes": {
+        "closure_commit": "474b812",
+        "sprint": "4S"
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.5 — Sprint 4S closed gaps at commit 474b812"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "gap:rs_score_wiring",
+      "type": "closed_gap",
+      "name": "RS score wiring",
+      "what_it_solves": "Sprint 4S closed gap: RS score wiring",
+      "how_it_solves": "RSFeatureSet fully wired into apply_rs_promotion; RS_score becomes a first-class field on CaseResolution.",
+      "why_it_exists": "Prior sprints shipped the SL engine without these hardening rules; Sprint 4S closed the identified holes.",
+      "attributes": {
+        "closure_commit": "474b812",
+        "sprint": "4S"
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.5 — Sprint 4S closed gaps at commit 474b812"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "gap:validated_guard",
+      "type": "closed_gap",
+      "name": "VALIDATED guard",
+      "what_it_solves": "Sprint 4S closed gap: VALIDATED guard",
+      "how_it_solves": "Fuser hard-refuses to emit VALIDATED (invariant #1) — was previously reachable via score arithmetic alone.",
+      "why_it_exists": "Prior sprints shipped the SL engine without these hardening rules; Sprint 4S closed the identified holes.",
+      "attributes": {
+        "closure_commit": "474b812",
+        "sprint": "4S"
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.5 — Sprint 4S closed gaps at commit 474b812"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "gap:pole_guard",
+      "type": "closed_gap",
+      "name": "POLE guard",
+      "what_it_solves": "Sprint 4S closed gap: POLE guard",
+      "how_it_solves": "POLE hotspot forces MSI_H=False (invariant #5) — was previously letting WRN axis fire on POLE-only cases.",
+      "why_it_exists": "Prior sprints shipped the SL engine without these hardening rules; Sprint 4S closed the identified holes.",
+      "attributes": {
+        "closure_commit": "474b812",
+        "sprint": "4S"
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.5 — Sprint 4S closed gaps at commit 474b812"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "gap:ruo_middleware",
+      "type": "closed_gap",
+      "name": "RUO middleware",
+      "what_it_solves": "Sprint 4S closed gap: RUO middleware",
+      "how_it_solves": "RUO=True + disclaimer stamped on every response (invariant #6) — was previously optional at route level.",
+      "why_it_exists": "Prior sprints shipped the SL engine without these hardening rules; Sprint 4S closed the identified holes.",
+      "attributes": {
+        "closure_commit": "474b812",
+        "sprint": "4S"
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3.5 — Sprint 4S closed gaps at commit 474b812"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "audit:agent_conduct_2026-06-06",
+      "type": "audit_artifact",
+      "name": "Agent conduct audit 2026-06-06",
+      "what_it_solves": "External audit of the SL API's conduct against the invariants (RUO stamping, tier assignments, promotion source tags).",
+      "how_it_solves": "See agent_conduct_audit_2026-06-06.json for structured pass/fail per invariant.",
+      "why_it_exists": "Independent confirmation that the code path enforces the roadmap invariants at request time (not just in unit tests).",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/agent_conduct_audit_2026-06-06.json",
+          "exists": true,
+          "bytes": 8172,
+          "sha256": "8bffe08a4caf18921ea40c9c03dbf18b26e2326d8ea6e572874182d136c49792",
+          "mtime_iso": "2026-06-06T07:41:59+00:00"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "invariant:ruo_middleware",
+        "invariant:audit_trail"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "audit:gap_exploit_prompts",
+      "type": "audit_artifact",
+      "name": "Gap exploit prompts + API verification",
+      "what_it_solves": "Adversarial prompt suite designed to trip each invariant, plus the API verification JSON showing what actually happened.",
+      "how_it_solves": "GAP_EXPLOIT_PROMPTS.md enumerates the exploits; gap_exploit_api_verification.json is the machine-readable outcome per prompt.",
+      "why_it_exists": "Turns invariants into executable red-team assets — an invariant with no adversarial test is not a real invariant.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/GAP_EXPLOIT_PROMPTS.md",
+          "exists": true,
+          "bytes": 46907,
+          "sha256": "403d5d45dc3b5d3adddc64bad3ea3a41308eeee8b7b3510bad37e7a9179b0bac",
+          "mtime_iso": "2026-04-13T18:19:14+00:00"
+        },
+        {
+          "path": "/mnt/results/HANDOFF_GAP_EXPLOIT_PROMPTS.md",
+          "exists": true,
+          "bytes": 30095,
+          "sha256": "32a9912fcdebb47e55731de882d22b8ad972fb0031ad2dc73698492cf6e0f9d5",
+          "mtime_iso": "2026-04-13T17:33:23+00:00"
+        },
+        {
+          "path": "/mnt/results/gap_exploit_api_verification.json",
+          "exists": true,
+          "bytes": 12830,
+          "sha256": "12dc137fe7bf894884a70907c2c437541613938e5385aaf92f8a77d5fad00fac",
+          "mtime_iso": "2026-06-05T16:37:32+00:00"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "invariant:validated_never_auto",
+        "invariant:tier_clamp_no_clinical",
+        "invariant:receipt_immutability",
+        "invariant:kb_read_only",
+        "invariant:pole_guard",
+        "invariant:ruo_middleware",
+        "invariant:audit_trail",
+        "invariant:underpowered_guard"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "audit:sl_full_commit_audit_v2",
+      "type": "audit_artifact",
+      "name": "SL audit — all commits (v2)",
+      "what_it_solves": "Per-commit audit of the SL engine repo history, capturing which invariants each commit introduced/regressed.",
+      "how_it_solves": "agent_full_audit_all_commits_v2.json records commit → invariant coverage; crispro_sl_audit_findings.json is the summarised findings register.",
+      "why_it_exists": "Answers 'when did each invariant become real?' — used to justify claims about Sprint 4S closure at commit 474b812.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/agent_full_audit_all_commits.json",
+          "exists": true,
+          "bytes": 24632,
+          "sha256": "afb71218918a89091a42ebeb2213abcc75275810a103a8d52b1a1c4acae188f2",
+          "mtime_iso": "2026-06-06T08:02:20+00:00"
+        },
+        {
+          "path": "/mnt/results/agent_full_audit_all_commits_v2.json",
+          "exists": true,
+          "bytes": 25754,
+          "sha256": "78167e9a931458bc0130da6ee2519ec2d779a410634e46f221e303e96f612e18",
+          "mtime_iso": "2026-06-06T08:46:53+00:00"
+        },
+        {
+          "path": "/mnt/results/crispro_sl_audit_findings.json",
+          "exists": true,
+          "bytes": 39934,
+          "sha256": "d088aa94b3035f814464f51aeaf5bec53c16d70b2dd1fd23e408ca111b6a32ad",
+          "mtime_iso": "2026-06-06T18:03:53+00:00"
+        }
+      ],
+      "cross_refs": [
+        "engine:synthetic_lethality",
+        "gap:mbd4_cytidine_tier_fix",
+        "gap:validated_guard"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "artifact:flag_remediation_memo",
+      "type": "remediation_artifact",
+      "name": "Flag remediation memo",
+      "what_it_solves": "Living memo enumerating flags raised by audits and their remediation status.",
+      "how_it_solves": "FLAG_REMEDIATION_MEMO.md tracks each flag → owner → status → target commit.",
+      "why_it_exists": "Central inbox for audit findings so no flag is silently absorbed without a written disposition.",
+      "attributes": {},
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/results/FLAG_REMEDIATION_MEMO.md",
+          "exists": true,
+          "bytes": 9799,
+          "sha256": "b4ed865261e35d1a8ed3e6f2cc63220b7332bdb1ead859823547aa8cd6ce7c10",
+          "mtime_iso": "2026-06-05T19:47:35+00:00"
+        }
+      ],
+      "cross_refs": [
+        "audit:agent_conduct_2026-06-06",
+        "audit:sl_full_commit_audit_v2"
+      ],
+      "gaps_still_open": [],
+      "_stream": "synthetic_lethality"
+    },
+    {
+      "id": "engine:lineage_dependency",
+      "type": "engine",
+      "name": "Lineage Dependency Engine (PLANNED, Sprint C)",
+      "what_it_solves": "Second Layer-1 engine that will score tissue-lineage-specific dependencies as a peer to synthetic lethality.",
+      "how_it_solves": "Not yet implemented; roadmap Sprint C reserves the module path and contract slot.",
+      "why_it_exists": "Some axes (e.g. WRN, RB1-cyclin dependencies) are better framed lineage-first than SL-first — this engine will carry that logic separately from the SL fuser.",
+      "attributes": {
+        "status": "PLANNED",
+        "target_sprint": "C"
+      },
+      "verbatim_evidence": [],
+      "source_receipts": [
+        {
+          "path": "/mnt/user-uploads/CRISPRO_SL_PHD_ROADMAP.txt",
+          "exists": true,
+          "bytes": 89616,
+          "sha256": "5a6299027f0237fd6eef7c67592b644c9b4201899d32037b9f518391fa72011e",
+          "mtime_iso": "2026-04-13T20:06:12+00:00",
+          "span_extracted": "Ch 3 — Layer 1 engines (SL + Lineage)"
+        }
+      ],
+      "cross_refs": [
+        "layer:engines",
+        "engine:synthetic_lethality"
+      ],
+      "gaps_still_open": [
+        "Not built. No code path exists in crispro-backend-v3 as of roadmap snapshot."
+      ],
+      "_stream": "synthetic_lethality"
+    }
+  ],
+  "gaps_still_open_stream_level": [
+    "Lineage Dependency Engine — PLANNED, not implemented.",
+    "Any invariant whose verbatim needle returned found=false should be re-verified against the live crispro-backend-v3 source (roadmap may lag repo)."
+  ],
+  "cross_stream_refs": [
+    "See stream_arch.json for layer/repo topology.",
+    "See stream_evidence.json for canonical receipts (MBD4/ATR) that live outputs are compared against.",
+    "See stream_moat.json for governance decisions (PATH A) and 8D remediation status that intersect with invariants."
+  ]
+}

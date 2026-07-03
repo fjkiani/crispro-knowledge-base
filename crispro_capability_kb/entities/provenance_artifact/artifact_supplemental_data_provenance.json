@@ -1,0 +1,31 @@
+{
+  "id": "artifact:supplemental_data_provenance",
+  "type": "provenance_artifact",
+  "name": "Supplemental data provenance",
+  "what_it_solves": "Structured record of data lineage for every supplemental table/figure in the MBD4/ATR bundle.",
+  "how_it_solves": "SUPPLEMENTAL_DATA_PROVENANCE_v2.md and v3.md list source dataset → filter → derived file for each artefact.",
+  "why_it_exists": "Publication-grade requirement: reviewer must be able to reconstruct every value from a public dataset ID.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/SUPPLEMENTAL_DATA_PROVENANCE_v2.md",
+      "exists": true,
+      "bytes": 8609,
+      "sha256": "1dd7b34ea07436423d7a8114e36a0242647a83b9635e93c00c84ec524df326a0",
+      "mtime_iso": "2026-04-27T06:12:43+00:00"
+    },
+    {
+      "path": "/mnt/results/mbd4_atr_evidence/SUPPLEMENTAL_DATA_PROVENANCE_v3.md",
+      "exists": true,
+      "bytes": 9804,
+      "sha256": "8c877722b76073deed15ec50f8f5e5f0d19553015b7d7b4a32561fb071a72c87",
+      "mtime_iso": "2026-04-27T06:43:02+00:00"
+    }
+  ],
+  "cross_refs": [
+    "receipt:mbd4_atr_evidence_matrix_v2"
+  ],
+  "gaps_still_open": [],
+  "_stream": "evidence_and_receipts"
+}

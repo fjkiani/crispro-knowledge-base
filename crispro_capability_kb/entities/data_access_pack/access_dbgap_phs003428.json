@@ -1,0 +1,117 @@
+{
+  "id": "access:dbgap_phs003428",
+  "type": "data_access_pack",
+  "name": "dbGaP phs003428 access pack (12 files)",
+  "what_it_solves": "Complete access-application pack for dbGaP study phs003428 (metadata, dependency graph, missing-field ledger, CTEP email).",
+  "how_it_solves": "Files include: application draft, DAR checklist, dependency graph JSON, variable dictionary, blocker table, missing-fields, institution intake, fahad-fields-only, public metadata, access status, CTEP email final.",
+  "why_it_exists": "dbGaP applications repeatedly stall because of scattered required fields; consolidating into one access pack turns a multi-week ping-pong into an audit-able single artefact.",
+  "attributes": {
+    "files": [
+      "dbgap_access_request_draft.md",
+      "dbgap_phs003428_access_status.json",
+      "dbgap_phs003428_application_draft.md",
+      "dbgap_phs003428_blocker_table.csv",
+      "dbgap_phs003428_ctep_email_final.md",
+      "dbgap_phs003428_dar_checklist.csv",
+      "dbgap_phs003428_dependency_graph.json",
+      "dbgap_phs003428_fahad_fields_only.json",
+      "dbgap_phs003428_institution_intake_minimal.csv",
+      "dbgap_phs003428_missing_fields.json",
+      "dbgap_phs003428_public_metadata.json",
+      "dbgap_phs003428_variable_dictionary.csv"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/dbgap_phs003428_access_status.json",
+      "exists": true,
+      "bytes": 4925,
+      "sha256": "5b438e0d453184a4c08cf87076adf36d4d32c1d27c36ef005355a0496aa0876b",
+      "mtime_iso": "2026-05-13T07:25:24+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_application_draft.md",
+      "exists": true,
+      "bytes": 11104,
+      "sha256": "8e1f41aa0f999e53cde0adbeeb7fdaba52802bb6e1b686a24ac1707159af42db",
+      "mtime_iso": "2026-05-13T07:25:43+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_blocker_table.csv",
+      "exists": true,
+      "bytes": 3562,
+      "sha256": "a99f974cb216d27fa0cc7d75269bcada429eaaf73cd550548e8f11f646fc250f",
+      "mtime_iso": "2026-05-13T07:24:40+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_ctep_email_final.md",
+      "exists": true,
+      "bytes": 7241,
+      "sha256": "5c6c39b94bcf5a33ccdff816a05ee2655f564ce5d1c1300cc575809634f74e04",
+      "mtime_iso": "2026-05-13T09:04:38+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_dar_checklist.csv",
+      "exists": true,
+      "bytes": 10891,
+      "sha256": "1941c5ef4540b22e81455d9b0d05956dcf2f82271da4861a390928687ed75876",
+      "mtime_iso": "2026-05-13T08:22:55+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_dependency_graph.json",
+      "exists": true,
+      "bytes": 7674,
+      "sha256": "49a7164f8c9cae87f40dc4c4fd16abed47fa47f655a132523dda26021d8cfaa7",
+      "mtime_iso": "2026-05-13T08:22:55+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_fahad_fields_only.json",
+      "exists": true,
+      "bytes": 2104,
+      "sha256": "36d267f2da703948b25fc23276552d9ba01a1690a7975def8270476d4f4bbdee",
+      "mtime_iso": "2026-05-13T09:17:35+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_institution_intake_minimal.csv",
+      "exists": true,
+      "bytes": 1015,
+      "sha256": "ee1c0c68c8b7ef6665e57f98f2cc5e51707f167e98447d8b444a05b53ac845c2",
+      "mtime_iso": "2026-05-13T09:17:36+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_missing_fields.json",
+      "exists": true,
+      "bytes": 6811,
+      "sha256": "738eca5ae01038e097074044a12ec7234f386500f056b3e13f5860e94fa71a1e",
+      "mtime_iso": "2026-05-13T08:22:56+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_public_metadata.json",
+      "exists": true,
+      "bytes": 6227,
+      "sha256": "e4d5cec69da47e926a77780054e50ae45719d00bb29e9792adc2b147b987d7ee",
+      "mtime_iso": "2026-05-13T07:20:22+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_phs003428_variable_dictionary.csv",
+      "exists": true,
+      "bytes": 8888,
+      "sha256": "ff71b476794aa6c4e2e117b26409f3ac11a67c8fb80276c2dd80d49e972b523e",
+      "mtime_iso": "2026-05-13T07:20:46+00:00"
+    },
+    {
+      "path": "/mnt/results/dbgap_access_request_draft.md",
+      "exists": true,
+      "bytes": 14716,
+      "sha256": "855aa4444ed87f5d74c6fe38e5ee5eb05d634a7721763cf66261c781af95929d",
+      "mtime_iso": "2026-05-12T17:38:36+00:00"
+    }
+  ],
+  "cross_refs": [
+    "protocol:mars",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "operations_and_access"
+}

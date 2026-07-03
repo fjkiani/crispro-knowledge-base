@@ -1,0 +1,37 @@
+{
+  "id": "access:crc_access_ledger",
+  "type": "data_access_pack",
+  "name": "CRC controlled-access ledger",
+  "what_it_solves": "Access ledger for CRC datasets relevant to BreAK CRC-001 diligence.",
+  "how_it_solves": "crc_access_top_memo + crc_controlled_access_ledger.csv track which CRC datasets can be pulled and which are blocked.",
+  "why_it_exists": "Feeds the Brenus diligence module with a testable data-availability status — no more 'we could probably get that data' claims.",
+  "attributes": {
+    "files": [
+      "crc_access_top_memo.md",
+      "crc_controlled_access_ledger.csv"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/crc_access_top_memo.md",
+      "exists": true,
+      "bytes": 7040,
+      "sha256": "8a3f45537e1449db84a3a6897f90265253dd8596e2c0c54da70085d39df737d3",
+      "mtime_iso": "2026-05-13T02:33:26+00:00"
+    },
+    {
+      "path": "/mnt/results/crc_controlled_access_ledger.csv",
+      "exists": true,
+      "bytes": 6120,
+      "sha256": "2b8922b9c7005124c8ace62d7fedbb616f585833c3be10b454cd58488e269569",
+      "mtime_iso": "2026-05-13T02:33:25+00:00"
+    }
+  ],
+  "cross_refs": [
+    "module:brenus_diligence",
+    "cancer:crc"
+  ],
+  "gaps_still_open": [],
+  "_stream": "operations_and_access"
+}

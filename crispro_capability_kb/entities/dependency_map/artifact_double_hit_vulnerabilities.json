@@ -1,0 +1,39 @@
+{
+  "id": "artifact:double_hit_vulnerabilities",
+  "type": "dependency_map",
+  "name": "Double-hit vulnerabilities catalogue",
+  "what_it_solves": "Catalogue of genetic double-hit vulnerabilities identified in the 9p21 audit.",
+  "how_it_solves": "double_hit_vulnerabilities.json enumerates paired losses with dependency scores + rationale.",
+  "why_it_exists": "Feeds the SL engine's KB with new candidate axis pairs beyond the current 8-enum.",
+  "attributes": {
+    "top_keys": [
+      "$schema_version",
+      "document_purpose",
+      "provenance",
+      "scope_and_definitions",
+      "family_1_9p21_loss_pharmacological_double_hits",
+      "family_2_MBD4_LOF_x_ATR_WEE1_axis",
+      "family_3_MBD4_LOF_x_TP53_within_genotype_amplifier",
+      "cross_family_observations",
+      "what_paper_does_NOT_quantify_for_double_hit_landscape",
+      "post_consistency_check_patches_2026_06_24"
+    ]
+  },
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/results/9p21_audit/double_hit_vulnerabilities.json",
+      "exists": true,
+      "bytes": 24468,
+      "sha256": "8a47013bd7cedbb04e908c92aa277c31ea47be7ebdab523a6565509ba1d8c61c",
+      "mtime_iso": "2026-06-25T01:44:05+00:00"
+    }
+  ],
+  "cross_refs": [
+    "engine:synthetic_lethality",
+    "axis:PARP_INHIBITORS",
+    "axis:ATR_WEE1"
+  ],
+  "gaps_still_open": [],
+  "_stream": "moat_and_governance"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "deliverable:pds_audit_agent_plan",
+  "type": "operations_plan",
+  "name": "Project Data Sphere audit agent plan",
+  "what_it_solves": "Plan for the Project Data Sphere audit agent — what it inspects, what it emits, how findings feed back.",
+  "how_it_solves": "PROJECT_DATA_SPHERE_AUDIT_AGENT_PLAN.mdc lists the agent's inputs, outputs, and integration points.",
+  "why_it_exists": "External data-sphere assets need their own audit lane, distinct from the SL engine's KB ingestion.",
+  "attributes": {},
+  "verbatim_evidence": [],
+  "source_receipts": [
+    {
+      "path": "/mnt/user-uploads/PROJECT_DATA_SPHERE_AUDIT_AGENT_PLAN.mdc",
+      "exists": true,
+      "bytes": 17663,
+      "sha256": "e4c834206c74788e9a2ea15cc2b38d32cb18b22fb5abc22bec0609c40e204247",
+      "mtime_iso": "2026-05-10T20:56:00+00:00"
+    }
+  ],
+  "cross_refs": [
+    "protocol:mars",
+    "engine:synthetic_lethality"
+  ],
+  "gaps_still_open": [],
+  "_stream": "brenus_and_deliverables"
+}
