@@ -2,7 +2,7 @@
 
 **Version**: v2.0  
 **Build Date**: 2026-07-03  
-**Formula**: PATH A LOCKED 2026-04-28 — `fit = clip((p·t) / ‖t‖₂, 0, 1)`  
+**Formula**: PATH A LOCKED 2026-04-28 — 
 **Spot-Checks**: 15/15 PASS  
 
 ---
