@@ -1,0 +1,23 @@
+{
+  "id": "axis8d:rss",
+  "type": "pathway_axis",
+  "name": "RSS",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/mechanistic_deep.json",
+      "json_pointer": "/cap_02_mechanism_fit_engine/algorithm_step_by_step/step_1_patient_vector_construction/axes/rss",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Replication stress score \u2014 scored from RS-High/RS-Low classification, CCNE1 amplification, CDK2 activity",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "endpoint_ref:GET /af3-spec/{gene}",
+  "type": "endpoint_ref",
+  "name": "GET /af3-spec/{gene}",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py",
+      "line": 130
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "@router.get('/af3-spec/{gene}') at crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:130",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

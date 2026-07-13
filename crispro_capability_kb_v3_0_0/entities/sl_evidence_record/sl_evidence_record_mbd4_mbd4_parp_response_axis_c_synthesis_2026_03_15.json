@@ -1,0 +1,26 @@
+{
+  "id": "sl_evidence_record:mbd4_mbd4_parp_response_axis_c_synthesis_2026_03_15",
+  "type": "sl_evidence_record",
+  "name": "MBD4 mbd4_parp_response \u2014 axis_c_synthesis_2026_03_15",
+  "source_receipts": [
+    {
+      "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_synthesis_2026_03_15.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "MBD4 manuscript substrate",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "gov:mbd4_correction_lock"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

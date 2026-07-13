@@ -1,0 +1,42 @@
+{
+  "id": "trial:NCT05638594",
+  "type": "trial",
+  "name": "NCT05638594",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+      "json_pointer": "/NCT05638594",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "moa_vector={\"ddr\": 0.0, \"mapk\": 0.0, \"pi3k\": 0.2, \"vegf\": 0.0, \"her2\": 0.8, \"io\": 0.0, \"efflux\": 0.0, \"rss\": 0.0}",
+      "found": true
+    },
+    {
+      "claim": "confidence=0.8",
+      "found": true
+    },
+    {
+      "claim": "source=cohere_batch_tagging",
+      "found": true
+    },
+    {
+      "claim": "reviewed_by=TrialTaggingAgent",
+      "found": true
+    },
+    {
+      "claim": "title=Pyrotinib Combined With Trastuzumab, Dalpiciclib, Letrozole Versus TCbHP (Trastuzumab Plus Pertuzumab With Docetaxel and Carboplatin) as Neoadjuvant Treatment in HR +/HER2 + Breast Cancer",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "axis8d:pi3k",
+    "axis8d:her2"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

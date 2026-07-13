@@ -1,0 +1,41 @@
+{
+  "id": "trial:NCT05943379",
+  "type": "trial",
+  "name": "NCT05943379",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+      "json_pointer": "/NCT05943379",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "moa_vector={\"ddr\": 0.0, \"mapk\": 0.0, \"pi3k\": 0.0, \"vegf\": 0.0, \"her2\": 0.7, \"io\": 0.0, \"efflux\": 0.0, \"rss\": 0.0}",
+      "found": true
+    },
+    {
+      "claim": "confidence=0.8",
+      "found": true
+    },
+    {
+      "claim": "source=openai_batch_tagging",
+      "found": true
+    },
+    {
+      "claim": "reviewed_by=TrialTaggingAgent",
+      "found": true
+    },
+    {
+      "claim": "title=RC48-ADC in Combination With Gemcitabine in High Risk NMIBC Subjects",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "axis8d:her2"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

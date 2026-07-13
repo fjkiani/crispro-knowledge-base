@@ -1,0 +1,22 @@
+{
+  "id": "endpoint_ref:GET /synthetic_lethality/health",
+  "type": "endpoint_ref",
+  "name": "GET /synthetic_lethality/health",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/api/routers/agents.py",
+      "line": 677
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "@router.get('/synthetic_lethality/health') at crispro-backend-v2/api/routers/agents.py:677",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "demo_sample:biopsy",
+  "type": "demo_sample",
+  "name": "biopsy",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/src/oncology_arbiter/api/static/demo_samples/biopsy.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Demo sample for regulatory-posture-locked arbiter walkthrough",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "regulatory_posture:oncology_arbiter_ruo"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

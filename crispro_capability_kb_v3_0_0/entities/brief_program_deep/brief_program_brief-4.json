@@ -1,0 +1,23 @@
+{
+  "id": "brief_program:brief-4",
+  "type": "brief_program_deep",
+  "name": "NSCLC brain metastasis (BrM)",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+      "json_pointer": "/programs/1",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"id\": \"BRIEF-4\", \"axis\": \"SPP1 \\u2192 NRF2 (synthetic lethality)\", \"evidence_tier\": \"CRISPR_VALIDATED\", \"deal_ready\": false, \"delta\": -0.7326, \"fdr\": 8e-06, \"status\": \"COMPUTATIONAL_LEAD\", \"indication\": \"NSCLC brain metastasis (BrM)\", \"what_spp1_is\": \"SPP1 (Secreted Phosphoprotein 1, also known as Osteopontin) is a secreted glycoprotein that promotes tumor invasion, metastasis, and immune evasion. SPP1-high tumors have an immunosuppressive TME \\u2014 SPP1 recruits MDSCs and promotes M2 macrophage polarization.\", \"what_nrf2_is\": \"NRF2 (Nuclear factor erythroid 2-related factor 2) is a transcription factor that regulates the antioxidant response. In SPP1-high cells, NRF2 becomes essential for managing oxidative stress \\u2014 SPP1-high cells generate more reactive oxygen species (ROS) and de",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

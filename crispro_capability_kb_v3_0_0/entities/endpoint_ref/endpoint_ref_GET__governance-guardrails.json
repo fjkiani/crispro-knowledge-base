@@ -1,0 +1,22 @@
+{
+  "id": "endpoint_ref:GET /governance-guardrails",
+  "type": "endpoint_ref",
+  "name": "GET /governance-guardrails",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v3-push/layer4_output/demo_router.py",
+      "line": 137
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "@router.get('/governance-guardrails') at crispro-backend-v3-push/layer4_output/demo_router.py:137",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

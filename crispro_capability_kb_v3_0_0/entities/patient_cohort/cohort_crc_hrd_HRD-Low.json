@@ -1,0 +1,23 @@
+{
+  "id": "cohort:crc_hrd_HRD-Low",
+  "type": "patient_cohort",
+  "name": "CRC HRD HRD-Low",
+  "source_receipts": [
+    {
+      "source_file": "Brenus/data/ranker_results/crc_ranker_summary_v1.json",
+      "json_pointer": "/hrd_subgroups/HRD-Low",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"n\": 150, \"stc1010_mean_fit\": 0.5469, \"delta_mean\": -0.1701, \"recall_at_3\": 0.94, \"mrr\": 0.3639}",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

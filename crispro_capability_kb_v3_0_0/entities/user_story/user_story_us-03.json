@@ -1,0 +1,23 @@
+{
+  "id": "user_story:us-03",
+  "type": "user_story",
+  "name": "US-03",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/docs/PROGRESS_LEDGER.json",
+      "json_pointer": "/user_stories/id=US-03",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"id\": \"US-03\", \"as_a\": \"researcher\", \"i_want\": \"post biopsy output + patient context to /v1/therapy/reason and receive a therapy arbiter recommendation with cited literature\", \"so_that\": \"I can evaluate a research-only literature-grounded therapy proposal\", \"endpoints\": [\"/v1/therapy/reason\"], \"status\": \"NOT_WIRED\", \"not_wired_reason\": \"Endpoint returns HTTP 200 with placeholder findings. The L4c",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

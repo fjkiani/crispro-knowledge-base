@@ -1,0 +1,31 @@
+{
+  "id": "gov:latify_quarantined",
+  "type": "governance_item",
+  "name": "gov:latify_quarantined",
+  "source_receipts": [
+    {
+      "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS (mirrored from user Custom Instructions)",
+      "json_pointer": null,
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"status\": \"QUARANTINED\", \"claims\": [\"CT_03\", \"DL_05\", \"PC_06\"], \"delta_conflict\": \"patent +0.366 vs receipt +0.2641\"}",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "status": "QUARANTINED",
+    "claims": [
+      "CT_03",
+      "DL_05",
+      "PC_06"
+    ],
+    "delta_conflict": "patent +0.366 vs receipt +0.2641"
+  },
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "outcome:zeb1_ov_gse140082",
+  "type": "outcome_metric",
+  "name": "OV ZEB1 continuous Cox HR=1.4803 (95% CI 1.1188-1.9586, p=0.",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/quantitative_anchors.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "OV ZEB1 continuous Cox HR=1.4803 (95% CI 1.1188-1.9586, p=0.006042)",
+      "found": true
+    },
+    {
+      "claim": "GSE140082 N=380 HGSOC",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

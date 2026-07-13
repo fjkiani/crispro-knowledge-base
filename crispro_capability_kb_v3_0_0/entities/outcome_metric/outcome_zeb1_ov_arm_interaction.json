@@ -1,0 +1,27 @@
+{
+  "id": "outcome:zeb1_ov_arm_interaction",
+  "type": "outcome_metric",
+  "name": "OV ZEB1 arm interaction p=0.246",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/quantitative_anchors.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "OV ZEB1 arm interaction p=0.246 \u2014 PROGNOSTIC NOT ARM-SPECIFIC",
+      "found": true
+    },
+    {
+      "claim": "GSE140082",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

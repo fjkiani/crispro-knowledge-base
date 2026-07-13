@@ -1,0 +1,23 @@
+{
+  "id": "user_story:us-01",
+  "type": "user_story",
+  "name": "US-01",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/docs/PROGRESS_LEDGER.json",
+      "json_pointer": "/user_stories/id=US-01",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"id\": \"US-01\", \"as_a\": \"IRB-validated radiology researcher\", \"i_want\": \"post a CBIS-DDSM DICOM to /v1/screening/analyze and receive a screening arbiter output with a calibrated risk bucket\", \"so_that\": \"I can prospectively validate a screening triage model against reader ground truth\", \"endpoints\": [\"/v1/screening/analyze\"], \"status\": \"LIVE\", \"not_wired_reason\": null, \"evidence\": [\"src/oncology_a",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

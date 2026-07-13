@@ -1,0 +1,26 @@
+{
+  "id": "gov:brief_2_hypothesis",
+  "type": "governance_item",
+  "name": "gov:brief_2_hypothesis",
+  "source_receipts": [
+    {
+      "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS (mirrored from user Custom Instructions)",
+      "json_pointer": null,
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"status\": \"COMPUTATIONAL_HYPOTHESIS\", \"reason\": \"DepMap NULL \\u2014 mRNA delta=\\u22120.040 p=0.73; mutation+CN delta=+0.023 p=1.000\"}",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "status": "COMPUTATIONAL_HYPOTHESIS",
+    "reason": "DepMap NULL \u2014 mRNA delta=\u22120.040 p=0.73; mutation+CN delta=+0.023 p=1.000"
+  },
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

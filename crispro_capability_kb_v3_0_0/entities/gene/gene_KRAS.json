@@ -1,0 +1,27 @@
+{
+  "id": "gene:KRAS",
+  "type": "gene",
+  "name": "KRAS",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/api/resources/cosmic_hotspots.json",
+      "json_pointer": "/KRAS",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "hotspot_variants=9",
+      "found": true
+    },
+    {
+      "claim": "sample={\"G12C\": {\"codon\": 12, \"aa_change\": \"G12C\", \"cosmic_id\": \"COSV97851923\", \"evidence\": \"highly_recurrent\", \"frequency_in_cancer\": 0.14, \"pathway\": \"MAPK\", \"cancers\": [\"lung_adenocarcinoma\", \"colorectal\", \"pancreatic\"], \"source\": \"COSMIC v98\"}, \"G12D\": {\"codon\": 12, \"aa_change\": \"G12D\", \"cosmic_id\": \"C",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

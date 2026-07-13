@@ -1,0 +1,23 @@
+[
+  {
+    "predicate": "derived_from",
+    "src": "trial:NCT05450692",
+    "dst": "gov:path_a_locked",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "evidence": "trial moa_vector produced by retroactive_validation (PATH A formula)"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "trial:NCT02595892",
+    "dst": "gov:path_a_locked",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "evidence": "trial moa_vector produced by retroactive_validation (PATH A formula)"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "trial:NCT05450692",
+    "dst": "code_module:crispro_kg_v2/kg_modules/trials_module.json",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/",
+    "evidence": "NCT05450692 present in KG v2.1.0 canonical trial module"
+  }
+]

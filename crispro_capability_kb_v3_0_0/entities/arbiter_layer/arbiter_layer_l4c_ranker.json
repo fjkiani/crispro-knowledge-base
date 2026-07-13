@@ -1,0 +1,23 @@
+{
+  "id": "arbiter_layer:l4c_ranker",
+  "type": "arbiter_layer",
+  "name": "L4c Ranker",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/README.md",
+      "json_pointer": null,
+      "line_range": "architecture_section"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Elo tournament ranking of hypotheses",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

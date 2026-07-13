@@ -1,0 +1,27 @@
+{
+  "id": "gov:dl_07_quarantined",
+  "type": "governance_item",
+  "name": "gov:dl_07_quarantined",
+  "source_receipts": [
+    {
+      "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS (mirrored from user Custom Instructions)",
+      "json_pointer": null,
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"status\": \"QUARANTINED\", \"issue\": \"DDR 0.983 implausible\", \"impact\": \"publication_blocking\"}",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "status": "QUARANTINED",
+    "issue": "DDR 0.983 implausible",
+    "impact": "publication_blocking"
+  },
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

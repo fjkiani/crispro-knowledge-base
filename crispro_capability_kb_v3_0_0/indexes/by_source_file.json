@@ -1,0 +1,926 @@
+{
+  "crispro-knowledge-base/crispro_kg_v2/kg_modules/mechanistic_deep.json": [
+    "axis8d:ddr",
+    "axis8d:efflux",
+    "axis8d:her2",
+    "axis8d:io",
+    "axis8d:mapk",
+    "axis8d:pi3k",
+    "axis8d:rss",
+    "axis8d:vegf",
+    "biomarker:brief_1_delta",
+    "biomarker:brief_4_delta",
+    "biomarker:cea",
+    "biomarker:ceacam5",
+    "biomarker:ctdna",
+    "biomarker:hrd",
+    "biomarker:immunoscore_ic",
+    "biomarker:liver_metastasis",
+    "biomarker:msi_h",
+    "biomarker:mss",
+    "biomarker:pTMB",
+    "biomarker:tmb_h"
+  ],
+  "crispro-backend-v2/api/resources/trial_moa_vectors.json": [
+    "drug:adavosertib",
+    "drug:atezolizumab",
+    "drug:bevacizumab",
+    "drug:ceralasertib",
+    "drug:cetuximab",
+    "drug:cobimetinib",
+    "drug:durvalumab",
+    "drug:encorafenib",
+    "drug:niraparib",
+    "drug:nivolumab",
+    "drug:olaparib",
+    "drug:pembrolizumab",
+    "drug:pertuzumab",
+    "drug:sacituzumab",
+    "drug:talazoparib",
+    "drug:trastuzumab",
+    "drug:tremelimumab",
+    "trial:NCT00006379",
+    "trial:NCT00072579",
+    "trial:NCT00171379",
+    "trial:NCT00313079",
+    "trial:NCT00339079",
+    "trial:NCT00501579",
+    "trial:NCT00574379",
+    "trial:NCT00652379",
+    "trial:NCT01000259",
+    "trial:NCT01091779",
+    "trial:NCT01174121",
+    "trial:NCT01226979",
+    "trial:NCT01321879",
+    "trial:NCT01366144",
+    "trial:NCT01425879",
+    "trial:NCT01507779",
+    "trial:NCT01596179",
+    "trial:NCT01609179",
+    "trial:NCT01835379",
+    "trial:NCT01961479",
+    "trial:NCT01965379",
+    "trial:NCT01979679",
+    "trial:NCT02101775",
+    "trial:NCT02244879",
+    "trial:NCT02359279",
+    "trial:NCT02364479",
+    "trial:NCT02422979",
+    "trial:NCT02430779",
+    "trial:NCT02498379",
+    "trial:NCT02575079",
+    "trial:NCT02595892",
+    "trial:NCT02655016",
+    "trial:NCT02680379",
+    "trial:NCT02945579",
+    "trial:NCT03152279",
+    "trial:NCT03160079",
+    "trial:NCT03458221",
+    "trial:NCT03470779",
+    "trial:NCT03472079",
+    "trial:NCT03479879",
+    "trial:NCT03735979",
+    "trial:NCT03860272",
+    "trial:NCT03878979",
+    "trial:NCT04001023",
+    "trial:NCT04024878",
+    "trial:NCT04123379",
+    "trial:NCT04128579",
+    "trial:NCT04164979",
+    "trial:NCT04236479",
+    "trial:NCT04246879",
+    "trial:NCT04284969",
+    "trial:NCT04409379",
+    "trial:NCT04430179",
+    "trial:NCT04470479",
+    "trial:NCT04519151",
+    "trial:NCT04521179",
+    "trial:NCT04534179",
+    "trial:NCT04633239",
+    "trial:NCT04640779",
+    "trial:NCT04804007",
+    "trial:NCT04850079",
+    "trial:NCT04938583",
+    "trial:NCT04986579",
+    "trial:NCT05042479",
+    "trial:NCT05078879",
+    "trial:NCT05134779",
+    "trial:NCT05147779",
+    "trial:NCT05187338",
+    "trial:NCT05190679",
+    "trial:NCT05201079",
+    "trial:NCT05208762",
+    "trial:NCT05233982",
+    "trial:NCT05239143",
+    "trial:NCT05255471",
+    "trial:NCT05263479",
+    "trial:NCT05281471",
+    "trial:NCT05338879",
+    "trial:NCT05341479",
+    "trial:NCT05445778",
+    "trial:NCT05450692",
+    "trial:NCT05457595",
+    "trial:NCT05467670",
+    "trial:NCT05472857",
+    "trial:NCT05546879",
+    "trial:NCT05638594",
+    "trial:NCT05656079",
+    "trial:NCT05671679",
+    "trial:NCT05675579",
+    "trial:NCT05706779",
+    "trial:NCT05721079",
+    "trial:NCT05740956",
+    "trial:NCT05761379",
+    "trial:NCT05788679",
+    "trial:NCT05797168",
+    "trial:NCT05799079",
+    "trial:NCT05891379",
+    "trial:NCT05943379",
+    "trial:NCT05950464",
+    "trial:NCT05952453",
+    "trial:NCT05960279",
+    "trial:NCT05977179",
+    "trial:NCT06101979",
+    "trial:NCT06108479",
+    "trial:NCT06152731",
+    "trial:NCT06242379",
+    "trial:NCT06253520",
+    "trial:NCT06305299",
+    "trial:NCT06330064",
+    "trial:NCT06330779",
+    "trial:NCT06331130",
+    "trial:NCT06332079",
+    "trial:NCT06342479",
+    "trial:NCT06342986",
+    "trial:NCT06380816",
+    "trial:NCT06391879",
+    "trial:NCT06395779",
+    "trial:NCT06419179",
+    "trial:NCT06423079",
+    "trial:NCT06429579",
+    "trial:NCT06469281",
+    "trial:NCT06473779",
+    "trial:NCT06476379",
+    "trial:NCT06483048",
+    "trial:NCT06499779",
+    "trial:NCT06508307",
+    "trial:NCT06536179",
+    "trial:NCT06558279",
+    "trial:NCT06572579",
+    "trial:NCT06631079",
+    "trial:NCT06638879",
+    "trial:NCT06639074",
+    "trial:NCT06651879",
+    "trial:NCT06680479",
+    "trial:NCT06682988",
+    "trial:NCT06684379",
+    "trial:NCT06732336",
+    "trial:NCT06735326",
+    "trial:NCT06777979",
+    "trial:NCT06840002",
+    "trial:NCT06883487",
+    "trial:NCT06906341",
+    "trial:NCT06910657",
+    "trial:NCT06920979",
+    "trial:NCT06930079",
+    "trial:NCT06957379",
+    "trial:NCT06963879",
+    "trial:NCT06964009",
+    "trial:NCT07023731",
+    "trial:NCT07059845",
+    "trial:NCT07216105"
+  ],
+  "Brenus/data/ranker_results/crc_ranker_summary_v1.json": [
+    "cohort:crc_high_tmb_subgroup",
+    "cohort:crc_hrd_HRD-High",
+    "cohort:crc_hrd_HRD-Intermediate",
+    "cohort:crc_hrd_HRD-Low",
+    "cohort:crc_tmb_ge10_subgroup",
+    "cohort:crc_unselected_mss"
+  ],
+  "crispro-backend-v2/api/resources/cosmic_hotspots.json": [
+    "gene:BRAF",
+    "gene:KRAS",
+    "gene:NRAS"
+  ],
+  "crispro-backend-v2/knowledge_base/entities/variants/BRAF_V600E.json": [
+    "variant:BRAF_V600E"
+  ],
+  "crispro-backend-v2/knowledge_base/entities/variants/TP53_R175H.json": [
+    "variant:TP53_R175H"
+  ],
+  "Brenus/engagements/brenus/trial_intelligence/program_assets/program_asset_io_core.json": [
+    "program:program_asset_io_core"
+  ],
+  "Brenus/engagements/brenus/trial_intelligence/program_assets/program_asset_gbm_escapemap.json": [
+    "program:program_asset_gbm_escapemap"
+  ],
+  "Brenus/engagements/brenus/trial_intelligence/program_assets/program_asset_break_crc_001.json": [
+    "program:program_asset_break_crc_001"
+  ],
+  "Brenus/engagements/brenus/trial_intelligence/program_assets/program_asset_historical_benchmark.json": [
+    "program:program_asset_historical_benchmark"
+  ],
+  "Brenus/engagements/brenus/trial_intelligence/program_assets/program_asset_ceacam5.json": [
+    "program:program_asset_ceacam5"
+  ],
+  "Brenus/engagements/brenus/trial_intelligence/program_assets/program_asset_io_appendix.json": [
+    "program:program_asset_io_appendix"
+  ],
+  "Brenus/engagements/brenus/trial_intelligence/program_assets/program_asset_atr_ddr.json": [
+    "program:program_asset_atr_ddr"
+  ],
+  "crispro-knowledge-base/crispro_kg_v2/kg_modules/quantitative_anchors.json": [
+    "citation:DOI_10_3389_fonc_2024_1427428",
+    "citation:Lancet_STELLAR303_2025",
+    "citation:PMID_34548480",
+    "citation:PMID_35274710",
+    "citation:PMID_38485190",
+    "citation:PMID_38871975",
+    "citation:PMID_39504677",
+    "outcome:botbal_phase1",
+    "outcome:break_crc_fit",
+    "outcome:brief_1_validated",
+    "outcome:brief_4_validated",
+    "outcome:checkmate9x8",
+    "outcome:co26_liver_met_pfs",
+    "outcome:co26_ptmb_ge28_os",
+    "outcome:pacce_paccegen",
+    "outcome:prime_summary",
+    "outcome:quilt2004_hr",
+    "outcome:rin_nlm",
+    "outcome:stellar303_stat",
+    "outcome:tribe2_summary",
+    "outcome:zeb1_gbm_glass",
+    "outcome:zeb1_ov_arm_interaction",
+    "outcome:zeb1_ov_gse140082"
+  ],
+  "Synthetic-Lethality/sl_agent/kb/models.py": [
+    "sl_engine:models_DrugRecommendation",
+    "sl_engine:models_EvidenceTier",
+    "sl_engine:models_KBEvidence",
+    "sl_engine:models_ResponseType",
+    "sl_engine:models_SourceKB"
+  ],
+  "Synthetic-Lethality/sl_agent/kb/evidence_fuser.py": [
+    "sl_engine:evidence_fuser__confidence",
+    "sl_engine:evidence_fuser__consensus_tier"
+  ],
+  "Synthetic-Lethality/sl_agent/multimodal/models.py": [
+    "sl_engine:models_module"
+  ],
+  "Synthetic-Lethality/sl_agent/multimodal/modality_fuser.py": [
+    "sl_engine:modality_fuser_module"
+  ],
+  "Synthetic-Lethality/sl_agent/multimodal/pharmacologic_analyzer.py": [
+    "sl_engine:pharmacologic_analyzer_module"
+  ],
+  "Synthetic-Lethality/sl_agent/multimodal/replication_stress.py": [
+    "sl_engine:replication_stress_module"
+  ],
+  "Synthetic-Lethality/sl_agent/multimodal/literature_receipts.py": [
+    "sl_engine:literature_receipts_module"
+  ],
+  "Synthetic-Lethality/sl_agent/multimodal/receipt_miner.py": [
+    "sl_engine:receipt_miner_module"
+  ],
+  "Synthetic-Lethality/sl_agent/multimodal/matrix_builder.py": [
+    "sl_engine:matrix_builder_module"
+  ],
+  "Synthetic-Lethality/sl_agent/multimodal/brm_extension.py": [
+    "sl_engine:brm_extension_module"
+  ],
+  "Synthetic-Lethality/sl_agent/core/sl_engine.py": [
+    "sl_engine:sl_engine_SLEngine"
+  ],
+  "Synthetic-Lethality/sl_agent/core/orchestrator.py": [
+    "sl_engine:orchestrator_module"
+  ],
+  "Synthetic-Lethality/sl_agent/core/pathway_annotator.py": [
+    "sl_engine:pathway_annotator_module"
+  ],
+  "Synthetic-Lethality/sl_agent/core/drug_mapper.py": [
+    "sl_engine:drug_mapper_module"
+  ],
+  "Synthetic-Lethality/sl_agent/brm/depmap_brm_adapter.py": [
+    "sl_engine:depmap_brm_adapter_module"
+  ],
+  "Synthetic-Lethality/sl_agent/brm/live_literature.py": [
+    "sl_engine:live_literature_module"
+  ],
+  "Synthetic-Lethality/sl_agent/brm/brm_receipts.py": [
+    "sl_engine:brm_receipts_module"
+  ],
+  "Synthetic-Lethality/sl_agent/audit/queue.py": [
+    "sl_engine:queue_AuditQueue"
+  ],
+  "Synthetic-Lethality/sl_agent/audit/routes.py": [
+    "sl_engine:routes_module"
+  ],
+  "Synthetic-Lethality/sl_agent/brm/tests/test_brm_matrix.py": [
+    "sl_engine:test_test_brm_matrix"
+  ],
+  "Synthetic-Lethality/sl_agent/brm/tests/test_brm_models.py": [
+    "sl_engine:test_test_brm_models"
+  ],
+  "Synthetic-Lethality/sl_agent/brm/tests/test_brm_receipts.py": [
+    "sl_engine:test_test_brm_receipts"
+  ],
+  "Synthetic-Lethality/sl_agent/brm/tests/test_exploit_router.py": [
+    "sl_engine:test_test_exploit_router"
+  ],
+  "Synthetic-Lethality/sl_agent/brm/tests/test_expression_stratifier.py": [
+    "sl_engine:test_test_expression_stratifier"
+  ],
+  "Synthetic-Lethality/sl_agent/multimodal/tests/test_adversarial.py": [
+    "sl_engine:test_test_adversarial"
+  ],
+  "Synthetic-Lethality/sl_agent/multimodal/tests/test_breast_cancer_expansion.py": [
+    "sl_engine:test_test_breast_cancer_expansion"
+  ],
+  "Synthetic-Lethality/sl_agent/multimodal/tests/test_mbd4_atr_strong_upgrade.py": [
+    "sl_engine:test_test_mbd4_atr_strong_upgrade"
+  ],
+  "Synthetic-Lethality/sl_agent/multimodal/tests/test_multimodal.py": [
+    "sl_engine:test_test_multimodal"
+  ],
+  "Synthetic-Lethality/sl_agent/multimodal/tests/test_prism_sprint3.py": [
+    "sl_engine:test_test_prism_sprint3"
+  ],
+  "Synthetic-Lethality/sl_agent/multimodal/tests/test_receipt_miner.py": [
+    "sl_engine:test_test_receipt_miner"
+  ],
+  "Synthetic-Lethality/sl_agent/multimodal/tests/test_rs_benchmark.py": [
+    "sl_engine:test_test_rs_benchmark"
+  ],
+  "Synthetic-Lethality/sl_agent/kb/tests/test_kb.py": [
+    "sl_engine:test_test_kb"
+  ],
+  "Synthetic-Lethality/reports/crispro_fitgap_brief_aacr2026.md": [
+    "sl_evidence_record:crispro_fitgap_brief_aacr2026",
+    "sl_tier:COMPUTATIONAL_HYPOTHESIS",
+    "sl_tier:CRISPR_VALIDATED",
+    "sl_tier:MECHANISTICALLY_GROUNDED",
+    "sl_tier:MECHANISTIC_CANDIDATE_ONLY"
+  ],
+  "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json": [
+    "brief_program:brief-1",
+    "brief_program:brief-2",
+    "brief_program:brief-3",
+    "brief_program:brief-4"
+  ],
+  "crispro-knowledge-base/crispro_capability_kb/entities/canonical_receipt/receipt_mbd4_atr_evidence_matrix_v2.json": [
+    "sl_evidence_record:mbd4_atr_evidence_matrix_v2"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_bosutinib_checkpoint/MANUSCRIPT.md": [
+    "sl_evidence_record:mbd4_mbd4_bosutinib_checkpoint_MANUSCRIPT"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_synthesis_2026_03_15.json": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_axis_c_synthesis_2026_03_15"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/cbioportal_mbd4_clinical_query.json": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_cbioportal_mbd4_clinical_query"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/mbd4_depmap_stats_receipt.json": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_mbd4_depmap_stats_receipt"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/pubmed_multimodal_query_results.json": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_pubmed_multimodal_query_results"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/sl_agent_mbd4_lof_standalone.json": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_sl_agent_mbd4_lof_standalone"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/ucec_mbd4_clinical_outcomes.json": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_ucec_mbd4_clinical_outcomes"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/wrn_specificity_validation.json": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_wrn_specificity_validation"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_preclinical/gdsc2_parpi_mbd4_summary.json": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_gdsc2_parpi_mbd4_summary"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_preclinical/parp1_parpi_spearman_MANUSCRIPT_RECEIPT.json": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_parp1_parpi_spearman_MANUSCRIPT_RECEIPT"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_preclinical/parp_axis_expression_MANUSCRIPT_RECEIPT.json": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_parp_axis_expression_MANUSCRIPT_RECEIPT"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/canonical_atr_wee1_rerun.json": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_canonical_atr_wee1_rerun"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/ceralasertib_ln_ic50_leave_one_out_MANUSCRIPT_RECEIPT.json": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_ceralasertib_ln_ic50_leave_one_out_MANUSCRIPT_RECEIPT"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/rxiv/FIGURES/final_evidence_matrix_output.json": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_final_evidence_matrix_output"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/00_README.md": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_00_README"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/README.md": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_README"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/SUPPLEMENTAL_DATA_PROVENANCE.md": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_SUPPLEMENTAL_DATA_PROVENANCE"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/RECONCILIATION_TABLE.md": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_RECONCILIATION_TABLE"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/rxiv/BUILD.md": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_BUILD"
+  ],
+  "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/rxiv/manuscript.md": [
+    "sl_evidence_record:mbd4_mbd4_parp_response_manuscript"
+  ],
+  "Synthetic-Lethality/sl_agent/brm/artifacts/brm_targetability_matrix_v2.json": [
+    "sl_evidence_record:brm_brm_targetability_matrix_v2"
+  ],
+  "Synthetic-Lethality/sl_agent/brm/artifacts/brm_targetability_matrix_v3.json": [
+    "sl_evidence_record:brm_brm_targetability_matrix_v3"
+  ],
+  "Synthetic-Lethality/sl_agent/brm/artifacts/brm_universe_v1.json": [
+    "sl_evidence_record:brm_brm_universe_v1"
+  ],
+  "Synthetic-Lethality/reports/gap_report_aacr2026_final.md": [
+    "sl_evidence_record:gap_report_aacr2026_final"
+  ],
+  "Synthetic-Lethality/reports/gap_report_aacr2026_interim.md": [
+    "sl_evidence_record:gap_report_aacr2026_interim"
+  ],
+  "Synthetic-Lethality/INTEGRATION_SPRINT1_content.md": [
+    "sl_evidence_record:doc_INTEGRATION_SPRINT1_content"
+  ],
+  "Synthetic-Lethality/INTEGRATION_SPRINT3.md": [
+    "sl_evidence_record:doc_INTEGRATION_SPRINT3"
+  ],
+  "Synthetic-Lethality/INTEGRATION_SPRINT4.md": [
+    "sl_evidence_record:doc_INTEGRATION_SPRINT4"
+  ],
+  "Synthetic-Lethality/INTEGRATION_SPRINT4S.md": [
+    "sl_evidence_record:doc_INTEGRATION_SPRINT4S"
+  ],
+  "Synthetic-Lethality/SPRINT4S_ARTIFACT_AUDIT.md": [
+    "sl_evidence_record:doc_SPRINT4S_ARTIFACT_AUDIT"
+  ],
+  "Synthetic-Lethality/rs_patch_spec.md": [
+    "sl_evidence_record:doc_rs_patch_spec"
+  ],
+  "Synthetic-Lethality/rs_phase2_spec.md": [
+    "sl_evidence_record:doc_rs_phase2_spec"
+  ],
+  "Synthetic-Lethality/sprint1_audit_spec.md": [
+    "sl_evidence_record:doc_sprint1_audit_spec"
+  ],
+  "Synthetic-Lethality/sprint2_miner_spec.md": [
+    "sl_evidence_record:doc_sprint2_miner_spec"
+  ],
+  "Synthetic-Lethality/CRISPRO_SL_AGENT_DEBRIEF.mdc": [
+    "sl_evidence_record:doc_CRISPRO_SL_AGENT_DEBRIEF"
+  ],
+  "Synthetic-Lethality/docs/positioning/02_patent_filing_briefs.md": [
+    "sl_evidence_record:doc_02_patent_filing_briefs"
+  ],
+  "Synthetic-Lethality/positioning/05_evidence_memo_gap_closure.md": [
+    "sl_evidence_record:doc_05_evidence_memo_gap_closure"
+  ],
+  "Synthetic-Lethality/docs/manuscripts/sl_engine_positioning.md": [
+    "sl_evidence_record:doc_sl_engine_positioning"
+  ],
+  "Synthetic-Lethality/docs/manuscripts/path_a_cross_indication_proof.md": [
+    "sl_evidence_record:doc_path_a_cross_indication_proof"
+  ],
+  "Synthetic-Lethality/docs/manuscripts/brm_graveyard_perspective_v2.md": [
+    "sl_evidence_record:doc_brm_graveyard_perspective_v2"
+  ],
+  "Synthetic-Lethality/docs/manuscripts/brm_graveyard_perspective_v3.md": [
+    "sl_evidence_record:doc_brm_graveyard_perspective_v3"
+  ],
+  "Synthetic-Lethality/docs/manuscripts/8d_vector_run_results.json": [
+    "sl_evidence_record:doc_8d_vector_run_results"
+  ],
+  "Synthetic-Lethality/docs/manuscripts/refs/section61_antigen_escape_refs.json": [
+    "sl_evidence_record:doc_section61_antigen_escape_refs"
+  ],
+  "Synthetic-Lethality/docs/positioning/01_competitive_landscape.md": [
+    "sl_evidence_record:doc_01_competitive_landscape"
+  ],
+  "Synthetic-Lethality/docs/positioning/03_failure_autopsy_bd_briefs.md": [
+    "sl_evidence_record:doc_03_failure_autopsy_bd_briefs"
+  ],
+  "crispro-knowledge-base/crispro_capability_kb/entities/known_bug/bug_mrtx1719_wrn_mismap.json": [
+    "sl_evidence_record:mrtx1719_wrn_active_bug"
+  ],
+  "scientist-monai-moat/docs/model_cards/biopsy_medsiglip_probe.md": [
+    "arbiter_model:biopsy_medsiglip_probe"
+  ],
+  "scientist-monai-moat/docs/model_cards/errata.md": [
+    "arbiter_model:errata",
+    "regulatory_posture:oncology_arbiter_ruo"
+  ],
+  "scientist-monai-moat/docs/model_cards/frontend_spa.md": [
+    "arbiter_model:frontend_spa"
+  ],
+  "scientist-monai-moat/docs/model_cards/medgemma_1_27b.md": [
+    "arbiter_model:medgemma_1_27b"
+  ],
+  "scientist-monai-moat/docs/model_cards/medgemma_1_5_4b.md": [
+    "arbiter_model:medgemma_1_5_4b"
+  ],
+  "scientist-monai-moat/docs/model_cards/medsiglip_448.md": [
+    "arbiter_model:medsiglip_448"
+  ],
+  "scientist-monai-moat/docs/model_cards/monai_detector_heuristic.md": [
+    "arbiter_model:monai_detector_heuristic"
+  ],
+  "scientist-monai-moat/docs/model_cards/nsclc_lung_heuristic_v0.md": [
+    "arbiter_model:nsclc_lung_heuristic_v0"
+  ],
+  "scientist-monai-moat/docs/model_cards/report_parser_clinicalbert_v1.md": [
+    "arbiter_model:report_parser_clinicalbert_v1"
+  ],
+  "scientist-monai-moat/docs/model_cards/siglip_base_patch16_224.md": [
+    "arbiter_model:siglip_base_patch16_224"
+  ],
+  "scientist-monai-moat/docs/model_cards/therapy_nccn_lite.md": [
+    "arbiter_model:therapy_nccn_lite"
+  ],
+  "scientist-monai-moat/docs/model_cards/txgemma_9b_chat.md": [
+    "arbiter_model:txgemma_9b_chat"
+  ],
+  "scientist-monai-moat/README.md": [
+    "arbiter_layer:l1_gateway",
+    "arbiter_layer:l2_input_normalizer",
+    "arbiter_layer:l3_evidence_retriever",
+    "arbiter_layer:l4a_generator",
+    "arbiter_layer:l4b_reflection",
+    "arbiter_layer:l4c_ranker",
+    "arbiter_layer:l5_arbiter_output",
+    "co_scientist_role:elo_tournament",
+    "co_scientist_role:evolution",
+    "co_scientist_role:generation",
+    "co_scientist_role:meta_review",
+    "co_scientist_role:ranking",
+    "co_scientist_role:reflection"
+  ],
+  "scientist-monai-moat/docs/PROGRESS_LEDGER.json": [
+    "user_story:us-01",
+    "user_story:us-02",
+    "user_story:us-03",
+    "user_story:us-04",
+    "user_story:us-05"
+  ],
+  "scientist-monai-moat/docs/proofs/cbis_ddsm_logreg_v1_metrics.json": [
+    "calibration_proof:cbis_ddsm_logreg_v1_metrics"
+  ],
+  "scientist-monai-moat/src/oncology_arbiter/arbiter/models/biopsy_arbiter_template_v0.json": [
+    "arbiter_template:biopsy_arbiter_template_v0"
+  ],
+  "scientist-monai-moat/src/oncology_arbiter/arbiter/models/biopsy_probe_v0.json": [
+    "arbiter_template:biopsy_probe_v0"
+  ],
+  "scientist-monai-moat/src/oncology_arbiter/arbiter/models/screening_arbiter_template_v0.json": [
+    "arbiter_template:screening_arbiter_template_v0"
+  ],
+  "scientist-monai-moat/src/oncology_arbiter/arbiter/models/therapy_arbiter_template_v0.json": [
+    "arbiter_template:therapy_arbiter_template_v0"
+  ],
+  "scientist-monai-moat/src/oncology_arbiter/arbiter/models/therapy_rules_v0.json": [
+    "arbiter_template:therapy_rules_v0"
+  ],
+  "scientist-monai-moat/src/oncology_arbiter/api/static/demo_samples/ak_mbd4_lof_case.json": [
+    "demo_sample:ak_mbd4_lof_case"
+  ],
+  "scientist-monai-moat/src/oncology_arbiter/api/static/demo_samples/biopsy.json": [
+    "demo_sample:biopsy"
+  ],
+  "scientist-monai-moat/src/oncology_arbiter/api/static/demo_samples/case_full.json": [
+    "demo_sample:case_full"
+  ],
+  "scientist-monai-moat/src/oncology_arbiter/api/static/demo_samples/elo_rank.json": [
+    "demo_sample:elo_rank"
+  ],
+  "scientist-monai-moat/src/oncology_arbiter/api/static/demo_samples/nsclc.json": [
+    "demo_sample:nsclc"
+  ],
+  "scientist-monai-moat/src/oncology_arbiter/api/static/demo_samples/screening.json": [
+    "demo_sample:screening"
+  ],
+  "kb_planner_lib.py::GOVERNANCE_ITEMS (mirrored from user Custom Instructions)": [
+    "gov:brief_2_hypothesis",
+    "gov:dl_07_quarantined",
+    "gov:gbm_zeb1_closed",
+    "gov:latify_quarantined",
+    "gov:mbd4_correction_lock",
+    "gov:mrtx1719_wrn_bug",
+    "gov:path_a_locked",
+    "gov:path_b_prohibited",
+    "gov:pc_02_downgraded",
+    "gov:sc_001_active_conflict"
+  ],
+  "Custom Instructions (Fahad Kiani, 2026-04-28 8D remediation)": [
+    "claim:ct_01_formula",
+    "claim:ct_02_formula",
+    "claim:ct_03_latify",
+    "claim:dl_03_formula",
+    "claim:dl_05_latify",
+    "claim:dl_07_ddr",
+    "claim:pc_02_prediction",
+    "claim:pc_05_formula",
+    "claim:pc_06_latify"
+  ],
+  "crispro-backend-v3-push/layer4_output/pharma_routes.py": [
+    "code_module:layer4_output/pharma_routes.py",
+    "endpoint_ref:GET /governance/status",
+    "endpoint_ref:POST /break-crc/fit-gap",
+    "endpoint_ref:POST /ceacam5/strategy",
+    "endpoint_ref:POST /matching-rules/evaluate",
+    "endpoint_ref:POST /mss-crc/io-permissiveness",
+    "endpoint_ref:POST /sl-bridge/evaluate"
+  ],
+  "crispro-backend-v3-push/layer4_output/brain_met_routes.py": [
+    "code_module:layer4_output/brain_met_routes.py",
+    "endpoint_ref:POST /assess"
+  ],
+  "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py": [
+    "code_module:layer4_output/pharma_dataset_routes.py",
+    "endpoint_ref:GET /canonical/vectors",
+    "endpoint_ref:GET /epidemiology/ceacam5",
+    "endpoint_ref:POST /ceacam5/decode",
+    "endpoint_ref:POST /ddr/evaluate",
+    "endpoint_ref:POST /escapemap/ov"
+  ],
+  "crispro-backend-v2/api/routers/canine.py": [
+    "code_module:api/routers/canine.py",
+    "endpoint_ref:GET /tcc/tests/{pet_id}",
+    "endpoint_ref:POST /tcc/analyze-tests",
+    "endpoint_ref:POST /tcc/compounds",
+    "endpoint_ref:POST /tcc/dosage",
+    "endpoint_ref:POST /tcc/dosage/panel",
+    "endpoint_ref:POST /tcc/pipeline",
+    "endpoint_ref:POST /tcc/recipe",
+    "endpoint_ref:POST /tcc/score",
+    "endpoint_ref:POST /tcc/tests"
+  ],
+  "crispro-backend-v3-push/layer4_output/demo_router.py": [
+    "code_module:layer4_output/demo_router.py",
+    "endpoint_ref:GET /canonical-break-crc",
+    "endpoint_ref:GET /evidence-anchors",
+    "endpoint_ref:GET /governance-guardrails",
+    "endpoint_ref:GET /health",
+    "endpoint_ref:POST /full-pipeline"
+  ],
+  "crispro-backend-v3-push/layer4_output/rag_routes.py": [
+    "code_module:layer4_output/rag_routes.py",
+    "endpoint_ref:GET /history/{session_id}",
+    "endpoint_ref:GET /sessions/{user_id}",
+    "endpoint_ref:POST /chat/{partner_id}",
+    "endpoint_ref:POST /evaluate"
+  ],
+  "crispro-backend-v2/api/routers/evo.py": [
+    "code_module:api/routers/evo.py",
+    "endpoint_ref:POST /score",
+    "endpoint_ref:POST /score_batch",
+    "endpoint_ref:POST /score_variant_exon",
+    "endpoint_ref:POST /score_variant_multi",
+    "endpoint_ref:POST /score_variant_probe",
+    "endpoint_ref:POST /score_variant_profile",
+    "endpoint_ref:POST /score_variant_with_activations",
+    "endpoint_ref:POST /warmup"
+  ],
+  "crispro-backend-v2/api/routers/kb/endpoints/client.py": [
+    "code_module:api/routers/kb/endpoints/client.py",
+    "endpoint_ref:GET /cohort-coverage/{gene}",
+    "endpoint_ref:GET /gene/{gene}",
+    "endpoint_ref:GET /pathways",
+    "endpoint_ref:GET /variant"
+  ],
+  "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py": [
+    "code_module:layer4_output/pharma_wave3_routes.py",
+    "endpoint_ref:GET /stc1010/canonical",
+    "endpoint_ref:POST /brief/programs",
+    "endpoint_ref:POST /regonivo/decode",
+    "endpoint_ref:POST /stc1010/position"
+  ],
+  "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py": [
+    "code_module:layer4_output/clinical_trials_routes.py",
+    "endpoint_ref:GET /status",
+    "endpoint_ref:GET /{nct_id}",
+    "endpoint_ref:POST /match",
+    "endpoint_ref:POST /mss-crc-scan"
+  ],
+  "crispro-backend-v2/api/routers/evidence/jobs.py": [
+    "code_module:api/routers/evidence/jobs.py",
+    "endpoint_ref:GET /job/{job_id}",
+    "endpoint_ref:POST /align",
+    "endpoint_ref:POST /crawl",
+    "endpoint_ref:POST /summarize"
+  ],
+  "crispro-backend-v2/api/routers/patient.py": [
+    "code_module:api/routers/patient.py",
+    "endpoint_ref:DELETE /profile/{user_id}",
+    "endpoint_ref:GET /ca125/history/{user_id}",
+    "endpoint_ref:GET /profile/{user_id}",
+    "endpoint_ref:POST /ca125/record/{user_id}",
+    "endpoint_ref:POST /profile/{user_id}",
+    "endpoint_ref:PUT /profile"
+  ],
+  "crispro-backend-v2/api/routers/ayesha_therapy_fit.py": [
+    "code_module:api/routers/ayesha_therapy_fit.py",
+    "endpoint_ref:GET /completeness",
+    "endpoint_ref:GET /drug/{drugname}",
+    "endpoint_ref:GET /panel_catalog",
+    "endpoint_ref:POST /targeted-brief"
+  ],
+  "crispro-backend-v2/api/routers/kb/endpoints/admin.py": [
+    "code_module:api/routers/kb/endpoints/admin.py",
+    "endpoint_ref:POST /reload"
+  ],
+  "crispro-backend-v2/api/routers/sessions.py": [
+    "code_module:api/routers/sessions.py",
+    "endpoint_ref:GET /api/sessions",
+    "endpoint_ref:GET /api/sessions/health",
+    "endpoint_ref:GET /api/sessions/{session_id}",
+    "endpoint_ref:GET /api/sessions/{session_id}/items",
+    "endpoint_ref:POST /api/sessions",
+    "endpoint_ref:POST /api/sessions/{session_id}/items"
+  ],
+  "crispro-backend-v2/api/routers/orchestrate.py": [
+    "code_module:api/routers/orchestrate.py",
+    "endpoint_ref:GET /orchestrate/state/{patient_id}",
+    "endpoint_ref:GET /orchestrate/states",
+    "endpoint_ref:GET /orchestrate/status/{patient_id}",
+    "endpoint_ref:GET /patients",
+    "endpoint_ref:GET /patients/{patient_id}",
+    "endpoint_ref:GET /patients/{patient_id}/care-plan",
+    "endpoint_ref:GET /patients/{patient_id}/history",
+    "endpoint_ref:POST /orchestrate/full",
+    "endpoint_ref:POST /orchestrate/full/upload"
+  ],
+  "crispro-backend-v2/api/routers/orchestrator.py": [
+    "code_module:api/routers/orchestrator.py",
+    "endpoint_ref:GET /state/{patient_id}",
+    "endpoint_ref:GET /states",
+    "endpoint_ref:GET /status/{patient_id}",
+    "endpoint_ref:POST /event",
+    "endpoint_ref:POST /full"
+  ],
+  "crispro-backend-v2/api/routers/admin.py": [
+    "code_module:api/routers/admin.py",
+    "endpoint_ref:GET /activity/logs",
+    "endpoint_ref:GET /activity/sessions",
+    "endpoint_ref:GET /analytics/overview",
+    "endpoint_ref:GET /analytics/usage",
+    "endpoint_ref:GET /users",
+    "endpoint_ref:GET /users/{user_id}",
+    "endpoint_ref:POST /users/{user_id}/activate",
+    "endpoint_ref:POST /users/{user_id}/promote",
+    "endpoint_ref:POST /users/{user_id}/suspend",
+    "endpoint_ref:PUT /users/{user_id}"
+  ],
+  "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py": [
+    "code_module:layer1_engines/brm_engine/api/routes.py",
+    "endpoint_ref:GET /af3-spec/{gene}",
+    "endpoint_ref:GET /repressor/{gene}",
+    "endpoint_ref:GET /targets/{gene}",
+    "endpoint_ref:POST /score-variant",
+    "endpoint_ref:POST /targets"
+  ],
+  "crispro-backend-v2/api/routers/auth.py": [
+    "code_module:api/routers/auth.py",
+    "endpoint_ref:GET /api/auth/health",
+    "endpoint_ref:GET /api/auth/me",
+    "endpoint_ref:GET /api/auth/mfa/status",
+    "endpoint_ref:GET /api/auth/profile",
+    "endpoint_ref:POST /api/auth/login",
+    "endpoint_ref:POST /api/auth/logout",
+    "endpoint_ref:POST /api/auth/mfa/disable",
+    "endpoint_ref:POST /api/auth/mfa/generate-secret",
+    "endpoint_ref:POST /api/auth/mfa/verify",
+    "endpoint_ref:POST /api/auth/mfa/verify-enrollment",
+    "endpoint_ref:POST /api/auth/refresh",
+    "endpoint_ref:POST /api/auth/signup",
+    "endpoint_ref:PUT /api/auth/profile"
+  ],
+  "crispro-backend-v2/api/routers/agents.py": [
+    "code_module:api/routers/agents.py",
+    "endpoint_ref:DELETE /{agent_id}",
+    "endpoint_ref:GET /alerts",
+    "endpoint_ref:GET /synthetic_lethality/depmap-status",
+    "endpoint_ref:GET /synthetic_lethality/health",
+    "endpoint_ref:GET /{agent_id}",
+    "endpoint_ref:GET /{agent_id}/results",
+    "endpoint_ref:GET /{agent_id}/runs",
+    "endpoint_ref:POST /alerts/{alert_id}/read",
+    "endpoint_ref:POST /results/{result_id}/read",
+    "endpoint_ref:POST /synthetic_lethality",
+    "endpoint_ref:POST /{agent_id}/pause",
+    "endpoint_ref:POST /{agent_id}/resume",
+    "endpoint_ref:POST /{agent_id}/run",
+    "endpoint_ref:PUT /{agent_id}"
+  ],
+  "crispro-backend-v2/api/routers/ayesha_dossiers.py": [
+    "code_module:api/routers/ayesha_dossiers.py",
+    "endpoint_ref:GET /detail/{nct_id}",
+    "endpoint_ref:GET /export/{nct_id}",
+    "endpoint_ref:GET /list",
+    "endpoint_ref:GET /stats",
+    "endpoint_ref:POST /create"
+  ],
+  "crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py": [
+    "code_module:layer1_engines/synthetic_lethality/api/routes.py",
+    "endpoint_ref:GET /cancer_types",
+    "endpoint_ref:GET /genes",
+    "endpoint_ref:GET /result/{job_id}",
+    "endpoint_ref:POST /analyze/async"
+  ],
+  "crispro-backend-v2/api/routers/dossiers_intelligence.py": [
+    "code_module:api/routers/dossiers_intelligence.py",
+    "endpoint_ref:GET /list/{patient_id}",
+    "endpoint_ref:GET /{patient_id}/{nct_id}",
+    "endpoint_ref:POST /batch-generate",
+    "endpoint_ref:POST /comprehensive-analysis",
+    "endpoint_ref:POST /filter",
+    "endpoint_ref:POST /generate"
+  ],
+  "crispro-backend-v2/api/middleware/admin_middleware.py": [
+    "code_module:api/middleware/admin_middleware.py",
+    "endpoint_ref:GET /api/admin/users",
+    "endpoint_ref:GET /api/admin/users/{user_id}"
+  ],
+  "crispro-backend-v2/api/routers/kb/endpoints/search.py": [
+    "code_module:api/routers/kb/endpoints/search.py",
+    "endpoint_ref:POST /vector"
+  ],
+  "crispro-backend-v3-push/layer1_engines/marrowguard/api/routes.py": [
+    "code_module:layer1_engines/marrowguard/api/routes.py",
+    "endpoint_ref:POST /analyze"
+  ],
+  "crispro-backend-v2/api/routers/guidance.py": [
+    "code_module:api/routers/guidance.py",
+    "endpoint_ref:POST /chemo",
+    "endpoint_ref:POST /radonc"
+  ],
+  "crispro-backend-v3-push/layer4_output/ayesha_bundle_routes.py": [
+    "code_module:layer4_output/ayesha_bundle_routes.py",
+    "endpoint_ref:GET /scenarios",
+    "endpoint_ref:POST /bundle"
+  ],
+  "crispro-backend-v2/api/routers/evidence/literature.py": [
+    "code_module:api/routers/evidence/literature.py",
+    "endpoint_ref:POST /explain",
+    "endpoint_ref:POST /literature",
+    "endpoint_ref:POST /test"
+  ],
+  "crispro-backend-v2/api/routers/evidence/clinvar.py": [
+    "code_module:api/routers/evidence/clinvar.py",
+    "endpoint_ref:GET /clinvar",
+    "endpoint_ref:POST /deep_analysis"
+  ],
+  "crispro-backend-v3-push/layer4_output/compat_routes.py": [
+    "code_module:layer4_output/compat_routes.py",
+    "endpoint_ref:POST /agents/synthetic_lethality",
+    "endpoint_ref:POST /guidance/synthetic_lethality"
+  ],
+  "crispro-backend-v2/api/routers/evidence/extraction.py": [
+    "code_module:api/routers/evidence/extraction.py",
+    "endpoint_ref:POST /extract"
+  ],
+  "crispro-backend-v2/api/routers/kb/endpoints/items.py": [
+    "code_module:api/routers/kb/endpoints/items.py",
+    "endpoint_ref:GET /{item_id}"
+  ],
+  "crispro-backend-v2/api/routers/evidence/rag.py": [
+    "code_module:api/routers/evidence/rag.py",
+    "endpoint_ref:GET /rag-stats",
+    "endpoint_ref:POST /rag-add-variant",
+    "endpoint_ref:POST /rag-query"
+  ],
+  "crispro-backend-v2/api/middleware/auth_middleware.py": [
+    "code_module:api/middleware/auth_middleware.py",
+    "endpoint_ref:POST /api/endpoint"
+  ],
+  "crispro-backend-v2/api/routers/ayesha_trials/routes.py": [
+    "code_module:api/routers/ayesha_trials/routes.py",
+    "endpoint_ref:POST /search"
+  ],
+  "crispro-backend-v2/api/routers/kb/endpoints/validation.py": [
+    "code_module:api/routers/kb/endpoints/validation.py",
+    "endpoint_ref:GET /item/{item_id}"
+  ],
+  "?": [
+    "code_module:api/services/resistance_detection_service.py",
+    "code_module:api/services/resistance_evidence_tiers.py",
+    "code_module:api/services/resistance_playbook_service.py",
+    "code_module:api/services/resistance_prophet_service.py",
+    "code_module:crispro_kg_v2/kg_modules/trials_module.json"
+  ],
+  "crispro-backend-v2/api/routers/evidence2.py": [
+    "code_module:api/routers/evidence2.py"
+  ],
+  "crispro-backend-v2/api/routers/evidence/__init__.py": [
+    "code_module:api/routers/evidence/__init__.py"
+  ],
+  "crispro-backend-v3-push/layer4_output/therapy_fit_bundle_routes.py": [
+    "code_module:layer4_output/therapy_fit_bundle_routes.py"
+  ]
+}

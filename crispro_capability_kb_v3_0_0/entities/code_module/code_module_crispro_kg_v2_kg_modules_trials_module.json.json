@@ -1,0 +1,17 @@
+{
+  "id": "code_module:crispro_kg_v2/kg_modules/trials_module.json",
+  "type": "code_module",
+  "name": "crispro_kg_v2/kg_modules/trials_module.json",
+  "source_receipts": [
+    {
+      "source_file": "?",
+      "line": null
+    }
+  ],
+  "verbatim_evidence": [],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

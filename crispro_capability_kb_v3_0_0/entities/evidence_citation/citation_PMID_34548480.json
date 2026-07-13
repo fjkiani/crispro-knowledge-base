@@ -1,0 +1,23 @@
+{
+  "id": "citation:PMID_34548480",
+  "type": "evidence_citation",
+  "name": "PMID_34548480",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/quantitative_anchors.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Nature Commun 2021 \u2014 ATRi RS-dependent SL; RS-Low/High stratification",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "program:program_asset_historical_benchmark",
+  "type": "trial_arm",
+  "name": "program_asset_historical_benchmark",
+  "source_receipts": [
+    {
+      "source_file": "Brenus/engagements/brenus/trial_intelligence/program_assets/program_asset_historical_benchmark.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"program_header\": {\"program_id\": \"HISTORICAL_BENCHMARK\", \"program_name\": \"mFOLFOX6 \\u00b1 Bevacizumab Backbone Benchmark Set\", \"asset_version\": \"v1\", \"date\": \"2026-06-18\", \"admissibility\": \"external_safe\", \"entry_count\": 6, \"glb_trials\": [], \"generated_by\": \"CrisPRO \\u2014 Brenus Pharma Engagement\"}, \"value_proposition\": {\"headline\": \"6-entry mFOLFOX6 \\u00b1 bevacizumab backbone benchmark set \\u2",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

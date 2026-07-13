@@ -1,0 +1,23 @@
+{
+  "id": "sl_evidence_record:doc_section61_antigen_escape_refs",
+  "type": "sl_evidence_record",
+  "name": "section61_antigen_escape_refs",
+  "source_receipts": [
+    {
+      "source_file": "Synthetic-Lethality/docs/manuscripts/refs/section61_antigen_escape_refs.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "SL positioning/spec document section61_antigen_escape_refs.json",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

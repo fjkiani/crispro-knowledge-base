@@ -1,0 +1,27 @@
+{
+  "id": "gene:BRAF",
+  "type": "gene",
+  "name": "BRAF",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/api/resources/cosmic_hotspots.json",
+      "json_pointer": "/BRAF",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "hotspot_variants=4",
+      "found": true
+    },
+    {
+      "claim": "sample={\"V600E\": {\"codon\": 600, \"aa_change\": \"V600E\", \"cosmic_id\": \"COSV52742978\", \"evidence\": \"highly_recurrent\", \"frequency_in_cancer\": 0.66, \"pathway\": \"MAPK\", \"cancers\": [\"melanoma\", \"thyroid\", \"colorectal\", \"ovarian\"], \"source\": \"COSMIC v98\"}, \"V600K\": {\"codon\": 600, \"aa_change\": \"V600K\", \"cosmic_id\":",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

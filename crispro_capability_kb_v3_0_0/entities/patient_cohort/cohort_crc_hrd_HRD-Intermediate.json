@@ -1,0 +1,23 @@
+{
+  "id": "cohort:crc_hrd_HRD-Intermediate",
+  "type": "patient_cohort",
+  "name": "CRC HRD HRD-Intermediate",
+  "source_receipts": [
+    {
+      "source_file": "Brenus/data/ranker_results/crc_ranker_summary_v1.json",
+      "json_pointer": "/hrd_subgroups/HRD-Intermediate",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"n\": 225, \"stc1010_mean_fit\": 0.5545, \"delta_mean\": -0.1731, \"recall_at_3\": 0.44, \"mrr\": 0.2864}",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

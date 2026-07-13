@@ -1,0 +1,23 @@
+{
+  "id": "cohort:crc_high_tmb_subgroup",
+  "type": "patient_cohort",
+  "name": "CRC high_tmb_subgroup (from crc_ranker_v1)",
+  "source_receipts": [
+    {
+      "source_file": "Brenus/data/ranker_results/crc_ranker_summary_v1.json",
+      "json_pointer": "/high_tmb_subgroup",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"threshold\": \"TMB \\u2265 25 mut/Mb\", \"n\": 9, \"stc1010_mean_fit\": 0.8644, \"delta_mean\": 0.143, \"recall_at_3\": 1.0, \"mrr\": 1.0, \"rank_1_rate\": 1.0}",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "outcome:break_crc_fit",
+  "type": "outcome_metric",
+  "name": "BreAK CRC-001 fit_A=0.7375 (PATH A)",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/quantitative_anchors.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "BreAK CRC-001 fit_A=0.7375 (PATH A)",
+      "found": true
+    },
+    {
+      "claim": "path_a_recomputation_lock_v1",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

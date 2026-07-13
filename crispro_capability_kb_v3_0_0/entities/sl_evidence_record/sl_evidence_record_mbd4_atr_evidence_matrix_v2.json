@@ -1,0 +1,26 @@
+{
+  "id": "sl_evidence_record:mbd4_atr_evidence_matrix_v2",
+  "type": "sl_evidence_record",
+  "name": "MBD4 ATR evidence matrix v2 (canonical receipt)",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_capability_kb/entities/canonical_receipt/receipt_mbd4_atr_evidence_matrix_v2.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"id\": \"receipt:mbd4_atr_evidence_matrix_v2\", \"type\": \"canonical_receipt\", \"name\": \"MBD4 \\u00d7 ATR/WEE1 evidence matrix (v2)\", \"what_it_solves\": \"The canonical evidence receipt for the MBD4 \\u00d7 ATR/WEE1 axis \\u2014 the highest-stakes claim CrisPRO makes for this bundle.\", \"how_it_solves\": \"Structured JSON with one modality_cell per evidence source (CRISPR co-dependency, CRISPR MSI-stratified, PRISM, GDSC2, TCGA-OV, UCEC survival, pan-cancer LOF, dependency probability). Each cell has a verdict + why-it-does-not-support-STRONG. The overall_verdict block is the ground truth for the tier stat",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "gov:mbd4_correction_lock",
+    "sl_tier:MECHANISTIC_CANDIDATE_ONLY"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

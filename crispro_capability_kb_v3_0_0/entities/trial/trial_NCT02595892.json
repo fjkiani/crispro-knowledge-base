@@ -1,0 +1,42 @@
+{
+  "id": "trial:NCT02595892",
+  "type": "trial",
+  "name": "NCT02595892",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+      "json_pointer": "/NCT02595892",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "moa_vector={\"ddr\": 0.9, \"mapk\": 0.0, \"pi3k\": 0.0, \"vegf\": 0.0, \"her2\": 0.0, \"io\": 0.0, \"efflux\": 0.0, \"rss\": 0.75}",
+      "found": true
+    },
+    {
+      "claim": "confidence=0.92",
+      "found": true
+    },
+    {
+      "claim": "source=retroactive_validation",
+      "found": true
+    },
+    {
+      "claim": "reviewed_by=Zo/CrisPRO",
+      "found": true
+    },
+    {
+      "claim": "title=Gemcitabine Hydrochloride Alone or With M6620 in Treating Patients With Recurrent Ovarian, Primary Peritoneal, or Fallopian Tube Cancer",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "axis8d:ddr",
+    "axis8d:rss"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

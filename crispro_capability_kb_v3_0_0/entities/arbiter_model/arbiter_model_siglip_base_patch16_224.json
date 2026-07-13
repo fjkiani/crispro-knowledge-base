@@ -1,0 +1,29 @@
+{
+  "id": "arbiter_model:siglip_base_patch16_224",
+  "type": "arbiter_model",
+  "name": "Model card: `google/siglip-base-patch16-224` (ungated public SigLIP proxy)",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/docs/model_cards/siglip_base_patch16_224.md",
+      "json_pointer": null,
+      "line_range": "1-100"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "# Model card: `google/siglip-base-patch16-224` (ungated public SigLIP proxy)\n\nThis is the **public, ungated** SigLIP checkpoint used by `oncology-arbiter`\nas a smoke-test proxy when the gated `google/medsiglip-448` cannot be\naccessed. It is a general-domain SigLIP, NOT a medical model.\n\n## Identifiers\n\n| Field | Value |\n|---|---|\n| HuggingFace repo | `google/siglip-base-patch16-224` |\n| Model fami",
+      "found": true
+    },
+    {
+      "claim": "ruo_marker_present=True",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "regulatory_posture:oncology_arbiter_ruo"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

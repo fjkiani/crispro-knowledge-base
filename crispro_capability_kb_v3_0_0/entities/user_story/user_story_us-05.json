@@ -1,0 +1,23 @@
+{
+  "id": "user_story:us-05",
+  "type": "user_story",
+  "name": "US-05",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/docs/PROGRESS_LEDGER.json",
+      "json_pointer": "/user_stories/id=US-05",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"id\": \"US-05\", \"as_a\": \"IRB reviewer\", \"i_want\": \"every API response to carry disclaimer, caveat, provenance, honesty_gate, evidence, warnings\", \"so_that\": \"no consumer can accidentally treat a research output as clinical\", \"endpoints\": [\"all\"], \"status\": \"LIVE\", \"not_wired_reason\": null, \"evidence\": [\"src/oncology_arbiter/api/schemas.py::ApiEnvelope\", \"tests/unit/test_honesty.py\"]}",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

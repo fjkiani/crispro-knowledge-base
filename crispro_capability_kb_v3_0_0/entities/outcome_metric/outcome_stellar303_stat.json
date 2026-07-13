@@ -1,0 +1,27 @@
+{
+  "id": "outcome:stellar303_stat",
+  "type": "outcome_metric",
+  "name": "STELLAR-303 First Phase 3 IO win MSS mCRC",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/quantitative_anchors.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "STELLAR-303 First Phase 3 IO win MSS mCRC \u2014 OS HR 0.80, p=0.0045",
+      "found": true
+    },
+    {
+      "claim": "zanzalintinib+atezolizumab Lancet 2025",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

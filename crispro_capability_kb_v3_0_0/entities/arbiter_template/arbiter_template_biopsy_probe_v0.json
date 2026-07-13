@@ -1,0 +1,23 @@
+{
+  "id": "arbiter_template:biopsy_probe_v0",
+  "type": "arbiter_template",
+  "name": "biopsy_probe_v0",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/src/oncology_arbiter/arbiter/models/biopsy_probe_v0.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"$schema_version\": \"biopsy_probe_v0\", \"classes\": [\"IDC\", \"DCIS\", \"benign\"], \"weights\": [[0.03613055869936943, -0.11322924494743347, -0.045311182737350464, 0.04824502021074295, 0.12915043532848358, -0.0183872077614069, -0.11076819151639938, 0.123589426279068, -0.023432644084095955, -0.01109139434993267, -0.167301744222641, 0.11597216874361038, 0.06736522167921066, 0.09881007671356201, -0.101666562",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

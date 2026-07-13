@@ -1,0 +1,23 @@
+{
+  "id": "sl_engine:test_test_brm_receipts",
+  "type": "sl_engine_component",
+  "name": "test_brm_receipts.py (test fixture)",
+  "source_receipts": [
+    {
+      "source_file": "Synthetic-Lethality/sl_agent/brm/tests/test_brm_receipts.py",
+      "json_pointer": null,
+      "line_range": "1-end"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Pytest fixture for SL brm module",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

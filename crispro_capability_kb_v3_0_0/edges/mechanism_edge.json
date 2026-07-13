@@ -1,0 +1,121 @@
+[
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:adavosertib",
+    "dst": "axis8d:ddr",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:adavosertib targets ddr axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:ceralasertib",
+    "dst": "axis8d:ddr",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:ceralasertib targets ddr axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:niraparib",
+    "dst": "axis8d:ddr",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:niraparib targets ddr axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:olaparib",
+    "dst": "axis8d:ddr",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:olaparib targets ddr axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:talazoparib",
+    "dst": "axis8d:ddr",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:talazoparib targets ddr axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:pembrolizumab",
+    "dst": "axis8d:io",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:pembrolizumab targets io axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:nivolumab",
+    "dst": "axis8d:io",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:nivolumab targets io axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:atezolizumab",
+    "dst": "axis8d:io",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:atezolizumab targets io axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:durvalumab",
+    "dst": "axis8d:io",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:durvalumab targets io axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:encorafenib",
+    "dst": "axis8d:mapk",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:encorafenib targets mapk axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:cobimetinib",
+    "dst": "axis8d:mapk",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:cobimetinib targets mapk axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:bevacizumab",
+    "dst": "axis8d:vegf",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:bevacizumab targets vegf axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:trastuzumab",
+    "dst": "axis8d:her2",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:trastuzumab targets her2 axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:pertuzumab",
+    "dst": "axis8d:her2",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:pertuzumab targets her2 axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:encorafenib",
+    "dst": "variant:BRAF_V600E",
+    "source_file": "kb_planner_lib.py::drug_to_variant (canonical mechanism table)",
+    "evidence": "Encorafenib is a BRAF V600 selective inhibitor \u2014 MAPK axis mechanism (BEACON-CRC evidence)"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:ceralasertib",
+    "dst": "variant:TP53_R175H",
+    "source_file": "kb_planner_lib.py::drug_to_variant (canonical mechanism table)",
+    "evidence": "Ceralasertib ATR inhibition exploits TP53 R175H replication stress"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:adavosertib",
+    "dst": "variant:TP53_R175H",
+    "source_file": "kb_planner_lib.py::drug_to_variant (canonical mechanism table)",
+    "evidence": "Adavosertib WEE1 inhibition targets p53-null S/G2 checkpoint bypass"
+  }
+]

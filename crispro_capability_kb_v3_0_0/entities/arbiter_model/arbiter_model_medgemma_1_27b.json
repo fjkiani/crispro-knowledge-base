@@ -1,0 +1,29 @@
+{
+  "id": "arbiter_model:medgemma_1_27b",
+  "type": "arbiter_model",
+  "name": "Model card: `google/medgemma-27b-it` (MedGemma 1 27B multimodal)",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/docs/model_cards/medgemma_1_27b.md",
+      "json_pointer": null,
+      "line_range": "1-100"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "# Model card: `google/medgemma-27b-it` (MedGemma 1 27B multimodal)\n\nSource-of-truth: same MedGemma model card as MedGemma 1.5 4B, which reports\nMedGemma 1 27B numbers as a comparison baseline for the 1.5 4B release.\n\n## Identifiers\n\n| Field | Value |\n|---|---|\n| HuggingFace repo | `google/medgemma-27b-it` |\n| Model version | 1.0.x (MedGemma 1 line; not yet updated to 1.5) |\n| Key publication | Med",
+      "found": true
+    },
+    {
+      "claim": "ruo_marker_present=True",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "regulatory_posture:oncology_arbiter_ruo"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

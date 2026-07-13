@@ -1,0 +1,41 @@
+{
+  "id": "trial:NCT06682988",
+  "type": "trial",
+  "name": "NCT06682988",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+      "json_pointer": "/NCT06682988",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "moa_vector={\"ddr\": 0.0, \"mapk\": 0.0, \"pi3k\": 0.0, \"vegf\": 0.0, \"her2\": 0.0, \"io\": 1.0, \"efflux\": 0.0, \"rss\": 0.0}",
+      "found": true
+    },
+    {
+      "claim": "confidence=0.8",
+      "found": true
+    },
+    {
+      "claim": "source=cohere_batch_tagging",
+      "found": true
+    },
+    {
+      "claim": "reviewed_by=TrialTaggingAgent",
+      "found": true
+    },
+    {
+      "claim": "title=A Study to Assess Adverse Events and Change in Disease Activity in Participants With Platinum-Resistant Advanced High-Grade Epithelial Ovarian, Primary Peritoneal, or Fallopian Tube Cancers With High ",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "axis8d:io"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

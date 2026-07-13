@@ -1,0 +1,27 @@
+{
+  "id": "gov:path_a_locked",
+  "type": "governance_item",
+  "name": "gov:path_a_locked",
+  "source_receipts": [
+    {
+      "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS (mirrored from user Custom Instructions)",
+      "json_pointer": null,
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"status\": \"LOCKED\", \"date\": \"2026-04-28\", \"formula\": \"fit = clip((p\\u00b7t) / \\u2016t\\u2016\\u2082, 0, 1)\"}",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "status": "LOCKED",
+    "date": "2026-04-28",
+    "formula": "fit = clip((p\u00b7t) / \u2016t\u2016\u2082, 0, 1)"
+  },
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

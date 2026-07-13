@@ -1,0 +1,23 @@
+{
+  "id": "co_scientist_role:elo_tournament",
+  "type": "co_scientist_role",
+  "name": "Elo tournament",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/README.md",
+      "json_pointer": null,
+      "line_range": "co_scientist_section"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Structured pairwise ranking mechanism",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

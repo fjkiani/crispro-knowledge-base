@@ -1,0 +1,181 @@
+{
+  "kb_version": "v3.0.0",
+  "generated_at": "2026-07-13T23:26:44.854292Z",
+  "planner_contracts": {
+    "p1": {
+      "path": "/mnt/shared-workspace/shared/kb_upgrade/planner_contracts/p1_contract.json",
+      "size_bytes": 140563,
+      "sha256_16": "2386fd416d55f903"
+    },
+    "p2": {
+      "path": "/mnt/shared-workspace/shared/kb_upgrade/planner_contracts/p2_contract.json",
+      "size_bytes": 51736,
+      "sha256_16": "b3ed89650e60be1e"
+    },
+    "p3": {
+      "path": "/mnt/shared-workspace/shared/kb_upgrade/planner_contracts/p3_contract.json",
+      "size_bytes": 27210,
+      "sha256_16": "6cf0cdace1d0e750"
+    },
+    "p4": {
+      "path": "/mnt/shared-workspace/shared/kb_upgrade/planner_contracts/p4_contract.json",
+      "size_bytes": 204731,
+      "sha256_16": "f51e7dbf20464677"
+    },
+    "p5": {
+      "path": "/mnt/shared-workspace/shared/kb_upgrade/planner_contracts/p5_contract.json",
+      "size_bytes": 12193,
+      "sha256_16": "b8f530f091e171d8"
+    }
+  },
+  "executor_logs": {
+    "x1": {
+      "executor": "x1",
+      "planner_contract": "/mnt/shared-workspace/shared/kb_upgrade/planner_contracts/p1_contract.json",
+      "contract_sha256": "2386fd416d55f903f7155e26bbfb7212676ff74f09bed9f9f0633c769bcd16d2",
+      "timestamp": "2026-07-13T23:18:14.760172Z",
+      "entities_written": 228,
+      "entities_skipped_no_source": 0,
+      "by_type": {
+        "pathway_axis": 8,
+        "trial": 150,
+        "patient_cohort": 6,
+        "gene": 3,
+        "variant": 2,
+        "trial_arm": 7,
+        "biomarker": 12,
+        "outcome_metric": 16,
+        "drug": 17,
+        "evidence_citation": 7
+      },
+      "output_root": "/workspace/crispro-knowledge-base/crispro_capability_kb_v3_0_0/entities"
+    },
+    "x2": {
+      "executor": "x2",
+      "planner_contract": "/mnt/shared-workspace/shared/kb_upgrade/planner_contracts/p2_contract.json",
+      "contract_sha256": "b3ed89650e60be1ecca2dbf7a5a1a7f125aaf1add0495a600b359eb4bce0a492",
+      "timestamp": "2026-07-13T23:18:20.097074Z",
+      "entities_written": 93,
+      "entities_skipped_no_source": 8,
+      "by_type": {
+        "sl_engine_component": 37,
+        "sl_tier": 4,
+        "brief_program_deep": 4,
+        "sl_evidence_record": 48
+      },
+      "output_root": "/workspace/crispro-knowledge-base/crispro_capability_kb_v3_0_0/entities",
+      "duplicate_ids_overwritten": [
+        "sl_evidence_record:doc_02_patent_filing_briefs (appears in positioning/ and docs/positioning/ \u2014 later overwrote earlier)",
+        "sl_evidence_record:doc_8d_vector_run_results (appears as .md and .json \u2014 later overwrote earlier)"
+      ],
+      "defect_note": "P2 planner did not disambiguate paths with same stem name. Filed as defect for future P2 revision. Impact: 2 sl_evidence_record entities lost."
+    },
+    "x3": {
+      "executor": "x3",
+      "planner_contract": "/mnt/shared-workspace/shared/kb_upgrade/planner_contracts/p3_contract.json",
+      "contract_sha256": "6cf0cdace1d0e7507df7034642f691a6b666d04d0722bbc63761cec4bd690093",
+      "timestamp": "2026-07-13T23:18:48.201248Z",
+      "entities_written": 43,
+      "entities_skipped_no_source": 0,
+      "by_type": {
+        "arbiter_model": 12,
+        "arbiter_layer": 7,
+        "co_scientist_role": 6,
+        "user_story": 5,
+        "calibration_proof": 1,
+        "arbiter_template": 5,
+        "demo_sample": 6,
+        "regulatory_posture": 1
+      },
+      "output_root": "/workspace/crispro-knowledge-base/crispro_capability_kb_v3_0_0/entities"
+    },
+    "x4": {
+      "executor": "x4",
+      "planner_contract": "/mnt/shared-workspace/shared/kb_upgrade/planner_contracts/p4_contract.json",
+      "contract_sha256": "f51e7dbf20464677a423d0314fc1dab04c9122cca75dd8e519636eb331ed354a",
+      "timestamp": "2026-07-13T23:22:50.549737Z",
+      "governance_entities_written": 19,
+      "governance_by_type": {
+        "governance_item": 10,
+        "claim": 9
+      },
+      "endpoint_ref_minted": 165,
+      "code_module_minted": 46,
+      "edges_written": 576,
+      "edges_by_predicate": {
+        "implements": 209,
+        "governed_by": 280,
+        "contradicts": 1,
+        "superseded_by": 1,
+        "derived_from": 3,
+        "synthetic_lethal_edge": 0,
+        "serves": 33,
+        "owns": 21,
+        "mechanism_edge": 17,
+        "resistance_edge": 11
+      },
+      "outputs": {
+        "entities/governance_item/*.json": 10,
+        "entities/claim/*.json": 9,
+        "entities/endpoint_ref/*.json": 165,
+        "entities/code_module/*.json": 46,
+        "edges/v3_edges.json": 576,
+        "edges/<per_predicate>.json": 10
+      },
+      "dangling_edges_dropped": 8,
+      "dangling_edges_dropped_predicate": "synthetic_lethal_edge",
+      "dangling_edges_reason": "src pointed at candidate_axis entities that X2 refused to write (check G \u2014 PhD_ROADMAP re-lifts). Filed as D-P4-01."
+    }
+  },
+  "entity_stats": {
+    "total_entities": 594,
+    "by_type": {
+      "pathway_axis": 8,
+      "trial": 150,
+      "patient_cohort": 6,
+      "gene": 3,
+      "variant": 2,
+      "trial_arm": 7,
+      "biomarker": 12,
+      "outcome_metric": 16,
+      "drug": 17,
+      "evidence_citation": 7,
+      "sl_engine_component": 37,
+      "sl_tier": 4,
+      "brief_program_deep": 4,
+      "sl_evidence_record": 48,
+      "arbiter_model": 12,
+      "arbiter_layer": 7,
+      "co_scientist_role": 6,
+      "user_story": 5,
+      "calibration_proof": 1,
+      "arbiter_template": 5,
+      "demo_sample": 6,
+      "regulatory_posture": 1,
+      "governance_item": 10,
+      "claim": 9,
+      "endpoint_ref": 165,
+      "code_module": 46
+    },
+    "by_stream": {
+      "v3:audit_upgrade": 594
+    }
+  },
+  "edge_stats": {
+    "total_edges": 583,
+    "by_predicate": {
+      "serves": 33,
+      "governed_by": 287,
+      "superseded_by": 1,
+      "contradicts": 1,
+      "derived_from": 3,
+      "mechanism_edge": 17,
+      "resistance_edge": 11,
+      "implements": 209,
+      "owns": 21
+    },
+    "mechanical_count": 209,
+    "semantic_count": 374,
+    "semantic_mechanical_ratio": 1.79
+  }
+}

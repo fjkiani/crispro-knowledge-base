@@ -1,0 +1,27 @@
+{
+  "id": "outcome:rin_nlm",
+  "type": "outcome_metric",
+  "name": "RIN NLM ORR 36.4%, mOS 27.5mo, 3-year PFS 19.3%",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/quantitative_anchors.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "RIN NLM ORR 36.4%, mOS 27.5mo, 3-year PFS 19.3%",
+      "found": true
+    },
+    {
+      "claim": "PMID 39504677",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "arbiter_template:therapy_arbiter_template_v0",
+  "type": "arbiter_template",
+  "name": "therapy_arbiter_template_v0",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/src/oncology_arbiter/arbiter/models/therapy_arbiter_template_v0.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"model_name\": \"therapy_arbiter_template_v0\", \"model_type\": \"L2_regularized_logistic_regression\", \"lambda\": 0.5, \"n_training\": 0, \"n_positive\": 0, \"n_negative\": 0, \"positive_class\": \"escalate_to_neoadjuvant_chemotherapy\", \"intercept\": -1.8, \"coefficients\": {\"histology_invasive_ductal\": 0.8, \"histology_invasive_lobular\": 0.4, \"histology_ductal_carcinoma_in_situ\": -1.6, \"histology_lobular_carcinoma_",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "gov:mrtx1719_wrn_bug",
+  "type": "governance_item",
+  "name": "gov:mrtx1719_wrn_bug",
+  "source_receipts": [
+    {
+      "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS (mirrored from user Custom Instructions)",
+      "json_pointer": null,
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"status\": \"OPEN\", \"issue\": \"MRTX1719 mismapped to WRN\"}",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "status": "OPEN",
+    "issue": "MRTX1719 mismapped to WRN"
+  },
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

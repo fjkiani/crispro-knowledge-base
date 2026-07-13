@@ -1,0 +1,22 @@
+{
+  "id": "endpoint_ref:POST /regonivo/decode",
+  "type": "endpoint_ref",
+  "name": "POST /regonivo/decode",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py",
+      "line": 116
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "@router.post('/regonivo/decode') at crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py:116",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

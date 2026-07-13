@@ -1,0 +1,23 @@
+{
+  "id": "arbiter_template:therapy_rules_v0",
+  "type": "arbiter_template",
+  "name": "therapy_rules_v0",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/src/oncology_arbiter/arbiter/models/therapy_rules_v0.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"model_id\": \"nccn-lite-v0\", \"version\": \"0.0.1\", \"source_document\": \"NCCN Guidelines Version 2.2025 \\u2014 Invasive Breast Cancer / DCIS\", \"source_document_url\": \"https://www.nccn.org/professionals/physician_gls/pdf/breast.pdf\", \"authoring_date\": \"2026-07-03\", \"type\": \"deterministic_rules_lookup\", \"n_training\": null, \"n_training_synthetic\": null, \"trained_on_real_patient_data\": false, \"rule_branch",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

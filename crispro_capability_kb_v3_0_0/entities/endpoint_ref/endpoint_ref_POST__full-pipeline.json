@@ -1,0 +1,22 @@
+{
+  "id": "endpoint_ref:POST /full-pipeline",
+  "type": "endpoint_ref",
+  "name": "POST /full-pipeline",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v3-push/layer4_output/demo_router.py",
+      "line": 160
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "@router.post('/full-pipeline') at crispro-backend-v3-push/layer4_output/demo_router.py:160",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

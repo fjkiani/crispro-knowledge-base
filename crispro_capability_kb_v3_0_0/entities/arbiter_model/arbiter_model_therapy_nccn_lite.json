@@ -1,0 +1,29 @@
+{
+  "id": "arbiter_model:therapy_nccn_lite",
+  "type": "arbiter_model",
+  "name": "Model card: therapy-nccn-lite (L4c fallback)",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/docs/model_cards/therapy_nccn_lite.md",
+      "json_pointer": null,
+      "line_range": "1-100"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "# Model card: therapy-nccn-lite (L4c fallback)\n\n**Version**: `nccn-lite-v0` (2026-07-03)\n**Type**: **Deterministic rules-based lookup** \u2014 NOT a machine learning model.\n**Source guideline**: NCCN Guidelines Version 2.2025 \u2014 Invasive Breast\nCancer / DCIS, `https://www.nccn.org/professionals/physician_gls/pdf/breast.pdf`.\n**Status**: **RESEARCH USE ONLY** \u2014 NOT FDA cleared, NOT for clinical\ndecision-",
+      "found": true
+    },
+    {
+      "claim": "ruo_marker_present=True",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "regulatory_posture:oncology_arbiter_ruo"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

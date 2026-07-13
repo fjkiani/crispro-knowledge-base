@@ -1,0 +1,22 @@
+{
+  "id": "endpoint_ref:GET /sessions/{user_id}",
+  "type": "endpoint_ref",
+  "name": "GET /sessions/{user_id}",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+      "line": 99
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "@router.get('/sessions/{user_id}') at crispro-backend-v3-push/layer4_output/rag_routes.py:99",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "regulatory_posture:oncology_arbiter_ruo",
+  "type": "regulatory_posture",
+  "name": "Oncology Arbiter \u2014 Research Use Only",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/docs/model_cards/errata.md",
+      "json_pointer": null,
+      "line_range": "1-30"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Not FDA-cleared. Not CE-marked. Not intended for clinical use.",
+      "found": true
+    },
+    {
+      "claim": "Research Use Only (RUO) posture applies to every arbiter output.",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

@@ -1,0 +1,2241 @@
+[
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05450692",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05450692",
+    "evidence": "non-zero moa_vector[ddr] = 0.85"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05450692",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05450692",
+    "evidence": "non-zero moa_vector[mapk] = 0.1"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05450692",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05450692",
+    "evidence": "non-zero moa_vector[io] = 0.75"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05450692",
+    "dst": "axis8d:rss",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05450692",
+    "evidence": "non-zero moa_vector[rss] = 0.75"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02595892",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02595892",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02595892",
+    "dst": "axis8d:rss",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02595892",
+    "evidence": "non-zero moa_vector[rss] = 0.75"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06680479",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06680479",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06777979",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06777979",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05445778",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05445778",
+    "evidence": "non-zero moa_vector[vegf] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06331130",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06331130",
+    "evidence": "non-zero moa_vector[her2] = 0.95"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04284969",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04284969",
+    "evidence": "non-zero moa_vector[ddr] = 0.95"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02655016",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02655016",
+    "evidence": "non-zero moa_vector[ddr] = 0.95"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06558279",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06558279",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05675579",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05675579",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04001023",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04001023",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01000259",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01000259",
+    "evidence": "non-zero moa_vector[vegf] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06536179",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06536179",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05263479",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05263479",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06684379",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06684379",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05187338",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05187338",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06342986",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06342986",
+    "evidence": "non-zero moa_vector[io] = 0.3"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05239143",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05239143",
+    "evidence": "non-zero moa_vector[io] = 0.3"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04123379",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04123379",
+    "evidence": "non-zero moa_vector[io] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02244879",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02244879",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06631079",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06631079",
+    "evidence": "non-zero moa_vector[io] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06332079",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06332079",
+    "evidence": "non-zero moa_vector[vegf] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04986579",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04986579",
+    "evidence": "non-zero moa_vector[her2] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03735979",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03735979",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT00072579",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT00072579",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03878979",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03878979",
+    "evidence": "non-zero moa_vector[io] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05042479",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05042479",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02680379",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02680379",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT00652379",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT00652379",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04850079",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04850079",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03470779",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03470779",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06395779",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06395779",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02422979",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02422979",
+    "evidence": "non-zero moa_vector[io] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT00339079",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT00339079",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04534179",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04534179",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05338879",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05338879",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01226979",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01226979",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04470479",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04470479",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01609179",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01609179",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05799079",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05799079",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06108479",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06108479",
+    "evidence": "non-zero moa_vector[io] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06101979",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06101979",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01321879",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01321879",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06963879",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06963879",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02359279",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02359279",
+    "evidence": "non-zero moa_vector[mapk] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01091779",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01091779",
+    "evidence": "non-zero moa_vector[mapk] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT00006379",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT00006379",
+    "evidence": "non-zero moa_vector[mapk] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06638879",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06638879",
+    "evidence": "non-zero moa_vector[mapk] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01979679",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01979679",
+    "evidence": "non-zero moa_vector[mapk] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01961479",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01961479",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05190679",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05190679",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02498379",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02498379",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02364479",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02364479",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT00574379",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT00574379",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04521179",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04521179",
+    "evidence": "non-zero moa_vector[her2] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT00501579",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT00501579",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05201079",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05201079",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03479879",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03479879",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05147779",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05147779",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05943379",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05943379",
+    "evidence": "non-zero moa_vector[her2] = 0.7"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06242379",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06242379",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06242379",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06242379",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05891379",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05891379",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05656079",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05656079",
+    "evidence": "non-zero moa_vector[her2] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05656079",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05656079",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05546879",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05546879",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05546879",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05546879",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06473779",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06473779",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06920979",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06920979",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05788679",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05788679",
+    "evidence": "non-zero moa_vector[ddr] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05788679",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05788679",
+    "evidence": "non-zero moa_vector[io] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06476379",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06476379",
+    "evidence": "non-zero moa_vector[ddr] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06476379",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06476379",
+    "evidence": "non-zero moa_vector[mapk] = 0.3"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06476379",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06476379",
+    "evidence": "non-zero moa_vector[pi3k] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06476379",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06476379",
+    "evidence": "non-zero moa_vector[io] = 0.1"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02945579",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02945579",
+    "evidence": "non-zero moa_vector[her2] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02945579",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02945579",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05457595",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05457595",
+    "evidence": "non-zero moa_vector[ddr] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05457595",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05457595",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06639074",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06639074",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05467670",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05467670",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05281471",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05281471",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05281471",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05281471",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01174121",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01174121",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03458221",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03458221",
+    "evidence": "non-zero moa_vector[pi3k] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03458221",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03458221",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06380816",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06380816",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06883487",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06883487",
+    "evidence": "non-zero moa_vector[her2] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06508307",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06508307",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05797168",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05797168",
+    "evidence": "non-zero moa_vector[ddr] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05797168",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05797168",
+    "evidence": "non-zero moa_vector[mapk] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05797168",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05797168",
+    "evidence": "non-zero moa_vector[pi3k] = 0.1"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05797168",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05797168",
+    "evidence": "non-zero moa_vector[vegf] = 0.3"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05797168",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05797168",
+    "evidence": "non-zero moa_vector[io] = 0.1"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05952453",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05952453",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05952453",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05952453",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04633239",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04633239",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04633239",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04633239",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05255471",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05255471",
+    "evidence": "non-zero moa_vector[ddr] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05255471",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05255471",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06682988",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06682988",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05950464",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05950464",
+    "evidence": "non-zero moa_vector[mapk] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05950464",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05950464",
+    "evidence": "non-zero moa_vector[pi3k] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05950464",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05950464",
+    "evidence": "non-zero moa_vector[vegf] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05950464",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05950464",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT07023731",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT07023731",
+    "evidence": "non-zero moa_vector[mapk] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06152731",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06152731",
+    "evidence": "non-zero moa_vector[ddr] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06152731",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06152731",
+    "evidence": "non-zero moa_vector[mapk] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06469281",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06469281",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06469281",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06469281",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06910657",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06910657",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06305299",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06305299",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05208762",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05208762",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06732336",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06732336",
+    "evidence": "non-zero moa_vector[her2] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05233982",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05233982",
+    "evidence": "non-zero moa_vector[ddr] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05233982",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05233982",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05472857",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05472857",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06330064",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06330064",
+    "evidence": "non-zero moa_vector[her2] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04804007",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04804007",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04804007",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04804007",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06483048",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06483048",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT07216105",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT07216105",
+    "evidence": "non-zero moa_vector[her2] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT07216105",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT07216105",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06735326",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06735326",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06735326",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06735326",
+    "evidence": "non-zero moa_vector[vegf] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06253520",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06253520",
+    "evidence": "non-zero moa_vector[mapk] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06253520",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06253520",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05740956",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05740956",
+    "evidence": "non-zero moa_vector[ddr] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05740956",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05740956",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05638594",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05638594",
+    "evidence": "non-zero moa_vector[pi3k] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05638594",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05638594",
+    "evidence": "non-zero moa_vector[her2] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04938583",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04938583",
+    "evidence": "non-zero moa_vector[vegf] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04519151",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04519151",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04519151",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04519151",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06840002",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06840002",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06840002",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06840002",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT07059845",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT07059845",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT07059845",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT07059845",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04236479",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04236479",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04236479",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04236479",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06957379",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06957379",
+    "evidence": "non-zero moa_vector[pi3k] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04430179",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04430179",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03160079",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03160079",
+    "evidence": "non-zero moa_vector[pi3k] = 0.5"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03160079",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03160079",
+    "evidence": "non-zero moa_vector[io] = 0.7"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02101775",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02101775",
+    "evidence": "non-zero moa_vector[ddr] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02101775",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02101775",
+    "evidence": "non-zero moa_vector[mapk] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03860272",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03860272",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04024878",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04024878",
+    "evidence": "non-zero moa_vector[io] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01366144",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01366144",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01366144",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01366144",
+    "evidence": "non-zero moa_vector[mapk] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06419179",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06419179",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06419179",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06419179",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04128579",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04128579",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05671679",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05671679",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT00313079",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT00313079",
+    "evidence": "non-zero moa_vector[io] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01965379",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01965379",
+    "evidence": "non-zero moa_vector[pi3k] = 0.5"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01965379",
+    "dst": "axis8d:efflux",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01965379",
+    "evidence": "non-zero moa_vector[efflux] = 0.3"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04409379",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04409379",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04409379",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04409379",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01507779",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01507779",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03152279",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03152279",
+    "evidence": "non-zero moa_vector[io] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03152279",
+    "dst": "axis8d:efflux",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03152279",
+    "evidence": "non-zero moa_vector[efflux] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01596179",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01596179",
+    "evidence": "non-zero moa_vector[io] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02430779",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02430779",
+    "evidence": "non-zero moa_vector[ddr] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02430779",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02430779",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06423079",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06423079",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01835379",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01835379",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT00171379",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT00171379",
+    "evidence": "non-zero moa_vector[io] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01425879",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01425879",
+    "evidence": "non-zero moa_vector[pi3k] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05721079",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05721079",
+    "evidence": "non-zero moa_vector[io] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04164979",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04164979",
+    "evidence": "non-zero moa_vector[vegf] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04164979",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04164979",
+    "evidence": "non-zero moa_vector[io] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02575079",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02575079",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02575079",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02575079",
+    "evidence": "non-zero moa_vector[mapk] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05761379",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05761379",
+    "evidence": "non-zero moa_vector[mapk] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05761379",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05761379",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06342479",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06342479",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06342479",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06342479",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05977179",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05977179",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05977179",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05977179",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06330779",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06330779",
+    "evidence": "non-zero moa_vector[io] = 0.3"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05078879",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05078879",
+    "evidence": "non-zero moa_vector[io] = 0.5"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05341479",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05341479",
+    "evidence": "non-zero moa_vector[io] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06930079",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06930079",
+    "evidence": "non-zero moa_vector[mapk] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06572579",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06572579",
+    "evidence": "non-zero moa_vector[io] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05706779",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05706779",
+    "evidence": "non-zero moa_vector[mapk] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06429579",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06429579",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06391879",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06391879",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06391879",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06391879",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05960279",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05960279",
+    "evidence": "non-zero moa_vector[ddr] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05960279",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05960279",
+    "evidence": "non-zero moa_vector[io] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06651879",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06651879",
+    "evidence": "non-zero moa_vector[mapk] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06651879",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06651879",
+    "evidence": "non-zero moa_vector[pi3k] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05134779",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05134779",
+    "evidence": "non-zero moa_vector[io] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04246879",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04246879",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04246879",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04246879",
+    "evidence": "non-zero moa_vector[vegf] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03472079",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03472079",
+    "evidence": "non-zero moa_vector[io] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06499779",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06499779",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06499779",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06499779",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04640779",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04640779",
+    "evidence": "non-zero moa_vector[io] = 0.3"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06964009",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06964009",
+    "evidence": "non-zero moa_vector[ddr] = 0.3"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06964009",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06964009",
+    "evidence": "non-zero moa_vector[mapk] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06964009",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06964009",
+    "evidence": "non-zero moa_vector[vegf] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06906341",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06906341",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06906341",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06906341",
+    "evidence": "non-zero moa_vector[mapk] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "brief_program:brief-2",
+    "dst": "gov:brief_2_hypothesis",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 downgraded to hypothesis per DepMap NULL result"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_atr_evidence_matrix_v2",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "crispro-knowledge-base/crispro_capability_kb/entities/canonical_receipt/receipt_mbd4_atr_evidence_matrix_v2.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_atr_evidence_matrix_v2",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "crispro-knowledge-base/crispro_capability_kb/entities/canonical_receipt/receipt_mbd4_atr_evidence_matrix_v2.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_bosutinib_checkpoint_MANUSCRIPT",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_bosutinib_checkpoint/MANUSCRIPT.md",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_bosutinib_checkpoint_MANUSCRIPT",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_bosutinib_checkpoint/MANUSCRIPT.md",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_axis_c_synthesis_2026_03_15",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_synthesis_2026_03_15.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_axis_c_synthesis_2026_03_15",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_synthesis_2026_03_15.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_cbioportal_mbd4_clinical_query",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/cbioportal_mbd4_clinical_query.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_cbioportal_mbd4_clinical_query",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/cbioportal_mbd4_clinical_query.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_mbd4_depmap_stats_receipt",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/mbd4_depmap_stats_receipt.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_mbd4_depmap_stats_receipt",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/mbd4_depmap_stats_receipt.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_pubmed_multimodal_query_results",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/pubmed_multimodal_query_results.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_pubmed_multimodal_query_results",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/pubmed_multimodal_query_results.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_sl_agent_mbd4_lof_standalone",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/sl_agent_mbd4_lof_standalone.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_sl_agent_mbd4_lof_standalone",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/sl_agent_mbd4_lof_standalone.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_ucec_mbd4_clinical_outcomes",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/ucec_mbd4_clinical_outcomes.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_ucec_mbd4_clinical_outcomes",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/ucec_mbd4_clinical_outcomes.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_wrn_specificity_validation",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/wrn_specificity_validation.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_wrn_specificity_validation",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/wrn_specificity_validation.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_gdsc2_parpi_mbd4_summary",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_preclinical/gdsc2_parpi_mbd4_summary.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_gdsc2_parpi_mbd4_summary",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_preclinical/gdsc2_parpi_mbd4_summary.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_parp1_parpi_spearman_MANUSCRIPT_RECEIPT",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_preclinical/parp1_parpi_spearman_MANUSCRIPT_RECEIPT.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_parp1_parpi_spearman_MANUSCRIPT_RECEIPT",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_preclinical/parp1_parpi_spearman_MANUSCRIPT_RECEIPT.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_parp_axis_expression_MANUSCRIPT_RECEIPT",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_preclinical/parp_axis_expression_MANUSCRIPT_RECEIPT.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_parp_axis_expression_MANUSCRIPT_RECEIPT",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_preclinical/parp_axis_expression_MANUSCRIPT_RECEIPT.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_canonical_atr_wee1_rerun",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/canonical_atr_wee1_rerun.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_canonical_atr_wee1_rerun",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/canonical_atr_wee1_rerun.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_ceralasertib_ln_ic50_leave_one_out_MANUSCRIPT_RECEIPT",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/ceralasertib_ln_ic50_leave_one_out_MANUSCRIPT_RECEIPT.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_ceralasertib_ln_ic50_leave_one_out_MANUSCRIPT_RECEIPT",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/ceralasertib_ln_ic50_leave_one_out_MANUSCRIPT_RECEIPT.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_final_evidence_matrix_output",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/rxiv/FIGURES/final_evidence_matrix_output.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_final_evidence_matrix_output",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/rxiv/FIGURES/final_evidence_matrix_output.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_00_README",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/00_README.md",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_00_README",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/00_README.md",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_README",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/README.md",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_README",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/README.md",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_SUPPLEMENTAL_DATA_PROVENANCE",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/SUPPLEMENTAL_DATA_PROVENANCE.md",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_SUPPLEMENTAL_DATA_PROVENANCE",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/SUPPLEMENTAL_DATA_PROVENANCE.md",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_RECONCILIATION_TABLE",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/RECONCILIATION_TABLE.md",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_RECONCILIATION_TABLE",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/RECONCILIATION_TABLE.md",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_BUILD",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/rxiv/BUILD.md",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_BUILD",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/rxiv/BUILD.md",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_manuscript",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/rxiv/manuscript.md",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_manuscript",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/rxiv/manuscript.md",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:biopsy_medsiglip_probe",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/biopsy_medsiglip_probe.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:errata",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/errata.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:frontend_spa",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/frontend_spa.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:medgemma_1_27b",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/medgemma_1_27b.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:medgemma_1_5_4b",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/medgemma_1_5_4b.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:medsiglip_448",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/medsiglip_448.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:monai_detector_heuristic",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/monai_detector_heuristic.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:nsclc_lung_heuristic_v0",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/nsclc_lung_heuristic_v0.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:report_parser_clinicalbert_v1",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/report_parser_clinicalbert_v1.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:siglip_base_patch16_224",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/siglip_base_patch16_224.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:therapy_nccn_lite",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/therapy_nccn_lite.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:txgemma_9b_chat",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/txgemma_9b_chat.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "claim:ct_03_latify",
+    "dst": "gov:latify_quarantined",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "LATIFY delta unresolved (patent +0.366 vs receipt +0.2641)"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "claim:dl_05_latify",
+    "dst": "gov:latify_quarantined",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "LATIFY vector version unresolved"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "claim:pc_06_latify",
+    "dst": "gov:latify_quarantined",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "LATIFY prediction under quarantine"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "claim:dl_07_ddr",
+    "dst": "gov:dl_07_quarantined",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "DL-07 Figure 2 DDR=0.983 implausible \u2014 publication-blocking"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "claim:pc_02_prediction",
+    "dst": "gov:pc_02_downgraded",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "PC-02 permanently downgraded until deltas reproduce cleanly"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "brief_program:brief-1",
+    "dst": "gov:path_a_locked",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF programs use PATH A formula for ranking"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "brief_program:brief-4",
+    "dst": "gov:path_a_locked",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF programs use PATH A formula for ranking"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "brief_program:brief-3",
+    "dst": "gov:path_a_locked",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF programs use PATH A formula for ranking"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "brief_program:brief-2",
+    "dst": "gov:path_a_locked",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF programs use PATH A formula for ranking"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_layer:l1_gateway",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/README.md",
+    "evidence": "Arbiter layers constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_layer:l2_input_normalizer",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/README.md",
+    "evidence": "Arbiter layers constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_layer:l3_evidence_retriever",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/README.md",
+    "evidence": "Arbiter layers constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_layer:l4a_generator",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/README.md",
+    "evidence": "Arbiter layers constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_layer:l4b_reflection",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/README.md",
+    "evidence": "Arbiter layers constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_layer:l4c_ranker",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/README.md",
+    "evidence": "Arbiter layers constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_layer:l5_arbiter_output",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/README.md",
+    "evidence": "Arbiter layers constrained by RUO regulatory posture"
+  },
+  {
+    "src": "claim:ct_01_formula",
+    "dst": "gov:path_a_locked",
+    "predicate": "governed_by",
+    "evidence": "PATH A formula fit = clip((p\u00b7t) / \u2016t\u2016\u2082, 0, 1) locked in gov:path_a_locked (approval 2026-04-28)",
+    "source_file": "Brenus/formula_governance/PATH_A_APPROVAL.md",
+    "_stream": "v3:audit_upgrade",
+    "_mint_planner": "x5_gap_fill",
+    "_mint_timestamp": "2026-07-13T23:26:21.537989Z"
+  },
+  {
+    "src": "claim:ct_02_formula",
+    "dst": "gov:path_a_locked",
+    "predicate": "governed_by",
+    "evidence": "PATH A vs PATH B decision resolved as PATH A per gov:path_a_locked (approval 2026-04-28)",
+    "source_file": "Brenus/formula_governance/PATH_A_APPROVAL.md",
+    "_stream": "v3:audit_upgrade",
+    "_mint_planner": "x5_gap_fill",
+    "_mint_timestamp": "2026-07-13T23:26:21.537989Z"
+  },
+  {
+    "src": "claim:dl_03_formula",
+    "dst": "gov:path_a_locked",
+    "predicate": "governed_by",
+    "evidence": "Formula-dependent downstream lift unblocked by gov:path_a_locked",
+    "source_file": "Brenus/formula_governance/PATH_A_APPROVAL.md",
+    "_stream": "v3:audit_upgrade",
+    "_mint_planner": "x5_gap_fill",
+    "_mint_timestamp": "2026-07-13T23:26:21.537989Z"
+  },
+  {
+    "src": "claim:pc_05_formula",
+    "dst": "gov:path_a_locked",
+    "predicate": "governed_by",
+    "evidence": "Formula-dependent prediction claim unblocked by gov:path_a_locked",
+    "source_file": "Brenus/formula_governance/PATH_A_APPROVAL.md",
+    "_stream": "v3:audit_upgrade",
+    "_mint_planner": "x5_gap_fill",
+    "_mint_timestamp": "2026-07-13T23:26:21.537989Z"
+  },
+  {
+    "src": "brief_program:brief-1",
+    "dst": "sl_tier:COMPUTATIONAL_HYPOTHESIS",
+    "predicate": "governed_by",
+    "evidence": "Program brief-1 at COMPUTATIONAL_HYPOTHESIS tier \u2014 no dedicated substrate yet",
+    "source_file": "crispro-knowledge-base/crispro_capability_kb/program_brief_sl.json",
+    "_stream": "v3:audit_upgrade",
+    "_mint_planner": "x5_gap_fill",
+    "_mint_timestamp": "2026-07-13T23:26:21.537989Z"
+  },
+  {
+    "src": "brief_program:brief-3",
+    "dst": "sl_tier:COMPUTATIONAL_HYPOTHESIS",
+    "predicate": "governed_by",
+    "evidence": "Program brief-3 at COMPUTATIONAL_HYPOTHESIS tier \u2014 no dedicated substrate yet",
+    "source_file": "crispro-knowledge-base/crispro_capability_kb/program_brief_sl.json",
+    "_stream": "v3:audit_upgrade",
+    "_mint_planner": "x5_gap_fill",
+    "_mint_timestamp": "2026-07-13T23:26:21.537989Z"
+  },
+  {
+    "src": "brief_program:brief-4",
+    "dst": "sl_tier:COMPUTATIONAL_HYPOTHESIS",
+    "predicate": "governed_by",
+    "evidence": "Program brief-4 at COMPUTATIONAL_HYPOTHESIS tier \u2014 no dedicated substrate yet",
+    "source_file": "crispro-knowledge-base/crispro_capability_kb/program_brief_sl.json",
+    "_stream": "v3:audit_upgrade",
+    "_mint_planner": "x5_gap_fill",
+    "_mint_timestamp": "2026-07-13T23:26:21.537989Z"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "id": "endpoint_ref:GET /states",
+  "type": "endpoint_ref",
+  "name": "GET /states",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/api/routers/orchestrator.py",
+      "line": 255
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "@router.get('/states') at crispro-backend-v2/api/routers/orchestrator.py:255",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "brief_program:brief-2",
+  "type": "brief_program_deep",
+  "name": "NSCLC brain metastasis (BrM)",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+      "json_pointer": "/programs/3",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"id\": \"BRIEF-2\", \"axis\": \"PTEN-null \\u2192 ITGAV\", \"evidence_tier\": \"COMPUTATIONAL_HYPOTHESIS\", \"deal_ready\": false, \"status\": \"VALIDATION_REQUIRED\", \"indication\": \"NSCLC brain metastasis (BrM)\", \"rationale\": \"PTEN-null cells lose PI3K/AKT regulation and may become dependent on integrin signaling (ITGAV) for survival \\u2014 similar to ZEB1-high cells.\", \"depmap_result\": \"DepMap NULL across all 3 proxies \\u2014 ITGAV is NOT more essential in PTEN-null cells than PTEN-intact cells in the DepMap data.\", \"mandatory_disclosure\": \"BRIEF-2 (PTEN-null\\u2192ITGAV) is a COMPUTATIONAL HYPOTHESIS. DepMap shows NULL essentiality across all 3 proxies. Not CRISPR-validated. Requires experimental validation before any licensing discussion. Must be disclosed in every context where BRIEF-2 appears.\", \"sour",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "gov:brief_2_hypothesis"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

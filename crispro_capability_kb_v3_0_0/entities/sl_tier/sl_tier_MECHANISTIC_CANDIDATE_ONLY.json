@@ -1,0 +1,23 @@
+{
+  "id": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+  "type": "sl_tier",
+  "name": "Mechanistic candidate only",
+  "source_receipts": [
+    {
+      "source_file": "Synthetic-Lethality/reports/crispro_fitgap_brief_aacr2026.md",
+      "json_pointer": null,
+      "line_range": "verbatim_from_reports"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Canonical MBD4 tier \u2014 hypothesis with mechanistic rationale, no orthogonal validation",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

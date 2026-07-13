@@ -1,0 +1,27 @@
+{
+  "id": "outcome:tribe2_summary",
+  "type": "outcome_metric",
+  "name": "TRIBE2 mPFS 9.8mo, ORR 50%, mOS 22.5mo",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/quantitative_anchors.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "TRIBE2 mPFS 9.8mo, ORR 50%, mOS 22.5mo",
+      "found": true
+    },
+    {
+      "claim": "FOLFOXIRI+bev first-line MSS mCRC",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

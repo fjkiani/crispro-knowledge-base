@@ -1,0 +1,23 @@
+{
+  "id": "sl_engine:modality_fuser_module",
+  "type": "sl_engine_component",
+  "name": "modality_fuser.py (module)",
+  "source_receipts": [
+    {
+      "source_file": "Synthetic-Lethality/sl_agent/multimodal/modality_fuser.py",
+      "json_pointer": null,
+      "line_range": "1-end"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "SL agent module modality_fuser.py",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "axis8d:mapk",
+  "type": "pathway_axis",
+  "name": "MAPK",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/mechanistic_deep.json",
+      "json_pointer": "/cap_02_mechanism_fit_engine/algorithm_step_by_step/step_1_patient_vector_construction/axes/mapk",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "RAS/RAF/MEK/ERK pathway activity \u2014 scored from KRAS/NRAS/BRAF mutation status and co-mutation context",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

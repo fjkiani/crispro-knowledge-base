@@ -1,0 +1,23 @@
+{
+  "id": "calibration_proof:cbis_ddsm_logreg_v1_metrics",
+  "type": "calibration_proof",
+  "name": "cbis_ddsm_logreg_v1_metrics",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/docs/proofs/cbis_ddsm_logreg_v1_metrics.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"dataset\": {\"name\": \"CBIS-DDSM_1024\", \"source\": \"https://huggingface.co/datasets/dbaek111/CBIS-DDSM_1024\", \"hf_zip_sha256\": \"123239b7f68c3a309b33784aff0a7f91ff9200edc5a2f76c4507ce96cc7c0e53\", \"n_total\": 3086, \"n_train\": 2445, \"n_test\": 641, \"n_train_positive\": 1098, \"n_train_negative\": 1347, \"n_test_positive\": 260, \"n_test_negative\": 381}, \"features\": {\"source_model\": \"google/medsiglip-448\", \"mod",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}
