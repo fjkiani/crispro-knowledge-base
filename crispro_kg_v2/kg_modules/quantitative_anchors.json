@@ -222,6 +222,18 @@
       "SOX2_delta_resp_median": -0.11,
       "SOX2_delta_nonresp_median": -0.605,
       "SOX2_mwu_p": 0.043
+    },
+    "glass_full_rna_n84": {
+      "n": 84,
+      "filters": "IDH-wt + Stupp primary",
+      "median_os_resp_months": 26.0,
+      "median_os_nonresp_months": 14.0,
+      "ratio": 1.857,
+      "logrank_p": 1.9188e-26,
+      "ZEB1_mwu_p": 0.0098,
+      "SOX9_mwu_p": 0.044,
+      "SOX2_mwu_p": 0.073,
+      "commit_sha": "7384b7e"
     }
   }
 }
