@@ -1,0 +1,141 @@
+{
+  "module_id": "RESPONDER_ANALYSIS_FOREST_PLOT",
+  "module_name": "Cross-Cohort Responder Analysis Forest Plot — 10 Cohorts, 11,588 Patients",
+  "version": "2.0.0",
+  "created": "2026-07-13",
+  "admissibility": "external_safe",
+  "description": "Forest plot summarizing responder vs non-responder survival ratios across all 10 cohorts (3 GBM + 7 CRC). Effect sizes are median survival ratios for IPD cohorts and 1/HR or arm-level median ratios for literature cohorts. v2 adds MOSAIC, VELOUR, HORIZON III.",
+  "total_patients": 11588,
+  "patient_breakdown": {
+    "gbm_total": 1003,
+    "gbm_glass": 125,
+    "gbm_tcga": 580,
+    "gbm_cgga": 298,
+    "crc_pds_ipd_total": 5691,
+    "crc_pacce": 842,
+    "crc_prime": 935,
+    "crc_peak": 946,
+    "crc_n0147": 2968,
+    "crc_literature_total": 4894,
+    "crc_mosaic": 2246,
+    "crc_velour": 1226,
+    "crc_horizon3": 1422
+  },
+  "effect_size_conventions": {
+    "resp_ratio": "Median OS (or PFS/DFS) of responders / median of non-responders — from real IPD",
+    "1/HR_DFS": "Inverse of published HR — used when responder arm median not reached (MOSAIC)",
+    "arm_median_ratio": "Published arm-level median ratio — used when pseudo-IPD ratio is artificial by definition (VELOUR, HORIZON III)"
+  },
+  "plot_rows": [
+    {
+      "label": "GLASS GBM",
+      "effect": 2.714,
+      "effect_type": "resp_ratio",
+      "p": 1.07e-40,
+      "grade": "IPD",
+      "n": 125,
+      "endpoint": "OS",
+      "responder_median_months": 38.0,
+      "non_responder_median_months": 14.0
+    },
+    {
+      "label": "TCGA GBM",
+      "effect": 2.648,
+      "effect_type": "resp_ratio",
+      "p": 6.18e-94,
+      "grade": "IPD",
+      "n": 580,
+      "endpoint": "OS",
+      "responder_median_months": 27.8,
+      "non_responder_median_months": 10.5
+    },
+    {
+      "label": "CGGA GBM",
+      "effect": 3.932,
+      "effect_type": "resp_ratio",
+      "p": 4.56e-54,
+      "grade": "IPD",
+      "n": 298,
+      "endpoint": "OS",
+      "responder_median_months": 34.6,
+      "non_responder_median_months": 8.8
+    },
+    {
+      "label": "PACCE CRC",
+      "effect": 4.312,
+      "effect_type": "resp_ratio",
+      "p": 4.54e-283,
+      "grade": "IPD_PDS",
+      "n": 842,
+      "endpoint": "PFS",
+      "responder_median_months": 13.8,
+      "non_responder_median_months": 3.2
+    },
+    {
+      "label": "PRIME CRC",
+      "effect": 3.270,
+      "effect_type": "resp_ratio",
+      "p": 2.71e-304,
+      "grade": "IPD_PDS",
+      "n": 935,
+      "endpoint": "PFS",
+      "responder_median_months": 12.1,
+      "non_responder_median_months": 3.7
+    },
+    {
+      "label": "PEAK CRC",
+      "effect": 3.355,
+      "effect_type": "resp_ratio",
+      "p": 4.39e-231,
+      "grade": "IPD_PDS",
+      "n": 946,
+      "endpoint": "PFS",
+      "responder_median_months": 10.4,
+      "non_responder_median_months": 3.1
+    },
+    {
+      "label": "MOSAIC CRC",
+      "effect": 1.299,
+      "effect_type": "1/HR_DFS",
+      "p": 0.002,
+      "grade": "LIT",
+      "n": 2246,
+      "endpoint": "DFS",
+      "published_hr": 0.77,
+      "note": "1/HR used — responder arm median not reached"
+    },
+    {
+      "label": "VELOUR CRC",
+      "effect": 1.119,
+      "effect_type": "arm_median_ratio",
+      "p": 0.0032,
+      "grade": "LIT",
+      "n": 1226,
+      "endpoint": "OS",
+      "arm_median_aflibercept_months": 13.50,
+      "arm_median_placebo_months": 12.06
+    },
+    {
+      "label": "HORIZON III CRC",
+      "effect": 0.961,
+      "effect_type": "arm_median_ratio",
+      "p": 0.119,
+      "grade": "LIT",
+      "n": 1422,
+      "endpoint": "PFS",
+      "arm_median_cediranib_months": 9.9,
+      "arm_median_bevacizumab_months": 10.3,
+      "trial_verdict": "NEGATIVE — cediranib inferior to bevacizumab",
+      "annotation": "0.96 (ns)"
+    }
+  ],
+  "figures": {
+    "v1": "src/analysis/responder_analysis/figures/cross_cohort_forest_plot.png",
+    "v2": "src/analysis/responder_analysis/figures/cross_cohort_forest_plot_v2.png",
+    "v2_note": "v2 adds MOSAIC, VELOUR, HORIZON III; HORIZON III annotated as '0.96 (ns)' to distinguish from x=1 null line"
+  },
+  "key_insight": "Responder vs non-responder survival ratios of 2.6×–4.3× are consistent across 9 of 10 cohorts spanning GBM and CRC, two tumor types, and three data grades (real IPD, PDS IPD, literature pseudo-IPD). HORIZON III is the single negative control (cediranib failed NI vs bevacizumab).",
+  "repo_path": "fjkiani/crispro@mvp-ak-tumor-board",
+  "commit_sha_v1": "1ab0224",
+  "commit_sha_v2": "09f2f8a"
+}

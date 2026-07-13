@@ -1,0 +1,137 @@
+{
+  "module_id": "RESPONDER_ANALYSIS_CRC_IPD",
+  "module_name": "CRC Responder Analysis — PDS IPD Cohorts (PACCE, PRIME, PEAK, N0147)",
+  "version": "1.0.0",
+  "created": "2026-07-13",
+  "admissibility": "external_safe",
+  "data_grade": "IPD_PDS",
+  "data_source": "Sanofi PDS (Project Data Sphere) — real individual patient data",
+  "description": "Responder analysis across four CRC PDS trials with real IPD. mCRC trials (PACCE, PRIME, PEAK) use PFS ≥ 6 months as responder definition; adjuvant trial (N0147) uses DFS ≥ 3 years. All data accessed via SAS CAS connection to PDS caslibs.",
+  "pds_connection": {
+    "cas_url": "https://mpmprodvdmml.ondemand.sas.com/cas-shared-default-http/",
+    "username": "mpm0fxk2",
+    "ssl_cert": "scripts/data_acquisition/mcp_servers/PDS-MCP/certs/trustedcerts.pem"
+  },
+  "responder_definitions": {
+    "mcrc_pfs6mo": {
+      "column": "responder_pfs6mo",
+      "rule": "PFS ≥ 180 days OR PFS_event = 0",
+      "trials": ["PACCE", "PRIME", "PEAK"]
+    },
+    "adjuvant_dfs3yr": {
+      "column": "responder_dfs3yr",
+      "rule": "DFS ≥ 1095 days (3yr) OR DFS_event = 0",
+      "trials": ["N0147"]
+    },
+    "os12mo": {
+      "column": "responder_os12mo",
+      "rule": "OS ≥ 365 days OR OS_event = 0",
+      "trials": ["PACCE", "PRIME", "PEAK"]
+    }
+  },
+  "cohorts": [
+    {
+      "cohort_id": "PACCE",
+      "caslib": "Colorec_Amgen_2005_262",
+      "n_total": 842,
+      "setting": "1L mCRC",
+      "backbone": "mFOLFOX6 + Bevacizumab ± Panitumumab",
+      "responder_definition": "PFS ≥ 6 months",
+      "km_results": {
+        "median_survival_responders_months": 13.8,
+        "median_survival_non_responders_months": 3.2,
+        "logrank_p": 4.54e-283,
+        "survival_ratio": 4.312
+      },
+      "data_file": "src/analysis/responder_analysis/crc/crc_pds_pacce_ipd.csv",
+      "commit_sha": "1ab0224"
+    },
+    {
+      "cohort_id": "PRIME",
+      "caslib": "Colorec_Amgen_2006_264",
+      "n_total": 935,
+      "setting": "1L mCRC",
+      "backbone": "mFOLFOX4 ± Panitumumab",
+      "responder_definition": "PFS ≥ 6 months",
+      "km_results": {
+        "median_survival_responders_months": 12.1,
+        "median_survival_non_responders_months": 3.7,
+        "logrank_p": 2.71e-304,
+        "survival_ratio": 3.270
+      },
+      "data_file": "src/analysis/responder_analysis/crc/crc_pds_prime_ipd.csv",
+      "commit_sha": "1ab0224"
+    },
+    {
+      "cohort_id": "PEAK",
+      "caslib": "Colorec_Amgen_2006_263",
+      "n_total": 946,
+      "setting": "1L mCRC",
+      "backbone": "mFOLFOX6 + Bevacizumab or Panitumumab",
+      "responder_definition": "PFS ≥ 6 months",
+      "km_results": {
+        "median_survival_responders_months": 10.4,
+        "median_survival_non_responders_months": 3.1,
+        "logrank_p": 4.39e-231,
+        "survival_ratio": 3.355
+      },
+      "data_file": "src/analysis/responder_analysis/crc/crc_pds_peak_ipd.csv",
+      "commit_sha": "1ab0224"
+    },
+    {
+      "cohort_id": "N0147",
+      "caslib": "Colorec_Allianc_2004_161",
+      "n_total": 2968,
+      "setting": "Adjuvant stage III colon cancer",
+      "backbone": "mFOLFOX6 ± Cetuximab",
+      "responder_definition": "DFS ≥ 3 years",
+      "km_results": {
+        "median_survival_responders_months": "Not reached",
+        "median_survival_non_responders_months": 13.8,
+        "logrank_p": "<1e-300",
+        "note": "Responder arm median not reached — DFS ≥ 3yr by definition"
+      },
+      "data_file": "src/analysis/responder_analysis/crc/crc_n0147_ipd.csv",
+      "commit_sha": "1ab0224"
+    }
+  ],
+  "ipd_schema": {
+    "columns": ["subject_id", "treatment", "age", "sex", "pfs_days", "pfs_event", "os_days", "os_event", "os_months", "pfs_months", "responder_pfs6mo", "responder_os12mo", "trial", "donation_id"],
+    "pds_column_mapping": {
+      "PACCE_PRIME_PEAK": {
+        "pfs_days": "PFSDYCR",
+        "pfs_event": "PFSCR",
+        "os_days": "DTHDY",
+        "os_event": "DTH"
+      },
+      "N0147": {
+        "os_days": "futime8",
+        "os_event": "fustat8",
+        "pfs_days": "pgtime5",
+        "pfs_event": "pgstat5",
+        "dfs_days": "dfstime5",
+        "dfs_event": "dfsstat5"
+      }
+    }
+  },
+  "cross_cohort_summary": {
+    "total_patients": 5691,
+    "cohorts": 4,
+    "survival_ratio_range": "3.3× – 4.3× (mCRC cohorts)",
+    "all_logrank_p_below": 1e-230,
+    "consistency": "Responder signal is consistent and highly significant across all four PDS CRC cohorts"
+  },
+  "forest_plot_rows": [
+    {"label": "PACCE CRC", "effect": 4.312, "effect_type": "resp_ratio", "p": 4.54e-283, "grade": "IPD_PDS"},
+    {"label": "PRIME CRC", "effect": 3.270, "effect_type": "resp_ratio", "p": 2.71e-304, "grade": "IPD_PDS"},
+    {"label": "PEAK CRC",  "effect": 3.355, "effect_type": "resp_ratio", "p": 4.39e-231, "grade": "IPD_PDS"}
+  ],
+  "descriptor_only_caslibs": {
+    "MOSAIC": "Colorec_SanofiU_1998_128",
+    "VELOUR": "Colorec_SanofiU_2007_131",
+    "HORIZON3": "Colorec_AstraZe_2006_78",
+    "note": "These three caslibs are DESCRIPTOR_ONLY in PDS — no IPD available. Literature acquisition performed separately (see responder_analysis_literature module)."
+  },
+  "repo_path": "fjkiani/crispro@mvp-ak-tumor-board",
+  "commit_sha": "1ab0224"
+}

@@ -1,0 +1,106 @@
+{
+  "module_id": "RESPONDER_ANALYSIS_GBM",
+  "module_name": "GBM Responder Analysis — GLASS, TCGA, CGGA Cohorts",
+  "version": "1.0.0",
+  "created": "2026-07-13",
+  "admissibility": "external_safe",
+  "data_grade": "IPD",
+  "description": "Cross-cohort responder analysis in GBM using OS ≥ 18 months as the responder definition. Covers three independent cohorts (GLASS, TCGA PanCan2018, CGGA IDH-wt) with KM survival analysis and molecular signal validation (ZEB1, SOX2 expression deltas in GLASS).",
+  "responder_definition": {
+    "threshold": "OS ≥ 18 months",
+    "column": "responder_18mo",
+    "rationale": "18-month OS is the established landmark for GBM long-term survival; aligns with Stupp protocol follow-up convention"
+  },
+  "cohorts": [
+    {
+      "cohort_id": "GLASS",
+      "source": "Synapse syn17038081",
+      "n_total": 125,
+      "n_responders": 94,
+      "n_non_responders": 31,
+      "n_with_expression": 123,
+      "treatment": "Stupp protocol (TMZ + RT)",
+      "cohort_median_os_months": 26.0,
+      "km_results": {
+        "median_os_responders_months": 38.0,
+        "median_os_non_responders_months": 14.0,
+        "logrank_p": 1.07e-40,
+        "interpretation": "Responders survive 2.7× longer than non-responders"
+      },
+      "molecular_signal": {
+        "ZEB1_delta": {
+          "responders_median": -0.189,
+          "non_responders_median": -0.902,
+          "mwu_p": 0.0014,
+          "interpretation": "ZEB1 expression decreases more in non-responders — consistent with mesenchymal escape under treatment pressure"
+        },
+        "SOX2_delta": {
+          "responders_median": -0.110,
+          "non_responders_median": -0.605,
+          "mwu_p": 0.043,
+          "interpretation": "SOX2 expression decreases more in non-responders — stemness marker suppression associated with non-response"
+        }
+      },
+      "figures": [
+        "src/analysis/responder_analysis/figures/gbm_glass_km_zeb1.png"
+      ],
+      "data_file": "src/analysis/responder_analysis/gbm/glass_ipd_responder_table.csv",
+      "commit_sha": "1ab0224"
+    },
+    {
+      "cohort_id": "TCGA_GBM",
+      "source": "TCGA GBM PanCan2018",
+      "n_total": 580,
+      "treatment": "Mixed (standard of care)",
+      "km_results": {
+        "median_os_responders_months": 27.8,
+        "median_os_non_responders_months": 10.5,
+        "logrank_p": 6.18e-94,
+        "interpretation": "Responders survive 2.6× longer than non-responders across 580 patients"
+      },
+      "data_file": "src/analysis/responder_analysis/gbm/tcga_gbm_clinical_responder.csv",
+      "commit_sha": "1ab0224"
+    },
+    {
+      "cohort_id": "CGGA_GBM_IDHwt",
+      "source": "CGGA GBM IDH-wildtype",
+      "n_total": 298,
+      "treatment": "Mixed (standard of care)",
+      "km_results": {
+        "median_os_responders_months": 34.6,
+        "median_os_non_responders_months": 8.8,
+        "logrank_p": 4.56e-54,
+        "interpretation": "Responders survive 3.9× longer than non-responders — largest ratio across GBM cohorts"
+      },
+      "data_file": "src/analysis/responder_analysis/gbm/cgga_gbm_clinical_responder.csv",
+      "commit_sha": "1ab0224"
+    }
+  ],
+  "cross_cohort_summary": {
+    "total_patients": 1003,
+    "cohorts": 3,
+    "median_os_ratio_range": "2.6× – 3.9×",
+    "all_logrank_p_below": 1e-40,
+    "consistency": "Responder signal is consistent across all three independent GBM cohorts"
+  },
+  "stemness_veto_context": {
+    "dataset": "GSE174554",
+    "n_pairs": 20,
+    "stemness_n": 15,
+    "cohens_d": -0.62,
+    "p_value": 0.9796,
+    "direction": "DOWN",
+    "power_status": "POWERED",
+    "gene_panel": ["SOX2", "CD44", "PROM1", "SOX9"],
+    "veto_rule": "HARD veto (×0.0) for SOX2, CD44, PROM1, SOX9, Wnt, Notch, Hedgehog MoAs in recurrent/relapsed/progressive GBM",
+    "soft_penalty_rule": "SOFT penalty (×0.15) for PI3K/mTOR, STAT3, HDAC, EZH2, BMI1, LIF/gp130 MoAs",
+    "trigger": "disease ∈ {gbm, glioblastoma} AND setting ∈ {recurrent, relapsed, progressive}"
+  },
+  "forest_plot_rows": [
+    {"label": "GLASS GBM", "effect": 2.714, "effect_type": "resp_ratio", "p": 1.07e-40, "grade": "IPD"},
+    {"label": "TCGA GBM",  "effect": 2.648, "effect_type": "resp_ratio", "p": 6.18e-94, "grade": "IPD"},
+    {"label": "CGGA GBM",  "effect": 3.932, "effect_type": "resp_ratio", "p": 4.56e-54, "grade": "IPD"}
+  ],
+  "repo_path": "fjkiani/crispro@mvp-ak-tumor-board",
+  "commit_sha": "1ab0224"
+}

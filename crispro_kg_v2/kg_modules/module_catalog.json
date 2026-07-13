@@ -241,5 +241,111 @@
     "expected_output": "Stromal barrier score; immune-excluded vs inflamed classification; recommendation for TGF-\u03b2 inhibition combination",
     "blocker": "None \u2014 executable now",
     "source": "crispro_module_requirements_brenus.csv"
+  },
+  {
+    "module_id": "MOD-16",
+    "name": "GBM Responder Analysis \u2014 GLASS/TCGA/CGGA",
+    "type": "responder_analysis",
+    "status": "COMPLETE",
+    "priority": "HIGH",
+    "what_it_does": "Defines OS \u2265 18mo responders across 3 GBM cohorts (n=1,003); generates KM curves and ZEB1/SOX2 molecular signal validation in GLASS pairs.",
+    "why_it_matters": "Establishes cross-cohort consistency of the responder signal (2.6\u00d7\u20133.9\u00d7 survival ratio) and validates ZEB1/SOX2 as molecular correlates of non-response in GBM.",
+    "key_results": {
+      "GLASS": {
+        "n": 125,
+        "ratio": 2.714,
+        "p": 1.07e-40
+      },
+      "TCGA": {
+        "n": 580,
+        "ratio": 2.648,
+        "p": 6.18e-94
+      },
+      "CGGA": {
+        "n": 298,
+        "ratio": 3.932,
+        "p": 4.56e-54
+      }
+    },
+    "data_files": [
+      "src/analysis/responder_analysis/gbm/glass_ipd_responder_table.csv",
+      "src/analysis/responder_analysis/gbm/tcga_gbm_clinical_responder.csv",
+      "src/analysis/responder_analysis/gbm/cgga_gbm_clinical_responder.csv"
+    ],
+    "commit_sha": "1ab0224",
+    "kb_module": "responder_analysis_gbm.json"
+  },
+  {
+    "module_id": "MOD-17",
+    "name": "CRC PDS IPD Responder Analysis \u2014 PACCE/PRIME/PEAK/N0147",
+    "type": "responder_analysis",
+    "status": "COMPLETE",
+    "priority": "HIGH",
+    "what_it_does": "Defines PFS \u2265 6mo (mCRC) and DFS \u2265 3yr (adjuvant) responders across 4 PDS CRC trials (n=5,691); generates KM curves.",
+    "why_it_matters": "Demonstrates 3.3\u00d7\u20134.3\u00d7 survival ratios in real PDS IPD, validating the responder framework in CRC with the strongest data grade.",
+    "key_results": {
+      "PACCE": {
+        "n": 842,
+        "ratio": 4.312,
+        "p": 4.54e-283
+      },
+      "PRIME": {
+        "n": 935,
+        "ratio": 3.27,
+        "p": 2.71e-304
+      },
+      "PEAK": {
+        "n": 946,
+        "ratio": 3.355,
+        "p": 4.39e-231
+      },
+      "N0147": {
+        "n": 2968,
+        "note": "Responder arm median not reached"
+      }
+    },
+    "data_files": [
+      "src/analysis/responder_analysis/crc/crc_pds_pacce_ipd.csv",
+      "src/analysis/responder_analysis/crc/crc_pds_prime_ipd.csv",
+      "src/analysis/responder_analysis/crc/crc_pds_peak_ipd.csv",
+      "src/analysis/responder_analysis/crc/crc_n0147_ipd.csv"
+    ],
+    "commit_sha": "1ab0224",
+    "kb_module": "responder_analysis_crc_ipd.json"
+  },
+  {
+    "module_id": "MOD-18",
+    "name": "CRC Literature Acquisition \u2014 MOSAIC/VELOUR/HORIZON III",
+    "type": "literature_acquisition",
+    "status": "COMPLETE",
+    "priority": "MEDIUM",
+    "what_it_does": "Extracts published summary statistics and generates pseudo-IPD (parametric exponential) for 3 PDS DESCRIPTOR_ONLY CRC trials (n=4,894).",
+    "why_it_matters": "Extends the responder evidence base to DESCRIPTOR_ONLY caslibs; HORIZON III identity correction (cediranib, not XELOX) prevents misuse of caslib 78 as SoC reference.",
+    "critical_flags": [
+      "HORIZON III = cediranib (VEGFR-TKI) vs bevacizumab \u2014 NEGATIVE trial. Caslib 78 must NOT be used as SoC reference.",
+      "Pseudo-IPD grade: IPD_LITERATURE_PSEUDO \u2014 not for regulatory use"
+    ],
+    "data_files": [
+      "src/analysis/responder_analysis/literature/mosaic_pseudo_ipd.csv",
+      "src/analysis/responder_analysis/literature/velour_pseudo_ipd.csv",
+      "src/analysis/responder_analysis/literature/horizon3_pseudo_ipd.csv"
+    ],
+    "commit_sha": "09f2f8a",
+    "kb_module": "responder_analysis_literature.json"
+  },
+  {
+    "module_id": "MOD-19",
+    "name": "Cross-Cohort Forest Plot \u2014 10 Cohorts, 11,588 Patients",
+    "type": "visualization",
+    "status": "COMPLETE",
+    "priority": "HIGH",
+    "what_it_does": "Generates forest plot of responder vs non-responder survival ratios across all 10 cohorts (3 GBM + 7 CRC). v2 adds MOSAIC, VELOUR, HORIZON III.",
+    "why_it_matters": "Single figure demonstrating cross-disease, cross-data-grade consistency of the responder signal. HORIZON III serves as negative control (effect < 1.0).",
+    "figures": {
+      "v1": "src/analysis/responder_analysis/figures/cross_cohort_forest_plot.png",
+      "v2": "src/analysis/responder_analysis/figures/cross_cohort_forest_plot_v2.png"
+    },
+    "commit_sha": "09f2f8a",
+    "kb_module": "responder_analysis_forest_plot.json"
   }
 ]

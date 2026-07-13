@@ -1,0 +1,254 @@
+{
+  "module_id": "RESPONDER_ANALYSIS_LITERATURE",
+  "module_name": "CRC Literature Acquisition — MOSAIC, VELOUR, HORIZON III",
+  "version": "1.0.0",
+  "created": "2026-07-13",
+  "admissibility": "external_safe",
+  "data_grade": "IPD_LITERATURE_PSEUDO",
+  "description": "Published summary statistics and pseudo-IPD reconstruction for three PDS DESCRIPTOR_ONLY CRC trials. Pseudo-IPD generated via parametric exponential simulation from published arm-level rates/medians (NOT Guyot digitization — publisher figures paywalled). Data grade tag: IPD_LITERATURE_PSEUDO.",
+  "pseudo_ipd_method": {
+    "method": "Parametric exponential simulation",
+    "rationale": "Publisher KM figures paywalled; Guyot digitization not feasible. Exponential model fitted to published arm-level landmark rates or medians.",
+    "seed": "np.random.seed(42) global; per-arm seed = hash(arm_name) % 2**31",
+    "data_grade_tag": "IPD_LITERATURE_PSEUDO",
+    "limitation": "Exponential assumption may not capture late-phase tail behavior; pseudo-IPD should not be used for regulatory submissions"
+  },
+  "trials": [
+    {
+      "trial_id": "MOSAIC",
+      "pds_caslib": "Colorec_SanofiU_1998_128",
+      "pds_status": "DESCRIPTOR_ONLY",
+      "full_name": "MOSAIC — Multicenter International Study of Oxaliplatin/5-FU-LV in the Adjuvant Treatment of Colon Cancer",
+      "sponsor": "Sanofi",
+      "setting": "Adjuvant stage II/III colon cancer",
+      "design": "Phase III RCT",
+      "n_total": 2246,
+      "arms": {
+        "FOLFOX4": {"n": 1123, "drug": "Oxaliplatin + LV5FU2 (FOLFOX4)"},
+        "LV5FU2":  {"n": 1123, "drug": "LV5FU2 (5-FU + leucovorin)"}
+      },
+      "primary_endpoint": "3-year DFS",
+      "key_results": {
+        "dfs_3yr_folfox4_pct": 78.2,
+        "dfs_3yr_lv5fu2_pct": 72.9,
+        "dfs_hr": 0.77,
+        "dfs_hr_ci": "[0.65–0.91]",
+        "dfs_p": 0.002,
+        "dfs_5yr_folfox4_pct": 73.3,
+        "dfs_5yr_lv5fu2_pct": 67.4,
+        "dfs_5yr_hr": 0.80,
+        "dfs_5yr_hr_ci": "[0.68–0.93]",
+        "dfs_5yr_p": 0.003,
+        "os_6yr_folfox4_pct": 78.5,
+        "os_6yr_lv5fu2_pct": 76.0,
+        "os_6yr_hr": 0.84,
+        "os_6yr_hr_ci": "[0.71–1.00]",
+        "os_6yr_p": 0.046,
+        "os_3yr_folfox4_pct": 87.7,
+        "os_3yr_lv5fu2_pct": 86.6,
+        "os_3yr_hr": 0.90,
+        "os_3yr_hr_ci": "[0.71–1.13]",
+        "os_3yr_p": "NS",
+        "stage_iii_dfs_3yr_folfox4_pct": 72.2,
+        "stage_iii_dfs_3yr_lv5fu2_pct": 65.3,
+        "stage_iii_dfs_hr": 0.76,
+        "stage_iii_dfs_hr_ci": "[0.62–0.92]",
+        "stage_iii_os_6yr_folfox4_pct": 72.9,
+        "stage_iii_os_6yr_lv5fu2_pct": 68.7,
+        "stage_iii_os_6yr_hr": 0.80,
+        "stage_iii_os_6yr_hr_ci": "[0.65–0.97]",
+        "stage_iii_os_6yr_p": 0.023,
+        "stage_ii_dfs_3yr_folfox4_pct": 87.0,
+        "stage_ii_dfs_3yr_lv5fu2_pct": 84.3,
+        "stage_ii_dfs_hr": 0.80,
+        "stage_ii_dfs_hr_ci": "[0.56–1.15]",
+        "stage_ii_os_benefit": "None",
+        "grade3_neuropathy_during_tx_pct": 12.4,
+        "grade3_neuropathy_12mo_pct": 1.3,
+        "grade3_neuropathy_48mo_pct": 0.7,
+        "febrile_neutropenia_pct": 1.8
+      },
+      "10yr_update": {
+        "source": "André 2015 JCO DOI:10.1200/jco.2015.63.4238",
+        "finding": "OS benefit confirmed in stage III; supported in dMMR and BRAF-mutant subgroups",
+        "note": "Exact 10yr rates not extracted — full text not fetched"
+      },
+      "pseudo_ipd": {
+        "lambda_folfox4": "−ln(0.782) / 36",
+        "lambda_lv5fu2": "−ln(0.729) / 36",
+        "basis": "3-year DFS rates (78.2% FOLFOX4, 72.9% LV5FU2)",
+        "validation": "FOLFOX4 DFS3yr responders 79.1% (target 78.2%), LV5FU2 69.9% (target 72.9%)",
+        "data_file": "src/analysis/responder_analysis/literature/mosaic_pseudo_ipd.csv"
+      },
+      "responder_definition": {
+        "column": "responder_dfs3yr",
+        "rule": "DFS ≥ 3 years"
+      },
+      "forest_plot": {
+        "effect": 1.299,
+        "effect_type": "1/HR_DFS",
+        "p": 0.002,
+        "grade": "LIT",
+        "note": "1/HR used because responder arm median DFS not reached (DFS ≥ 3yr by definition)"
+      },
+      "sources": [
+        {"citation": "André et al. 2004 NEJM", "doi": "10.1056/nejmoa032709"},
+        {"citation": "André et al. 2009 JCO", "doi": "10.1200/jco.2008.20.6771"},
+        {"citation": "André et al. 2015 JCO (10yr update)", "doi": "10.1200/jco.2015.63.4238"}
+      ],
+      "data_files": [
+        "src/analysis/responder_analysis/literature/mosaic_summary_stats.json",
+        "src/analysis/responder_analysis/literature/mosaic_pseudo_ipd.csv"
+      ],
+      "commit_sha": "09f2f8a"
+    },
+    {
+      "trial_id": "VELOUR",
+      "pds_caslib": "Colorec_SanofiU_2007_131",
+      "pds_status": "DESCRIPTOR_ONLY",
+      "full_name": "VELOUR — Aflibercept plus FOLFIRI in mCRC after oxaliplatin failure",
+      "sponsor": "Sanofi",
+      "setting": "2L mCRC after oxaliplatin failure",
+      "design": "Phase III RCT",
+      "n_total": 1226,
+      "arms": {
+        "Aflibercept_FOLFIRI": {"n": 612, "drug": "Aflibercept + FOLFIRI"},
+        "Placebo_FOLFIRI":     {"n": 614, "drug": "Placebo + FOLFIRI"}
+      },
+      "stratification": ["Prior bevacizumab (yes/no)", "ECOG PS (0/1/2)"],
+      "primary_endpoint": "OS",
+      "key_results": {
+        "median_follow_up_months": 22.28,
+        "deaths_aflibercept": 403,
+        "deaths_placebo": 460,
+        "os_aflibercept_months": 13.50,
+        "os_aflibercept_ci": "95.34% CI: 12.52–14.95",
+        "os_placebo_months": 12.06,
+        "os_placebo_ci": "95.34% CI: 11.07–13.11",
+        "os_hr": 0.817,
+        "os_hr_ci": "[0.713–0.937]",
+        "os_p": 0.0032,
+        "pfs_aflibercept_months": 6.90,
+        "pfs_placebo_months": 4.67,
+        "pfs_hr": 0.758,
+        "pfs_hr_ci": "[0.661–0.869]",
+        "pfs_p": "<0.001",
+        "rr_aflibercept_pct": 19.8,
+        "rr_placebo_pct": 11.1,
+        "rr_p": 0.0001,
+        "mean_os_extrapolated_15yr_aflibercept_months": 22.8,
+        "mean_os_extrapolated_15yr_placebo_months": 18.1,
+        "mean_os_gain_months": 4.7,
+        "mean_os_gain_ci": "[2.1–6.1]",
+        "subgroup_no_prior_bev_gain_months": 6.7,
+        "subgroup_no_prior_bev_gain_ci": "[3.2–8.1]",
+        "subgroup_liver_mets_only_gain_months": 6.7,
+        "subgroup_liver_mets_only_gain_ci": "[2.2–10.0]",
+        "subgroup_prior_bev_gain_months": 0.5,
+        "subgroup_prior_bev_gain_ci": "[-4.4–5.5]"
+      },
+      "pseudo_ipd": {
+        "lambda_aflibercept": "ln(2) / 13.50",
+        "lambda_placebo": "ln(2) / 12.06",
+        "basis": "Median OS per arm",
+        "data_file": "src/analysis/responder_analysis/literature/velour_pseudo_ipd.csv"
+      },
+      "responder_definition": {
+        "column": "responder_os12mo",
+        "rule": "OS ≥ 12 months"
+      },
+      "forest_plot": {
+        "effect": 1.119,
+        "effect_type": "arm_median_ratio",
+        "p": 0.0032,
+        "grade": "LIT",
+        "note": "13.50 / 12.06 = 1.119; arm-level median ratio used (pseudo-IPD ratio artificial by definition)"
+      },
+      "sources": [
+        {"citation": "Van Cutsem et al. 2012 JCO", "doi": "10.1200/JCO.2011.39.5376"},
+        {"citation": "Joulain et al. 2013 BJC", "doi": "10.1038/bjc.2013.523"},
+        {"citation": "Tabernero et al. 2013 EJC", "doi": "10.1016/j.ejca.2013.09.013"}
+      ],
+      "data_files": [
+        "src/analysis/responder_analysis/literature/velour_summary_stats.json",
+        "src/analysis/responder_analysis/literature/velour_pseudo_ipd.csv"
+      ],
+      "commit_sha": "09f2f8a"
+    },
+    {
+      "trial_id": "HORIZON_III",
+      "pds_caslib": "Colorec_AstraZe_2006_78",
+      "pds_status": "DESCRIPTOR_ONLY",
+      "full_name": "HORIZON III — Cediranib + mFOLFOX6 vs Bevacizumab + mFOLFOX6 in 1L mCRC",
+      "sponsor": "AstraZeneca",
+      "setting": "1L mCRC",
+      "design": "Adaptive Phase II/III RCT",
+      "CRITICAL_IDENTITY_NOTE": "HORIZON III is NOT XELOX vs FOLFOX4. It is cediranib (VEGFR-TKI) vs bevacizumab, both with mFOLFOX6. Cediranib was NEVER approved in CRC. This is a NEGATIVE trial.",
+      "n_total": 1422,
+      "arms": {
+        "Cediranib_mFOLFOX6":    {"n": 709, "drug": "Cediranib 20mg/day + mFOLFOX6"},
+        "Bevacizumab_mFOLFOX6":  {"n": 713, "drug": "Bevacizumab 5mg/kg q14d + mFOLFOX6"}
+      },
+      "primary_endpoint": "PFS (non-inferiority, NI margin HR < 1.2)",
+      "trial_verdict": "NEGATIVE — NI margin NOT MET (upper CI 1.25 > 1.2)",
+      "key_results": {
+        "pfs_cediranib_months": 9.9,
+        "pfs_bevacizumab_months": 10.3,
+        "pfs_hr": 1.10,
+        "pfs_hr_ci": "[0.97–1.25]",
+        "pfs_p": 0.119,
+        "ni_margin_met": false,
+        "ni_margin_upper_ci": 1.25,
+        "ni_margin_threshold": 1.2,
+        "os_cediranib_months": 22.8,
+        "os_bevacizumab_months": 21.3,
+        "os_hr": 0.95,
+        "os_hr_ci": "[0.82–1.10]",
+        "os_p": 0.541,
+        "rr_cediranib_pct": 46.3,
+        "rr_bevacizumab_pct": 47.3,
+        "median_cycles_cediranib": 10,
+        "median_cycles_bevacizumab": 12,
+        "pro_note": "PROs significantly worse for cediranib (p<0.001)"
+      },
+      "arm_endpoint_implication": {
+        "warning": "PDS caslib 78 = cediranib (failed VEGFR-TKI) vs bevacizumab (SoC). Any comparator baseline from caslib 78 must be flagged as experimental-arm data from a NEGATIVE trial, NOT as SoC reference.",
+        "cediranib_approval_status": "Never approved in CRC"
+      },
+      "pseudo_ipd": {
+        "lambda_cediranib": "ln(2) / 9.9",
+        "lambda_bevacizumab": "ln(2) / 10.3",
+        "basis": "Median PFS per arm",
+        "data_file": "src/analysis/responder_analysis/literature/horizon3_pseudo_ipd.csv"
+      },
+      "responder_definition": {
+        "column": "responder_pfs6mo",
+        "rule": "PFS ≥ 6 months"
+      },
+      "forest_plot": {
+        "effect": 0.961,
+        "effect_type": "arm_median_ratio",
+        "p": 0.119,
+        "grade": "LIT",
+        "note": "9.9 / 10.3 = 0.961; NEGATIVE trial — effect < 1.0 (cediranib inferior to bevacizumab). Annotated as '0.96 (ns)' in forest plot."
+      },
+      "sources": [
+        {"citation": "Schmoll et al. 2012 JCO", "doi": "10.1200/jco.2012.42.5355"}
+      ],
+      "data_files": [
+        "src/analysis/responder_analysis/literature/horizon3_summary_stats.json",
+        "src/analysis/responder_analysis/literature/horizon3_pseudo_ipd.csv"
+      ],
+      "commit_sha": "09f2f8a"
+    }
+  ],
+  "cross_trial_summary": {
+    "total_patients": 4894,
+    "trials": 3,
+    "data_grade": "IPD_LITERATURE_PSEUDO",
+    "summary_table_file": "src/analysis/responder_analysis/literature/crc_literature_summary_table.csv",
+    "km_figure": "src/analysis/responder_analysis/literature/crc_literature_km_curves.png"
+  },
+  "repo_path": "fjkiani/crispro@mvp-ak-tumor-board",
+  "commit_sha": "09f2f8a"
+}

@@ -133,5 +133,95 @@
     "bot_bal_no_lm_orr": 0.17,
     "bot_bal_no_lm_ci": "95% CI 10\u201326%",
     "bot_bal_no_lm_n": 101
+  },
+  "responder_analysis": {
+    "description": "Cross-cohort responder vs non-responder survival ratios. All values locked from IPD analysis.",
+    "total_patients": 11588,
+    "gbm_cohorts": {
+      "GLASS": {
+        "n": 125,
+        "median_os_resp_months": 38.0,
+        "median_os_nonresp_months": 14.0,
+        "ratio": 2.714,
+        "logrank_p": 1.07e-40
+      },
+      "TCGA": {
+        "n": 580,
+        "median_os_resp_months": 27.8,
+        "median_os_nonresp_months": 10.5,
+        "ratio": 2.648,
+        "logrank_p": 6.18e-94
+      },
+      "CGGA": {
+        "n": 298,
+        "median_os_resp_months": 34.6,
+        "median_os_nonresp_months": 8.8,
+        "ratio": 3.932,
+        "logrank_p": 4.56e-54
+      }
+    },
+    "crc_pds_ipd_cohorts": {
+      "PACCE": {
+        "n": 842,
+        "median_pfs_resp_months": 13.8,
+        "median_pfs_nonresp_months": 3.2,
+        "ratio": 4.312,
+        "logrank_p": 4.54e-283
+      },
+      "PRIME": {
+        "n": 935,
+        "median_pfs_resp_months": 12.1,
+        "median_pfs_nonresp_months": 3.7,
+        "ratio": 3.27,
+        "logrank_p": 2.71e-304
+      },
+      "PEAK": {
+        "n": 946,
+        "median_pfs_resp_months": 10.4,
+        "median_pfs_nonresp_months": 3.1,
+        "ratio": 3.355,
+        "logrank_p": 4.39e-231
+      },
+      "N0147": {
+        "n": 2968,
+        "median_dfs_resp_months": "Not reached",
+        "median_dfs_nonresp_months": 13.8,
+        "logrank_p": "<1e-300"
+      }
+    },
+    "crc_literature_cohorts": {
+      "MOSAIC": {
+        "n": 2246,
+        "effect": 1.299,
+        "effect_type": "1/HR_DFS",
+        "published_hr": 0.77,
+        "p": 0.002
+      },
+      "VELOUR": {
+        "n": 1226,
+        "effect": 1.119,
+        "effect_type": "arm_median_ratio",
+        "arm_aflibercept_months": 13.5,
+        "arm_placebo_months": 12.06,
+        "p": 0.0032
+      },
+      "HORIZON_III": {
+        "n": 1422,
+        "effect": 0.961,
+        "effect_type": "arm_median_ratio",
+        "arm_cediranib_months": 9.9,
+        "arm_bevacizumab_months": 10.3,
+        "p": 0.119,
+        "verdict": "NEGATIVE"
+      }
+    },
+    "glass_molecular_signal": {
+      "ZEB1_delta_resp_median": -0.189,
+      "ZEB1_delta_nonresp_median": -0.902,
+      "ZEB1_mwu_p": 0.0014,
+      "SOX2_delta_resp_median": -0.11,
+      "SOX2_delta_nonresp_median": -0.605,
+      "SOX2_mwu_p": 0.043
+    }
   }
 }
