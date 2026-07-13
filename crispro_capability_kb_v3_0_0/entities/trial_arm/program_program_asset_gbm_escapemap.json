@@ -1,0 +1,23 @@
+{
+  "id": "program:program_asset_gbm_escapemap",
+  "type": "trial_arm",
+  "name": "program_asset_gbm_escapemap",
+  "source_receipts": [
+    {
+      "source_file": "Brenus/engagements/brenus/trial_intelligence/program_assets/program_asset_gbm_escapemap.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"program_header\": {\"program_id\": \"GBM_ESCAPEMAP\", \"program_name\": \"GBM ZEB1/EMT Escape Hypothesis \\u2014 Computational Closure Asset\", \"asset_version\": \"v1\", \"date\": \"2026-06-18\", \"admissibility\": \"internal_only\", \"admissibility_note\": \"This program contains computational dataset analyses, not clinical trial decodes. No GBM clinical trials have been decoded by CrisPRO. Admissibility is internal_o",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

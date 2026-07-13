@@ -1,0 +1,266 @@
+[
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /agents/synthetic_lethality",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/compat_routes.py",
+    "line": 41,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /guidance/synthetic_lethality",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/compat_routes.py",
+    "line": 44,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /break-crc/fit-gap",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 59,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /mss-crc/io-permissiveness",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 105,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /ceacam5/strategy",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 157,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /sl-bridge/evaluate",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 198,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /matching-rules/evaluate",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 251,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /governance/status",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 302,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /stc1010/position",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py",
+    "line": 41,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /brief/programs",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py",
+    "line": 89,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /regonivo/decode",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py",
+    "line": 116,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /stc1010/canonical",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py",
+    "line": 149,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /health",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 64,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /canonical-break-crc",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 78,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /evidence-anchors",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 121,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /governance-guardrails",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 137,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /full-pipeline",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 160,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /bundle",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/therapy_fit_bundle_routes.py",
+    "line": 31,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /assess",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/brain_met_routes.py",
+    "line": 111,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /ceacam5/decode",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 35,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /ddr/evaluate",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 66,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /escapemap/ov",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 97,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /canonical/vectors",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 133,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /epidemiology/ceacam5",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 162,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /match",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+    "line": 444,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /mss-crc-scan",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+    "line": 487,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /status",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+    "line": 592,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /{nct_id}",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+    "line": 619,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /scenarios",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/ayesha_bundle_routes.py",
+    "line": 56,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /chat/{partner_id}",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 32,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /history/{session_id}",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 75,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /sessions/{user_id}",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 99,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /evaluate",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 109,
+    "evidence": "route at layer4_output serves L5 output layer"
+  }
+]

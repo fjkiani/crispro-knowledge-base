@@ -1,0 +1,23 @@
+{
+  "id": "brief_program:brief-3",
+  "type": "brief_program_deep",
+  "name": "NSCLC brain metastasis (BrM)",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+      "json_pointer": "/programs/2",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"id\": \"BRIEF-3\", \"axis\": \"ZEB1-high + PD-1 blockade combination\", \"evidence_tier\": \"MECHANISTICALLY_GROUNDED\", \"deal_ready\": \"conditional\", \"status\": \"CONDITIONAL_ONE_GAP\", \"indication\": \"NSCLC brain metastasis (BrM)\", \"rationale\": \"ZEB1-high tumors upregulate PD-L1 expression (ZEB1 directly transcribes PD-L1). ZEB1-high + PD-1 blockade is mechanistically grounded \\u2014 ZEB1-high tumors should be more responsive to checkpoint blockade.\", \"correlation_result\": \"GSE271259 (n=34): r=0.050, p=0.780 \\u2014 statistically INSIGNIFICANT. The correlation between ZEB1 expression and PD-1 response is not supported by this dataset.\", \"mandatory_disclosure\": \"BRIEF-3 correlation r=0.050, p=0.780 is statistically insignificant. BRIEF-3 is MECHANISTICALLY_GROUNDED, not CRISPR_VALIDATED. The combination",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

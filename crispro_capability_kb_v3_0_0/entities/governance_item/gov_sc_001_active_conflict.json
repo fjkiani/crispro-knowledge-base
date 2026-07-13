@@ -1,0 +1,26 @@
+{
+  "id": "gov:sc_001_active_conflict",
+  "type": "governance_item",
+  "name": "gov:sc_001_active_conflict",
+  "source_receipts": [
+    {
+      "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS (mirrored from user Custom Instructions)",
+      "json_pointer": null,
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"status\": \"ACTIVE_CONFLICT\", \"issue\": \"HT29 BRAF V600E antigen overlap\"}",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "status": "ACTIVE_CONFLICT",
+    "issue": "HT29 BRAF V600E antigen overlap"
+  },
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

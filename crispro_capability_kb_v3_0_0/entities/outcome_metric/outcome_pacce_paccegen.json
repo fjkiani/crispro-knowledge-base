@@ -1,0 +1,27 @@
+{
+  "id": "outcome:pacce_paccegen",
+  "type": "outcome_metric",
+  "name": "PACCE responder analysis 13.8mo vs 3.2mo, p=4.54e-283",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/quantitative_anchors.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "PACCE responder analysis 13.8mo vs 3.2mo, p=4.54e-283",
+      "found": true
+    },
+    {
+      "claim": "KG v2.1.0 responder module",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

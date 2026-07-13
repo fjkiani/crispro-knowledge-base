@@ -1,0 +1,27 @@
+{
+  "id": "outcome:co26_ptmb_ge28_os",
+  "type": "outcome_metric",
+  "name": "CO.26 pTMB\u226528 OS HR 0.34 (90% CI 0.18-0.63, p=0.022)",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/quantitative_anchors.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "CO.26 pTMB\u226528 OS HR 0.34 (90% CI 0.18-0.63, p=0.022)",
+      "found": true
+    },
+    {
+      "claim": "durvalumab+tremelimumab vs BSC MSS mCRC",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

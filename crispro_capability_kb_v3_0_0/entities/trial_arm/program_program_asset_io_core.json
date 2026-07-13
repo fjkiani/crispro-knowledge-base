@@ -1,0 +1,23 @@
+{
+  "id": "program:program_asset_io_core",
+  "type": "trial_arm",
+  "name": "program_asset_io_core",
+  "source_receipts": [
+    {
+      "source_file": "Brenus/engagements/brenus/trial_intelligence/program_assets/program_asset_io_core.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"program_header\": {\"program_id\": \"IO_CORE\", \"program_name\": \"MSS CRC Immunotherapy Core Failure Corpus\", \"asset_version\": \"v1\", \"date\": \"2026-06-18\", \"admissibility\": \"external_safe\", \"entry_count\": 7, \"glb_trials\": [\"NCT02870920\"], \"generated_by\": \"CrisPRO \\u2014 Brenus Pharma Engagement\"}, \"value_proposition\": {\"headline\": \"7-trial MSS CRC IO failure corpus \\u2014 the definitive evidence base f",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

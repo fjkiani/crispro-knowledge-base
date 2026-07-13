@@ -1,0 +1,27 @@
+{
+  "id": "outcome:brief_1_validated",
+  "type": "outcome_metric",
+  "name": "BRIEF-1 delta=\u22120.7184, FDR=0.001203, CRISPR_VALIDATED",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/quantitative_anchors.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "BRIEF-1 delta=\u22120.7184, FDR=0.001203, CRISPR_VALIDATED",
+      "found": true
+    },
+    {
+      "claim": "aacr2026 brief report",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

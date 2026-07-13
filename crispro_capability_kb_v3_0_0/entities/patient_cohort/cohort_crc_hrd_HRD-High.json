@@ -1,0 +1,23 @@
+{
+  "id": "cohort:crc_hrd_HRD-High",
+  "type": "patient_cohort",
+  "name": "CRC HRD HRD-High",
+  "source_receipts": [
+    {
+      "source_file": "Brenus/data/ranker_results/crc_ranker_summary_v1.json",
+      "json_pointer": "/hrd_subgroups/HRD-High",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"n\": 102, \"stc1010_mean_fit\": 0.591, \"delta_mean\": -0.1412, \"recall_at_3\": 0.3824, \"mrr\": 0.2819}",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

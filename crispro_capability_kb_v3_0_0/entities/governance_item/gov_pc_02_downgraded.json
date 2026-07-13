@@ -1,0 +1,26 @@
+{
+  "id": "gov:pc_02_downgraded",
+  "type": "governance_item",
+  "name": "gov:pc_02_downgraded",
+  "source_receipts": [
+    {
+      "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS (mirrored from user Custom Instructions)",
+      "json_pointer": null,
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"status\": \"PERMANENTLY_DOWNGRADED\", \"condition\": \"until retroactive_prediction_run.py reproduces deltas\"}",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "status": "PERMANENTLY_DOWNGRADED",
+    "condition": "until retroactive_prediction_run.py reproduces deltas"
+  },
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

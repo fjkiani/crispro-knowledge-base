@@ -1,0 +1,22 @@
+{
+  "id": "endpoint_ref:POST /score",
+  "type": "endpoint_ref",
+  "name": "POST /score",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/api/routers/evo.py",
+      "line": 433
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "@router.post('/score') at crispro-backend-v2/api/routers/evo.py:433",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

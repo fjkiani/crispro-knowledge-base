@@ -1,0 +1,22 @@
+{
+  "id": "endpoint_ref:POST /targeted-brief",
+  "type": "endpoint_ref",
+  "name": "POST /targeted-brief",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/api/routers/ayesha_therapy_fit.py",
+      "line": 309
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "@router.post('/targeted-brief') at crispro-backend-v2/api/routers/ayesha_therapy_fit.py:309",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

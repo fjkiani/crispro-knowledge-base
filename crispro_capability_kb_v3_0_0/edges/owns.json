@@ -1,0 +1,149 @@
+[
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_atr_evidence_matrix_v2",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_bosutinib_checkpoint_MANUSCRIPT",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_axis_c_synthesis_2026_03_15",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_cbioportal_mbd4_clinical_query",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_mbd4_depmap_stats_receipt",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_pubmed_multimodal_query_results",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_sl_agent_mbd4_lof_standalone",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_ucec_mbd4_clinical_outcomes",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_wrn_specificity_validation",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_gdsc2_parpi_mbd4_summary",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_parp1_parpi_spearman_MANUSCRIPT_RECEIPT",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_parp_axis_expression_MANUSCRIPT_RECEIPT",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_canonical_atr_wee1_rerun",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_ceralasertib_ln_ic50_leave_one_out_MANUSCRIPT_RECEIPT",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_final_evidence_matrix_output",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_00_README",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_README",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_SUPPLEMENTAL_DATA_PROVENANCE",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_RECONCILIATION_TABLE",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_BUILD",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_manuscript",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "id": "trial:NCT06331130",
+  "type": "trial",
+  "name": "NCT06331130",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+      "json_pointer": "/NCT06331130",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "moa_vector={\"ddr\": 0.0, \"mapk\": 0.0, \"pi3k\": 0.0, \"vegf\": 0.0, \"her2\": 0.95, \"io\": 0.0, \"efflux\": 0.0, \"rss\": 0.0}",
+      "found": true
+    },
+    {
+      "claim": "confidence=0.95",
+      "found": true
+    },
+    {
+      "claim": "source=manual_intelligence_report",
+      "found": true
+    },
+    {
+      "claim": "reviewed_by=Zo",
+      "found": true
+    },
+    {
+      "claim": "title=Mesenteric Infiltration in Ovarian Cancer",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "axis8d:her2"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

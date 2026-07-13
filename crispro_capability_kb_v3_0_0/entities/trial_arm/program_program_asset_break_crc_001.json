@@ -1,0 +1,23 @@
+{
+  "id": "program:program_asset_break_crc_001",
+  "type": "trial_arm",
+  "name": "program_asset_break_crc_001",
+  "source_receipts": [
+    {
+      "source_file": "Brenus/engagements/brenus/trial_intelligence/program_assets/program_asset_break_crc_001.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"program_header\": {\"program_id\": \"BREAK_CRC_001\", \"program_name\": \"BreAK CRC-001 \\u2014 Active Phase I/II Trial Asset\", \"asset_version\": \"v1\", \"date\": \"2026-06-18\", \"admissibility\": \"external_safe\", \"entry_count\": 1, \"glb_trials\": [], \"generated_by\": \"CrisPRO \\u2014 Brenus Pharma Engagement\"}, \"value_proposition\": {\"headline\": \"BreAK CRC-001 \\u2014 active Phase I/II trial of STC-1010 (DNFB-hapten",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

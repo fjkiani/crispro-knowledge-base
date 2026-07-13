@@ -1,0 +1,22 @@
+{
+  "id": "endpoint_ref:GET /{nct_id}",
+  "type": "endpoint_ref",
+  "name": "GET /{nct_id}",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+      "line": 619
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "@router.get('/{nct_id}') at crispro-backend-v3-push/layer4_output/clinical_trials_routes.py:619",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

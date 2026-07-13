@@ -1,0 +1,88 @@
+{
+  "timestamp": "2026-07-13T23:26:44.854292Z",
+  "checks": [
+    {
+      "id": "A",
+      "name": "entity_source_receipts_present",
+      "passed": true,
+      "fail_count": 0,
+      "sample_failures": []
+    },
+    {
+      "id": "B",
+      "name": "entity_provenance_fields_present",
+      "passed": true,
+      "fail_count": 0,
+      "sample_failures": []
+    },
+    {
+      "id": "C",
+      "name": "edge_integrity_no_dangling",
+      "passed": true,
+      "fail_count": 0,
+      "sample_failures": []
+    },
+    {
+      "id": "D",
+      "name": "no_duplicate_entity_ids",
+      "passed": true,
+      "fail_count": 0,
+      "sample_failures": []
+    },
+    {
+      "id": "E",
+      "name": "edges_have_predicate_and_evidence",
+      "passed": true,
+      "fail_count": 0,
+      "sample_failures": []
+    },
+    {
+      "id": "F",
+      "name": "retroactive_trials_have_moa_vector",
+      "passed": true,
+      "fail_count": 0,
+      "trials_flagged_retroactive": 2,
+      "sample_failures": []
+    },
+    {
+      "id": "G",
+      "name": "no_phd_roadmap_relifts",
+      "passed": true,
+      "fail_count": 0,
+      "sample_failures": []
+    },
+    {
+      "id": "H",
+      "name": "governance_entities_participate_in_edges",
+      "passed": true,
+      "fail_count": 0,
+      "sample_failures": []
+    },
+    {
+      "id": "I",
+      "name": "axis_trials_have_governed_by",
+      "passed": true,
+      "fail_count": 0,
+      "sample_failures": []
+    },
+    {
+      "id": "J",
+      "name": "brief_ownership_coverage_90pct",
+      "passed": false,
+      "coverage_pct": 25.0,
+      "briefs_with_owns": 1,
+      "total_briefs": 4
+    },
+    {
+      "id": "K",
+      "name": "semantic_edges_dominate_ratio_gte_1.5",
+      "passed": true,
+      "mechanical_edges": 209,
+      "semantic_edges": 374,
+      "ratio": 1.79
+    }
+  ],
+  "overall_passed": false,
+  "checks_passed": 10,
+  "checks_failed": 1
+}

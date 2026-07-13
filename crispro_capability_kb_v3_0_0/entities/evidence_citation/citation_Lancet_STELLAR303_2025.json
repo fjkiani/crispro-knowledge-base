@@ -1,0 +1,23 @@
+{
+  "id": "citation:Lancet_STELLAR303_2025",
+  "type": "evidence_citation",
+  "name": "Lancet_STELLAR303_2025",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/quantitative_anchors.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "STELLAR-303 zanzalintinib+atezo First Phase 3 IO win MSS mCRC",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

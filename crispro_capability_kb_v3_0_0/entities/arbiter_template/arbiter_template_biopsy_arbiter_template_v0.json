@@ -1,0 +1,23 @@
+{
+  "id": "arbiter_template:biopsy_arbiter_template_v0",
+  "type": "arbiter_template",
+  "name": "biopsy_arbiter_template_v0",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/src/oncology_arbiter/arbiter/models/biopsy_arbiter_template_v0.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"model_name\": \"biopsy_arbiter_template_v0\", \"model_type\": \"L2_regularized_logistic_regression\", \"lambda\": 0.5, \"n_training\": 0, \"n_positive\": 0, \"n_negative\": 0, \"positive_class\": \"proceed_to_core_needle_biopsy\", \"intercept\": -1.5, \"coefficients\": {\"lesion_type_calcification_pleomorphic\": 2.8, \"lesion_type_calcification_amorphous\": 1.4, \"lesion_type_mass_spiculated\": 3.2, \"lesion_type_mass_circum",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

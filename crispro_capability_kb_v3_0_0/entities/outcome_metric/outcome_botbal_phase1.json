@@ -1,0 +1,27 @@
+{
+  "id": "outcome:botbal_phase1",
+  "type": "outcome_metric",
+  "name": "BOT/BAL Phase 1 ORR 17%, DCR 61% no-liver-met MSS mCRC",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/quantitative_anchors.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "BOT/BAL Phase 1 ORR 17%, DCR 61% no-liver-met MSS mCRC",
+      "found": true
+    },
+    {
+      "claim": "PMID 38871975",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

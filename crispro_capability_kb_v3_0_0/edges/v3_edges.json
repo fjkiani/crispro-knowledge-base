@@ -1,0 +1,4752 @@
+[
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /bundle",
+    "dst": "code_module:layer4_output/ayesha_bundle_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/ayesha_bundle_routes.py",
+    "line": 27,
+    "evidence": "@router.post('/bundle') at crispro-backend-v3-push/layer4_output/ayesha_bundle_routes.py:27",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /scenarios",
+    "dst": "code_module:layer4_output/ayesha_bundle_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/ayesha_bundle_routes.py",
+    "line": 56,
+    "evidence": "@router.get('/scenarios') at crispro-backend-v3-push/layer4_output/ayesha_bundle_routes.py:56",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /assess",
+    "dst": "code_module:layer4_output/brain_met_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/brain_met_routes.py",
+    "line": 111,
+    "evidence": "@router.post('/assess') at crispro-backend-v3-push/layer4_output/brain_met_routes.py:111",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /match",
+    "dst": "code_module:layer4_output/clinical_trials_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+    "line": 444,
+    "evidence": "@router.post('/match') at crispro-backend-v3-push/layer4_output/clinical_trials_routes.py:444",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /mss-crc-scan",
+    "dst": "code_module:layer4_output/clinical_trials_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+    "line": 487,
+    "evidence": "@router.post('/mss-crc-scan') at crispro-backend-v3-push/layer4_output/clinical_trials_routes.py:487",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /status",
+    "dst": "code_module:layer4_output/clinical_trials_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+    "line": 592,
+    "evidence": "@router.get('/status') at crispro-backend-v3-push/layer4_output/clinical_trials_routes.py:592",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /{nct_id}",
+    "dst": "code_module:layer4_output/clinical_trials_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+    "line": 619,
+    "evidence": "@router.get('/{nct_id}') at crispro-backend-v3-push/layer4_output/clinical_trials_routes.py:619",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /agents/synthetic_lethality",
+    "dst": "code_module:layer4_output/compat_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/compat_routes.py",
+    "line": 41,
+    "evidence": "@router.post('/agents/synthetic_lethality') at crispro-backend-v3-push/layer4_output/compat_routes.py:41",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /guidance/synthetic_lethality",
+    "dst": "code_module:layer4_output/compat_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/compat_routes.py",
+    "line": 44,
+    "evidence": "@router.post('/guidance/synthetic_lethality') at crispro-backend-v3-push/layer4_output/compat_routes.py:44",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:layer4_output/demo_router.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 64,
+    "evidence": "@router.get('/health') at crispro-backend-v3-push/layer4_output/demo_router.py:64",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /canonical-break-crc",
+    "dst": "code_module:layer4_output/demo_router.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 78,
+    "evidence": "@router.get('/canonical-break-crc') at crispro-backend-v3-push/layer4_output/demo_router.py:78",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /evidence-anchors",
+    "dst": "code_module:layer4_output/demo_router.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 121,
+    "evidence": "@router.get('/evidence-anchors') at crispro-backend-v3-push/layer4_output/demo_router.py:121",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /governance-guardrails",
+    "dst": "code_module:layer4_output/demo_router.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 137,
+    "evidence": "@router.get('/governance-guardrails') at crispro-backend-v3-push/layer4_output/demo_router.py:137",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /full-pipeline",
+    "dst": "code_module:layer4_output/demo_router.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 160,
+    "evidence": "@router.post('/full-pipeline') at crispro-backend-v3-push/layer4_output/demo_router.py:160",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /ceacam5/decode",
+    "dst": "code_module:layer4_output/pharma_dataset_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 35,
+    "evidence": "@router.post('/ceacam5/decode') at crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py:35",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /ddr/evaluate",
+    "dst": "code_module:layer4_output/pharma_dataset_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 66,
+    "evidence": "@router.post('/ddr/evaluate') at crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py:66",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /escapemap/ov",
+    "dst": "code_module:layer4_output/pharma_dataset_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 97,
+    "evidence": "@router.post('/escapemap/ov') at crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py:97",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /canonical/vectors",
+    "dst": "code_module:layer4_output/pharma_dataset_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 133,
+    "evidence": "@router.get('/canonical/vectors') at crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py:133",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /epidemiology/ceacam5",
+    "dst": "code_module:layer4_output/pharma_dataset_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 162,
+    "evidence": "@router.get('/epidemiology/ceacam5') at crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py:162",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /break-crc/fit-gap",
+    "dst": "code_module:layer4_output/pharma_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 59,
+    "evidence": "@router.post('/break-crc/fit-gap') at crispro-backend-v3-push/layer4_output/pharma_routes.py:59",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /mss-crc/io-permissiveness",
+    "dst": "code_module:layer4_output/pharma_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 105,
+    "evidence": "@router.post('/mss-crc/io-permissiveness') at crispro-backend-v3-push/layer4_output/pharma_routes.py:105",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /ceacam5/strategy",
+    "dst": "code_module:layer4_output/pharma_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 157,
+    "evidence": "@router.post('/ceacam5/strategy') at crispro-backend-v3-push/layer4_output/pharma_routes.py:157",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /sl-bridge/evaluate",
+    "dst": "code_module:layer4_output/pharma_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 198,
+    "evidence": "@router.post('/sl-bridge/evaluate') at crispro-backend-v3-push/layer4_output/pharma_routes.py:198",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /matching-rules/evaluate",
+    "dst": "code_module:layer4_output/pharma_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 251,
+    "evidence": "@router.post('/matching-rules/evaluate') at crispro-backend-v3-push/layer4_output/pharma_routes.py:251",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /governance/status",
+    "dst": "code_module:layer4_output/pharma_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 302,
+    "evidence": "@router.get('/governance/status') at crispro-backend-v3-push/layer4_output/pharma_routes.py:302",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /stc1010/position",
+    "dst": "code_module:layer4_output/pharma_wave3_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py",
+    "line": 41,
+    "evidence": "@router.post('/stc1010/position') at crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py:41",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /brief/programs",
+    "dst": "code_module:layer4_output/pharma_wave3_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py",
+    "line": 89,
+    "evidence": "@router.post('/brief/programs') at crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py:89",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /regonivo/decode",
+    "dst": "code_module:layer4_output/pharma_wave3_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py",
+    "line": 116,
+    "evidence": "@router.post('/regonivo/decode') at crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py:116",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /stc1010/canonical",
+    "dst": "code_module:layer4_output/pharma_wave3_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py",
+    "line": 149,
+    "evidence": "@router.get('/stc1010/canonical') at crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py:149",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /chat/{partner_id}",
+    "dst": "code_module:layer4_output/rag_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 32,
+    "evidence": "@router.post('/chat/{partner_id}') at crispro-backend-v3-push/layer4_output/rag_routes.py:32",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /history/{session_id}",
+    "dst": "code_module:layer4_output/rag_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 75,
+    "evidence": "@router.get('/history/{session_id}') at crispro-backend-v3-push/layer4_output/rag_routes.py:75",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /sessions/{user_id}",
+    "dst": "code_module:layer4_output/rag_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 99,
+    "evidence": "@router.get('/sessions/{user_id}') at crispro-backend-v3-push/layer4_output/rag_routes.py:99",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /evaluate",
+    "dst": "code_module:layer4_output/rag_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 109,
+    "evidence": "@router.post('/evaluate') at crispro-backend-v3-push/layer4_output/rag_routes.py:109",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:layer4_output/rag_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 159,
+    "evidence": "@router.get('/health') at crispro-backend-v3-push/layer4_output/rag_routes.py:159",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /bundle",
+    "dst": "code_module:layer4_output/therapy_fit_bundle_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/therapy_fit_bundle_routes.py",
+    "line": 31,
+    "evidence": "@router.post('/bundle') at crispro-backend-v3-push/layer4_output/therapy_fit_bundle_routes.py:31",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /targets",
+    "dst": "code_module:layer1_engines/brm_engine/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py",
+    "line": 48,
+    "evidence": "@router.post('/targets') at crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:48",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /score-variant",
+    "dst": "code_module:layer1_engines/brm_engine/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py",
+    "line": 68,
+    "evidence": "@router.post('/score-variant') at crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:68",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /targets/{gene}",
+    "dst": "code_module:layer1_engines/brm_engine/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py",
+    "line": 88,
+    "evidence": "@router.get('/targets/{gene}') at crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:88",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /repressor/{gene}",
+    "dst": "code_module:layer1_engines/brm_engine/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py",
+    "line": 105,
+    "evidence": "@router.get('/repressor/{gene}') at crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:105",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /af3-spec/{gene}",
+    "dst": "code_module:layer1_engines/brm_engine/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py",
+    "line": 130,
+    "evidence": "@router.get('/af3-spec/{gene}') at crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:130",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:layer1_engines/brm_engine/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py",
+    "line": 152,
+    "evidence": "@router.get('/health') at crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:152",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /analyze",
+    "dst": "code_module:layer1_engines/marrowguard/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/marrowguard/api/routes.py",
+    "line": 28,
+    "evidence": "@router.post('/analyze') at crispro-backend-v3-push/layer1_engines/marrowguard/api/routes.py:28",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:layer1_engines/synthetic_lethality/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py",
+    "line": 58,
+    "evidence": "@router.get('/health') at crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py:58",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /genes",
+    "dst": "code_module:layer1_engines/synthetic_lethality/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py",
+    "line": 76,
+    "evidence": "@router.get('/genes') at crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py:76",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /cancer_types",
+    "dst": "code_module:layer1_engines/synthetic_lethality/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py",
+    "line": 84,
+    "evidence": "@router.get('/cancer_types') at crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py:84",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /analyze",
+    "dst": "code_module:layer1_engines/synthetic_lethality/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py",
+    "line": 105,
+    "evidence": "@router.post('/analyze') at crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py:105",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /analyze/async",
+    "dst": "code_module:layer1_engines/synthetic_lethality/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py",
+    "line": 164,
+    "evidence": "@router.post('/analyze/async') at crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py:164",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /result/{job_id}",
+    "dst": "code_module:layer1_engines/synthetic_lethality/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py",
+    "line": 195,
+    "evidence": "@router.get('/result/{job_id}') at crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py:195",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /{agent_id}",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 139,
+    "evidence": "@router.get('/{agent_id}') at crispro-backend-v2/api/routers/agents.py:139",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:PUT /{agent_id}",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 166,
+    "evidence": "@router.put('/{agent_id}') at crispro-backend-v2/api/routers/agents.py:166",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:DELETE /{agent_id}",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 200,
+    "evidence": "@router.delete('/{agent_id}') at crispro-backend-v2/api/routers/agents.py:200",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /{agent_id}/pause",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 229,
+    "evidence": "@router.post('/{agent_id}/pause') at crispro-backend-v2/api/routers/agents.py:229",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /{agent_id}/resume",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 258,
+    "evidence": "@router.post('/{agent_id}/resume') at crispro-backend-v2/api/routers/agents.py:258",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /{agent_id}/run",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 292,
+    "evidence": "@router.post('/{agent_id}/run') at crispro-backend-v2/api/routers/agents.py:292",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /{agent_id}/runs",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 332,
+    "evidence": "@router.get('/{agent_id}/runs') at crispro-backend-v2/api/routers/agents.py:332",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /{agent_id}/results",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 376,
+    "evidence": "@router.get('/{agent_id}/results') at crispro-backend-v2/api/routers/agents.py:376",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /alerts",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 436,
+    "evidence": "@router.get('/alerts') at crispro-backend-v2/api/routers/agents.py:436",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /results/{result_id}/read",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 488,
+    "evidence": "@router.post('/results/{result_id}/read') at crispro-backend-v2/api/routers/agents.py:488",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /alerts/{alert_id}/read",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 528,
+    "evidence": "@router.post('/alerts/{alert_id}/read') at crispro-backend-v2/api/routers/agents.py:528",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /synthetic_lethality",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 576,
+    "evidence": "@router.post('/synthetic_lethality') at crispro-backend-v2/api/routers/agents.py:576",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /synthetic_lethality/health",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 677,
+    "evidence": "@router.get('/synthetic_lethality/health') at crispro-backend-v2/api/routers/agents.py:677",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /synthetic_lethality/depmap-status",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 705,
+    "evidence": "@router.get('/synthetic_lethality/depmap-status') at crispro-backend-v2/api/routers/agents.py:705",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/ayesha_dossiers.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_dossiers.py",
+    "line": 95,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/ayesha_dossiers.py:95",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /list",
+    "dst": "code_module:api/routers/ayesha_dossiers.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_dossiers.py",
+    "line": 106,
+    "evidence": "@router.get('/list') at crispro-backend-v2/api/routers/ayesha_dossiers.py:106",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /detail/{nct_id}",
+    "dst": "code_module:api/routers/ayesha_dossiers.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_dossiers.py",
+    "line": 154,
+    "evidence": "@router.get('/detail/{nct_id}') at crispro-backend-v2/api/routers/ayesha_dossiers.py:154",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /export/{nct_id}",
+    "dst": "code_module:api/routers/ayesha_dossiers.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_dossiers.py",
+    "line": 221,
+    "evidence": "@router.get('/export/{nct_id}') at crispro-backend-v2/api/routers/ayesha_dossiers.py:221",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /stats",
+    "dst": "code_module:api/routers/ayesha_dossiers.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_dossiers.py",
+    "line": 253,
+    "evidence": "@router.get('/stats') at crispro-backend-v2/api/routers/ayesha_dossiers.py:253",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /create",
+    "dst": "code_module:api/routers/ayesha_dossiers.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_dossiers.py",
+    "line": 341,
+    "evidence": "@router.post('/create') at crispro-backend-v2/api/routers/ayesha_dossiers.py:341",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /filter",
+    "dst": "code_module:api/routers/dossiers_intelligence.py",
+    "source_code": "crispro-backend-v2/api/routers/dossiers_intelligence.py",
+    "line": 80,
+    "evidence": "@router.post('/filter') at crispro-backend-v2/api/routers/dossiers_intelligence.py:80",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /generate",
+    "dst": "code_module:api/routers/dossiers_intelligence.py",
+    "source_code": "crispro-backend-v2/api/routers/dossiers_intelligence.py",
+    "line": 124,
+    "evidence": "@router.post('/generate') at crispro-backend-v2/api/routers/dossiers_intelligence.py:124",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /batch-generate",
+    "dst": "code_module:api/routers/dossiers_intelligence.py",
+    "source_code": "crispro-backend-v2/api/routers/dossiers_intelligence.py",
+    "line": 211,
+    "evidence": "@router.post('/batch-generate') at crispro-backend-v2/api/routers/dossiers_intelligence.py:211",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /list/{patient_id}",
+    "dst": "code_module:api/routers/dossiers_intelligence.py",
+    "source_code": "crispro-backend-v2/api/routers/dossiers_intelligence.py",
+    "line": 295,
+    "evidence": "@router.get('/list/{patient_id}') at crispro-backend-v2/api/routers/dossiers_intelligence.py:295",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /{patient_id}/{nct_id}",
+    "dst": "code_module:api/routers/dossiers_intelligence.py",
+    "source_code": "crispro-backend-v2/api/routers/dossiers_intelligence.py",
+    "line": 340,
+    "evidence": "@router.get('/{patient_id}/{nct_id}') at crispro-backend-v2/api/routers/dossiers_intelligence.py:340",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /comprehensive-analysis",
+    "dst": "code_module:api/routers/dossiers_intelligence.py",
+    "source_code": "crispro-backend-v2/api/routers/dossiers_intelligence.py",
+    "line": 381,
+    "evidence": "@router.post('/comprehensive-analysis') at crispro-backend-v2/api/routers/dossiers_intelligence.py:381",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/evidence/__init__.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/__init__.py",
+    "line": 18,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/evidence/__init__.py:18",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /clinvar",
+    "dst": "code_module:api/routers/evidence/clinvar.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/clinvar.py",
+    "line": 210,
+    "evidence": "@router.get('/clinvar') at crispro-backend-v2/api/routers/evidence/clinvar.py:210",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /deep_analysis",
+    "dst": "code_module:api/routers/evidence/clinvar.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/clinvar.py",
+    "line": 260,
+    "evidence": "@router.post('/deep_analysis') at crispro-backend-v2/api/routers/evidence/clinvar.py:260",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /extract",
+    "dst": "code_module:api/routers/evidence/extraction.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/extraction.py",
+    "line": 11,
+    "evidence": "@router.post('/extract') at crispro-backend-v2/api/routers/evidence/extraction.py:11",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /crawl",
+    "dst": "code_module:api/routers/evidence/jobs.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/jobs.py",
+    "line": 19,
+    "evidence": "@router.post('/crawl') at crispro-backend-v2/api/routers/evidence/jobs.py:19",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /summarize",
+    "dst": "code_module:api/routers/evidence/jobs.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/jobs.py",
+    "line": 47,
+    "evidence": "@router.post('/summarize') at crispro-backend-v2/api/routers/evidence/jobs.py:47",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /align",
+    "dst": "code_module:api/routers/evidence/jobs.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/jobs.py",
+    "line": 79,
+    "evidence": "@router.post('/align') at crispro-backend-v2/api/routers/evidence/jobs.py:79",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /job/{job_id}",
+    "dst": "code_module:api/routers/evidence/jobs.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/jobs.py",
+    "line": 111,
+    "evidence": "@router.get('/job/{job_id}') at crispro-backend-v2/api/routers/evidence/jobs.py:111",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /literature",
+    "dst": "code_module:api/routers/evidence/literature.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/literature.py",
+    "line": 174,
+    "evidence": "@router.post('/literature') at crispro-backend-v2/api/routers/evidence/literature.py:174",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /test",
+    "dst": "code_module:api/routers/evidence/literature.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/literature.py",
+    "line": 473,
+    "evidence": "@router.post('/test') at crispro-backend-v2/api/routers/evidence/literature.py:473",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /explain",
+    "dst": "code_module:api/routers/evidence/literature.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/literature.py",
+    "line": 485,
+    "evidence": "@router.post('/explain') at crispro-backend-v2/api/routers/evidence/literature.py:485",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /rag-query",
+    "dst": "code_module:api/routers/evidence/rag.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/rag.py",
+    "line": 34,
+    "evidence": "@router.post('/rag-query') at crispro-backend-v2/api/routers/evidence/rag.py:34",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /rag-add-variant",
+    "dst": "code_module:api/routers/evidence/rag.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/rag.py",
+    "line": 103,
+    "evidence": "@router.post('/rag-add-variant') at crispro-backend-v2/api/routers/evidence/rag.py:103",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /rag-stats",
+    "dst": "code_module:api/routers/evidence/rag.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/rag.py",
+    "line": 145,
+    "evidence": "@router.get('/rag-stats') at crispro-backend-v2/api/routers/evidence/rag.py:145",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /clinvar",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 266,
+    "evidence": "@router.get('/clinvar') at crispro-backend-v2/api/routers/evidence2.py:266",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /deep_analysis",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 301,
+    "evidence": "@router.post('/deep_analysis') at crispro-backend-v2/api/routers/evidence2.py:301",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /literature",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 451,
+    "evidence": "@router.post('/literature') at crispro-backend-v2/api/routers/evidence2.py:451",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /test",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 792,
+    "evidence": "@router.post('/test') at crispro-backend-v2/api/routers/evidence2.py:792",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /rag-query",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 807,
+    "evidence": "@router.post('/rag-query') at crispro-backend-v2/api/routers/evidence2.py:807",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /rag-add-variant",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 876,
+    "evidence": "@router.post('/rag-add-variant') at crispro-backend-v2/api/routers/evidence2.py:876",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /rag-stats",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 918,
+    "evidence": "@router.get('/rag-stats') at crispro-backend-v2/api/routers/evidence2.py:918",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /extract",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 934,
+    "evidence": "@router.post('/extract') at crispro-backend-v2/api/routers/evidence2.py:934",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /explain",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 975,
+    "evidence": "@router.post('/explain') at crispro-backend-v2/api/routers/evidence2.py:975",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /crawl",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 1060,
+    "evidence": "@router.post('/crawl') at crispro-backend-v2/api/routers/evidence2.py:1060",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /summarize",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 1088,
+    "evidence": "@router.post('/summarize') at crispro-backend-v2/api/routers/evidence2.py:1088",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /align",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 1120,
+    "evidence": "@router.post('/align') at crispro-backend-v2/api/routers/evidence2.py:1120",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /job/{job_id}",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 1152,
+    "evidence": "@router.get('/job/{job_id}') at crispro-backend-v2/api/routers/evidence2.py:1152",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /stats",
+    "dst": "code_module:api/routers/kb/endpoints/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/admin.py",
+    "line": 19,
+    "evidence": "@router.get('/stats') at crispro-backend-v2/api/routers/kb/endpoints/admin.py:19",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /reload",
+    "dst": "code_module:api/routers/kb/endpoints/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/admin.py",
+    "line": 49,
+    "evidence": "@router.post('/reload') at crispro-backend-v2/api/routers/kb/endpoints/admin.py:49",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /gene/{gene}",
+    "dst": "code_module:api/routers/kb/endpoints/client.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/client.py",
+    "line": 18,
+    "evidence": "@router.get('/gene/{gene}') at crispro-backend-v2/api/routers/kb/endpoints/client.py:18",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /variant",
+    "dst": "code_module:api/routers/kb/endpoints/client.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/client.py",
+    "line": 62,
+    "evidence": "@router.get('/variant') at crispro-backend-v2/api/routers/kb/endpoints/client.py:62",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /pathways",
+    "dst": "code_module:api/routers/kb/endpoints/client.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/client.py",
+    "line": 109,
+    "evidence": "@router.get('/pathways') at crispro-backend-v2/api/routers/kb/endpoints/client.py:109",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /cohort-coverage/{gene}",
+    "dst": "code_module:api/routers/kb/endpoints/client.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/client.py",
+    "line": 153,
+    "evidence": "@router.get('/cohort-coverage/{gene}') at crispro-backend-v2/api/routers/kb/endpoints/client.py:153",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /{item_id}",
+    "dst": "code_module:api/routers/kb/endpoints/items.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/items.py",
+    "line": 59,
+    "evidence": "@router.get('/{item_id}') at crispro-backend-v2/api/routers/kb/endpoints/items.py:59",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /vector",
+    "dst": "code_module:api/routers/kb/endpoints/search.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/search.py",
+    "line": 66,
+    "evidence": "@router.post('/vector') at crispro-backend-v2/api/routers/kb/endpoints/search.py:66",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /item/{item_id}",
+    "dst": "code_module:api/routers/kb/endpoints/validation.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/validation.py",
+    "line": 44,
+    "evidence": "@router.get('/item/{item_id}') at crispro-backend-v2/api/routers/kb/endpoints/validation.py:44",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /orchestrate/full",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 43,
+    "evidence": "@router.post('/orchestrate/full') at crispro-backend-v2/api/routers/orchestrate.py:43",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /orchestrate/full/upload",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 95,
+    "evidence": "@router.post('/orchestrate/full/upload') at crispro-backend-v2/api/routers/orchestrate.py:95",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /orchestrate/status/{patient_id}",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 156,
+    "evidence": "@router.get('/orchestrate/status/{patient_id}') at crispro-backend-v2/api/routers/orchestrate.py:156",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /orchestrate/state/{patient_id}",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 197,
+    "evidence": "@router.get('/orchestrate/state/{patient_id}') at crispro-backend-v2/api/routers/orchestrate.py:197",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /patients/{patient_id}",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 199,
+    "evidence": "@router.get('/patients/{patient_id}') at crispro-backend-v2/api/routers/orchestrate.py:199",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /patients/{patient_id}/care-plan",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 215,
+    "evidence": "@router.get('/patients/{patient_id}/care-plan') at crispro-backend-v2/api/routers/orchestrate.py:215",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /orchestrate/states",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 229,
+    "evidence": "@router.get('/orchestrate/states') at crispro-backend-v2/api/routers/orchestrate.py:229",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /patients",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 232,
+    "evidence": "@router.get('/patients') at crispro-backend-v2/api/routers/orchestrate.py:232",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /patients/{patient_id}/history",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 248,
+    "evidence": "@router.get('/patients/{patient_id}/history') at crispro-backend-v2/api/routers/orchestrate.py:248",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 273,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/orchestrate.py:273",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /full",
+    "dst": "code_module:api/routers/orchestrator.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrator.py",
+    "line": 73,
+    "evidence": "@router.post('/full') at crispro-backend-v2/api/routers/orchestrator.py:73",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /status/{patient_id}",
+    "dst": "code_module:api/routers/orchestrator.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrator.py",
+    "line": 126,
+    "evidence": "@router.get('/status/{patient_id}') at crispro-backend-v2/api/routers/orchestrator.py:126",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /state/{patient_id}",
+    "dst": "code_module:api/routers/orchestrator.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrator.py",
+    "line": 160,
+    "evidence": "@router.get('/state/{patient_id}') at crispro-backend-v2/api/routers/orchestrator.py:160",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /event",
+    "dst": "code_module:api/routers/orchestrator.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrator.py",
+    "line": 187,
+    "evidence": "@router.post('/event') at crispro-backend-v2/api/routers/orchestrator.py:187",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/orchestrator.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrator.py",
+    "line": 221,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/orchestrator.py:221",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /states",
+    "dst": "code_module:api/routers/orchestrator.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrator.py",
+    "line": 255,
+    "evidence": "@router.get('/states') at crispro-backend-v2/api/routers/orchestrator.py:255",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /targeted-brief",
+    "dst": "code_module:api/routers/ayesha_therapy_fit.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_therapy_fit.py",
+    "line": 309,
+    "evidence": "@router.post('/targeted-brief') at crispro-backend-v2/api/routers/ayesha_therapy_fit.py:309",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /bundle",
+    "dst": "code_module:api/routers/ayesha_therapy_fit.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_therapy_fit.py",
+    "line": 325,
+    "evidence": "@router.post('/bundle') at crispro-backend-v2/api/routers/ayesha_therapy_fit.py:325",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /analyze",
+    "dst": "code_module:api/routers/ayesha_therapy_fit.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_therapy_fit.py",
+    "line": 653,
+    "evidence": "@router.post('/analyze') at crispro-backend-v2/api/routers/ayesha_therapy_fit.py:653",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /drug/{drugname}",
+    "dst": "code_module:api/routers/ayesha_therapy_fit.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_therapy_fit.py",
+    "line": 730,
+    "evidence": "@router.get('/drug/{drugname}') at crispro-backend-v2/api/routers/ayesha_therapy_fit.py:730",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /panel_catalog",
+    "dst": "code_module:api/routers/ayesha_therapy_fit.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_therapy_fit.py",
+    "line": 804,
+    "evidence": "@router.get('/panel_catalog') at crispro-backend-v2/api/routers/ayesha_therapy_fit.py:804",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /scenarios",
+    "dst": "code_module:api/routers/ayesha_therapy_fit.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_therapy_fit.py",
+    "line": 856,
+    "evidence": "@router.get('/scenarios') at crispro-backend-v2/api/routers/ayesha_therapy_fit.py:856",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/ayesha_therapy_fit.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_therapy_fit.py",
+    "line": 908,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/ayesha_therapy_fit.py:908",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /completeness",
+    "dst": "code_module:api/routers/ayesha_therapy_fit.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_therapy_fit.py",
+    "line": 935,
+    "evidence": "@router.get('/completeness') at crispro-backend-v2/api/routers/ayesha_therapy_fit.py:935",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /search",
+    "dst": "code_module:api/routers/ayesha_trials/routes.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_trials/routes.py",
+    "line": 41,
+    "evidence": "@router.post('/search') at crispro-backend-v2/api/routers/ayesha_trials/routes.py:41",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/ayesha_trials/routes.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_trials/routes.py",
+    "line": 618,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/ayesha_trials/routes.py:618",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /warmup",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 358,
+    "evidence": "@router.post('/warmup') at crispro-backend-v2/api/routers/evo.py:358",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /score",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 433,
+    "evidence": "@router.post('/score') at crispro-backend-v2/api/routers/evo.py:433",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /generate",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 489,
+    "evidence": "@router.post('/generate') at crispro-backend-v2/api/routers/evo.py:489",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 556,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/evo.py:556",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /score_variant_multi",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 636,
+    "evidence": "@router.post('/score_variant_multi') at crispro-backend-v2/api/routers/evo.py:636",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /score_variant_exon",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 947,
+    "evidence": "@router.post('/score_variant_exon') at crispro-backend-v2/api/routers/evo.py:947",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /score_variant_profile",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 1066,
+    "evidence": "@router.post('/score_variant_profile') at crispro-backend-v2/api/routers/evo.py:1066",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /score_variant_probe",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 1094,
+    "evidence": "@router.post('/score_variant_probe') at crispro-backend-v2/api/routers/evo.py:1094",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /score_batch",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 1110,
+    "evidence": "@router.post('/score_batch') at crispro-backend-v2/api/routers/evo.py:1110",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /score_variant_with_activations",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 1141,
+    "evidence": "@router.post('/score_variant_with_activations') at crispro-backend-v2/api/routers/evo.py:1141",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /profile/{user_id}",
+    "dst": "code_module:api/routers/patient.py",
+    "source_code": "crispro-backend-v2/api/routers/patient.py",
+    "line": 107,
+    "evidence": "@router.get('/profile/{user_id}') at crispro-backend-v2/api/routers/patient.py:107",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:PUT /profile",
+    "dst": "code_module:api/routers/patient.py",
+    "source_code": "crispro-backend-v2/api/routers/patient.py",
+    "line": 206,
+    "evidence": "@router.put('/profile') at crispro-backend-v2/api/routers/patient.py:206",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /profile/{user_id}",
+    "dst": "code_module:api/routers/patient.py",
+    "source_code": "crispro-backend-v2/api/routers/patient.py",
+    "line": 219,
+    "evidence": "@router.post('/profile/{user_id}') at crispro-backend-v2/api/routers/patient.py:219",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:DELETE /profile/{user_id}",
+    "dst": "code_module:api/routers/patient.py",
+    "source_code": "crispro-backend-v2/api/routers/patient.py",
+    "line": 257,
+    "evidence": "@router.delete('/profile/{user_id}') at crispro-backend-v2/api/routers/patient.py:257",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /ca125/history/{user_id}",
+    "dst": "code_module:api/routers/patient.py",
+    "source_code": "crispro-backend-v2/api/routers/patient.py",
+    "line": 267,
+    "evidence": "@router.get('/ca125/history/{user_id}') at crispro-backend-v2/api/routers/patient.py:267",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /ca125/record/{user_id}",
+    "dst": "code_module:api/routers/patient.py",
+    "source_code": "crispro-backend-v2/api/routers/patient.py",
+    "line": 278,
+    "evidence": "@router.post('/ca125/record/{user_id}') at crispro-backend-v2/api/routers/patient.py:278",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/sessions/health",
+    "dst": "code_module:api/routers/sessions.py",
+    "source_code": "crispro-backend-v2/api/routers/sessions.py",
+    "line": 66,
+    "evidence": "@router.get('/api/sessions/health') at crispro-backend-v2/api/routers/sessions.py:66",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/sessions",
+    "dst": "code_module:api/routers/sessions.py",
+    "source_code": "crispro-backend-v2/api/routers/sessions.py",
+    "line": 75,
+    "evidence": "@router.post('/api/sessions') at crispro-backend-v2/api/routers/sessions.py:75",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/sessions/{session_id}",
+    "dst": "code_module:api/routers/sessions.py",
+    "source_code": "crispro-backend-v2/api/routers/sessions.py",
+    "line": 145,
+    "evidence": "@router.get('/api/sessions/{session_id}') at crispro-backend-v2/api/routers/sessions.py:145",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/sessions",
+    "dst": "code_module:api/routers/sessions.py",
+    "source_code": "crispro-backend-v2/api/routers/sessions.py",
+    "line": 203,
+    "evidence": "@router.get('/api/sessions') at crispro-backend-v2/api/routers/sessions.py:203",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/sessions/{session_id}/items",
+    "dst": "code_module:api/routers/sessions.py",
+    "source_code": "crispro-backend-v2/api/routers/sessions.py",
+    "line": 254,
+    "evidence": "@router.post('/api/sessions/{session_id}/items') at crispro-backend-v2/api/routers/sessions.py:254",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/sessions/{session_id}/items",
+    "dst": "code_module:api/routers/sessions.py",
+    "source_code": "crispro-backend-v2/api/routers/sessions.py",
+    "line": 312,
+    "evidence": "@router.get('/api/sessions/{session_id}/items') at crispro-backend-v2/api/routers/sessions.py:312",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /chemo",
+    "dst": "code_module:api/routers/guidance.py",
+    "source_code": "crispro-backend-v2/api/routers/guidance.py",
+    "line": 189,
+    "evidence": "@router.post('/chemo') at crispro-backend-v2/api/routers/guidance.py:189",
+    "scientific_priority": 60
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /radonc",
+    "dst": "code_module:api/routers/guidance.py",
+    "source_code": "crispro-backend-v2/api/routers/guidance.py",
+    "line": 346,
+    "evidence": "@router.post('/radonc') at crispro-backend-v2/api/routers/guidance.py:346",
+    "scientific_priority": 60
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /synthetic_lethality",
+    "dst": "code_module:api/routers/guidance.py",
+    "source_code": "crispro-backend-v2/api/routers/guidance.py",
+    "line": 406,
+    "evidence": "@router.post('/synthetic_lethality') at crispro-backend-v2/api/routers/guidance.py:406",
+    "scientific_priority": 60
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /synthetic_lethality/depmap-status",
+    "dst": "code_module:api/routers/guidance.py",
+    "source_code": "crispro-backend-v2/api/routers/guidance.py",
+    "line": 484,
+    "evidence": "@router.get('/synthetic_lethality/depmap-status') at crispro-backend-v2/api/routers/guidance.py:484",
+    "scientific_priority": 60
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /users",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 42,
+    "evidence": "@router.get('/users') at crispro-backend-v2/api/routers/admin.py:42",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /users/{user_id}",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 73,
+    "evidence": "@router.get('/users/{user_id}') at crispro-backend-v2/api/routers/admin.py:73",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:PUT /users/{user_id}",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 100,
+    "evidence": "@router.put('/users/{user_id}') at crispro-backend-v2/api/routers/admin.py:100",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /users/{user_id}/suspend",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 155,
+    "evidence": "@router.post('/users/{user_id}/suspend') at crispro-backend-v2/api/routers/admin.py:155",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /users/{user_id}/activate",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 191,
+    "evidence": "@router.post('/users/{user_id}/activate') at crispro-backend-v2/api/routers/admin.py:191",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /users/{user_id}/promote",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 227,
+    "evidence": "@router.post('/users/{user_id}/promote') at crispro-backend-v2/api/routers/admin.py:227",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /analytics/overview",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 279,
+    "evidence": "@router.get('/analytics/overview') at crispro-backend-v2/api/routers/admin.py:279",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /analytics/usage",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 299,
+    "evidence": "@router.get('/analytics/usage') at crispro-backend-v2/api/routers/admin.py:299",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /activity/logs",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 324,
+    "evidence": "@router.get('/activity/logs') at crispro-backend-v2/api/routers/admin.py:324",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /activity/sessions",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 353,
+    "evidence": "@router.get('/activity/sessions') at crispro-backend-v2/api/routers/admin.py:353",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 377,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/admin.py:377",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/auth/signup",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 61,
+    "evidence": "@router.post('/api/auth/signup') at crispro-backend-v2/api/routers/auth.py:61",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/auth/login",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 129,
+    "evidence": "@router.post('/api/auth/login') at crispro-backend-v2/api/routers/auth.py:129",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/auth/logout",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 164,
+    "evidence": "@router.post('/api/auth/logout') at crispro-backend-v2/api/routers/auth.py:164",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/auth/profile",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 186,
+    "evidence": "@router.get('/api/auth/profile') at crispro-backend-v2/api/routers/auth.py:186",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:PUT /api/auth/profile",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 228,
+    "evidence": "@router.put('/api/auth/profile') at crispro-backend-v2/api/routers/auth.py:228",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/auth/refresh",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 277,
+    "evidence": "@router.post('/api/auth/refresh') at crispro-backend-v2/api/routers/auth.py:277",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/auth/me",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 311,
+    "evidence": "@router.get('/api/auth/me') at crispro-backend-v2/api/routers/auth.py:311",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/auth/health",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 328,
+    "evidence": "@router.get('/api/auth/health') at crispro-backend-v2/api/routers/auth.py:328",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/auth/mfa/generate-secret",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 361,
+    "evidence": "@router.post('/api/auth/mfa/generate-secret') at crispro-backend-v2/api/routers/auth.py:361",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/auth/mfa/verify-enrollment",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 390,
+    "evidence": "@router.post('/api/auth/mfa/verify-enrollment') at crispro-backend-v2/api/routers/auth.py:390",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/auth/mfa/verify",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 421,
+    "evidence": "@router.post('/api/auth/mfa/verify') at crispro-backend-v2/api/routers/auth.py:421",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/auth/mfa/disable",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 452,
+    "evidence": "@router.post('/api/auth/mfa/disable') at crispro-backend-v2/api/routers/auth.py:452",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/auth/mfa/status",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 490,
+    "evidence": "@router.get('/api/auth/mfa/status') at crispro-backend-v2/api/routers/auth.py:490",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 159,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/canine.py:159",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /tcc/score",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 170,
+    "evidence": "@router.post('/tcc/score') at crispro-backend-v2/api/routers/canine.py:170",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /tcc/compounds",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 239,
+    "evidence": "@router.post('/tcc/compounds') at crispro-backend-v2/api/routers/canine.py:239",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /tcc/dosage",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 265,
+    "evidence": "@router.post('/tcc/dosage') at crispro-backend-v2/api/routers/canine.py:265",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /tcc/dosage/panel",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 301,
+    "evidence": "@router.post('/tcc/dosage/panel') at crispro-backend-v2/api/routers/canine.py:301",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /tcc/recipe",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 334,
+    "evidence": "@router.post('/tcc/recipe') at crispro-backend-v2/api/routers/canine.py:334",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /tcc/tests",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 387,
+    "evidence": "@router.post('/tcc/tests') at crispro-backend-v2/api/routers/canine.py:387",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /tcc/analyze-tests",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 431,
+    "evidence": "@router.post('/tcc/analyze-tests') at crispro-backend-v2/api/routers/canine.py:431",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /tcc/tests/{pet_id}",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 464,
+    "evidence": "@router.get('/tcc/tests/{pet_id}') at crispro-backend-v2/api/routers/canine.py:464",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /tcc/pipeline",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 532,
+    "evidence": "@router.post('/tcc/pipeline') at crispro-backend-v2/api/routers/canine.py:532",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/admin/users",
+    "dst": "code_module:api/middleware/admin_middleware.py",
+    "source_code": "crispro-backend-v2/api/middleware/admin_middleware.py",
+    "line": 19,
+    "evidence": "@router.get('/api/admin/users') at crispro-backend-v2/api/middleware/admin_middleware.py:19",
+    "scientific_priority": 10
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/admin/users/{user_id}",
+    "dst": "code_module:api/middleware/admin_middleware.py",
+    "source_code": "crispro-backend-v2/api/middleware/admin_middleware.py",
+    "line": 82,
+    "evidence": "@router.get('/api/admin/users/{user_id}') at crispro-backend-v2/api/middleware/admin_middleware.py:82",
+    "scientific_priority": 10
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/endpoint",
+    "dst": "code_module:api/middleware/auth_middleware.py",
+    "source_code": "crispro-backend-v2/api/middleware/auth_middleware.py",
+    "line": 108,
+    "evidence": "@router.post('/api/endpoint') at crispro-backend-v2/api/middleware/auth_middleware.py:108",
+    "scientific_priority": 10
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05450692",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05450692",
+    "evidence": "non-zero moa_vector[ddr] = 0.85"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05450692",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05450692",
+    "evidence": "non-zero moa_vector[mapk] = 0.1"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05450692",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05450692",
+    "evidence": "non-zero moa_vector[io] = 0.75"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05450692",
+    "dst": "axis8d:rss",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05450692",
+    "evidence": "non-zero moa_vector[rss] = 0.75"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02595892",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02595892",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02595892",
+    "dst": "axis8d:rss",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02595892",
+    "evidence": "non-zero moa_vector[rss] = 0.75"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06680479",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06680479",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06777979",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06777979",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05445778",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05445778",
+    "evidence": "non-zero moa_vector[vegf] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06331130",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06331130",
+    "evidence": "non-zero moa_vector[her2] = 0.95"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04284969",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04284969",
+    "evidence": "non-zero moa_vector[ddr] = 0.95"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02655016",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02655016",
+    "evidence": "non-zero moa_vector[ddr] = 0.95"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06558279",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06558279",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05675579",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05675579",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04001023",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04001023",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01000259",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01000259",
+    "evidence": "non-zero moa_vector[vegf] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06536179",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06536179",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05263479",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05263479",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06684379",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06684379",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05187338",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05187338",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06342986",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06342986",
+    "evidence": "non-zero moa_vector[io] = 0.3"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05239143",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05239143",
+    "evidence": "non-zero moa_vector[io] = 0.3"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04123379",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04123379",
+    "evidence": "non-zero moa_vector[io] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02244879",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02244879",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06631079",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06631079",
+    "evidence": "non-zero moa_vector[io] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06332079",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06332079",
+    "evidence": "non-zero moa_vector[vegf] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04986579",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04986579",
+    "evidence": "non-zero moa_vector[her2] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03735979",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03735979",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT00072579",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT00072579",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03878979",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03878979",
+    "evidence": "non-zero moa_vector[io] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05042479",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05042479",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02680379",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02680379",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT00652379",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT00652379",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04850079",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04850079",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03470779",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03470779",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06395779",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06395779",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02422979",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02422979",
+    "evidence": "non-zero moa_vector[io] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT00339079",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT00339079",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04534179",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04534179",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05338879",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05338879",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01226979",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01226979",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04470479",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04470479",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01609179",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01609179",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05799079",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05799079",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06108479",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06108479",
+    "evidence": "non-zero moa_vector[io] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06101979",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06101979",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01321879",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01321879",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06963879",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06963879",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02359279",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02359279",
+    "evidence": "non-zero moa_vector[mapk] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01091779",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01091779",
+    "evidence": "non-zero moa_vector[mapk] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT00006379",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT00006379",
+    "evidence": "non-zero moa_vector[mapk] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06638879",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06638879",
+    "evidence": "non-zero moa_vector[mapk] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01979679",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01979679",
+    "evidence": "non-zero moa_vector[mapk] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01961479",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01961479",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05190679",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05190679",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02498379",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02498379",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02364479",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02364479",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT00574379",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT00574379",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04521179",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04521179",
+    "evidence": "non-zero moa_vector[her2] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT00501579",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT00501579",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05201079",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05201079",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03479879",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03479879",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05147779",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05147779",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05943379",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05943379",
+    "evidence": "non-zero moa_vector[her2] = 0.7"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06242379",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06242379",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06242379",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06242379",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05891379",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05891379",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05656079",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05656079",
+    "evidence": "non-zero moa_vector[her2] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05656079",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05656079",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05546879",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05546879",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05546879",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05546879",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06473779",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06473779",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06920979",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06920979",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05788679",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05788679",
+    "evidence": "non-zero moa_vector[ddr] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05788679",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05788679",
+    "evidence": "non-zero moa_vector[io] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06476379",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06476379",
+    "evidence": "non-zero moa_vector[ddr] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06476379",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06476379",
+    "evidence": "non-zero moa_vector[mapk] = 0.3"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06476379",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06476379",
+    "evidence": "non-zero moa_vector[pi3k] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06476379",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06476379",
+    "evidence": "non-zero moa_vector[io] = 0.1"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02945579",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02945579",
+    "evidence": "non-zero moa_vector[her2] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02945579",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02945579",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05457595",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05457595",
+    "evidence": "non-zero moa_vector[ddr] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05457595",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05457595",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06639074",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06639074",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05467670",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05467670",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05281471",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05281471",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05281471",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05281471",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01174121",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01174121",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03458221",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03458221",
+    "evidence": "non-zero moa_vector[pi3k] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03458221",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03458221",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06380816",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06380816",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06883487",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06883487",
+    "evidence": "non-zero moa_vector[her2] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06508307",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06508307",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05797168",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05797168",
+    "evidence": "non-zero moa_vector[ddr] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05797168",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05797168",
+    "evidence": "non-zero moa_vector[mapk] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05797168",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05797168",
+    "evidence": "non-zero moa_vector[pi3k] = 0.1"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05797168",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05797168",
+    "evidence": "non-zero moa_vector[vegf] = 0.3"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05797168",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05797168",
+    "evidence": "non-zero moa_vector[io] = 0.1"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05952453",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05952453",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05952453",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05952453",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04633239",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04633239",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04633239",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04633239",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05255471",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05255471",
+    "evidence": "non-zero moa_vector[ddr] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05255471",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05255471",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06682988",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06682988",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05950464",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05950464",
+    "evidence": "non-zero moa_vector[mapk] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05950464",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05950464",
+    "evidence": "non-zero moa_vector[pi3k] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05950464",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05950464",
+    "evidence": "non-zero moa_vector[vegf] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05950464",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05950464",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT07023731",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT07023731",
+    "evidence": "non-zero moa_vector[mapk] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06152731",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06152731",
+    "evidence": "non-zero moa_vector[ddr] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06152731",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06152731",
+    "evidence": "non-zero moa_vector[mapk] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06469281",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06469281",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06469281",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06469281",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06910657",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06910657",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06305299",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06305299",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05208762",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05208762",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06732336",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06732336",
+    "evidence": "non-zero moa_vector[her2] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05233982",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05233982",
+    "evidence": "non-zero moa_vector[ddr] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05233982",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05233982",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05472857",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05472857",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06330064",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06330064",
+    "evidence": "non-zero moa_vector[her2] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04804007",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04804007",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04804007",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04804007",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06483048",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06483048",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT07216105",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT07216105",
+    "evidence": "non-zero moa_vector[her2] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT07216105",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT07216105",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06735326",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06735326",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06735326",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06735326",
+    "evidence": "non-zero moa_vector[vegf] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06253520",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06253520",
+    "evidence": "non-zero moa_vector[mapk] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06253520",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06253520",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05740956",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05740956",
+    "evidence": "non-zero moa_vector[ddr] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05740956",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05740956",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05638594",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05638594",
+    "evidence": "non-zero moa_vector[pi3k] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05638594",
+    "dst": "axis8d:her2",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05638594",
+    "evidence": "non-zero moa_vector[her2] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04938583",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04938583",
+    "evidence": "non-zero moa_vector[vegf] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04519151",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04519151",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04519151",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04519151",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06840002",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06840002",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06840002",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06840002",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT07059845",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT07059845",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT07059845",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT07059845",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04236479",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04236479",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04236479",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04236479",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06957379",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06957379",
+    "evidence": "non-zero moa_vector[pi3k] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04430179",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04430179",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03160079",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03160079",
+    "evidence": "non-zero moa_vector[pi3k] = 0.5"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03160079",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03160079",
+    "evidence": "non-zero moa_vector[io] = 0.7"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02101775",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02101775",
+    "evidence": "non-zero moa_vector[ddr] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02101775",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02101775",
+    "evidence": "non-zero moa_vector[mapk] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03860272",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03860272",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04024878",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04024878",
+    "evidence": "non-zero moa_vector[io] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01366144",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01366144",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01366144",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01366144",
+    "evidence": "non-zero moa_vector[mapk] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06419179",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06419179",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06419179",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06419179",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04128579",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04128579",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05671679",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05671679",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT00313079",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT00313079",
+    "evidence": "non-zero moa_vector[io] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01965379",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01965379",
+    "evidence": "non-zero moa_vector[pi3k] = 0.5"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01965379",
+    "dst": "axis8d:efflux",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01965379",
+    "evidence": "non-zero moa_vector[efflux] = 0.3"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04409379",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04409379",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04409379",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04409379",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01507779",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01507779",
+    "evidence": "non-zero moa_vector[io] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03152279",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03152279",
+    "evidence": "non-zero moa_vector[io] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03152279",
+    "dst": "axis8d:efflux",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03152279",
+    "evidence": "non-zero moa_vector[efflux] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01596179",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01596179",
+    "evidence": "non-zero moa_vector[io] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02430779",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02430779",
+    "evidence": "non-zero moa_vector[ddr] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02430779",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02430779",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06423079",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06423079",
+    "evidence": "non-zero moa_vector[io] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01835379",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01835379",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT00171379",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT00171379",
+    "evidence": "non-zero moa_vector[io] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT01425879",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT01425879",
+    "evidence": "non-zero moa_vector[pi3k] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05721079",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05721079",
+    "evidence": "non-zero moa_vector[io] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04164979",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04164979",
+    "evidence": "non-zero moa_vector[vegf] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04164979",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04164979",
+    "evidence": "non-zero moa_vector[io] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02575079",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02575079",
+    "evidence": "non-zero moa_vector[ddr] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT02575079",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT02575079",
+    "evidence": "non-zero moa_vector[mapk] = 0.9"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05761379",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05761379",
+    "evidence": "non-zero moa_vector[mapk] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05761379",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05761379",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06342479",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06342479",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06342479",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06342479",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05977179",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05977179",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05977179",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05977179",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06330779",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06330779",
+    "evidence": "non-zero moa_vector[io] = 0.3"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05078879",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05078879",
+    "evidence": "non-zero moa_vector[io] = 0.5"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05341479",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05341479",
+    "evidence": "non-zero moa_vector[io] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06930079",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06930079",
+    "evidence": "non-zero moa_vector[mapk] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06572579",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06572579",
+    "evidence": "non-zero moa_vector[io] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05706779",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05706779",
+    "evidence": "non-zero moa_vector[mapk] = 1.0"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06429579",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06429579",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06391879",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06391879",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06391879",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06391879",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05960279",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05960279",
+    "evidence": "non-zero moa_vector[ddr] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05960279",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05960279",
+    "evidence": "non-zero moa_vector[io] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06651879",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06651879",
+    "evidence": "non-zero moa_vector[mapk] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06651879",
+    "dst": "axis8d:pi3k",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06651879",
+    "evidence": "non-zero moa_vector[pi3k] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT05134779",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT05134779",
+    "evidence": "non-zero moa_vector[io] = 0.8"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04246879",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04246879",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04246879",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04246879",
+    "evidence": "non-zero moa_vector[vegf] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT03472079",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT03472079",
+    "evidence": "non-zero moa_vector[io] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06499779",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06499779",
+    "evidence": "non-zero moa_vector[vegf] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06499779",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06499779",
+    "evidence": "non-zero moa_vector[io] = 0.4"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT04640779",
+    "dst": "axis8d:io",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT04640779",
+    "evidence": "non-zero moa_vector[io] = 0.3"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06964009",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06964009",
+    "evidence": "non-zero moa_vector[ddr] = 0.3"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06964009",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06964009",
+    "evidence": "non-zero moa_vector[mapk] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06964009",
+    "dst": "axis8d:vegf",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06964009",
+    "evidence": "non-zero moa_vector[vegf] = 0.2"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06906341",
+    "dst": "axis8d:ddr",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06906341",
+    "evidence": "non-zero moa_vector[ddr] = 0.6"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "trial:NCT06906341",
+    "dst": "axis8d:mapk",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "json_pointer": "/NCT06906341",
+    "evidence": "non-zero moa_vector[mapk] = 0.4"
+  },
+  {
+    "predicate": "contradicts",
+    "src": "sl_evidence_record:mrtx1719_wrn_active_bug",
+    "dst": "gov:mrtx1719_wrn_bug",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "MRTX1719 is PRMT5 inhibitor, not WRN \u2014 canonical correction lock"
+  },
+  {
+    "predicate": "superseded_by",
+    "src": "gov:path_b_prohibited",
+    "dst": "gov:path_a_locked",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "PATH A LOCKED 2026-04-28; PATH B prohibited in all v3 outputs"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "trial:NCT05450692",
+    "dst": "gov:path_a_locked",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "evidence": "trial moa_vector produced by retroactive_validation (PATH A formula)"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "trial:NCT02595892",
+    "dst": "gov:path_a_locked",
+    "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+    "evidence": "trial moa_vector produced by retroactive_validation (PATH A formula)"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "brief_program:brief-2",
+    "dst": "gov:brief_2_hypothesis",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 downgraded to hypothesis per DepMap NULL result"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_atr_evidence_matrix_v2",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "crispro-knowledge-base/crispro_capability_kb/entities/canonical_receipt/receipt_mbd4_atr_evidence_matrix_v2.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_atr_evidence_matrix_v2",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "crispro-knowledge-base/crispro_capability_kb/entities/canonical_receipt/receipt_mbd4_atr_evidence_matrix_v2.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_bosutinib_checkpoint_MANUSCRIPT",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_bosutinib_checkpoint/MANUSCRIPT.md",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_bosutinib_checkpoint_MANUSCRIPT",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_bosutinib_checkpoint/MANUSCRIPT.md",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_axis_c_synthesis_2026_03_15",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_synthesis_2026_03_15.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_axis_c_synthesis_2026_03_15",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_synthesis_2026_03_15.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_cbioportal_mbd4_clinical_query",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/cbioportal_mbd4_clinical_query.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_cbioportal_mbd4_clinical_query",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/cbioportal_mbd4_clinical_query.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_mbd4_depmap_stats_receipt",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/mbd4_depmap_stats_receipt.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_mbd4_depmap_stats_receipt",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/mbd4_depmap_stats_receipt.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_pubmed_multimodal_query_results",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/pubmed_multimodal_query_results.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_pubmed_multimodal_query_results",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/pubmed_multimodal_query_results.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_sl_agent_mbd4_lof_standalone",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/sl_agent_mbd4_lof_standalone.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_sl_agent_mbd4_lof_standalone",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/sl_agent_mbd4_lof_standalone.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_ucec_mbd4_clinical_outcomes",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/ucec_mbd4_clinical_outcomes.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_ucec_mbd4_clinical_outcomes",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/ucec_mbd4_clinical_outcomes.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_wrn_specificity_validation",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/wrn_specificity_validation.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_wrn_specificity_validation",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/wrn_specificity_validation.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_gdsc2_parpi_mbd4_summary",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_preclinical/gdsc2_parpi_mbd4_summary.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_gdsc2_parpi_mbd4_summary",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_preclinical/gdsc2_parpi_mbd4_summary.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_parp1_parpi_spearman_MANUSCRIPT_RECEIPT",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_preclinical/parp1_parpi_spearman_MANUSCRIPT_RECEIPT.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_parp1_parpi_spearman_MANUSCRIPT_RECEIPT",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_preclinical/parp1_parpi_spearman_MANUSCRIPT_RECEIPT.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_parp_axis_expression_MANUSCRIPT_RECEIPT",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_preclinical/parp_axis_expression_MANUSCRIPT_RECEIPT.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_parp_axis_expression_MANUSCRIPT_RECEIPT",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/axis_c_preclinical/parp_axis_expression_MANUSCRIPT_RECEIPT.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_canonical_atr_wee1_rerun",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/canonical_atr_wee1_rerun.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_canonical_atr_wee1_rerun",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/canonical_atr_wee1_rerun.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_ceralasertib_ln_ic50_leave_one_out_MANUSCRIPT_RECEIPT",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/ceralasertib_ln_ic50_leave_one_out_MANUSCRIPT_RECEIPT.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_ceralasertib_ln_ic50_leave_one_out_MANUSCRIPT_RECEIPT",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/ceralasertib_ln_ic50_leave_one_out_MANUSCRIPT_RECEIPT.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_final_evidence_matrix_output",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/rxiv/FIGURES/final_evidence_matrix_output.json",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_final_evidence_matrix_output",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/rxiv/FIGURES/final_evidence_matrix_output.json",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_00_README",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/00_README.md",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_00_README",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/00_README.md",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_README",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/README.md",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_README",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/README.md",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_SUPPLEMENTAL_DATA_PROVENANCE",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/SUPPLEMENTAL_DATA_PROVENANCE.md",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_SUPPLEMENTAL_DATA_PROVENANCE",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/SUPPLEMENTAL_DATA_PROVENANCE.md",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_RECONCILIATION_TABLE",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/RECONCILIATION_TABLE.md",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_RECONCILIATION_TABLE",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/artifacts/canonical_atr_wee1_rerun_20260405/RECONCILIATION_TABLE.md",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_BUILD",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/rxiv/BUILD.md",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_BUILD",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/rxiv/BUILD.md",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_manuscript",
+    "dst": "sl_tier:MECHANISTIC_CANDIDATE_ONLY",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/rxiv/manuscript.md",
+    "evidence": "MBD4 substrate \u2014 canonical tier per mbd4_correction_lock"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "sl_evidence_record:mbd4_mbd4_parp_response_manuscript",
+    "dst": "gov:mbd4_correction_lock",
+    "source_file": "Synthetic-Lethality/00-mbd4-manuscript/mbd4_parp_response/rxiv/manuscript.md",
+    "evidence": "MBD4 correction lock applies to all MBD4 substrate"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:biopsy_medsiglip_probe",
+    "dst": "arbiter_layer:l3_evidence_retriever",
+    "source_file": "scientist-monai-moat/docs/model_cards/biopsy_medsiglip_probe.md",
+    "evidence": "model card biopsy_medsiglip_probe implements arbiter_layer:l3_evidence_retriever"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:medgemma_1_27b",
+    "dst": "arbiter_layer:l4a_generator",
+    "source_file": "scientist-monai-moat/docs/model_cards/medgemma_1_27b.md",
+    "evidence": "model card medgemma_1_27b implements arbiter_layer:l4a_generator"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:medgemma_1_5_4b",
+    "dst": "arbiter_layer:l4a_generator",
+    "source_file": "scientist-monai-moat/docs/model_cards/medgemma_1_5_4b.md",
+    "evidence": "model card medgemma_1_5_4b implements arbiter_layer:l4a_generator"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:medsiglip_448",
+    "dst": "arbiter_layer:l3_evidence_retriever",
+    "source_file": "scientist-monai-moat/docs/model_cards/medsiglip_448.md",
+    "evidence": "model card medsiglip_448 implements arbiter_layer:l3_evidence_retriever"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:monai_detector_heuristic",
+    "dst": "arbiter_layer:l3_evidence_retriever",
+    "source_file": "scientist-monai-moat/docs/model_cards/monai_detector_heuristic.md",
+    "evidence": "model card monai_detector_heuristic implements arbiter_layer:l3_evidence_retriever"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:nsclc_lung_heuristic_v0",
+    "dst": "arbiter_layer:l3_evidence_retriever",
+    "source_file": "scientist-monai-moat/docs/model_cards/nsclc_lung_heuristic_v0.md",
+    "evidence": "model card nsclc_lung_heuristic_v0 implements arbiter_layer:l3_evidence_retriever"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:report_parser_clinicalbert_v1",
+    "dst": "arbiter_layer:l2_input_normalizer",
+    "source_file": "scientist-monai-moat/docs/model_cards/report_parser_clinicalbert_v1.md",
+    "evidence": "model card report_parser_clinicalbert_v1 implements arbiter_layer:l2_input_normalizer"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:siglip_base_patch16_224",
+    "dst": "arbiter_layer:l3_evidence_retriever",
+    "source_file": "scientist-monai-moat/docs/model_cards/siglip_base_patch16_224.md",
+    "evidence": "model card siglip_base_patch16_224 implements arbiter_layer:l3_evidence_retriever"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:therapy_nccn_lite",
+    "dst": "arbiter_layer:l4a_generator",
+    "source_file": "scientist-monai-moat/docs/model_cards/therapy_nccn_lite.md",
+    "evidence": "model card therapy_nccn_lite implements arbiter_layer:l4a_generator"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:txgemma_9b_chat",
+    "dst": "arbiter_layer:l4a_generator",
+    "source_file": "scientist-monai-moat/docs/model_cards/txgemma_9b_chat.md",
+    "evidence": "model card txgemma_9b_chat implements arbiter_layer:l4a_generator"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:biopsy_medsiglip_probe",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/biopsy_medsiglip_probe.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:errata",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/errata.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:frontend_spa",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/frontend_spa.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:medgemma_1_27b",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/medgemma_1_27b.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:medgemma_1_5_4b",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/medgemma_1_5_4b.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:medsiglip_448",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/medsiglip_448.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:monai_detector_heuristic",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/monai_detector_heuristic.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:nsclc_lung_heuristic_v0",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/nsclc_lung_heuristic_v0.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:report_parser_clinicalbert_v1",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/report_parser_clinicalbert_v1.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:siglip_base_patch16_224",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/siglip_base_patch16_224.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:therapy_nccn_lite",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/therapy_nccn_lite.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_model:txgemma_9b_chat",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/docs/model_cards/txgemma_9b_chat.md",
+    "evidence": "All arbiter models constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "claim:ct_03_latify",
+    "dst": "gov:latify_quarantined",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "LATIFY delta unresolved (patent +0.366 vs receipt +0.2641)"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "claim:dl_05_latify",
+    "dst": "gov:latify_quarantined",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "LATIFY vector version unresolved"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "claim:pc_06_latify",
+    "dst": "gov:latify_quarantined",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "LATIFY prediction under quarantine"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "claim:dl_07_ddr",
+    "dst": "gov:dl_07_quarantined",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "DL-07 Figure 2 DDR=0.983 implausible \u2014 publication-blocking"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "claim:pc_02_prediction",
+    "dst": "gov:pc_02_downgraded",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "PC-02 permanently downgraded until deltas reproduce cleanly"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /agents/synthetic_lethality",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/compat_routes.py",
+    "line": 41,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /guidance/synthetic_lethality",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/compat_routes.py",
+    "line": 44,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /break-crc/fit-gap",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 59,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /mss-crc/io-permissiveness",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 105,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /ceacam5/strategy",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 157,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /sl-bridge/evaluate",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 198,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /matching-rules/evaluate",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 251,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /governance/status",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 302,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /stc1010/position",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py",
+    "line": 41,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /brief/programs",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py",
+    "line": 89,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /regonivo/decode",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py",
+    "line": 116,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /stc1010/canonical",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py",
+    "line": 149,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /health",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 64,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /canonical-break-crc",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 78,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /evidence-anchors",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 121,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /governance-guardrails",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 137,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /full-pipeline",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 160,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /bundle",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/therapy_fit_bundle_routes.py",
+    "line": 31,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /assess",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/brain_met_routes.py",
+    "line": 111,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /ceacam5/decode",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 35,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /ddr/evaluate",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 66,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /escapemap/ov",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 97,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /canonical/vectors",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 133,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /epidemiology/ceacam5",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 162,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /match",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+    "line": 444,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /mss-crc-scan",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+    "line": 487,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /status",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+    "line": 592,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /{nct_id}",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+    "line": 619,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /scenarios",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/ayesha_bundle_routes.py",
+    "line": 56,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /chat/{partner_id}",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 32,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /history/{session_id}",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 75,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:GET /sessions/{user_id}",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 99,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "endpoint_ref:POST /evaluate",
+    "dst": "arbiter_layer:l5_arbiter_output",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 109,
+    "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_atr_evidence_matrix_v2",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_bosutinib_checkpoint_MANUSCRIPT",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_axis_c_synthesis_2026_03_15",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_cbioportal_mbd4_clinical_query",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_mbd4_depmap_stats_receipt",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_pubmed_multimodal_query_results",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_sl_agent_mbd4_lof_standalone",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_ucec_mbd4_clinical_outcomes",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_wrn_specificity_validation",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_gdsc2_parpi_mbd4_summary",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_parp1_parpi_spearman_MANUSCRIPT_RECEIPT",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_parp_axis_expression_MANUSCRIPT_RECEIPT",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_canonical_atr_wee1_rerun",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_ceralasertib_ln_ic50_leave_one_out_MANUSCRIPT_RECEIPT",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_final_evidence_matrix_output",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_00_README",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_README",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_SUPPLEMENTAL_DATA_PROVENANCE",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_RECONCILIATION_TABLE",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_BUILD",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "owns",
+    "src": "brief_program:brief-2",
+    "dst": "sl_evidence_record:mbd4_mbd4_parp_response_manuscript",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF-2 program owns MBD4 substrate"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:adavosertib",
+    "dst": "axis8d:ddr",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:adavosertib targets ddr axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:ceralasertib",
+    "dst": "axis8d:ddr",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:ceralasertib targets ddr axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:niraparib",
+    "dst": "axis8d:ddr",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:niraparib targets ddr axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:olaparib",
+    "dst": "axis8d:ddr",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:olaparib targets ddr axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:talazoparib",
+    "dst": "axis8d:ddr",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:talazoparib targets ddr axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:pembrolizumab",
+    "dst": "axis8d:io",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:pembrolizumab targets io axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:nivolumab",
+    "dst": "axis8d:io",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:nivolumab targets io axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:atezolizumab",
+    "dst": "axis8d:io",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:atezolizumab targets io axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:durvalumab",
+    "dst": "axis8d:io",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:durvalumab targets io axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:encorafenib",
+    "dst": "axis8d:mapk",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:encorafenib targets mapk axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:cobimetinib",
+    "dst": "axis8d:mapk",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:cobimetinib targets mapk axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:bevacizumab",
+    "dst": "axis8d:vegf",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:bevacizumab targets vegf axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:trastuzumab",
+    "dst": "axis8d:her2",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:trastuzumab targets her2 axis per canonical MOA table"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:pertuzumab",
+    "dst": "axis8d:her2",
+    "source_file": "kb_planner_lib.py::axis_to_drugs (canonical MOA mapping from CRISPRO ranker)",
+    "evidence": "drug:pertuzumab targets her2 axis per canonical MOA table"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "gov:sc_001_active_conflict",
+    "dst": "variant:BRAF_V600E",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "SC-001 active conflict: HT29 BRAF V600E antigen overlap \u2014 resistance vector"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "gov:gbm_zeb1_closed",
+    "dst": "axis8d:io",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "GBM ZEB1 closed after 3-dataset validation failure \u2014 resistance interpretation blocked"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "code_module:api/services/resistance_detection_service.py",
+    "dst": "axis8d:io",
+    "source_code": "crispro-backend-v2/api/services/resistance_detection_service.py",
+    "line": 1,
+    "evidence": "resistance detection service \u2014 pTMB/MSI/hyper-mutation detection heuristics: routes resistance signal to axis8d:io"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "code_module:api/services/resistance_detection_service.py",
+    "dst": "axis8d:ddr",
+    "source_code": "crispro-backend-v2/api/services/resistance_detection_service.py",
+    "line": 1,
+    "evidence": "resistance detection service \u2014 pTMB/MSI/hyper-mutation detection heuristics: routes resistance signal to axis8d:ddr"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "code_module:api/services/resistance_prophet_service.py",
+    "dst": "axis8d:io",
+    "source_code": "crispro-backend-v2/api/services/resistance_prophet_service.py",
+    "line": 1,
+    "evidence": "resistance prophet \u2014 probabilistic resistance forecasting service: routes resistance signal to axis8d:io"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "code_module:api/services/resistance_prophet_service.py",
+    "dst": "axis8d:ddr",
+    "source_code": "crispro-backend-v2/api/services/resistance_prophet_service.py",
+    "line": 1,
+    "evidence": "resistance prophet \u2014 probabilistic resistance forecasting service: routes resistance signal to axis8d:ddr"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "code_module:api/services/resistance_playbook_service.py",
+    "dst": "axis8d:io",
+    "source_code": "crispro-backend-v2/api/services/resistance_playbook_service.py",
+    "line": 1,
+    "evidence": "resistance playbook \u2014 clinical decision support for resistance emergence: routes resistance signal to axis8d:io"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "code_module:api/services/resistance_playbook_service.py",
+    "dst": "axis8d:ddr",
+    "source_code": "crispro-backend-v2/api/services/resistance_playbook_service.py",
+    "line": 1,
+    "evidence": "resistance playbook \u2014 clinical decision support for resistance emergence: routes resistance signal to axis8d:ddr"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "code_module:api/services/resistance_evidence_tiers.py",
+    "dst": "axis8d:io",
+    "source_code": "crispro-backend-v2/api/services/resistance_evidence_tiers.py",
+    "line": 1,
+    "evidence": "resistance evidence tier assignment (paralleling SL tier logic): routes resistance signal to axis8d:io"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "code_module:api/services/resistance_evidence_tiers.py",
+    "dst": "axis8d:ddr",
+    "source_code": "crispro-backend-v2/api/services/resistance_evidence_tiers.py",
+    "line": 1,
+    "evidence": "resistance evidence tier assignment (paralleling SL tier logic): routes resistance signal to axis8d:ddr"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "sl_evidence_record:doc_section61_antigen_escape_refs",
+    "dst": "axis8d:io",
+    "source_file": "Synthetic-Lethality/docs/manuscripts/refs/section61_antigen_escape_refs.json",
+    "evidence": "Section 6.1 antigen escape reference bundle documents IO-axis resistance mechanisms"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:encorafenib",
+    "dst": "variant:BRAF_V600E",
+    "source_file": "kb_planner_lib.py::drug_to_variant (canonical mechanism table)",
+    "evidence": "Encorafenib is a BRAF V600 selective inhibitor \u2014 MAPK axis mechanism (BEACON-CRC evidence)"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:ceralasertib",
+    "dst": "variant:TP53_R175H",
+    "source_file": "kb_planner_lib.py::drug_to_variant (canonical mechanism table)",
+    "evidence": "Ceralasertib ATR inhibition exploits TP53 R175H replication stress"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "drug:adavosertib",
+    "dst": "variant:TP53_R175H",
+    "source_file": "kb_planner_lib.py::drug_to_variant (canonical mechanism table)",
+    "evidence": "Adavosertib WEE1 inhibition targets p53-null S/G2 checkpoint bypass"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "brief_program:brief-1",
+    "dst": "gov:path_a_locked",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF programs use PATH A formula for ranking"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "brief_program:brief-4",
+    "dst": "gov:path_a_locked",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF programs use PATH A formula for ranking"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "brief_program:brief-3",
+    "dst": "gov:path_a_locked",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF programs use PATH A formula for ranking"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "brief_program:brief-2",
+    "dst": "gov:path_a_locked",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+    "evidence": "BRIEF programs use PATH A formula for ranking"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_layer:l1_gateway",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/README.md",
+    "evidence": "Arbiter layers constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_layer:l2_input_normalizer",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/README.md",
+    "evidence": "Arbiter layers constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_layer:l3_evidence_retriever",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/README.md",
+    "evidence": "Arbiter layers constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_layer:l4a_generator",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/README.md",
+    "evidence": "Arbiter layers constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_layer:l4b_reflection",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/README.md",
+    "evidence": "Arbiter layers constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_layer:l4c_ranker",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/README.md",
+    "evidence": "Arbiter layers constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "arbiter_layer:l5_arbiter_output",
+    "dst": "regulatory_posture:oncology_arbiter_ruo",
+    "source_file": "scientist-monai-moat/README.md",
+    "evidence": "Arbiter layers constrained by RUO regulatory posture"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "trial:NCT05450692",
+    "dst": "code_module:crispro_kg_v2/kg_modules/trials_module.json",
+    "source_file": "crispro-knowledge-base/crispro_kg_v2/",
+    "evidence": "NCT05450692 present in KG v2.1.0 canonical trial module"
+  },
+  {
+    "src": "claim:ct_01_formula",
+    "dst": "gov:path_a_locked",
+    "predicate": "governed_by",
+    "evidence": "PATH A formula fit = clip((p\u00b7t) / \u2016t\u2016\u2082, 0, 1) locked in gov:path_a_locked (approval 2026-04-28)",
+    "source_file": "Brenus/formula_governance/PATH_A_APPROVAL.md",
+    "_stream": "v3:audit_upgrade",
+    "_mint_planner": "x5_gap_fill",
+    "_mint_timestamp": "2026-07-13T23:26:21.537989Z"
+  },
+  {
+    "src": "claim:ct_02_formula",
+    "dst": "gov:path_a_locked",
+    "predicate": "governed_by",
+    "evidence": "PATH A vs PATH B decision resolved as PATH A per gov:path_a_locked (approval 2026-04-28)",
+    "source_file": "Brenus/formula_governance/PATH_A_APPROVAL.md",
+    "_stream": "v3:audit_upgrade",
+    "_mint_planner": "x5_gap_fill",
+    "_mint_timestamp": "2026-07-13T23:26:21.537989Z"
+  },
+  {
+    "src": "claim:dl_03_formula",
+    "dst": "gov:path_a_locked",
+    "predicate": "governed_by",
+    "evidence": "Formula-dependent downstream lift unblocked by gov:path_a_locked",
+    "source_file": "Brenus/formula_governance/PATH_A_APPROVAL.md",
+    "_stream": "v3:audit_upgrade",
+    "_mint_planner": "x5_gap_fill",
+    "_mint_timestamp": "2026-07-13T23:26:21.537989Z"
+  },
+  {
+    "src": "claim:pc_05_formula",
+    "dst": "gov:path_a_locked",
+    "predicate": "governed_by",
+    "evidence": "Formula-dependent prediction claim unblocked by gov:path_a_locked",
+    "source_file": "Brenus/formula_governance/PATH_A_APPROVAL.md",
+    "_stream": "v3:audit_upgrade",
+    "_mint_planner": "x5_gap_fill",
+    "_mint_timestamp": "2026-07-13T23:26:21.537989Z"
+  },
+  {
+    "src": "brief_program:brief-1",
+    "dst": "sl_tier:COMPUTATIONAL_HYPOTHESIS",
+    "predicate": "governed_by",
+    "evidence": "Program brief-1 at COMPUTATIONAL_HYPOTHESIS tier \u2014 no dedicated substrate yet",
+    "source_file": "crispro-knowledge-base/crispro_capability_kb/program_brief_sl.json",
+    "_stream": "v3:audit_upgrade",
+    "_mint_planner": "x5_gap_fill",
+    "_mint_timestamp": "2026-07-13T23:26:21.537989Z"
+  },
+  {
+    "src": "brief_program:brief-3",
+    "dst": "sl_tier:COMPUTATIONAL_HYPOTHESIS",
+    "predicate": "governed_by",
+    "evidence": "Program brief-3 at COMPUTATIONAL_HYPOTHESIS tier \u2014 no dedicated substrate yet",
+    "source_file": "crispro-knowledge-base/crispro_capability_kb/program_brief_sl.json",
+    "_stream": "v3:audit_upgrade",
+    "_mint_planner": "x5_gap_fill",
+    "_mint_timestamp": "2026-07-13T23:26:21.537989Z"
+  },
+  {
+    "src": "brief_program:brief-4",
+    "dst": "sl_tier:COMPUTATIONAL_HYPOTHESIS",
+    "predicate": "governed_by",
+    "evidence": "Program brief-4 at COMPUTATIONAL_HYPOTHESIS tier \u2014 no dedicated substrate yet",
+    "source_file": "crispro-knowledge-base/crispro_capability_kb/program_brief_sl.json",
+    "_stream": "v3:audit_upgrade",
+    "_mint_planner": "x5_gap_fill",
+    "_mint_timestamp": "2026-07-13T23:26:21.537989Z"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "id": "code_module:layer1_engines/marrowguard/api/routes.py",
+  "type": "code_module",
+  "name": "layer1_engines/marrowguard/api/routes.py",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v3-push/layer1_engines/marrowguard/api/routes.py",
+      "line": 28
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "@router.post('/analyze') at crispro-backend-v3-push/layer1_engines/marrowguard/api/routes.py:28",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

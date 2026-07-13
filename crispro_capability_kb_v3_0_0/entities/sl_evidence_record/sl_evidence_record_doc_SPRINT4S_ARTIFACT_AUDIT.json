@@ -1,0 +1,23 @@
+{
+  "id": "sl_evidence_record:doc_SPRINT4S_ARTIFACT_AUDIT",
+  "type": "sl_evidence_record",
+  "name": "SPRINT4S_ARTIFACT_AUDIT",
+  "source_receipts": [
+    {
+      "source_file": "Synthetic-Lethality/SPRINT4S_ARTIFACT_AUDIT.md",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "SL positioning/spec document SPRINT4S_ARTIFACT_AUDIT.md",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

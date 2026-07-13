@@ -1,0 +1,23 @@
+{
+  "id": "program:program_asset_ceacam5",
+  "type": "trial_arm",
+  "name": "program_asset_ceacam5",
+  "source_receipts": [
+    {
+      "source_file": "Brenus/engagements/brenus/trial_intelligence/program_assets/program_asset_ceacam5.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"program_header\": {\"program_id\": \"CEACAM5\", \"program_name\": \"CEACAM5-Targeted Therapy Failure Corpus\", \"asset_version\": \"v1\", \"date\": \"2026-06-18\", \"admissibility\": \"external_safe\", \"entry_count\": 5, \"glb_trials\": [\"NCT04154956\"], \"generated_by\": \"CrisPRO \\u2014 Brenus Pharma Engagement\"}, \"value_proposition\": {\"headline\": \"5-trial CEACAM5 failure corpus spanning ADC (DM4, SN-38, Topo1i), bispeci",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

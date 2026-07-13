@@ -1,0 +1,27 @@
+{
+  "id": "claim:ct_03_latify",
+  "type": "claim",
+  "name": "CT-03 \u2014 LATIFY delta claim (patent +0.366 vs receipt +0.2641)",
+  "source_receipts": [
+    {
+      "source_file": "Custom Instructions (Fahad Kiani, 2026-04-28 8D remediation)",
+      "json_pointer": null,
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "CT-03: LATIFY delta claim (patent +0.366 vs receipt +0.2641)",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "defect_id": "CT-03",
+    "governance_link": "gov:latify_quarantined",
+    "status": "QUARANTINED_or_LOCKED"
+  },
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

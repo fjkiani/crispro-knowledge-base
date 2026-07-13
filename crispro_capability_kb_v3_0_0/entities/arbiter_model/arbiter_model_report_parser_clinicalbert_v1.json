@@ -1,0 +1,29 @@
+{
+  "id": "arbiter_model:report_parser_clinicalbert_v1",
+  "type": "arbiter_model",
+  "name": "Model card \u2014 report_parser_clinicalbert_v1",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/docs/model_cards/report_parser_clinicalbert_v1.md",
+      "json_pointer": null,
+      "line_range": "1-100"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "# Model card \u2014 report_parser_clinicalbert_v1\n\n## Summary\n\nToken-classification head fine-tuned on top of `emilyalsentzer/Bio_ClinicalBERT`\nto extract 11 entity types from breast-cancer pathology reports and roll them\nup into the schema used by `oncology_arbiter`'s regex parser. Used inside the\nfused-mode report parser to rescue reports where the regex layer fails on\nlong-form or non-standard phras",
+      "found": true
+    },
+    {
+      "claim": "ruo_marker_present=False",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "regulatory_posture:oncology_arbiter_ruo"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

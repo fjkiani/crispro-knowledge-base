@@ -1,0 +1,23 @@
+{
+  "id": "brief_program:brief-1",
+  "type": "brief_program_deep",
+  "name": "NSCLC brain metastasis (BrM)",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json",
+      "json_pointer": "/programs/0",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"id\": \"BRIEF-1\", \"axis\": \"ZEB1 \\u2192 ITGAV (synthetic lethality)\", \"evidence_tier\": \"CRISPR_VALIDATED\", \"deal_ready\": true, \"delta\": -0.7184, \"fdr\": 0.001203, \"status\": \"DEAL_READY\", \"indication\": \"NSCLC brain metastasis (BrM)\", \"what_zeb1_is\": \"ZEB1 (Zinc finger E-box binding homeobox 1) is a master regulator of epithelial-mesenchymal transition (EMT). In NSCLC/BrM, ZEB1-high tumors have undergone EMT \\u2014 they are more invasive, more metastatic, and more resistant to chemotherapy. ZEB1-high is a marker of aggressive disease.\", \"what_itgav_is\": \"ITGAV (Integrin alpha-V) is a cell surface receptor that mediates cell adhesion to the extracellular matrix. In ZEB1-high cells, ITGAV becomes essential for survival \\u2014 ZEB1-high cells depend on integrin signaling for anoikis resistance an",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

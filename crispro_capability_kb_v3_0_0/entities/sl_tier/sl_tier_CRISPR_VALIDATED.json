@@ -1,0 +1,23 @@
+{
+  "id": "sl_tier:CRISPR_VALIDATED",
+  "type": "sl_tier",
+  "name": "CRISPR VALIDATED",
+  "source_receipts": [
+    {
+      "source_file": "Synthetic-Lethality/reports/crispro_fitgap_brief_aacr2026.md",
+      "json_pointer": null,
+      "line_range": "verbatim_from_reports"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Highest tier \u2014 wet-lab CRISPR knockout confirms SL",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

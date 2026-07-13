@@ -1,0 +1,9 @@
+[
+  {
+    "predicate": "contradicts",
+    "src": "sl_evidence_record:mrtx1719_wrn_active_bug",
+    "dst": "gov:mrtx1719_wrn_bug",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "MRTX1719 is PRMT5 inhibitor, not WRN \u2014 canonical correction lock"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "id": "endpoint_ref:POST /matching-rules/evaluate",
+  "type": "endpoint_ref",
+  "name": "POST /matching-rules/evaluate",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+      "line": 251
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "@router.post('/matching-rules/evaluate') at crispro-backend-v3-push/layer4_output/pharma_routes.py:251",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

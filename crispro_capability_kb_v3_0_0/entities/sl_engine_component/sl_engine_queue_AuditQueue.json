@@ -1,0 +1,23 @@
+{
+  "id": "sl_engine:queue_AuditQueue",
+  "type": "sl_engine_component",
+  "name": "queue.py::AuditQueue",
+  "source_receipts": [
+    {
+      "source_file": "Synthetic-Lethality/sl_agent/audit/queue.py",
+      "json_pointer": null,
+      "line_range": "184-560"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "SL engine class/function AuditQueue",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

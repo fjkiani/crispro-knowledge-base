@@ -1,0 +1,41 @@
+{
+  "id": "trial:NCT06395779",
+  "type": "trial",
+  "name": "NCT06395779",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+      "json_pointer": "/NCT06395779",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "moa_vector={\"ddr\": 0.9, \"mapk\": 0.0, \"pi3k\": 0.0, \"vegf\": 0.0, \"her2\": 0.0, \"io\": 0.0, \"efflux\": 0.0, \"rss\": 0.0}",
+      "found": true
+    },
+    {
+      "claim": "confidence=0.85",
+      "found": true
+    },
+    {
+      "claim": "source=manual_keyword_matching",
+      "found": true
+    },
+    {
+      "claim": "reviewed_by=Zo",
+      "found": true
+    },
+    {
+      "claim": "title=Comparison of Neuromuscular Exercises and Dance Therapy on Physical Performance and Kinesiophobia Results in Geriatrics",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "axis8d:ddr"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

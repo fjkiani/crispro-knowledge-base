@@ -1,0 +1,44 @@
+{
+  "id": "trial:NCT05450692",
+  "type": "trial",
+  "name": "NCT05450692",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+      "json_pointer": "/NCT05450692",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "moa_vector={\"ddr\": 0.85, \"mapk\": 0.1, \"pi3k\": 0.0, \"vegf\": 0.0, \"her2\": 0.0, \"io\": 0.75, \"efflux\": 0.0, \"rss\": 0.75}",
+      "found": true
+    },
+    {
+      "claim": "confidence=0.92",
+      "found": true
+    },
+    {
+      "claim": "source=retroactive_validation",
+      "found": true
+    },
+    {
+      "claim": "reviewed_by=Zo/CrisPRO",
+      "found": true
+    },
+    {
+      "claim": "title=A Phase III Study of Ceralasertib Plus Durvalumab Versus Docetaxel in Patients With Non Small Cell Lung Cancer (NSCLC) Whose Disease Progressed On or After Prior Anti PD (L)1 Therapy And Platinum Base",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "axis8d:ddr",
+    "axis8d:mapk",
+    "axis8d:io",
+    "axis8d:rss"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

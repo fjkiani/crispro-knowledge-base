@@ -1,0 +1,23 @@
+{
+  "id": "sl_evidence_record:brm_brm_universe_v1",
+  "type": "sl_evidence_record",
+  "name": "BRM artifact \u2014 brm_universe_v1",
+  "source_receipts": [
+    {
+      "source_file": "Synthetic-Lethality/sl_agent/brm/artifacts/brm_universe_v1.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "BRM targetability substrate",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

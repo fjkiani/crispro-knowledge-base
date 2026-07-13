@@ -1,0 +1,22 @@
+{
+  "id": "endpoint_ref:GET /list/{patient_id}",
+  "type": "endpoint_ref",
+  "name": "GET /list/{patient_id}",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/api/routers/dossiers_intelligence.py",
+      "line": 295
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "@router.get('/list/{patient_id}') at crispro-backend-v2/api/routers/dossiers_intelligence.py:295",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

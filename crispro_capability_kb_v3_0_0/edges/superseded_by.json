@@ -1,0 +1,9 @@
+[
+  {
+    "predicate": "superseded_by",
+    "src": "gov:path_b_prohibited",
+    "dst": "gov:path_a_locked",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "PATH A LOCKED 2026-04-28; PATH B prohibited in all v3 outputs"
+  }
+]

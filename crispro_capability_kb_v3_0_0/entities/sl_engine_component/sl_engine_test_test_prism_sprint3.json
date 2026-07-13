@@ -1,0 +1,23 @@
+{
+  "id": "sl_engine:test_test_prism_sprint3",
+  "type": "sl_engine_component",
+  "name": "test_prism_sprint3.py (test fixture)",
+  "source_receipts": [
+    {
+      "source_file": "Synthetic-Lethality/sl_agent/multimodal/tests/test_prism_sprint3.py",
+      "json_pointer": null,
+      "line_range": "1-end"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Pytest fixture for SL multimodal module",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

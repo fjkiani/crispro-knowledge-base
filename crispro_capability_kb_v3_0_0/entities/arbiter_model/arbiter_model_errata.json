@@ -1,0 +1,29 @@
+{
+  "id": "arbiter_model:errata",
+  "type": "arbiter_model",
+  "name": "Model card errata \u2014 `oncology-arbiter`",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/docs/model_cards/errata.md",
+      "json_pointer": null,
+      "line_range": "1-100"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "# Model card errata \u2014 `oncology-arbiter`\n\nThis file tracks corrections and updates to the model cards under\n`docs/model_cards/`. Every entry MUST include (a) the affected card,\n(b) the change, (c) the source URL and fetch date, and (d) the commit\nthat introduced the correction.\n\n## Schema\n\n```\n### YYYY-MM-DD \u2014 <card slug>\n\n- **Change**: <what was fixed / added>\n- **Source**: <URL, fetch date>\n- **",
+      "found": true
+    },
+    {
+      "claim": "ruo_marker_present=False",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "regulatory_posture:oncology_arbiter_ruo"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

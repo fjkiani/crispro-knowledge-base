@@ -1,0 +1,23 @@
+{
+  "id": "user_story:us-04",
+  "type": "user_story",
+  "name": "US-04",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/docs/PROGRESS_LEDGER.json",
+      "json_pointer": "/user_stories/id=US-04",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"id\": \"US-04\", \"as_a\": \"researcher\", \"i_want\": \"post one DICOM + one biopsy report to /v1/case/full and receive one integrated envelope covering screening, biopsy, therapy\", \"so_that\": \"I can review a single case end-to-end without three separate calls\", \"endpoints\": [\"/v1/case/full\"], \"status\": \"NOT_WIRED\", \"not_wired_reason\": \"Only the screening leg is live. Biopsy and therapy legs return place",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

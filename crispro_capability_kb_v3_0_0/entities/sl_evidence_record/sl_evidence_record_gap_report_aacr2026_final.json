@@ -1,0 +1,23 @@
+{
+  "id": "sl_evidence_record:gap_report_aacr2026_final",
+  "type": "sl_evidence_record",
+  "name": "gap_report_aacr2026_final",
+  "source_receipts": [
+    {
+      "source_file": "Synthetic-Lethality/reports/gap_report_aacr2026_final.md",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "AACR 2026 fit-gap / SL evidence report",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

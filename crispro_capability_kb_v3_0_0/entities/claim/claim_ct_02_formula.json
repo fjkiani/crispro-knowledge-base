@@ -1,0 +1,27 @@
+{
+  "id": "claim:ct_02_formula",
+  "type": "claim",
+  "name": "CT-02 \u2014 PATH A vs PATH B decision claim",
+  "source_receipts": [
+    {
+      "source_file": "Custom Instructions (Fahad Kiani, 2026-04-28 8D remediation)",
+      "json_pointer": null,
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "CT-02: PATH A vs PATH B decision claim",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "defect_id": "CT-02",
+    "governance_link": "gov:path_b_prohibited",
+    "status": "QUARANTINED_or_LOCKED"
+  },
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

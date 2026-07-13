@@ -1,0 +1,25 @@
+{
+  "id": "variant:TP53_R175H",
+  "type": "variant",
+  "name": "TP53_R175H",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/knowledge_base/entities/variants/TP53_R175H.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"gene\": \"TP53\", \"hgvs_p\": \"R175H\", \"hgvs_c\": \"c.524G>A\", \"hgvs_g\": \"g.7673802G>A\", \"chrom\": \"17\", \"pos\": 7673802, \"ref\": \"G\", \"alt\": \"A\", \"consequence\": \"missense_variant\", \"am_covered\": true, \"clinvar_prior\": \"pathogenic (criteria provided)\", \"mechanism\": \"Disrupts DNA binding domain, impairing p53's ability to regulate target genes involved in cell cycle arrest and apoptosis\", \"pathogenicity_sc",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "gene:TP53"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

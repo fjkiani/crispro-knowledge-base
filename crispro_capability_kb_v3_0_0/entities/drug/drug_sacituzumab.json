@@ -1,0 +1,23 @@
+{
+  "id": "drug:sacituzumab",
+  "type": "drug",
+  "name": "sacituzumab",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+      "json_pointer": "aggregated_from_trial_titles",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "appears_in_1_trials_with_non_zero_moa_vector",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

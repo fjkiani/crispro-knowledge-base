@@ -1,0 +1,26 @@
+{
+  "id": "gov:mbd4_correction_lock",
+  "type": "governance_item",
+  "name": "gov:mbd4_correction_lock",
+  "source_receipts": [
+    {
+      "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS (mirrored from user Custom Instructions)",
+      "json_pointer": null,
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"status\": \"LOCKED\", \"canonical_tier\": \"Mechanistic candidate only\"}",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "status": "LOCKED",
+    "canonical_tier": "Mechanistic candidate only"
+  },
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

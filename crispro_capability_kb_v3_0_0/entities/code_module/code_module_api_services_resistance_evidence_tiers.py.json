@@ -1,0 +1,17 @@
+{
+  "id": "code_module:api/services/resistance_evidence_tiers.py",
+  "type": "code_module",
+  "name": "api/services/resistance_evidence_tiers.py",
+  "source_receipts": [
+    {
+      "source_file": "?",
+      "line": null
+    }
+  ],
+  "verbatim_evidence": [],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

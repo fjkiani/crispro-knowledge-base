@@ -1,0 +1,29 @@
+{
+  "id": "arbiter_model:nsclc_lung_heuristic_v0",
+  "type": "arbiter_model",
+  "name": "Model Card \u2014 NSCLC Lung Heuristic + NCCN-lite (Oncology Arbiter v0.2)",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/docs/model_cards/nsclc_lung_heuristic_v0.md",
+      "json_pointer": null,
+      "line_range": "1-100"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "# Model Card \u2014 NSCLC Lung Heuristic + NCCN-lite (Oncology Arbiter v0.2)\n\n**Model name (wire):** `nsclc_lung_heuristic_v0+nccn_nsclc_lite_v0`\n**Model state (wire):** `proxy_lung_heuristic`\n**Intended use:** Research / demonstration only.\n**Not for use:** Diagnosis, screening, therapy selection, or any clinical decision. **Not FDA-cleared.**\n\n## 1. What this actually is\n\nThis card describes the NSCL",
+      "found": true
+    },
+    {
+      "claim": "ruo_marker_present=True",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "regulatory_posture:oncology_arbiter_ruo"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

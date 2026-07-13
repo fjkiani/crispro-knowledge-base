@@ -1,0 +1,22 @@
+{
+  "id": "endpoint_ref:POST /analyze/async",
+  "type": "endpoint_ref",
+  "name": "POST /analyze/async",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py",
+      "line": 164
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "@router.post('/analyze/async') at crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py:164",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

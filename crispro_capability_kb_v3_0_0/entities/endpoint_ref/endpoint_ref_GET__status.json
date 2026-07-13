@@ -1,0 +1,22 @@
+{
+  "id": "endpoint_ref:GET /status",
+  "type": "endpoint_ref",
+  "name": "GET /status",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+      "line": 592
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "@router.get('/status') at crispro-backend-v3-push/layer4_output/clinical_trials_routes.py:592",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

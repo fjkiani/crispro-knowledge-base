@@ -1,0 +1,23 @@
+{
+  "id": "sl_engine:models_module",
+  "type": "sl_engine_component",
+  "name": "models.py (module)",
+  "source_receipts": [
+    {
+      "source_file": "Synthetic-Lethality/sl_agent/multimodal/models.py",
+      "json_pointer": null,
+      "line_range": "1-end"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "SL agent module models.py",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

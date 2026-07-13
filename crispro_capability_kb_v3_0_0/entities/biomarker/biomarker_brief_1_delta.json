@@ -1,0 +1,23 @@
+{
+  "id": "biomarker:brief_1_delta",
+  "type": "biomarker",
+  "name": "BRIEF-1 mechanism fit delta",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/mechanistic_deep.json",
+      "json_pointer": "/cap_02_mechanism_fit_engine",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "anchor=brief_1_delta_neg_0_7184",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

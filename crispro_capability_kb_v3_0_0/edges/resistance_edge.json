@@ -1,0 +1,87 @@
+[
+  {
+    "predicate": "resistance_edge",
+    "src": "gov:sc_001_active_conflict",
+    "dst": "variant:BRAF_V600E",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "SC-001 active conflict: HT29 BRAF V600E antigen overlap \u2014 resistance vector"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "gov:gbm_zeb1_closed",
+    "dst": "axis8d:io",
+    "source_file": "kb_planner_lib.py::GOVERNANCE_ITEMS",
+    "evidence": "GBM ZEB1 closed after 3-dataset validation failure \u2014 resistance interpretation blocked"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "code_module:api/services/resistance_detection_service.py",
+    "dst": "axis8d:io",
+    "source_code": "crispro-backend-v2/api/services/resistance_detection_service.py",
+    "line": 1,
+    "evidence": "resistance detection service \u2014 pTMB/MSI/hyper-mutation detection heuristics: routes resistance signal to axis8d:io"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "code_module:api/services/resistance_detection_service.py",
+    "dst": "axis8d:ddr",
+    "source_code": "crispro-backend-v2/api/services/resistance_detection_service.py",
+    "line": 1,
+    "evidence": "resistance detection service \u2014 pTMB/MSI/hyper-mutation detection heuristics: routes resistance signal to axis8d:ddr"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "code_module:api/services/resistance_prophet_service.py",
+    "dst": "axis8d:io",
+    "source_code": "crispro-backend-v2/api/services/resistance_prophet_service.py",
+    "line": 1,
+    "evidence": "resistance prophet \u2014 probabilistic resistance forecasting service: routes resistance signal to axis8d:io"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "code_module:api/services/resistance_prophet_service.py",
+    "dst": "axis8d:ddr",
+    "source_code": "crispro-backend-v2/api/services/resistance_prophet_service.py",
+    "line": 1,
+    "evidence": "resistance prophet \u2014 probabilistic resistance forecasting service: routes resistance signal to axis8d:ddr"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "code_module:api/services/resistance_playbook_service.py",
+    "dst": "axis8d:io",
+    "source_code": "crispro-backend-v2/api/services/resistance_playbook_service.py",
+    "line": 1,
+    "evidence": "resistance playbook \u2014 clinical decision support for resistance emergence: routes resistance signal to axis8d:io"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "code_module:api/services/resistance_playbook_service.py",
+    "dst": "axis8d:ddr",
+    "source_code": "crispro-backend-v2/api/services/resistance_playbook_service.py",
+    "line": 1,
+    "evidence": "resistance playbook \u2014 clinical decision support for resistance emergence: routes resistance signal to axis8d:ddr"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "code_module:api/services/resistance_evidence_tiers.py",
+    "dst": "axis8d:io",
+    "source_code": "crispro-backend-v2/api/services/resistance_evidence_tiers.py",
+    "line": 1,
+    "evidence": "resistance evidence tier assignment (paralleling SL tier logic): routes resistance signal to axis8d:io"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "code_module:api/services/resistance_evidence_tiers.py",
+    "dst": "axis8d:ddr",
+    "source_code": "crispro-backend-v2/api/services/resistance_evidence_tiers.py",
+    "line": 1,
+    "evidence": "resistance evidence tier assignment (paralleling SL tier logic): routes resistance signal to axis8d:ddr"
+  },
+  {
+    "predicate": "resistance_edge",
+    "src": "sl_evidence_record:doc_section61_antigen_escape_refs",
+    "dst": "axis8d:io",
+    "source_file": "Synthetic-Lethality/docs/manuscripts/refs/section61_antigen_escape_refs.json",
+    "evidence": "Section 6.1 antigen escape reference bundle documents IO-axis resistance mechanisms"
+  }
+]

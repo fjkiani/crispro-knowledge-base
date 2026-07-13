@@ -1,0 +1,22 @@
+{
+  "id": "endpoint_ref:POST /mss-crc-scan",
+  "type": "endpoint_ref",
+  "name": "POST /mss-crc-scan",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+      "line": 487
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "@router.post('/mss-crc-scan') at crispro-backend-v3-push/layer4_output/clinical_trials_routes.py:487",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p4",
+  "_mint_timestamp": "2026-07-13T23:22:50.549737Z"
+}

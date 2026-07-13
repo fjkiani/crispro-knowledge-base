@@ -1,0 +1,1863 @@
+[
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /bundle",
+    "dst": "code_module:layer4_output/ayesha_bundle_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/ayesha_bundle_routes.py",
+    "line": 27,
+    "evidence": "@router.post('/bundle') at crispro-backend-v3-push/layer4_output/ayesha_bundle_routes.py:27",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /scenarios",
+    "dst": "code_module:layer4_output/ayesha_bundle_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/ayesha_bundle_routes.py",
+    "line": 56,
+    "evidence": "@router.get('/scenarios') at crispro-backend-v3-push/layer4_output/ayesha_bundle_routes.py:56",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /assess",
+    "dst": "code_module:layer4_output/brain_met_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/brain_met_routes.py",
+    "line": 111,
+    "evidence": "@router.post('/assess') at crispro-backend-v3-push/layer4_output/brain_met_routes.py:111",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /match",
+    "dst": "code_module:layer4_output/clinical_trials_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+    "line": 444,
+    "evidence": "@router.post('/match') at crispro-backend-v3-push/layer4_output/clinical_trials_routes.py:444",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /mss-crc-scan",
+    "dst": "code_module:layer4_output/clinical_trials_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+    "line": 487,
+    "evidence": "@router.post('/mss-crc-scan') at crispro-backend-v3-push/layer4_output/clinical_trials_routes.py:487",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /status",
+    "dst": "code_module:layer4_output/clinical_trials_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+    "line": 592,
+    "evidence": "@router.get('/status') at crispro-backend-v3-push/layer4_output/clinical_trials_routes.py:592",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /{nct_id}",
+    "dst": "code_module:layer4_output/clinical_trials_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/clinical_trials_routes.py",
+    "line": 619,
+    "evidence": "@router.get('/{nct_id}') at crispro-backend-v3-push/layer4_output/clinical_trials_routes.py:619",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /agents/synthetic_lethality",
+    "dst": "code_module:layer4_output/compat_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/compat_routes.py",
+    "line": 41,
+    "evidence": "@router.post('/agents/synthetic_lethality') at crispro-backend-v3-push/layer4_output/compat_routes.py:41",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /guidance/synthetic_lethality",
+    "dst": "code_module:layer4_output/compat_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/compat_routes.py",
+    "line": 44,
+    "evidence": "@router.post('/guidance/synthetic_lethality') at crispro-backend-v3-push/layer4_output/compat_routes.py:44",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:layer4_output/demo_router.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 64,
+    "evidence": "@router.get('/health') at crispro-backend-v3-push/layer4_output/demo_router.py:64",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /canonical-break-crc",
+    "dst": "code_module:layer4_output/demo_router.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 78,
+    "evidence": "@router.get('/canonical-break-crc') at crispro-backend-v3-push/layer4_output/demo_router.py:78",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /evidence-anchors",
+    "dst": "code_module:layer4_output/demo_router.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 121,
+    "evidence": "@router.get('/evidence-anchors') at crispro-backend-v3-push/layer4_output/demo_router.py:121",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /governance-guardrails",
+    "dst": "code_module:layer4_output/demo_router.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 137,
+    "evidence": "@router.get('/governance-guardrails') at crispro-backend-v3-push/layer4_output/demo_router.py:137",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /full-pipeline",
+    "dst": "code_module:layer4_output/demo_router.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/demo_router.py",
+    "line": 160,
+    "evidence": "@router.post('/full-pipeline') at crispro-backend-v3-push/layer4_output/demo_router.py:160",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /ceacam5/decode",
+    "dst": "code_module:layer4_output/pharma_dataset_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 35,
+    "evidence": "@router.post('/ceacam5/decode') at crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py:35",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /ddr/evaluate",
+    "dst": "code_module:layer4_output/pharma_dataset_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 66,
+    "evidence": "@router.post('/ddr/evaluate') at crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py:66",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /escapemap/ov",
+    "dst": "code_module:layer4_output/pharma_dataset_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 97,
+    "evidence": "@router.post('/escapemap/ov') at crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py:97",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /canonical/vectors",
+    "dst": "code_module:layer4_output/pharma_dataset_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 133,
+    "evidence": "@router.get('/canonical/vectors') at crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py:133",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /epidemiology/ceacam5",
+    "dst": "code_module:layer4_output/pharma_dataset_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py",
+    "line": 162,
+    "evidence": "@router.get('/epidemiology/ceacam5') at crispro-backend-v3-push/layer4_output/pharma_dataset_routes.py:162",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /break-crc/fit-gap",
+    "dst": "code_module:layer4_output/pharma_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 59,
+    "evidence": "@router.post('/break-crc/fit-gap') at crispro-backend-v3-push/layer4_output/pharma_routes.py:59",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /mss-crc/io-permissiveness",
+    "dst": "code_module:layer4_output/pharma_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 105,
+    "evidence": "@router.post('/mss-crc/io-permissiveness') at crispro-backend-v3-push/layer4_output/pharma_routes.py:105",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /ceacam5/strategy",
+    "dst": "code_module:layer4_output/pharma_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 157,
+    "evidence": "@router.post('/ceacam5/strategy') at crispro-backend-v3-push/layer4_output/pharma_routes.py:157",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /sl-bridge/evaluate",
+    "dst": "code_module:layer4_output/pharma_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 198,
+    "evidence": "@router.post('/sl-bridge/evaluate') at crispro-backend-v3-push/layer4_output/pharma_routes.py:198",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /matching-rules/evaluate",
+    "dst": "code_module:layer4_output/pharma_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 251,
+    "evidence": "@router.post('/matching-rules/evaluate') at crispro-backend-v3-push/layer4_output/pharma_routes.py:251",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /governance/status",
+    "dst": "code_module:layer4_output/pharma_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_routes.py",
+    "line": 302,
+    "evidence": "@router.get('/governance/status') at crispro-backend-v3-push/layer4_output/pharma_routes.py:302",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /stc1010/position",
+    "dst": "code_module:layer4_output/pharma_wave3_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py",
+    "line": 41,
+    "evidence": "@router.post('/stc1010/position') at crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py:41",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /brief/programs",
+    "dst": "code_module:layer4_output/pharma_wave3_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py",
+    "line": 89,
+    "evidence": "@router.post('/brief/programs') at crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py:89",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /regonivo/decode",
+    "dst": "code_module:layer4_output/pharma_wave3_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py",
+    "line": 116,
+    "evidence": "@router.post('/regonivo/decode') at crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py:116",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /stc1010/canonical",
+    "dst": "code_module:layer4_output/pharma_wave3_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py",
+    "line": 149,
+    "evidence": "@router.get('/stc1010/canonical') at crispro-backend-v3-push/layer4_output/pharma_wave3_routes.py:149",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /chat/{partner_id}",
+    "dst": "code_module:layer4_output/rag_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 32,
+    "evidence": "@router.post('/chat/{partner_id}') at crispro-backend-v3-push/layer4_output/rag_routes.py:32",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /history/{session_id}",
+    "dst": "code_module:layer4_output/rag_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 75,
+    "evidence": "@router.get('/history/{session_id}') at crispro-backend-v3-push/layer4_output/rag_routes.py:75",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /sessions/{user_id}",
+    "dst": "code_module:layer4_output/rag_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 99,
+    "evidence": "@router.get('/sessions/{user_id}') at crispro-backend-v3-push/layer4_output/rag_routes.py:99",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /evaluate",
+    "dst": "code_module:layer4_output/rag_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 109,
+    "evidence": "@router.post('/evaluate') at crispro-backend-v3-push/layer4_output/rag_routes.py:109",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:layer4_output/rag_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
+    "line": 159,
+    "evidence": "@router.get('/health') at crispro-backend-v3-push/layer4_output/rag_routes.py:159",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /bundle",
+    "dst": "code_module:layer4_output/therapy_fit_bundle_routes.py",
+    "source_code": "crispro-backend-v3-push/layer4_output/therapy_fit_bundle_routes.py",
+    "line": 31,
+    "evidence": "@router.post('/bundle') at crispro-backend-v3-push/layer4_output/therapy_fit_bundle_routes.py:31",
+    "scientific_priority": 100
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /targets",
+    "dst": "code_module:layer1_engines/brm_engine/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py",
+    "line": 48,
+    "evidence": "@router.post('/targets') at crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:48",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /score-variant",
+    "dst": "code_module:layer1_engines/brm_engine/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py",
+    "line": 68,
+    "evidence": "@router.post('/score-variant') at crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:68",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /targets/{gene}",
+    "dst": "code_module:layer1_engines/brm_engine/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py",
+    "line": 88,
+    "evidence": "@router.get('/targets/{gene}') at crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:88",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /repressor/{gene}",
+    "dst": "code_module:layer1_engines/brm_engine/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py",
+    "line": 105,
+    "evidence": "@router.get('/repressor/{gene}') at crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:105",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /af3-spec/{gene}",
+    "dst": "code_module:layer1_engines/brm_engine/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py",
+    "line": 130,
+    "evidence": "@router.get('/af3-spec/{gene}') at crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:130",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:layer1_engines/brm_engine/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py",
+    "line": 152,
+    "evidence": "@router.get('/health') at crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:152",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /analyze",
+    "dst": "code_module:layer1_engines/marrowguard/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/marrowguard/api/routes.py",
+    "line": 28,
+    "evidence": "@router.post('/analyze') at crispro-backend-v3-push/layer1_engines/marrowguard/api/routes.py:28",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:layer1_engines/synthetic_lethality/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py",
+    "line": 58,
+    "evidence": "@router.get('/health') at crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py:58",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /genes",
+    "dst": "code_module:layer1_engines/synthetic_lethality/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py",
+    "line": 76,
+    "evidence": "@router.get('/genes') at crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py:76",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /cancer_types",
+    "dst": "code_module:layer1_engines/synthetic_lethality/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py",
+    "line": 84,
+    "evidence": "@router.get('/cancer_types') at crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py:84",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /analyze",
+    "dst": "code_module:layer1_engines/synthetic_lethality/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py",
+    "line": 105,
+    "evidence": "@router.post('/analyze') at crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py:105",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /analyze/async",
+    "dst": "code_module:layer1_engines/synthetic_lethality/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py",
+    "line": 164,
+    "evidence": "@router.post('/analyze/async') at crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py:164",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /result/{job_id}",
+    "dst": "code_module:layer1_engines/synthetic_lethality/api/routes.py",
+    "source_code": "crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py",
+    "line": 195,
+    "evidence": "@router.get('/result/{job_id}') at crispro-backend-v3-push/layer1_engines/synthetic_lethality/api/routes.py:195",
+    "scientific_priority": 90
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /{agent_id}",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 139,
+    "evidence": "@router.get('/{agent_id}') at crispro-backend-v2/api/routers/agents.py:139",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:PUT /{agent_id}",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 166,
+    "evidence": "@router.put('/{agent_id}') at crispro-backend-v2/api/routers/agents.py:166",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:DELETE /{agent_id}",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 200,
+    "evidence": "@router.delete('/{agent_id}') at crispro-backend-v2/api/routers/agents.py:200",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /{agent_id}/pause",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 229,
+    "evidence": "@router.post('/{agent_id}/pause') at crispro-backend-v2/api/routers/agents.py:229",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /{agent_id}/resume",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 258,
+    "evidence": "@router.post('/{agent_id}/resume') at crispro-backend-v2/api/routers/agents.py:258",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /{agent_id}/run",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 292,
+    "evidence": "@router.post('/{agent_id}/run') at crispro-backend-v2/api/routers/agents.py:292",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /{agent_id}/runs",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 332,
+    "evidence": "@router.get('/{agent_id}/runs') at crispro-backend-v2/api/routers/agents.py:332",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /{agent_id}/results",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 376,
+    "evidence": "@router.get('/{agent_id}/results') at crispro-backend-v2/api/routers/agents.py:376",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /alerts",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 436,
+    "evidence": "@router.get('/alerts') at crispro-backend-v2/api/routers/agents.py:436",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /results/{result_id}/read",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 488,
+    "evidence": "@router.post('/results/{result_id}/read') at crispro-backend-v2/api/routers/agents.py:488",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /alerts/{alert_id}/read",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 528,
+    "evidence": "@router.post('/alerts/{alert_id}/read') at crispro-backend-v2/api/routers/agents.py:528",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /synthetic_lethality",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 576,
+    "evidence": "@router.post('/synthetic_lethality') at crispro-backend-v2/api/routers/agents.py:576",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /synthetic_lethality/health",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 677,
+    "evidence": "@router.get('/synthetic_lethality/health') at crispro-backend-v2/api/routers/agents.py:677",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /synthetic_lethality/depmap-status",
+    "dst": "code_module:api/routers/agents.py",
+    "source_code": "crispro-backend-v2/api/routers/agents.py",
+    "line": 705,
+    "evidence": "@router.get('/synthetic_lethality/depmap-status') at crispro-backend-v2/api/routers/agents.py:705",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/ayesha_dossiers.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_dossiers.py",
+    "line": 95,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/ayesha_dossiers.py:95",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /list",
+    "dst": "code_module:api/routers/ayesha_dossiers.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_dossiers.py",
+    "line": 106,
+    "evidence": "@router.get('/list') at crispro-backend-v2/api/routers/ayesha_dossiers.py:106",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /detail/{nct_id}",
+    "dst": "code_module:api/routers/ayesha_dossiers.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_dossiers.py",
+    "line": 154,
+    "evidence": "@router.get('/detail/{nct_id}') at crispro-backend-v2/api/routers/ayesha_dossiers.py:154",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /export/{nct_id}",
+    "dst": "code_module:api/routers/ayesha_dossiers.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_dossiers.py",
+    "line": 221,
+    "evidence": "@router.get('/export/{nct_id}') at crispro-backend-v2/api/routers/ayesha_dossiers.py:221",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /stats",
+    "dst": "code_module:api/routers/ayesha_dossiers.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_dossiers.py",
+    "line": 253,
+    "evidence": "@router.get('/stats') at crispro-backend-v2/api/routers/ayesha_dossiers.py:253",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /create",
+    "dst": "code_module:api/routers/ayesha_dossiers.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_dossiers.py",
+    "line": 341,
+    "evidence": "@router.post('/create') at crispro-backend-v2/api/routers/ayesha_dossiers.py:341",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /filter",
+    "dst": "code_module:api/routers/dossiers_intelligence.py",
+    "source_code": "crispro-backend-v2/api/routers/dossiers_intelligence.py",
+    "line": 80,
+    "evidence": "@router.post('/filter') at crispro-backend-v2/api/routers/dossiers_intelligence.py:80",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /generate",
+    "dst": "code_module:api/routers/dossiers_intelligence.py",
+    "source_code": "crispro-backend-v2/api/routers/dossiers_intelligence.py",
+    "line": 124,
+    "evidence": "@router.post('/generate') at crispro-backend-v2/api/routers/dossiers_intelligence.py:124",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /batch-generate",
+    "dst": "code_module:api/routers/dossiers_intelligence.py",
+    "source_code": "crispro-backend-v2/api/routers/dossiers_intelligence.py",
+    "line": 211,
+    "evidence": "@router.post('/batch-generate') at crispro-backend-v2/api/routers/dossiers_intelligence.py:211",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /list/{patient_id}",
+    "dst": "code_module:api/routers/dossiers_intelligence.py",
+    "source_code": "crispro-backend-v2/api/routers/dossiers_intelligence.py",
+    "line": 295,
+    "evidence": "@router.get('/list/{patient_id}') at crispro-backend-v2/api/routers/dossiers_intelligence.py:295",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /{patient_id}/{nct_id}",
+    "dst": "code_module:api/routers/dossiers_intelligence.py",
+    "source_code": "crispro-backend-v2/api/routers/dossiers_intelligence.py",
+    "line": 340,
+    "evidence": "@router.get('/{patient_id}/{nct_id}') at crispro-backend-v2/api/routers/dossiers_intelligence.py:340",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /comprehensive-analysis",
+    "dst": "code_module:api/routers/dossiers_intelligence.py",
+    "source_code": "crispro-backend-v2/api/routers/dossiers_intelligence.py",
+    "line": 381,
+    "evidence": "@router.post('/comprehensive-analysis') at crispro-backend-v2/api/routers/dossiers_intelligence.py:381",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/evidence/__init__.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/__init__.py",
+    "line": 18,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/evidence/__init__.py:18",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /clinvar",
+    "dst": "code_module:api/routers/evidence/clinvar.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/clinvar.py",
+    "line": 210,
+    "evidence": "@router.get('/clinvar') at crispro-backend-v2/api/routers/evidence/clinvar.py:210",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /deep_analysis",
+    "dst": "code_module:api/routers/evidence/clinvar.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/clinvar.py",
+    "line": 260,
+    "evidence": "@router.post('/deep_analysis') at crispro-backend-v2/api/routers/evidence/clinvar.py:260",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /extract",
+    "dst": "code_module:api/routers/evidence/extraction.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/extraction.py",
+    "line": 11,
+    "evidence": "@router.post('/extract') at crispro-backend-v2/api/routers/evidence/extraction.py:11",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /crawl",
+    "dst": "code_module:api/routers/evidence/jobs.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/jobs.py",
+    "line": 19,
+    "evidence": "@router.post('/crawl') at crispro-backend-v2/api/routers/evidence/jobs.py:19",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /summarize",
+    "dst": "code_module:api/routers/evidence/jobs.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/jobs.py",
+    "line": 47,
+    "evidence": "@router.post('/summarize') at crispro-backend-v2/api/routers/evidence/jobs.py:47",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /align",
+    "dst": "code_module:api/routers/evidence/jobs.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/jobs.py",
+    "line": 79,
+    "evidence": "@router.post('/align') at crispro-backend-v2/api/routers/evidence/jobs.py:79",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /job/{job_id}",
+    "dst": "code_module:api/routers/evidence/jobs.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/jobs.py",
+    "line": 111,
+    "evidence": "@router.get('/job/{job_id}') at crispro-backend-v2/api/routers/evidence/jobs.py:111",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /literature",
+    "dst": "code_module:api/routers/evidence/literature.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/literature.py",
+    "line": 174,
+    "evidence": "@router.post('/literature') at crispro-backend-v2/api/routers/evidence/literature.py:174",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /test",
+    "dst": "code_module:api/routers/evidence/literature.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/literature.py",
+    "line": 473,
+    "evidence": "@router.post('/test') at crispro-backend-v2/api/routers/evidence/literature.py:473",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /explain",
+    "dst": "code_module:api/routers/evidence/literature.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/literature.py",
+    "line": 485,
+    "evidence": "@router.post('/explain') at crispro-backend-v2/api/routers/evidence/literature.py:485",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /rag-query",
+    "dst": "code_module:api/routers/evidence/rag.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/rag.py",
+    "line": 34,
+    "evidence": "@router.post('/rag-query') at crispro-backend-v2/api/routers/evidence/rag.py:34",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /rag-add-variant",
+    "dst": "code_module:api/routers/evidence/rag.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/rag.py",
+    "line": 103,
+    "evidence": "@router.post('/rag-add-variant') at crispro-backend-v2/api/routers/evidence/rag.py:103",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /rag-stats",
+    "dst": "code_module:api/routers/evidence/rag.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence/rag.py",
+    "line": 145,
+    "evidence": "@router.get('/rag-stats') at crispro-backend-v2/api/routers/evidence/rag.py:145",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /clinvar",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 266,
+    "evidence": "@router.get('/clinvar') at crispro-backend-v2/api/routers/evidence2.py:266",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /deep_analysis",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 301,
+    "evidence": "@router.post('/deep_analysis') at crispro-backend-v2/api/routers/evidence2.py:301",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /literature",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 451,
+    "evidence": "@router.post('/literature') at crispro-backend-v2/api/routers/evidence2.py:451",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /test",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 792,
+    "evidence": "@router.post('/test') at crispro-backend-v2/api/routers/evidence2.py:792",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /rag-query",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 807,
+    "evidence": "@router.post('/rag-query') at crispro-backend-v2/api/routers/evidence2.py:807",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /rag-add-variant",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 876,
+    "evidence": "@router.post('/rag-add-variant') at crispro-backend-v2/api/routers/evidence2.py:876",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /rag-stats",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 918,
+    "evidence": "@router.get('/rag-stats') at crispro-backend-v2/api/routers/evidence2.py:918",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /extract",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 934,
+    "evidence": "@router.post('/extract') at crispro-backend-v2/api/routers/evidence2.py:934",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /explain",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 975,
+    "evidence": "@router.post('/explain') at crispro-backend-v2/api/routers/evidence2.py:975",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /crawl",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 1060,
+    "evidence": "@router.post('/crawl') at crispro-backend-v2/api/routers/evidence2.py:1060",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /summarize",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 1088,
+    "evidence": "@router.post('/summarize') at crispro-backend-v2/api/routers/evidence2.py:1088",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /align",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 1120,
+    "evidence": "@router.post('/align') at crispro-backend-v2/api/routers/evidence2.py:1120",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /job/{job_id}",
+    "dst": "code_module:api/routers/evidence2.py",
+    "source_code": "crispro-backend-v2/api/routers/evidence2.py",
+    "line": 1152,
+    "evidence": "@router.get('/job/{job_id}') at crispro-backend-v2/api/routers/evidence2.py:1152",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /stats",
+    "dst": "code_module:api/routers/kb/endpoints/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/admin.py",
+    "line": 19,
+    "evidence": "@router.get('/stats') at crispro-backend-v2/api/routers/kb/endpoints/admin.py:19",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /reload",
+    "dst": "code_module:api/routers/kb/endpoints/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/admin.py",
+    "line": 49,
+    "evidence": "@router.post('/reload') at crispro-backend-v2/api/routers/kb/endpoints/admin.py:49",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /gene/{gene}",
+    "dst": "code_module:api/routers/kb/endpoints/client.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/client.py",
+    "line": 18,
+    "evidence": "@router.get('/gene/{gene}') at crispro-backend-v2/api/routers/kb/endpoints/client.py:18",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /variant",
+    "dst": "code_module:api/routers/kb/endpoints/client.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/client.py",
+    "line": 62,
+    "evidence": "@router.get('/variant') at crispro-backend-v2/api/routers/kb/endpoints/client.py:62",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /pathways",
+    "dst": "code_module:api/routers/kb/endpoints/client.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/client.py",
+    "line": 109,
+    "evidence": "@router.get('/pathways') at crispro-backend-v2/api/routers/kb/endpoints/client.py:109",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /cohort-coverage/{gene}",
+    "dst": "code_module:api/routers/kb/endpoints/client.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/client.py",
+    "line": 153,
+    "evidence": "@router.get('/cohort-coverage/{gene}') at crispro-backend-v2/api/routers/kb/endpoints/client.py:153",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /{item_id}",
+    "dst": "code_module:api/routers/kb/endpoints/items.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/items.py",
+    "line": 59,
+    "evidence": "@router.get('/{item_id}') at crispro-backend-v2/api/routers/kb/endpoints/items.py:59",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /vector",
+    "dst": "code_module:api/routers/kb/endpoints/search.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/search.py",
+    "line": 66,
+    "evidence": "@router.post('/vector') at crispro-backend-v2/api/routers/kb/endpoints/search.py:66",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /item/{item_id}",
+    "dst": "code_module:api/routers/kb/endpoints/validation.py",
+    "source_code": "crispro-backend-v2/api/routers/kb/endpoints/validation.py",
+    "line": 44,
+    "evidence": "@router.get('/item/{item_id}') at crispro-backend-v2/api/routers/kb/endpoints/validation.py:44",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /orchestrate/full",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 43,
+    "evidence": "@router.post('/orchestrate/full') at crispro-backend-v2/api/routers/orchestrate.py:43",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /orchestrate/full/upload",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 95,
+    "evidence": "@router.post('/orchestrate/full/upload') at crispro-backend-v2/api/routers/orchestrate.py:95",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /orchestrate/status/{patient_id}",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 156,
+    "evidence": "@router.get('/orchestrate/status/{patient_id}') at crispro-backend-v2/api/routers/orchestrate.py:156",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /orchestrate/state/{patient_id}",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 197,
+    "evidence": "@router.get('/orchestrate/state/{patient_id}') at crispro-backend-v2/api/routers/orchestrate.py:197",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /patients/{patient_id}",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 199,
+    "evidence": "@router.get('/patients/{patient_id}') at crispro-backend-v2/api/routers/orchestrate.py:199",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /patients/{patient_id}/care-plan",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 215,
+    "evidence": "@router.get('/patients/{patient_id}/care-plan') at crispro-backend-v2/api/routers/orchestrate.py:215",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /orchestrate/states",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 229,
+    "evidence": "@router.get('/orchestrate/states') at crispro-backend-v2/api/routers/orchestrate.py:229",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /patients",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 232,
+    "evidence": "@router.get('/patients') at crispro-backend-v2/api/routers/orchestrate.py:232",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /patients/{patient_id}/history",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 248,
+    "evidence": "@router.get('/patients/{patient_id}/history') at crispro-backend-v2/api/routers/orchestrate.py:248",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/orchestrate.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrate.py",
+    "line": 273,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/orchestrate.py:273",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /full",
+    "dst": "code_module:api/routers/orchestrator.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrator.py",
+    "line": 73,
+    "evidence": "@router.post('/full') at crispro-backend-v2/api/routers/orchestrator.py:73",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /status/{patient_id}",
+    "dst": "code_module:api/routers/orchestrator.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrator.py",
+    "line": 126,
+    "evidence": "@router.get('/status/{patient_id}') at crispro-backend-v2/api/routers/orchestrator.py:126",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /state/{patient_id}",
+    "dst": "code_module:api/routers/orchestrator.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrator.py",
+    "line": 160,
+    "evidence": "@router.get('/state/{patient_id}') at crispro-backend-v2/api/routers/orchestrator.py:160",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /event",
+    "dst": "code_module:api/routers/orchestrator.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrator.py",
+    "line": 187,
+    "evidence": "@router.post('/event') at crispro-backend-v2/api/routers/orchestrator.py:187",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/orchestrator.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrator.py",
+    "line": 221,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/orchestrator.py:221",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /states",
+    "dst": "code_module:api/routers/orchestrator.py",
+    "source_code": "crispro-backend-v2/api/routers/orchestrator.py",
+    "line": 255,
+    "evidence": "@router.get('/states') at crispro-backend-v2/api/routers/orchestrator.py:255",
+    "scientific_priority": 80
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /targeted-brief",
+    "dst": "code_module:api/routers/ayesha_therapy_fit.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_therapy_fit.py",
+    "line": 309,
+    "evidence": "@router.post('/targeted-brief') at crispro-backend-v2/api/routers/ayesha_therapy_fit.py:309",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /bundle",
+    "dst": "code_module:api/routers/ayesha_therapy_fit.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_therapy_fit.py",
+    "line": 325,
+    "evidence": "@router.post('/bundle') at crispro-backend-v2/api/routers/ayesha_therapy_fit.py:325",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /analyze",
+    "dst": "code_module:api/routers/ayesha_therapy_fit.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_therapy_fit.py",
+    "line": 653,
+    "evidence": "@router.post('/analyze') at crispro-backend-v2/api/routers/ayesha_therapy_fit.py:653",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /drug/{drugname}",
+    "dst": "code_module:api/routers/ayesha_therapy_fit.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_therapy_fit.py",
+    "line": 730,
+    "evidence": "@router.get('/drug/{drugname}') at crispro-backend-v2/api/routers/ayesha_therapy_fit.py:730",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /panel_catalog",
+    "dst": "code_module:api/routers/ayesha_therapy_fit.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_therapy_fit.py",
+    "line": 804,
+    "evidence": "@router.get('/panel_catalog') at crispro-backend-v2/api/routers/ayesha_therapy_fit.py:804",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /scenarios",
+    "dst": "code_module:api/routers/ayesha_therapy_fit.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_therapy_fit.py",
+    "line": 856,
+    "evidence": "@router.get('/scenarios') at crispro-backend-v2/api/routers/ayesha_therapy_fit.py:856",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/ayesha_therapy_fit.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_therapy_fit.py",
+    "line": 908,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/ayesha_therapy_fit.py:908",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /completeness",
+    "dst": "code_module:api/routers/ayesha_therapy_fit.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_therapy_fit.py",
+    "line": 935,
+    "evidence": "@router.get('/completeness') at crispro-backend-v2/api/routers/ayesha_therapy_fit.py:935",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /search",
+    "dst": "code_module:api/routers/ayesha_trials/routes.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_trials/routes.py",
+    "line": 41,
+    "evidence": "@router.post('/search') at crispro-backend-v2/api/routers/ayesha_trials/routes.py:41",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/ayesha_trials/routes.py",
+    "source_code": "crispro-backend-v2/api/routers/ayesha_trials/routes.py",
+    "line": 618,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/ayesha_trials/routes.py:618",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /warmup",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 358,
+    "evidence": "@router.post('/warmup') at crispro-backend-v2/api/routers/evo.py:358",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /score",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 433,
+    "evidence": "@router.post('/score') at crispro-backend-v2/api/routers/evo.py:433",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /generate",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 489,
+    "evidence": "@router.post('/generate') at crispro-backend-v2/api/routers/evo.py:489",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 556,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/evo.py:556",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /score_variant_multi",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 636,
+    "evidence": "@router.post('/score_variant_multi') at crispro-backend-v2/api/routers/evo.py:636",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /score_variant_exon",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 947,
+    "evidence": "@router.post('/score_variant_exon') at crispro-backend-v2/api/routers/evo.py:947",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /score_variant_profile",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 1066,
+    "evidence": "@router.post('/score_variant_profile') at crispro-backend-v2/api/routers/evo.py:1066",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /score_variant_probe",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 1094,
+    "evidence": "@router.post('/score_variant_probe') at crispro-backend-v2/api/routers/evo.py:1094",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /score_batch",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 1110,
+    "evidence": "@router.post('/score_batch') at crispro-backend-v2/api/routers/evo.py:1110",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /score_variant_with_activations",
+    "dst": "code_module:api/routers/evo.py",
+    "source_code": "crispro-backend-v2/api/routers/evo.py",
+    "line": 1141,
+    "evidence": "@router.post('/score_variant_with_activations') at crispro-backend-v2/api/routers/evo.py:1141",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /profile/{user_id}",
+    "dst": "code_module:api/routers/patient.py",
+    "source_code": "crispro-backend-v2/api/routers/patient.py",
+    "line": 107,
+    "evidence": "@router.get('/profile/{user_id}') at crispro-backend-v2/api/routers/patient.py:107",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:PUT /profile",
+    "dst": "code_module:api/routers/patient.py",
+    "source_code": "crispro-backend-v2/api/routers/patient.py",
+    "line": 206,
+    "evidence": "@router.put('/profile') at crispro-backend-v2/api/routers/patient.py:206",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /profile/{user_id}",
+    "dst": "code_module:api/routers/patient.py",
+    "source_code": "crispro-backend-v2/api/routers/patient.py",
+    "line": 219,
+    "evidence": "@router.post('/profile/{user_id}') at crispro-backend-v2/api/routers/patient.py:219",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:DELETE /profile/{user_id}",
+    "dst": "code_module:api/routers/patient.py",
+    "source_code": "crispro-backend-v2/api/routers/patient.py",
+    "line": 257,
+    "evidence": "@router.delete('/profile/{user_id}') at crispro-backend-v2/api/routers/patient.py:257",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /ca125/history/{user_id}",
+    "dst": "code_module:api/routers/patient.py",
+    "source_code": "crispro-backend-v2/api/routers/patient.py",
+    "line": 267,
+    "evidence": "@router.get('/ca125/history/{user_id}') at crispro-backend-v2/api/routers/patient.py:267",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /ca125/record/{user_id}",
+    "dst": "code_module:api/routers/patient.py",
+    "source_code": "crispro-backend-v2/api/routers/patient.py",
+    "line": 278,
+    "evidence": "@router.post('/ca125/record/{user_id}') at crispro-backend-v2/api/routers/patient.py:278",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/sessions/health",
+    "dst": "code_module:api/routers/sessions.py",
+    "source_code": "crispro-backend-v2/api/routers/sessions.py",
+    "line": 66,
+    "evidence": "@router.get('/api/sessions/health') at crispro-backend-v2/api/routers/sessions.py:66",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/sessions",
+    "dst": "code_module:api/routers/sessions.py",
+    "source_code": "crispro-backend-v2/api/routers/sessions.py",
+    "line": 75,
+    "evidence": "@router.post('/api/sessions') at crispro-backend-v2/api/routers/sessions.py:75",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/sessions/{session_id}",
+    "dst": "code_module:api/routers/sessions.py",
+    "source_code": "crispro-backend-v2/api/routers/sessions.py",
+    "line": 145,
+    "evidence": "@router.get('/api/sessions/{session_id}') at crispro-backend-v2/api/routers/sessions.py:145",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/sessions",
+    "dst": "code_module:api/routers/sessions.py",
+    "source_code": "crispro-backend-v2/api/routers/sessions.py",
+    "line": 203,
+    "evidence": "@router.get('/api/sessions') at crispro-backend-v2/api/routers/sessions.py:203",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/sessions/{session_id}/items",
+    "dst": "code_module:api/routers/sessions.py",
+    "source_code": "crispro-backend-v2/api/routers/sessions.py",
+    "line": 254,
+    "evidence": "@router.post('/api/sessions/{session_id}/items') at crispro-backend-v2/api/routers/sessions.py:254",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/sessions/{session_id}/items",
+    "dst": "code_module:api/routers/sessions.py",
+    "source_code": "crispro-backend-v2/api/routers/sessions.py",
+    "line": 312,
+    "evidence": "@router.get('/api/sessions/{session_id}/items') at crispro-backend-v2/api/routers/sessions.py:312",
+    "scientific_priority": 70
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /chemo",
+    "dst": "code_module:api/routers/guidance.py",
+    "source_code": "crispro-backend-v2/api/routers/guidance.py",
+    "line": 189,
+    "evidence": "@router.post('/chemo') at crispro-backend-v2/api/routers/guidance.py:189",
+    "scientific_priority": 60
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /radonc",
+    "dst": "code_module:api/routers/guidance.py",
+    "source_code": "crispro-backend-v2/api/routers/guidance.py",
+    "line": 346,
+    "evidence": "@router.post('/radonc') at crispro-backend-v2/api/routers/guidance.py:346",
+    "scientific_priority": 60
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /synthetic_lethality",
+    "dst": "code_module:api/routers/guidance.py",
+    "source_code": "crispro-backend-v2/api/routers/guidance.py",
+    "line": 406,
+    "evidence": "@router.post('/synthetic_lethality') at crispro-backend-v2/api/routers/guidance.py:406",
+    "scientific_priority": 60
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /synthetic_lethality/depmap-status",
+    "dst": "code_module:api/routers/guidance.py",
+    "source_code": "crispro-backend-v2/api/routers/guidance.py",
+    "line": 484,
+    "evidence": "@router.get('/synthetic_lethality/depmap-status') at crispro-backend-v2/api/routers/guidance.py:484",
+    "scientific_priority": 60
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /users",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 42,
+    "evidence": "@router.get('/users') at crispro-backend-v2/api/routers/admin.py:42",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /users/{user_id}",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 73,
+    "evidence": "@router.get('/users/{user_id}') at crispro-backend-v2/api/routers/admin.py:73",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:PUT /users/{user_id}",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 100,
+    "evidence": "@router.put('/users/{user_id}') at crispro-backend-v2/api/routers/admin.py:100",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /users/{user_id}/suspend",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 155,
+    "evidence": "@router.post('/users/{user_id}/suspend') at crispro-backend-v2/api/routers/admin.py:155",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /users/{user_id}/activate",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 191,
+    "evidence": "@router.post('/users/{user_id}/activate') at crispro-backend-v2/api/routers/admin.py:191",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /users/{user_id}/promote",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 227,
+    "evidence": "@router.post('/users/{user_id}/promote') at crispro-backend-v2/api/routers/admin.py:227",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /analytics/overview",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 279,
+    "evidence": "@router.get('/analytics/overview') at crispro-backend-v2/api/routers/admin.py:279",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /analytics/usage",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 299,
+    "evidence": "@router.get('/analytics/usage') at crispro-backend-v2/api/routers/admin.py:299",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /activity/logs",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 324,
+    "evidence": "@router.get('/activity/logs') at crispro-backend-v2/api/routers/admin.py:324",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /activity/sessions",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 353,
+    "evidence": "@router.get('/activity/sessions') at crispro-backend-v2/api/routers/admin.py:353",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/admin.py",
+    "source_code": "crispro-backend-v2/api/routers/admin.py",
+    "line": 377,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/admin.py:377",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/auth/signup",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 61,
+    "evidence": "@router.post('/api/auth/signup') at crispro-backend-v2/api/routers/auth.py:61",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/auth/login",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 129,
+    "evidence": "@router.post('/api/auth/login') at crispro-backend-v2/api/routers/auth.py:129",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/auth/logout",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 164,
+    "evidence": "@router.post('/api/auth/logout') at crispro-backend-v2/api/routers/auth.py:164",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/auth/profile",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 186,
+    "evidence": "@router.get('/api/auth/profile') at crispro-backend-v2/api/routers/auth.py:186",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:PUT /api/auth/profile",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 228,
+    "evidence": "@router.put('/api/auth/profile') at crispro-backend-v2/api/routers/auth.py:228",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/auth/refresh",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 277,
+    "evidence": "@router.post('/api/auth/refresh') at crispro-backend-v2/api/routers/auth.py:277",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/auth/me",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 311,
+    "evidence": "@router.get('/api/auth/me') at crispro-backend-v2/api/routers/auth.py:311",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/auth/health",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 328,
+    "evidence": "@router.get('/api/auth/health') at crispro-backend-v2/api/routers/auth.py:328",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/auth/mfa/generate-secret",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 361,
+    "evidence": "@router.post('/api/auth/mfa/generate-secret') at crispro-backend-v2/api/routers/auth.py:361",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/auth/mfa/verify-enrollment",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 390,
+    "evidence": "@router.post('/api/auth/mfa/verify-enrollment') at crispro-backend-v2/api/routers/auth.py:390",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/auth/mfa/verify",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 421,
+    "evidence": "@router.post('/api/auth/mfa/verify') at crispro-backend-v2/api/routers/auth.py:421",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/auth/mfa/disable",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 452,
+    "evidence": "@router.post('/api/auth/mfa/disable') at crispro-backend-v2/api/routers/auth.py:452",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/auth/mfa/status",
+    "dst": "code_module:api/routers/auth.py",
+    "source_code": "crispro-backend-v2/api/routers/auth.py",
+    "line": 490,
+    "evidence": "@router.get('/api/auth/mfa/status') at crispro-backend-v2/api/routers/auth.py:490",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /health",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 159,
+    "evidence": "@router.get('/health') at crispro-backend-v2/api/routers/canine.py:159",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /tcc/score",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 170,
+    "evidence": "@router.post('/tcc/score') at crispro-backend-v2/api/routers/canine.py:170",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /tcc/compounds",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 239,
+    "evidence": "@router.post('/tcc/compounds') at crispro-backend-v2/api/routers/canine.py:239",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /tcc/dosage",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 265,
+    "evidence": "@router.post('/tcc/dosage') at crispro-backend-v2/api/routers/canine.py:265",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /tcc/dosage/panel",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 301,
+    "evidence": "@router.post('/tcc/dosage/panel') at crispro-backend-v2/api/routers/canine.py:301",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /tcc/recipe",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 334,
+    "evidence": "@router.post('/tcc/recipe') at crispro-backend-v2/api/routers/canine.py:334",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /tcc/tests",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 387,
+    "evidence": "@router.post('/tcc/tests') at crispro-backend-v2/api/routers/canine.py:387",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /tcc/analyze-tests",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 431,
+    "evidence": "@router.post('/tcc/analyze-tests') at crispro-backend-v2/api/routers/canine.py:431",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /tcc/tests/{pet_id}",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 464,
+    "evidence": "@router.get('/tcc/tests/{pet_id}') at crispro-backend-v2/api/routers/canine.py:464",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /tcc/pipeline",
+    "dst": "code_module:api/routers/canine.py",
+    "source_code": "crispro-backend-v2/api/routers/canine.py",
+    "line": 532,
+    "evidence": "@router.post('/tcc/pipeline') at crispro-backend-v2/api/routers/canine.py:532",
+    "scientific_priority": 30
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/admin/users",
+    "dst": "code_module:api/middleware/admin_middleware.py",
+    "source_code": "crispro-backend-v2/api/middleware/admin_middleware.py",
+    "line": 19,
+    "evidence": "@router.get('/api/admin/users') at crispro-backend-v2/api/middleware/admin_middleware.py:19",
+    "scientific_priority": 10
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:GET /api/admin/users/{user_id}",
+    "dst": "code_module:api/middleware/admin_middleware.py",
+    "source_code": "crispro-backend-v2/api/middleware/admin_middleware.py",
+    "line": 82,
+    "evidence": "@router.get('/api/admin/users/{user_id}') at crispro-backend-v2/api/middleware/admin_middleware.py:82",
+    "scientific_priority": 10
+  },
+  {
+    "predicate": "implements",
+    "src": "endpoint_ref:POST /api/endpoint",
+    "dst": "code_module:api/middleware/auth_middleware.py",
+    "source_code": "crispro-backend-v2/api/middleware/auth_middleware.py",
+    "line": 108,
+    "evidence": "@router.post('/api/endpoint') at crispro-backend-v2/api/middleware/auth_middleware.py:108",
+    "scientific_priority": 10
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:biopsy_medsiglip_probe",
+    "dst": "arbiter_layer:l3_evidence_retriever",
+    "source_file": "scientist-monai-moat/docs/model_cards/biopsy_medsiglip_probe.md",
+    "evidence": "model card biopsy_medsiglip_probe implements arbiter_layer:l3_evidence_retriever"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:medgemma_1_27b",
+    "dst": "arbiter_layer:l4a_generator",
+    "source_file": "scientist-monai-moat/docs/model_cards/medgemma_1_27b.md",
+    "evidence": "model card medgemma_1_27b implements arbiter_layer:l4a_generator"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:medgemma_1_5_4b",
+    "dst": "arbiter_layer:l4a_generator",
+    "source_file": "scientist-monai-moat/docs/model_cards/medgemma_1_5_4b.md",
+    "evidence": "model card medgemma_1_5_4b implements arbiter_layer:l4a_generator"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:medsiglip_448",
+    "dst": "arbiter_layer:l3_evidence_retriever",
+    "source_file": "scientist-monai-moat/docs/model_cards/medsiglip_448.md",
+    "evidence": "model card medsiglip_448 implements arbiter_layer:l3_evidence_retriever"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:monai_detector_heuristic",
+    "dst": "arbiter_layer:l3_evidence_retriever",
+    "source_file": "scientist-monai-moat/docs/model_cards/monai_detector_heuristic.md",
+    "evidence": "model card monai_detector_heuristic implements arbiter_layer:l3_evidence_retriever"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:nsclc_lung_heuristic_v0",
+    "dst": "arbiter_layer:l3_evidence_retriever",
+    "source_file": "scientist-monai-moat/docs/model_cards/nsclc_lung_heuristic_v0.md",
+    "evidence": "model card nsclc_lung_heuristic_v0 implements arbiter_layer:l3_evidence_retriever"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:report_parser_clinicalbert_v1",
+    "dst": "arbiter_layer:l2_input_normalizer",
+    "source_file": "scientist-monai-moat/docs/model_cards/report_parser_clinicalbert_v1.md",
+    "evidence": "model card report_parser_clinicalbert_v1 implements arbiter_layer:l2_input_normalizer"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:siglip_base_patch16_224",
+    "dst": "arbiter_layer:l3_evidence_retriever",
+    "source_file": "scientist-monai-moat/docs/model_cards/siglip_base_patch16_224.md",
+    "evidence": "model card siglip_base_patch16_224 implements arbiter_layer:l3_evidence_retriever"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:therapy_nccn_lite",
+    "dst": "arbiter_layer:l4a_generator",
+    "source_file": "scientist-monai-moat/docs/model_cards/therapy_nccn_lite.md",
+    "evidence": "model card therapy_nccn_lite implements arbiter_layer:l4a_generator"
+  },
+  {
+    "predicate": "implements",
+    "src": "arbiter_model:txgemma_9b_chat",
+    "dst": "arbiter_layer:l4a_generator",
+    "source_file": "scientist-monai-moat/docs/model_cards/txgemma_9b_chat.md",
+    "evidence": "model card txgemma_9b_chat implements arbiter_layer:l4a_generator"
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "id": "outcome:co26_liver_met_pfs",
+  "type": "outcome_metric",
+  "name": "CO.26 liver-met PFS HR 1.39 vs no-LM HR 0.54 (Pint=0.02)",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/quantitative_anchors.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "CO.26 liver-met PFS HR 1.39 vs no-LM HR 0.54 (Pint=0.02)",
+      "found": true
+    },
+    {
+      "claim": "durvalumab+tremelimumab MSS mCRC",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

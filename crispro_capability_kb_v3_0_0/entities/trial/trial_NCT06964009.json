@@ -1,0 +1,43 @@
+{
+  "id": "trial:NCT06964009",
+  "type": "trial",
+  "name": "NCT06964009",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/api/resources/trial_moa_vectors.json",
+      "json_pointer": "/NCT06964009",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "moa_vector={\"ddr\": 0.3, \"mapk\": 0.6, \"pi3k\": 0.0, \"vegf\": 0.2, \"her2\": 0.0, \"io\": 0.0, \"efflux\": 0.0, \"rss\": 0.0}",
+      "found": true
+    },
+    {
+      "claim": "confidence=0.7",
+      "found": true
+    },
+    {
+      "claim": "source=cohere_batch_tagging",
+      "found": true
+    },
+    {
+      "claim": "reviewed_by=TrialTaggingAgent",
+      "found": true
+    },
+    {
+      "claim": "title=DT2216 + Paclitaxel in Platinum-Resistant Ovarian Cancer",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "axis8d:ddr",
+    "axis8d:mapk",
+    "axis8d:vegf"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

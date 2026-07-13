@@ -1,0 +1,27 @@
+{
+  "id": "outcome:prime_summary",
+  "type": "outcome_metric",
+  "name": "PRIME 12.1mo vs 3.7mo, p=2.71e-304",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/quantitative_anchors.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "PRIME 12.1mo vs 3.7mo, p=2.71e-304",
+      "found": true
+    },
+    {
+      "claim": "KG v2.1.0 responder module",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

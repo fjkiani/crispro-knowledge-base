@@ -1,0 +1,23 @@
+{
+  "id": "arbiter_layer:l3_evidence_retriever",
+  "type": "arbiter_layer",
+  "name": "L3 Evidence Retriever",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/README.md",
+      "json_pointer": null,
+      "line_range": "architecture_section"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Model card + knowledge retrieval",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

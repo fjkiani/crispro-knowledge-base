@@ -1,0 +1,25 @@
+{
+  "id": "variant:BRAF_V600E",
+  "type": "variant",
+  "name": "BRAF_V600E",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/knowledge_base/entities/variants/BRAF_V600E.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"gene\": \"BRAF\", \"hgvs_p\": \"V600E\", \"hgvs_c\": \"c.1799T>A\", \"hgvs_g\": \"g.140753336T>A\", \"chrom\": \"7\", \"pos\": 140753336, \"ref\": \"T\", \"alt\": \"A\", \"consequence\": \"missense_variant\", \"am_covered\": true, \"clinvar_prior\": \"pathogenic (criteria provided)\", \"mechanism\": \"Constitutively activates BRAF kinase, leading to hyperactivation of the MAPK pathway and uncontrolled cell proliferation\", \"pathogenicity",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "gene:BRAF"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

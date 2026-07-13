@@ -1,0 +1,23 @@
+{
+  "id": "citation:DOI_10_3389_fonc_2024_1427428",
+  "type": "evidence_citation",
+  "name": "DOI_10_3389_fonc_2024_1427428",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/quantitative_anchors.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Alzeeb 2024 \u2014 STC-1010 haptenated whole-cell vaccine mechanism",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

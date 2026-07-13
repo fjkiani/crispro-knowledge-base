@@ -1,0 +1,23 @@
+{
+  "id": "co_scientist_role:generation",
+  "type": "co_scientist_role",
+  "name": "Generation",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/README.md",
+      "json_pointer": null,
+      "line_range": "co_scientist_section"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Propose hypotheses from patient context + literature",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

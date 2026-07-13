@@ -1,0 +1,27 @@
+{
+  "id": "gene:NRAS",
+  "type": "gene",
+  "name": "NRAS",
+  "source_receipts": [
+    {
+      "source_file": "crispro-backend-v2/api/resources/cosmic_hotspots.json",
+      "json_pointer": "/NRAS",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "hotspot_variants=5",
+      "found": true
+    },
+    {
+      "claim": "sample={\"Q61K\": {\"codon\": 61, \"aa_change\": \"Q61K\", \"cosmic_id\": \"COSV52711786\", \"evidence\": \"highly_recurrent\", \"frequency_in_cancer\": 0.35, \"pathway\": \"MAPK\", \"cancers\": [\"melanoma\", \"thyroid\", \"colorectal\"], \"source\": \"COSMIC v98\"}, \"Q61R\": {\"codon\": 61, \"aa_change\": \"Q61R\", \"cosmic_id\": \"COSV52711787\", ",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

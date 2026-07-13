@@ -1,0 +1,23 @@
+{
+  "id": "arbiter_layer:l2_input_normalizer",
+  "type": "arbiter_layer",
+  "name": "L2 Input Normalizer",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/README.md",
+      "json_pointer": null,
+      "line_range": "architecture_section"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Report parser + input contract enforcement",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

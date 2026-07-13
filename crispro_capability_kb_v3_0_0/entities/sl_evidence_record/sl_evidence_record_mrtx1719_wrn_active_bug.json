@@ -1,0 +1,25 @@
+{
+  "id": "sl_evidence_record:mrtx1719_wrn_active_bug",
+  "type": "sl_evidence_record",
+  "name": "MRTX1719 mismapped to WRN \u2014 active bug",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_capability_kb/entities/known_bug/bug_mrtx1719_wrn_mismap.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "MRTX1719 is a PRMT5 inhibitor \u2014 cannot be mapped to WRN as SL partner",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "gov:mrtx1719_wrn_bug"
+  ],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p2",
+  "_mint_timestamp": "2026-07-13T23:18:20.097074Z"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "arbiter_layer:l4b_reflection",
+  "type": "arbiter_layer",
+  "name": "L4b Reflection",
+  "source_receipts": [
+    {
+      "source_file": "scientist-monai-moat/README.md",
+      "json_pointer": null,
+      "line_range": "architecture_section"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Critique + refinement pass",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p3",
+  "_mint_timestamp": "2026-07-13T23:18:48.201248Z"
+}

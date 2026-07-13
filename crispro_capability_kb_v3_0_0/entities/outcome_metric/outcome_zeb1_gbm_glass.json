@@ -1,0 +1,27 @@
+{
+  "id": "outcome:zeb1_gbm_glass",
+  "type": "outcome_metric",
+  "name": "GBM ZEB1 GLASS delta=\u22120.34, p=0.000184",
+  "source_receipts": [
+    {
+      "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/quantitative_anchors.json",
+      "json_pointer": "/",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "GBM ZEB1 GLASS delta=\u22120.34, p=0.000184 \u2014 DOWN at recurrence",
+      "found": true
+    },
+    {
+      "claim": "GLASS N=123 Stupp pairs",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}

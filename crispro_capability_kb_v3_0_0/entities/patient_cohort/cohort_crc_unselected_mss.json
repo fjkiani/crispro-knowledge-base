@@ -1,0 +1,23 @@
+{
+  "id": "cohort:crc_unselected_mss",
+  "type": "patient_cohort",
+  "name": "CRC unselected_mss (from crc_ranker_v1)",
+  "source_receipts": [
+    {
+      "source_file": "Brenus/data/ranker_results/crc_ranker_summary_v1.json",
+      "json_pointer": "/unselected_mss",
+      "line_range": null
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "{\"n\": 485, \"stc1010_mean_fit\": 0.5605, \"stc1010_median_fit\": 0.5522, \"best_comparator\": \"PRIME / PEAK_FOLFIRI (tied)\", \"best_comp_mean_fit\": 0.7252, \"delta_mean\": -0.1647, \"delta_median\": -0.1737, \"recall_at_3\": 0.5876, \"mrr\": 0.3112, \"rank_1_rate\": 0.0186, \"rank_distribution\": {\"1\": 9, \"3\": 276, \"4\": 199, \"5\": 1}}",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {},
+  "_stream": "v3:audit_upgrade",
+  "_mint_planner": "p1",
+  "_mint_timestamp": "2026-07-13T23:18:14.760172Z"
+}
