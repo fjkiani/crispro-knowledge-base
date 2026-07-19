@@ -1,0 +1,34 @@
+{
+  "id": "governance_item:pub_ruo_all",
+  "type": "governance_item",
+  "name": "Publication-derived capabilities are Research Use Only (RUO)",
+  "source_receipts": [
+    {
+      "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "Publication-derived capabilities are Research Use Only (RUO)"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "The HGSOC fingerprint and timing engine are computational/retrospective and RUO; they are not clinical decision support and do not predict individual patient outcomes. RUO is a disclosure of evidence status, not a refusal to state the (cited, reproduced) quantitative findings.",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_hgsoc_fingerprint",
+    "capability:pub_timing_engine"
+  ],
+  "attributes": {
+    "guardrail_text": "The HGSOC fingerprint and timing engine are computational/retrospective and RUO; they are not clinical decision support and do not predict individual patient outcomes. RUO is a disclosure of evidence status, not a refusal to state the (cited, reproduced) quantitative findings.",
+    "scope": [
+      "capability:pub_hgsoc_fingerprint",
+      "capability:pub_timing_engine"
+    ],
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

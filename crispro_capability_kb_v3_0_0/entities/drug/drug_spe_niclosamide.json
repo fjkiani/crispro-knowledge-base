@@ -1,0 +1,38 @@
+{
+  "id": "drug:spe_niclosamide",
+  "type": "drug",
+  "name": "Niclosamide (SPE FAIL, gap 285.7x)",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+      "line_range": [
+        47,
+        58
+      ],
+      "json_pointer": null,
+      "anchor": "Niclosamide SPE panel row"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Niclosamide: gap ratio 285.7x -> FAIL",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_spe_gate"
+  ],
+  "attributes": {
+    "ic50_uM": 0.5,
+    "cmax_uM": 0.035,
+    "ppb": 0.95,
+    "free_cmax_uM": 0.00175,
+    "gap_ratio": 285.7,
+    "spe_verdict": "FAIL",
+    "context": "HGSOC drug-repurposing feasibility panel",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

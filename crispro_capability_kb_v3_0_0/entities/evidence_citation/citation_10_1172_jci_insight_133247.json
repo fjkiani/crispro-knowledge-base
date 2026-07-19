@@ -1,0 +1,37 @@
+{
+  "id": "citation:10_1172_jci_insight_133247",
+  "type": "evidence_citation",
+  "name": "Phase II clinical trial of metformin as a cancer stem cell-targeting agent in ovarian cancer",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "brown2020"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Phase II clinical trial of metformin as a cancer stem cell-targeting agent in ovarian cancer",
+      "found": true
+    },
+    {
+      "claim": "DOI 10.1172/jci.insight.133247",
+      "found": true
+    },
+    {
+      "claim": "year 2020",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "doi": "10.1172/jci.insight.133247",
+    "year": "2020",
+    "bibtex_key": "brown2020",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

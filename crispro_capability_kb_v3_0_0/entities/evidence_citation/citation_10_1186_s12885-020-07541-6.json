@@ -1,0 +1,37 @@
+{
+  "id": "citation:10_1186_s12885-020-07541-6",
+  "type": "evidence_citation",
+  "name": "High expression of fibroblast activation protein (FAP) predicts poor outcome in high-grade serous ovarian cancer",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/references.bib",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "li2020fap"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "High expression of fibroblast activation protein (FAP) predicts poor outcome in high-grade serous ovarian cancer",
+      "found": true
+    },
+    {
+      "claim": "DOI 10.1186/s12885-020-07541-6",
+      "found": true
+    },
+    {
+      "claim": "year 2020",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "doi": "10.1186/s12885-020-07541-6",
+    "year": "2020",
+    "bibtex_key": "li2020fap",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "cohort:metagx_tcgaovarian",
+  "type": "patient_cohort",
+  "name": "MetaGxOvarian cohort TCGAOVARIAN (n=521)",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+      "json_pointer": "/cohorts",
+      "line_range": null,
+      "anchor": "TCGAOVARIAN"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "TCGAOVARIAN: n=521 HGSOC patients with OS data (pooled MetaGxOvarian discovery)",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_hgsoc_fingerprint"
+  ],
+  "attributes": {
+    "n_patients": 521,
+    "dataset": "MetaGxOvarian",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

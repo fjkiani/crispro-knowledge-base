@@ -1,0 +1,34 @@
+[
+  {
+    "predicate": "reports",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "outcome:hgsoc_fingerprint_hr",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "capability:pub_hgsoc_fingerprint reports outcome:hgsoc_fingerprint_hr",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "reports",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "outcome:hgsoc_stouffer",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_26cohort_fingerprint_validation_summary.json",
+    "evidence": "capability:pub_hgsoc_fingerprint reports outcome:hgsoc_stouffer",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "reports",
+    "src": "capability:pub_timing_engine",
+    "dst": "outcome:timing_exact_day_agreement",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/supplementary/statistics_summary.txt",
+    "evidence": "capability:pub_timing_engine reports outcome:timing_exact_day_agreement",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "reports",
+    "src": "capability:pub_spe_gate",
+    "dst": "outcome:spe_llm_accuracy",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/MANUSCRIPT.md",
+    "evidence": "capability:pub_spe_gate reports outcome:spe_llm_accuracy",
+    "_stream": "v3:artistry7_publications"
+  }
+]

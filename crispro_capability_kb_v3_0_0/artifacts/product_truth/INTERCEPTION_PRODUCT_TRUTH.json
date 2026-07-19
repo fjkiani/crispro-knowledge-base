@@ -1,0 +1,470 @@
+{
+  "product": "Interception",
+  "one_line": "Turns a metastasis biology hypothesis into a prioritized target-and-CRISPR-perturbation package with a traceable rationale and design-risk review.",
+  "status_of_document": "PRODUCT TRUTH CONTRACT (RUO). Structured knowledge artifact anchored to the CrisPRO KB (Qdrant collection crispro_kb_v3 + Neo4j graph). Not marketing copy; not a page. Every claim carries an evidence receipt.",
+  "shared_intelligence_layer_note": "Interception is a product SURFACE over the shared CrisPRO biology-intelligence layer (variant interpretation, tumor vectors, pathway/MoA, resistance, synthetic lethality, metastatic mission). It is NOT a standalone engine and must not be reduced to Target Lock alone.",
+  "seven_block_framing": {
+    "decision": {
+      "text": "Which metastasis target and CRISPR perturbation should enter the next validation experiment, for which step of the metastatic cascade, and with what design-risk profile?",
+      "evidence": [
+        {
+          "entity_id": "capability:CAP_04",
+          "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+        },
+        {
+          "entity_id": "capability:CAP_04_algorithm_detail",
+          "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+        }
+      ]
+    },
+    "problem": {
+      "text": "Metastasis programs start from a broad, ambiguous target universe. Teams cannot cheaply decide what to test first, for which metastatic step, with which perturbation design, and with which biological evidence. Wet-lab capacity is finite and mis-prioritization is expensive.",
+      "evidence": [
+        {
+          "entity_id": "capability:CAP_04_algorithm_detail",
+          "source_file": "crispro_kg_v2/kg_modules/capability_registry.json",
+          "note": "8-step metastasis cascade framing"
+        }
+      ]
+    },
+    "input": {
+      "text": "A metastatic biology question (disease + metastatic step of interest) and a candidate target universe (gene list / variants). Optionally a specific gene to score.",
+      "evidence": [
+        {
+          "entity_id": "endpoint_ref:POST /targets",
+          "source_file": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:48"
+        },
+        {
+          "entity_id": "endpoint_ref:POST /score-variant",
+          "source_file": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:68"
+        }
+      ]
+    },
+    "workflow_plain_language": {
+      "text": "CrisPRO maps the metastatic-step hypothesis, curates/loads a target universe, runs Target-Lock scoring to prioritize genuine metastasis drivers, reads Evo2 sequence/variant signals, generates CRISPR guide candidates, applies off-target design-risk scoring, checks mission fit, and produces an AlphaFold3 structural receipt under study-defined gates. It ends with an experiment-handoff package and a wet-lab validation roadmap.",
+      "evidence": [
+        {
+          "entity_id": "capability:CAP_04",
+          "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+        },
+        {
+          "entity_id": "code_module:layer1_engines/brm_engine/api/routes.py",
+          "source_file": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:48"
+        },
+        {
+          "entity_id": "code_module:layer4_output/brain_met_routes.py",
+          "source_file": "crispro-backend-v3-push/layer4_output/brain_met_routes.py:111"
+        }
+      ]
+    },
+    "output": {
+      "text": "A ranked target report with per-model evidence contributions and uncertainty; a ranked CRISPR guide/spacer design package with off-target risk records; a structural modeling receipt with gate result; and an experiment-handoff + validation-design roadmap.",
+      "evidence": [
+        {
+          "entity_id": "endpoint_ref:GET /targets/{gene}",
+          "source_file": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:88"
+        },
+        {
+          "entity_id": "endpoint_ref:GET /af3-spec/{gene}",
+          "source_file": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:130"
+        },
+        {
+          "entity_id": "endpoint_ref:POST /assess",
+          "source_file": "crispro-backend-v3-push/layer4_output/brain_met_routes.py:111"
+        }
+      ]
+    },
+    "proof_and_limits": {
+      "text": "RESEARCH USE ONLY. Target-Lock reports a self-labeled AUROC 0.976±0.035 and holdout AUPRC 0.790 on a 38-gene panel — these are INTERNAL-CONSISTENCY metrics, not independent clinical validation. The MSK-MET AUROC 0.689 is a PROHIBITED/fabricated external-validation claim and must never be shipped. Enformer is GATED OFF in production; only AF3 model 0 was reported; multiple stress tests are incomplete; external clinical-cohort validation has NOT been done. AF3 'pass' is a structural-confidence gate, NOT experimental validation. CEACAM5 is NOT in the 38-gene panel (no Target-Lock run). GBM ZEB1 is PERMANENTLY CLOSED (not an escape marker).",
+      "evidence": [
+        {
+          "entity_id": "capability:CAP_04_algorithm_detail",
+          "source_file": "crispro_kg_v2/kg_modules/capability_registry.json",
+          "note": "self_labeled_auroc 0.976 / holdout_auprc 0.790 / msk_met_auroc 0.689 fabricated"
+        },
+        {
+          "entity_id": "gov_kgv2:prohibited_claims",
+          "source_file": "crispro_kg_v2/kg_modules/platform_identity_governance.json"
+        },
+        {
+          "entity_id": "gov_kgv2:permanently_closed.GBM_ZEB1",
+          "source_file": "crispro_kg_v2/kg_modules/platform_identity_governance.json"
+        }
+      ]
+    },
+    "engagement": {
+      "text": "A first partner engagement is scoped as one of three delivery packages (Target Mission Assessment, Target-to-Perturbation Package, Validation Design Package) run on a defined disease mission and target universe the partner brings, ending in a design + experiment plan the partner's wet lab executes and owns.",
+      "evidence": [
+        {
+          "entity_id": "capability:CAP_04",
+          "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+        }
+      ]
+    }
+  },
+  "pipeline_version_resolution": {
+    "warning": "Two DISTINCT Target-Lock / metastasis-scoring pipeline descriptions exist in the CrisPRO corpus. They differ in composition and MUST NOT be silently merged. Any product claim must state which version it refers to.",
+    "version_A_publication_registry": {
+      "label": "Publication / capability-registry composite",
+      "source": {
+        "entity_id": "capability:CAP_04_algorithm_detail",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      },
+      "target_universe": "38-gene panel (self-labeled benchmark set)",
+      "cascade_representation": "8 metastasis steps (local invasion -> intravasation -> circulation survival -> arrest -> extravasation -> micrometastasis -> colonization -> macrometastasis)",
+      "scoring_models": [
+        "Evo2-7B (evolutionary constraint, [0,1])",
+        "Enformer (chromatin accessibility, [0,1])",
+        "AlphaFold3 (pLDDT structural confidence, [0,100])"
+      ],
+      "composite_rule": "Composite Target-Lock score, threshold >= 0.35 = genuine driver",
+      "off_target_method": "NOT specified in this version",
+      "structural_scoring": "AF3 pLDDT as one of three composite inputs",
+      "reported_performance": {
+        "self_labeled_auroc": "0.976 +/- 0.035 (38-gene panel) [INTERNAL CONSISTENCY]",
+        "holdout_auprc": "0.790 [INTERNAL CONSISTENCY]",
+        "msk_met_auroc": "0.689 (N=25,775) [PROHIBITED / FABRICATED external-validation claim — DO NOT SHIP]"
+      },
+      "production_status": "DESCRIPTIVE / benchmark. Enformer described as an input here BUT is gated off in the production brain-met pipeline (see version B)."
+    },
+    "version_B_brain_met_production": {
+      "label": "Brain-met production pipeline (brm_engine, evo2-e2e)",
+      "source": {
+        "entity_id": "code_module:layer1_engines/brm_engine/api/routes.py",
+        "source_file": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:48"
+      },
+      "live_endpoints": [
+        {
+          "endpoint": "POST /targets",
+          "line": 48,
+          "role": "target universe -> ranked targets"
+        },
+        {
+          "endpoint": "POST /score-variant",
+          "line": 68,
+          "role": "Evo2-derived variant/sequence scoring"
+        },
+        {
+          "endpoint": "GET /targets/{gene}",
+          "line": 88,
+          "role": "per-gene target detail"
+        },
+        {
+          "endpoint": "GET /repressor/{gene}",
+          "line": 105,
+          "role": "regulatory/repressor signal"
+        },
+        {
+          "endpoint": "GET /af3-spec/{gene}",
+          "line": 130,
+          "role": "AlphaFold3 structural receipt spec"
+        },
+        {
+          "endpoint": "POST /assess",
+          "line": 111,
+          "role": "end-to-end brain-met assessment",
+          "source_file": "crispro-backend-v3-push/layer4_output/brain_met_routes.py:111"
+        }
+      ],
+      "scoring_models_in_production": [
+        "Evo2 (variant/sequence signal via /score-variant)",
+        "Regulatory/repressor signal (/repressor/{gene})",
+        "AlphaFold3 (/af3-spec/{gene})"
+      ],
+      "enformer_status": "GATED OFF in production (present in version-A description only). Do not claim Enformer contributes to production scores.",
+      "off_target_method": "CFD-style off-target scoring (brain-met pipeline) — per user-supplied audit knowledge and older-KB audit streams (evidence-lookup scope: crispro_capability_kb / v1_1_0). Not exposed as a distinct v3 entity; treat as design-risk review, not genomic safety certification.",
+      "structural_scoring": "AF3 structural receipt via /af3-spec/{gene}; ONLY AF3 model 0 was reported (limitation).",
+      "external_validation": "NOT done (no external clinical-cohort validation).",
+      "production_status": "LIVE endpoints exist as receipt-anchored entities in the graph; several stress tests remain incomplete."
+    },
+    "divergences_that_must_not_be_merged": [
+      {
+        "dimension": "target-universe",
+        "version_A": "38-gene panel",
+        "version_B": "caller-supplied universe via POST /targets",
+        "rule": "state which universe"
+      },
+      {
+        "dimension": "scoring models",
+        "version_A": "Evo2 + Enformer + AF3",
+        "version_B": "Evo2 + repressor/regulatory + AF3 (Enformer GATED OFF)",
+        "rule": "never claim Enformer in production"
+      },
+      {
+        "dimension": "off-target method",
+        "version_A": "unspecified",
+        "version_B": "CFD-style (audit-scope evidence)",
+        "rule": "off-target = design-risk review, not safety certification"
+      },
+      {
+        "dimension": "structural scoring",
+        "version_A": "AF3 pLDDT as composite input",
+        "version_B": "AF3 receipt via /af3-spec, model 0 only",
+        "rule": "AF3 pass != experimental validation"
+      },
+      {
+        "dimension": "performance numbers",
+        "version_A": "self_labeled_auroc 0.976 / holdout_auprc 0.790 / msk_met 0.689 (fabricated)",
+        "version_B": "no independent external validation",
+        "rule": "internal-consistency != independent validation; 0.689 prohibited"
+      }
+    ]
+  },
+  "workflow_stages": [
+    {
+      "stage": "1. Metastasis-step hypothesis",
+      "customer_input": "Disease + which metastatic cascade step is of interest (e.g. colonization of brain).",
+      "internal_computation": "Maps the question onto the 8-step metastasis cascade framework to scope which biology matters for that step.",
+      "customer_facing_output": "Step-specific metastasis hypothesis map (which cascade step, what biology is implicated).",
+      "execution_status": "data-backed but framework-driven (8-step cascade is a documented model, not a per-tumor causal map)",
+      "evidence_source": "capability:CAP_04_algorithm_detail (eight_metastasis_steps) | crispro_kg_v2/kg_modules/capability_registry.json",
+      "human_step": "Analyst confirms the cascade step and disease context are correct.",
+      "product_safe_claim": "Provides a step-specific metastasis hypothesis map to focus the target search.",
+      "prohibited_claim": "A complete causal map of metastasis for this patient/tumor."
+    },
+    {
+      "stage": "2. Target-universe selection",
+      "customer_input": "Candidate target universe (gene list) OR request to curate one.",
+      "internal_computation": "Loads/curates the target universe. Version A: 38-gene panel benchmark. Version B: caller-supplied universe via POST /targets.",
+      "customer_facing_output": "Defined target universe scoped to the mission.",
+      "execution_status": "executable and live (POST /targets) for caller-supplied universe; 38-gene panel is a fixed benchmark set",
+      "evidence_source": "endpoint_ref:POST /targets (brm_engine/api/routes.py:48); capability:CAP_04_algorithm_detail (38-gene panel)",
+      "human_step": "Team decides the target universe boundaries and inclusion rationale.",
+      "product_safe_claim": "Curates and scopes a target universe for a defined metastasis mission.",
+      "prohibited_claim": "An exhaustive or guaranteed-complete target universe."
+    },
+    {
+      "stage": "3. Target Lock (metastasis driver identification)",
+      "customer_input": "Target universe from stage 2.",
+      "internal_computation": "Composite Target-Lock scoring. Version A: Evo2 + Enformer + AF3, threshold >=0.35. Version B (production): Evo2 + regulatory/repressor + AF3 (Enformer GATED OFF).",
+      "customer_facing_output": "Ranked target report with per-model evidence contributions and uncertainty.",
+      "execution_status": "executable and live (production brm_engine); Enformer offline; benchmark AUROC is internal-consistency only",
+      "evidence_source": "capability:CAP_04 + capability:CAP_04_algorithm_detail | crispro_kg_v2/kg_modules/capability_registry.json; endpoint_ref:GET /targets/{gene} (routes.py:88)",
+      "human_step": "Target-discovery lead reviews ranked targets and selects candidates to pursue.",
+      "product_safe_claim": "Prioritizes candidate metastasis drivers with a transparent, per-model evidence trace.",
+      "prohibited_claim": "Validated target discovery, guaranteed target success, or external-validation AUROC 0.689."
+    },
+    {
+      "stage": "4. Variant / sequence signals (Evo2)",
+      "customer_input": "Specific variant(s) or gene sequence context to interrogate.",
+      "internal_computation": "Evo2-derived evolutionary-constraint / functionality signal via POST /score-variant.",
+      "customer_facing_output": "Variant/target sequence-signal trace (evolutionary constraint score).",
+      "execution_status": "executable and live (POST /score-variant)",
+      "evidence_source": "endpoint_ref:POST /score-variant (brm_engine/api/routes.py:68); capability:CAP_04_algorithm_detail (step_1_evo2_7b)",
+      "human_step": "Computational biologist interprets the signal in study context.",
+      "product_safe_claim": "Provides sequence-context interpretation (evolutionary constraint) for a variant/target.",
+      "prohibited_claim": "Clinical pathogenicity diagnosis without required validation."
+    },
+    {
+      "stage": "5. Guide generation",
+      "customer_input": "Locked target(s) to perturb.",
+      "internal_computation": "Generates CRISPR guide/spacer candidates for the target.",
+      "customer_facing_output": "Ranked spacer/guide design package.",
+      "execution_status": "data-backed design output (CRISPR perturbation design capability); wet-lab efficacy unproven",
+      "evidence_source": "capability:CAP_04 (Interception target-and-guide workspace); Interception capability inventory | crispro_kg_v2/kg_modules/capability_registry.json",
+      "human_step": "CRISPR/functional-genomics lead selects guides for synthesis.",
+      "product_safe_claim": "Generates ranked CRISPR perturbation (guide) candidates for a chosen target.",
+      "prohibited_claim": "A guide guaranteed to work in the wet lab."
+    },
+    {
+      "stage": "6. Guide efficacy + off-target assessment",
+      "customer_input": "Candidate guides from stage 5.",
+      "internal_computation": "Efficacy heuristics + CFD-style off-target scoring (brain-met pipeline).",
+      "customer_facing_output": "Off-target risk record + efficacy ranking (pre-synthesis design-risk review).",
+      "execution_status": "data-backed but manual/audit-scope for CFD off-target (older-KB evidence); not a genomic safety certification",
+      "evidence_source": "brain-met pipeline CFD off-target (crispro_capability_kb / v1_1_0 audit streams, evidence-lookup scope); capability:CAP_04",
+      "human_step": "Team decides acceptable off-target risk threshold and final guide set.",
+      "product_safe_claim": "Provides a pre-synthesis off-target design-risk review for candidate guides.",
+      "prohibited_claim": "Comprehensive genomic safety certification."
+    },
+    {
+      "stage": "7. Mission fit",
+      "customer_input": "Ranked targets + guides + the metastasis mission.",
+      "internal_computation": "Mission-fit scoring: does the target/perturbation match the defined metastatic-step mission?",
+      "customer_facing_output": "Mission-fit assessment with mismatch explanation.",
+      "execution_status": "data-backed (mission-fit scoring within Interception workspace)",
+      "evidence_source": "capability:CAP_04 (mission-fit scoring); Interception capability inventory | crispro_kg_v2/kg_modules/capability_registry.json",
+      "human_step": "Program lead judges whether the fit justifies experimental spend.",
+      "product_safe_claim": "Scores how well a target/perturbation fits the defined metastasis mission.",
+      "prohibited_claim": "A guarantee that a high-mission-fit target will succeed clinically."
+    },
+    {
+      "stage": "8. AF3 structural receipt",
+      "customer_input": "Target gene(s) for structural confidence check.",
+      "internal_computation": "AlphaFold3 structural modeling via GET /af3-spec/{gene}, under study-defined gates. ONLY AF3 model 0 reported.",
+      "customer_facing_output": "Structural modeling receipt + gate result (pLDDT confidence).",
+      "execution_status": "executable and live (GET /af3-spec/{gene}); model-0-only limitation",
+      "evidence_source": "endpoint_ref:GET /af3-spec/{gene} (brm_engine/api/routes.py:130); capability:CAP_04_algorithm_detail (step_3_alphafold3)",
+      "human_step": "Structural/comp-bio reviewer interprets confidence and druggability.",
+      "product_safe_claim": "Provides an AF3 structural-confidence receipt and gate result to support design confidence.",
+      "prohibited_claim": "Experimental confirmation or therapeutic structural validation; AF3 'pass' as validation."
+    },
+    {
+      "stage": "9. Experiment handoff",
+      "customer_input": "Selected target(s) + guide set + receipts.",
+      "internal_computation": "Assembles the end-to-end assessment package via POST /assess.",
+      "customer_facing_output": "Experiment-handoff package (targets, guides, off-target records, structural receipts, rationale).",
+      "execution_status": "executable and live (POST /assess brain_met_routes.py)",
+      "evidence_source": "endpoint_ref:POST /assess (layer4_output/brain_met_routes.py:111)",
+      "human_step": "Wet-lab partner receives the package and plans the experiment.",
+      "product_safe_claim": "Delivers a traceable experiment-handoff package for wet-lab execution.",
+      "prohibited_claim": "That the handoff replaces experimental validation."
+    },
+    {
+      "stage": "10. Wet-lab validation roadmap",
+      "customer_input": "The handoff package.",
+      "internal_computation": "Structures a validation-design roadmap (which experiments de-risk the hypothesis).",
+      "customer_facing_output": "Validation Design Package: prioritized experiments to run.",
+      "execution_status": "data-backed guidance; the experiments themselves are the partner's wet-lab work",
+      "evidence_source": "capability:CAP_04 (Interception delivery); Interception capability inventory",
+      "human_step": "Partner executes and owns all wet-lab / functional validation.",
+      "product_safe_claim": "Proposes a prioritized wet-lab validation roadmap to de-risk the target/guide hypothesis.",
+      "prohibited_claim": "That CrisPRO performs or guarantees the validation outcome."
+    }
+  ],
+  "delivery_packages": [
+    {
+      "package": "Target Mission Assessment",
+      "customer_question": "Which metastasis vulnerability should we investigate?",
+      "covers_stages": [
+        1,
+        2,
+        3
+      ],
+      "output": "Step-specific metastasis hypothesis map + ranked target report with evidence contributions and uncertainty.",
+      "evidence": {
+        "entity_id": "capability:CAP_04",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      }
+    },
+    {
+      "package": "Target-to-Perturbation Package",
+      "customer_question": "Which target and guide designs should enter the next experiment?",
+      "covers_stages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "output": "Ranked target + ranked guide package with off-target risk records and AF3 structural receipts, as an experiment-handoff.",
+      "evidence": {
+        "entity_id": "endpoint_ref:POST /assess",
+        "source_file": "crispro-backend-v3-push/layer4_output/brain_met_routes.py:111"
+      }
+    },
+    {
+      "package": "Validation Design Package",
+      "customer_question": "Which experiments must be run to de-risk the hypothesis?",
+      "covers_stages": [
+        10
+      ],
+      "output": "Prioritized wet-lab validation roadmap.",
+      "evidence": {
+        "entity_id": "capability:CAP_04",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      }
+    }
+  ],
+  "capability_to_buyer_value": [
+    {
+      "internal_capability": "Target Lock (CAP_04)",
+      "customer_buys": "Target prioritization for a defined disease mission",
+      "product_output": "Ranked target report with evidence contributions and uncertainty",
+      "must_not_claim": "Validated target discovery or guaranteed target success",
+      "evidence": {
+        "entity_id": "capability:CAP_04",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      }
+    },
+    {
+      "internal_capability": "Metastasis cascade mapping (CAP_04 8 steps)",
+      "customer_buys": "Biological mission definition",
+      "product_output": "Step-specific metastasis hypothesis map",
+      "must_not_claim": "Complete causal map of metastasis",
+      "evidence": {
+        "entity_id": "capability:CAP_04_algorithm_detail",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      }
+    },
+    {
+      "internal_capability": "Evo2 variant/sequence signal",
+      "customer_buys": "Sequence-context interpretation",
+      "product_output": "Variant/target signal trace",
+      "must_not_claim": "Clinical pathogenicity diagnosis without required validation",
+      "evidence": {
+        "entity_id": "endpoint_ref:POST /score-variant",
+        "source_file": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:68"
+      }
+    },
+    {
+      "internal_capability": "CRISPR guide generation",
+      "customer_buys": "Experimental perturbation design",
+      "product_output": "Ranked spacer/design package",
+      "must_not_claim": "A guide guaranteed to work in wet lab",
+      "evidence": {
+        "entity_id": "capability:CAP_04",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      }
+    },
+    {
+      "internal_capability": "Off-target scoring (CFD-style)",
+      "customer_buys": "Pre-synthesis design-risk review",
+      "product_output": "Off-target risk record",
+      "must_not_claim": "Comprehensive genomic safety certification",
+      "evidence": {
+        "entity_id": "capability:CAP_04",
+        "source_file": "crispro_capability_kb / v1_1_0 audit streams (evidence-lookup scope)"
+      }
+    },
+    {
+      "internal_capability": "AlphaFold3 structural receipt",
+      "customer_buys": "Design-confidence support",
+      "product_output": "Structural modeling receipt and gate result",
+      "must_not_claim": "Experimental confirmation or therapeutic structural validation",
+      "evidence": {
+        "entity_id": "endpoint_ref:GET /af3-spec/{gene}",
+        "source_file": "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py:130"
+      }
+    }
+  ],
+  "shared_intelligence_cross_map": {
+    "MoA/pathway map": "Target mission context",
+    "Synthetic lethality (CAP_05/CAP_06)": "Target-hypothesis support",
+    "Trial decoding": "Downstream translational context",
+    "Resistance/EscapeMap (CAP_07)": "Metastasis escape rationale",
+    "Target Lock (CAP_04)": "Metastatic target selection",
+    "PGx": "Experimental/asset safety context",
+    "Governance": "Product claim bounds",
+    "_evidence": {
+      "entity_id": "capability:CAP_04",
+      "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+    }
+  },
+  "prohibited_claims_global": [
+    "MSK-MET AUROC 0.689 as external validation (fabricated).",
+    "Self-labeled AUROC 0.976 / holdout AUPRC 0.790 as independent clinical validation (internal consistency only).",
+    "Enformer contributes to production Target-Lock scores (gated off).",
+    "AF3 'pass' as experimental or therapeutic validation.",
+    "CRISPR guide guaranteed to work in wet lab.",
+    "Off-target scoring as comprehensive genomic safety certification.",
+    "GBM ZEB1 as an escape marker (permanently closed).",
+    "CEACAM5 Target-Lock score (CEACAM5 not in 38-gene panel).",
+    "CrisPRO predicts individual patient outcomes / is FDA-cleared."
+  ],
+  "_provenance": {
+    "qdrant_collection": "crispro_kb_v3",
+    "neo4j_graph": "CrisPRO KG (617 nodes / 655 rels)",
+    "primary_sources": [
+      "crispro_kg_v2/kg_modules/capability_registry.json",
+      "crispro-backend-v3-push/layer1_engines/brm_engine/api/routes.py",
+      "crispro-backend-v3-push/layer4_output/brain_met_routes.py",
+      "crispro_kg_v2/kg_modules/platform_identity_governance.json"
+    ],
+    "generated": "2026-07-17",
+    "scope": "v3_0_0 + kg_v2 ingested; older KBs used for evidence lookup only"
+  },
+  "commercial_note_no_savings_claim": "No Interception claim asserts saving 'years' or 'millions' without a sourced industry benchmark. CrisPRO's own realized time/cost savings are UNMEASURED. Any efficiency framing must be qualified as 'unmeasured; benchmark-relative only'."
+}

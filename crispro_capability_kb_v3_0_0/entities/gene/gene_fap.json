@@ -1,0 +1,30 @@
+{
+  "id": "gene:fap",
+  "type": "gene",
+  "name": "FAP",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "fibroblast activation protein; activated-CAF marker; high FA"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "fibroblast activation protein; activated-CAF marker; high FAP = poor prognosis (adverse axis)",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_hgsoc_fingerprint",
+    "biomarker:hgsoc_fap_cxcl10_fingerprint"
+  ],
+  "attributes": {
+    "role_in_fingerprint": "fibroblast activation protein; activated-CAF marker; high FAP = poor prognosis (adverse axis)",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

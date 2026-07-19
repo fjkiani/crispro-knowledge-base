@@ -1,0 +1,162 @@
+[
+  {
+    "id": "spe_gap_ratio_method",
+    "pkg": "spe",
+    "tier": "deterministic_method",
+    "ruo": false,
+    "text": "SPE computes gap ratio = IC50 / free_Cmax, classifying PASS(<5x)/CONDITIONAL(5-50x)/FAIL(>50x).",
+    "value": "gap_ratio=IC50/free_Cmax; free_Cmax=Cmax*(1-PPB)",
+    "receipts": [
+      {
+        "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/MANUSCRIPT.md",
+        "line": 15,
+        "anchor": "gap ratio"
+      },
+      {
+        "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+        "line": 47,
+        "anchor": "DRUGS = [ ... IC50, Cmax, PPB, free_Cmax, gap, verdict"
+      }
+    ]
+  },
+  {
+    "id": "spe_panel_result",
+    "pkg": "spe",
+    "tier": "computational_retrospective",
+    "ruo": false,
+    "text": "On 10 HGSOC repurposing candidates: 1 PASS (metformin 0.08x), 4 CONDITIONAL (6.7-13.3x), 4 FAIL (150-5882x), 1 INSUFFICIENT (salinomycin).",
+    "value": "metformin 0.08x PASS; ivermectin 250x FAIL; simvastatin 5882x FAIL",
+    "receipts": [
+      {
+        "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/MANUSCRIPT.md",
+        "line": 15,
+        "anchor": "SPE stratified"
+      },
+      {
+        "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+        "line": 47,
+        "anchor": "DRUGS master table"
+      }
+    ]
+  },
+  {
+    "id": "spe_llm_benchmark",
+    "pkg": "spe",
+    "tier": "computational_benchmark",
+    "ruo": false,
+    "text": "Cohere command-r-08-2024 scored 36% verdict accuracy (5/14) on PK gap-ratio reasoning; fabricated PK params for 100% of queries; SPE deterministic in <1ms.",
+    "value": "LLM 36% (5/14); missed 3/6 impossible; falsely rejected 6/8 viable; 100% PK fabrication",
+    "receipts": [
+      {
+        "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/MANUSCRIPT.md",
+        "line": 15,
+        "anchor": "36% verdict accuracy"
+      }
+    ]
+  },
+  {
+    "id": "timing_internal_verif",
+    "pkg": "timing",
+    "tier": "internal_verification",
+    "ruo": true,
+    "text": "Timing engine internal verification: 95.6% exact-day agreement (262/274; 95% CI 92.5-97.5%) vs Villalobos reannotated TCGA-OV.",
+    "value": "262/274 = 95.6%; category agreement 98.9% (262/265)",
+    "receipts": [
+      {
+        "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/MANUSCRIPT_DRAFT.md",
+        "line": 19,
+        "anchor": "95.6%"
+      },
+      {
+        "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/supplementary/statistics_summary.txt",
+        "line": null,
+        "anchor": "Exact-day match: 262/274 (95.6%"
+      }
+    ]
+  },
+  {
+    "id": "timing_external_valid",
+    "pkg": "timing",
+    "tier": "external_validation_inconclusive",
+    "ruo": true,
+    "text": "External validation vs ARIEL3 (NCT01968213, n=375): PFI distributions not statistically different (chi2 p=0.12); TOST equivalence at +/-10pp narrowly missed (p=0.073). Equivalence-inconclusive, NOT positive.",
+    "value": "chi2 p=0.12; TOST p=0.073; 4.5pp diff below 8pp power threshold",
+    "receipts": [
+      {
+        "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/MANUSCRIPT_DRAFT.md",
+        "line": 19,
+        "anchor": "TOST equivalence"
+      }
+    ]
+  },
+  {
+    "id": "hgsoc_pooled_cox",
+    "pkg": "hgsoc",
+    "tier": "computational_retrospective_prognostic",
+    "ruo": true,
+    "text": "Low-FAP/high-CXCL10 fingerprint (24.4%, 596/2446) has better OS in cohort-stratified Cox: HR=0.7208 (95% CI 0.6282-0.8270, p=3.05e-6) across 16 pooled MetaGxOvarian cohorts.",
+    "value": "HR=0.7208; CI 0.6282-0.8270; p=3.0499e-6; n=2446; 16 cohorts",
+    "receipts": [
+      {
+        "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md",
+        "line": 35,
+        "anchor": "HR=0.7208"
+      },
+      {
+        "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+        "line": null,
+        "anchor": "\"hr\": 0.7208"
+      }
+    ]
+  },
+  {
+    "id": "hgsoc_percohort_concordance",
+    "pkg": "hgsoc",
+    "tier": "computational_retrospective",
+    "ruo": true,
+    "text": "Per-cohort meta-analysis directionally concordant in 11/16 cohorts; Stouffer z=2.32, two-sided p=0.0202; sign-test p=0.105 (n.s.).",
+    "value": "11/16 favorable; Stouffer z=2.3219 p=0.0202; sign-test p=0.1051",
+    "receipts": [
+      {
+        "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md",
+        "line": 37,
+        "anchor": "11 of 16"
+      },
+      {
+        "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_26cohort_fingerprint_validation_summary.json",
+        "line": null,
+        "anchor": "\"stouffer_z\": 2.3219"
+      }
+    ]
+  },
+  {
+    "id": "hgsoc_prognostic_not_predictive",
+    "pkg": "hgsoc",
+    "tier": "hard_boundary",
+    "ruo": true,
+    "text": "The signal is PROGNOSTIC under heterogeneous standard-of-care, NOT a demonstrated predictor of response to any specific therapy. Selection claims require the endpoint they will be used on.",
+    "value": "prognostic != predictive (explicit boundary)",
+    "receipts": [
+      {
+        "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md",
+        "line": 39,
+        "anchor": "not a demonstrated predictor"
+      }
+    ]
+  },
+  {
+    "id": "hgsoc_gse32062_fails",
+    "pkg": "hgsoc",
+    "tier": "external_validation_negative",
+    "ruo": true,
+    "text": "External validation on GSE32062 (n=260, GPL6480) DID NOT HOLD: tiered OS separation logrank p=0.929; validation_holds=false (discovery thresholds, not refit).",
+    "value": "GSE32062 logrank p=0.9292; validation_holds=false",
+    "receipts": [
+      {
+        "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/data/validation_manifest.json",
+        "line": null,
+        "anchor": "\"validation_holds\": false"
+      }
+    ]
+  }
+]

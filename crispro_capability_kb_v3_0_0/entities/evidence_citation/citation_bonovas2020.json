@@ -1,0 +1,33 @@
+{
+  "id": "citation:bonovas2020",
+  "type": "evidence_citation",
+  "name": "Statin use and risk of cancer: epidemiologic evidence",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "bonovas2020"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Statin use and risk of cancer: epidemiologic evidence",
+      "found": true
+    },
+    {
+      "claim": "year 2020",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "doi": null,
+    "year": "2020",
+    "bibtex_key": "bonovas2020",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

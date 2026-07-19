@@ -1,0 +1,37 @@
+{
+  "id": "citation:10_1038_nrd_2018_168",
+  "type": "evidence_citation",
+  "name": "Drug repurposing: progress, challenges and recommendations",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "pushpakom2019"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Drug repurposing: progress, challenges and recommendations",
+      "found": true
+    },
+    {
+      "claim": "DOI 10.1038/nrd.2018.168",
+      "found": true
+    },
+    {
+      "claim": "year 2019",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "doi": "10.1038/nrd.2018.168",
+    "year": "2019",
+    "bibtex_key": "pushpakom2019",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

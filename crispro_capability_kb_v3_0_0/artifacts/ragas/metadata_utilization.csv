@@ -1,0 +1,7 @@
+id,category,question,layer_filter,rank_unfiltered,rank_filtered,purity_unfiltered,purity_filtered,purity_delta,rank_improved,interpretation
+Q09,metadata,Which product layer does the Target-Lock capability (CAP_04) belong to?,interception,3,2,0.4,1.0,0.6,True,filtering by product_layer='interception' improved target rank 3->2 and purity 0.4->1.0
+Q10,metadata,What is the evidence tier / governance status of BRIEF-2 (PTEN-null → ITGAV)?,,1,,,,,False,no single-layer filter applicable (cross-layer question)
+Q11,metadata,Which product layer contains the off-target / guide-design (CFD) scoring capability in the brain-met interception pipeline?,interception,1,1,0.4,1.0,0.6,False,filtering by product_layer='interception' raised top-5 purity 0.4->1.0 (rank already optimal)
+Q12,metadata,What source KB and product layer does the PATH A locked formula governance item come from?,portfolio,1,1,1.0,1.0,0.0,False,filtering by product_layer='portfolio' left rank/purity unchanged (already optimal or target outside top-5)
+Q13,metadata,Which product layer do the decoded clinical trial mechanism vectors belong to?,insilico_trials,5,4,0.8,1.0,0.2,True,filtering by product_layer='insilico_trials' improved target rank 5->4 and purity 0.8->1.0
+SUMMARY,all_metadata,mean top-5 product_layer purity across filterable metadata questions,(various),,,0.65,1.0,0.35,,Metadata IS utilized: product_layer payload filtering lifts mean top-5 layer purity 0.65 -> 1.00.

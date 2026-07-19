@@ -1,0 +1,48 @@
+{
+  "id": "publication:timing_engine",
+  "type": "publication",
+  "name": "A Configurable Timing Engine for Ovarian Cancer Treatment History Analysis: Development, Internal Verification, and External Validation",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/MANUSCRIPT_DRAFT.md",
+      "json_pointer": null,
+      "line_range": [
+        1,
+        60
+      ],
+      "anchor": "manuscript front-matter + abstract"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "A Configurable Timing Engine for Ovarian Cancer Treatment History Analysis",
+      "found": true
+    },
+    {
+      "claim": "dual validation approach addresses concerns about circular validation inherent in algorithmic comparisons alone",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "authors": [
+      "Fahad Kiani"
+    ],
+    "affiliation": "CrisPRO.ai",
+    "venue": "preprint",
+    "keywords": [
+      "platinum-free interval",
+      "treatment history",
+      "chemosensitivity",
+      "ovarian cancer",
+      "timing metrics",
+      "clinical decision support"
+    ],
+    "domain": "ovarian_cancer_treatment_timing",
+    "ruo": true,
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

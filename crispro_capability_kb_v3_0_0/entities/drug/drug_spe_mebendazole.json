@@ -1,0 +1,38 @@
+{
+  "id": "drug:spe_mebendazole",
+  "type": "drug",
+  "name": "Mebendazole (SPE CONDITIONAL, gap 6.7x)",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+      "line_range": [
+        47,
+        58
+      ],
+      "json_pointer": null,
+      "anchor": "Mebendazole SPE panel row"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Mebendazole: gap ratio 6.7x -> CONDITIONAL",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_spe_gate"
+  ],
+  "attributes": {
+    "ic50_uM": 0.1,
+    "cmax_uM": 0.3,
+    "ppb": 0.95,
+    "free_cmax_uM": 0.015,
+    "gap_ratio": 6.7,
+    "spe_verdict": "CONDITIONAL",
+    "context": "HGSOC drug-repurposing feasibility panel",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

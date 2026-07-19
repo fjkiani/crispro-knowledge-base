@@ -19,5 +19,173 @@
     "dst": "code_module:crispro_kg_v2/kg_modules/trials_module.json",
     "source_file": "crispro-knowledge-base/crispro_kg_v2/",
     "evidence": "NCT05450692 present in KG v2.1.0 canonical trial module"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "analysis_artifact:hgsoc_pooled_patient_level",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_patient_level.csv",
+    "evidence": "capability:pub_hgsoc_fingerprint derived_from artifact analysis_artifact:hgsoc_pooled_patient_level (reproduced=True)",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "analysis_artifact:hgsoc_percohort_validation",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_26cohort_fingerprint_validation.csv",
+    "evidence": "capability:pub_hgsoc_fingerprint derived_from artifact analysis_artifact:hgsoc_percohort_validation (reproduced=True)",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "capability:pub_spe_gate",
+    "dst": "analysis_artifact:spe_drug_panel",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "capability:pub_spe_gate derived_from artifact analysis_artifact:spe_drug_panel (reproduced=True)",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "capability:pub_timing_engine",
+    "dst": "analysis_artifact:timing_confusion_matrix",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/tables/table3_confusion.csv",
+    "evidence": "capability:pub_timing_engine derived_from artifact analysis_artifact:timing_confusion_matrix (reproduced=True)",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "capability:pub_timing_engine",
+    "dst": "analysis_artifact:timing_reproduce_script",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/scripts/reproduce_all.py",
+    "evidence": "capability:pub_timing_engine derived_from artifact analysis_artifact:timing_reproduce_script (reproduced=False)",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_e_mtab_386",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort E.MTAB.386",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse13876",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE13876",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse14764",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE14764",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse17260",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE17260",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse18520",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE18520",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse26712",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE26712",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse30161",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE30161",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse32062",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE32062",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse32063",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE32063",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse49997",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE49997",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse51088",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE51088",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse8842",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE8842",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse9891",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE9891",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_pmid17290060",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort PMID17290060",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_pmid19318476",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort PMID19318476",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_tcgaovarian",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort TCGAOVARIAN",
+    "_stream": "v3:artistry7_publications"
   }
 ]

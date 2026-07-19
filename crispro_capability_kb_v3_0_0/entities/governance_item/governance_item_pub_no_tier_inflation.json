@@ -1,0 +1,36 @@
+{
+  "id": "governance_item:pub_no_tier_inflation",
+  "type": "governance_item",
+  "name": "No evidence-tier inflation across publication capabilities",
+  "source_receipts": [
+    {
+      "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "No evidence-tier inflation across publication capabilities"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Internal verification != external validation. Descriptive/retrospective subgroup separation != out-of-sample prediction. A failing or inconclusive validation must travel with the capability. Ingested benchmark/trial figures with reproduced=false must be labeled as reported, not re-derived.",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_spe_gate",
+    "capability:pub_hgsoc_fingerprint",
+    "capability:pub_timing_engine"
+  ],
+  "attributes": {
+    "guardrail_text": "Internal verification != external validation. Descriptive/retrospective subgroup separation != out-of-sample prediction. A failing or inconclusive validation must travel with the capability. Ingested benchmark/trial figures with reproduced=false must be labeled as reported, not re-derived.",
+    "scope": [
+      "capability:pub_spe_gate",
+      "capability:pub_hgsoc_fingerprint",
+      "capability:pub_timing_engine"
+    ],
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

@@ -167,12 +167,31 @@
     "cohort:crc_hrd_HRD-Intermediate",
     "cohort:crc_hrd_HRD-Low",
     "cohort:crc_tmb_ge10_subgroup",
-    "cohort:crc_unselected_mss"
+    "cohort:crc_unselected_mss",
+    "cohort:metagx_e_mtab_386",
+    "cohort:metagx_gse13876",
+    "cohort:metagx_gse14764",
+    "cohort:metagx_gse17260",
+    "cohort:metagx_gse18520",
+    "cohort:metagx_gse26712",
+    "cohort:metagx_gse30161",
+    "cohort:metagx_gse32062",
+    "cohort:metagx_gse32063",
+    "cohort:metagx_gse49997",
+    "cohort:metagx_gse51088",
+    "cohort:metagx_gse8842",
+    "cohort:metagx_gse9891",
+    "cohort:metagx_pmid17290060",
+    "cohort:metagx_pmid19318476",
+    "cohort:metagx_tcgaovarian",
+    "cohort:gse32062_holdout"
   ],
   "gene": [
     "gene:BRAF",
     "gene:KRAS",
-    "gene:NRAS"
+    "gene:NRAS",
+    "gene:fap",
+    "gene:cxcl10"
   ],
   "variant": [
     "variant:BRAF_V600E",
@@ -199,7 +218,8 @@
     "biomarker:msi_h",
     "biomarker:mss",
     "biomarker:pTMB",
-    "biomarker:tmb_h"
+    "biomarker:tmb_h",
+    "biomarker:hgsoc_fap_cxcl10_fingerprint"
   ],
   "outcome_metric": [
     "outcome:botbal_phase1",
@@ -217,7 +237,11 @@
     "outcome:tribe2_summary",
     "outcome:zeb1_gbm_glass",
     "outcome:zeb1_ov_arm_interaction",
-    "outcome:zeb1_ov_gse140082"
+    "outcome:zeb1_ov_gse140082",
+    "outcome:hgsoc_fingerprint_hr",
+    "outcome:hgsoc_stouffer",
+    "outcome:timing_exact_day_agreement",
+    "outcome:spe_llm_accuracy"
   ],
   "drug": [
     "drug:adavosertib",
@@ -236,7 +260,17 @@
     "drug:sacituzumab",
     "drug:talazoparib",
     "drug:trastuzumab",
-    "drug:tremelimumab"
+    "drug:tremelimumab",
+    "drug:spe_metformin",
+    "drug:spe_mebendazole",
+    "drug:spe_disulfiram",
+    "drug:spe_hydroxychloroquine",
+    "drug:spe_artesunate",
+    "drug:spe_niclosamide",
+    "drug:spe_ivermectin",
+    "drug:spe_itraconazole",
+    "drug:spe_simvastatin",
+    "drug:spe_salinomycin"
   ],
   "evidence_citation": [
     "citation:DOI_10_3389_fonc_2024_1427428",
@@ -245,7 +279,24 @@
     "citation:PMID_35274710",
     "citation:PMID_38485190",
     "citation:PMID_38871975",
-    "citation:PMID_39504677"
+    "citation:PMID_39504677",
+    "citation:10_1038_nrd_2018_168",
+    "citation:10_1038_nrd3287",
+    "citation:10_1067_mcp_2002_121829",
+    "citation:10_1145_3571730",
+    "citation:pmid22495656",
+    "citation:10_1016_j_taap_2022_116073",
+    "citation:10_1021_acs_jmedchem_5c01610",
+    "citation:bonovas2020",
+    "citation:10_1172_jci_insight_133247",
+    "citation:10_1016_j_ygyno_2025_02_001",
+    "citation:10_1016_j_ygyno_2025_01_010",
+    "citation:10_1186_s12885-020-07541-6",
+    "citation:10_1186_s13643-025-02929-6",
+    "citation:10_1084_jem_20191094",
+    "citation:10_1007_s00262-024-03761-y",
+    "citation:10_3389_fimmu_2021_690201",
+    "citation:10_1038_s41598-025-12693-1"
   ],
   "sl_engine_component": [
     "sl_engine:brm_extension_module",
@@ -417,7 +468,13 @@
     "gov:path_a_locked",
     "gov:path_b_prohibited",
     "gov:pc_02_downgraded",
-    "gov:sc_001_active_conflict"
+    "gov:sc_001_active_conflict",
+    "governance_item:pub_spe_not_efficacy",
+    "governance_item:pub_hgsoc_prognostic_not_predictive",
+    "governance_item:pub_hgsoc_external_fails",
+    "governance_item:pub_timing_internal_not_clinical",
+    "governance_item:pub_ruo_all",
+    "governance_item:pub_no_tier_inflation"
   ],
   "claim": [
     "claim:ct_01_formula",
@@ -644,5 +701,30 @@
     "code_module:layer4_output/pharma_wave3_routes.py",
     "code_module:layer4_output/rag_routes.py",
     "code_module:layer4_output/therapy_fit_bundle_routes.py"
+  ],
+  "publication": [
+    "publication:spe_feasibility_gate",
+    "publication:hgsoc_fap_cxcl10_subgroup",
+    "publication:timing_engine"
+  ],
+  "capability": [
+    "capability:pub_spe_gate",
+    "capability:pub_hgsoc_fingerprint",
+    "capability:pub_timing_engine"
+  ],
+  "validation_result": [
+    "validation_result:hgsoc_pooled_cox_positive",
+    "validation_result:hgsoc_percohort_meta",
+    "validation_result:hgsoc_gse32062_negative",
+    "validation_result:timing_internal_villalobos",
+    "validation_result:timing_ariel3_inconclusive",
+    "validation_result:spe_llm_benchmark"
+  ],
+  "analysis_artifact": [
+    "analysis_artifact:hgsoc_pooled_patient_level",
+    "analysis_artifact:hgsoc_percohort_validation",
+    "analysis_artifact:spe_drug_panel",
+    "analysis_artifact:timing_confusion_matrix",
+    "analysis_artifact:timing_reproduce_script"
   ]
 }

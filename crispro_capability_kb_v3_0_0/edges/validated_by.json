@@ -1,0 +1,34 @@
+[
+  {
+    "predicate": "validated_by",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "validation_result:hgsoc_pooled_cox_positive",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "capability:pub_hgsoc_fingerprint supported by validation_result:hgsoc_pooled_cox_positive",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "validated_by",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "validation_result:hgsoc_percohort_meta",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_26cohort_fingerprint_validation_summary.json",
+    "evidence": "capability:pub_hgsoc_fingerprint supported by validation_result:hgsoc_percohort_meta",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "validated_by",
+    "src": "capability:pub_timing_engine",
+    "dst": "validation_result:timing_internal_villalobos",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/supplementary/statistics_summary.txt",
+    "evidence": "capability:pub_timing_engine supported by validation_result:timing_internal_villalobos",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "validated_by",
+    "src": "capability:pub_spe_gate",
+    "dst": "validation_result:spe_llm_benchmark",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/MANUSCRIPT.md",
+    "evidence": "capability:pub_spe_gate supported by validation_result:spe_llm_benchmark",
+    "_stream": "v3:artistry7_publications"
+  }
+]

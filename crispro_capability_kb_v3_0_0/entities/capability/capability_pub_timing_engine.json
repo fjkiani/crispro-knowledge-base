@@ -1,0 +1,37 @@
+{
+  "id": "capability:pub_timing_engine",
+  "type": "capability",
+  "name": "Configurable Ovarian Treatment-Timing Engine (PFI)",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/MANUSCRIPT_DRAFT.md",
+      "json_pointer": null,
+      "line_range": null,
+      "anchor": "Internal 95.6% exact-day agreement (262/274) vs Villalobos T"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Standardizes platinum-free-interval (PFI) and treatment-timing computation from structured treatment history using explicit operational definitions, enabling consistent platinum-sensitivity categorization.",
+      "found": true
+    },
+    {
+      "claim": "Internal verification confirms algorithmic CONSISTENCY, not clinical validity. External equivalence is INCONCLUSIVE (und",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "publication:timing_engine"
+  ],
+  "attributes": {
+    "what_it_does": "Standardizes platinum-free-interval (PFI) and treatment-timing computation from structured treatment history using explicit operational definitions, enabling consistent platinum-sensitivity categorization.",
+    "evidence_tier": "internal_verification_plus_inconclusive_external",
+    "ruo": true,
+    "validated_on": "Internal 95.6% exact-day agreement (262/274) vs Villalobos TCGA-OV; external vs ARIEL3 (n=375) distributions not different (chi2 p=0.12) but TOST equivalence narrowly missed (p=0.073)",
+    "cannot_do": "Internal verification confirms algorithmic CONSISTENCY, not clinical validity. External equivalence is INCONCLUSIVE (underpowered), NOT a positive equivalence result. Not a clinical decision system.",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

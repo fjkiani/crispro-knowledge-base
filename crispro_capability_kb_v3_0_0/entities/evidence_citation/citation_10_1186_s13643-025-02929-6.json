@@ -1,0 +1,37 @@
+{
+  "id": "citation:10_1186_s13643-025-02929-6",
+  "type": "evidence_citation",
+  "name": "Predicting fibroblast activation protein overexpression in the overall survival rate of cancer patients: a systematic re",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/references.bib",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "janani2025fap"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Predicting fibroblast activation protein overexpression in the overall survival rate of cancer patients: a systematic review and meta-analysis",
+      "found": true
+    },
+    {
+      "claim": "DOI 10.1186/s13643-025-02929-6",
+      "found": true
+    },
+    {
+      "claim": "year 2025",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "doi": "10.1186/s13643-025-02929-6",
+    "year": "2025",
+    "bibtex_key": "janani2025fap",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

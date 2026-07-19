@@ -1,0 +1,38 @@
+{
+  "id": "drug:spe_artesunate",
+  "type": "drug",
+  "name": "Artesunate (SPE CONDITIONAL, gap 8.3x)",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+      "line_range": [
+        47,
+        58
+      ],
+      "json_pointer": null,
+      "anchor": "Artesunate SPE panel row"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Artesunate: gap ratio 8.3x -> CONDITIONAL",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_spe_gate"
+  ],
+  "attributes": {
+    "ic50_uM": 5.0,
+    "cmax_uM": 3.0,
+    "ppb": 0.8,
+    "free_cmax_uM": 0.6,
+    "gap_ratio": 8.3,
+    "spe_verdict": "CONDITIONAL",
+    "context": "HGSOC drug-repurposing feasibility panel",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

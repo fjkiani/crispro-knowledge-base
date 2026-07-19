@@ -1,0 +1,37 @@
+{
+  "id": "capability:pub_hgsoc_fingerprint",
+  "type": "capability",
+  "name": "Low-FAP/High-CXCL10 HGSOC Prognostic Fingerprint",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md",
+      "json_pointer": null,
+      "line_range": null,
+      "anchor": "MetaGxOvarian 16 pooled cohorts n=2446: cohort-stratified Co"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Binary, platform-portable transcriptional fingerprint (FAP below and CXCL10 above within-cohort means) that marks a favorable-overall-survival HGSOC subgroup (24.4% of patients).",
+      "found": true
+    },
+    {
+      "claim": "PROGNOSTIC ONLY, NOT PREDICTIVE. Does not predict response to any specific therapy. External validation on GSE32062 DID ",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "publication:hgsoc_fap_cxcl10_subgroup"
+  ],
+  "attributes": {
+    "what_it_does": "Binary, platform-portable transcriptional fingerprint (FAP below and CXCL10 above within-cohort means) that marks a favorable-overall-survival HGSOC subgroup (24.4% of patients).",
+    "evidence_tier": "computational_retrospective_prognostic",
+    "ruo": true,
+    "validated_on": "MetaGxOvarian 16 pooled cohorts n=2446: cohort-stratified Cox HR=0.7208 (95% CI 0.6282-0.8270, p=3.05e-6); per-cohort 11/16 concordant (Stouffer z=2.32, p=0.0202)",
+    "cannot_do": "PROGNOSTIC ONLY, NOT PREDICTIVE. Does not predict response to any specific therapy. External validation on GSE32062 DID NOT HOLD (logrank p=0.929). Selection use requires prospective, treatment-stratified testing on the intended endpoint.",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

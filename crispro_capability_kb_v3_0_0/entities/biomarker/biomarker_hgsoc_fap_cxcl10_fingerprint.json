@@ -1,0 +1,35 @@
+{
+  "id": "biomarker:hgsoc_fap_cxcl10_fingerprint",
+  "type": "biomarker",
+  "name": "Low-FAP/high-CXCL10 binary transcriptional fingerprint (24.4% of HGSOC)",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "FAP below and CXCL10 above their within-cohort means"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "FAP_z < 0 AND CXCL10_z > 0 (within-cohort z-scored per cohort to remove platform/batch effects)",
+      "found": true
+    },
+    {
+      "claim": "Prognostic, not predictive; marks favorable-survival subgroup under heterogeneous SoC",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_hgsoc_fingerprint"
+  ],
+  "attributes": {
+    "definition": "FAP_z<0 AND CXCL10_z>0",
+    "prevalence": "24.4% (596/2446)",
+    "tier": "prognostic_not_predictive",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

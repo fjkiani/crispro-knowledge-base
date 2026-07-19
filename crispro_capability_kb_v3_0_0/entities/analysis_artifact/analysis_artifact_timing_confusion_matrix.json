@@ -1,0 +1,34 @@
+{
+  "id": "analysis_artifact:timing_confusion_matrix",
+  "type": "analysis_artifact",
+  "name": "Timing engine confusion matrix + boundary tables",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/tables/table3_confusion.csv",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "Timing engine confusion matrix + boundary tables"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Timing engine confusion matrix + boundary tables",
+      "found": true
+    },
+    {
+      "claim": "reproduced_in_session=True; dependency=self_contained_precomputed",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_timing_engine"
+  ],
+  "attributes": {
+    "reproduced_in_session": true,
+    "dependency": "self_contained_precomputed",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

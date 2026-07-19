@@ -1,0 +1,28 @@
+{
+  "id": "outcome:spe_llm_accuracy",
+  "type": "outcome_metric",
+  "name": "LLM PK-reasoning 36% verdict accuracy (5/14) vs SPE deterministic",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/MANUSCRIPT.md",
+      "json_pointer": null,
+      "line_range": null,
+      "anchor": "LLM PK-reasoning 36% verdict accuracy (5/14) vs SPE determin"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "LLM PK-reasoning 36% verdict accuracy (5/14) vs SPE deterministic",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_spe_gate"
+  ],
+  "attributes": {
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

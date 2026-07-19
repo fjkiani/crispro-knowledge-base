@@ -1,0 +1,37 @@
+{
+  "id": "citation:10_1038_nrd3287",
+  "type": "evidence_citation",
+  "name": "The effect of plasma protein binding on in vivo efficacy: misconceptions in drug discovery",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "smith2010"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "The effect of plasma protein binding on in vivo efficacy: misconceptions in drug discovery",
+      "found": true
+    },
+    {
+      "claim": "DOI 10.1038/nrd3287",
+      "found": true
+    },
+    {
+      "claim": "year 2010",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "doi": "10.1038/nrd3287",
+    "year": "2010",
+    "bibtex_key": "smith2010",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

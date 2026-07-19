@@ -1,0 +1,37 @@
+{
+  "id": "capability:pub_spe_gate",
+  "type": "capability",
+  "name": "SPE Pharmacokinetic Feasibility Gate",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/MANUSCRIPT.md",
+      "json_pointer": null,
+      "line_range": null,
+      "anchor": "10 HGSOC repurposing candidates (metformin PASS 0.08x; iverm"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Deterministic pre-filter that computes gap ratio (IC50 / free plasma Cmax) and classifies drug-repurposing candidates PASS(<5x)/CONDITIONAL(5-50x)/FAIL(>50x) in <1ms, before any efficacy scoring.",
+      "found": true
+    },
+    {
+      "claim": "Does NOT establish efficacy. A PASS means exposure is physically achievable, NOT that the drug works. FAIL rules out on ",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "publication:spe_feasibility_gate"
+  ],
+  "attributes": {
+    "what_it_does": "Deterministic pre-filter that computes gap ratio (IC50 / free plasma Cmax) and classifies drug-repurposing candidates PASS(<5x)/CONDITIONAL(5-50x)/FAIL(>50x) in <1ms, before any efficacy scoring.",
+    "evidence_tier": "deterministic_computational",
+    "ruo": false,
+    "validated_on": "10 HGSOC repurposing candidates (metformin PASS 0.08x; ivermectin/niclosamide/itraconazole/simvastatin FAIL 150-5882x)",
+    "cannot_do": "Does NOT establish efficacy. A PASS means exposure is physically achievable, NOT that the drug works. FAIL rules out on exposure grounds only. Not a clinical recommendation.",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

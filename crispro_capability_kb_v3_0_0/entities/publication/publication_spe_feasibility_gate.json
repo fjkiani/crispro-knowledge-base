@@ -1,0 +1,50 @@
+{
+  "id": "publication:spe_feasibility_gate",
+  "type": "publication",
+  "name": "Structural Pharmacology Engine (SPE): Deterministic PK Feasibility Gating for Drug Repurposing",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/MANUSCRIPT.md",
+      "json_pointer": null,
+      "line_range": [
+        1,
+        60
+      ],
+      "anchor": "manuscript front-matter + abstract"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Deterministic Pharmacokinetic Feasibility Gating for Drug Repurposing: The Structural Pharmacology Engine",
+      "found": true
+    },
+    {
+      "claim": "gap ratio = IC50 / free plasma Cmax; PASS <5x, CONDITIONAL 5-50x, FAIL >50x",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "authors": [
+      "Fahad Kiani"
+    ],
+    "affiliation": "CrisPRO Foundation",
+    "venue": "preprint",
+    "running_title": "SPE \u2014 Deterministic PK Gating for Drug Repurposing",
+    "keywords": [
+      "drug repurposing",
+      "pharmacokinetic feasibility",
+      "gap ratio",
+      "structural pharmacology",
+      "LLM hallucination",
+      "precision oncology",
+      "ovarian cancer"
+    ],
+    "domain": "drug_repurposing_pharmacology",
+    "ruo": false,
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

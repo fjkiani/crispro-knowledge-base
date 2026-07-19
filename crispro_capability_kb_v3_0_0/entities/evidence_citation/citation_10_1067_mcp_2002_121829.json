@@ -1,0 +1,37 @@
+{
+  "id": "citation:10_1067_mcp_2002_121829",
+  "type": "evidence_citation",
+  "name": "Changes in plasma protein binding have little clinical relevance",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "benet2002"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Changes in plasma protein binding have little clinical relevance",
+      "found": true
+    },
+    {
+      "claim": "DOI 10.1067/mcp.2002.121829",
+      "found": true
+    },
+    {
+      "claim": "year 2002",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "doi": "10.1067/mcp.2002.121829",
+    "year": "2002",
+    "bibtex_key": "benet2002",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

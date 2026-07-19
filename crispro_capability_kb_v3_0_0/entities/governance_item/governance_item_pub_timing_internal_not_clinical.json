@@ -1,0 +1,32 @@
+{
+  "id": "governance_item:pub_timing_internal_not_clinical",
+  "type": "governance_item",
+  "name": "Timing engine internal verification = CONSISTENCY, not clinical validity",
+  "source_receipts": [
+    {
+      "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "Timing engine internal verification = CONSISTENCY, not clinical validity"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "95.6% exact-day agreement confirms the engine reproduces a reference PFI derivation (algorithmic consistency). It is NOT evidence of clinical validity or outcome prediction. The ARIEL3 external comparison is equivalence-INCONCLUSIVE (TOST p=0.073, underpowered), NOT a positive equivalence result.",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_timing_engine"
+  ],
+  "attributes": {
+    "guardrail_text": "95.6% exact-day agreement confirms the engine reproduces a reference PFI derivation (algorithmic consistency). It is NOT evidence of clinical validity or outcome prediction. The ARIEL3 external comparison is equivalence-INCONCLUSIVE (TOST p=0.073, underpowered), NOT a positive equivalence result.",
+    "scope": [
+      "capability:pub_timing_engine"
+    ],
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

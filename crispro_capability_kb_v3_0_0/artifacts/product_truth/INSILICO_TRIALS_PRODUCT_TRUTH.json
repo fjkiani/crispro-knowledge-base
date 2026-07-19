@@ -1,0 +1,359 @@
+{
+  "product": "In-Silico Trials",
+  "one_line": "Turns an asset-and-population hypothesis into a trial-readiness package: decoded trial evidence, mechanism-fit, biomarker gates, resistance/escape context, comparator landscape, and named gaps to pressure-test a clinical-development strategy before protocol lock.",
+  "status_of_document": "PRODUCT TRUTH CONTRACT (RUO). Structured knowledge artifact grounding every public claim to a real KB entity (Qdrant collection crispro_kb_v3 + CrisPRO Neo4j graph). Not a page, not marketing copy. Intended to be rendered later by a product surface; building that surface is out of scope.",
+  "shared_intelligence_layer_note": "In-Silico Trials is a product SURFACE over the shared CrisPRO biology-intelligence layer (8D mechanism representation, MoA/pathway inference, synthetic lethality, resistance state, trial decoding, PGx). It is not a separate engine and shares the same intelligence as Interception and Tumor Board.",
+  "seven_block_framing": {
+    "decision": {
+      "text": "Whether an asset's clinical-development strategy (population, mechanism alignment, biomarker gate, comparator, resistance mitigation) is coherent enough to advance toward protocol design — or where it is likely to mismatch and needs rework before commitment.",
+      "evidence": {
+        "entity_id": "capability:CAP_02",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json",
+        "note": "Mechanism-fit engine anchors the asset-vs-population coherence decision"
+      }
+    },
+    "problem": {
+      "text": "Teams can know an asset's target yet still lack a defensible answer to: which molecular population fits the mechanism, what resistance context undermines it, what historical trial failures are relevant, which comparator is appropriate, and what must be proven before protocol lock. These are answered ad hoc, late, and without a traceable evidence chain.",
+      "evidence": {
+        "entity_id": "program:program_atr_ddr:what_crispro_proved",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json",
+        "note": "$1.95B ATR/DDR failures decoded to missing biomarker gates = the failure class this addresses"
+      }
+    },
+    "input": {
+      "text": "An asset (mechanism/target), an intended disease and population, and a development question (e.g. why did a prior program fail, which cohort to enrich, which comparator, which resistance liabilities).",
+      "evidence": {
+        "entity_id": "capability:CAP_01",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json",
+        "note": "8D vector construction requires molecular profiling inputs"
+      }
+    },
+    "workflow_plain_language": {
+      "text": "CrisPRO encodes the asset mechanism and candidate populations in a shared 8D vector space, computes mechanism-fit (PATH A), decodes historical trials for mechanism/population/resistance/comparator mismatches, proposes biomarker/cohort gates, maps resistance/escape liabilities, and assembles PGx/exposure constraints where validated rules exist — producing a structured program decision package with an explicit gap list.",
+      "evidence": {
+        "entity_id": "capability:CAP_10",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json",
+        "note": "Holistic score composes mechanism-fit + eligibility + PGx + resistance"
+      }
+    },
+    "output": {
+      "text": "A trial-readiness package containing: mechanism-fit report with axis contributions, decoded trial-failure/response context, proposed biomarker/cohort gate framework, resistance/escape map with test plan, ranked mechanism-relevant trial/comparator landscape, evidence-tiered program dossier, and a PGx/exposure review — each with its evidence tier and unresolved gaps.",
+      "evidence": {
+        "entity_id": "program:program_ceacam5:what_crispro_can_offer",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json",
+        "note": "Concrete example of the packaged output for a real program"
+      }
+    },
+    "proof_and_limits": {
+      "text": "Receipts are computational (evidence_tier COMPUTED) and, where trials are cited, drawn from decoded public/registry data and Sanofi PDS IPD (external_safe). RUO. The platform does NOT establish validated responder prediction, trial-success prediction, clinical treatment selection, or causal efficacy prediction. Trial decoding is a mechanistic hypothesis + evidence synthesis, not proven responder identification. Specific retired/quarantined figures (BreAK CRC-001 fit 0.7375; LATIFY delta; DDR 0.983) must not be cited as public proof.",
+      "evidence": {
+        "entity_id": "gov_kgv2:mandatory_disclosures",
+        "source_file": "crispro_kg_v2/kg_modules/platform_identity_governance.json",
+        "note": "Mandatory disclosures enumerate the exact limits"
+      }
+    },
+    "engagement": {
+      "text": "A first engagement typically starts as a Trial Failure Decode or Program Asset Brief on one asset/indication: the team supplies the asset, target indication, and prior trial context; CrisPRO returns the decoded mismatch analysis + proposed cohort logic + gap list for internal BD/translational/clinical review. No clinical deployment.",
+      "evidence": {
+        "entity_id": "program:program_break_crc_001:what_crispro_can_offer",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json",
+        "note": "Real active engagement pattern (Brenus) framed as offerable analysis"
+      }
+    }
+  },
+  "workflow_stages": [
+    {
+      "stage": "1. Asset + intended disease/population intake",
+      "customer_input": "Asset mechanism/target, intended indication, candidate population definition, development question.",
+      "internal_computation": "Encode asset mechanism and candidate population(s) as 8D vectors p=[ddr,mapk,pi3k,vegf,her2,io,efflux,rss] from molecular profiling; requires NGS/IHC/ctDNA/imaging inputs.",
+      "customer_facing_output": "Structured 8D representation of asset mechanism and population biology, with the inputs each axis was derived from.",
+      "execution_status": "executable and live (mechanism_fit_ranker.py). Cannot infer axis values from clinical features alone.",
+      "evidence_source": "capability:CAP_01 | crispro_kg_v2/kg_modules/capability_registry.json (mechanism_fit_ranker.py; 8d_verified_claims.md V1)",
+      "human_step": "Computational-biology lead confirms input completeness and axis derivations.",
+      "product_safe_claim": "Encodes asset mechanism and candidate populations in a shared, inspectable 8D biological representation.",
+      "prohibited_claim": "That the 8D vector diagnoses the patient or predicts individual outcome; DDR 0.983 as a validated axis value."
+    },
+    {
+      "stage": "2. Mechanism & vulnerability map",
+      "customer_input": "8D asset vector + candidate population vector(s).",
+      "internal_computation": "Compute mechanism-fit fit=clip((p·t)/‖t‖₂,0,1) (PATH A, LOCKED 2026-04-28); return fit score, axis-level contributions, and fit label (LOW/MODERATE/MODERATE-HIGH/HIGH). Synthetic-lethality vulnerability hypotheses layered where applicable.",
+      "customer_facing_output": "Mechanism-fit report with per-axis contributions and a mismatch explanation; candidate vulnerability/dependency hypotheses with evidence tier.",
+      "execution_status": "executable and live (PATH A LOCKED). PATH B (‖p‖₂ denominator) is PROHIBITED in all outputs.",
+      "evidence_source": "capability:CAP_02 + capability:CAP_02_algorithm_detail | crispro_kg_v2/kg_modules/capability_registry.json; PATH-A governance gov:path_b_prohibited | crispro_kg_v2/kg_modules/platform_identity_governance.json",
+      "human_step": "Translational lead judges whether the mechanism-fit and vulnerability hypotheses are biologically plausible for the asset.",
+      "product_safe_claim": "Quantifies asset-vs-population mechanism coherence with a transparent, axis-level rationale and explicit mismatches.",
+      "prohibited_claim": "Drug-response prediction; that mechanism-fit predicts efficacy or individual response; PATH B formula acceptability."
+    },
+    {
+      "stage": "3. Trial & comparator decode",
+      "customer_input": "Asset mechanism, indication, prior/relevant trials of interest.",
+      "internal_computation": "Match asset against curated 8D trial vector library (22+ trials); decode historical trials for mechanism/population/resistance/comparator mismatch (e.g. D2-Selection failures); rank mechanism-relevant trials and comparators by fit.",
+      "customer_facing_output": "Trial-failure/response-context dossier + ranked mechanism-relevant trial and comparator landscape with fit rationale.",
+      "execution_status": "executable and live for corpus trials; trials outside the corpus require manual curation.",
+      "evidence_source": "capability:CAP_03 (trial library) | crispro_kg_v2/kg_modules/capability_registry.json; program dossiers program:program_atr_ddr:what_crispro_proved, program:program_ceacam5:what_crispro_proved | crispro_kg_v2/kg_modules/capability_registry.json",
+      "human_step": "Clinical-development lead validates decoded mismatch narrative against full trial protocol and clinical judgment.",
+      "product_safe_claim": "Decodes why a prior program may have mismatched mechanism, population, resistance state, or comparator, and ranks mechanism-relevant trials.",
+      "prohibited_claim": "Definitive causal explanation for a trial outcome; enrollment or responder prediction; trial-success prediction."
+    },
+    {
+      "stage": "4. Cohort & biomarker logic",
+      "customer_input": "Target population + candidate biomarkers.",
+      "internal_computation": "Apply two-gate patient-selection framework (Gate 1 expression threshold; Gate 2 IO-permissiveness) and Vector-Scalpel biomarker ranking to propose enrich/consider/exclude logic.",
+      "customer_facing_output": "Proposed molecular/biological gate framework + biomarker discriminative ranking + what must be validated.",
+      "execution_status": "executable and live for CEACAM5 program; Gate-1 fraction (~28%) is OPEN_ASSUMPTION OA-08 (not prospectively validated); ranking is program-specific.",
+      "evidence_source": "capability:CAP_08 (two-gate) + capability:CAP_09 (Vector-Scalpel) | crispro_kg_v2/kg_modules/capability_registry.json; program:program_ceacam5:two_gate_architecture | crispro_kg_v2/kg_modules/capability_registry.json",
+      "human_step": "Translational + biostatistics leads decide the cohort definition and design the validation study for the proposed gates.",
+      "product_safe_claim": "Proposes a transparent biomarker/cohort gate framework and ranks biomarkers by discriminative power, with an explicit validation to-do.",
+      "prohibited_claim": "Validated companion diagnostic; that the 28% Gate-1 fraction is prospectively validated; a proven patient-selection rule."
+    },
+    {
+      "stage": "5. Resistance / PGx / safety review",
+      "customer_input": "Asset mechanism + relevant resistance biomarkers + PGx-relevant genotype context.",
+      "internal_computation": "EscapeMap resistance/prognostic stratification (Cox/median-split); resistance-liability and combination-hypothesis mapping; PGx/exposure rule assembly where validated rules exist.",
+      "customer_facing_output": "Escape-risk map with a test plan + PGx evidence and dosing-rule output where data supports it.",
+      "execution_status": "executable and live where receipts exist (e.g. OV ZEB1 prognostic). GBM ZEB1 PERMANENTLY CLOSED. OV ZEB1 arm-interaction p=0.246 → PROGNOSTIC not arm-specific. PGx is decision support, not prescribing.",
+      "evidence_source": "capability:CAP_07 (EscapeMap) | crispro_kg_v2/kg_modules/capability_registry.json; permanently_closed + mandatory_disclosures | crispro_kg_v2/kg_modules/platform_identity_governance.json",
+      "human_step": "Pharmacology/clinical-pharmacology lead makes the actual dosing and combination decisions; a physician retains prescribing authority.",
+      "product_safe_claim": "Maps resistance/escape liabilities and surfaces evidence-based exposure/safety constraints where validated rules exist.",
+      "prohibited_claim": "Prediction of resistance in individual patients; independent prescribing authority; ZEB1 as a GBM escape marker; ZEB1 as arm-specific."
+    },
+    {
+      "stage": "6. Program decision package",
+      "customer_input": "Outputs of stages 2–5.",
+      "internal_computation": "Compose evidence-tiered program dossier (BRIEF-style) and holistic score = 0.4·mechanism_fit + 0.3·eligibility + 0.15·pgx_safety + 0.15·resistance_risk; attach quarantines, active conflicts, and validation backlog.",
+      "customer_facing_output": "Evidence-tiered hypothesis dossier for BD/translational/clinical-development review, with a named gap/validation list and governance flags.",
+      "execution_status": "executable and live (holistic_score/models.py VC-15). Deal figures are benchmarks, not guarantees; deal-readiness requires scientific + BD review.",
+      "evidence_source": "capability:CAP_10 (holistic score) | crispro_kg_v2/kg_modules/capability_registry.json; program:program_brief_sl:program_name | crispro_kg_v2/kg_modules/capability_registry.json; mandatory_disclosures | crispro_kg_v2/kg_modules/platform_identity_governance.json",
+      "human_step": "Program/portfolio lead and BD make the go/no-go and deal decisions using the dossier as one input.",
+      "product_safe_claim": "Assembles an evidence-tiered program decision package with a transparent gap list and governance flags.",
+      "prohibited_claim": "Deal-readiness without scientific/BD review; trial-success or outcome prediction; BreAK CRC-001 fit 0.7375 as public proof."
+    }
+  ],
+  "delivery_packages": [
+    {
+      "package": "Trial Failure Decode",
+      "customer_question": "Why did a prior program mismatch on mechanism, population, resistance state, or comparator?",
+      "covers_stages": [
+        1,
+        2,
+        3
+      ],
+      "output": "Decoded failure/response-context dossier attributing the mismatch to mechanism-fit, population, resistance, or comparator, with evidence tier.",
+      "evidence": {
+        "entity_id": "program:program_atr_ddr:what_crispro_proved",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json",
+        "note": "Berzosertib/Adavosertib/CAPRI D2-Selection failures decoded"
+      },
+      "must_not_claim": "Definitive causal explanation for the trial outcome; responder/enrollment prediction."
+    },
+    {
+      "package": "Cohort Strategy Package",
+      "customer_question": "Which biomarker/cohort logic should we propose, and what must be validated?",
+      "covers_stages": [
+        4
+      ],
+      "output": "Proposed two-gate cohort framework + Vector-Scalpel biomarker ranking + explicit validation requirements (incl. OA-08 open assumption).",
+      "evidence": {
+        "entity_id": "program:program_ceacam5:two_gate_architecture",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json",
+        "note": "Two-gate CEACAM5 architecture"
+      },
+      "must_not_claim": "Validated companion diagnostic or a prospectively validated selection fraction."
+    },
+    {
+      "package": "Trial Landscape Compass",
+      "customer_question": "What is the ranked, mechanism-relevant trial and comparator landscape for this asset?",
+      "covers_stages": [
+        3
+      ],
+      "output": "Ranked mechanism-relevant trial/comparator landscape with fit rationale, drawn from the 22+ trial vector library.",
+      "evidence": {
+        "entity_id": "capability:CAP_03",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json",
+        "note": "Trial vector library"
+      },
+      "must_not_claim": "Enrollment or responder prediction; that ranking predicts trial success."
+    },
+    {
+      "package": "Program Asset Brief",
+      "customer_question": "What is the evidence-tiered hypothesis dossier for BD/translational/clinical review?",
+      "covers_stages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "output": "Evidence-tiered program dossier (BRIEF-style) with holistic score, gap list, quarantines, and governance flags.",
+      "evidence": {
+        "entity_id": "program:program_brief_sl:program_name",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json",
+        "note": "BRIEF program asset dossiers"
+      },
+      "must_not_claim": "Deal-readiness without scientific/BD review; BRIEF-2 as CRISPR-validated."
+    },
+    {
+      "package": "PGx / Exposure Review",
+      "customer_question": "What evidence-based exposure/safety constraints apply where validated rules exist?",
+      "covers_stages": [
+        5
+      ],
+      "output": "PGx evidence + dosing-rule output where the data and validated rules exist, flagged as decision support.",
+      "evidence": {
+        "entity_id": "capability:CAP_10",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json",
+        "note": "PGx safety is a 15% component of the holistic score engine"
+      },
+      "must_not_claim": "Independent prescribing authority or prescribing instructions."
+    }
+  ],
+  "capability_to_buyer_value": [
+    {
+      "internal_capability": "8D mechanism representation (CAP_01)",
+      "customer_buys": "A shared, inspectable encoding of asset + population biology",
+      "product_output": "8D vectors with input provenance",
+      "must_not_claim": "Patient diagnosis or outcome prediction",
+      "evidence": {
+        "entity_id": "capability:CAP_01",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      }
+    },
+    {
+      "internal_capability": "Mechanism Fit / PATH A (CAP_02)",
+      "customer_buys": "Asset/biology coherence test",
+      "product_output": "Mechanism-fit report + mismatch explanation",
+      "must_not_claim": "Drug-response prediction",
+      "evidence": {
+        "entity_id": "capability:CAP_02",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      }
+    },
+    {
+      "internal_capability": "Trial Vector Library (CAP_03)",
+      "customer_buys": "Trial exploration and prioritization",
+      "product_output": "Ranked mechanism-relevant trial landscape with fit rationale",
+      "must_not_claim": "Enrollment or responder prediction",
+      "evidence": {
+        "entity_id": "capability:CAP_03",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      }
+    },
+    {
+      "internal_capability": "Trial decoding (program dossiers)",
+      "customer_buys": "Historical trial learning",
+      "product_output": "Failure/response-context + comparator dossier",
+      "must_not_claim": "Definitive causal explanation for trial outcome",
+      "evidence": {
+        "entity_id": "program:program_atr_ddr:what_crispro_proved",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      }
+    },
+    {
+      "internal_capability": "Two-Gate cohort logic (CAP_08)",
+      "customer_buys": "Biomarker strategy design",
+      "product_output": "Proposed molecular/biological gate framework",
+      "must_not_claim": "Validated companion diagnostic",
+      "evidence": {
+        "entity_id": "capability:CAP_08",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      }
+    },
+    {
+      "internal_capability": "Vector-Scalpel biomarker ranking (CAP_09)",
+      "customer_buys": "Biomarker prioritization",
+      "product_output": "Discriminative biomarker ranking",
+      "must_not_claim": "A validated selection rule generalizable across programs",
+      "evidence": {
+        "entity_id": "capability:CAP_09",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      }
+    },
+    {
+      "internal_capability": "Resistance / EscapeMap (CAP_07)",
+      "customer_buys": "Liability and combination-hypothesis analysis",
+      "product_output": "Escape-risk map and test plan",
+      "must_not_claim": "Prediction of resistance in individual patients",
+      "evidence": {
+        "entity_id": "capability:CAP_07",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      }
+    },
+    {
+      "internal_capability": "PGx / dosing layer (CAP_10 component)",
+      "customer_buys": "Exposure/safety decision support",
+      "product_output": "PGx evidence and dosing-rule output",
+      "must_not_claim": "Independent prescribing authority",
+      "evidence": {
+        "entity_id": "capability:CAP_10",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      }
+    },
+    {
+      "internal_capability": "Holistic Score Engine (CAP_10)",
+      "customer_buys": "Portfolio-development decision support",
+      "product_output": "Evidence-tiered program dossier + holistic score",
+      "must_not_claim": "Deal-readiness without scientific/BD review",
+      "evidence": {
+        "entity_id": "capability:CAP_10",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      }
+    }
+  ],
+  "responder_prediction_boundary": {
+    "warning": "In-Silico Trials must NOT claim it 'identifies the responder subpopulation retrospectively' as a validated capability. What exists is a descriptive retrospective data asset, not prospective responder prediction validated out-of-sample.",
+    "what_exists": {
+      "asset": "CRC Responder Analysis on Sanofi Project Data Sphere IPD (PACCE n=842, PRIME n=935, PEAK, N0147) — real individual patient data.",
+      "nature": "Retrospective/descriptive responder DEFINITIONS applied post-hoc (mCRC: PFS>=180 days; adjuvant: DFS>=1095 days), yielding within-cohort Kaplan-Meier separations (e.g. PACCE responders 13.8mo vs non-responders 3.2mo).",
+      "data_grade": "IPD_PDS (external_safe).",
+      "evidence": {
+        "entity_id": "responder_analysis:responder_analysis_crc_ipd:module_id",
+        "source_file": "crispro_kg_v2/kg_modules/responder_analysis_crc_ipd.json"
+      }
+    },
+    "why_it_is_not_responder_prediction": "The KM separations are a consequence of the responder DEFINITION (patients grouped by their own PFS/DFS outcome), not an out-of-sample prediction from CrisPRO features. Using outcome-defined groups to show survival separation is descriptive, not predictive validation.",
+    "product_safe_claim": "In-Silico Trials offers trial decoding and cohort logic as a mechanistic hypothesis + evidence synthesis, supported by real IPD-based responder-context analysis, that a team can pressure-test.",
+    "prohibited_claim": "That CrisPRO identifies/predicts the responder subpopulation (retrospectively or prospectively) as a validated capability; that IPD KM separation proves responder prediction.",
+    "condition_to_upgrade": "This boundary lifts ONLY if an explicit out-of-sample retrospective validation (CrisPRO-derived features predicting held-out responder status) is shown; none is present in the KB."
+  },
+  "shared_intelligence_cross_map": {
+    "MoA/pathway map": "In-Silico Trials use: asset/population fit (mechanism coherence).",
+    "Synthetic lethality (CAP_05/CAP_06)": "In-Silico Trials use: biomarker-dependent program logic and vulnerability hypotheses.",
+    "Trial decoding (CAP_03 + program dossiers)": "In-Silico Trials use: core trial strategy (failure decode + landscape).",
+    "Resistance/EscapeMap (CAP_07)": "In-Silico Trials use: program risk and combination hypotheses.",
+    "Target Lock (CAP_04)": "In-Silico Trials use: asset target coherence (upstream context).",
+    "PGx (CAP_10 component)": "In-Silico Trials use: exposure and protocol context.",
+    "Governance": "In-Silico Trials use: program-decision claim bounds.",
+    "_evidence": {
+      "entity_id": "capability:CAP_02",
+      "source_file": "crispro_kg_v2/kg_modules/capability_registry.json",
+      "note": "Shared 8D layer is the common substrate across all three surfaces"
+    }
+  },
+  "prohibited_claims_global": [
+    "CrisPRO predicts individual patient outcomes.",
+    "CrisPRO is FDA-cleared or CE-marked.",
+    "In-Silico Trials identifies or predicts the responder subpopulation (retrospective or prospective) as a validated capability.",
+    "Mechanism-fit predicts drug response, efficacy, or trial success.",
+    "Trial-fit ranking predicts enrollment or responders.",
+    "The two-gate framework is a validated companion diagnostic / the 28% Gate-1 fraction is prospectively validated (OA-08).",
+    "PGx output is independent prescribing instruction.",
+    "BreAK CRC-001 fit 0.7375 is a public proof point (RETIRED).",
+    "LATIFY delta is [any specific value] (QUARANTINED); DDR 0.983 is a validated figure (QUARANTINED).",
+    "PATH B (cosine with ‖p‖₂ denominator) is an acceptable formula.",
+    "The saturated FDA-extension AUROC or the fabricated MSK-MET AUROC 0.689 demonstrates generalization/validation."
+  ],
+  "commercial_note_no_savings_claim": "No In-Silico Trials claim asserts saving 'years' or 'millions' without a sourced industry benchmark AND the qualifier that CrisPRO's realized savings are unmeasured. Deal figures in program dossiers are benchmarks from comparable transactions, not guaranteed outcomes.",
+  "_provenance": {
+    "qdrant_collection": "crispro_kb_v3",
+    "neo4j_graph": "CrisPRO KG (617 nodes / 655 rels)",
+    "primary_sources": [
+      "crispro_kg_v2/kg_modules/capability_registry.json",
+      "crispro_kg_v2/kg_modules/platform_identity_governance.json",
+      "crispro_kg_v2/kg_modules/program_*.json (break_crc_001, ceacam5, atr_ddr, io_core, io_appendix, historical_benchmarks, brief_sl)",
+      "crispro_kg_v2/kg_modules/responder_analysis_crc_ipd.json"
+    ],
+    "generated": "2026-07-18",
+    "scope": "v3_0_0 + kg_v2 ingested; older KBs used for evidence lookup only. Every evidence receipt verified present in Qdrant collection crispro_kb_v3."
+  }
+}
