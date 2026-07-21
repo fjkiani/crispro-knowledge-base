@@ -1,0 +1,10 @@
+claim_id,package,evidence_tier,ruo,value,n_receipts
+spe_gap_ratio_method,spe,deterministic_method,False,gap_ratio=IC50/free_Cmax; free_Cmax=Cmax*(1-PPB),2
+spe_panel_result,spe,computational_retrospective,False,metformin 0.08x PASS; ivermectin 250x FAIL; simvastatin 5882x FAIL,2
+spe_llm_benchmark,spe,computational_benchmark,False,LLM 36% (5/14); missed 3/6 impossible; falsely rejected 6/8 viable; 100% PK fabrication,1
+timing_internal_verif,timing,internal_verification,True,262/274 = 95.6%; category agreement 98.9% (262/265),2
+timing_external_valid,timing,external_validation_inconclusive,True,chi2 p=0.12; TOST p=0.073; 4.5pp diff below 8pp power threshold,1
+hgsoc_pooled_cox,hgsoc,computational_retrospective_prognostic,True,HR=0.7208; CI 0.6282-0.8270; p=3.0499e-6; n=2446; 16 cohorts,2
+hgsoc_percohort_concordance,hgsoc,computational_retrospective,True,11/16 favorable; Stouffer z=2.3219 p=0.0202; sign-test p=0.1051,2
+hgsoc_prognostic_not_predictive,hgsoc,hard_boundary,True,prognostic != predictive (explicit boundary),1
+hgsoc_gse32062_fails,hgsoc,external_validation_negative,True,GSE32062 logrank p=0.9292; validation_holds=false,1

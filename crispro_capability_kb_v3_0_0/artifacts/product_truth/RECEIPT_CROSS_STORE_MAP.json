@@ -1,0 +1,20 @@
+{
+  "note": "Receipt IDs are Qdrant entity_ids (primary vector store). Most IDs are identical in the Neo4j graph. A few families use a different node id in Neo4j; use this map to resolve across stores. Responder-analysis content is vector-store-only (not materialized as graph nodes).",
+  "identical_across_stores": [
+    "capability:CAP_01..CAP_10 (+_detail)",
+    "arbiter_layer:*",
+    "arbiter_model:*",
+    "demo_sample:*",
+    "regulatory_posture:oncology_arbiter_ruo",
+    "gov:* (GovernanceItem)"
+  ],
+  "neo4j_id_differs": {
+    "gov_kgv2:mandatory_disclosures": "guardrail:mandatory_disclosures",
+    "gov_kgv2:prohibited_claims": "guardrail:prohibited_claims",
+    "program:program_atr_ddr:*": "program:program_asset_atr_ddr",
+    "program:program_break_crc_001:*": "program:program_asset_break_crc_001",
+    "program:program_ceacam5:*": "program:program_asset_ceacam5",
+    "program:program_brief_sl:*": "brief_program:* (BriefProgramDeep) / program_asset_* (TrialArm)",
+    "responder_analysis:responder_analysis_crc_ipd:*": "(vector-store only; not materialized as a Neo4j node)"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "validation_result:hgsoc_percohort_meta",
+  "type": "validation_result",
+  "name": "HGSOC per-cohort meta-analysis (concordant)",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_26cohort_fingerprint_validation_summary.json",
+      "json_pointer": "/",
+      "line_range": null,
+      "anchor": "11/16 cohorts FAVORABLE; Stouffer z=2.3219, two-sided p=0.02"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "11/16 cohorts FAVORABLE; Stouffer z=2.3219, two-sided p=0.0202; sign-test p=0.1051 (n.s.)",
+      "found": true
+    },
+    {
+      "claim": "Reproduced: 11/16 + Stouffer z=2.3219 exact from shipped per-cohort file.",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_hgsoc_fingerprint"
+  ],
+  "attributes": {
+    "validation_kind": "per_cohort_meta",
+    "statistic": "11/16 cohorts FAVORABLE; Stouffer z=2.3219, two-sided p=0.0202; sign-test p=0.1051 (n.s.)",
+    "validation_holds": true,
+    "reproduced_in_session": true,
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

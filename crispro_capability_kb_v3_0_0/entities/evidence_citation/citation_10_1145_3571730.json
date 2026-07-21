@@ -1,0 +1,37 @@
+{
+  "id": "citation:10_1145_3571730",
+  "type": "evidence_citation",
+  "name": "Survey of hallucination in natural language generation",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "ji2023"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Survey of hallucination in natural language generation",
+      "found": true
+    },
+    {
+      "claim": "DOI 10.1145/3571730",
+      "found": true
+    },
+    {
+      "claim": "year 2023",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "doi": "10.1145/3571730",
+    "year": "2023",
+    "bibtex_key": "ji2023",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

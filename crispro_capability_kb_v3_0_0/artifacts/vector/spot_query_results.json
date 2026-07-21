@@ -1,0 +1,164 @@
+[
+  {
+    "query": "off-target scoring for CRISPR guide design",
+    "filter": null,
+    "hits": [
+      {
+        "id": "program:program_break_crc_001:what_crispro_proved",
+        "score": 0.29895884,
+        "type": "program",
+        "layer": "insilico_trials",
+        "name": "program_break_crc_001:what_crispro_proved"
+      },
+      {
+        "id": "capability:CAP_02_algorithm_detail",
+        "score": 0.29754657,
+        "type": "capability",
+        "layer": "insilico_trials",
+        "name": "Mechanism Fit Scoring \u2014 PATH A Engine"
+      },
+      {
+        "id": "program:mechanistic_deep:path_a_fit_derivation_break_crc001",
+        "score": 0.2921619,
+        "type": "program",
+        "layer": "insilico_trials",
+        "name": "mechanistic_deep:path_a_fit_derivation_break_crc001"
+      }
+    ]
+  },
+  {
+    "query": "PATH A mechanism fit formula",
+    "filter": null,
+    "hits": [
+      {
+        "id": "capability:CAP_02",
+        "score": 0.45266467,
+        "type": "capability",
+        "layer": "insilico_trials",
+        "name": "Mechanism Fit Engine (PATH A)"
+      },
+      {
+        "id": "outcome:break_crc_fit",
+        "score": 0.42790902,
+        "type": "outcome_metric",
+        "layer": "biology_intelligence",
+        "name": "BreAK CRC-001 fit_A=0.7375 (PATH A)"
+      },
+      {
+        "id": "edge:governed_by:576",
+        "score": 0.4256605,
+        "type": "edge_governed_by",
+        "layer": "portfolio",
+        "name": "claim:ct_01_formula -[governed_by]-> gov:path_a_locked"
+      }
+    ]
+  },
+  {
+    "query": "BRIEF-2 PTEN ITGAV computational hypothesis DepMap",
+    "filter": null,
+    "hits": [
+      {
+        "id": "brief_program:brief-2",
+        "score": 0.6057821,
+        "type": "brief_program_deep",
+        "layer": "interception",
+        "name": "NSCLC brain metastasis (BrM)"
+      },
+      {
+        "id": "edge:governed_by:412",
+        "score": 0.4861064,
+        "type": "edge_governed_by",
+        "layer": "interception",
+        "name": "brief_program:brief-2 -[governed_by]-> gov:brief_2_hypothesis"
+      },
+      {
+        "id": "gov:brief_2_hypothesis",
+        "score": 0.44180924,
+        "type": "governance_item",
+        "layer": "portfolio",
+        "name": "gov:brief_2_hypothesis"
+      }
+    ]
+  },
+  {
+    "query": "Evo2 Enformer AlphaFold3 target lock metastasis",
+    "filter": null,
+    "hits": [
+      {
+        "id": "program:mechanistic_deep:cap_04_target_lock",
+        "score": 0.4243532,
+        "type": "program",
+        "layer": "insilico_trials",
+        "name": "mechanistic_deep:cap_04_target_lock"
+      },
+      {
+        "id": "capability:CAP_04",
+        "score": 0.42032492,
+        "type": "capability",
+        "layer": "interception",
+        "name": "Target-Lock (Metastasis Driver Identification)"
+      },
+      {
+        "id": "capability:CAP_04_algorithm_detail",
+        "score": 0.40941852,
+        "type": "capability",
+        "layer": "interception",
+        "name": "Target-Lock Scoring Engine (Layer 1)"
+      }
+    ]
+  },
+  {
+    "query": "prohibited claims individual patient outcomes",
+    "filter": null,
+    "hits": [
+      {
+        "id": "gov_kgv2:prohibited_claims",
+        "score": 0.34087905,
+        "type": "governance_guardrail",
+        "layer": "portfolio",
+        "name": "Governance: prohibited_claims"
+      },
+      {
+        "id": "claim:ct_02_formula",
+        "score": 0.2685841,
+        "type": "claim",
+        "layer": "portfolio",
+        "name": "CT-02 \u2014 PATH A vs PATH B decision claim"
+      },
+      {
+        "id": "gov:path_b_prohibited",
+        "score": 0.26640555,
+        "type": "governance_item",
+        "layer": "portfolio",
+        "name": "gov:path_b_prohibited"
+      }
+    ]
+  },
+  {
+    "query": "synthetic lethality MBD4 ATR",
+    "filter": null,
+    "hits": [
+      {
+        "id": "edge:governed_by:413",
+        "score": 0.44492882,
+        "type": "edge_governed_by",
+        "layer": "biology_intelligence",
+        "name": "sl_evidence_record:mbd4_atr_evidence_matrix_v2 -[governed_by]-> sl_tier:MECHANISTIC_CANDIDATE_ONLY"
+      },
+      {
+        "id": "edge:owns:515",
+        "score": 0.44453245,
+        "type": "edge_owns",
+        "layer": "interception",
+        "name": "brief_program:brief-2 -[owns]-> sl_evidence_record:mbd4_atr_evidence_matrix_v2"
+      },
+      {
+        "id": "edge:governed_by:437",
+        "score": 0.44062224,
+        "type": "edge_governed_by",
+        "layer": "biology_intelligence",
+        "name": "sl_evidence_record:mbd4_mbd4_parp_response_canonical_atr_wee1_rerun -[governed_by]-> sl_tier:MECHANISTIC_CANDIDATE_ONLY"
+      }
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "id": "drug:spe_salinomycin",
+  "type": "drug",
+  "name": "Salinomycin (SPE INSUFFICIENT)",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+      "line_range": [
+        47,
+        58
+      ],
+      "json_pointer": null,
+      "anchor": "Salinomycin SPE panel row"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Salinomycin: INSUFFICIENT (no human PK data)",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_spe_gate"
+  ],
+  "attributes": {
+    "ic50_uM": 0.5,
+    "cmax_uM": null,
+    "ppb": null,
+    "free_cmax_uM": null,
+    "gap_ratio": null,
+    "spe_verdict": "INSUFFICIENT",
+    "context": "HGSOC drug-repurposing feasibility panel",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

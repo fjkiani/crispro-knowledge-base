@@ -1,0 +1,55 @@
+{
+  "id": "publication:hgsoc_fap_cxcl10_subgroup",
+  "type": "publication",
+  "name": "Low-FAP/High-CXCL10 transcriptional state identifies a favorable-survival HGSOC subgroup across 16 pooled cohorts",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md",
+      "json_pointer": null,
+      "line_range": [
+        1,
+        60
+      ],
+      "anchor": "manuscript front-matter + abstract"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "A low-FAP / high-CXCL10 transcriptional state identifies a favorable-survival subgroup of high-grade serous ovarian cancer across 16 pooled cohorts",
+      "found": true
+    },
+    {
+      "claim": "The signal is prognostic under heterogeneous standard-of-care management, not a demonstrated predictor of response to any specific therapy",
+      "found": true
+    },
+    {
+      "claim": "Research Use Only: these findings are computational and retrospective.",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "authors": [
+      "Fahad Kiani"
+    ],
+    "affiliation": "CrisPRO.org",
+    "venue": "bioRxiv",
+    "keywords": [
+      "high-grade serous ovarian cancer",
+      "fibroblast activation protein",
+      "CXCL10",
+      "cancer-associated fibroblasts",
+      "T-cell-inflamed",
+      "prognostic biomarker",
+      "MetaGxOvarian",
+      "overall survival"
+    ],
+    "domain": "ovarian_cancer_transcriptomic_prognostic",
+    "dataset": "MetaGxOvarian 16 cohorts n=2446",
+    "ruo": true,
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

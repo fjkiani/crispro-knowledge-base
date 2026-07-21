@@ -1,0 +1,28 @@
+{
+  "id": "outcome:hgsoc_stouffer",
+  "type": "outcome_metric",
+  "name": "HGSOC per-cohort Stouffer z=2.3219, two-sided p=0.0202 (11/16 favorable)",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_26cohort_fingerprint_validation_summary.json",
+      "json_pointer": "/",
+      "line_range": null,
+      "anchor": "HGSOC per-cohort Stouffer z=2.3219, two-sided p=0.0202 (11/1"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "HGSOC per-cohort Stouffer z=2.3219, two-sided p=0.0202 (11/16 favorable)",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_hgsoc_fingerprint"
+  ],
+  "attributes": {
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

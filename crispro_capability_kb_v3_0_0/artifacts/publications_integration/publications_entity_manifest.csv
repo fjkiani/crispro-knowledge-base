@@ -1,0 +1,75 @@
+entity_id,type,name,stream,source_kb,evidence_tier,ruo,validation_holds,reproduced_in_session,n_source_receipts,source_files,n_verbatim_evidence
+analysis_artifact:hgsoc_percohort_validation,analysis_artifact,"HGSOC per-cohort validation table (16 cohorts, direction + logrank_p)",v3:artistry7_publications,artistry7_platinum_window,,,,True,1,metagx_26cohort_fingerprint_validation.csv,2
+analysis_artifact:hgsoc_pooled_patient_level,analysis_artifact,"HGSOC pooled patient-level data (2446 patients x 7 cols, fingerprint computed)",v3:artistry7_publications,artistry7_platinum_window,,,,True,1,metagx_16cohort_pooled_patient_level.csv,2
+analysis_artifact:spe_drug_panel,analysis_artifact,SPE 10-drug feasibility panel (IC50/Cmax/PPB/gap/verdict),v3:artistry7_publications,artistry7_platinum_window,,,,True,1,generate_figures.py,2
+analysis_artifact:timing_confusion_matrix,analysis_artifact,Timing engine confusion matrix + boundary tables,v3:artistry7_publications,artistry7_platinum_window,,,,True,1,table3_confusion.csv,2
+analysis_artifact:timing_reproduce_script,analysis_artifact,Timing engine reproduce_all.py (raw re-run needs external Villalobos xlsx),v3:artistry7_publications,artistry7_platinum_window,,,,False,1,reproduce_all.py,2
+biomarker:hgsoc_fap_cxcl10_fingerprint,biomarker,Low-FAP/high-CXCL10 binary transcriptional fingerprint (24.4% of HGSOC),v3:artistry7_publications,artistry7_platinum_window,,,,,1,manuscript.md,2
+capability:pub_hgsoc_fingerprint,capability,Low-FAP/High-CXCL10 HGSOC Prognostic Fingerprint,v3:artistry7_publications,artistry7_platinum_window,computational_retrospective_prognostic,True,,,1,manuscript.md,2
+capability:pub_spe_gate,capability,SPE Pharmacokinetic Feasibility Gate,v3:artistry7_publications,artistry7_platinum_window,deterministic_computational,False,,,1,MANUSCRIPT.md,2
+capability:pub_timing_engine,capability,Configurable Ovarian Treatment-Timing Engine (PFI),v3:artistry7_publications,artistry7_platinum_window,internal_verification_plus_inconclusive_external,True,,,1,MANUSCRIPT_DRAFT.md,2
+drug:spe_artesunate,drug,"Artesunate (SPE CONDITIONAL, gap 8.3x)",v3:artistry7_publications,artistry7_platinum_window,,,,,1,generate_figures.py,1
+drug:spe_disulfiram,drug,"Disulfiram (SPE CONDITIONAL, gap 8.3x)",v3:artistry7_publications,artistry7_platinum_window,,,,,1,generate_figures.py,1
+drug:spe_hydroxychloroquine,drug,"Hydroxychloroquine (SPE CONDITIONAL, gap 13.3x)",v3:artistry7_publications,artistry7_platinum_window,,,,,1,generate_figures.py,1
+drug:spe_itraconazole,drug,"Itraconazole (SPE FAIL, gap 150.0x)",v3:artistry7_publications,artistry7_platinum_window,,,,,1,generate_figures.py,1
+drug:spe_ivermectin,drug,"Ivermectin (SPE FAIL, gap 250.0x)",v3:artistry7_publications,artistry7_platinum_window,,,,,1,generate_figures.py,1
+drug:spe_mebendazole,drug,"Mebendazole (SPE CONDITIONAL, gap 6.7x)",v3:artistry7_publications,artistry7_platinum_window,,,,,1,generate_figures.py,1
+drug:spe_metformin,drug,"Metformin (SPE PASS, gap 0.08x)",v3:artistry7_publications,artistry7_platinum_window,,,,,1,generate_figures.py,1
+drug:spe_niclosamide,drug,"Niclosamide (SPE FAIL, gap 285.7x)",v3:artistry7_publications,artistry7_platinum_window,,,,,1,generate_figures.py,1
+drug:spe_salinomycin,drug,Salinomycin (SPE INSUFFICIENT),v3:artistry7_publications,artistry7_platinum_window,,,,,1,generate_figures.py,1
+drug:spe_simvastatin,drug,"Simvastatin (SPE FAIL, gap 5882.0x)",v3:artistry7_publications,artistry7_platinum_window,,,,,1,generate_figures.py,1
+citation:10_1007_s00262-024-03761-y,evidence_citation,Tumor-intrinsic IFN-alpha and CXCL10 are critical for immunotherapeutic efficacy by recruiting and activating T lymphocy,v3:artistry7_publications,artistry7_platinum_window,,,,,1,references.bib,3
+citation:10_1016_j_taap_2022_116073,evidence_citation,Ivermectin-induced cell death of cervical cancer cells in vitro a consequence of precipitate formation in culture media,v3:artistry7_publications,artistry7_platinum_window,,,,,1,references.bib,3
+citation:10_1016_j_ygyno_2025_01_010,evidence_citation,High prevalence of FAP+ cancer-associated fibroblasts predicts poor outcome in patients with high-grade serous ovarian c,v3:artistry7_publications,artistry7_platinum_window,,,,,1,references.bib,3
+citation:10_1016_j_ygyno_2025_02_001,evidence_citation,Metformin for patients with advanced stage ovarian cancer: A randomized phase II placebo-controlled trial,v3:artistry7_publications,artistry7_platinum_window,,,,,1,references.bib,3
+citation:10_1021_acs_jmedchem_5c01610,evidence_citation,Membrane perturbations and assay interferences by ivermectin explain its in vitro SARS-CoV-2 antiviral activities and la,v3:artistry7_publications,artistry7_platinum_window,,,,,1,references.bib,3
+citation:10_1038_nrd3287,evidence_citation,The effect of plasma protein binding on in vivo efficacy: misconceptions in drug discovery,v3:artistry7_publications,artistry7_platinum_window,,,,,1,references.bib,3
+citation:10_1038_nrd_2018_168,evidence_citation,"Drug repurposing: progress, challenges and recommendations",v3:artistry7_publications,artistry7_platinum_window,,,,,1,references.bib,3
+citation:10_1038_s41598-025-12693-1,evidence_citation,CXCL10-induced regulatory T cells and adenosine signaling promote immunosuppression and progression of epithelial ovaria,v3:artistry7_publications,artistry7_platinum_window,,,,,1,references.bib,3
+citation:10_1067_mcp_2002_121829,evidence_citation,Changes in plasma protein binding have little clinical relevance,v3:artistry7_publications,artistry7_platinum_window,,,,,1,references.bib,3
+citation:10_1084_jem_20191094,evidence_citation,Distinct fibroblast functional states drive clinical outcomes in ovarian cancer and are regulated by TCF21,v3:artistry7_publications,artistry7_platinum_window,,,,,1,references.bib,3
+citation:10_1145_3571730,evidence_citation,Survey of hallucination in natural language generation,v3:artistry7_publications,artistry7_platinum_window,,,,,1,references.bib,3
+citation:10_1172_jci_insight_133247,evidence_citation,Phase II clinical trial of metformin as a cancer stem cell-targeting agent in ovarian cancer,v3:artistry7_publications,artistry7_platinum_window,,,,,1,references.bib,3
+citation:10_1186_s12885-020-07541-6,evidence_citation,High expression of fibroblast activation protein (FAP) predicts poor outcome in high-grade serous ovarian cancer,v3:artistry7_publications,artistry7_platinum_window,,,,,1,references.bib,3
+citation:10_1186_s13643-025-02929-6,evidence_citation,Predicting fibroblast activation protein overexpression in the overall survival rate of cancer patients: a systematic re,v3:artistry7_publications,artistry7_platinum_window,,,,,1,references.bib,3
+citation:10_3389_fimmu_2021_690201,evidence_citation,Infiltration by CXCL10 secreting macrophages is associated with antitumor immunity and response to therapy in ovarian ca,v3:artistry7_publications,artistry7_platinum_window,,,,,1,references.bib,3
+citation:bonovas2020,evidence_citation,Statin use and risk of cancer: epidemiologic evidence,v3:artistry7_publications,artistry7_platinum_window,,,,,1,references.bib,2
+citation:pmid22495656,evidence_citation,Ivermectin anti-cancer activity in vitro,v3:artistry7_publications,artistry7_platinum_window,,,,,1,references.bib,2
+gene:cxcl10,gene,CXCL10,v3:artistry7_publications,artistry7_platinum_window,,,,,1,manuscript.md,1
+gene:fap,gene,FAP,v3:artistry7_publications,artistry7_platinum_window,,,,,1,manuscript.md,1
+governance_item:pub_hgsoc_external_fails,governance_item,HGSOC fingerprint external validation on GSE32062 DID NOT HOLD,v3:artistry7_publications,artistry7_platinum_window,,,,,1,artistry7_integration::governance (derived from manuscript RUO statements + limitation sections),1
+governance_item:pub_hgsoc_prognostic_not_predictive,governance_item,"HGSOC fingerprint is PROGNOSTIC, not PREDICTIVE",v3:artistry7_publications,artistry7_platinum_window,,,,,1,artistry7_integration::governance (derived from manuscript RUO statements + limitation sections),1
+governance_item:pub_no_tier_inflation,governance_item,No evidence-tier inflation across publication capabilities,v3:artistry7_publications,artistry7_platinum_window,,,,,1,artistry7_integration::governance (derived from manuscript RUO statements + limitation sections),1
+governance_item:pub_ruo_all,governance_item,Publication-derived capabilities are Research Use Only (RUO),v3:artistry7_publications,artistry7_platinum_window,,,,,1,artistry7_integration::governance (derived from manuscript RUO statements + limitation sections),1
+governance_item:pub_spe_not_efficacy,governance_item,"SPE gap-ratio is a FEASIBILITY pre-filter, NOT efficacy proof",v3:artistry7_publications,artistry7_platinum_window,,,,,1,artistry7_integration::governance (derived from manuscript RUO statements + limitation sections),1
+governance_item:pub_timing_internal_not_clinical,governance_item,"Timing engine internal verification = CONSISTENCY, not clinical validity",v3:artistry7_publications,artistry7_platinum_window,,,,,1,artistry7_integration::governance (derived from manuscript RUO statements + limitation sections),1
+outcome:hgsoc_fingerprint_hr,outcome_metric,"HGSOC low-FAP/high-CXCL10 fingerprint OS HR=0.7208 (95% CI 0.6282-0.8270, p=3.05e-6)",v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_16cohort_pooled_cox.json,1
+outcome:hgsoc_stouffer,outcome_metric,"HGSOC per-cohort Stouffer z=2.3219, two-sided p=0.0202 (11/16 favorable)",v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_26cohort_fingerprint_validation_summary.json,1
+outcome:spe_llm_accuracy,outcome_metric,LLM PK-reasoning 36% verdict accuracy (5/14) vs SPE deterministic,v3:artistry7_publications,artistry7_platinum_window,,,,,1,MANUSCRIPT.md,1
+outcome:timing_exact_day_agreement,outcome_metric,Timing engine 95.6% exact-day PFI agreement (262/274) vs Villalobos,v3:artistry7_publications,artistry7_platinum_window,,,,,1,statistics_summary.txt,1
+cohort:gse32062_holdout,patient_cohort,"GSE32062 external holdout (n=260, GPL6480) — fingerprint did NOT validate",v3:artistry7_publications,artistry7_platinum_window,,,False,,1,validation_manifest.json,1
+cohort:metagx_e_mtab_386,patient_cohort,MetaGxOvarian cohort E.MTAB.386 (n=129),v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_16cohort_pooled_cox.json,1
+cohort:metagx_gse13876,patient_cohort,MetaGxOvarian cohort GSE13876 (n=157),v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_16cohort_pooled_cox.json,1
+cohort:metagx_gse14764,patient_cohort,MetaGxOvarian cohort GSE14764 (n=79),v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_16cohort_pooled_cox.json,1
+cohort:metagx_gse17260,patient_cohort,MetaGxOvarian cohort GSE17260 (n=110),v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_16cohort_pooled_cox.json,1
+cohort:metagx_gse18520,patient_cohort,MetaGxOvarian cohort GSE18520 (n=53),v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_16cohort_pooled_cox.json,1
+cohort:metagx_gse26712,patient_cohort,MetaGxOvarian cohort GSE26712 (n=185),v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_16cohort_pooled_cox.json,1
+cohort:metagx_gse30161,patient_cohort,MetaGxOvarian cohort GSE30161 (n=58),v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_16cohort_pooled_cox.json,1
+cohort:metagx_gse32062,patient_cohort,MetaGxOvarian cohort GSE32062 (n=257),v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_16cohort_pooled_cox.json,1
+cohort:metagx_gse32063,patient_cohort,MetaGxOvarian cohort GSE32063 (n=40),v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_16cohort_pooled_cox.json,1
+cohort:metagx_gse49997,patient_cohort,MetaGxOvarian cohort GSE49997 (n=194),v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_16cohort_pooled_cox.json,1
+cohort:metagx_gse51088,patient_cohort,MetaGxOvarian cohort GSE51088 (n=152),v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_16cohort_pooled_cox.json,1
+cohort:metagx_gse8842,patient_cohort,MetaGxOvarian cohort GSE8842 (n=83),v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_16cohort_pooled_cox.json,1
+cohort:metagx_gse9891,patient_cohort,MetaGxOvarian cohort GSE9891 (n=269),v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_16cohort_pooled_cox.json,1
+cohort:metagx_pmid17290060,patient_cohort,MetaGxOvarian cohort PMID17290060 (n=117),v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_16cohort_pooled_cox.json,1
+cohort:metagx_pmid19318476,patient_cohort,MetaGxOvarian cohort PMID19318476 (n=42),v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_16cohort_pooled_cox.json,1
+cohort:metagx_tcgaovarian,patient_cohort,MetaGxOvarian cohort TCGAOVARIAN (n=521),v3:artistry7_publications,artistry7_platinum_window,,,,,1,metagx_16cohort_pooled_cox.json,1
+publication:hgsoc_fap_cxcl10_subgroup,publication,Low-FAP/High-CXCL10 transcriptional state identifies a favorable-survival HGSOC subgroup across 16 pooled cohorts,v3:artistry7_publications,artistry7_platinum_window,,True,,,1,manuscript.md,3
+publication:spe_feasibility_gate,publication,Structural Pharmacology Engine (SPE): Deterministic PK Feasibility Gating for Drug Repurposing,v3:artistry7_publications,artistry7_platinum_window,,False,,,1,MANUSCRIPT.md,2
+publication:timing_engine,publication,"A Configurable Timing Engine for Ovarian Cancer Treatment History Analysis: Development, Internal Verification, and External Validation",v3:artistry7_publications,artistry7_platinum_window,,True,,,1,MANUSCRIPT_DRAFT.md,2
+validation_result:hgsoc_gse32062_negative,validation_result,HGSOC fingerprint GSE32062 external validation (NEGATIVE),v3:artistry7_publications,artistry7_platinum_window,,,False,True,1,validation_manifest.json,2
+validation_result:hgsoc_percohort_meta,validation_result,HGSOC per-cohort meta-analysis (concordant),v3:artistry7_publications,artistry7_platinum_window,,,True,True,1,metagx_26cohort_fingerprint_validation_summary.json,2
+validation_result:hgsoc_pooled_cox_positive,validation_result,"HGSOC fingerprint pooled Cox (POSITIVE, discovery)",v3:artistry7_publications,artistry7_platinum_window,,,True,True,1,metagx_16cohort_pooled_cox.json,2
+validation_result:spe_llm_benchmark,validation_result,SPE vs LLM PK-reasoning benchmark,v3:artistry7_publications,artistry7_platinum_window,,,True,False,1,MANUSCRIPT.md,2
+validation_result:timing_ariel3_inconclusive,validation_result,Timing engine external validation vs ARIEL3 (INCONCLUSIVE),v3:artistry7_publications,artistry7_platinum_window,,,,False,1,MANUSCRIPT_DRAFT.md,2
+validation_result:timing_internal_villalobos,validation_result,Timing engine internal verification vs Villalobos TCGA-OV,v3:artistry7_publications,artistry7_platinum_window,,,True,True,1,statistics_summary.txt,2

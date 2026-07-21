@@ -1,0 +1,32 @@
+{
+  "id": "governance_item:pub_hgsoc_prognostic_not_predictive",
+  "type": "governance_item",
+  "name": "HGSOC fingerprint is PROGNOSTIC, not PREDICTIVE",
+  "source_receipts": [
+    {
+      "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "HGSOC fingerprint is PROGNOSTIC, not PREDICTIVE"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "HR=0.7208 describes survival under heterogeneous standard-of-care. It does NOT predict response to any specific therapy. Any patient-selection or treatment-assignment claim requires prospective, treatment-stratified validation on the intended endpoint. Never state the fingerprint 'predicts response' or 'selects patients for [drug]'.",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_hgsoc_fingerprint"
+  ],
+  "attributes": {
+    "guardrail_text": "HR=0.7208 describes survival under heterogeneous standard-of-care. It does NOT predict response to any specific therapy. Any patient-selection or treatment-assignment claim requires prospective, treatment-stratified validation on the intended endpoint. Never state the fingerprint 'predicts response' or 'selects patients for [drug]'.",
+    "scope": [
+      "capability:pub_hgsoc_fingerprint"
+    ],
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

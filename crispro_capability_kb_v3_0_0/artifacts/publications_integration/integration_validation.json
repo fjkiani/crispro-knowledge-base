@@ -1,0 +1,404 @@
+{
+  "validated_at": "2026-07-18T22:01:56.464225+00:00",
+  "qdrant": {
+    "new_points_expected": 74,
+    "new_points_found_by_id": 74,
+    "missing": [],
+    "payload_mismatch": [],
+    "stream_filtered_count": 74,
+    "total_points": 1418,
+    "PASS": true
+  },
+  "neo4j": {
+    "new_nodes_expected": 74,
+    "new_nodes_found": 74,
+    "missing_nodes": [],
+    "label_mismatch": [],
+    "new_rel_count": 73,
+    "total_nodes": 691,
+    "total_rels": 728,
+    "PASS": true
+  },
+  "capabilities": {
+    "count": 3,
+    "all_link_to_publication": true,
+    "all_have_receipts": true,
+    "detail": [
+      {
+        "capability": "capability:pub_spe_gate",
+        "publications": 1,
+        "pub_ids": [
+          "publication:spe_feasibility_gate"
+        ],
+        "validated_by": [
+          "validation_result:spe_llm_benchmark"
+        ],
+        "limited_by": [],
+        "source_receipts": 1
+      },
+      {
+        "capability": "capability:pub_hgsoc_fingerprint",
+        "publications": 1,
+        "pub_ids": [
+          "publication:hgsoc_fap_cxcl10_subgroup"
+        ],
+        "validated_by": [
+          "validation_result:hgsoc_pooled_cox_positive",
+          "validation_result:hgsoc_percohort_meta"
+        ],
+        "limited_by": [
+          "validation_result:hgsoc_gse32062_negative"
+        ],
+        "source_receipts": 1
+      },
+      {
+        "capability": "capability:pub_timing_engine",
+        "publications": 1,
+        "pub_ids": [
+          "publication:timing_engine"
+        ],
+        "validated_by": [
+          "validation_result:timing_internal_villalobos"
+        ],
+        "limited_by": [
+          "validation_result:timing_ariel3_inconclusive"
+        ],
+        "source_receipts": 1
+      }
+    ]
+  },
+  "validations": {
+    "count": 6,
+    "negative_attached_as_LIMITS": [
+      "hgsoc_gse32062_negative",
+      "timing_ariel3_inconclusive"
+    ],
+    "positive_attached_as_VALIDATED_BY": [
+      "hgsoc_pooled_cox_positive",
+      "hgsoc_percohort_meta",
+      "timing_internal_villalobos",
+      "spe_llm_benchmark"
+    ],
+    "detail": [
+      {
+        "id": "validation_result:hgsoc_pooled_cox_positive",
+        "holds": true,
+        "verdict": null,
+        "reproduced": null,
+        "edges": [
+          [
+            "VALIDATED_BY",
+            "capability:pub_hgsoc_fingerprint"
+          ]
+        ]
+      },
+      {
+        "id": "validation_result:hgsoc_percohort_meta",
+        "holds": true,
+        "verdict": null,
+        "reproduced": null,
+        "edges": [
+          [
+            "VALIDATED_BY",
+            "capability:pub_hgsoc_fingerprint"
+          ]
+        ]
+      },
+      {
+        "id": "validation_result:hgsoc_gse32062_negative",
+        "holds": false,
+        "verdict": null,
+        "reproduced": null,
+        "edges": [
+          [
+            "LIMITS",
+            "capability:pub_hgsoc_fingerprint"
+          ]
+        ]
+      },
+      {
+        "id": "validation_result:timing_internal_villalobos",
+        "holds": true,
+        "verdict": null,
+        "reproduced": null,
+        "edges": [
+          [
+            "VALIDATED_BY",
+            "capability:pub_timing_engine"
+          ]
+        ]
+      },
+      {
+        "id": "validation_result:timing_ariel3_inconclusive",
+        "holds": null,
+        "verdict": null,
+        "reproduced": null,
+        "edges": [
+          [
+            "LIMITS",
+            "capability:pub_timing_engine"
+          ]
+        ]
+      },
+      {
+        "id": "validation_result:spe_llm_benchmark",
+        "holds": true,
+        "verdict": null,
+        "reproduced": null,
+        "edges": [
+          [
+            "VALIDATED_BY",
+            "capability:pub_spe_gate"
+          ]
+        ]
+      }
+    ]
+  },
+  "governance": {
+    "count": 6,
+    "ruo_binds_only_ruo_capabilities": true,
+    "detail": [
+      {
+        "id": "governance_item:pub_spe_not_efficacy",
+        "name": "SPE gap-ratio is a FEASIBILITY pre-filter, NOT efficacy proof",
+        "governs": [
+          "capability:pub_spe_gate"
+        ],
+        "payload_present": true
+      },
+      {
+        "id": "governance_item:pub_hgsoc_prognostic_not_predictive",
+        "name": "HGSOC fingerprint is PROGNOSTIC, not PREDICTIVE",
+        "governs": [
+          "capability:pub_hgsoc_fingerprint"
+        ],
+        "payload_present": true
+      },
+      {
+        "id": "governance_item:pub_hgsoc_external_fails",
+        "name": "HGSOC fingerprint external validation on GSE32062 DID NOT HOLD",
+        "governs": [
+          "capability:pub_hgsoc_fingerprint"
+        ],
+        "payload_present": true
+      },
+      {
+        "id": "governance_item:pub_timing_internal_not_clinical",
+        "name": "Timing engine internal verification = CONSISTENCY, not clinical validity",
+        "governs": [
+          "capability:pub_timing_engine"
+        ],
+        "payload_present": true
+      },
+      {
+        "id": "governance_item:pub_ruo_all",
+        "name": "Publication-derived capabilities are Research Use Only (RUO)",
+        "governs": [
+          "capability:pub_hgsoc_fingerprint",
+          "capability:pub_timing_engine"
+        ],
+        "payload_present": true
+      },
+      {
+        "id": "governance_item:pub_no_tier_inflation",
+        "name": "No evidence-tier inflation across publication capabilities",
+        "governs": [
+          "capability:pub_spe_gate",
+          "capability:pub_hgsoc_fingerprint",
+          "capability:pub_timing_engine"
+        ],
+        "payload_present": true
+      }
+    ]
+  },
+  "tier_audit": {
+    "entities_audited": 12,
+    "ruo_matches_source": true,
+    "no_tier_inflation_detected": true,
+    "detail": [
+      {
+        "entity": "publication:hgsoc_fap_cxcl10_subgroup",
+        "supports": "prognostic, RUO",
+        "must_NOT_claim": "predictive / clinical use",
+        "payload_ruo": true,
+        "evidence_tier": "",
+        "text_len": 510
+      },
+      {
+        "entity": "capability:pub_hgsoc_fingerprint",
+        "supports": "prognostic, RUO",
+        "must_NOT_claim": "predictive of drug response",
+        "payload_ruo": true,
+        "evidence_tier": "computational_retrospective_prognostic",
+        "text_len": 702
+      },
+      {
+        "entity": "biomarker:hgsoc_fap_cxcl10_fingerprint",
+        "supports": "prognostic assoc",
+        "must_NOT_claim": "predictive biomarker",
+        "payload_ruo": false,
+        "evidence_tier": "",
+        "text_len": 265
+      },
+      {
+        "entity": "validation_result:hgsoc_gse32062_negative",
+        "supports": "NEGATIVE external val",
+        "must_NOT_claim": "successful external validation",
+        "payload_ruo": false,
+        "evidence_tier": "external_holdout",
+        "text_len": 501
+      },
+      {
+        "entity": "validation_result:hgsoc_percohort_meta",
+        "supports": "11/16 favorable, sign-test n.s.",
+        "must_NOT_claim": "significant per-cohort effect",
+        "payload_ruo": false,
+        "evidence_tier": "per_cohort_meta",
+        "text_len": 357
+      },
+      {
+        "entity": "publication:spe_feasibility_gate",
+        "supports": "feasibility gate, NOT efficacy, not RUO-tagged",
+        "must_NOT_claim": "efficacy prediction",
+        "payload_ruo": false,
+        "evidence_tier": "",
+        "text_len": 290
+      },
+      {
+        "entity": "capability:pub_spe_gate",
+        "supports": "PK feasibility gate",
+        "must_NOT_claim": "efficacy / clinical decision",
+        "payload_ruo": false,
+        "evidence_tier": "deterministic_computational",
+        "text_len": 606
+      },
+      {
+        "entity": "validation_result:spe_llm_benchmark",
+        "supports": "SPE>LLM; LLM fabricates PK",
+        "must_NOT_claim": "SPE proven clinically",
+        "payload_ruo": false,
+        "evidence_tier": "computational_benchmark",
+        "text_len": 575
+      },
+      {
+        "entity": "publication:timing_engine",
+        "supports": "configurable timing, RUO",
+        "must_NOT_claim": "clinical timing recommendation",
+        "payload_ruo": true,
+        "evidence_tier": "",
+        "text_len": 361
+      },
+      {
+        "entity": "capability:pub_timing_engine",
+        "supports": "internal-consistent timing",
+        "must_NOT_claim": "clinically validated timing",
+        "payload_ruo": true,
+        "evidence_tier": "internal_verification_plus_inconclusive_external",
+        "text_len": 701
+      },
+      {
+        "entity": "validation_result:timing_ariel3_inconclusive",
+        "supports": "INCONCLUSIVE vs ARIEL3",
+        "must_NOT_claim": "concordant with ARIEL3",
+        "payload_ruo": false,
+        "evidence_tier": "external_validation",
+        "text_len": 604
+      },
+      {
+        "entity": "validation_result:timing_internal_villalobos",
+        "supports": "95.6% internal exact-day",
+        "must_NOT_claim": "external clinical accuracy",
+        "payload_ruo": false,
+        "evidence_tier": "internal_verification",
+        "text_len": 400
+      }
+    ]
+  },
+  "grounded_retrieval": {
+    "probes": 5,
+    "all_guardrails_surfaced": true,
+    "detail": [
+      {
+        "query": "does the HGSOC fingerprint predict drug response?",
+        "guardrail_surfaced": true,
+        "matched_terms": [
+          "prognostic",
+          "not predictive",
+          "does not predict"
+        ],
+        "top_ids": [
+          "governance_item:pub_hgsoc_prognostic_not_predictive",
+          "outcome:hgsoc_fingerprint_hr",
+          "biomarker:hgsoc_fap_cxcl10_fingerprint",
+          "analysis_artifact:hgsoc_pooled_patient_level",
+          "validation_result:hgsoc_pooled_cox_positive"
+        ]
+      },
+      {
+        "query": "did the HGSOC fingerprint validate externally on GSE32062?",
+        "guardrail_surfaced": true,
+        "matched_terms": [
+          "did not hold",
+          "negative",
+          "p=0.929",
+          "0.9292"
+        ],
+        "top_ids": [
+          "validation_result:hgsoc_gse32062_negative",
+          "cohort:gse32062_holdout",
+          "governance_item:pub_hgsoc_external_fails",
+          "validation_result:hgsoc_pooled_cox_positive",
+          "cohort:metagx_gse32062"
+        ]
+      },
+      {
+        "query": "does an SPE PASS mean the drug works?",
+        "guardrail_surfaced": true,
+        "matched_terms": [
+          "not that the drug works",
+          "does not establish efficacy",
+          "feasibility"
+        ],
+        "top_ids": [
+          "governance_item:pub_spe_not_efficacy",
+          "drug:spe_metformin",
+          "capability:pub_spe_gate",
+          "drug:spe_ivermectin",
+          "drug:spe_simvastatin"
+        ]
+      },
+      {
+        "query": "is the timing engine equivalent to ARIEL3?",
+        "guardrail_surfaced": true,
+        "matched_terms": [
+          "inconclusive",
+          "underpowered",
+          "not a positive"
+        ],
+        "top_ids": [
+          "validation_result:timing_ariel3_inconclusive",
+          "governance_item:pub_timing_internal_not_clinical",
+          "outcome:timing_exact_day_agreement",
+          "analysis_artifact:timing_confusion_matrix",
+          "publication:timing_engine"
+        ]
+      },
+      {
+        "query": "are these publication capabilities cleared for clinical use?",
+        "guardrail_surfaced": true,
+        "matched_terms": [
+          "research use only",
+          "ruo"
+        ],
+        "top_ids": [
+          "governance_item:pub_ruo_all",
+          "governance_item:pub_no_tier_inflation",
+          "citation:10_1067_mcp_2002_121829",
+          "capability:pub_hgsoc_fingerprint",
+          "publication:timing_engine"
+        ]
+      }
+    ]
+  },
+  "OVERALL_PASS": true
+}

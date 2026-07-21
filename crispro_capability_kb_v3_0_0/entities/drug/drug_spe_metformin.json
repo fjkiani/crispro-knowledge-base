@@ -1,0 +1,38 @@
+{
+  "id": "drug:spe_metformin",
+  "type": "drug",
+  "name": "Metformin (SPE PASS, gap 0.08x)",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+      "line_range": [
+        47,
+        58
+      ],
+      "json_pointer": null,
+      "anchor": "Metformin SPE panel row"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Metformin: gap ratio 0.08x -> PASS",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_spe_gate"
+  ],
+  "attributes": {
+    "ic50_uM": 1.0,
+    "cmax_uM": 12.0,
+    "ppb": 0.0,
+    "free_cmax_uM": 12.0,
+    "gap_ratio": 0.08,
+    "spe_verdict": "PASS",
+    "context": "HGSOC drug-repurposing feasibility panel",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

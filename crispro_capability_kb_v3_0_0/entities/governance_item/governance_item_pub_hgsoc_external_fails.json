@@ -1,0 +1,32 @@
+{
+  "id": "governance_item:pub_hgsoc_external_fails",
+  "type": "governance_item",
+  "name": "HGSOC fingerprint external validation on GSE32062 DID NOT HOLD",
+  "source_receipts": [
+    {
+      "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "HGSOC fingerprint external validation on GSE32062 DID NOT HOLD"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "GSE32062 tiered OS separation was non-significant (logrank p=0.929, validation_holds=false) using transferred discovery thresholds. The favorable-survival claim is a pooled-discovery finding awaiting successful external replication; do not present it as externally validated.",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_hgsoc_fingerprint"
+  ],
+  "attributes": {
+    "guardrail_text": "GSE32062 tiered OS separation was non-significant (logrank p=0.929, validation_holds=false) using transferred discovery thresholds. The favorable-survival claim is a pooled-discovery finding awaiting successful external replication; do not present it as externally validated.",
+    "scope": [
+      "capability:pub_hgsoc_fingerprint"
+    ],
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

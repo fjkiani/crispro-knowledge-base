@@ -1,0 +1,38 @@
+{
+  "id": "drug:spe_simvastatin",
+  "type": "drug",
+  "name": "Simvastatin (SPE FAIL, gap 5882.0x)",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+      "line_range": [
+        47,
+        58
+      ],
+      "json_pointer": null,
+      "anchor": "Simvastatin SPE panel row"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Simvastatin: gap ratio 5882.0x -> FAIL",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_spe_gate"
+  ],
+  "attributes": {
+    "ic50_uM": 10.0,
+    "cmax_uM": 0.034,
+    "ppb": 0.95,
+    "free_cmax_uM": 0.0017,
+    "gap_ratio": 5882.0,
+    "spe_verdict": "FAIL",
+    "context": "HGSOC drug-repurposing feasibility panel",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

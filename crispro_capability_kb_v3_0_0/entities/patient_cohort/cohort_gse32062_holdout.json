@@ -1,0 +1,31 @@
+{
+  "id": "cohort:gse32062_holdout",
+  "type": "patient_cohort",
+  "name": "GSE32062 external holdout (n=260, GPL6480) \u2014 fingerprint did NOT validate",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/data/validation_manifest.json",
+      "json_pointer": "/",
+      "line_range": null,
+      "anchor": "GSE32062"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "GSE32062 n=260: external validation NEGATIVE (logrank p=0.929)",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "validation_result:hgsoc_gse32062_negative"
+  ],
+  "attributes": {
+    "n_patients": 260,
+    "platform": "GPL6480",
+    "validation_holds": false,
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

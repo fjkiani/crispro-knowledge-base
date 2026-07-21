@@ -1,0 +1,18 @@
+[
+  {
+    "predicate": "limits",
+    "src": "validation_result:hgsoc_gse32062_negative",
+    "dst": "capability:pub_hgsoc_fingerprint",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/data/validation_manifest.json",
+    "evidence": "validation_result:hgsoc_gse32062_negative LIMITS claims for capability:pub_hgsoc_fingerprint (holds=False)",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "limits",
+    "src": "validation_result:timing_ariel3_inconclusive",
+    "dst": "capability:pub_timing_engine",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/MANUSCRIPT_DRAFT.md",
+    "evidence": "validation_result:timing_ariel3_inconclusive LIMITS claims for capability:pub_timing_engine (holds=None)",
+    "_stream": "v3:artistry7_publications"
+  }
+]

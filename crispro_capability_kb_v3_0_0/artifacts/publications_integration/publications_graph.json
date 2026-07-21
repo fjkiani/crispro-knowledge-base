@@ -1,0 +1,1474 @@
+{
+  "metadata": {
+    "generated_at": "2026-07-18T21:49:44.389483+00:00",
+    "stream": "v3:artistry7_publications",
+    "source_kb": "artistry7_platinum_window",
+    "n_nodes": 74,
+    "n_edges": 73,
+    "source_repo": "github.com/fjkiani/data-room :: datasets/artistry7-platinum-window/publications"
+  },
+  "nodes": [
+    {
+      "id": "publication:spe_feasibility_gate",
+      "type": "publication",
+      "label": "Publication",
+      "name": "Structural Pharmacology Engine (SPE): Deterministic PK Feasibility Gating for Drug Repurposing",
+      "attributes": {
+        "authors": [
+          "Fahad Kiani"
+        ],
+        "affiliation": "CrisPRO Foundation",
+        "venue": "preprint",
+        "running_title": "SPE \u2014 Deterministic PK Gating for Drug Repurposing",
+        "keywords": [
+          "drug repurposing",
+          "pharmacokinetic feasibility",
+          "gap ratio",
+          "structural pharmacology",
+          "LLM hallucination",
+          "precision oncology",
+          "ovarian cancer"
+        ],
+        "domain": "drug_repurposing_pharmacology",
+        "ruo": false
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/MANUSCRIPT.md"
+    },
+    {
+      "id": "publication:hgsoc_fap_cxcl10_subgroup",
+      "type": "publication",
+      "label": "Publication",
+      "name": "Low-FAP/High-CXCL10 transcriptional state identifies a favorable-survival HGSOC subgroup across 16 pooled cohorts",
+      "attributes": {
+        "authors": [
+          "Fahad Kiani"
+        ],
+        "affiliation": "CrisPRO.org",
+        "venue": "bioRxiv",
+        "keywords": [
+          "high-grade serous ovarian cancer",
+          "fibroblast activation protein",
+          "CXCL10",
+          "cancer-associated fibroblasts",
+          "T-cell-inflamed",
+          "prognostic biomarker",
+          "MetaGxOvarian",
+          "overall survival"
+        ],
+        "domain": "ovarian_cancer_transcriptomic_prognostic",
+        "dataset": "MetaGxOvarian 16 cohorts n=2446",
+        "ruo": true
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md"
+    },
+    {
+      "id": "publication:timing_engine",
+      "type": "publication",
+      "label": "Publication",
+      "name": "A Configurable Timing Engine for Ovarian Cancer Treatment History Analysis: Development, Internal Verification, and External Validation",
+      "attributes": {
+        "authors": [
+          "Fahad Kiani"
+        ],
+        "affiliation": "CrisPRO.ai",
+        "venue": "preprint",
+        "keywords": [
+          "platinum-free interval",
+          "treatment history",
+          "chemosensitivity",
+          "ovarian cancer",
+          "timing metrics",
+          "clinical decision support"
+        ],
+        "domain": "ovarian_cancer_treatment_timing",
+        "ruo": true
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/MANUSCRIPT_DRAFT.md"
+    },
+    {
+      "id": "capability:pub_spe_gate",
+      "type": "capability",
+      "label": "Capability",
+      "name": "SPE Pharmacokinetic Feasibility Gate",
+      "attributes": {
+        "what_it_does": "Deterministic pre-filter that computes gap ratio (IC50 / free plasma Cmax) and classifies drug-repurposing candidates PASS(<5x)/CONDITIONAL(5-50x)/FAIL(>50x) in <1ms, before any efficacy scoring.",
+        "evidence_tier": "deterministic_computational",
+        "ruo": false,
+        "validated_on": "10 HGSOC repurposing candidates (metformin PASS 0.08x; ivermectin/niclosamide/itraconazole/simvastatin FAIL 150-5882x)",
+        "cannot_do": "Does NOT establish efficacy. A PASS means exposure is physically achievable, NOT that the drug works. FAIL rules out on exposure grounds only. Not a clinical recommendation."
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/MANUSCRIPT.md"
+    },
+    {
+      "id": "capability:pub_hgsoc_fingerprint",
+      "type": "capability",
+      "label": "Capability",
+      "name": "Low-FAP/High-CXCL10 HGSOC Prognostic Fingerprint",
+      "attributes": {
+        "what_it_does": "Binary, platform-portable transcriptional fingerprint (FAP below and CXCL10 above within-cohort means) that marks a favorable-overall-survival HGSOC subgroup (24.4% of patients).",
+        "evidence_tier": "computational_retrospective_prognostic",
+        "ruo": true,
+        "validated_on": "MetaGxOvarian 16 pooled cohorts n=2446: cohort-stratified Cox HR=0.7208 (95% CI 0.6282-0.8270, p=3.05e-6); per-cohort 11/16 concordant (Stouffer z=2.32, p=0.0202)",
+        "cannot_do": "PROGNOSTIC ONLY, NOT PREDICTIVE. Does not predict response to any specific therapy. External validation on GSE32062 DID NOT HOLD (logrank p=0.929). Selection use requires prospective, treatment-stratified testing on the intended endpoint."
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md"
+    },
+    {
+      "id": "capability:pub_timing_engine",
+      "type": "capability",
+      "label": "Capability",
+      "name": "Configurable Ovarian Treatment-Timing Engine (PFI)",
+      "attributes": {
+        "what_it_does": "Standardizes platinum-free-interval (PFI) and treatment-timing computation from structured treatment history using explicit operational definitions, enabling consistent platinum-sensitivity categorization.",
+        "evidence_tier": "internal_verification_plus_inconclusive_external",
+        "ruo": true,
+        "validated_on": "Internal 95.6% exact-day agreement (262/274) vs Villalobos TCGA-OV; external vs ARIEL3 (n=375) distributions not different (chi2 p=0.12) but TOST equivalence narrowly missed (p=0.073)",
+        "cannot_do": "Internal verification confirms algorithmic CONSISTENCY, not clinical validity. External equivalence is INCONCLUSIVE (underpowered), NOT a positive equivalence result. Not a clinical decision system."
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/MANUSCRIPT_DRAFT.md"
+    },
+    {
+      "id": "validation_result:hgsoc_pooled_cox_positive",
+      "type": "validation_result",
+      "label": "ValidationResult",
+      "name": "HGSOC fingerprint pooled Cox (POSITIVE, discovery)",
+      "attributes": {
+        "validation_kind": "pooled_discovery",
+        "statistic": "HR=0.7208, 95% CI 0.6282-0.8270, p=3.0499e-6, n=2446, 16 cohorts",
+        "validation_holds": true,
+        "reproduced_in_session": true
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "validation_result:hgsoc_percohort_meta",
+      "type": "validation_result",
+      "label": "ValidationResult",
+      "name": "HGSOC per-cohort meta-analysis (concordant)",
+      "attributes": {
+        "validation_kind": "per_cohort_meta",
+        "statistic": "11/16 cohorts FAVORABLE; Stouffer z=2.3219, two-sided p=0.0202; sign-test p=0.1051 (n.s.)",
+        "validation_holds": true,
+        "reproduced_in_session": true
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_26cohort_fingerprint_validation_summary.json"
+    },
+    {
+      "id": "validation_result:hgsoc_gse32062_negative",
+      "type": "validation_result",
+      "label": "ValidationResult",
+      "name": "HGSOC fingerprint GSE32062 external validation (NEGATIVE)",
+      "attributes": {
+        "validation_kind": "external_holdout",
+        "statistic": "Tiered OS separation logrank p=0.9292; validation_holds=FALSE; discovery thresholds (not refit); n=260 GPL6480",
+        "validation_holds": false,
+        "reproduced_in_session": true
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/data/validation_manifest.json"
+    },
+    {
+      "id": "validation_result:timing_internal_villalobos",
+      "type": "validation_result",
+      "label": "ValidationResult",
+      "name": "Timing engine internal verification vs Villalobos TCGA-OV",
+      "attributes": {
+        "validation_kind": "internal_verification",
+        "statistic": "95.6% exact-day agreement (262/274; 95% CI 92.5-97.5%); category agreement 98.9% (262/265)",
+        "validation_holds": true,
+        "reproduced_in_session": true
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/supplementary/statistics_summary.txt"
+    },
+    {
+      "id": "validation_result:timing_ariel3_inconclusive",
+      "type": "validation_result",
+      "label": "ValidationResult",
+      "name": "Timing engine external validation vs ARIEL3 (INCONCLUSIVE)",
+      "attributes": {
+        "validation_kind": "external_validation",
+        "statistic": "PFI distributions not statistically different (chi2 p=0.12); TOST equivalence +/-10pp narrowly missed (p=0.073); 4.5pp diff below 8pp power threshold",
+        "validation_holds": null,
+        "reproduced_in_session": false
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/MANUSCRIPT_DRAFT.md"
+    },
+    {
+      "id": "validation_result:spe_llm_benchmark",
+      "type": "validation_result",
+      "label": "ValidationResult",
+      "name": "SPE vs LLM PK-reasoning benchmark",
+      "attributes": {
+        "validation_kind": "computational_benchmark",
+        "statistic": "Cohere command-r-08-2024: 36% verdict accuracy (5/14); missed 3/6 impossible; falsely rejected 6/8 viable; fabricated PK params 100% of queries; SPE deterministic <1ms",
+        "validation_holds": true,
+        "reproduced_in_session": false
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/MANUSCRIPT.md"
+    },
+    {
+      "id": "outcome:hgsoc_fingerprint_hr",
+      "type": "outcome_metric",
+      "label": "OutcomeMetric",
+      "name": "HGSOC low-FAP/high-CXCL10 fingerprint OS HR=0.7208 (95% CI 0.6282-0.8270, p=3.05e-6)",
+      "attributes": {},
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "outcome:hgsoc_stouffer",
+      "type": "outcome_metric",
+      "label": "OutcomeMetric",
+      "name": "HGSOC per-cohort Stouffer z=2.3219, two-sided p=0.0202 (11/16 favorable)",
+      "attributes": {},
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_26cohort_fingerprint_validation_summary.json"
+    },
+    {
+      "id": "outcome:timing_exact_day_agreement",
+      "type": "outcome_metric",
+      "label": "OutcomeMetric",
+      "name": "Timing engine 95.6% exact-day PFI agreement (262/274) vs Villalobos",
+      "attributes": {},
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/supplementary/statistics_summary.txt"
+    },
+    {
+      "id": "outcome:spe_llm_accuracy",
+      "type": "outcome_metric",
+      "label": "OutcomeMetric",
+      "name": "LLM PK-reasoning 36% verdict accuracy (5/14) vs SPE deterministic",
+      "attributes": {},
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/MANUSCRIPT.md"
+    },
+    {
+      "id": "drug:spe_metformin",
+      "type": "drug",
+      "label": "Drug",
+      "name": "Metformin (SPE PASS, gap 0.08x)",
+      "attributes": {
+        "ic50_uM": 1.0,
+        "cmax_uM": 12.0,
+        "ppb": 0.0,
+        "free_cmax_uM": 12.0,
+        "gap_ratio": 0.08,
+        "spe_verdict": "PASS",
+        "context": "HGSOC drug-repurposing feasibility panel"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py"
+    },
+    {
+      "id": "drug:spe_mebendazole",
+      "type": "drug",
+      "label": "Drug",
+      "name": "Mebendazole (SPE CONDITIONAL, gap 6.7x)",
+      "attributes": {
+        "ic50_uM": 0.1,
+        "cmax_uM": 0.3,
+        "ppb": 0.95,
+        "free_cmax_uM": 0.015,
+        "gap_ratio": 6.7,
+        "spe_verdict": "CONDITIONAL",
+        "context": "HGSOC drug-repurposing feasibility panel"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py"
+    },
+    {
+      "id": "drug:spe_disulfiram",
+      "type": "drug",
+      "label": "Drug",
+      "name": "Disulfiram (SPE CONDITIONAL, gap 8.3x)",
+      "attributes": {
+        "ic50_uM": 0.5,
+        "cmax_uM": 1.5,
+        "ppb": 0.96,
+        "free_cmax_uM": 0.06,
+        "gap_ratio": 8.3,
+        "spe_verdict": "CONDITIONAL",
+        "context": "HGSOC drug-repurposing feasibility panel"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py"
+    },
+    {
+      "id": "drug:spe_hydroxychloroquine",
+      "type": "drug",
+      "label": "Drug",
+      "name": "Hydroxychloroquine (SPE CONDITIONAL, gap 13.3x)",
+      "attributes": {
+        "ic50_uM": 10.0,
+        "cmax_uM": 1.5,
+        "ppb": 0.5,
+        "free_cmax_uM": 0.75,
+        "gap_ratio": 13.3,
+        "spe_verdict": "CONDITIONAL",
+        "context": "HGSOC drug-repurposing feasibility panel"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py"
+    },
+    {
+      "id": "drug:spe_artesunate",
+      "type": "drug",
+      "label": "Drug",
+      "name": "Artesunate (SPE CONDITIONAL, gap 8.3x)",
+      "attributes": {
+        "ic50_uM": 5.0,
+        "cmax_uM": 3.0,
+        "ppb": 0.8,
+        "free_cmax_uM": 0.6,
+        "gap_ratio": 8.3,
+        "spe_verdict": "CONDITIONAL",
+        "context": "HGSOC drug-repurposing feasibility panel"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py"
+    },
+    {
+      "id": "drug:spe_niclosamide",
+      "type": "drug",
+      "label": "Drug",
+      "name": "Niclosamide (SPE FAIL, gap 285.7x)",
+      "attributes": {
+        "ic50_uM": 0.5,
+        "cmax_uM": 0.035,
+        "ppb": 0.95,
+        "free_cmax_uM": 0.00175,
+        "gap_ratio": 285.7,
+        "spe_verdict": "FAIL",
+        "context": "HGSOC drug-repurposing feasibility panel"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py"
+    },
+    {
+      "id": "drug:spe_ivermectin",
+      "type": "drug",
+      "label": "Drug",
+      "name": "Ivermectin (SPE FAIL, gap 250.0x)",
+      "attributes": {
+        "ic50_uM": 5.0,
+        "cmax_uM": 0.28,
+        "ppb": 0.93,
+        "free_cmax_uM": 0.02,
+        "gap_ratio": 250.0,
+        "spe_verdict": "FAIL",
+        "context": "HGSOC drug-repurposing feasibility panel"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py"
+    },
+    {
+      "id": "drug:spe_itraconazole",
+      "type": "drug",
+      "label": "Drug",
+      "name": "Itraconazole (SPE FAIL, gap 150.0x)",
+      "attributes": {
+        "ic50_uM": 1.5,
+        "cmax_uM": 2.0,
+        "ppb": 0.995,
+        "free_cmax_uM": 0.01,
+        "gap_ratio": 150.0,
+        "spe_verdict": "FAIL",
+        "context": "HGSOC drug-repurposing feasibility panel"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py"
+    },
+    {
+      "id": "drug:spe_simvastatin",
+      "type": "drug",
+      "label": "Drug",
+      "name": "Simvastatin (SPE FAIL, gap 5882.0x)",
+      "attributes": {
+        "ic50_uM": 10.0,
+        "cmax_uM": 0.034,
+        "ppb": 0.95,
+        "free_cmax_uM": 0.0017,
+        "gap_ratio": 5882.0,
+        "spe_verdict": "FAIL",
+        "context": "HGSOC drug-repurposing feasibility panel"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py"
+    },
+    {
+      "id": "drug:spe_salinomycin",
+      "type": "drug",
+      "label": "Drug",
+      "name": "Salinomycin (SPE INSUFFICIENT)",
+      "attributes": {
+        "ic50_uM": 0.5,
+        "cmax_uM": null,
+        "ppb": null,
+        "free_cmax_uM": null,
+        "gap_ratio": null,
+        "spe_verdict": "INSUFFICIENT",
+        "context": "HGSOC drug-repurposing feasibility panel"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py"
+    },
+    {
+      "id": "gene:fap",
+      "type": "gene",
+      "label": "Gene",
+      "name": "FAP",
+      "attributes": {
+        "role_in_fingerprint": "fibroblast activation protein; activated-CAF marker; high FAP = poor prognosis (adverse axis)"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md"
+    },
+    {
+      "id": "gene:cxcl10",
+      "type": "gene",
+      "label": "Gene",
+      "name": "CXCL10",
+      "attributes": {
+        "role_in_fingerprint": "CXCR3 ligand; T-cell-inflamed/interferon-gamma axis (favorable axis)"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md"
+    },
+    {
+      "id": "biomarker:hgsoc_fap_cxcl10_fingerprint",
+      "type": "biomarker",
+      "label": "Biomarker",
+      "name": "Low-FAP/high-CXCL10 binary transcriptional fingerprint (24.4% of HGSOC)",
+      "attributes": {
+        "definition": "FAP_z<0 AND CXCL10_z>0",
+        "prevalence": "24.4% (596/2446)",
+        "tier": "prognostic_not_predictive"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md"
+    },
+    {
+      "id": "analysis_artifact:hgsoc_pooled_patient_level",
+      "type": "analysis_artifact",
+      "label": "AnalysisArtifact",
+      "name": "HGSOC pooled patient-level data (2446 patients x 7 cols, fingerprint computed)",
+      "attributes": {
+        "reproduced_in_session": true,
+        "dependency": "self_contained"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_patient_level.csv"
+    },
+    {
+      "id": "analysis_artifact:hgsoc_percohort_validation",
+      "type": "analysis_artifact",
+      "label": "AnalysisArtifact",
+      "name": "HGSOC per-cohort validation table (16 cohorts, direction + logrank_p)",
+      "attributes": {
+        "reproduced_in_session": true,
+        "dependency": "self_contained"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_26cohort_fingerprint_validation.csv"
+    },
+    {
+      "id": "analysis_artifact:spe_drug_panel",
+      "type": "analysis_artifact",
+      "label": "AnalysisArtifact",
+      "name": "SPE 10-drug feasibility panel (IC50/Cmax/PPB/gap/verdict)",
+      "attributes": {
+        "reproduced_in_session": true,
+        "dependency": "self_contained"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py"
+    },
+    {
+      "id": "analysis_artifact:timing_confusion_matrix",
+      "type": "analysis_artifact",
+      "label": "AnalysisArtifact",
+      "name": "Timing engine confusion matrix + boundary tables",
+      "attributes": {
+        "reproduced_in_session": true,
+        "dependency": "self_contained_precomputed"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/tables/table3_confusion.csv"
+    },
+    {
+      "id": "analysis_artifact:timing_reproduce_script",
+      "type": "analysis_artifact",
+      "label": "AnalysisArtifact",
+      "name": "Timing engine reproduce_all.py (raw re-run needs external Villalobos xlsx)",
+      "attributes": {
+        "reproduced_in_session": false,
+        "dependency": "external_path_not_shipped"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/scripts/reproduce_all.py"
+    },
+    {
+      "id": "cohort:metagx_e_mtab_386",
+      "type": "patient_cohort",
+      "label": "PatientCohort",
+      "name": "MetaGxOvarian cohort E.MTAB.386 (n=129)",
+      "attributes": {
+        "n_patients": 129,
+        "dataset": "MetaGxOvarian"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "cohort:metagx_gse13876",
+      "type": "patient_cohort",
+      "label": "PatientCohort",
+      "name": "MetaGxOvarian cohort GSE13876 (n=157)",
+      "attributes": {
+        "n_patients": 157,
+        "dataset": "MetaGxOvarian"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "cohort:metagx_gse14764",
+      "type": "patient_cohort",
+      "label": "PatientCohort",
+      "name": "MetaGxOvarian cohort GSE14764 (n=79)",
+      "attributes": {
+        "n_patients": 79,
+        "dataset": "MetaGxOvarian"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "cohort:metagx_gse17260",
+      "type": "patient_cohort",
+      "label": "PatientCohort",
+      "name": "MetaGxOvarian cohort GSE17260 (n=110)",
+      "attributes": {
+        "n_patients": 110,
+        "dataset": "MetaGxOvarian"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "cohort:metagx_gse18520",
+      "type": "patient_cohort",
+      "label": "PatientCohort",
+      "name": "MetaGxOvarian cohort GSE18520 (n=53)",
+      "attributes": {
+        "n_patients": 53,
+        "dataset": "MetaGxOvarian"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "cohort:metagx_gse26712",
+      "type": "patient_cohort",
+      "label": "PatientCohort",
+      "name": "MetaGxOvarian cohort GSE26712 (n=185)",
+      "attributes": {
+        "n_patients": 185,
+        "dataset": "MetaGxOvarian"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "cohort:metagx_gse30161",
+      "type": "patient_cohort",
+      "label": "PatientCohort",
+      "name": "MetaGxOvarian cohort GSE30161 (n=58)",
+      "attributes": {
+        "n_patients": 58,
+        "dataset": "MetaGxOvarian"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "cohort:metagx_gse32062",
+      "type": "patient_cohort",
+      "label": "PatientCohort",
+      "name": "MetaGxOvarian cohort GSE32062 (n=257)",
+      "attributes": {
+        "n_patients": 257,
+        "dataset": "MetaGxOvarian"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "cohort:metagx_gse32063",
+      "type": "patient_cohort",
+      "label": "PatientCohort",
+      "name": "MetaGxOvarian cohort GSE32063 (n=40)",
+      "attributes": {
+        "n_patients": 40,
+        "dataset": "MetaGxOvarian"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "cohort:metagx_gse49997",
+      "type": "patient_cohort",
+      "label": "PatientCohort",
+      "name": "MetaGxOvarian cohort GSE49997 (n=194)",
+      "attributes": {
+        "n_patients": 194,
+        "dataset": "MetaGxOvarian"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "cohort:metagx_gse51088",
+      "type": "patient_cohort",
+      "label": "PatientCohort",
+      "name": "MetaGxOvarian cohort GSE51088 (n=152)",
+      "attributes": {
+        "n_patients": 152,
+        "dataset": "MetaGxOvarian"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "cohort:metagx_gse8842",
+      "type": "patient_cohort",
+      "label": "PatientCohort",
+      "name": "MetaGxOvarian cohort GSE8842 (n=83)",
+      "attributes": {
+        "n_patients": 83,
+        "dataset": "MetaGxOvarian"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "cohort:metagx_gse9891",
+      "type": "patient_cohort",
+      "label": "PatientCohort",
+      "name": "MetaGxOvarian cohort GSE9891 (n=269)",
+      "attributes": {
+        "n_patients": 269,
+        "dataset": "MetaGxOvarian"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "cohort:metagx_pmid17290060",
+      "type": "patient_cohort",
+      "label": "PatientCohort",
+      "name": "MetaGxOvarian cohort PMID17290060 (n=117)",
+      "attributes": {
+        "n_patients": 117,
+        "dataset": "MetaGxOvarian"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "cohort:metagx_pmid19318476",
+      "type": "patient_cohort",
+      "label": "PatientCohort",
+      "name": "MetaGxOvarian cohort PMID19318476 (n=42)",
+      "attributes": {
+        "n_patients": 42,
+        "dataset": "MetaGxOvarian"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "cohort:metagx_tcgaovarian",
+      "type": "patient_cohort",
+      "label": "PatientCohort",
+      "name": "MetaGxOvarian cohort TCGAOVARIAN (n=521)",
+      "attributes": {
+        "n_patients": 521,
+        "dataset": "MetaGxOvarian"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json"
+    },
+    {
+      "id": "cohort:gse32062_holdout",
+      "type": "patient_cohort",
+      "label": "PatientCohort",
+      "name": "GSE32062 external holdout (n=260, GPL6480) \u2014 fingerprint did NOT validate",
+      "attributes": {
+        "n_patients": 260,
+        "platform": "GPL6480",
+        "validation_holds": false
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/data/validation_manifest.json"
+    },
+    {
+      "id": "governance_item:pub_spe_not_efficacy",
+      "type": "governance_item",
+      "label": "GovernanceItem",
+      "name": "SPE gap-ratio is a FEASIBILITY pre-filter, NOT efficacy proof",
+      "attributes": {
+        "guardrail_text": "A PASS verdict means cytotoxic free plasma concentration is physically achievable at tolerated dose; it does NOT mean the drug is efficacious. A FAIL rules out a candidate on exposure grounds only. SPE must never be cited as evidence a drug works.",
+        "scope": [
+          "capability:pub_spe_gate"
+        ]
+      },
+      "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)"
+    },
+    {
+      "id": "governance_item:pub_hgsoc_prognostic_not_predictive",
+      "type": "governance_item",
+      "label": "GovernanceItem",
+      "name": "HGSOC fingerprint is PROGNOSTIC, not PREDICTIVE",
+      "attributes": {
+        "guardrail_text": "HR=0.7208 describes survival under heterogeneous standard-of-care. It does NOT predict response to any specific therapy. Any patient-selection or treatment-assignment claim requires prospective, treatment-stratified validation on the intended endpoint. Never state the fingerprint 'predicts response' or 'selects patients for [drug]'.",
+        "scope": [
+          "capability:pub_hgsoc_fingerprint"
+        ]
+      },
+      "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)"
+    },
+    {
+      "id": "governance_item:pub_hgsoc_external_fails",
+      "type": "governance_item",
+      "label": "GovernanceItem",
+      "name": "HGSOC fingerprint external validation on GSE32062 DID NOT HOLD",
+      "attributes": {
+        "guardrail_text": "GSE32062 tiered OS separation was non-significant (logrank p=0.929, validation_holds=false) using transferred discovery thresholds. The favorable-survival claim is a pooled-discovery finding awaiting successful external replication; do not present it as externally validated.",
+        "scope": [
+          "capability:pub_hgsoc_fingerprint"
+        ]
+      },
+      "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)"
+    },
+    {
+      "id": "governance_item:pub_timing_internal_not_clinical",
+      "type": "governance_item",
+      "label": "GovernanceItem",
+      "name": "Timing engine internal verification = CONSISTENCY, not clinical validity",
+      "attributes": {
+        "guardrail_text": "95.6% exact-day agreement confirms the engine reproduces a reference PFI derivation (algorithmic consistency). It is NOT evidence of clinical validity or outcome prediction. The ARIEL3 external comparison is equivalence-INCONCLUSIVE (TOST p=0.073, underpowered), NOT a positive equivalence result.",
+        "scope": [
+          "capability:pub_timing_engine"
+        ]
+      },
+      "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)"
+    },
+    {
+      "id": "governance_item:pub_ruo_all",
+      "type": "governance_item",
+      "label": "GovernanceItem",
+      "name": "Publication-derived capabilities are Research Use Only (RUO)",
+      "attributes": {
+        "guardrail_text": "The HGSOC fingerprint and timing engine are computational/retrospective and RUO; they are not clinical decision support and do not predict individual patient outcomes. RUO is a disclosure of evidence status, not a refusal to state the (cited, reproduced) quantitative findings.",
+        "scope": [
+          "capability:pub_hgsoc_fingerprint",
+          "capability:pub_timing_engine"
+        ]
+      },
+      "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)"
+    },
+    {
+      "id": "governance_item:pub_no_tier_inflation",
+      "type": "governance_item",
+      "label": "GovernanceItem",
+      "name": "No evidence-tier inflation across publication capabilities",
+      "attributes": {
+        "guardrail_text": "Internal verification != external validation. Descriptive/retrospective subgroup separation != out-of-sample prediction. A failing or inconclusive validation must travel with the capability. Ingested benchmark/trial figures with reproduced=false must be labeled as reported, not re-derived.",
+        "scope": [
+          "capability:pub_spe_gate",
+          "capability:pub_hgsoc_fingerprint",
+          "capability:pub_timing_engine"
+        ]
+      },
+      "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)"
+    },
+    {
+      "id": "citation:10_1038_nrd_2018_168",
+      "type": "evidence_citation",
+      "label": "EvidenceCitation",
+      "name": "Drug repurposing: progress, challenges and recommendations",
+      "attributes": {
+        "doi": "10.1038/nrd.2018.168",
+        "year": "2019",
+        "bibtex_key": "pushpakom2019"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib"
+    },
+    {
+      "id": "citation:10_1038_nrd3287",
+      "type": "evidence_citation",
+      "label": "EvidenceCitation",
+      "name": "The effect of plasma protein binding on in vivo efficacy: misconceptions in drug discovery",
+      "attributes": {
+        "doi": "10.1038/nrd3287",
+        "year": "2010",
+        "bibtex_key": "smith2010"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib"
+    },
+    {
+      "id": "citation:10_1067_mcp_2002_121829",
+      "type": "evidence_citation",
+      "label": "EvidenceCitation",
+      "name": "Changes in plasma protein binding have little clinical relevance",
+      "attributes": {
+        "doi": "10.1067/mcp.2002.121829",
+        "year": "2002",
+        "bibtex_key": "benet2002"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib"
+    },
+    {
+      "id": "citation:10_1145_3571730",
+      "type": "evidence_citation",
+      "label": "EvidenceCitation",
+      "name": "Survey of hallucination in natural language generation",
+      "attributes": {
+        "doi": "10.1145/3571730",
+        "year": "2023",
+        "bibtex_key": "ji2023"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib"
+    },
+    {
+      "id": "citation:pmid22495656",
+      "type": "evidence_citation",
+      "label": "EvidenceCitation",
+      "name": "Ivermectin anti-cancer activity in vitro",
+      "attributes": {
+        "doi": null,
+        "year": "2012",
+        "bibtex_key": "pmid22495656"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib"
+    },
+    {
+      "id": "citation:10_1016_j_taap_2022_116073",
+      "type": "evidence_citation",
+      "label": "EvidenceCitation",
+      "name": "Ivermectin-induced cell death of cervical cancer cells in vitro a consequence of precipitate formation in culture media",
+      "attributes": {
+        "doi": "10.1016/j.taap.2022.116073",
+        "year": "2022",
+        "bibtex_key": "binqabbus2022"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib"
+    },
+    {
+      "id": "citation:10_1021_acs_jmedchem_5c01610",
+      "type": "evidence_citation",
+      "label": "EvidenceCitation",
+      "name": "Membrane perturbations and assay interferences by ivermectin explain its in vitro SARS-CoV-2 antiviral activities and la",
+      "attributes": {
+        "doi": "10.1021/acs.jmedchem.5c01610",
+        "year": "2025",
+        "bibtex_key": "eastman2025"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib"
+    },
+    {
+      "id": "citation:bonovas2020",
+      "type": "evidence_citation",
+      "label": "EvidenceCitation",
+      "name": "Statin use and risk of cancer: epidemiologic evidence",
+      "attributes": {
+        "doi": null,
+        "year": "2020",
+        "bibtex_key": "bonovas2020"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib"
+    },
+    {
+      "id": "citation:10_1172_jci_insight_133247",
+      "type": "evidence_citation",
+      "label": "EvidenceCitation",
+      "name": "Phase II clinical trial of metformin as a cancer stem cell-targeting agent in ovarian cancer",
+      "attributes": {
+        "doi": "10.1172/jci.insight.133247",
+        "year": "2020",
+        "bibtex_key": "brown2020"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib"
+    },
+    {
+      "id": "citation:10_1016_j_ygyno_2025_02_001",
+      "type": "evidence_citation",
+      "label": "EvidenceCitation",
+      "name": "Metformin for patients with advanced stage ovarian cancer: A randomized phase II placebo-controlled trial",
+      "attributes": {
+        "doi": "10.1016/j.ygyno.2025.02.001",
+        "year": "2025",
+        "bibtex_key": "romero2025"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib"
+    },
+    {
+      "id": "citation:10_1016_j_ygyno_2025_01_010",
+      "type": "evidence_citation",
+      "label": "EvidenceCitation",
+      "name": "High prevalence of FAP+ cancer-associated fibroblasts predicts poor outcome in patients with high-grade serous ovarian c",
+      "attributes": {
+        "doi": "10.1016/j.ygyno.2025.01.010",
+        "year": "2025",
+        "bibtex_key": "corvigno2025fap"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/references.bib"
+    },
+    {
+      "id": "citation:10_1186_s12885-020-07541-6",
+      "type": "evidence_citation",
+      "label": "EvidenceCitation",
+      "name": "High expression of fibroblast activation protein (FAP) predicts poor outcome in high-grade serous ovarian cancer",
+      "attributes": {
+        "doi": "10.1186/s12885-020-07541-6",
+        "year": "2020",
+        "bibtex_key": "li2020fap"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/references.bib"
+    },
+    {
+      "id": "citation:10_1186_s13643-025-02929-6",
+      "type": "evidence_citation",
+      "label": "EvidenceCitation",
+      "name": "Predicting fibroblast activation protein overexpression in the overall survival rate of cancer patients: a systematic re",
+      "attributes": {
+        "doi": "10.1186/s13643-025-02929-6",
+        "year": "2025",
+        "bibtex_key": "janani2025fap"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/references.bib"
+    },
+    {
+      "id": "citation:10_1084_jem_20191094",
+      "type": "evidence_citation",
+      "label": "EvidenceCitation",
+      "name": "Distinct fibroblast functional states drive clinical outcomes in ovarian cancer and are regulated by TCF21",
+      "attributes": {
+        "doi": "10.1084/jem.20191094",
+        "year": "2020",
+        "bibtex_key": "hussain2020tcf21"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/references.bib"
+    },
+    {
+      "id": "citation:10_1007_s00262-024-03761-y",
+      "type": "evidence_citation",
+      "label": "EvidenceCitation",
+      "name": "Tumor-intrinsic IFN-alpha and CXCL10 are critical for immunotherapeutic efficacy by recruiting and activating T lymphocy",
+      "attributes": {
+        "doi": "10.1007/s00262-024-03761-y",
+        "year": "2024",
+        "bibtex_key": "cheng2024cxcl10"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/references.bib"
+    },
+    {
+      "id": "citation:10_3389_fimmu_2021_690201",
+      "type": "evidence_citation",
+      "label": "EvidenceCitation",
+      "name": "Infiltration by CXCL10 secreting macrophages is associated with antitumor immunity and response to therapy in ovarian ca",
+      "attributes": {
+        "doi": "10.3389/fimmu.2021.690201",
+        "year": "2021",
+        "bibtex_key": "ardighieri2021cxcl10"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/references.bib"
+    },
+    {
+      "id": "citation:10_1038_s41598-025-12693-1",
+      "type": "evidence_citation",
+      "label": "EvidenceCitation",
+      "name": "CXCL10-induced regulatory T cells and adenosine signaling promote immunosuppression and progression of epithelial ovaria",
+      "attributes": {
+        "doi": "10.1038/s41598-025-12693-1",
+        "year": "2025",
+        "bibtex_key": "lin2025cxcl10"
+      },
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/references.bib"
+    }
+  ],
+  "edges": [
+    {
+      "predicate": "demonstrates",
+      "rel": "DEMONSTRATES",
+      "src": "publication:spe_feasibility_gate",
+      "dst": "capability:pub_spe_gate",
+      "evidence": "publication:spe_feasibility_gate demonstrates capability:pub_spe_gate"
+    },
+    {
+      "predicate": "demonstrates",
+      "rel": "DEMONSTRATES",
+      "src": "publication:hgsoc_fap_cxcl10_subgroup",
+      "dst": "capability:pub_hgsoc_fingerprint",
+      "evidence": "publication:hgsoc_fap_cxcl10_subgroup demonstrates capability:pub_hgsoc_fingerprint"
+    },
+    {
+      "predicate": "demonstrates",
+      "rel": "DEMONSTRATES",
+      "src": "publication:timing_engine",
+      "dst": "capability:pub_timing_engine",
+      "evidence": "publication:timing_engine demonstrates capability:pub_timing_engine"
+    },
+    {
+      "predicate": "validated_by",
+      "rel": "VALIDATED_BY",
+      "src": "capability:pub_hgsoc_fingerprint",
+      "dst": "validation_result:hgsoc_pooled_cox_positive",
+      "evidence": "capability:pub_hgsoc_fingerprint supported by validation_result:hgsoc_pooled_cox_positive"
+    },
+    {
+      "predicate": "validated_by",
+      "rel": "VALIDATED_BY",
+      "src": "capability:pub_hgsoc_fingerprint",
+      "dst": "validation_result:hgsoc_percohort_meta",
+      "evidence": "capability:pub_hgsoc_fingerprint supported by validation_result:hgsoc_percohort_meta"
+    },
+    {
+      "predicate": "limits",
+      "rel": "LIMITS",
+      "src": "validation_result:hgsoc_gse32062_negative",
+      "dst": "capability:pub_hgsoc_fingerprint",
+      "evidence": "validation_result:hgsoc_gse32062_negative LIMITS claims for capability:pub_hgsoc_fingerprint (holds=False)"
+    },
+    {
+      "predicate": "validated_by",
+      "rel": "VALIDATED_BY",
+      "src": "capability:pub_timing_engine",
+      "dst": "validation_result:timing_internal_villalobos",
+      "evidence": "capability:pub_timing_engine supported by validation_result:timing_internal_villalobos"
+    },
+    {
+      "predicate": "limits",
+      "rel": "LIMITS",
+      "src": "validation_result:timing_ariel3_inconclusive",
+      "dst": "capability:pub_timing_engine",
+      "evidence": "validation_result:timing_ariel3_inconclusive LIMITS claims for capability:pub_timing_engine (holds=None)"
+    },
+    {
+      "predicate": "validated_by",
+      "rel": "VALIDATED_BY",
+      "src": "capability:pub_spe_gate",
+      "dst": "validation_result:spe_llm_benchmark",
+      "evidence": "capability:pub_spe_gate supported by validation_result:spe_llm_benchmark"
+    },
+    {
+      "predicate": "reports",
+      "rel": "REPORTS",
+      "src": "capability:pub_hgsoc_fingerprint",
+      "dst": "outcome:hgsoc_fingerprint_hr",
+      "evidence": "capability:pub_hgsoc_fingerprint reports outcome:hgsoc_fingerprint_hr"
+    },
+    {
+      "predicate": "reports",
+      "rel": "REPORTS",
+      "src": "capability:pub_hgsoc_fingerprint",
+      "dst": "outcome:hgsoc_stouffer",
+      "evidence": "capability:pub_hgsoc_fingerprint reports outcome:hgsoc_stouffer"
+    },
+    {
+      "predicate": "reports",
+      "rel": "REPORTS",
+      "src": "capability:pub_timing_engine",
+      "dst": "outcome:timing_exact_day_agreement",
+      "evidence": "capability:pub_timing_engine reports outcome:timing_exact_day_agreement"
+    },
+    {
+      "predicate": "reports",
+      "rel": "REPORTS",
+      "src": "capability:pub_spe_gate",
+      "dst": "outcome:spe_llm_accuracy",
+      "evidence": "capability:pub_spe_gate reports outcome:spe_llm_accuracy"
+    },
+    {
+      "predicate": "serves",
+      "rel": "SERVES",
+      "src": "capability:pub_spe_gate",
+      "dst": "drug:spe_metformin",
+      "evidence": "SPE gate classifies Metformin as PASS"
+    },
+    {
+      "predicate": "serves",
+      "rel": "SERVES",
+      "src": "capability:pub_spe_gate",
+      "dst": "drug:spe_mebendazole",
+      "evidence": "SPE gate classifies Mebendazole as CONDITIONAL"
+    },
+    {
+      "predicate": "serves",
+      "rel": "SERVES",
+      "src": "capability:pub_spe_gate",
+      "dst": "drug:spe_disulfiram",
+      "evidence": "SPE gate classifies Disulfiram as CONDITIONAL"
+    },
+    {
+      "predicate": "serves",
+      "rel": "SERVES",
+      "src": "capability:pub_spe_gate",
+      "dst": "drug:spe_hydroxychloroquine",
+      "evidence": "SPE gate classifies Hydroxychloroquine as CONDITIONAL"
+    },
+    {
+      "predicate": "serves",
+      "rel": "SERVES",
+      "src": "capability:pub_spe_gate",
+      "dst": "drug:spe_artesunate",
+      "evidence": "SPE gate classifies Artesunate as CONDITIONAL"
+    },
+    {
+      "predicate": "serves",
+      "rel": "SERVES",
+      "src": "capability:pub_spe_gate",
+      "dst": "drug:spe_niclosamide",
+      "evidence": "SPE gate classifies Niclosamide as FAIL"
+    },
+    {
+      "predicate": "serves",
+      "rel": "SERVES",
+      "src": "capability:pub_spe_gate",
+      "dst": "drug:spe_ivermectin",
+      "evidence": "SPE gate classifies Ivermectin as FAIL"
+    },
+    {
+      "predicate": "serves",
+      "rel": "SERVES",
+      "src": "capability:pub_spe_gate",
+      "dst": "drug:spe_itraconazole",
+      "evidence": "SPE gate classifies Itraconazole as FAIL"
+    },
+    {
+      "predicate": "serves",
+      "rel": "SERVES",
+      "src": "capability:pub_spe_gate",
+      "dst": "drug:spe_simvastatin",
+      "evidence": "SPE gate classifies Simvastatin as FAIL"
+    },
+    {
+      "predicate": "serves",
+      "rel": "SERVES",
+      "src": "capability:pub_spe_gate",
+      "dst": "drug:spe_salinomycin",
+      "evidence": "SPE gate classifies Salinomycin as INSUFFICIENT"
+    },
+    {
+      "predicate": "implements",
+      "rel": "IMPLEMENTS",
+      "src": "capability:pub_hgsoc_fingerprint",
+      "dst": "biomarker:hgsoc_fap_cxcl10_fingerprint",
+      "evidence": "capability implemented via the fingerprint biomarker"
+    },
+    {
+      "predicate": "mechanism_edge",
+      "rel": "MECHANISM_EDGE",
+      "src": "gene:fap",
+      "dst": "biomarker:hgsoc_fap_cxcl10_fingerprint",
+      "evidence": "FAP (low) component of fingerprint"
+    },
+    {
+      "predicate": "mechanism_edge",
+      "rel": "MECHANISM_EDGE",
+      "src": "gene:cxcl10",
+      "dst": "biomarker:hgsoc_fap_cxcl10_fingerprint",
+      "evidence": "CXCL10 (high) component of fingerprint"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "capability:pub_hgsoc_fingerprint",
+      "dst": "analysis_artifact:hgsoc_pooled_patient_level",
+      "evidence": "capability:pub_hgsoc_fingerprint derived_from artifact analysis_artifact:hgsoc_pooled_patient_level (reproduced=True)"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "capability:pub_hgsoc_fingerprint",
+      "dst": "analysis_artifact:hgsoc_percohort_validation",
+      "evidence": "capability:pub_hgsoc_fingerprint derived_from artifact analysis_artifact:hgsoc_percohort_validation (reproduced=True)"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "capability:pub_spe_gate",
+      "dst": "analysis_artifact:spe_drug_panel",
+      "evidence": "capability:pub_spe_gate derived_from artifact analysis_artifact:spe_drug_panel (reproduced=True)"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "capability:pub_timing_engine",
+      "dst": "analysis_artifact:timing_confusion_matrix",
+      "evidence": "capability:pub_timing_engine derived_from artifact analysis_artifact:timing_confusion_matrix (reproduced=True)"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "capability:pub_timing_engine",
+      "dst": "analysis_artifact:timing_reproduce_script",
+      "evidence": "capability:pub_timing_engine derived_from artifact analysis_artifact:timing_reproduce_script (reproduced=False)"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "analysis_artifact:hgsoc_pooled_patient_level",
+      "dst": "cohort:metagx_e_mtab_386",
+      "evidence": "pooled analysis includes cohort E.MTAB.386"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "analysis_artifact:hgsoc_pooled_patient_level",
+      "dst": "cohort:metagx_gse13876",
+      "evidence": "pooled analysis includes cohort GSE13876"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "analysis_artifact:hgsoc_pooled_patient_level",
+      "dst": "cohort:metagx_gse14764",
+      "evidence": "pooled analysis includes cohort GSE14764"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "analysis_artifact:hgsoc_pooled_patient_level",
+      "dst": "cohort:metagx_gse17260",
+      "evidence": "pooled analysis includes cohort GSE17260"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "analysis_artifact:hgsoc_pooled_patient_level",
+      "dst": "cohort:metagx_gse18520",
+      "evidence": "pooled analysis includes cohort GSE18520"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "analysis_artifact:hgsoc_pooled_patient_level",
+      "dst": "cohort:metagx_gse26712",
+      "evidence": "pooled analysis includes cohort GSE26712"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "analysis_artifact:hgsoc_pooled_patient_level",
+      "dst": "cohort:metagx_gse30161",
+      "evidence": "pooled analysis includes cohort GSE30161"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "analysis_artifact:hgsoc_pooled_patient_level",
+      "dst": "cohort:metagx_gse32062",
+      "evidence": "pooled analysis includes cohort GSE32062"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "analysis_artifact:hgsoc_pooled_patient_level",
+      "dst": "cohort:metagx_gse32063",
+      "evidence": "pooled analysis includes cohort GSE32063"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "analysis_artifact:hgsoc_pooled_patient_level",
+      "dst": "cohort:metagx_gse49997",
+      "evidence": "pooled analysis includes cohort GSE49997"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "analysis_artifact:hgsoc_pooled_patient_level",
+      "dst": "cohort:metagx_gse51088",
+      "evidence": "pooled analysis includes cohort GSE51088"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "analysis_artifact:hgsoc_pooled_patient_level",
+      "dst": "cohort:metagx_gse8842",
+      "evidence": "pooled analysis includes cohort GSE8842"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "analysis_artifact:hgsoc_pooled_patient_level",
+      "dst": "cohort:metagx_gse9891",
+      "evidence": "pooled analysis includes cohort GSE9891"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "analysis_artifact:hgsoc_pooled_patient_level",
+      "dst": "cohort:metagx_pmid17290060",
+      "evidence": "pooled analysis includes cohort PMID17290060"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "analysis_artifact:hgsoc_pooled_patient_level",
+      "dst": "cohort:metagx_pmid19318476",
+      "evidence": "pooled analysis includes cohort PMID19318476"
+    },
+    {
+      "predicate": "derived_from",
+      "rel": "DERIVED_FROM",
+      "src": "analysis_artifact:hgsoc_pooled_patient_level",
+      "dst": "cohort:metagx_tcgaovarian",
+      "evidence": "pooled analysis includes cohort TCGAOVARIAN"
+    },
+    {
+      "predicate": "governed_by",
+      "rel": "GOVERNED_BY",
+      "src": "capability:pub_spe_gate",
+      "dst": "governance_item:pub_spe_not_efficacy",
+      "evidence": "capability:pub_spe_gate governed_by governance_item:pub_spe_not_efficacy"
+    },
+    {
+      "predicate": "governed_by",
+      "rel": "GOVERNED_BY",
+      "src": "capability:pub_hgsoc_fingerprint",
+      "dst": "governance_item:pub_hgsoc_prognostic_not_predictive",
+      "evidence": "capability:pub_hgsoc_fingerprint governed_by governance_item:pub_hgsoc_prognostic_not_predictive"
+    },
+    {
+      "predicate": "governed_by",
+      "rel": "GOVERNED_BY",
+      "src": "capability:pub_hgsoc_fingerprint",
+      "dst": "governance_item:pub_hgsoc_external_fails",
+      "evidence": "capability:pub_hgsoc_fingerprint governed_by governance_item:pub_hgsoc_external_fails"
+    },
+    {
+      "predicate": "governed_by",
+      "rel": "GOVERNED_BY",
+      "src": "capability:pub_timing_engine",
+      "dst": "governance_item:pub_timing_internal_not_clinical",
+      "evidence": "capability:pub_timing_engine governed_by governance_item:pub_timing_internal_not_clinical"
+    },
+    {
+      "predicate": "governed_by",
+      "rel": "GOVERNED_BY",
+      "src": "capability:pub_hgsoc_fingerprint",
+      "dst": "governance_item:pub_ruo_all",
+      "evidence": "capability:pub_hgsoc_fingerprint governed_by governance_item:pub_ruo_all"
+    },
+    {
+      "predicate": "governed_by",
+      "rel": "GOVERNED_BY",
+      "src": "capability:pub_timing_engine",
+      "dst": "governance_item:pub_ruo_all",
+      "evidence": "capability:pub_timing_engine governed_by governance_item:pub_ruo_all"
+    },
+    {
+      "predicate": "governed_by",
+      "rel": "GOVERNED_BY",
+      "src": "capability:pub_spe_gate",
+      "dst": "governance_item:pub_no_tier_inflation",
+      "evidence": "capability:pub_spe_gate governed_by governance_item:pub_no_tier_inflation"
+    },
+    {
+      "predicate": "governed_by",
+      "rel": "GOVERNED_BY",
+      "src": "capability:pub_hgsoc_fingerprint",
+      "dst": "governance_item:pub_no_tier_inflation",
+      "evidence": "capability:pub_hgsoc_fingerprint governed_by governance_item:pub_no_tier_inflation"
+    },
+    {
+      "predicate": "governed_by",
+      "rel": "GOVERNED_BY",
+      "src": "capability:pub_timing_engine",
+      "dst": "governance_item:pub_no_tier_inflation",
+      "evidence": "capability:pub_timing_engine governed_by governance_item:pub_no_tier_inflation"
+    },
+    {
+      "predicate": "cites",
+      "rel": "CITES",
+      "src": "publication:spe_feasibility_gate",
+      "dst": "citation:10_1038_nrd_2018_168",
+      "evidence": "publication:spe_feasibility_gate cites citation:10_1038_nrd_2018_168"
+    },
+    {
+      "predicate": "cites",
+      "rel": "CITES",
+      "src": "publication:spe_feasibility_gate",
+      "dst": "citation:10_1038_nrd3287",
+      "evidence": "publication:spe_feasibility_gate cites citation:10_1038_nrd3287"
+    },
+    {
+      "predicate": "cites",
+      "rel": "CITES",
+      "src": "publication:spe_feasibility_gate",
+      "dst": "citation:10_1067_mcp_2002_121829",
+      "evidence": "publication:spe_feasibility_gate cites citation:10_1067_mcp_2002_121829"
+    },
+    {
+      "predicate": "cites",
+      "rel": "CITES",
+      "src": "publication:spe_feasibility_gate",
+      "dst": "citation:10_1145_3571730",
+      "evidence": "publication:spe_feasibility_gate cites citation:10_1145_3571730"
+    },
+    {
+      "predicate": "cites",
+      "rel": "CITES",
+      "src": "publication:spe_feasibility_gate",
+      "dst": "citation:pmid22495656",
+      "evidence": "publication:spe_feasibility_gate cites citation:pmid22495656"
+    },
+    {
+      "predicate": "cites",
+      "rel": "CITES",
+      "src": "publication:spe_feasibility_gate",
+      "dst": "citation:10_1016_j_taap_2022_116073",
+      "evidence": "publication:spe_feasibility_gate cites citation:10_1016_j_taap_2022_116073"
+    },
+    {
+      "predicate": "cites",
+      "rel": "CITES",
+      "src": "publication:spe_feasibility_gate",
+      "dst": "citation:10_1021_acs_jmedchem_5c01610",
+      "evidence": "publication:spe_feasibility_gate cites citation:10_1021_acs_jmedchem_5c01610"
+    },
+    {
+      "predicate": "cites",
+      "rel": "CITES",
+      "src": "publication:spe_feasibility_gate",
+      "dst": "citation:bonovas2020",
+      "evidence": "publication:spe_feasibility_gate cites citation:bonovas2020"
+    },
+    {
+      "predicate": "cites",
+      "rel": "CITES",
+      "src": "publication:spe_feasibility_gate",
+      "dst": "citation:10_1172_jci_insight_133247",
+      "evidence": "publication:spe_feasibility_gate cites citation:10_1172_jci_insight_133247"
+    },
+    {
+      "predicate": "cites",
+      "rel": "CITES",
+      "src": "publication:spe_feasibility_gate",
+      "dst": "citation:10_1016_j_ygyno_2025_02_001",
+      "evidence": "publication:spe_feasibility_gate cites citation:10_1016_j_ygyno_2025_02_001"
+    },
+    {
+      "predicate": "cites",
+      "rel": "CITES",
+      "src": "publication:hgsoc_fap_cxcl10_subgroup",
+      "dst": "citation:10_1016_j_ygyno_2025_01_010",
+      "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1016_j_ygyno_2025_01_010"
+    },
+    {
+      "predicate": "cites",
+      "rel": "CITES",
+      "src": "publication:hgsoc_fap_cxcl10_subgroup",
+      "dst": "citation:10_1186_s12885-020-07541-6",
+      "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1186_s12885-020-07541-6"
+    },
+    {
+      "predicate": "cites",
+      "rel": "CITES",
+      "src": "publication:hgsoc_fap_cxcl10_subgroup",
+      "dst": "citation:10_1186_s13643-025-02929-6",
+      "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1186_s13643-025-02929-6"
+    },
+    {
+      "predicate": "cites",
+      "rel": "CITES",
+      "src": "publication:hgsoc_fap_cxcl10_subgroup",
+      "dst": "citation:10_1084_jem_20191094",
+      "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1084_jem_20191094"
+    },
+    {
+      "predicate": "cites",
+      "rel": "CITES",
+      "src": "publication:hgsoc_fap_cxcl10_subgroup",
+      "dst": "citation:10_1007_s00262-024-03761-y",
+      "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1007_s00262-024-03761-y"
+    },
+    {
+      "predicate": "cites",
+      "rel": "CITES",
+      "src": "publication:hgsoc_fap_cxcl10_subgroup",
+      "dst": "citation:10_3389_fimmu_2021_690201",
+      "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_3389_fimmu_2021_690201"
+    },
+    {
+      "predicate": "cites",
+      "rel": "CITES",
+      "src": "publication:hgsoc_fap_cxcl10_subgroup",
+      "dst": "citation:10_1038_s41598-025-12693-1",
+      "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1038_s41598-025-12693-1"
+    }
+  ]
+}

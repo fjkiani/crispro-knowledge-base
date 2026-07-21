@@ -1,0 +1,37 @@
+{
+  "id": "citation:10_1084_jem_20191094",
+  "type": "evidence_citation",
+  "name": "Distinct fibroblast functional states drive clinical outcomes in ovarian cancer and are regulated by TCF21",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/references.bib",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "hussain2020tcf21"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Distinct fibroblast functional states drive clinical outcomes in ovarian cancer and are regulated by TCF21",
+      "found": true
+    },
+    {
+      "claim": "DOI 10.1084/jem.20191094",
+      "found": true
+    },
+    {
+      "claim": "year 2020",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "doi": "10.1084/jem.20191094",
+    "year": "2020",
+    "bibtex_key": "hussain2020tcf21",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

@@ -2237,5 +2237,77 @@
     "_stream": "v3:audit_upgrade",
     "_mint_planner": "x5_gap_fill",
     "_mint_timestamp": "2026-07-13T23:26:21.537989Z"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_spe_gate",
+    "dst": "governance_item:pub_spe_not_efficacy",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_spe_gate governed_by governance_item:pub_spe_not_efficacy",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "governance_item:pub_hgsoc_prognostic_not_predictive",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_hgsoc_fingerprint governed_by governance_item:pub_hgsoc_prognostic_not_predictive",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "governance_item:pub_hgsoc_external_fails",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_hgsoc_fingerprint governed_by governance_item:pub_hgsoc_external_fails",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_timing_engine",
+    "dst": "governance_item:pub_timing_internal_not_clinical",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_timing_engine governed_by governance_item:pub_timing_internal_not_clinical",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "governance_item:pub_ruo_all",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_hgsoc_fingerprint governed_by governance_item:pub_ruo_all",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_timing_engine",
+    "dst": "governance_item:pub_ruo_all",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_timing_engine governed_by governance_item:pub_ruo_all",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_spe_gate",
+    "dst": "governance_item:pub_no_tier_inflation",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_spe_gate governed_by governance_item:pub_no_tier_inflation",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "governance_item:pub_no_tier_inflation",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_hgsoc_fingerprint governed_by governance_item:pub_no_tier_inflation",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_timing_engine",
+    "dst": "governance_item:pub_no_tier_inflation",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_timing_engine governed_by governance_item:pub_no_tier_inflation",
+    "_stream": "v3:artistry7_publications"
   }
 ]

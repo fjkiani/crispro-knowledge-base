@@ -1,0 +1,586 @@
+[
+  {
+    "predicate": "demonstrates",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "capability:pub_spe_gate",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/MANUSCRIPT.md",
+    "evidence": "publication:spe_feasibility_gate demonstrates capability:pub_spe_gate",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "demonstrates",
+    "src": "publication:hgsoc_fap_cxcl10_subgroup",
+    "dst": "capability:pub_hgsoc_fingerprint",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md",
+    "evidence": "publication:hgsoc_fap_cxcl10_subgroup demonstrates capability:pub_hgsoc_fingerprint",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "demonstrates",
+    "src": "publication:timing_engine",
+    "dst": "capability:pub_timing_engine",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/MANUSCRIPT_DRAFT.md",
+    "evidence": "publication:timing_engine demonstrates capability:pub_timing_engine",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "validated_by",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "validation_result:hgsoc_pooled_cox_positive",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "capability:pub_hgsoc_fingerprint supported by validation_result:hgsoc_pooled_cox_positive",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "validated_by",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "validation_result:hgsoc_percohort_meta",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_26cohort_fingerprint_validation_summary.json",
+    "evidence": "capability:pub_hgsoc_fingerprint supported by validation_result:hgsoc_percohort_meta",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "limits",
+    "src": "validation_result:hgsoc_gse32062_negative",
+    "dst": "capability:pub_hgsoc_fingerprint",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/data/validation_manifest.json",
+    "evidence": "validation_result:hgsoc_gse32062_negative LIMITS claims for capability:pub_hgsoc_fingerprint (holds=False)",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "validated_by",
+    "src": "capability:pub_timing_engine",
+    "dst": "validation_result:timing_internal_villalobos",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/supplementary/statistics_summary.txt",
+    "evidence": "capability:pub_timing_engine supported by validation_result:timing_internal_villalobos",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "limits",
+    "src": "validation_result:timing_ariel3_inconclusive",
+    "dst": "capability:pub_timing_engine",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/MANUSCRIPT_DRAFT.md",
+    "evidence": "validation_result:timing_ariel3_inconclusive LIMITS claims for capability:pub_timing_engine (holds=None)",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "validated_by",
+    "src": "capability:pub_spe_gate",
+    "dst": "validation_result:spe_llm_benchmark",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/MANUSCRIPT.md",
+    "evidence": "capability:pub_spe_gate supported by validation_result:spe_llm_benchmark",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "reports",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "outcome:hgsoc_fingerprint_hr",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "capability:pub_hgsoc_fingerprint reports outcome:hgsoc_fingerprint_hr",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "reports",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "outcome:hgsoc_stouffer",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_26cohort_fingerprint_validation_summary.json",
+    "evidence": "capability:pub_hgsoc_fingerprint reports outcome:hgsoc_stouffer",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "reports",
+    "src": "capability:pub_timing_engine",
+    "dst": "outcome:timing_exact_day_agreement",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/supplementary/statistics_summary.txt",
+    "evidence": "capability:pub_timing_engine reports outcome:timing_exact_day_agreement",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "reports",
+    "src": "capability:pub_spe_gate",
+    "dst": "outcome:spe_llm_accuracy",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/MANUSCRIPT.md",
+    "evidence": "capability:pub_spe_gate reports outcome:spe_llm_accuracy",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_metformin",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Metformin as PASS",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_mebendazole",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Mebendazole as CONDITIONAL",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_disulfiram",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Disulfiram as CONDITIONAL",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_hydroxychloroquine",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Hydroxychloroquine as CONDITIONAL",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_artesunate",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Artesunate as CONDITIONAL",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_niclosamide",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Niclosamide as FAIL",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_ivermectin",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Ivermectin as FAIL",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_itraconazole",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Itraconazole as FAIL",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_simvastatin",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Simvastatin as FAIL",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_salinomycin",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Salinomycin as INSUFFICIENT",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "implements",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "biomarker:hgsoc_fap_cxcl10_fingerprint",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md",
+    "evidence": "capability implemented via the fingerprint biomarker",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "gene:fap",
+    "dst": "biomarker:hgsoc_fap_cxcl10_fingerprint",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md",
+    "evidence": "FAP (low) component of fingerprint",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "gene:cxcl10",
+    "dst": "biomarker:hgsoc_fap_cxcl10_fingerprint",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md",
+    "evidence": "CXCL10 (high) component of fingerprint",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "analysis_artifact:hgsoc_pooled_patient_level",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_patient_level.csv",
+    "evidence": "capability:pub_hgsoc_fingerprint derived_from artifact analysis_artifact:hgsoc_pooled_patient_level (reproduced=True)",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "analysis_artifact:hgsoc_percohort_validation",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_26cohort_fingerprint_validation.csv",
+    "evidence": "capability:pub_hgsoc_fingerprint derived_from artifact analysis_artifact:hgsoc_percohort_validation (reproduced=True)",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "capability:pub_spe_gate",
+    "dst": "analysis_artifact:spe_drug_panel",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "capability:pub_spe_gate derived_from artifact analysis_artifact:spe_drug_panel (reproduced=True)",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "capability:pub_timing_engine",
+    "dst": "analysis_artifact:timing_confusion_matrix",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/tables/table3_confusion.csv",
+    "evidence": "capability:pub_timing_engine derived_from artifact analysis_artifact:timing_confusion_matrix (reproduced=True)",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "capability:pub_timing_engine",
+    "dst": "analysis_artifact:timing_reproduce_script",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/scripts/reproduce_all.py",
+    "evidence": "capability:pub_timing_engine derived_from artifact analysis_artifact:timing_reproduce_script (reproduced=False)",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_e_mtab_386",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort E.MTAB.386",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse13876",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE13876",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse14764",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE14764",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse17260",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE17260",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse18520",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE18520",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse26712",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE26712",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse30161",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE30161",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse32062",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE32062",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse32063",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE32063",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse49997",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE49997",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse51088",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE51088",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse8842",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE8842",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_gse9891",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort GSE9891",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_pmid17290060",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort PMID17290060",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_pmid19318476",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort PMID19318476",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "derived_from",
+    "src": "analysis_artifact:hgsoc_pooled_patient_level",
+    "dst": "cohort:metagx_tcgaovarian",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+    "evidence": "pooled analysis includes cohort TCGAOVARIAN",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_spe_gate",
+    "dst": "governance_item:pub_spe_not_efficacy",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_spe_gate governed_by governance_item:pub_spe_not_efficacy",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "governance_item:pub_hgsoc_prognostic_not_predictive",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_hgsoc_fingerprint governed_by governance_item:pub_hgsoc_prognostic_not_predictive",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "governance_item:pub_hgsoc_external_fails",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_hgsoc_fingerprint governed_by governance_item:pub_hgsoc_external_fails",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_timing_engine",
+    "dst": "governance_item:pub_timing_internal_not_clinical",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_timing_engine governed_by governance_item:pub_timing_internal_not_clinical",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "governance_item:pub_ruo_all",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_hgsoc_fingerprint governed_by governance_item:pub_ruo_all",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_timing_engine",
+    "dst": "governance_item:pub_ruo_all",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_timing_engine governed_by governance_item:pub_ruo_all",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_spe_gate",
+    "dst": "governance_item:pub_no_tier_inflation",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_spe_gate governed_by governance_item:pub_no_tier_inflation",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_hgsoc_fingerprint",
+    "dst": "governance_item:pub_no_tier_inflation",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_hgsoc_fingerprint governed_by governance_item:pub_no_tier_inflation",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "governed_by",
+    "src": "capability:pub_timing_engine",
+    "dst": "governance_item:pub_no_tier_inflation",
+    "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+    "evidence": "capability:pub_timing_engine governed_by governance_item:pub_no_tier_inflation",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:10_1038_nrd_2018_168",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:10_1038_nrd_2018_168",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:10_1038_nrd3287",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:10_1038_nrd3287",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:10_1067_mcp_2002_121829",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:10_1067_mcp_2002_121829",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:10_1145_3571730",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:10_1145_3571730",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:pmid22495656",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:pmid22495656",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:10_1016_j_taap_2022_116073",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:10_1016_j_taap_2022_116073",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:10_1021_acs_jmedchem_5c01610",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:10_1021_acs_jmedchem_5c01610",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:bonovas2020",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:bonovas2020",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:10_1172_jci_insight_133247",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:10_1172_jci_insight_133247",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:10_1016_j_ygyno_2025_02_001",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:10_1016_j_ygyno_2025_02_001",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:hgsoc_fap_cxcl10_subgroup",
+    "dst": "citation:10_1016_j_ygyno_2025_01_010",
+    "source_file": "bib provenance",
+    "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1016_j_ygyno_2025_01_010",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:hgsoc_fap_cxcl10_subgroup",
+    "dst": "citation:10_1186_s12885-020-07541-6",
+    "source_file": "bib provenance",
+    "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1186_s12885-020-07541-6",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:hgsoc_fap_cxcl10_subgroup",
+    "dst": "citation:10_1186_s13643-025-02929-6",
+    "source_file": "bib provenance",
+    "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1186_s13643-025-02929-6",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:hgsoc_fap_cxcl10_subgroup",
+    "dst": "citation:10_1084_jem_20191094",
+    "source_file": "bib provenance",
+    "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1084_jem_20191094",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:hgsoc_fap_cxcl10_subgroup",
+    "dst": "citation:10_1007_s00262-024-03761-y",
+    "source_file": "bib provenance",
+    "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1007_s00262-024-03761-y",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:hgsoc_fap_cxcl10_subgroup",
+    "dst": "citation:10_3389_fimmu_2021_690201",
+    "source_file": "bib provenance",
+    "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_3389_fimmu_2021_690201",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:hgsoc_fap_cxcl10_subgroup",
+    "dst": "citation:10_1038_s41598-025-12693-1",
+    "source_file": "bib provenance",
+    "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1038_s41598-025-12693-1",
+    "_stream": "v3:artistry7_publications"
+  }
+]

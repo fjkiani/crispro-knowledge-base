@@ -1,0 +1,38 @@
+{
+  "id": "drug:spe_ivermectin",
+  "type": "drug",
+  "name": "Ivermectin (SPE FAIL, gap 250.0x)",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+      "line_range": [
+        47,
+        58
+      ],
+      "json_pointer": null,
+      "anchor": "Ivermectin SPE panel row"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Ivermectin: gap ratio 250.0x -> FAIL",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_spe_gate"
+  ],
+  "attributes": {
+    "ic50_uM": 5.0,
+    "cmax_uM": 0.28,
+    "ppb": 0.93,
+    "free_cmax_uM": 0.02,
+    "gap_ratio": 250.0,
+    "spe_verdict": "FAIL",
+    "context": "HGSOC drug-repurposing feasibility panel",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

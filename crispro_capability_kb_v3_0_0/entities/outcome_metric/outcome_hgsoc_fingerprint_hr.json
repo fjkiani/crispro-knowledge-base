@@ -1,0 +1,28 @@
+{
+  "id": "outcome:hgsoc_fingerprint_hr",
+  "type": "outcome_metric",
+  "name": "HGSOC low-FAP/high-CXCL10 fingerprint OS HR=0.7208 (95% CI 0.6282-0.8270, p=3.05e-6)",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+      "json_pointer": "/",
+      "line_range": null,
+      "anchor": "HGSOC low-FAP/high-CXCL10 fingerprint OS HR=0.7208 (95% CI 0"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "HGSOC low-FAP/high-CXCL10 fingerprint OS HR=0.7208 (95% CI 0.6282-0.8270, p=3.05e-6)",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_hgsoc_fingerprint"
+  ],
+  "attributes": {
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

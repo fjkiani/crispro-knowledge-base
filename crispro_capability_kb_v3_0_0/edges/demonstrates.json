@@ -1,0 +1,26 @@
+[
+  {
+    "predicate": "demonstrates",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "capability:pub_spe_gate",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/MANUSCRIPT.md",
+    "evidence": "publication:spe_feasibility_gate demonstrates capability:pub_spe_gate",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "demonstrates",
+    "src": "publication:hgsoc_fap_cxcl10_subgroup",
+    "dst": "capability:pub_hgsoc_fingerprint",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md",
+    "evidence": "publication:hgsoc_fap_cxcl10_subgroup demonstrates capability:pub_hgsoc_fingerprint",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "demonstrates",
+    "src": "publication:timing_engine",
+    "dst": "capability:pub_timing_engine",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/MANUSCRIPT_DRAFT.md",
+    "evidence": "publication:timing_engine demonstrates capability:pub_timing_engine",
+    "_stream": "v3:artistry7_publications"
+  }
+]

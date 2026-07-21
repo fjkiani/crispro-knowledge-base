@@ -1,0 +1,37 @@
+{
+  "id": "citation:10_1016_j_ygyno_2025_02_001",
+  "type": "evidence_citation",
+  "name": "Metformin for patients with advanced stage ovarian cancer: A randomized phase II placebo-controlled trial",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "romero2025"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Metformin for patients with advanced stage ovarian cancer: A randomized phase II placebo-controlled trial",
+      "found": true
+    },
+    {
+      "claim": "DOI 10.1016/j.ygyno.2025.02.001",
+      "found": true
+    },
+    {
+      "claim": "year 2025",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "doi": "10.1016/j.ygyno.2025.02.001",
+    "year": "2025",
+    "bibtex_key": "romero2025",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

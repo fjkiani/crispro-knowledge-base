@@ -1,0 +1,36 @@
+{
+  "id": "validation_result:hgsoc_pooled_cox_positive",
+  "type": "validation_result",
+  "name": "HGSOC fingerprint pooled Cox (POSITIVE, discovery)",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/scripts/metagx_16cohort_pooled_cox.json",
+      "json_pointer": "/",
+      "line_range": null,
+      "anchor": "HR=0.7208, 95% CI 0.6282-0.8270, p=3.0499e-6, n=2446, 16 coh"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "HR=0.7208, 95% CI 0.6282-0.8270, p=3.0499e-6, n=2446, 16 cohorts",
+      "found": true
+    },
+    {
+      "claim": "Reproduced independently (lifelines): HR/CI/p EXACT match.",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_hgsoc_fingerprint"
+  ],
+  "attributes": {
+    "validation_kind": "pooled_discovery",
+    "statistic": "HR=0.7208, 95% CI 0.6282-0.8270, p=3.0499e-6, n=2446, 16 cohorts",
+    "validation_holds": true,
+    "reproduced_in_session": true,
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

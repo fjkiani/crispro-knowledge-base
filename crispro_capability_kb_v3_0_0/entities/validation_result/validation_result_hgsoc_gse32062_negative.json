@@ -1,0 +1,36 @@
+{
+  "id": "validation_result:hgsoc_gse32062_negative",
+  "type": "validation_result",
+  "name": "HGSOC fingerprint GSE32062 external validation (NEGATIVE)",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/data/validation_manifest.json",
+      "json_pointer": "/",
+      "line_range": null,
+      "anchor": "Tiered OS separation logrank p=0.9292; validation_holds=FALS"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Tiered OS separation logrank p=0.9292; validation_holds=FALSE; discovery thresholds (not refit); n=260 GPL6480",
+      "found": true
+    },
+    {
+      "claim": "Negative result preserved as-is. Confirms fingerprint does NOT transfer to this holdout under transferred thresholds.",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_hgsoc_fingerprint"
+  ],
+  "attributes": {
+    "validation_kind": "external_holdout",
+    "statistic": "Tiered OS separation logrank p=0.9292; validation_holds=FALSE; discovery thresholds (not refit); n=260 GPL6480",
+    "validation_holds": false,
+    "reproduced_in_session": true,
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

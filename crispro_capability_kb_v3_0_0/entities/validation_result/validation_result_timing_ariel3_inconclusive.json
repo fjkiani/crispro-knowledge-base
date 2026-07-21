@@ -1,0 +1,36 @@
+{
+  "id": "validation_result:timing_ariel3_inconclusive",
+  "type": "validation_result",
+  "name": "Timing engine external validation vs ARIEL3 (INCONCLUSIVE)",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/timing-engine/MANUSCRIPT_DRAFT.md",
+      "json_pointer": null,
+      "line_range": null,
+      "anchor": "PFI distributions not statistically different (chi2 p=0.12);"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "PFI distributions not statistically different (chi2 p=0.12); TOST equivalence +/-10pp narrowly missed (p=0.073); 4.5pp diff below 8pp power threshold",
+      "found": true
+    },
+    {
+      "claim": "Equivalence INCONCLUSIVE (underpowered), NOT a positive equivalence result. ARIEL3 IPD not shipped; reported as-is.",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_timing_engine"
+  ],
+  "attributes": {
+    "validation_kind": "external_validation",
+    "statistic": "PFI distributions not statistically different (chi2 p=0.12); TOST equivalence +/-10pp narrowly missed (p=0.073); 4.5pp diff below 8pp power threshold",
+    "validation_holds": null,
+    "reproduced_in_session": false,
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

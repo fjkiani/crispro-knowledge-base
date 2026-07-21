@@ -117,5 +117,21 @@
     "dst": "variant:TP53_R175H",
     "source_file": "kb_planner_lib.py::drug_to_variant (canonical mechanism table)",
     "evidence": "Adavosertib WEE1 inhibition targets p53-null S/G2 checkpoint bypass"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "gene:fap",
+    "dst": "biomarker:hgsoc_fap_cxcl10_fingerprint",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md",
+    "evidence": "FAP (low) component of fingerprint",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "mechanism_edge",
+    "src": "gene:cxcl10",
+    "dst": "biomarker:hgsoc_fap_cxcl10_fingerprint",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/11-artistry7-hgsoc-subgroup/rxiv/manuscript.md",
+    "evidence": "CXCL10 (high) component of fingerprint",
+    "_stream": "v3:artistry7_publications"
   }
 ]

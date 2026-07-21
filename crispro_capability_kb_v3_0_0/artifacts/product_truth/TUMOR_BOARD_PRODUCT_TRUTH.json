@@ -1,0 +1,420 @@
+{
+  "product": "Tumor Board",
+  "one_line": "The research case-resolution workspace that converts a patient's molecular and clinical context into a traceable map of biology, vulnerabilities, mechanism-aligned options, trial exploration, evidence, missing data, and caveats — the human decision surface of CrisPRO, RUO.",
+  "status_of_document": "PRODUCT TRUTH CONTRACT (RUO). Structured knowledge artifact grounding every public claim to a real KB entity (Qdrant collection crispro_kb_v3 + CrisPRO Neo4j graph). Not a page, not marketing copy, not a deck.",
+  "framing": {
+    "is": "Tumor Board is the research case-resolution workspace (the CrisPRO 'Oncology Arbiter') that converts a patient's molecular and clinical context into a traceable map of biology, vulnerabilities, mechanism-aligned options, trial exploration, evidence, missing data, and caveats. It is the human decision surface of the platform.",
+    "is_not_a_separate_biology_engine": "Tumor Board is NOT a separate biology engine. It is a surface over the SAME shared CrisPRO intelligence layer used by Interception and In-Silico Trials; it retrieves and presents that intelligence, it does not re-derive biology independently.",
+    "is_not_four_demo_patients": "Tumor Board is NOT 'four demo patients'. The demo_sample entities (case_full, nsclc, ak_mbd4_lof_case, biopsy, screening, elo_rank) are explicitly 'demo sample for regulatory-posture-locked arbiter walkthrough' fixtures that illustrate the pipeline; they are not the product and must not be presented as its evidence base.",
+    "regulatory": "Research Use Only. Not FDA-cleared, not CE-marked, not intended for clinical use. RUO posture applies to EVERY arbiter output. Must remain RUO unless and until validated for clinical deployment.",
+    "evidence": {
+      "entity_id": "regulatory_posture:oncology_arbiter_ruo",
+      "source_file": "scientist-monai-moat/docs/model_cards/errata.md",
+      "note": "Explicit RUO posture on every arbiter output"
+    }
+  },
+  "seven_block_framing": {
+    "decision": {
+      "text": "For a specific patient case, which biology, vulnerabilities, mechanism-aligned options, and trials warrant investigation by the treating/translational team — and what is still unknown — assembled into one interpretable, traceable output that a human uses to decide next steps.",
+      "evidence": {
+        "entity_id": "arbiter_layer:l5_arbiter_output",
+        "source_file": "scientist-monai-moat/README.md",
+        "note": "Structured verdict + evidence pointers + RUO disclaimer"
+      }
+    },
+    "problem": {
+      "text": "A clinician or translational team has a molecular profile but must manually assemble the relevant biology, options, trial context, risks, missing information, and evidence boundaries. This is slow, inconsistent, and often loses the evidence trail — and generic AI tools deflect into safety refusals instead of surfacing what the data supports.",
+      "evidence": {
+        "entity_id": "arbiter_layer:l3_evidence_retriever",
+        "source_file": "scientist-monai-moat/README.md",
+        "note": "Model-card + knowledge retrieval step that assembles evidence"
+      }
+    },
+    "input": {
+      "text": "A patient's available clinical and molecular context (e.g. pathology report, molecular profile, optionally imaging). Input is normalized and contract-enforced before processing.",
+      "evidence": {
+        "entity_id": "arbiter_layer:l2_input_normalizer",
+        "source_file": "scientist-monai-moat/README.md",
+        "note": "Report parser + input contract enforcement"
+      }
+    },
+    "workflow_plain_language": {
+      "text": "CrisPRO's Oncology Arbiter runs a five-layer pipeline: L1 Gateway (auth/entry) → L2 Input Normalizer (report parsing) → L3 Evidence Retriever (knowledge + model-card retrieval) → L4 Co-scientist (L4a generate hypotheses, L4b reflect/critique, L4c Elo-rank) → L5 structured Arbiter Output with evidence pointers and an RUO disclaimer. It organizes what the profile supports; it does not autonomously treat.",
+      "evidence": {
+        "entity_id": "arbiter_layer:l4a_generator",
+        "source_file": "scientist-monai-moat/README.md",
+        "note": "Co-scientist generation/reflection/ranking is the reasoning core"
+      }
+    },
+    "output": {
+      "text": "A traceable research case package: molecular context, mechanism hypotheses, synthetic-lethality/vulnerability findings, therapy/trial exploration, an evidence trace, safety/governance flags, and an explicit missing-data and confidence display — each item pointing back to its evidence.",
+      "evidence": {
+        "entity_id": "arbiter_layer:l5_arbiter_output",
+        "source_file": "scientist-monai-moat/README.md",
+        "note": "Structured verdict + evidence pointers"
+      }
+    },
+    "proof_and_limits": {
+      "text": "The pipeline is real and runnable; several inference components are deterministic heuristics or proxy models (e.g. monai-detector-heuristic, nsclc_lung_heuristic_v0, therapy-nccn-lite), explicitly RESEARCH USE ONLY and NOT diagnostic. Demo cases are walkthrough fixtures. Tumor Board is NOT clinical decision support and does NOT predict individual patient outcomes.",
+      "evidence": {
+        "entity_id": "arbiter_model:therapy_nccn_lite",
+        "source_file": "scientist-monai-moat/docs/model_cards/therapy_nccn_lite.md",
+        "note": "Deterministic rules-based lookup, not an ML model"
+      }
+    },
+    "engagement": {
+      "text": "A first engagement is a research case walkthrough on de-identified or synthetic cases: the team provides molecular/clinical context; CrisPRO returns the traceable case package for research review. Any clinical use requires prior validation and is out of current scope.",
+      "evidence": {
+        "entity_id": "demo_sample:case_full",
+        "source_file": "scientist-monai-moat/src/oncology_arbiter/api/static/demo_samples/case_full.json",
+        "note": "Regulatory-posture-locked walkthrough fixture"
+      }
+    }
+  },
+  "shared_intelligence_cross_map": {
+    "description": "The SAME shared intelligence layer feeds all three product surfaces. Rows = shared intelligence; columns = how each surface uses it.",
+    "rows": [
+      {
+        "shared_intelligence": "MoA/pathway map",
+        "interception_use": "Target mission context",
+        "insilico_use": "Asset/population fit",
+        "tumor_board_use": "Patient vulnerability context",
+        "evidence": {
+          "entity_id": "capability:CAP_02",
+          "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+        }
+      },
+      {
+        "shared_intelligence": "Synthetic lethality (CAP_05/CAP_06)",
+        "interception_use": "Target-hypothesis support",
+        "insilico_use": "Biomarker-dependent program logic",
+        "tumor_board_use": "Candidate dependency exploration",
+        "evidence": {
+          "entity_id": "capability:CAP_05",
+          "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+        }
+      },
+      {
+        "shared_intelligence": "Trial decoding (CAP_03 + program dossiers)",
+        "interception_use": "Downstream translational context",
+        "insilico_use": "Core trial strategy",
+        "tumor_board_use": "Trial exploration",
+        "evidence": {
+          "entity_id": "capability:CAP_03",
+          "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+        }
+      },
+      {
+        "shared_intelligence": "Resistance logic (CAP_07)",
+        "interception_use": "Metastasis escape rationale",
+        "insilico_use": "Program risk and combinations",
+        "tumor_board_use": "Patient-level hypothesis/risk",
+        "evidence": {
+          "entity_id": "capability:CAP_07",
+          "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+        }
+      },
+      {
+        "shared_intelligence": "Target Lock (CAP_04)",
+        "interception_use": "Metastatic target selection",
+        "insilico_use": "Asset target coherence",
+        "tumor_board_use": "Optional research annotation",
+        "evidence": {
+          "entity_id": "capability:CAP_04",
+          "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+        }
+      },
+      {
+        "shared_intelligence": "PGx (CAP_10 component)",
+        "interception_use": "Experimental/asset safety context",
+        "insilico_use": "Exposure and protocol context",
+        "tumor_board_use": "Research safety flag",
+        "evidence": {
+          "entity_id": "capability:CAP_10",
+          "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+        }
+      },
+      {
+        "shared_intelligence": "Governance",
+        "interception_use": "Product claim bounds",
+        "insilico_use": "Program decision bounds",
+        "tumor_board_use": "Case-output bounds",
+        "evidence": {
+          "entity_id": "gov_kgv2:mandatory_disclosures",
+          "source_file": "crispro_kg_v2/kg_modules/platform_identity_governance.json"
+        }
+      },
+      {
+        "shared_intelligence": "8D vector representation (CAP_01)",
+        "interception_use": "Mission-fit substrate",
+        "insilico_use": "Mechanism-fit substrate",
+        "tumor_board_use": "Patient-biology encoding substrate",
+        "evidence": {
+          "entity_id": "capability:CAP_01",
+          "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+        }
+      }
+    ]
+  },
+  "output_section_inventory": {
+    "taxonomy": [
+      "executable_and_live",
+      "executable_but_offline",
+      "data_backed_but_manual",
+      "demo_fixture",
+      "placeholder_stub",
+      "quarantined"
+    ],
+    "note": "Inventory of every Tumor Board (Oncology Arbiter) output section / component, classified honestly by execution status. Heuristic/proxy models are 'executable_and_live' as pipeline components but are RUO proxies, NOT validated clinical inference — flagged in caveat.",
+    "sections": [
+      {
+        "section": "L1 Gateway (API entry + auth + rate limiting)",
+        "status": "executable_and_live",
+        "caveat": "Infrastructure, not inference.",
+        "evidence": {
+          "entity_id": "arbiter_layer:l1_gateway",
+          "source_file": "scientist-monai-moat/README.md"
+        }
+      },
+      {
+        "section": "L2 Input Normalizer (report parser + input contract)",
+        "status": "executable_and_live",
+        "caveat": "Regex/parse based; report_parser_clinicalbert_v1 is the ML upgrade path (fallback).",
+        "evidence": {
+          "entity_id": "arbiter_layer:l2_input_normalizer",
+          "source_file": "scientist-monai-moat/README.md"
+        }
+      },
+      {
+        "section": "L2 report parser (ClinicalBERT fine-tuned)",
+        "status": "executable_and_live",
+        "caveat": "Real fine-tuned token-classification model; used as parser upgrade over regex.",
+        "evidence": {
+          "entity_id": "arbiter_model:report_parser_clinicalbert_v1",
+          "source_file": "scientist-monai-moat/docs/model_cards/report_parser_clinicalbert_v1.md"
+        }
+      },
+      {
+        "section": "L3 Evidence Retriever (model-card + knowledge retrieval)",
+        "status": "executable_and_live",
+        "caveat": "Retrieves from KB/model cards; quality bounded by ingested corpus.",
+        "evidence": {
+          "entity_id": "arbiter_layer:l3_evidence_retriever",
+          "source_file": "scientist-monai-moat/README.md"
+        }
+      },
+      {
+        "section": "L4a Generator (co-scientist hypotheses)",
+        "status": "executable_and_live",
+        "caveat": "Hypothesis generation; research-grade, not validated clinical recommendation.",
+        "evidence": {
+          "entity_id": "arbiter_layer:l4a_generator",
+          "source_file": "scientist-monai-moat/README.md"
+        }
+      },
+      {
+        "section": "L4b Reflection (critique + refinement)",
+        "status": "executable_and_live",
+        "caveat": "Self-critique pass over generated hypotheses.",
+        "evidence": {
+          "entity_id": "arbiter_layer:l4b_reflection",
+          "source_file": "scientist-monai-moat/README.md"
+        }
+      },
+      {
+        "section": "L4c Ranker (Elo tournament of hypotheses)",
+        "status": "executable_and_live",
+        "caveat": "Elo ranking is a preference ordering, not an outcome probability.",
+        "evidence": {
+          "entity_id": "arbiter_layer:l4c_ranker",
+          "source_file": "scientist-monai-moat/README.md"
+        }
+      },
+      {
+        "section": "L4c therapy option lookup (therapy-nccn-lite)",
+        "status": "executable_and_live",
+        "caveat": "Deterministic NCCN-lite rules lookup — NOT an ML model, NOT prescribing; RUO fallback.",
+        "evidence": {
+          "entity_id": "arbiter_model:therapy_nccn_lite",
+          "source_file": "scientist-monai-moat/docs/model_cards/therapy_nccn_lite.md"
+        }
+      },
+      {
+        "section": "L4a imaging detector (monai-detector-heuristic)",
+        "status": "executable_and_live",
+        "caveat": "Heuristic gradient/edge detector — RESEARCH USE ONLY, NOT a diagnostic detector.",
+        "evidence": {
+          "entity_id": "arbiter_model:monai_detector_heuristic",
+          "source_file": "scientist-monai-moat/docs/model_cards/monai_detector_heuristic.md"
+        }
+      },
+      {
+        "section": "NSCLC lung heuristic (proxy_lung_heuristic v0)",
+        "status": "executable_and_live",
+        "caveat": "Proxy heuristic — research/demonstration only, not for diagnosis.",
+        "evidence": {
+          "entity_id": "arbiter_model:nsclc_lung_heuristic_v0",
+          "source_file": "scientist-monai-moat/docs/model_cards/nsclc_lung_heuristic_v0.md"
+        }
+      },
+      {
+        "section": "Multimodal reasoning models (MedGemma 27B / 4B, MedSigLIP-448, TxGemma, biopsy MedSigLIP probe)",
+        "status": "executable_but_offline",
+        "caveat": "Model cards ingested; heavy multimodal weights are integration-dependent and not guaranteed live in every deployment.",
+        "evidence": {
+          "entity_id": "arbiter_model:medgemma_1_27b",
+          "source_file": "scientist-monai-moat/docs/model_cards/medgemma_1_27b.md"
+        }
+      },
+      {
+        "section": "L5 Arbiter Output (structured verdict + evidence pointers + RUO disclaimer)",
+        "status": "executable_and_live",
+        "caveat": "Output always carries RUO disclaimer.",
+        "evidence": {
+          "entity_id": "arbiter_layer:l5_arbiter_output",
+          "source_file": "scientist-monai-moat/README.md"
+        }
+      },
+      {
+        "section": "Synthetic-lethality / vulnerability findings surfaced into case",
+        "status": "data_backed_but_manual",
+        "caveat": "SL evidence exists in KB (sl_evidence_record, sl_engine); patient-specific application is a hypothesis, not a validated therapeutic fact.",
+        "evidence": {
+          "entity_id": "capability:CAP_05",
+          "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+        }
+      },
+      {
+        "section": "Trial exploration surfaced into case",
+        "status": "data_backed_but_manual",
+        "caveat": "Draws on trial vector library / program dossiers; exploration only, not enrollment/responder prediction.",
+        "evidence": {
+          "entity_id": "capability:CAP_03",
+          "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+        }
+      },
+      {
+        "section": "Frontend SPA (React + Vite) case UI",
+        "status": "executable_but_offline",
+        "caveat": "Optional single-page UI served under /ui/; RUO, not for diagnostic use; deployment-optional.",
+        "evidence": {
+          "entity_id": "arbiter_model:frontend_spa",
+          "source_file": "scientist-monai-moat/docs/model_cards/frontend_spa.md"
+        }
+      },
+      {
+        "section": "Demo cases (case_full, nsclc, ak_mbd4_lof_case, biopsy, screening, elo_rank)",
+        "status": "demo_fixture",
+        "caveat": "Regulatory-posture-locked walkthrough fixtures — NOT the product's evidence base; must not be presented as 'four patients'.",
+        "evidence": {
+          "entity_id": "demo_sample:case_full",
+          "source_file": "scientist-monai-moat/src/oncology_arbiter/api/static/demo_samples/case_full.json"
+        }
+      },
+      {
+        "section": "GBM ZEB1 escape annotation in case output",
+        "status": "quarantined",
+        "caveat": "GBM ZEB1 PERMANENTLY CLOSED (3 datasets null/contradicted) — must not appear as an escape marker in any case.",
+        "evidence": {
+          "entity_id": "gov_kgv2:mandatory_disclosures",
+          "source_file": "crispro_kg_v2/kg_modules/platform_identity_governance.json"
+        }
+      },
+      {
+        "section": "LATIFY delta / DDR 0.983 as case figures",
+        "status": "quarantined",
+        "caveat": "QUARANTINED figures — must not be surfaced as case evidence.",
+        "evidence": {
+          "entity_id": "gov_kgv2:prohibited_claims",
+          "source_file": "crispro_kg_v2/kg_modules/platform_identity_governance.json"
+        }
+      }
+    ]
+  },
+  "capability_to_buyer_value": [
+    {
+      "internal_capability": "Molecular context assembly (L2/L3)",
+      "customer_buys": "A traceable, normalized case summary",
+      "product_output": "Parsed molecular/clinical context with evidence pointers",
+      "must_not_claim": "Diagnosis or clinical decision support",
+      "evidence": {
+        "entity_id": "arbiter_layer:l3_evidence_retriever",
+        "source_file": "scientist-monai-moat/README.md"
+      }
+    },
+    {
+      "internal_capability": "Mechanism hypotheses (L4a/L4b, CAP_02)",
+      "customer_buys": "Mechanism-aligned interpretation of the profile",
+      "product_output": "Ranked mechanism hypotheses with critique",
+      "must_not_claim": "Drug-response or outcome prediction",
+      "evidence": {
+        "entity_id": "capability:CAP_02",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      }
+    },
+    {
+      "internal_capability": "Synthetic lethality (CAP_05)",
+      "customer_buys": "Candidate dependency exploration for the case",
+      "product_output": "Candidate dependency list with evidence tier",
+      "must_not_claim": "Proven patient-specific vulnerability",
+      "evidence": {
+        "entity_id": "capability:CAP_05",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      }
+    },
+    {
+      "internal_capability": "Therapy/trial exploration (CAP_03 + therapy-nccn-lite)",
+      "customer_buys": "Mechanism-aligned option and trial exploration",
+      "product_output": "Therapy/trial options to investigate with evidence trace",
+      "must_not_claim": "Treatment directive or enrollment/responder prediction",
+      "evidence": {
+        "entity_id": "capability:CAP_03",
+        "source_file": "crispro_kg_v2/kg_modules/capability_registry.json"
+      }
+    },
+    {
+      "internal_capability": "Evidence trace + missing-data/confidence display (L5)",
+      "customer_buys": "Knowing what is supported and what is unknown",
+      "product_output": "Evidence pointers + explicit gaps and confidence",
+      "must_not_claim": "Completeness or certainty of the case assessment",
+      "evidence": {
+        "entity_id": "arbiter_layer:l5_arbiter_output",
+        "source_file": "scientist-monai-moat/README.md"
+      }
+    },
+    {
+      "internal_capability": "Safety/governance flags (governance layer)",
+      "customer_buys": "Automatic surfacing of claim boundaries in-case",
+      "product_output": "RUO flags, quarantines, and prohibited-claim guards",
+      "must_not_claim": "That flags substitute for clinical/regulatory review",
+      "evidence": {
+        "entity_id": "gov_kgv2:mandatory_disclosures",
+        "source_file": "crispro_kg_v2/kg_modules/platform_identity_governance.json"
+      }
+    }
+  ],
+  "prohibited_claims_global": [
+    "Tumor Board is clinical decision support or provides a treatment directive.",
+    "CrisPRO predicts individual patient outcomes.",
+    "CrisPRO / the Oncology Arbiter is FDA-cleared or CE-marked.",
+    "Tumor Board is 'four demo patients' or that the demo fixtures are its evidence base.",
+    "Tumor Board is a separate biology engine (it is a surface over the shared intelligence layer).",
+    "Heuristic/proxy models (monai-detector-heuristic, nsclc_lung_heuristic_v0, therapy-nccn-lite) perform validated clinical diagnosis or prescribing.",
+    "Synthetic-lethality findings are patient-specific therapeutic facts.",
+    "Trial exploration predicts responders, enrollment, or outcomes.",
+    "GBM ZEB1 is an escape marker in a case; LATIFY delta / DDR 0.983 are valid case figures (QUARANTINED)."
+  ],
+  "_provenance": {
+    "qdrant_collection": "crispro_kb_v3",
+    "neo4j_graph": "CrisPRO KG (617 nodes / 655 rels)",
+    "primary_sources": [
+      "scientist-monai-moat/README.md (arbiter L1-L5 pipeline)",
+      "scientist-monai-moat/docs/model_cards/*.md (arbiter model cards + errata + RUO posture)",
+      "scientist-monai-moat/src/oncology_arbiter/api/static/demo_samples/*.json (walkthrough fixtures)",
+      "crispro_kg_v2/kg_modules/capability_registry.json",
+      "crispro_kg_v2/kg_modules/platform_identity_governance.json"
+    ],
+    "generated": "2026-07-18",
+    "scope": "v3_0_0 + kg_v2 ingested; every evidence receipt verified present in Qdrant collection crispro_kb_v3."
+  }
+}

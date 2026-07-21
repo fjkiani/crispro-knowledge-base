@@ -1,0 +1,409 @@
+{
+  "_meta": {
+    "instance": "neo4j+s://82886682.databases.neo4j.io",
+    "graph": {
+      "nodes": 617,
+      "relationships": 655
+    },
+    "client": "kb_graph.KBGraph",
+    "description": "Live example call + output for each named endpoint. External agents call by name; every result carries provenance (evidence / source_file / line)."
+  },
+  "endpoints": {
+    "capabilities_for_product": {
+      "args": {
+        "product": "interception"
+      },
+      "returns_count": 1,
+      "example_output": [
+        {
+          "id": "capability:CAP_04",
+          "capability": "CAP_04",
+          "name": "Target-Lock (Metastasis Driver Identification)",
+          "what_it_does": "Identifies genuine metastasis drivers using a composite algorithm: Evo2-7B (evolutionary constraint) + Enformer (chromatin accessibility) + AlphaFold 3 (structural confidence). Composite threshold \u22650.35 = genuine driver.",
+          "evidence_tier": "COMPUTED",
+          "cannot_do": "CEACAM5 is NOT in the 38-gene panel \u2014 Target-Lock run not executed for CEACAM5. GBM ZEB1 is PERMANENTLY CLOSED.",
+          "source": "ceacam5_cap_map.md; gate_arch_v2.md; program_asset_gbm_escapemap.json"
+        }
+      ]
+    },
+    "entity": {
+      "args": {
+        "entity_id": "capability:CAP_04"
+      },
+      "returns_count": 1,
+      "example_output": {
+        "id": "capability:CAP_04",
+        "labels": [
+          "Entity",
+          "Capability"
+        ],
+        "type": "capability",
+        "name": "Target-Lock (Metastasis Driver Identification)",
+        "product_layer": "interception",
+        "cap_code": "CAP_04",
+        "what_it_does": "Identifies genuine metastasis drivers using a composite algorithm: Evo2-7B (evolutionary constraint) + Enformer (chromatin accessibility) + AlphaFold 3 (structural confidence). Composite threshold \u22650.35 = genuine driver.",
+        "cannot_do": "CEACAM5 is NOT in the 38-gene panel \u2014 Target-Lock run not executed for CEACAM5. GBM ZEB1 is PERMANENTLY CLOSED.",
+        "evidence_tier": "COMPUTED",
+        "source": "ceacam5_cap_map.md; gate_arch_v2.md; program_asset_gbm_escapemap.json",
+        "full_json": {
+          "id": "CAP-04",
+          "name": "Target-Lock (Metastasis Driver Identification)",
+          "what_it_does": "Identifies genuine metastasis drivers using a composite algorithm: Evo2-7B (evolutionary constraint) + Enformer (chromatin accessibility) + AlphaFold 3 (structural confidence). Composite threshold \u22650.35 = genuine driver.",
+          "algorithm": {
+            "evo2_7b": "Evolutionary constraint \u2014 likelihood of WT vs mutant under evolutionary selection. High constraint = gene is under purifying selection = likely essential.",
+            "enformer": "Chromatin accessibility and gene regulatory activity \u2014 predicts ATAC-seq/ChIP-seq from DNA sequence. High activity = gene is actively transcribed in the tumor.",
+            "alphafold3": "Structural confidence (pLDDT score [0,100]) \u2014 higher = more structured = more druggable."
+          },
+          "evidence_tier": "COMPUTED",
+          "validated_on": [
+            "OV ZEB1: HR=1.4803 (continuous Cox, bevacizumab arm OS)",
+            "CEACAM5 IHC \u2194 cCEA Spearman \u03c1=0.43 (n=92)"
+          ],
+          "cannot_do": "CEACAM5 is NOT in the 38-gene panel \u2014 Target-Lock run not executed for CEACAM5. GBM ZEB1 is PERMANENTLY CLOSED.",
+          "source": "ceacam5_cap_map.md; gate_arch_v2.md; program_asset_gbm_escapemap.json"
+        }
+      }
+    },
+    "neighbors": {
+      "args": {
+        "entity_id": "capability:CAP_04",
+        "depth": 2
+      },
+      "returns_count": 8,
+      "example_output": [
+        {
+          "neighbor_id": "guardrail:permanently_closed.GBM_ZEB1",
+          "type": "guardrail",
+          "name": "permanently_closed/GBM_ZEB1",
+          "product_layer": "portfolio"
+        },
+        {
+          "neighbor_id": "guardrail:prohibited_claims",
+          "type": "guardrail",
+          "name": "Governance: prohibited_claims",
+          "product_layer": "portfolio"
+        },
+        {
+          "neighbor_id": "biomarker:ceacam5",
+          "type": "biomarker",
+          "name": "CEACAM5 antigen expression",
+          "product_layer": "biology_intelligence"
+        },
+        "...(+5 more)"
+      ]
+    },
+    "relationships_of": {
+      "args": {
+        "entity_id": "capability:CAP_04"
+      },
+      "returns_count": 4,
+      "example_output": [
+        {
+          "predicate": "GOVERNED_BY",
+          "direction": "out",
+          "other_id": "guardrail:permanently_closed.GBM_ZEB1",
+          "other_name": "permanently_closed/GBM_ZEB1",
+          "evidence": "GBM ZEB1 is PERMANENTLY CLOSED (not an escape marker)",
+          "source_file": "crispro_kg_v2/capability_registry.json",
+          "line": null
+        },
+        {
+          "predicate": "GOVERNED_BY",
+          "direction": "out",
+          "other_id": "guardrail:prohibited_claims",
+          "other_name": "Governance: prohibited_claims",
+          "evidence": "Subject to global prohibited-claims list (claim red-team gate)",
+          "source_file": "crispro_kg_v2/capability_registry.json",
+          "line": null
+        },
+        {
+          "predicate": "VALIDATED_ON",
+          "direction": "out",
+          "other_id": "biomarker:ceacam5",
+          "other_name": "CEACAM5 antigen expression",
+          "evidence": "CEACAM5 IHC\u2194cCEA Spearman \u03c1=0.43 (n=92); CEACAM5 NOT in 38-gene panel",
+          "source_file": "crispro_kg_v2/capability_registry.json",
+          "line": null
+        },
+        "...(+1 more)"
+      ]
+    },
+    "path_between": {
+      "args": {
+        "a": "capability:CAP_04",
+        "b": "guardrail:permanently_closed.GBM_ZEB1"
+      },
+      "returns_count": 1,
+      "example_output": [
+        {
+          "node_path": [
+            "capability:CAP_04",
+            "guardrail:permanently_closed.GBM_ZEB1"
+          ],
+          "rel_path": [
+            "GOVERNED_BY"
+          ],
+          "hops": 1
+        }
+      ]
+    },
+    "evidence_for": {
+      "args": {
+        "entity_id": "capability:CAP_06"
+      },
+      "returns_count": 4,
+      "example_output": [
+        {
+          "evidence_id": "brief_program:brief-2",
+          "type": "brief_program_deep",
+          "name": "NSCLC brain metastasis (BrM)",
+          "edge_evidence": "BRIEF-2 is COMPUTATIONAL_HYPOTHESIS, NOT CRISPR-validated (mandatory disclosure)",
+          "verbatim": [
+            "{\"id\": \"BRIEF-2\", \"axis\": \"PTEN-null \\u2192 ITGAV\", \"evidence_tier\": \"COMPUTATIONAL_HYPOTHESIS\", \"deal_ready\": false, \"status\": \"VALIDATION_REQUIRED\", \"indication\": \"NSCLC brain metastasis (BrM)\", \"rationale\": \"PTEN-null cells lose PI3K/AKT regulation and may become dependent on integrin signaling (ITGAV) for survival \\u2014 similar to ZEB1-high cells.\", \"depmap_result\": \"DepMap NULL across all 3 proxies \\u2014 ITGAV is NOT more essential in PTEN-null cells than PTEN-intact cells in the DepMap data.\", \"mandatory_disclosure\": \"BRIEF-2 (PTEN-null\\u2192ITGAV) is a COMPUTATIONAL HYPOTHESIS. DepMap shows NULL essentiality across all 3 proxies. Not CRISPR-validated. Requires experimental validation before any licensing discussion. Must be disclosed in every context where BRIEF-2 appears.\", \"sour"
+          ],
+          "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json"
+        },
+        {
+          "evidence_id": "guardrail:prohibited_claims",
+          "type": "guardrail",
+          "name": "Governance: prohibited_claims",
+          "edge_evidence": "Subject to global prohibited-claims list (claim red-team gate)",
+          "verbatim": null,
+          "source_file": null
+        },
+        {
+          "evidence_id": "brief_program:brief-1",
+          "type": "brief_program_deep",
+          "name": "NSCLC brain metastasis (BrM)",
+          "edge_evidence": "BRIEF-1: ZEB1\u2192ITGAV, delta=\u22120.7184, FDR=0.001203, CRISPR_VALIDATED",
+          "verbatim": [
+            "{\"id\": \"BRIEF-1\", \"axis\": \"ZEB1 \\u2192 ITGAV (synthetic lethality)\", \"evidence_tier\": \"CRISPR_VALIDATED\", \"deal_ready\": true, \"delta\": -0.7184, \"fdr\": 0.001203, \"status\": \"DEAL_READY\", \"indication\": \"NSCLC brain metastasis (BrM)\", \"what_zeb1_is\": \"ZEB1 (Zinc finger E-box binding homeobox 1) is a master regulator of epithelial-mesenchymal transition (EMT). In NSCLC/BrM, ZEB1-high tumors have undergone EMT \\u2014 they are more invasive, more metastatic, and more resistant to chemotherapy. ZEB1-high is a marker of aggressive disease.\", \"what_itgav_is\": \"ITGAV (Integrin alpha-V) is a cell surface receptor that mediates cell adhesion to the extracellular matrix. In ZEB1-high cells, ITGAV becomes essential for survival \\u2014 ZEB1-high cells depend on integrin signaling for anoikis resistance an"
+          ],
+          "source_file": "crispro-knowledge-base/crispro_kg_v2/kg_modules/program_brief_sl.json"
+        },
+        "...(+1 more)"
+      ]
+    },
+    "governance_flags": {
+      "args": {
+        "entity_id": "capability:CAP_04"
+      },
+      "returns_count": 1,
+      "example_output": {
+        "id": "capability:CAP_04",
+        "status": null,
+        "governed_by": [
+          "permanently_closed/GBM_ZEB1",
+          "Governance: prohibited_claims"
+        ],
+        "guardrails": []
+      }
+    },
+    "prohibited_claims": {
+      "args": {},
+      "returns_count": 1,
+      "example_output": {
+        "constrained_claims": [
+          {
+            "claim_id": "claim:ct_01_formula",
+            "name": "CT-01 \u2014 PATH A formula claim (fit = clip((p\u00b7t) / \u2016t\u2016\u2082, 0, 1))",
+            "status": "QUARANTINED_or_LOCKED"
+          },
+          {
+            "claim_id": "claim:ct_02_formula",
+            "name": "CT-02 \u2014 PATH A vs PATH B decision claim",
+            "status": "QUARANTINED_or_LOCKED"
+          },
+          {
+            "claim_id": "claim:ct_03_latify",
+            "name": "CT-03 \u2014 LATIFY delta claim (patent +0.366 vs receipt +0.2641)",
+            "status": "QUARANTINED_or_LOCKED"
+          },
+          {
+            "claim_id": "claim:dl_03_formula",
+            "name": "DL-03 \u2014 Formula-dependent downstream lift",
+            "status": "QUARANTINED_or_LOCKED"
+          },
+          {
+            "claim_id": "claim:dl_05_latify",
+            "name": "DL-05 \u2014 LATIFY vector version delta claim",
+            "status": "QUARANTINED_or_LOCKED"
+          },
+          {
+            "claim_id": "claim:dl_07_ddr",
+            "name": "DL-07 \u2014 Figure 2 DDR 0.983 implausibility \u2014 publication-blocking",
+            "status": "QUARANTINED_or_LOCKED"
+          },
+          {
+            "claim_id": "claim:pc_02_prediction",
+            "name": "PC-02 \u2014 Trial-vector prediction reproducibility (retroactive_prediction_run.py)",
+            "status": "QUARANTINED_or_LOCKED"
+          },
+          {
+            "claim_id": "claim:pc_05_formula",
+            "name": "PC-05 \u2014 Formula-dependent prediction claim",
+            "status": "QUARANTINED_or_LOCKED"
+          },
+          {
+            "claim_id": "claim:pc_06_latify",
+            "name": "PC-06 \u2014 LATIFY prediction claim (formula-dependent)",
+            "status": "QUARANTINED_or_LOCKED"
+          }
+        ],
+        "prohibited_claims": [
+          "CrisPRO predicts individual patient outcomes",
+          "CrisPRO is FDA-cleared or CE-marked",
+          "BRIEF-2 (PTEN-null\u2192ITGAV) is CRISPR-validated",
+          "GBM ZEB1 is an escape marker",
+          "LATIFY delta is [any specific value]",
+          "PATH B formula is acceptable",
+          "DDR 0.983 is a validated figure",
+          "retroactive_prediction_run.py reproduces documented deltas"
+        ]
+      }
+    },
+    "mandatory_disclosures": {
+      "args": {},
+      "returns_count": 9,
+      "example_output": [
+        {
+          "id": "guardrail:quarantined_items",
+          "name": "Governance: quarantined_items",
+          "status": null,
+          "detail": "{\"DL_07\": {\"item\": \"DDR 0.983 figure\", \"status\": \"QUARANTINED \u2014 publication-blocking\", \"reason\": \"DDR axis value 0.983 is implausibly high \u2014 likely a computation error. Cannot be published until resolved.\", \"action_required\": \"Recompute DDR axis value from source data\"}, \"CT_03_DL_05_PC_06\": {\"item\": \"LATIFY delta values\", \"status\": \"QUARANTINED \u2014 vector version conflict\", \"reason\": \"Patent cites delta +0.366; receipt cites delta +0.2641. Vector version unresolved.\", \"action_required\": \"Resolve vector version conflict before citing any LATIFY delta value\", \"safe_to_cite\": \"Responder score 0.8936 vs non-responder 0.6295 \u2014 CORRECT CITATION\"}, \"PC_02\": {\"item\": \"retroactive_prediction_run.py --trial-vectors\", \"status\": \"PERMANENTLY DOWNGRADED\", \"reason\": \"Script does not reproduce documented deltas cleanly\", \"action_required\": \"Fix retroactive_prediction_run.py before any claim about retroactive prediction accuracy\"}}"
+        },
+        {
+          "id": "guardrail:quarantined_items.DL_07",
+          "name": "quarantined_items/DL_07",
+          "status": "QUARANTINED \u2014 publication-blocking",
+          "detail": "{\"item\": \"DDR 0.983 figure\", \"status\": \"QUARANTINED \u2014 publication-blocking\", \"reason\": \"DDR axis value 0.983 is implausibly high \u2014 likely a computation error. Cannot be published until resolved.\", \"action_required\": \"Recompute DDR axis value from source data\"}"
+        },
+        {
+          "id": "guardrail:quarantined_items.CT_03_DL_05_PC_06",
+          "name": "quarantined_items/CT_03_DL_05_PC_06",
+          "status": "QUARANTINED \u2014 vector version conflict",
+          "detail": "{\"item\": \"LATIFY delta values\", \"status\": \"QUARANTINED \u2014 vector version conflict\", \"reason\": \"Patent cites delta +0.366; receipt cites delta +0.2641. Vector version unresolved.\", \"action_required\": \"Resolve vector version conflict before citing any LATIFY delta value\", \"safe_to_cite\": \"Responder score 0.8936 vs non-responder 0.6295 \u2014 CORRECT CITATION\"}"
+        },
+        "...(+6 more)"
+      ]
+    },
+    "what_implements": {
+      "args": {
+        "entity_id": "endpoint_ref:GET /canonical-break-crc"
+      },
+      "returns_count": 2,
+      "example_output": [
+        {
+          "from": "endpoint_ref:GET /canonical-break-crc",
+          "predicate": "IMPLEMENTS",
+          "to": "code_module:layer4_output/demo_router.py",
+          "source_file": "crispro-backend-v3-push/layer4_output/demo_router.py",
+          "line": 78,
+          "evidence": "@router.get('/canonical-break-crc') at crispro-backend-v3-push/layer4_output/demo_router.py:78"
+        },
+        {
+          "from": "endpoint_ref:GET /canonical-break-crc",
+          "predicate": "SERVES",
+          "to": "arbiter_layer:l5_arbiter_output",
+          "source_file": "crispro-backend-v3-push/layer4_output/demo_router.py",
+          "line": 78,
+          "evidence": "route at layer4_output serves L5 output layer"
+        }
+      ]
+    },
+    "entities_by_layer": {
+      "args": {
+        "product": "interception"
+      },
+      "returns_count": 2,
+      "example_output": [
+        {
+          "type": "brief_program_deep",
+          "n": 4,
+          "sample_ids": [
+            "brief_program:brief-1",
+            "brief_program:brief-2",
+            "brief_program:brief-3",
+            "brief_program:brief-4"
+          ]
+        },
+        {
+          "type": "capability",
+          "n": 1,
+          "sample_ids": [
+            "capability:CAP_04"
+          ]
+        }
+      ]
+    },
+    "trial_moa": {
+      "args": {
+        "nct": "NCT00006379"
+      },
+      "returns_count": 1,
+      "example_output": [
+        {
+          "trial": "trial:NCT00006379",
+          "moa_evidence": [
+            "moa_vector={\"ddr\": 0.0, \"mapk\": 0.9, \"pi3k\": 0.0, \"vegf\": 0.0, \"her2\": 0.0, \"io\": 0.0, \"efflux\": 0.0, \"rss\": 0.0}",
+            "confidence=0.85",
+            "source=manual_keyword_matching",
+            "reviewed_by=Zo",
+            "title=Non-Ablative Allo HSCT For Hematologic Malignancies or SAA"
+          ],
+          "axes": [
+            "axis8d:mapk"
+          ],
+          "governance": [
+            "MAPK"
+          ]
+        }
+      ]
+    },
+    "capability_provenance": {
+      "args": {
+        "cap_id": "capability:CAP_04"
+      },
+      "returns_count": 4,
+      "example_output": [
+        {
+          "predicate": "GOVERNED_BY",
+          "direction": "out",
+          "other_id": "guardrail:permanently_closed.GBM_ZEB1",
+          "other_labels": [
+            "Entity",
+            "Guardrail"
+          ],
+          "other_name": "permanently_closed/GBM_ZEB1",
+          "evidence": "GBM ZEB1 is PERMANENTLY CLOSED (not an escape marker)",
+          "source_file": "crispro_kg_v2/capability_registry.json"
+        },
+        {
+          "predicate": "GOVERNED_BY",
+          "direction": "out",
+          "other_id": "guardrail:prohibited_claims",
+          "other_labels": [
+            "Entity",
+            "Guardrail"
+          ],
+          "other_name": "Governance: prohibited_claims",
+          "evidence": "Subject to global prohibited-claims list (claim red-team gate)",
+          "source_file": "crispro_kg_v2/capability_registry.json"
+        },
+        {
+          "predicate": "VALIDATED_ON",
+          "direction": "out",
+          "other_id": "biomarker:ceacam5",
+          "other_labels": [
+            "Entity",
+            "Biomarker"
+          ],
+          "other_name": "CEACAM5 antigen expression",
+          "evidence": "CEACAM5 IHC\u2194cCEA Spearman \u03c1=0.43 (n=92); CEACAM5 NOT in 38-gene panel",
+          "source_file": "crispro_kg_v2/capability_registry.json"
+        },
+        "...(+1 more)"
+      ]
+    }
+  }
+}

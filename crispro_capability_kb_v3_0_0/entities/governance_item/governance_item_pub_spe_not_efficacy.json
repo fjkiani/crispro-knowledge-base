@@ -1,0 +1,32 @@
+{
+  "id": "governance_item:pub_spe_not_efficacy",
+  "type": "governance_item",
+  "name": "SPE gap-ratio is a FEASIBILITY pre-filter, NOT efficacy proof",
+  "source_receipts": [
+    {
+      "source_file": "artistry7_integration::governance (derived from manuscript RUO statements + limitation sections)",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "SPE gap-ratio is a FEASIBILITY pre-filter, NOT efficacy proof"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "A PASS verdict means cytotoxic free plasma concentration is physically achievable at tolerated dose; it does NOT mean the drug is efficacious. A FAIL rules out a candidate on exposure grounds only. SPE must never be cited as evidence a drug works.",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_spe_gate"
+  ],
+  "attributes": {
+    "guardrail_text": "A PASS verdict means cytotoxic free plasma concentration is physically achievable at tolerated dose; it does NOT mean the drug is efficacious. A FAIL rules out a candidate on exposure grounds only. SPE must never be cited as evidence a drug works.",
+    "scope": [
+      "capability:pub_spe_gate"
+    ],
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

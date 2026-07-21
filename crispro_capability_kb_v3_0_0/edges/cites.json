@@ -1,0 +1,138 @@
+[
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:10_1038_nrd_2018_168",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:10_1038_nrd_2018_168",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:10_1038_nrd3287",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:10_1038_nrd3287",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:10_1067_mcp_2002_121829",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:10_1067_mcp_2002_121829",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:10_1145_3571730",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:10_1145_3571730",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:pmid22495656",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:pmid22495656",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:10_1016_j_taap_2022_116073",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:10_1016_j_taap_2022_116073",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:10_1021_acs_jmedchem_5c01610",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:10_1021_acs_jmedchem_5c01610",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:bonovas2020",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:bonovas2020",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:10_1172_jci_insight_133247",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:10_1172_jci_insight_133247",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:spe_feasibility_gate",
+    "dst": "citation:10_1016_j_ygyno_2025_02_001",
+    "source_file": "bib provenance",
+    "evidence": "publication:spe_feasibility_gate cites citation:10_1016_j_ygyno_2025_02_001",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:hgsoc_fap_cxcl10_subgroup",
+    "dst": "citation:10_1016_j_ygyno_2025_01_010",
+    "source_file": "bib provenance",
+    "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1016_j_ygyno_2025_01_010",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:hgsoc_fap_cxcl10_subgroup",
+    "dst": "citation:10_1186_s12885-020-07541-6",
+    "source_file": "bib provenance",
+    "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1186_s12885-020-07541-6",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:hgsoc_fap_cxcl10_subgroup",
+    "dst": "citation:10_1186_s13643-025-02929-6",
+    "source_file": "bib provenance",
+    "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1186_s13643-025-02929-6",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:hgsoc_fap_cxcl10_subgroup",
+    "dst": "citation:10_1084_jem_20191094",
+    "source_file": "bib provenance",
+    "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1084_jem_20191094",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:hgsoc_fap_cxcl10_subgroup",
+    "dst": "citation:10_1007_s00262-024-03761-y",
+    "source_file": "bib provenance",
+    "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1007_s00262-024-03761-y",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:hgsoc_fap_cxcl10_subgroup",
+    "dst": "citation:10_3389_fimmu_2021_690201",
+    "source_file": "bib provenance",
+    "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_3389_fimmu_2021_690201",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "cites",
+    "src": "publication:hgsoc_fap_cxcl10_subgroup",
+    "dst": "citation:10_1038_s41598-025-12693-1",
+    "source_file": "bib provenance",
+    "evidence": "publication:hgsoc_fap_cxcl10_subgroup cites citation:10_1038_s41598-025-12693-1",
+    "_stream": "v3:artistry7_publications"
+  }
+]

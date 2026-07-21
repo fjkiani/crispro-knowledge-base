@@ -1,0 +1,38 @@
+{
+  "id": "drug:spe_itraconazole",
+  "type": "drug",
+  "name": "Itraconazole (SPE FAIL, gap 150.0x)",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+      "line_range": [
+        47,
+        58
+      ],
+      "json_pointer": null,
+      "anchor": "Itraconazole SPE panel row"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Itraconazole: gap ratio 150.0x -> FAIL",
+      "found": true
+    }
+  ],
+  "cross_refs": [
+    "capability:pub_spe_gate"
+  ],
+  "attributes": {
+    "ic50_uM": 1.5,
+    "cmax_uM": 2.0,
+    "ppb": 0.995,
+    "free_cmax_uM": 0.01,
+    "gap_ratio": 150.0,
+    "spe_verdict": "FAIL",
+    "context": "HGSOC drug-repurposing feasibility panel",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

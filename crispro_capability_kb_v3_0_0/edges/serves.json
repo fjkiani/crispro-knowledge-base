@@ -262,5 +262,85 @@
     "source_code": "crispro-backend-v3-push/layer4_output/rag_routes.py",
     "line": 109,
     "evidence": "route at layer4_output serves L5 output layer"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_metformin",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Metformin as PASS",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_mebendazole",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Mebendazole as CONDITIONAL",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_disulfiram",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Disulfiram as CONDITIONAL",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_hydroxychloroquine",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Hydroxychloroquine as CONDITIONAL",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_artesunate",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Artesunate as CONDITIONAL",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_niclosamide",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Niclosamide as FAIL",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_ivermectin",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Ivermectin as FAIL",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_itraconazole",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Itraconazole as FAIL",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_simvastatin",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Simvastatin as FAIL",
+    "_stream": "v3:artistry7_publications"
+  },
+  {
+    "predicate": "serves",
+    "src": "capability:pub_spe_gate",
+    "dst": "drug:spe_salinomycin",
+    "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/generate_figures.py",
+    "evidence": "SPE gate classifies Salinomycin as INSUFFICIENT",
+    "_stream": "v3:artistry7_publications"
   }
 ]

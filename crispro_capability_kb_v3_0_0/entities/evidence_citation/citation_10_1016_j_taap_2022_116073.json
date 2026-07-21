@@ -1,0 +1,37 @@
+{
+  "id": "citation:10_1016_j_taap_2022_116073",
+  "type": "evidence_citation",
+  "name": "Ivermectin-induced cell death of cervical cancer cells in vitro a consequence of precipitate formation in culture media",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "binqabbus2022"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Ivermectin-induced cell death of cervical cancer cells in vitro a consequence of precipitate formation in culture media",
+      "found": true
+    },
+    {
+      "claim": "DOI 10.1016/j.taap.2022.116073",
+      "found": true
+    },
+    {
+      "claim": "year 2022",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "doi": "10.1016/j.taap.2022.116073",
+    "year": "2022",
+    "bibtex_key": "binqabbus2022",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}

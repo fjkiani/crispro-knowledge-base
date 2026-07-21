@@ -1,0 +1,37 @@
+{
+  "id": "citation:10_1021_acs_jmedchem_5c01610",
+  "type": "evidence_citation",
+  "name": "Membrane perturbations and assay interferences by ivermectin explain its in vitro SARS-CoV-2 antiviral activities and la",
+  "source_receipts": [
+    {
+      "source_file": "data-room/datasets/artistry7-platinum-window/publications/10-spe-feasibility-gate/rxiv/references.bib",
+      "line_range": null,
+      "json_pointer": null,
+      "anchor": "eastman2025"
+    }
+  ],
+  "verbatim_evidence": [
+    {
+      "claim": "Membrane perturbations and assay interferences by ivermectin explain its in vitro SARS-CoV-2 antiviral activities and lack of translatability",
+      "found": true
+    },
+    {
+      "claim": "DOI 10.1021/acs.jmedchem.5c01610",
+      "found": true
+    },
+    {
+      "claim": "year 2025",
+      "found": true
+    }
+  ],
+  "cross_refs": [],
+  "attributes": {
+    "doi": "10.1021/acs.jmedchem.5c01610",
+    "year": "2025",
+    "bibtex_key": "eastman2025",
+    "_source_kb": "artistry7_platinum_window"
+  },
+  "_stream": "v3:artistry7_publications",
+  "_mint_planner": "artistry7_integration",
+  "_mint_timestamp": "2026-07-18T21:49:44.389483+00:00"
+}
