@@ -207,5 +207,16 @@
     },
     "_mint_planner": "zeta_custodian",
     "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "source": "vault:synapse_msk_spectrum",
+    "relation": "addresses_gap",
+    "target": "gap:GAP-MSK-ESCAPE-N39",
+    "attributes": {
+      "role": "VALIDATE + RESTORE (actual MSK Spectrum genomics)",
+      "closes_gap": "YES - genomics extracted (CNA+MAF+SEG) for N=40"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
   }
 ]

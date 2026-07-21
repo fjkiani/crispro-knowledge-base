@@ -1,0 +1,34 @@
+{
+  "id": "genomicfeature:msk:mut:JARID2",
+  "type": "GenomicFeature",
+  "name": "JARID2 oncogenic mutation (MSK)",
+  "source_receipts": [
+    "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+  ],
+  "verbatim_evidence": [
+    "JARID2: 4 oncogenic/likely-oncogenic somatic mutation(s) in 3 MSK samples",
+    "Variant classes: Frame_Shift_Ins, Splice_Region"
+  ],
+  "cross_refs": [
+    "JARID2",
+    "p.F1100Afs*88"
+  ],
+  "attributes": {
+    "gene": "JARID2",
+    "feature_type": "somatic_mutation",
+    "n_mutations": 4,
+    "n_samples": 3,
+    "variant_classifications": [
+      "Frame_Shift_Ins",
+      "Splice_Region"
+    ],
+    "example_hgvsp": [
+      "p.F1100Afs*88"
+    ],
+    "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+    "recurrence_pct": 7.5
+  },
+  "_stream": "synapse_msk_spectrum",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T02:15:00Z"
+}

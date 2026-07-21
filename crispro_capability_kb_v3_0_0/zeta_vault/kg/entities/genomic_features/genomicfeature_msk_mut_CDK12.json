@@ -1,0 +1,33 @@
+{
+  "id": "genomicfeature:msk:mut:CDK12",
+  "type": "GenomicFeature",
+  "name": "CDK12 oncogenic mutation (MSK)",
+  "source_receipts": [
+    "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+  ],
+  "verbatim_evidence": [
+    "CDK12: 2 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+    "Variant classes: Frame_Shift_Del"
+  ],
+  "cross_refs": [
+    "CDK12",
+    "p.R185Gfs*6"
+  ],
+  "attributes": {
+    "gene": "CDK12",
+    "feature_type": "somatic_mutation",
+    "n_mutations": 2,
+    "n_samples": 1,
+    "variant_classifications": [
+      "Frame_Shift_Del"
+    ],
+    "example_hgvsp": [
+      "p.R185Gfs*6"
+    ],
+    "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+    "recurrence_pct": 2.5
+  },
+  "_stream": "synapse_msk_spectrum",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T02:15:00Z"
+}

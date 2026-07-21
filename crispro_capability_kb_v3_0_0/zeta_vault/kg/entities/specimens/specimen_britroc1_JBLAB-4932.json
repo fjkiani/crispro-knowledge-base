@@ -7,10 +7,16 @@
       "source": "EGA manifest",
       "egaf_id": "EGAF00008095627",
       "accession": "EGAD00001011049"
+    },
+    {
+      "source": "EGA metadata API",
+      "dataset": "EGAD00001011049",
+      "pulled": "2026-07-21T02:15:00Z"
     }
   ],
   "verbatim_evidence": [
-    "WGS BAM JBLAB-4932.bam; 695969019 bytes; MD5 0ee59edcc3ac4793b9c5b7a2afa9d0db"
+    "WGS BAM JBLAB-4932.bam; 695969019 bytes; MD5 0ee59edcc3ac4793b9c5b7a2afa9d0db",
+    "EGA metadata: shallow WGS, HGSOC, female; platform ['Illumina HiSeq 2500', 'Illumina HiSeq 4000']"
   ],
   "cross_refs": {
     "egaf_id": "EGAF00008095627",
@@ -25,7 +31,20 @@
     "md5": "0ee59edcc3ac4793b9c5b7a2afa9d0db",
     "assay": "WGS_BAM",
     "source_vault": "EGA",
-    "cohort": "BriTROC-1"
+    "cohort": "BriTROC-1",
+    "sequencing_strategy": "shallow WGS (sWGS)",
+    "platform": [
+      "Illumina HiSeq 2500",
+      "Illumina HiSeq 4000"
+    ],
+    "biological_sex": "female",
+    "phenotype": "High grade serous carcinoma",
+    "dataset_title": "Shallow whole genome sequencing",
+    "metadata_filesize": 696266363,
+    "locations": [
+      "crg",
+      "ebi"
+    ]
   },
   "_stream": "zeta_ingest",
   "_mint_planner": "zeta_custodian",

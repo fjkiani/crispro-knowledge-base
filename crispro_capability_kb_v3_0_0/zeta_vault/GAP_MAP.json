@@ -10,7 +10,9 @@
       "role": "TRAIN + VALIDATE",
       "how": "Extract SBS mutational signatures (incl. Sig7/HRD-associated) from tumor BAMs; derive per-patient Sig exposures; fit platinum sensitive/resistant classifier; nested-CV. Replaces hardcoded 0.25 with a data-derived, cross-validated threshold + CI.",
       "blocker": "Full BAM processing = HPC + Europe VM (measured 1.1MB/s here -> 1.8-5.3 days DL alone). Clinical labels (PFI/platinum status) require BriTROC-1 supplement mapping BAM->patient->outcome (NOT in EGA dataset).",
-      "closes_gap": "PARTIAL - infrastructure + raw data available; needs HPC run + external clinical map"
+      "closes_gap": "PARTIAL - infrastructure + raw data available; needs HPC run + external clinical map",
+      "temporal_axis": "AVAILABLE via EGA metadata (385 diagnosis / 294 relapse, 265 subjects, longitudinal) - Sig7 diagnosis->relapse contrast enabled without BAM download",
+      "status_note": "Infrastructure PARTIAL (BAMs not downloaded); temporal stratification metadata NOW available"
     },
     {
       "gap_id": "GAP-SAE-LEAKAGE",
@@ -50,7 +52,10 @@
       "role": "TEST (candidate ctDNA source)",
       "how": "MSK SPECTRUM is multi-modal; verify whether plasma/ctDNA timepoints exist to wire an MRD signal. If present, provides the missing ctDNA cohort for RES-OV-P0-006.",
       "blocker": "Synapse token invalid -> cannot confirm ctDNA modality presence.",
-      "closes_gap": "UNKNOWN - pending valid Synapse token to verify modality"
+      "closes_gap": "UNKNOWN - pending valid Synapse token to verify modality",
+      "status": "UNKNOWN->CLARIFIED",
+      "resolution": "Synapse token now valid; scanned MSK SPECTRUM = tissue WGS only, NO ctDNA/cfDNA/plasma resource present. Gap is architectural (RES-OV-P0-006 ctDNA not wired into prophet); MSK SPECTRUM cannot supply the ctDNA modality. NOT closed by Zeta.",
+      "session": "2026-07-21"
     },
     {
       "gap_id": "GAP-KELIM-SIM",
@@ -70,7 +75,10 @@
       "role": "VALIDATE + RESTORE (the actual MSK Spectrum genomics)",
       "how": "The public MSK SPECTRUM WGS release (cna/maf/seg) is the upstream source for the stripped backend features. Restores escape-pair copy-number + mutation truth directly, replacing the n=39 derived stub.",
       "blocker": "File bytes blocked (invalid token); metadata + file IDs already catalogued.",
-      "closes_gap": "READY_ON_TOKEN - exact files identified; one valid token unblocks restore"
+      "closes_gap": "READY_ON_TOKEN - exact files identified; one valid token unblocks restore",
+      "status": "ADDRESSED",
+      "resolution": "MSK SPECTRUM WGS extracted (N=40): cna.tsv+cohort.maf+segments.seg downloaded+MD5-verified; 40 samples + 30 genomic-feature nodes minted (CCNE1 amp 6/40, TP53 49 muts, BRCA1/2/RB1/NF1 CNA). Genomics now IN vault.",
+      "session": "2026-07-21"
     }
   ]
 }

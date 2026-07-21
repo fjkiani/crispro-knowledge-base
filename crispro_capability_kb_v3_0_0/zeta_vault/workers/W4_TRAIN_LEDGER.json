@@ -1,8 +1,8 @@
 {
   "worker": "W4_TRAIN_LEDGER",
-  "timestamp": "2026-07-21T00:52:23Z",
-  "total_vectors": 20,
-  "avg_silhouette_score": 0.3212,
+  "timestamp": "2026-07-21T02:15:00Z",
+  "total_vectors": 870,
+  "avg_silhouette_score": 0.5937,
   "patientid_keyword_port_verification": "N/A (value-provenance ledger layer)",
   "findings": {
     "ledger": [
@@ -103,6 +103,15 @@
     "not_addressable": [
       "MFAP4 AUROC=0.763"
     ],
-    "honest_summary": "9 hardcoded/simulated/stripped values ledgered. 0 fully closable in-sandbox now (all need downloaded bytes+labels or valid token). 1 READY_ON_TOKEN, 1 NOT addressable (MFAP4)."
+    "honest_summary": "9 hardcoded/simulated/stripped values ledgered. 0 fully closable in-sandbox now (all need downloaded bytes+labels or valid token). 1 READY_ON_TOKEN, 1 NOT addressable (MFAP4).",
+    "msk_real_data_update": {
+      "gap_addressed": "GAP-MSK-ESCAPE-N39",
+      "real_values_now_available": [
+        "CCNE1 amplification frequency: 6/40 = 15% (REAL, replaces any assumed prior)",
+        "TP53 mutation frequency: 39/40 samples (REAL)",
+        "BRCA1/2 CNA loss frequencies extracted (REAL)"
+      ],
+      "note": "N=40 MSK WGS cohort provides real genomic frequencies; these are observed values, not simulated/hardcoded."
+    }
   }
 }

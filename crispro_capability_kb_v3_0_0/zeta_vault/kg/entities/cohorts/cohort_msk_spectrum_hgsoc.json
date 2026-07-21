@@ -1,0 +1,30 @@
+{
+  "id": "cohort:msk_spectrum_hgsoc",
+  "type": "PatientCohort",
+  "name": "MSK SPECTRUM HGSOC (WGS)",
+  "source_receipts": [
+    "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+  ],
+  "verbatim_evidence": [
+    "WGS cohort: 40 samples / 40 patients (SHAH_H* naming)",
+    "Files: cna.tsv (756 genes x 40 samples), cohort.maf (87 somatic mutations, VEP+OncoKB), segments.seg (49,620 CN segments)"
+  ],
+  "cross_refs": [
+    "syn25569736",
+    "syn39607857",
+    "syn39607858",
+    "syn39607860"
+  ],
+  "attributes": {
+    "n_samples": 40,
+    "n_patients": 40,
+    "cancer_type": "HGSOC",
+    "assay": "WGS",
+    "source": "MSK SPECTRUM",
+    "addresses": "GAP-MSK-ESCAPE-N39",
+    "note": "Checkpoint 'N39' approximate; true N=40 patients (39 with somatic mutations in MAF)"
+  },
+  "_stream": "synapse_msk_spectrum",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T02:15:00Z"
+}

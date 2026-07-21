@@ -1,0 +1,19 @@
+{
+  "accession_id": "EGAD00001011049",
+  "title": "Shallow whole genome sequencing",
+  "description": "This dataset contains a collection of tumour samples from high grade serous ovarian carcinoma patients with recurrent disease collected near the point of diagnosis as well as tumour samples collected after patient relapse upon or some time after study entry. The majority of diagnosis samples were preserved in neutral buffered formalin whereas the majority of post-relapse samples were preserved in universal molecular fixative (UMFIX, Sakura Finetek USA, Inc). DNA was extracted and whole genome sequencing libraries were prepared either using the TruSeq DNA Nano kit (Illumina) or the ThruPLEX DNA-Seq Kit (Takara Bio), which were respectively sequenced  at low depth (~0.1-0.5X) on illumina HiSeq 2500 and HiSeq 4000 sequencing platforms. Sequenced reads were aligned to the GRCh37 reference genome (release hs37d5).",
+  "dataset_types": [
+    "Whole genome sequencing"
+  ],
+  "technologies": [
+    "Illumina HiSeq 2500",
+    "Illumina HiSeq 4000"
+  ],
+  "num_samples": 679,
+  "access_type": "controlled",
+  "is_in_beacon": false,
+  "is_released": true,
+  "released_date": "2001-01-01T00:00:00+01:00",
+  "is_deprecated": false,
+  "policy_accession_id": "EGAP00001000436"
+}

@@ -1,8 +1,8 @@
 {
   "worker": "W5_PRODUCTION_REFINEMENT",
-  "timestamp": "2026-07-21T00:52:49Z",
-  "total_vectors": 797,
-  "avg_silhouette_score": 0.6579,
+  "timestamp": "2026-07-21T02:15:00Z",
+  "total_vectors": 870,
+  "avg_silhouette_score": 0.5937,
   "patientid_keyword_port_verification": "679/679 specimen ports live for downstream per-patient training",
   "findings": {
     "refinement_plan": [
@@ -93,6 +93,16 @@
       "zeta_contribution": "Zeta provides REAL-DATA training/validation paths for Sig7, KELIM, escape-pairs, DDR panel, SAE-leakage \u2014 but NONE closes in-sandbox today without token/HPC/labels.",
       "ruo_contamination_check": "PASS - no RUO claims elevated to clinical; all tiers preserved verbatim; MFAP4 not falsely closed."
     },
-    "sequencing": "P0(token+SAS) -> P1(code fixes+EGA slice) -> P2(ctDNA wire) -> P3(logit refit). MFAP4 never closable via Zeta."
+    "sequencing": "P0(token+SAS) -> P1(code fixes+EGA slice) -> P2(ctDNA wire) -> P3(logit refit). MFAP4 never closable via Zeta.",
+    "session_update": {
+      "new_data": "MSK SPECTRUM WGS (N=40) extracted; EGA temporal axis (385/294) available",
+      "gaps_advanced": [
+        "GAP-MSK-ESCAPE-N39 -> ADDRESSED",
+        "GAP-SIG7-BRITROC temporal -> AVAILABLE",
+        "TF2-SLOP-004 CCNE1 -> CLOSED"
+      ],
+      "cleared_for_patient_facing": "NO (unchanged - framework code issues T2/T12 + dead code RES-OV-P0-009 remain; data enrichment does not change production-eligibility)",
+      "ruo_check": "PASS (no unguarded clinical claims introduced)"
+    }
   }
 }

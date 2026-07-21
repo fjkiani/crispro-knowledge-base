@@ -1,0 +1,45 @@
+{
+  "id": "biospecimen:msk:SHAH_H000213_T13_01_WG01",
+  "type": "Biospecimen",
+  "name": "SHAH_H000213_T13_01_WG01",
+  "source_receipts": [
+    "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+  ],
+  "verbatim_evidence": [
+    "WGS sample SHAH_H000213_T13_01_WG01; patient SHAH_H000213"
+  ],
+  "cross_refs": [
+    "SHAH_H000213_T13_01_WG01",
+    "SHAH_H000213"
+  ],
+  "attributes": {
+    "sample_id": "SHAH_H000213_T13_01_WG01",
+    "patient_id": "SHAH_H000213",
+    "assay": "WGS",
+    "cancer_type": "HGSOC",
+    "source_vault": "synapse_msk_spectrum",
+    "n_cn_segments": 701,
+    "n_somatic_mutations": 3,
+    "panel_cna": {
+      "CCNE1": 0,
+      "BRCA1": -1,
+      "BRCA2": 0,
+      "RB1": 0,
+      "NF1": -1,
+      "CDK12": -1,
+      "RAD51C": -1,
+      "RAD51B": -1,
+      "PALB2": 0,
+      "TP53": -1,
+      "MYC": -1,
+      "KRAS": 0,
+      "PTEN": 0,
+      "PIK3CA": -1
+    },
+    "ccne1_cna": 0,
+    "ccne1_amplified": false
+  },
+  "_stream": "synapse_msk_spectrum",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T02:15:00Z"
+}

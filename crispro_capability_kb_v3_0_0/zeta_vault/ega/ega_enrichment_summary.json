@@ -1,0 +1,20 @@
+{
+  "dataset": "EGAD00001011049",
+  "title": "Shallow whole genome sequencing",
+  "strategy": "shallow WGS",
+  "platforms": [
+    "Illumina HiSeq 2500",
+    "Illumina HiSeq 4000"
+  ],
+  "n_samples": 679,
+  "n_subjects": 265,
+  "temporal_split": {
+    "diagnosis": 385,
+    "relapse": 294
+  },
+  "all_female_hgsoc": true,
+  "md5_overlap_with_manifest": "679/679",
+  "specimens_enriched": 679,
+  "honest_limitation": "metadata API does not expose EGAN<->EGAF row linkage; temporal marker mapped at cohort/stratum level, NOT to individual BAM specimens",
+  "no_bam_bytes_downloaded": true
+}

@@ -1,0 +1,6 @@
+{
+  "gap": "GAP-CTDNA-NOTWIRED",
+  "synapse_access": "OK (token valid)",
+  "ctdna_resources_found": [],
+  "conclusion": "MSK SPECTRUM syn25569736 is tissue WGS (CNA/MAF/SEG). No ctDNA/cfDNA dataset found at project top level. Gap remains architecturally NOT_WIRED (RES-OV-P0-006); MSK SPECTRUM does not supply a ctDNA modality to wire it."
+}
