@@ -1,0 +1,24 @@
+
+================ ZETA VAULT — HYBRID INGESTION BATCH REPORT ================
+Collection:              zeta_vault  (SEPARATE from crispro_kb_v3 — v3 untouched @ 1418 pts)
+Dual-tower indexing:     DENSE = nvidia/llama-nemotron-embed-vl-1b-v2:free (2048-dim, Cosine)
+                         SPARSE = Qdrant/bm25 (IDF modifier)
+Fusion:                  RRF (Reciprocal Rank Fusion)
+
+(1) TOTAL VECTORS GENERATED:      797
+    - Biospecimen (genomic):      679
+    - Trial (clinical telemetry): 92
+    - Dataset / File / Gap / Vault/ Resource / Cohort: 26
+
+(2) AVG SILHOUETTE SCORE:         0.6579  (by entity_type, cosine — strong structure)
+                                  0.2308  (unsupervised KMeans k=8)
+
+(3) PATIENTID -> KEYWORD PORTS:   679/679 specimen IDs exact-addressable (100%)
+    Exact-ID retrieval verified:  EGAF00008095569 -> JBLAB-4261 specimen ✓
+                                  JBLAB-4261       -> correct specimen  ✓
+                                  cna.tsv          -> syn39607857 file  ✓
+
+METADATA FINGERPRINT (per chunk): primary_key / source_vault / biological_state /
+                                  genomic_signature / temporal_marker
+VAULT_INVENTORY:                  797 entries, 679 with real Source_File_MD5, STALE-flagging armed
+============================================================================

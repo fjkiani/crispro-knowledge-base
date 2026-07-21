@@ -1,0 +1,34 @@
+{
+  "id": "vault:sas_pds",
+  "type": "DataVault",
+  "name": "SAS Project Data Sphere Vault",
+  "source_receipts": [
+    {
+      "source": "SAS CAS/SASLogon OAuth",
+      "host": "mpmprodvdmml.ondemand.sas.com",
+      "retrieved": "2026-07-21T00:42:06Z"
+    }
+  ],
+  "verbatim_evidence": [
+    "102 caslibs, 15 cancer types, 543 source files, 4,009,157,902 bytes (4.0 GB)",
+    "CDISC ADaM clinical-trial warehouse: adae/adlb/adcm/adex/adeg/admh + legacy PDS naming",
+    "Authenticated OK via both swat.CAS and SASLogon OAuth password grant"
+  ],
+  "cross_refs": {
+    "cas_host": "mpmprodvdmml.ondemand.sas.com"
+  },
+  "attributes": {
+    "source_vault": "PDS_ProjectDataSphere",
+    "access": "AUTHENTICATED_OK",
+    "download": "AVAILABLE",
+    "n_caslibs": 102,
+    "n_trial_caslibs_with_files": 92,
+    "n_source_files": 543,
+    "total_bytes": 4009157902,
+    "total_gb": 4.0,
+    "biological_relevance": "CDISC ADaM oncology clinical-trial telemetry (labs/AE/dosing/serial markers)"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

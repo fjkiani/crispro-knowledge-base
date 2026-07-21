@@ -1,0 +1,30 @@
+{
+  "id": "dataset:synapse:syn52458607",
+  "type": "Dataset",
+  "name": "Vazquez-Garcia/Uhlitz Nature 2022",
+  "source_receipts": [
+    {
+      "source": "Synapse metadata",
+      "syn_id": "syn52458607",
+      "project": "syn25569736"
+    }
+  ],
+  "verbatim_evidence": [
+    "Vazquez-Garcia/Uhlitz Nature 2022: published multi-modal release",
+    "Access: metadata public, bytes blocked (token invalid)"
+  ],
+  "cross_refs": {
+    "synapse_id": "syn52458607",
+    "project": "syn25569736"
+  },
+  "attributes": {
+    "source_vault": "Synapse",
+    "dataset_name": "Vazquez-Garcia/Uhlitz Nature 2022",
+    "content": "published multi-modal release",
+    "biological_relevance": "HGSOC multi-region",
+    "download_status": "BLOCKED_needs_valid_token"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

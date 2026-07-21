@@ -1,0 +1,32 @@
+{
+  "id": "gap:GAP-SAE-LEAKAGE",
+  "type": "KBGap",
+  "name": "GAP-SAE-LEAKAGE",
+  "source_receipts": [
+    {
+      "source": "GAP_MAP.json",
+      "gap_id": "GAP-SAE-LEAKAGE",
+      "method": "KB-audit vs Zeta mapping"
+    }
+  ],
+  "verbatim_evidence": [
+    "KB claim: TRUE SAE baseline AUROC 0.783 (149pts) -> nested-CV 0.478 (-0.305 'significant_leakage'); Tier3_validation_cohort.json STRIPPED",
+    "Current tier: LEAKAGE_FLAGGED (proxy 0.631 vs true 0.485)",
+    "Zeta dataset: SAS PDS longitudinal labs (adlb.sas7bdat, 28-122MB/trial) + adverse events (adae) across 102 trials"
+  ],
+  "cross_refs": {
+    "gap_id": "GAP-SAE-LEAKAGE"
+  },
+  "attributes": {
+    "current_tier": "LEAKAGE_FLAGGED (proxy 0.631 vs true 0.485)",
+    "role": "TEST (external replication of SAE-style serial-marker leakage)",
+    "how": "PDS trials carry serial safety labs + AE timelines. Can test whether serial-biomarker 'escalation' features generalize out-of-sample vs leak \u2014 the exact failure mode flagged for SAE. Independent cohorts break the leakage.",
+    "blocker": "PDS is pan-cancer clinical-trial data, not the exact SAE ovarian cohort; serves as external stress-test, not a like-for-like restore of Tier3.",
+    "closes_gap": "PARTIAL - enables independent leakage stress-test; does NOT restore stripped Tier3 cohort",
+    "zeta_dataset": "SAS PDS longitudinal labs (adlb.sas7bdat, 28-122MB/trial) + adverse events (adae) across 102 trials",
+    "kb_claim": "TRUE SAE baseline AUROC 0.783 (149pts) -> nested-CV 0.478 (-0.305 'significant_leakage'); Tier3_validation_cohort.json STRIPPED"
+  },
+  "_stream": "zeta_gapmap",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

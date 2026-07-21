@@ -1,0 +1,30 @@
+{
+  "id": "dataset:synapse:syn66309959",
+  "type": "Dataset",
+  "name": "McPherson Nature 2025",
+  "source_receipts": [
+    {
+      "source": "Synapse metadata",
+      "syn_id": "syn66309959",
+      "project": "syn25569736"
+    }
+  ],
+  "verbatim_evidence": [
+    "McPherson Nature 2025: published multi-modal release",
+    "Access: metadata public, bytes blocked (token invalid)"
+  ],
+  "cross_refs": {
+    "synapse_id": "syn66309959",
+    "project": "syn25569736"
+  },
+  "attributes": {
+    "source_vault": "Synapse",
+    "dataset_name": "McPherson Nature 2025",
+    "content": "published multi-modal release",
+    "biological_relevance": "HGSOC evolution",
+    "download_status": "BLOCKED_needs_valid_token"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

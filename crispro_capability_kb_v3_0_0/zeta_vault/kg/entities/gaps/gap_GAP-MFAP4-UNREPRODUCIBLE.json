@@ -1,0 +1,32 @@
+{
+  "id": "gap:GAP-MFAP4-UNREPRODUCIBLE",
+  "type": "KBGap",
+  "name": "GAP-MFAP4-UNREPRODUCIBLE",
+  "source_receipts": [
+    {
+      "source": "GAP_MAP.json",
+      "gap_id": "GAP-MFAP4-UNREPRODUCIBLE",
+      "method": "KB-audit vs Zeta mapping"
+    }
+  ],
+  "verbatim_evidence": [
+    "KB claim: MFAP4 production wire AUROC=0.763 (constants.py:494-502) source GSE63885; GSE63885 sample_annotations.csv STRIPPED -> bootstrap FAILS -> UNREPRODUCIBLE",
+    "Current tier: UNREPRODUCIBLE (RNA_ONLY, annotations missing)",
+    "Zeta dataset: None of the 3 Zeta vaults directly (GSE63885 is external GEO); SAS PDS provides analogous RNA/clinical only if a matching trial exists"
+  ],
+  "cross_refs": {
+    "gap_id": "GAP-MFAP4-UNREPRODUCIBLE"
+  },
+  "attributes": {
+    "current_tier": "UNREPRODUCIBLE (RNA_ONLY, annotations missing)",
+    "role": "NOT_ADDRESSABLE_BY_ZETA",
+    "how": "Zeta does not contain GSE63885. Honest status: MFAP4 0.763 remains unreproducible until GSE63885 annotations are restored from GEO directly. Do NOT claim Zeta fixes this.",
+    "blocker": "Wrong dataset family; requires GEO GSE63885 restore.",
+    "closes_gap": "NO - out of Zeta scope; flagged to prevent false closure",
+    "zeta_dataset": "None of the 3 Zeta vaults directly (GSE63885 is external GEO); SAS PDS provides analogous RNA/clinical only if a matching trial exists",
+    "kb_claim": "MFAP4 production wire AUROC=0.763 (constants.py:494-502) source GSE63885; GSE63885 sample_annotations.csv STRIPPED -> bootstrap FAILS -> UNREPRODUCIBLE"
+  },
+  "_stream": "zeta_gapmap",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

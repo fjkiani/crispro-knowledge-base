@@ -1,0 +1,34 @@
+{
+  "id": "trial:sas:HeadNe_SanofiU_1998_142",
+  "type": "Trial",
+  "name": "HeadNe trial SanofiU 1998 (142)",
+  "source_receipts": [
+    {
+      "source": "SAS CAS fileinfo",
+      "caslib": "HeadNe_SanofiU_1998_142",
+      "n_files": 2
+    }
+  ],
+  "verbatim_evidence": [
+    "CDISC ADaM caslib HeadNe_SanofiU_1998_142: 2 source files",
+    "API-created caslib",
+    "table list unavailable"
+  ],
+  "cross_refs": {
+    "caslib": "HeadNe_SanofiU_1998_142"
+  },
+  "attributes": {
+    "source_vault": "PDS_ProjectDataSphere",
+    "cancer_type": "HeadNe",
+    "sponsor": "SanofiU",
+    "year": "1998",
+    "trial_id": "142",
+    "n_files": 2,
+    "total_bytes": 493863,
+    "adam_tables": [],
+    "biological_relevance": "HeadNe clinical telemetry (labs/AE/dosing/serial markers)"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

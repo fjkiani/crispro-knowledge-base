@@ -1,0 +1,76 @@
+{
+  "worker": "W3_DISK",
+  "timestamp": "2026-07-21T00:51:56Z",
+  "total_vectors": 797,
+  "avg_silhouette_score": 0.6579,
+  "patientid_keyword_port_verification": "679/679 specimen PatientIDs registered in VAULT_INVENTORY",
+  "findings": {
+    "physical_inventory": {
+      "EGA_BriTROC1": {
+        "location": "EGA EGAD00001011049",
+        "access": "AUTHENTICATED_OK",
+        "download": "WORKING_1.1MBps",
+        "n_files": 679,
+        "bytes": 510797964805,
+        "gb": 510.8,
+        "type": "WGS_BAM_ONLY",
+        "downloaded_here": [
+          "EGAF00008095569 / JBLAB-4261.bam (123MB, MD5 verified)"
+        ],
+        "clinical_map": "ABSENT (external: BriTROC-1 supplement)",
+        "in_sandbox_feasible": "NO - 1.8-5.3 days DL + 512GB disk ceiling"
+      },
+      "Synapse_MSK_SPECTRUM": {
+        "location": "syn25569736",
+        "access": "TOKEN_INVALID_401",
+        "download": "BLOCKED",
+        "metadata": "PUBLIC_READABLE",
+        "key_files": [
+          "cna.tsv/syn39607857",
+          "cohort.maf/syn39607858",
+          "segments.seg/syn39607860"
+        ],
+        "datasets": 7,
+        "downloaded_here": [],
+        "in_sandbox_feasible": "NO - needs valid token"
+      },
+      "SAS_PDS": {
+        "location": "mpmprodvdmml.ondemand.sas.com",
+        "access": "AUTHENTICATED_OK",
+        "download": "AVAILABLE",
+        "n_caslibs": 102,
+        "n_trials": 92,
+        "n_files": 543,
+        "bytes": 4009157902,
+        "gb": 4.0,
+        "type": "CDISC_ADaM_clinical",
+        "cancer_types": 14,
+        "downloaded_here": [],
+        "in_sandbox_feasible": "YES - 4.0GB fits; download+parse feasible next"
+      },
+      "local_v3_KB": {
+        "location": "/workspace/crispro-knowledge-base/crispro_capability_kb_v3_0_0",
+        "access": "ON_DISK",
+        "entities": "30 types",
+        "note": "existing KB (668 entities/1239 edges per checkpoint)"
+      },
+      "zeta_KG": {
+        "location": "/workspace/zeta_vault/kg + /mnt/results/zeta_vault/kg",
+        "entities": 797,
+        "edges": 798,
+        "access": "ON_DISK"
+      },
+      "zeta_vault_qdrant": {
+        "collection": "zeta_vault",
+        "points": 797,
+        "towers": "dense(2048)+bm25",
+        "access": "LIVE"
+      }
+    },
+    "total_characterized_gb": 514.8,
+    "in_sandbox_downloadable_now_gb": 4.0,
+    "blocked_gb": 510.8,
+    "blocked_reason": "EGA slow+disk ceiling (infeasible in-sandbox); Synapse token invalid",
+    "honest_status": "514.8 GB characterized; only 4.0 GB (SAS) is in-sandbox-actionable now."
+  }
+}

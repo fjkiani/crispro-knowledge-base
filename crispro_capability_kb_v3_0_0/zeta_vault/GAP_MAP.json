@@ -1,0 +1,76 @@
+{
+  "generated": "2026-07-21T00:35:50Z",
+  "method": "Each existing-KB honest gap mapped to the Zeta vault dataset that can TRAIN / VALIDATE / TEST it. Roles are explicit; no gap is claimed closed by Zeta unless a real accessible dataset supports it.",
+  "gaps": [
+    {
+      "gap_id": "GAP-SIG7-BRITROC",
+      "kb_claim": "BriTROC Sig7 platinum-resistance threshold=0.25 (constants.py:29); BRITROC_MASTER.csv 273pts on-disk but UNUSED at runtime; hardcoded midpoint heuristic",
+      "current_tier": "HEURISTIC (threshold not fit to data)",
+      "zeta_dataset": "EGA EGAD00001011049 (BriTROC-1) \u2014 679 BAMs / 292 patients / 510.8GB",
+      "role": "TRAIN + VALIDATE",
+      "how": "Extract SBS mutational signatures (incl. Sig7/HRD-associated) from tumor BAMs; derive per-patient Sig exposures; fit platinum sensitive/resistant classifier; nested-CV. Replaces hardcoded 0.25 with a data-derived, cross-validated threshold + CI.",
+      "blocker": "Full BAM processing = HPC + Europe VM (measured 1.1MB/s here -> 1.8-5.3 days DL alone). Clinical labels (PFI/platinum status) require BriTROC-1 supplement mapping BAM->patient->outcome (NOT in EGA dataset).",
+      "closes_gap": "PARTIAL - infrastructure + raw data available; needs HPC run + external clinical map"
+    },
+    {
+      "gap_id": "GAP-SAE-LEAKAGE",
+      "kb_claim": "TRUE SAE baseline AUROC 0.783 (149pts) -> nested-CV 0.478 (-0.305 'significant_leakage'); Tier3_validation_cohort.json STRIPPED",
+      "current_tier": "LEAKAGE_FLAGGED (proxy 0.631 vs true 0.485)",
+      "zeta_dataset": "SAS PDS longitudinal labs (adlb.sas7bdat, 28-122MB/trial) + adverse events (adae) across 102 trials",
+      "role": "TEST (external replication of SAE-style serial-marker leakage)",
+      "how": "PDS trials carry serial safety labs + AE timelines. Can test whether serial-biomarker 'escalation' features generalize out-of-sample vs leak \u2014 the exact failure mode flagged for SAE. Independent cohorts break the leakage.",
+      "blocker": "PDS is pan-cancer clinical-trial data, not the exact SAE ovarian cohort; serves as external stress-test, not a like-for-like restore of Tier3.",
+      "closes_gap": "PARTIAL - enables independent leakage stress-test; does NOT restore stripped Tier3 cohort"
+    },
+    {
+      "gap_id": "GAP-23GENE-PROXY",
+      "kb_claim": "23-gene DDR proxy panel AUROC 0.495 (95%CI 0.386-0.602) on TCGA-OV (166pts) = RANDOM; mean scores backwards (resistant 0.238 < sensitive 0.253)",
+      "current_tier": "RANDOM (not better than chance)",
+      "zeta_dataset": "EGA BriTROC-1 (genomic truth) + Synapse MSK cohort.maf/cna.tsv (mutation+CNA)",
+      "role": "VALIDATE (re-derive DDR panel on orthogonal genomic cohort)",
+      "how": "BriTROC + MSK give independent DDR mutation/CNA profiles with platinum outcomes; re-fit or refute the 23-gene panel on non-TCGA data. If still ~0.5, panel is dead; if signal emerges, panel becomes cohort-specific.",
+      "blocker": "MSK bytes blocked (invalid token); BriTROC needs HPC + clinical map.",
+      "closes_gap": "PARTIAL - validation cohorts identified; access blockers apply"
+    },
+    {
+      "gap_id": "GAP-MFAP4-UNREPRODUCIBLE",
+      "kb_claim": "MFAP4 production wire AUROC=0.763 (constants.py:494-502) source GSE63885; GSE63885 sample_annotations.csv STRIPPED -> bootstrap FAILS -> UNREPRODUCIBLE",
+      "current_tier": "UNREPRODUCIBLE (RNA_ONLY, annotations missing)",
+      "zeta_dataset": "None of the 3 Zeta vaults directly (GSE63885 is external GEO); SAS PDS provides analogous RNA/clinical only if a matching trial exists",
+      "role": "NOT_ADDRESSABLE_BY_ZETA",
+      "how": "Zeta does not contain GSE63885. Honest status: MFAP4 0.763 remains unreproducible until GSE63885 annotations are restored from GEO directly. Do NOT claim Zeta fixes this.",
+      "blocker": "Wrong dataset family; requires GEO GSE63885 restore.",
+      "closes_gap": "NO - out of Zeta scope; flagged to prevent false closure"
+    },
+    {
+      "gap_id": "GAP-CTDNA-NOTWIRED",
+      "kb_claim": "ctDNA NOT_WIRED_INTO_PROPHET (accepted by Kill Chain SIGNAL_CTDNA_MRD=True only); RES-OV-P0-006 OPEN pending TCGA-OV ctDNA cohort",
+      "current_tier": "NOT_WIRED (no ctDNA cohort)",
+      "zeta_dataset": "Synapse MSK SPECTRUM (plasma/ctDNA modality if present) \u2014 needs verification once token valid",
+      "role": "TEST (candidate ctDNA source)",
+      "how": "MSK SPECTRUM is multi-modal; verify whether plasma/ctDNA timepoints exist to wire an MRD signal. If present, provides the missing ctDNA cohort for RES-OV-P0-006.",
+      "blocker": "Synapse token invalid -> cannot confirm ctDNA modality presence.",
+      "closes_gap": "UNKNOWN - pending valid Synapse token to verify modality"
+    },
+    {
+      "gap_id": "GAP-KELIM-SIM",
+      "kb_claim": "KELIM convergence model trained on N=500 SIMULATED (MC seed 42), 0 real patients; Model4 AUROC 0.828 but uplift +0.000 vs additive, -0.002 vs KELIM-only. Coeffs kelim_k=-3.2202 etc = sim, not fit",
+      "current_tier": "SIMULATION_ONLY (no real patients)",
+      "zeta_dataset": "SAS PDS trials with serial CA-125 / tumor-marker kinetics (ador/adef/adlb series) \u2014 analog to KELIM value path",
+      "role": "TRAIN (real serial-marker kinetics to replace simulated betas)",
+      "how": "PDS longitudinal marker series enable real KELIM-style kinetic modeling with actual outcomes, replacing the MC-seeded convergence betas. Only if a trial has CA-125-equivalent serial markers + platinum-type outcome.",
+      "blocker": "PDS is pan-cancer; need to locate ovarian/serial-CA125 trial. KELIM value path (Lyon API) already works; this targets the SIM convergence betas only.",
+      "closes_gap": "PARTIAL - real serial-marker training feasible if matching trial identified"
+    },
+    {
+      "gap_id": "GAP-MSK-ESCAPE-N39",
+      "kb_claim": "MSK Spectrum 39 WGS profiles; escape run n_pairs=1/n_escape=0; backend MSK-Spectrum/ground_truth STRIPPED; Kill Chain cites escape rates from n=39 derived stub",
+      "current_tier": "STRIPPED (backend), stub-only on disk",
+      "zeta_dataset": "Synapse MSK SPECTRUM Bulk WGS (cna.tsv, cohort.maf, segments.seg) + 2022/2025 Nature releases",
+      "role": "VALIDATE + RESTORE (the actual MSK Spectrum genomics)",
+      "how": "The public MSK SPECTRUM WGS release (cna/maf/seg) is the upstream source for the stripped backend features. Restores escape-pair copy-number + mutation truth directly, replacing the n=39 derived stub.",
+      "blocker": "File bytes blocked (invalid token); metadata + file IDs already catalogued.",
+      "closes_gap": "READY_ON_TOKEN - exact files identified; one valid token unblocks restore"
+    }
+  ]
+}

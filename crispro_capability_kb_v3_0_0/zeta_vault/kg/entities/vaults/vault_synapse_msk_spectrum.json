@@ -1,0 +1,44 @@
+{
+  "id": "vault:synapse_msk_spectrum",
+  "type": "DataVault",
+  "name": "Synapse MSK SPECTRUM Vault",
+  "source_receipts": [
+    {
+      "source": "Synapse REST/get",
+      "project": "syn25569736",
+      "retrieved": "2026-07-21T00:42:06Z"
+    }
+  ],
+  "verbatim_evidence": [
+    "Metadata PUBLIC_READABLE; authenticated calls return 401 Invalid access token",
+    "File bytes 403 anonymous -> downloads BLOCKED pending valid token",
+    "Key WGS files identified: cna.tsv (syn39607857), cohort.maf (syn39607858), segments.seg (syn39607860)"
+  ],
+  "cross_refs": {
+    "synapse_project": "syn25569736"
+  },
+  "attributes": {
+    "source_vault": "Synapse",
+    "access": "TOKEN_INVALID_401",
+    "metadata_access": "PUBLIC_READABLE",
+    "download": "BLOCKED_needs_valid_token",
+    "datasets": {
+      "Bulk WGS": "syn33521770 (cna.tsv, cohort.maf, segments.seg)",
+      "MSK-IMPACT": "syn33521771",
+      "scRNA": "syn33521743 (5 items)",
+      "H-E": "syn33521762",
+      "mpIF": "syn33520881",
+      "McPherson_Nature_2025": "syn66309959",
+      "Vazquez-Garcia_Uhlitz_Nature_2022": "syn52458607"
+    },
+    "key_files_identified": [
+      "cna.tsv (syn39607857)",
+      "cohort.maf (syn39607858)",
+      "segments.seg (syn39607860)"
+    ],
+    "biological_relevance": "MSK SPECTRUM HGSOC multi-modal escape pairs; CCNE1 CNA"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

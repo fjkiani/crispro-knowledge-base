@@ -1,0 +1,34 @@
+{
+  "id": "trial:sas:LungNo_EliLill_2008_141",
+  "type": "Trial",
+  "name": "LungNo trial EliLill 2008 (141)",
+  "source_receipts": [
+    {
+      "source": "SAS CAS fileinfo",
+      "caslib": "LungNo_EliLill_2008_141",
+      "n_files": 1
+    }
+  ],
+  "verbatim_evidence": [
+    "CDISC ADaM caslib LungNo_EliLill_2008_141: 1 source files",
+    "API-created caslib",
+    "table list unavailable"
+  ],
+  "cross_refs": {
+    "caslib": "LungNo_EliLill_2008_141"
+  },
+  "attributes": {
+    "source_vault": "PDS_ProjectDataSphere",
+    "cancer_type": "LungNo",
+    "sponsor": "EliLill",
+    "year": "2008",
+    "trial_id": "141",
+    "n_files": 1,
+    "total_bytes": 4096,
+    "adam_tables": [],
+    "biological_relevance": "LungNo clinical telemetry (labs/AE/dosing/serial markers)"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

@@ -1,0 +1,78 @@
+{
+  "generated": "2026-07-21T00:35:02Z",
+  "custodian": "Zeta Research Vault",
+  "vaults": {
+    "EGA_BriTROC1": {
+      "accession": "EGAD00001011049",
+      "source_vault": "EGA",
+      "access": "AUTHENTICATED_OK",
+      "download": "WORKING_SLOW_1.1MBps_non_europe",
+      "n_files": 679,
+      "total_bytes": 510797964805,
+      "total_gb": 510.8,
+      "content": "WGS BAM (aligned reads); paired archival + relapse specimens",
+      "unique_patients_jblab": 292,
+      "file_type": "BAM_ONLY",
+      "clinical_map_present": false,
+      "clinical_map_location": "BriTROC-1 publication supplement / separate accession (NOT in this dataset)",
+      "biological_relevance": "platinum sensitive/resistant HGSOC; mutational Sig7; copy-number breakpoints"
+    },
+    "Synapse_MSK_SPECTRUM": {
+      "project": "syn25569736",
+      "source_vault": "Synapse",
+      "access": "TOKEN_INVALID_401",
+      "metadata_access": "PUBLIC_READABLE",
+      "download": "BLOCKED_needs_valid_token",
+      "datasets": {
+        "Bulk WGS": "syn33521770 (cna.tsv, cohort.maf, segments.seg)",
+        "MSK-IMPACT": "syn33521771",
+        "scRNA": "syn33521743 (5 items)",
+        "H-E": "syn33521762",
+        "mpIF": "syn33520881",
+        "McPherson_Nature_2025": "syn66309959",
+        "Vazquez-Garcia_Uhlitz_Nature_2022": "syn52458607"
+      },
+      "key_files_identified": [
+        "cna.tsv (syn39607857)",
+        "cohort.maf (syn39607858)",
+        "segments.seg (syn39607860)"
+      ],
+      "biological_relevance": "MSK SPECTRUM HGSOC multi-modal escape pairs; CCNE1 CNA, escape-pair genomics"
+    },
+    "SAS_PDS": {
+      "cas_url": "https://mpmprodvdmml.ondemand.sas.com/cas-shared-default-http/",
+      "source_vault": "PDS_ProjectDataSphere",
+      "access": "AUTHENTICATED_OK",
+      "download": "AVAILABLE",
+      "n_caslibs": 102,
+      "n_trial_caslibs_with_files": 92,
+      "n_source_files": 543,
+      "total_bytes": 4009157902,
+      "total_gb": 4.0,
+      "cancer_types": [
+        "Breast",
+        "Colorectal",
+        "Gastric",
+        "Glioma",
+        "HeadNeck",
+        "Kidney",
+        "Liver",
+        "LungNSCLC",
+        "LungSCLC",
+        "Lymphoma",
+        "Melanoma",
+        "MultipleMyeloma",
+        "Myelodysplastic",
+        "Pancreatic",
+        "Prostate"
+      ],
+      "table_standard": "CDISC ADaM + legacy PDS (adae/adlb/adcm/adex/adeg/admh/ador/adef/demog/lab_safe/vitals)",
+      "biological_relevance": "longitudinal clinical telemetry: labs (adlb), adverse events (adae), exposure (adex), response (ador/adef)"
+    }
+  },
+  "grand_total": {
+    "accessible_now_gb": 514.8,
+    "blocked_gb_pending_token": "MSK SPECTRUM bytes (unknown size; token invalid)",
+    "headline": "510.8 GB EGA (auth OK) + 4.0 GB SAS-PDS (auth OK) accessible; Synapse blocked on invalid token"
+  }
+}

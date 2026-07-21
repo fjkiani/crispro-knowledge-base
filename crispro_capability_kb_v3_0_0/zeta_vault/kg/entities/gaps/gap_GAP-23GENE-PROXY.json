@@ -1,0 +1,32 @@
+{
+  "id": "gap:GAP-23GENE-PROXY",
+  "type": "KBGap",
+  "name": "GAP-23GENE-PROXY",
+  "source_receipts": [
+    {
+      "source": "GAP_MAP.json",
+      "gap_id": "GAP-23GENE-PROXY",
+      "method": "KB-audit vs Zeta mapping"
+    }
+  ],
+  "verbatim_evidence": [
+    "KB claim: 23-gene DDR proxy panel AUROC 0.495 (95%CI 0.386-0.602) on TCGA-OV (166pts) = RANDOM; mean scores backwards (resistant 0.238 < sensitive 0.253)",
+    "Current tier: RANDOM (not better than chance)",
+    "Zeta dataset: EGA BriTROC-1 (genomic truth) + Synapse MSK cohort.maf/cna.tsv (mutation+CNA)"
+  ],
+  "cross_refs": {
+    "gap_id": "GAP-23GENE-PROXY"
+  },
+  "attributes": {
+    "current_tier": "RANDOM (not better than chance)",
+    "role": "VALIDATE (re-derive DDR panel on orthogonal genomic cohort)",
+    "how": "BriTROC + MSK give independent DDR mutation/CNA profiles with platinum outcomes; re-fit or refute the 23-gene panel on non-TCGA data. If still ~0.5, panel is dead; if signal emerges, panel becomes cohort-specific.",
+    "blocker": "MSK bytes blocked (invalid token); BriTROC needs HPC + clinical map.",
+    "closes_gap": "PARTIAL - validation cohorts identified; access blockers apply",
+    "zeta_dataset": "EGA BriTROC-1 (genomic truth) + Synapse MSK cohort.maf/cna.tsv (mutation+CNA)",
+    "kb_claim": "23-gene DDR proxy panel AUROC 0.495 (95%CI 0.386-0.602) on TCGA-OV (166pts) = RANDOM; mean scores backwards (resistant 0.238 < sensitive 0.253)"
+  },
+  "_stream": "zeta_gapmap",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

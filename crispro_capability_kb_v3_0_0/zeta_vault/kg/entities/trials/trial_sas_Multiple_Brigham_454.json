@@ -1,0 +1,34 @@
+{
+  "id": "trial:sas:Multiple_Brigham_454",
+  "type": "Trial",
+  "name": "Multiple trial Brigham 454 (Multiple_Brigham_454)",
+  "source_receipts": [
+    {
+      "source": "SAS CAS fileinfo",
+      "caslib": "Multiple_Brigham_454",
+      "n_files": 4
+    }
+  ],
+  "verbatim_evidence": [
+    "CDISC ADaM caslib Multiple_Brigham_454: 4 source files",
+    "API-created caslib",
+    "table list unavailable"
+  ],
+  "cross_refs": {
+    "caslib": "Multiple_Brigham_454"
+  },
+  "attributes": {
+    "source_vault": "PDS_ProjectDataSphere",
+    "cancer_type": "Multiple",
+    "sponsor": "Brigham",
+    "year": "454",
+    "trial_id": "Multiple_Brigham_454",
+    "n_files": 4,
+    "total_bytes": 16531565,
+    "adam_tables": [],
+    "biological_relevance": "Multiple clinical telemetry (labs/AE/dosing/serial markers)"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

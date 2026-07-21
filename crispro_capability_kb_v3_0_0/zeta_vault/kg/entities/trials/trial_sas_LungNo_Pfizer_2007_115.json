@@ -1,0 +1,34 @@
+{
+  "id": "trial:sas:LungNo_Pfizer_2007_115",
+  "type": "Trial",
+  "name": "LungNo trial Pfizer 2007 (115)",
+  "source_receipts": [
+    {
+      "source": "SAS CAS fileinfo",
+      "caslib": "LungNo_Pfizer_2007_115",
+      "n_files": 21
+    }
+  ],
+  "verbatim_evidence": [
+    "CDISC ADaM caslib LungNo_Pfizer_2007_115: 21 source files",
+    "API-created caslib",
+    "table list unavailable"
+  ],
+  "cross_refs": {
+    "caslib": "LungNo_Pfizer_2007_115"
+  },
+  "attributes": {
+    "source_vault": "PDS_ProjectDataSphere",
+    "cancer_type": "LungNo",
+    "sponsor": "Pfizer",
+    "year": "2007",
+    "trial_id": "115",
+    "n_files": 21,
+    "total_bytes": 78758806,
+    "adam_tables": [],
+    "biological_relevance": "LungNo clinical telemetry (labs/AE/dosing/serial markers)"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

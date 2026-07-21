@@ -1,0 +1,32 @@
+{
+  "id": "gap:GAP-CTDNA-NOTWIRED",
+  "type": "KBGap",
+  "name": "GAP-CTDNA-NOTWIRED",
+  "source_receipts": [
+    {
+      "source": "GAP_MAP.json",
+      "gap_id": "GAP-CTDNA-NOTWIRED",
+      "method": "KB-audit vs Zeta mapping"
+    }
+  ],
+  "verbatim_evidence": [
+    "KB claim: ctDNA NOT_WIRED_INTO_PROPHET (accepted by Kill Chain SIGNAL_CTDNA_MRD=True only); RES-OV-P0-006 OPEN pending TCGA-OV ctDNA cohort",
+    "Current tier: NOT_WIRED (no ctDNA cohort)",
+    "Zeta dataset: Synapse MSK SPECTRUM (plasma/ctDNA modality if present) \u2014 needs verification once token valid"
+  ],
+  "cross_refs": {
+    "gap_id": "GAP-CTDNA-NOTWIRED"
+  },
+  "attributes": {
+    "current_tier": "NOT_WIRED (no ctDNA cohort)",
+    "role": "TEST (candidate ctDNA source)",
+    "how": "MSK SPECTRUM is multi-modal; verify whether plasma/ctDNA timepoints exist to wire an MRD signal. If present, provides the missing ctDNA cohort for RES-OV-P0-006.",
+    "blocker": "Synapse token invalid -> cannot confirm ctDNA modality presence.",
+    "closes_gap": "UNKNOWN - pending valid Synapse token to verify modality",
+    "zeta_dataset": "Synapse MSK SPECTRUM (plasma/ctDNA modality if present) \u2014 needs verification once token valid",
+    "kb_claim": "ctDNA NOT_WIRED_INTO_PROPHET (accepted by Kill Chain SIGNAL_CTDNA_MRD=True only); RES-OV-P0-006 OPEN pending TCGA-OV ctDNA cohort"
+  },
+  "_stream": "zeta_gapmap",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

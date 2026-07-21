@@ -1,0 +1,30 @@
+{
+  "id": "dataset:synapse:syn33521770",
+  "type": "Dataset",
+  "name": "Bulk WGS (MSK SPECTRUM)",
+  "source_receipts": [
+    {
+      "source": "Synapse metadata",
+      "syn_id": "syn33521770",
+      "project": "syn25569736"
+    }
+  ],
+  "verbatim_evidence": [
+    "Bulk WGS (MSK SPECTRUM): WGS: cna.tsv, cohort.maf, segments.seg",
+    "Access: metadata public, bytes blocked (token invalid)"
+  ],
+  "cross_refs": {
+    "synapse_id": "syn33521770",
+    "project": "syn25569736"
+  },
+  "attributes": {
+    "source_vault": "Synapse",
+    "dataset_name": "Bulk WGS (MSK SPECTRUM)",
+    "content": "WGS: cna.tsv, cohort.maf, segments.seg",
+    "biological_relevance": "CCNE1 CNA, escape-pair genomics",
+    "download_status": "BLOCKED_needs_valid_token"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

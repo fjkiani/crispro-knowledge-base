@@ -1,0 +1,33 @@
+{
+  "id": "specimen:britroc1:JBLAB-19306",
+  "type": "Biospecimen",
+  "name": "BriTROC-1 specimen JBLAB-19306",
+  "source_receipts": [
+    {
+      "source": "EGA manifest",
+      "egaf_id": "EGAF00008095399",
+      "accession": "EGAD00001011049"
+    }
+  ],
+  "verbatim_evidence": [
+    "WGS BAM JBLAB-19306.bam; 1810359053 bytes; MD5 c12cd2d0a08408d095f12eea05196475"
+  ],
+  "cross_refs": {
+    "egaf_id": "EGAF00008095399",
+    "filename": "JBLAB-19306.bam",
+    "md5": "c12cd2d0a08408d095f12eea05196475"
+  },
+  "attributes": {
+    "sample_id": "JBLAB-19306",
+    "namespace": "JBLAB",
+    "egaf_id": "EGAF00008095399",
+    "bytes": 1810359053,
+    "md5": "c12cd2d0a08408d095f12eea05196475",
+    "assay": "WGS_BAM",
+    "source_vault": "EGA",
+    "cohort": "BriTROC-1"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

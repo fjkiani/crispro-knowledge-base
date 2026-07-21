@@ -1,0 +1,33 @@
+{
+  "id": "specimen:britroc1:IM_123",
+  "type": "Biospecimen",
+  "name": "BriTROC-1 specimen IM_123",
+  "source_receipts": [
+    {
+      "source": "EGA manifest",
+      "egaf_id": "EGAF00008095069",
+      "accession": "EGAD00001011049"
+    }
+  ],
+  "verbatim_evidence": [
+    "WGS BAM IM_123.bam; 674290019 bytes; MD5 9ef11832d294e15432b2a380617607ae"
+  ],
+  "cross_refs": {
+    "egaf_id": "EGAF00008095069",
+    "filename": "IM_123.bam",
+    "md5": "9ef11832d294e15432b2a380617607ae"
+  },
+  "attributes": {
+    "sample_id": "IM_123",
+    "namespace": "IM",
+    "egaf_id": "EGAF00008095069",
+    "bytes": 674290019,
+    "md5": "9ef11832d294e15432b2a380617607ae",
+    "assay": "WGS_BAM",
+    "source_vault": "EGA",
+    "cohort": "BriTROC-1"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

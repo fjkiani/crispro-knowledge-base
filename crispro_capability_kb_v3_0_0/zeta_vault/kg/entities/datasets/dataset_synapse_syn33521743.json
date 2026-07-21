@@ -1,0 +1,30 @@
+{
+  "id": "dataset:synapse:syn33521743",
+  "type": "Dataset",
+  "name": "scRNA (MSK SPECTRUM)",
+  "source_receipts": [
+    {
+      "source": "Synapse metadata",
+      "syn_id": "syn33521743",
+      "project": "syn25569736"
+    }
+  ],
+  "verbatim_evidence": [
+    "scRNA (MSK SPECTRUM): single-cell RNA-seq (5 items)",
+    "Access: metadata public, bytes blocked (token invalid)"
+  ],
+  "cross_refs": {
+    "synapse_id": "syn33521743",
+    "project": "syn25569736"
+  },
+  "attributes": {
+    "source_vault": "Synapse",
+    "dataset_name": "scRNA (MSK SPECTRUM)",
+    "content": "single-cell RNA-seq (5 items)",
+    "biological_relevance": "tumor microenvironment states",
+    "download_status": "BLOCKED_needs_valid_token"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

@@ -1,0 +1,211 @@
+[
+  {
+    "source": "vault:ega_britroc1",
+    "relation": "addresses_gap",
+    "target": "gap:GAP-SIG7-BRITROC",
+    "source_receipts": [
+      {
+        "source": "GAP_MAP.json",
+        "gap_id": "GAP-SIG7-BRITROC",
+        "method": "KB-audit vs Zeta mapping"
+      }
+    ],
+    "attributes": {
+      "role": "TRAIN + VALIDATE",
+      "closes_gap": "PARTIAL - infrastructure + raw data available; needs HPC run + external clinical map",
+      "blocker": "Full BAM processing = HPC + Europe VM (measured 1.1MB/s here -> 1.8-5.3 days DL alone). Clinical labels (PFI/platinum status) require BriTROC-1 supplement mapping BAM->patient->outcome (NOT in EGA dataset)."
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "source": "cohort:britroc1_hgsoc",
+    "relation": "addresses_gap",
+    "target": "gap:GAP-SIG7-BRITROC",
+    "source_receipts": [
+      {
+        "source": "GAP_MAP.json",
+        "gap_id": "GAP-SIG7-BRITROC",
+        "method": "KB-audit vs Zeta mapping"
+      }
+    ],
+    "attributes": {
+      "role": "TRAIN + VALIDATE",
+      "closes_gap": "PARTIAL - infrastructure + raw data available; needs HPC run + external clinical map",
+      "blocker": "Full BAM processing = HPC + Europe VM (measured 1.1MB/s here -> 1.8-5.3 days DL alone). Clinical labels (PFI/platinum status) require BriTROC-1 supplement mapping BAM->patient->outcome (NOT in EGA dataset)."
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "source": "vault:sas_pds",
+    "relation": "addresses_gap",
+    "target": "gap:GAP-SAE-LEAKAGE",
+    "source_receipts": [
+      {
+        "source": "GAP_MAP.json",
+        "gap_id": "GAP-SAE-LEAKAGE",
+        "method": "KB-audit vs Zeta mapping"
+      }
+    ],
+    "attributes": {
+      "role": "TEST (external replication of SAE-style serial-marker leakage)",
+      "closes_gap": "PARTIAL - enables independent leakage stress-test; does NOT restore stripped Tier3 cohort",
+      "blocker": "PDS is pan-cancer clinical-trial data, not the exact SAE ovarian cohort; serves as external stress-test, not a like-for-like restore of Tier3."
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "source": "vault:ega_britroc1",
+    "relation": "addresses_gap",
+    "target": "gap:GAP-23GENE-PROXY",
+    "source_receipts": [
+      {
+        "source": "GAP_MAP.json",
+        "gap_id": "GAP-23GENE-PROXY",
+        "method": "KB-audit vs Zeta mapping"
+      }
+    ],
+    "attributes": {
+      "role": "VALIDATE (re-derive DDR panel on orthogonal genomic cohort)",
+      "closes_gap": "PARTIAL - validation cohorts identified; access blockers apply",
+      "blocker": "MSK bytes blocked (invalid token); BriTROC needs HPC + clinical map."
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "source": "dataset:synapse:syn33521770",
+    "relation": "addresses_gap",
+    "target": "gap:GAP-23GENE-PROXY",
+    "source_receipts": [
+      {
+        "source": "GAP_MAP.json",
+        "gap_id": "GAP-23GENE-PROXY",
+        "method": "KB-audit vs Zeta mapping"
+      }
+    ],
+    "attributes": {
+      "role": "VALIDATE (re-derive DDR panel on orthogonal genomic cohort)",
+      "closes_gap": "PARTIAL - validation cohorts identified; access blockers apply",
+      "blocker": "MSK bytes blocked (invalid token); BriTROC needs HPC + clinical map."
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "source": "vault:synapse_msk_spectrum",
+    "relation": "addresses_gap",
+    "target": "gap:GAP-CTDNA-NOTWIRED",
+    "source_receipts": [
+      {
+        "source": "GAP_MAP.json",
+        "gap_id": "GAP-CTDNA-NOTWIRED",
+        "method": "KB-audit vs Zeta mapping"
+      }
+    ],
+    "attributes": {
+      "role": "TEST (candidate ctDNA source)",
+      "closes_gap": "UNKNOWN - pending valid Synapse token to verify modality",
+      "blocker": "Synapse token invalid -> cannot confirm ctDNA modality presence."
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "source": "vault:sas_pds",
+    "relation": "addresses_gap",
+    "target": "gap:GAP-KELIM-SIM",
+    "source_receipts": [
+      {
+        "source": "GAP_MAP.json",
+        "gap_id": "GAP-KELIM-SIM",
+        "method": "KB-audit vs Zeta mapping"
+      }
+    ],
+    "attributes": {
+      "role": "TRAIN (real serial-marker kinetics to replace simulated betas)",
+      "closes_gap": "PARTIAL - real serial-marker training feasible if matching trial identified",
+      "blocker": "PDS is pan-cancer; need to locate ovarian/serial-CA125 trial. KELIM value path (Lyon API) already works; this targets the SIM convergence betas only."
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "source": "dataset:synapse:syn33521770",
+    "relation": "addresses_gap",
+    "target": "gap:GAP-MSK-ESCAPE-N39",
+    "source_receipts": [
+      {
+        "source": "GAP_MAP.json",
+        "gap_id": "GAP-MSK-ESCAPE-N39",
+        "method": "KB-audit vs Zeta mapping"
+      }
+    ],
+    "attributes": {
+      "role": "VALIDATE + RESTORE (the actual MSK Spectrum genomics)",
+      "closes_gap": "READY_ON_TOKEN - exact files identified; one valid token unblocks restore",
+      "blocker": "File bytes blocked (invalid token); metadata + file IDs already catalogued."
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "source": "file:synapse:syn39607857",
+    "relation": "addresses_gap",
+    "target": "gap:GAP-MSK-ESCAPE-N39",
+    "source_receipts": [
+      {
+        "source": "GAP_MAP.json",
+        "gap_id": "GAP-MSK-ESCAPE-N39",
+        "method": "KB-audit vs Zeta mapping"
+      }
+    ],
+    "attributes": {
+      "role": "VALIDATE + RESTORE (the actual MSK Spectrum genomics)",
+      "closes_gap": "READY_ON_TOKEN - exact files identified; one valid token unblocks restore",
+      "blocker": "File bytes blocked (invalid token); metadata + file IDs already catalogued."
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "source": "file:synapse:syn39607858",
+    "relation": "addresses_gap",
+    "target": "gap:GAP-MSK-ESCAPE-N39",
+    "source_receipts": [
+      {
+        "source": "GAP_MAP.json",
+        "gap_id": "GAP-MSK-ESCAPE-N39",
+        "method": "KB-audit vs Zeta mapping"
+      }
+    ],
+    "attributes": {
+      "role": "VALIDATE + RESTORE (the actual MSK Spectrum genomics)",
+      "closes_gap": "READY_ON_TOKEN - exact files identified; one valid token unblocks restore",
+      "blocker": "File bytes blocked (invalid token); metadata + file IDs already catalogued."
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "source": "file:synapse:syn39607860",
+    "relation": "addresses_gap",
+    "target": "gap:GAP-MSK-ESCAPE-N39",
+    "source_receipts": [
+      {
+        "source": "GAP_MAP.json",
+        "gap_id": "GAP-MSK-ESCAPE-N39",
+        "method": "KB-audit vs Zeta mapping"
+      }
+    ],
+    "attributes": {
+      "role": "VALIDATE + RESTORE (the actual MSK Spectrum genomics)",
+      "closes_gap": "READY_ON_TOKEN - exact files identified; one valid token unblocks restore",
+      "blocker": "File bytes blocked (invalid token); metadata + file IDs already catalogued."
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  }
+]
