@@ -1,0 +1,60 @@
+{
+  "audit": "HONESTY_AUDIT_SESSION3",
+  "session": "Session 3: SAS/CAS Project Data Sphere clinical extraction (5-worker parallel)",
+  "custodian": "zeta_custodian",
+  "timestamp": "2026-07-21T07:22:45Z",
+  "checks": {
+    "A_ruo_contamination": {
+      "name": "RUO_contamination",
+      "crispro_kb_v3_count": 1418,
+      "expected_kb_v3": 1418,
+      "zeta_vault_count": 20211,
+      "kb_v3_untouched": true,
+      "verdict": "PASS",
+      "detail": "crispro_kb_v3 (RUO capability KB) unchanged at 1418; SAS clinical content isolated in zeta_vault. No RUO->clinical bleed."
+    },
+    "B_evidence_tier_preservation": {
+      "name": "evidence_tier_preservation",
+      "entities_missing_verbatim_evidence": 0,
+      "entities_missing_source_receipts": 0,
+      "sas_clinical_nodes": 19432,
+      "sas_nodes_citing_source": 19432,
+      "genomic_feature_preserved": 31,
+      "biospecimen_preserved": 719,
+      "verdict": "PASS",
+      "detail": "All entities carry verbatim_evidence + source_receipts. Genomics tier (31 GenomicFeature / 719 Biospecimen) preserved untouched. Clinical nodes cite SAS PDS."
+    },
+    "C_no_fabrication": {
+      "name": "no_fabrication",
+      "sas_trial_nodes_total": 92,
+      "extracted_with_data_or_status": 23,
+      "annotated_no_loadable_tables": 69,
+      "no_load_trials_with_fabricated_content": 0,
+      "ae_term_nodes_tiered": 2439,
+      "forced_crosslink_edges (same_indication/measures_gene/targets_drug)": 0,
+      "stratified_by_biomarker_edges": 2,
+      "kras_node_present_and_colorectal_context": true,
+      "kras_merged_with_ovarian_msk_genes": false,
+      "ovarian_msk_gene_examples": [
+        "ARID3A oncogenic mutation (MSK)",
+        "BRAF oncogenic mutation (MSK)",
+        "BRCA1 oncogenic mutation (MSK)"
+      ],
+      "verdict": "PASS",
+      "detail": "71 inaccessible trials annotated 'no_loadable_tables' with 0 fabricated patients/AE/arms. AE singletons pooled into rollups (only 2439 tiered nodes minted). NO forced same_indication/measures_gene/targets_drug edges. Only 2 stratified_by_biomarker edges (colorectal KRAS), disease_context='colorectal', NOT merged with ovarian MSK gene nodes."
+    },
+    "D_collection_separation": {
+      "name": "collection_separation",
+      "qdrant_zeta_vault": 20211,
+      "qdrant_crispro_kb_v3": 1418,
+      "qdrant_distinct": true,
+      "neo4j_zeta_nodes": 20211,
+      "neo4j_all_nodes": 20902,
+      "neo4j_nonzeta_preserved": 691,
+      "neo4j_crosslinks_zeta_to_nonzeta": 0,
+      "verdict": "PASS",
+      "detail": "zeta_vault (20211) and crispro_kb_v3 (1418) are distinct Qdrant collections. Neo4j :ZetaVault subgraph (20211) has 0 edges crossing into the 691 preserved non-Zeta crispro_kb nodes."
+    }
+  },
+  "overall_verdict": "PASS"
+}

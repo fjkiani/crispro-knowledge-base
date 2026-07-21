@@ -1,0 +1,122 @@
+[
+  {
+    "id": "vault:ega_britroc1",
+    "type": "DataVault",
+    "name": "EGA BriTROC-1 WGS Vault",
+    "source_receipts": [
+      {
+        "source": "EGA API",
+        "accession": "EGAD00001011049",
+        "retrieved": "2026-07-21T00:42:06Z",
+        "n_files": 679
+      }
+    ],
+    "verbatim_evidence": [
+      "679 WGS BAM files, 510,797,964,805 bytes (510.8 GB), 679 unique MD5s",
+      "Authenticated download verified: EGAF00008095569 JBLAB-4261.bam MD5 714c3c7583eb6deb60b7a10e5120436a",
+      "Measured throughput 1.1 MB/s (non-Europe); BAM-only, no clinical/metadata file in dataset"
+    ],
+    "cross_refs": {
+      "ega_dataset": "EGAD00001011049",
+      "study": "BriTROC-1"
+    },
+    "attributes": {
+      "source_vault": "EGA",
+      "access": "AUTHENTICATED_OK",
+      "download": "WORKING_SLOW",
+      "n_files": 679,
+      "total_bytes": 510797964805,
+      "total_gb": 510.8,
+      "file_type": "BAM_ONLY",
+      "clinical_map_present": false,
+      "clinical_map_location": "BriTROC-1 publication supplement / separate accession",
+      "biological_relevance": "platinum sensitive/resistant HGSOC; mutational Sig7; CN breakpoints",
+      "specimen_namespaces": {
+        "JBLAB": 292,
+        "IM": 387
+      },
+      "n_specimens": 679
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "vault:synapse_msk_spectrum",
+    "type": "DataVault",
+    "name": "Synapse MSK SPECTRUM Vault",
+    "source_receipts": [
+      {
+        "source": "Synapse REST/get",
+        "project": "syn25569736",
+        "retrieved": "2026-07-21T00:42:06Z"
+      }
+    ],
+    "verbatim_evidence": [
+      "Metadata PUBLIC_READABLE; authenticated calls return 401 Invalid access token",
+      "File bytes 403 anonymous -> downloads BLOCKED pending valid token",
+      "Key WGS files identified: cna.tsv (syn39607857), cohort.maf (syn39607858), segments.seg (syn39607860)"
+    ],
+    "cross_refs": {
+      "synapse_project": "syn25569736"
+    },
+    "attributes": {
+      "source_vault": "Synapse",
+      "access": "TOKEN_INVALID_401",
+      "metadata_access": "PUBLIC_READABLE",
+      "download": "BLOCKED_needs_valid_token",
+      "datasets": {
+        "Bulk WGS": "syn33521770 (cna.tsv, cohort.maf, segments.seg)",
+        "MSK-IMPACT": "syn33521771",
+        "scRNA": "syn33521743 (5 items)",
+        "H-E": "syn33521762",
+        "mpIF": "syn33520881",
+        "McPherson_Nature_2025": "syn66309959",
+        "Vazquez-Garcia_Uhlitz_Nature_2022": "syn52458607"
+      },
+      "key_files_identified": [
+        "cna.tsv (syn39607857)",
+        "cohort.maf (syn39607858)",
+        "segments.seg (syn39607860)"
+      ],
+      "biological_relevance": "MSK SPECTRUM HGSOC multi-modal escape pairs; CCNE1 CNA"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "vault:sas_pds",
+    "type": "DataVault",
+    "name": "SAS Project Data Sphere Vault",
+    "source_receipts": [
+      {
+        "source": "SAS CAS/SASLogon OAuth",
+        "host": "<SAS_CAS_HOST_REDACTED>",
+        "retrieved": "2026-07-21T00:42:06Z"
+      }
+    ],
+    "verbatim_evidence": [
+      "102 caslibs, 15 cancer types, 543 source files, 4,009,157,902 bytes (4.0 GB)",
+      "CDISC ADaM clinical-trial warehouse: adae/adlb/adcm/adex/adeg/admh + legacy PDS naming",
+      "Authenticated OK via both swat.CAS and SASLogon OAuth password grant"
+    ],
+    "cross_refs": {
+      "cas_host": "<SAS_CAS_HOST_REDACTED>"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "access": "AUTHENTICATED_OK",
+      "download": "AVAILABLE",
+      "n_caslibs": 102,
+      "n_trial_caslibs_with_files": 92,
+      "n_source_files": 543,
+      "total_bytes": 4009157902,
+      "total_gb": 4.0,
+      "biological_relevance": "CDISC ADaM oncology clinical-trial telemetry (labs/AE/dosing/serial markers)"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  }
+]

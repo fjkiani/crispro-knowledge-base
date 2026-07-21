@@ -1,0 +1,182 @@
+[
+  {
+    "source": "arm:sas:Breast_Allianc_2002_194:1",
+    "relation": "arm_of",
+    "target": "trial:sas:Breast_Allianc_2002_194"
+  },
+  {
+    "source": "arm:sas:Breast_Allianc_2002_194:2",
+    "relation": "arm_of",
+    "target": "trial:sas:Breast_Allianc_2002_194"
+  },
+  {
+    "source": "arm:sas:Breast_Allianc_2002_194:4",
+    "relation": "arm_of",
+    "target": "trial:sas:Breast_Allianc_2002_194"
+  },
+  {
+    "source": "arm:sas:Breast_Allianc_2002_194:3",
+    "relation": "arm_of",
+    "target": "trial:sas:Breast_Allianc_2002_194"
+  },
+  {
+    "source": "arm:sas:Breast_Allianc_2002_194:6",
+    "relation": "arm_of",
+    "target": "trial:sas:Breast_Allianc_2002_194"
+  },
+  {
+    "source": "arm:sas:Breast_Allianc_2002_194:5",
+    "relation": "arm_of",
+    "target": "trial:sas:Breast_Allianc_2002_194"
+  },
+  {
+    "source": "arm:sas:Breast_Allianc_2002_194:7",
+    "relation": "arm_of",
+    "target": "trial:sas:Breast_Allianc_2002_194"
+  },
+  {
+    "source": "arm:sas:Breast_Allianc_2002_194:8",
+    "relation": "arm_of",
+    "target": "trial:sas:Breast_Allianc_2002_194"
+  },
+  {
+    "source": "arm:sas:Breast_Allianc_2002_200:37",
+    "relation": "arm_of",
+    "target": "trial:sas:Breast_Allianc_2002_200"
+  },
+  {
+    "source": "arm:sas:Breast_Allianc_2002_200:1",
+    "relation": "arm_of",
+    "target": "trial:sas:Breast_Allianc_2002_200"
+  },
+  {
+    "source": "arm:sas:Colorec_Amgen_2004_310:panit_plus_best_supportive_care",
+    "relation": "arm_of",
+    "target": "trial:sas:Colorec_Amgen_2004_310"
+  },
+  {
+    "source": "arm:sas:Colorec_Amgen_2004_310:Best_supportive_care",
+    "relation": "arm_of",
+    "target": "trial:sas:Colorec_Amgen_2004_310"
+  },
+  {
+    "source": "arm:sas:Colorec_Amgen_2005_262:11",
+    "relation": "arm_of",
+    "target": "trial:sas:Colorec_Amgen_2005_262"
+  },
+  {
+    "source": "arm:sas:Colorec_Amgen_2005_262:12",
+    "relation": "arm_of",
+    "target": "trial:sas:Colorec_Amgen_2005_262"
+  },
+  {
+    "source": "arm:sas:Colorec_Amgen_2006_263:40",
+    "relation": "arm_of",
+    "target": "trial:sas:Colorec_Amgen_2006_263"
+  },
+  {
+    "source": "arm:sas:Colorec_Amgen_2006_263:41",
+    "relation": "arm_of",
+    "target": "trial:sas:Colorec_Amgen_2006_263"
+  },
+  {
+    "source": "arm:sas:Colorec_Amgen_2006_264:42",
+    "relation": "arm_of",
+    "target": "trial:sas:Colorec_Amgen_2006_264"
+  },
+  {
+    "source": "arm:sas:Colorec_Amgen_2006_264:43",
+    "relation": "arm_of",
+    "target": "trial:sas:Colorec_Amgen_2006_264"
+  },
+  {
+    "source": "arm:sas:Colorec_Amgen_2006_309:Panitumumab_FOLFOX",
+    "relation": "arm_of",
+    "target": "trial:sas:Colorec_Amgen_2006_309"
+  },
+  {
+    "source": "arm:sas:Colorec_Amgen_2006_309:FOLFOX_alone",
+    "relation": "arm_of",
+    "target": "trial:sas:Colorec_Amgen_2006_309"
+  },
+  {
+    "source": "arm:sas:HeadNe_Amgen_2007_265:2",
+    "relation": "arm_of",
+    "target": "trial:sas:HeadNe_Amgen_2007_265"
+  },
+  {
+    "source": "arm:sas:HeadNe_Amgen_2007_265:50",
+    "relation": "arm_of",
+    "target": "trial:sas:HeadNe_Amgen_2007_265"
+  },
+  {
+    "source": "arm:sas:LungSm_Amgen_2002_266:PLACEBOQ3WK",
+    "relation": "arm_of",
+    "target": "trial:sas:LungSm_Amgen_2002_266"
+  },
+  {
+    "source": "arm:sas:LungSm_Amgen_2002_266:NESP300Q3WK",
+    "relation": "arm_of",
+    "target": "trial:sas:LungSm_Amgen_2002_266"
+  },
+  {
+    "source": "arm:sas:LungSm_EliLill_2011_287:Arm_B",
+    "relation": "arm_of",
+    "target": "trial:sas:LungSm_EliLill_2011_287"
+  },
+  {
+    "source": "arm:sas:LungSm_EliLill_2011_287:Arm_A",
+    "relation": "arm_of",
+    "target": "trial:sas:LungSm_EliLill_2011_287"
+  },
+  {
+    "source": "arm:sas:LungSm_EliLill_2011_287:SCRNFAIL",
+    "relation": "arm_of",
+    "target": "trial:sas:LungSm_EliLill_2011_287"
+  },
+  {
+    "source": "arm:sas:LungSm_G1Thera_2015_433:Part_2_Placebo",
+    "relation": "arm_of",
+    "target": "trial:sas:LungSm_G1Thera_2015_433"
+  },
+  {
+    "source": "arm:sas:LungSm_G1Thera_2015_434:Part_2_Placebo_Topotecan_1_5_mg_m2",
+    "relation": "arm_of",
+    "target": "trial:sas:LungSm_G1Thera_2015_434"
+  },
+  {
+    "source": "arm:sas:Lymphom_Allianc_2006_212:A",
+    "relation": "arm_of",
+    "target": "trial:sas:Lymphom_Allianc_2006_212"
+  },
+  {
+    "source": "arm:sas:Melanom_SyntaPh_2007_123:paclitaxel_80_mg_m2_alone",
+    "relation": "arm_of",
+    "target": "trial:sas:Melanom_SyntaPh_2007_123"
+  },
+  {
+    "source": "arm:sas:Multiple_Allianc_2002_202:B",
+    "relation": "arm_of",
+    "target": "trial:sas:Multiple_Allianc_2002_202"
+  },
+  {
+    "source": "arm:sas:Multiple_Allianc_2002_202:A",
+    "relation": "arm_of",
+    "target": "trial:sas:Multiple_Allianc_2002_202"
+  },
+  {
+    "source": "arm:sas:Multiple_Allianc_2002_202:C",
+    "relation": "arm_of",
+    "target": "trial:sas:Multiple_Allianc_2002_202"
+  },
+  {
+    "source": "arm:sas:Pancrea_ClovisO_2010_186:Gemcitabine_Elaidate",
+    "relation": "arm_of",
+    "target": "trial:sas:Pancrea_ClovisO_2010_186"
+  },
+  {
+    "source": "arm:sas:Pancrea_ClovisO_2010_186:Gemcitabine",
+    "relation": "arm_of",
+    "target": "trial:sas:Pancrea_ClovisO_2010_186"
+  }
+]

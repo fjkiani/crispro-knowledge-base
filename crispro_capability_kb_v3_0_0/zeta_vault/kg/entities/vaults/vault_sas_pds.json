@@ -5,7 +5,7 @@
   "source_receipts": [
     {
       "source": "SAS CAS/SASLogon OAuth",
-      "host": "mpmprodvdmml.ondemand.sas.com",
+      "host": "<SAS_CAS_HOST_REDACTED>",
       "retrieved": "2026-07-21T00:42:06Z"
     }
   ],
@@ -15,7 +15,7 @@
     "Authenticated OK via both swat.CAS and SASLogon OAuth password grant"
   ],
   "cross_refs": {
-    "cas_host": "mpmprodvdmml.ondemand.sas.com"
+    "cas_host": "<SAS_CAS_HOST_REDACTED>"
   },
   "attributes": {
     "source_vault": "PDS_ProjectDataSphere",

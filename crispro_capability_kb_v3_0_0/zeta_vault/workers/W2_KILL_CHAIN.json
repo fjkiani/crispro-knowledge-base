@@ -1,8 +1,8 @@
 {
   "worker": "W2_KILL_CHAIN",
   "timestamp": "2026-07-21T02:15:00Z",
-  "total_vectors": 870,
-  "avg_silhouette_score": 0.5937,
+  "total_vectors": 20211,
+  "avg_silhouette_score": 0.4244,
   "patientid_keyword_port_verification": "N/A (signal-wiring layer; per-patient firing requires downloaded genomic/clinical bytes)",
   "findings": {
     "kill_chain_model": "2-of-3 concordance (CA-125 + HRD + ctDNA) per Harness C",
@@ -83,5 +83,36 @@
       "CNA_AMPLIFICATION"
     ],
     "session_update": "CCNE1 CNA gap (TF2-SLOP-004) closed with real MSK data (6/40 amp). ctDNA verified non-wirable (no modality in MSK). Signals with data: 3/6 (was 2/6)."
+  },
+  "silhouette_natural_balance": 0.2776,
+  "session3_sas_update": {
+    "timestamp": "2026-07-21T07:30:00Z",
+    "summary": "CA-125 / serial-marker signals re-checked against extracted SAS tables.",
+    "findings": {
+      "CA125_RISING": {
+        "prior_route": "SAS PDS serial CA-125 (ador/adef/adlb)",
+        "status": "NOT_FULFILLED",
+        "reason": "NO CA-125 column exists in ANY of the 23 extracted trials. CA-125 is an ovarian marker; extracted trials are solid tumors (breast/CRC/lung/etc.) - zero ovarian trials had loadable tables. Cannot wire CA-125 kinetics from this warehouse.",
+        "what_exists_instead": "17 trials DO have serial-lab (LB/adlb) tables with LBTEST/PARAM/AVAL/VISIT structure - the machinery is present, but not the CA-125 analyte."
+      },
+      "KELIM_GENOTYPE_CONVERGENCE": {
+        "prior_route": "SAS PDS serial markers",
+        "status": "STILL_DEAD_CODE",
+        "reason": "Serial-marker tables exist (17 trials) but not for ovarian CA-125/KELIM. RES-OV-P0-009 code fix still needed; SAS cannot supply ovarian serial CA-125."
+      },
+      "CNA_AMPLIFICATION_CCNE1": {
+        "status": "UNCHANGED_CLOSED",
+        "note": "Closed in Session 2 via MSK (6/40 amp). SAS adds nothing here (no ovarian CNA)."
+      },
+      "SIGNAL_CTDNA_MRD": {
+        "status": "UNCHANGED_NOT_WIRABLE",
+        "note": "MSK tissue-only; SAS has no ctDNA. Architectural gap RES-OV-P0-006 persists."
+      },
+      "new_safety_signal_layer": {
+        "status": "ADDED",
+        "detail": "118,859 graded adverse-event records now in graph (G1:32901 G2:14461 G3:9503 G4:1813 G5:289). Enables trial/arm-level toxicity signals - a NEW capability, though orthogonal to the ovarian kill-chain."
+      },
+      "honest_note": "SAS extraction does NOT wire the ovarian kill-chain (wrong tumor types, no CA-125). It adds a large graded-AE safety layer. Prior 'WIRED via SAS' labels for CA-125 were aspirational and are corrected to NOT_FULFILLED."
+    }
   }
 }

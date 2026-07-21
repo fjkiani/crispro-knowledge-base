@@ -6,7 +6,7 @@
 [2026-07-21 00:24:43 +0000] Server URL: https://ega.ebi.ac.uk:8443/v2
 [2026-07-21 00:24:43 +0000] Session-Id: 2216743880
 [2026-07-21 00:24:44 +0000] 
-[2026-07-21 00:24:44 +0000] Authentication success for user 'fahad@jedilabs.org'
+[2026-07-21 00:24:44 +0000] Authentication success for user '<EGA_USER_REDACTED>'
 [2026-07-21 00:24:48 +0000] File ID         Status Bytes        Check sum                            File name
 [2026-07-21 00:24:48 +0000] EGAF00008095623      1 698709769    a9430a9b58057f11f45351433ba8c067     JBLAB-4927.bam
 [2026-07-21 00:24:48 +0000] EGAF00008095502      1 419571750    c6cc4e088c4f7583d9312e044abc471f     JBLAB-4184.bam

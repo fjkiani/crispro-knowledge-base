@@ -1,8 +1,8 @@
 {
   "worker": "W5_PRODUCTION_REFINEMENT",
   "timestamp": "2026-07-21T02:15:00Z",
-  "total_vectors": 870,
-  "avg_silhouette_score": 0.5937,
+  "total_vectors": 20211,
+  "avg_silhouette_score": 0.4244,
   "patientid_keyword_port_verification": "679/679 specimen ports live for downstream per-patient training",
   "findings": {
     "refinement_plan": [
@@ -103,6 +103,20 @@
       ],
       "cleared_for_patient_facing": "NO (unchanged - framework code issues T2/T12 + dead code RES-OV-P0-009 remain; data enrichment does not change production-eligibility)",
       "ruo_check": "PASS (no unguarded clinical claims introduced)"
+    }
+  },
+  "silhouette_natural_balance": 0.2776,
+  "session3_sas_update": {
+    "timestamp": "2026-07-21T07:30:00Z",
+    "summary": "RUO/collection-separation re-audited after adding 19,341 clinical nodes.",
+    "findings": {
+      "cleared_for_patient_facing": "NO",
+      "ruo_check": "PASS",
+      "ruo_detail": "No RUO->clinical contamination. SAS clinical data kept in zeta_vault; crispro_kb_v3 (1418) untouched. No patient-facing claims attached.",
+      "collection_separation": "PASS (zeta_vault=20211, crispro_kb_v3=1418 verified distinct)",
+      "de_identification_note": "All patient nodes use trial-local masked subject IDs (USUBJID/MASK_ID); no direct identifiers extracted. Demographics stored verbatim (some coded, some literal) - flagged as non-harmonized.",
+      "new_data_risk_review": "17k patient nodes are de-identified trial subjects from public Project Data Sphere; no PHI. Framework remains research-use-only.",
+      "honest_note": "Clearance status UNCHANGED (NO). Adding real clinical data does not by itself clear the framework for patient-facing use."
     }
   }
 }

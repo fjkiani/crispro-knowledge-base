@@ -40,7 +40,7 @@
       "biological_relevance": "MSK SPECTRUM HGSOC multi-modal escape pairs; CCNE1 CNA, escape-pair genomics"
     },
     "SAS_PDS": {
-      "cas_url": "https://mpmprodvdmml.ondemand.sas.com/cas-shared-default-http/",
+      "cas_url": "https://<SAS_CAS_HOST_REDACTED>/cas-shared-default-http/",
       "source_vault": "PDS_ProjectDataSphere",
       "access": "AUTHENTICATED_OK",
       "download": "AVAILABLE",

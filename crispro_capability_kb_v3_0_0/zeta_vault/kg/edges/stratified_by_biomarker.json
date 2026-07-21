@@ -1,0 +1,22 @@
+[
+  {
+    "source": "trial:sas:Colorec_Amgen_2005_262",
+    "relation": "stratified_by_biomarker",
+    "target": "biomarker:kras:colorectal",
+    "attributes": {
+      "wildtype": 410,
+      "mutant": 286,
+      "failed": 83
+    }
+  },
+  {
+    "source": "trial:sas:Colorec_Amgen_2006_263",
+    "relation": "stratified_by_biomarker",
+    "target": "biomarker:kras:colorectal",
+    "attributes": {
+      "wildtype": 474,
+      "mutant": 381,
+      "failed": 30
+    }
+  }
+]

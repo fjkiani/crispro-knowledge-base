@@ -1,8 +1,8 @@
 {
   "worker": "W3_DISK",
   "timestamp": "2026-07-21T02:15:00Z",
-  "total_vectors": 870,
-  "avg_silhouette_score": 0.5937,
+  "total_vectors": 20211,
+  "avg_silhouette_score": 0.4244,
   "patientid_keyword_port_verification": "679/679 specimen PatientIDs registered in VAULT_INVENTORY",
   "findings": {
     "physical_inventory": {
@@ -35,7 +35,7 @@
         "in_sandbox_feasible": "NO - needs valid token"
       },
       "SAS_PDS": {
-        "location": "mpmprodvdmml.ondemand.sas.com",
+        "location": "<SAS_CAS_HOST_REDACTED>",
         "access": "AUTHENTICATED_OK",
         "download": "AVAILABLE",
         "n_caslibs": 102,
@@ -83,5 +83,23 @@
       "note": "MSK SPECTRUM genomics (3.6 MB) downloaded + MD5-verified in-sandbox (feasible; unlike 510.8 GB EGA BAMs). Synapse byte-access unblocked with valid token."
     },
     "actionable_in_sandbox_update": "SAS 4.0 GB (inventoried) + MSK 3.6 MB (DOWNLOADED+PARSED). EGA 510.8 GB still blocked (BAM-only, infeasible)."
+  },
+  "silhouette_natural_balance": 0.2776,
+  "session3_sas_update": {
+    "timestamp": "2026-07-21T07:30:00Z",
+    "summary": "SAS clinical relationships extracted WITHOUT bulk byte download (per constraint).",
+    "findings": {
+      "sas_extraction_method": "CAS table queries (column projection + to_frame), relationships/values only",
+      "bytes_downloaded_gb": 0.0,
+      "clinical_relationships_captured": {
+        "patients": 17264,
+        "ae_records": 118859,
+        "arms": 36,
+        "ae_terms": 2439
+      },
+      "ega_blocked_gb_unchanged": 510.8,
+      "msk_downloaded_mb_unchanged": 3.6,
+      "note": "Honored 'pull the relationships not 500GB': extracted 17k patients + 119k AE records as graph structure, no raw .sas7bdat bytes persisted locally."
+    }
   }
 }

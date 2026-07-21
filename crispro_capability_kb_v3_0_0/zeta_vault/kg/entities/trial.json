@@ -1,0 +1,4218 @@
+[
+  {
+    "id": "trial:sas:Breast_Allianc_2002_194",
+    "type": "Trial",
+    "name": "Breast trial Allianc 2002 (194)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Breast_Allianc_2002_194",
+        "n_files": 2
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "Breast_Allianc_2002_194",
+        "tables_loaded": 2,
+        "worker": null
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Breast_Allianc_2002_194: 2 source files",
+      "API-created caslib",
+      "Extracted 2 ADaM tables: 3171 patients, 8 arms, 165 AE terms, 3866 AE events (meddra_code coding)"
+    ],
+    "cross_refs": {
+      "caslib": "Breast_Allianc_2002_194"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast",
+      "sponsor": "Allianc",
+      "year": "2002",
+      "trial_id": "194",
+      "n_files": 2,
+      "total_bytes": 1245184,
+      "adam_tables": [
+        "aeclean_finala.sas7bdat",
+        "eval46_3_finala.sas7bdat"
+      ],
+      "biological_relevance": "Breast clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 2,
+      "n_patients": 3171,
+      "n_arms": 8,
+      "arm_patient_counts": {
+        "1": 140,
+        "2": 144,
+        "4": 141,
+        "3": 146,
+        "6": 645,
+        "5": 655,
+        "7": 652,
+        "8": 648
+      },
+      "n_ae_terms": 165,
+      "ae_events": 3866,
+      "ae_coding": "meddra_code",
+      "ae_grade_distribution": {
+        "4": 1025,
+        "3": 2841
+      },
+      "survival_status_n": 3171,
+      "survival_event_col": "SURVSTAT",
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Breast_Allianc_2002_200",
+    "type": "Trial",
+    "name": "Breast trial Allianc 2002 (200)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Breast_Allianc_2002_200",
+        "n_files": 2
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "Breast_Allianc_2002_200",
+        "tables_loaded": 2,
+        "worker": null
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Breast_Allianc_2002_200: 2 source files",
+      "API-created caslib",
+      "Extracted 2 ADaM tables: 3871 patients, 2 arms, 198 AE terms, 4735 AE events (meddra_code coding)"
+    ],
+    "cross_refs": {
+      "caslib": "Breast_Allianc_2002_200"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast",
+      "sponsor": "Allianc",
+      "year": "2002",
+      "trial_id": "200",
+      "n_files": 2,
+      "total_bytes": 1441792,
+      "adam_tables": [
+        "aeclean_finalb.sas7bdat",
+        "all_finalb.sas7bdat"
+      ],
+      "biological_relevance": "Breast clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 2,
+      "n_patients": 3871,
+      "n_arms": 2,
+      "arm_patient_counts": {
+        "37": 2048,
+        "1": 1823
+      },
+      "n_ae_terms": 198,
+      "ae_events": 4735,
+      "ae_coding": "meddra_code",
+      "ae_grade_distribution": {
+        "3": 3442,
+        "4": 1293
+      },
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Breast_Allianc_2006_216",
+    "type": "Trial",
+    "name": "Breast trial Allianc 2006 (216)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Breast_Allianc_2006_216",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Breast_Allianc_2006_216: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Breast_Allianc_2006_216"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast",
+      "sponsor": "Allianc",
+      "year": "2006",
+      "trial_id": "216",
+      "n_files": 1,
+      "total_bytes": 48437,
+      "adam_tables": [],
+      "biological_relevance": "Breast clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Breast_Allianc_2008_158",
+    "type": "Trial",
+    "name": "Breast trial Allianc 2008 (158)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Breast_Allianc_2008_158",
+        "n_files": 3
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Breast_Allianc_2008_158: 3 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Breast_Allianc_2008_158"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast",
+      "sponsor": "Allianc",
+      "year": "2008",
+      "trial_id": "158",
+      "n_files": 3,
+      "total_bytes": 823340,
+      "adam_tables": [],
+      "biological_relevance": "Breast clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Breast_Allianc_2009_162",
+    "type": "Trial",
+    "name": "Breast trial Allianc 2009 (162)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Breast_Allianc_2009_162",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Breast_Allianc_2009_162: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Breast_Allianc_2009_162"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast",
+      "sponsor": "Allianc",
+      "year": "2009",
+      "trial_id": "162",
+      "n_files": 2,
+      "total_bytes": 1568718,
+      "adam_tables": [],
+      "biological_relevance": "Breast clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Breast_Amgen_2004_153",
+    "type": "Trial",
+    "name": "Breast trial Amgen 2004 (153)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Breast_Amgen_2004_153",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Breast_Amgen_2004_153: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Breast_Amgen_2004_153"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast",
+      "sponsor": "Amgen",
+      "year": "2004",
+      "trial_id": "153",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "Breast clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Breast_AmgenI_2006_122",
+    "type": "Trial",
+    "name": "Breast trial AmgenI 2006 (122)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Breast_AmgenI_2006_122",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Breast_AmgenI_2006_122: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Breast_AmgenI_2006_122"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast",
+      "sponsor": "AmgenI",
+      "year": "2006",
+      "trial_id": "122",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "Breast clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Breast_Celgene_2001_107",
+    "type": "Trial",
+    "name": "Breast trial Celgene 2001 (107)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Breast_Celgene_2001_107",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Breast_Celgene_2001_107: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Breast_Celgene_2001_107"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast",
+      "sponsor": "Celgene",
+      "year": "2001",
+      "trial_id": "107",
+      "n_files": 1,
+      "total_bytes": 62480,
+      "adam_tables": [],
+      "biological_relevance": "Breast clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Breast_EliLill_2008_168",
+    "type": "Trial",
+    "name": "Breast trial EliLill 2008 (168)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Breast_EliLill_2008_168",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Breast_EliLill_2008_168: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Breast_EliLill_2008_168"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast",
+      "sponsor": "EliLill",
+      "year": "2008",
+      "trial_id": "168",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "Breast clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Breast_Multipl_2004_414",
+    "type": "Trial",
+    "name": "Breast trial Multipl 2004 (414)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Breast_Multipl_2004_414",
+        "n_files": 3
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Breast_Multipl_2004_414: 3 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Breast_Multipl_2004_414"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast",
+      "sponsor": "Multipl",
+      "year": "2004",
+      "trial_id": "414",
+      "n_files": 3,
+      "total_bytes": 3174987,
+      "adam_tables": [],
+      "biological_relevance": "Breast clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Breast_Pfizer_2006_111",
+    "type": "Trial",
+    "name": "Breast trial Pfizer 2006 (111)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Breast_Pfizer_2006_111",
+        "n_files": 22
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "Breast_Pfizer_2006_111",
+        "tables_loaded": 21,
+        "worker": null
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Breast_Pfizer_2006_111: 22 source files",
+      "API-created caslib",
+      "Extracted 21 ADaM tables: 240 patients, 0 arms, 336 AE terms, 2433 AE events (text_pt coding)"
+    ],
+    "cross_refs": {
+      "caslib": "Breast_Pfizer_2006_111"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast",
+      "sponsor": "Pfizer",
+      "year": "2006",
+      "trial_id": "111",
+      "n_files": 22,
+      "total_bytes": 49554753,
+      "adam_tables": [
+        "adverse.sas7bdat",
+        "cd_b_p.sas7bdat",
+        "cn_6_p.sas7bdat",
+        "cn_7_p.sas7bdat",
+        "cn_8_p.sas7bdat",
+        "condrug.sas7bdat",
+        "contrt.sas7bdat",
+        "demog.sas7bdat",
+        "ecg.sas7bdat",
+        "final.sas7bdat",
+        "iota_p.sas7bdat",
+        "lab_safe.sas7bdat",
+        "pfm_p.sas7bdat",
+        "phyexam.sas7bdat",
+        "prevdis.sas7bdat",
+        "primdiag.sas7bdat",
+        "random.sas7bdat",
+        "srv_p.sas7bdat",
+        "testdrug.sas7bdat",
+        "tmm_p.sas7bdat",
+        "vitals.sas7bdat"
+      ],
+      "biological_relevance": "Breast clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 21,
+      "n_patients": 240,
+      "n_arms": 0,
+      "arm_patient_counts": {},
+      "n_ae_terms": 336,
+      "ae_events": 2433,
+      "ae_coding": "text_pt",
+      "ae_grade_distribution": {
+        "2": 632,
+        "1": 1566,
+        "3": 191,
+        "4": 27,
+        "5": 17
+      },
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Breast_Pfizer_2006_112",
+    "type": "Trial",
+    "name": "Breast trial Pfizer 2006 (112)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Breast_Pfizer_2006_112",
+        "n_files": 21
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "Breast_Pfizer_2006_112",
+        "tables_loaded": 20,
+        "worker": null
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Breast_Pfizer_2006_112: 21 source files",
+      "API-created caslib",
+      "Extracted 20 ADaM tables: 242 patients, 0 arms, 634 AE terms, 6393 AE events (text_pt coding)"
+    ],
+    "cross_refs": {
+      "caslib": "Breast_Pfizer_2006_112"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast",
+      "sponsor": "Pfizer",
+      "year": "2006",
+      "trial_id": "112",
+      "n_files": 21,
+      "total_bytes": 123610038,
+      "adam_tables": [
+        "adverse.sas7bdat",
+        "cd_b_p.sas7bdat",
+        "cn_6_p.sas7bdat",
+        "cn_7_p.sas7bdat",
+        "cn_8_p.sas7bdat",
+        "condrug.sas7bdat",
+        "contrt.sas7bdat",
+        "demog.sas7bdat",
+        "ecg.sas7bdat",
+        "final.sas7bdat",
+        "iota_p.sas7bdat",
+        "lab_safe.sas7bdat",
+        "pfm_p.sas7bdat",
+        "phyexam.sas7bdat",
+        "prevdis.sas7bdat",
+        "primdiag.sas7bdat",
+        "random.sas7bdat",
+        "testdrug.sas7bdat",
+        "tmm_p.sas7bdat",
+        "vitals.sas7bdat"
+      ],
+      "biological_relevance": "Breast clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 20,
+      "n_patients": 242,
+      "n_arms": 0,
+      "arm_patient_counts": {},
+      "n_ae_terms": 634,
+      "ae_events": 6393,
+      "ae_coding": "text_pt",
+      "ae_grade_distribution": {
+        "1": 3762,
+        "2": 1917,
+        "3": 622,
+        "4": 78,
+        "5": 14
+      },
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Breast_Pfizer_2007_113",
+    "type": "Trial",
+    "name": "Breast trial Pfizer 2007 (113)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Breast_Pfizer_2007_113",
+        "n_files": 21
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "Breast_Pfizer_2007_113",
+        "tables_loaded": 20,
+        "worker": null
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Breast_Pfizer_2007_113: 21 source files",
+      "API-created caslib",
+      "Extracted 20 ADaM tables: 215 patients, 0 arms, 428 AE terms, 3551 AE events (text_pt coding)"
+    ],
+    "cross_refs": {
+      "caslib": "Breast_Pfizer_2007_113"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast",
+      "sponsor": "Pfizer",
+      "year": "2007",
+      "trial_id": "113",
+      "n_files": 21,
+      "total_bytes": 61317823,
+      "adam_tables": [
+        "adverse.sas7bdat",
+        "cd_b_p.sas7bdat",
+        "cn_6_p.sas7bdat",
+        "cn_7_p.sas7bdat",
+        "cn_8_p.sas7bdat",
+        "condrug.sas7bdat",
+        "contrt.sas7bdat",
+        "demog.sas7bdat",
+        "ecg.sas7bdat",
+        "final.sas7bdat",
+        "iota_p.sas7bdat",
+        "lab_safe.sas7bdat",
+        "pfm_p.sas7bdat",
+        "phyexam.sas7bdat",
+        "prevdis.sas7bdat",
+        "primdiag.sas7bdat",
+        "random.sas7bdat",
+        "testdrug.sas7bdat",
+        "tmm_p.sas7bdat",
+        "vitals.sas7bdat"
+      ],
+      "biological_relevance": "Breast clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 20,
+      "n_patients": 215,
+      "n_arms": 0,
+      "arm_patient_counts": {},
+      "n_ae_terms": 428,
+      "ae_events": 3551,
+      "ae_coding": "text_pt",
+      "ae_grade_distribution": {
+        "1": 2176,
+        "2": 1045,
+        "3": 300,
+        "4": 16,
+        "5": 11
+      },
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Breast_SanofiU_1997_120",
+    "type": "Trial",
+    "name": "Breast trial SanofiU 1997 (120)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Breast_SanofiU_1997_120",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Breast_SanofiU_1997_120: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Breast_SanofiU_1997_120"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast",
+      "sponsor": "SanofiU",
+      "year": "1997",
+      "trial_id": "120",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "Breast clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Breast_SanofiU_1998_127",
+    "type": "Trial",
+    "name": "Breast trial SanofiU 1998 (127)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Breast_SanofiU_1998_127",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Breast_SanofiU_1998_127: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Breast_SanofiU_1998_127"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast",
+      "sponsor": "SanofiU",
+      "year": "1998",
+      "trial_id": "127",
+      "n_files": 2,
+      "total_bytes": 126464,
+      "adam_tables": [],
+      "biological_relevance": "Breast clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Breast_SanofiU_2000_118",
+    "type": "Trial",
+    "name": "Breast trial SanofiU 2000 (118)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Breast_SanofiU_2000_118",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Breast_SanofiU_2000_118: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Breast_SanofiU_2000_118"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast",
+      "sponsor": "SanofiU",
+      "year": "2000",
+      "trial_id": "118",
+      "n_files": 2,
+      "total_bytes": 172544,
+      "adam_tables": [],
+      "biological_relevance": "Breast clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Breast_SanofiU_2004_135",
+    "type": "Trial",
+    "name": "Breast trial SanofiU 2004 (135)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Breast_SanofiU_2004_135",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Breast_SanofiU_2004_135: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Breast_SanofiU_2004_135"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast",
+      "sponsor": "SanofiU",
+      "year": "2004",
+      "trial_id": "135",
+      "n_files": 2,
+      "total_bytes": 182784,
+      "adam_tables": [],
+      "biological_relevance": "Breast clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Colorec_Allianc_1994_201",
+    "type": "Trial",
+    "name": "Colorec trial Allianc 1994 (201)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Colorec_Allianc_1994_201",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Colorec_Allianc_1994_201: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Colorec_Allianc_1994_201"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec",
+      "sponsor": "Allianc",
+      "year": "1994",
+      "trial_id": "201",
+      "n_files": 1,
+      "total_bytes": 88525,
+      "adam_tables": [],
+      "biological_relevance": "Colorec clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Colorec_Allianc_1997_138",
+    "type": "Trial",
+    "name": "Colorec trial Allianc 1997 (138)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Colorec_Allianc_1997_138",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Colorec_Allianc_1997_138: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Colorec_Allianc_1997_138"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec",
+      "sponsor": "Allianc",
+      "year": "1997",
+      "trial_id": "138",
+      "n_files": 2,
+      "total_bytes": 20161,
+      "adam_tables": [],
+      "biological_relevance": "Colorec clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Colorec_Allianc_1997_182",
+    "type": "Trial",
+    "name": "Colorec trial Allianc 1997 (182)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Colorec_Allianc_1997_182",
+        "n_files": 6
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Colorec_Allianc_1997_182: 6 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Colorec_Allianc_1997_182"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec",
+      "sponsor": "Allianc",
+      "year": "1997",
+      "trial_id": "182",
+      "n_files": 6,
+      "total_bytes": 782849,
+      "adam_tables": [],
+      "biological_relevance": "Colorec clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Colorec_Allianc_2004_161",
+    "type": "Trial",
+    "name": "Colorec trial Allianc 2004 (161)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Colorec_Allianc_2004_161",
+        "n_files": 3
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Colorec_Allianc_2004_161: 3 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Colorec_Allianc_2004_161"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec",
+      "sponsor": "Allianc",
+      "year": "2004",
+      "trial_id": "161",
+      "n_files": 3,
+      "total_bytes": 295952,
+      "adam_tables": [],
+      "biological_relevance": "Colorec clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Colorec_Amgen_2004_310",
+    "type": "Trial",
+    "name": "Colorec trial Amgen 2004 (310)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Colorec_Amgen_2004_310",
+        "n_files": 10
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "Colorec_Amgen_2004_310",
+        "tables_loaded": 7,
+        "worker": null
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Colorec_Amgen_2004_310: 10 source files",
+      "Colorec oncology clinical trial (Amgen, 2004)",
+      "Extracted 7 ADaM tables: 370 patients, 2 arms, 0 AE terms, 0 AE events (none coding)"
+    ],
+    "cross_refs": {
+      "caslib": "Colorec_Amgen_2004_310"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec",
+      "sponsor": "Amgen",
+      "year": "2004",
+      "trial_id": "310",
+      "n_files": 10,
+      "total_bytes": 6674399,
+      "adam_tables": [
+        "adae_pds2019.sas7bdat",
+        "adlb_pds2019.sas7bdat",
+        "adls_pds2019.sas7bdat",
+        "adpm_pds2019.sas7bdat",
+        "adrsp_pds2019.sas7bdat",
+        "adsl_pds2019.sas7bdat",
+        "biomark_pds2019.sas7bdat"
+      ],
+      "biological_relevance": "Colorec clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 7,
+      "n_patients": 370,
+      "n_arms": 2,
+      "arm_patient_counts": {
+        "panit. plus best supportive care": 183,
+        "Best supportive care": 187
+      },
+      "n_ae_terms": 0,
+      "ae_events": 0,
+      "ae_coding": "none",
+      "ae_grade_distribution": {},
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Colorec_Amgen_2005_262",
+    "type": "Trial",
+    "name": "Colorec trial Amgen 2005 (262)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Colorec_Amgen_2005_262",
+        "n_files": 18
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "Colorec_Amgen_2005_262",
+        "tables_loaded": 17,
+        "worker": null
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Colorec_Amgen_2005_262: 18 source files",
+      "API-created caslib",
+      "Extracted 17 ADaM tables: 842 patients, 2 arms, 6074 AE terms, 29080 AE events (text_pt coding)"
+    ],
+    "cross_refs": {
+      "caslib": "Colorec_Amgen_2005_262"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec",
+      "sponsor": "Amgen",
+      "year": "2005",
+      "trial_id": "262",
+      "n_files": 18,
+      "total_bytes": 608309248,
+      "adam_tables": [
+        "a_eendpt.sas7bdat",
+        "a_sendpt.sas7bdat",
+        "ae.sas7bdat",
+        "chemotx.sas7bdat",
+        "corevar.sas7bdat",
+        "death.sas7bdat",
+        "demo.sas7bdat",
+        "disposit.sas7bdat",
+        "eligcrit.sas7bdat",
+        "exposure.sas7bdat",
+        "lab.sas7bdat",
+        "lesion.sas7bdat",
+        "medhist.sas7bdat",
+        "radiotx.sas7bdat",
+        "respeval.sas7bdat",
+        "surghist.sas7bdat",
+        "vitals_v.sas7bdat"
+      ],
+      "biological_relevance": "Colorec clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 17,
+      "n_patients": 842,
+      "n_arms": 2,
+      "arm_patient_counts": {
+        "11": 414,
+        "12": 428
+      },
+      "n_ae_terms": 6074,
+      "ae_events": 29080,
+      "ae_coding": "text_pt",
+      "ae_grade_distribution": {
+        "1": 17894,
+        "2": 7850,
+        "3": 2879,
+        "4": 393,
+        "5": 57
+      },
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null,
+      "kras_status_available": true,
+      "kras_distribution": {
+        "Wild-type": 410,
+        "Mutant": 286,
+        "Failed": 83,
+        "Unknown": 63
+      }
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Colorec_Amgen_2006_263",
+    "type": "Trial",
+    "name": "Colorec trial Amgen 2006 (263)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Colorec_Amgen_2006_263",
+        "n_files": 21
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "Colorec_Amgen_2006_263",
+        "tables_loaded": 20,
+        "worker": null
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Colorec_Amgen_2006_263: 21 source files",
+      "API-created caslib",
+      "Extracted 20 ADaM tables: 946 patients, 2 arms, 3614 AE terms, 14823 AE events (text_pt coding)"
+    ],
+    "cross_refs": {
+      "caslib": "Colorec_Amgen_2006_263"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec",
+      "sponsor": "Amgen",
+      "year": "2006",
+      "trial_id": "263",
+      "n_files": 21,
+      "total_bytes": 744886272,
+      "adam_tables": [
+        "a_eendpt.sas7bdat",
+        "a_endpt.sas7bdat",
+        "a_sendpt.sas7bdat",
+        "ae.sas7bdat",
+        "chemotx.sas7bdat",
+        "corevar.sas7bdat",
+        "death.sas7bdat",
+        "demo.sas7bdat",
+        "disposit.sas7bdat",
+        "eligcrit.sas7bdat",
+        "exposure.sas7bdat",
+        "lab.sas7bdat",
+        "lesion.sas7bdat",
+        "lesnprog.sas7bdat",
+        "medhist.sas7bdat",
+        "othcantx.sas7bdat",
+        "radiotx.sas7bdat",
+        "respeval.sas7bdat",
+        "surghist.sas7bdat",
+        "vitals_v.sas7bdat"
+      ],
+      "biological_relevance": "Colorec clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 20,
+      "n_patients": 946,
+      "n_arms": 2,
+      "arm_patient_counts": {
+        "40": 470,
+        "41": 476
+      },
+      "n_ae_terms": 3614,
+      "ae_events": 14823,
+      "ae_coding": "text_pt",
+      "ae_grade_distribution": {
+        "1": 8513,
+        "2": 4478,
+        "3": 1510,
+        "4": 234,
+        "5": 62
+      },
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null,
+      "kras_status_available": true,
+      "kras_distribution": {
+        "Wild-type": 474,
+        "Mutant": 381,
+        "Failed": 30,
+        "Unknown": 61
+      }
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Colorec_Amgen_2006_264",
+    "type": "Trial",
+    "name": "Colorec trial Amgen 2006 (264)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Colorec_Amgen_2006_264",
+        "n_files": 21
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "Colorec_Amgen_2006_264",
+        "tables_loaded": 20,
+        "worker": null
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Colorec_Amgen_2006_264: 21 source files",
+      "API-created caslib",
+      "Extracted 20 ADaM tables: 935 patients, 2 arms, 4758 AE terms, 22796 AE events (text_pt coding)"
+    ],
+    "cross_refs": {
+      "caslib": "Colorec_Amgen_2006_264"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec",
+      "sponsor": "Amgen",
+      "year": "2006",
+      "trial_id": "264",
+      "n_files": 21,
+      "total_bytes": 884215808,
+      "adam_tables": [
+        "a_eendpt.sas7bdat",
+        "a_endpt.sas7bdat",
+        "a_sendpt.sas7bdat",
+        "ae.sas7bdat",
+        "chemotx.sas7bdat",
+        "corevar.sas7bdat",
+        "death.sas7bdat",
+        "demo.sas7bdat",
+        "disposit.sas7bdat",
+        "eligcrit.sas7bdat",
+        "exposure.sas7bdat",
+        "lab.sas7bdat",
+        "lesion.sas7bdat",
+        "lesnprog.sas7bdat",
+        "medhist.sas7bdat",
+        "othcantx.sas7bdat",
+        "radiotx.sas7bdat",
+        "respeval.sas7bdat",
+        "surghist.sas7bdat",
+        "vitals_v.sas7bdat"
+      ],
+      "biological_relevance": "Colorec clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 20,
+      "n_patients": 935,
+      "n_arms": 2,
+      "arm_patient_counts": {
+        "42": 468,
+        "43": 467
+      },
+      "n_ae_terms": 4758,
+      "ae_events": 22796,
+      "ae_coding": "text_pt",
+      "ae_grade_distribution": {
+        "2": 6306,
+        "1": 13837,
+        "3": 2226,
+        "4": 378,
+        "5": 40
+      },
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Colorec_Amgen_2006_309",
+    "type": "Trial",
+    "name": "Colorec trial Amgen 2006 (309)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Colorec_Amgen_2006_309",
+        "n_files": 10
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "Colorec_Amgen_2006_309",
+        "tables_loaded": 7,
+        "worker": null
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Colorec_Amgen_2006_309: 10 source files",
+      "Colorec oncology clinical trial (Amgen, 2006)",
+      "Extracted 7 ADaM tables: 935 patients, 2 arms, 0 AE terms, 0 AE events (none coding)"
+    ],
+    "cross_refs": {
+      "caslib": "Colorec_Amgen_2006_309"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec",
+      "sponsor": "Amgen",
+      "year": "2006",
+      "trial_id": "309",
+      "n_files": 10,
+      "total_bytes": 31563645,
+      "adam_tables": [
+        "adae_pds2019.sas7bdat",
+        "adlb_pds2019.sas7bdat",
+        "adls_pds2019.sas7bdat",
+        "adpm_pds2019.sas7bdat",
+        "adrsp_pds2019.sas7bdat",
+        "adsl_pds2019.sas7bdat",
+        "biomark_pds2019.sas7bdat"
+      ],
+      "biological_relevance": "Colorec clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 7,
+      "n_patients": 935,
+      "n_arms": 2,
+      "arm_patient_counts": {
+        "Panitumumab + FOLFOX": 468,
+        "FOLFOX alone": 467
+      },
+      "n_ae_terms": 0,
+      "ae_events": 0,
+      "ae_coding": "none",
+      "ae_grade_distribution": {},
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Colorec_AstraZe_2006_78",
+    "type": "Trial",
+    "name": "Colorec trial AstraZe 2006 (78)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Colorec_AstraZe_2006_78",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Colorec_AstraZe_2006_78: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Colorec_AstraZe_2006_78"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec",
+      "sponsor": "AstraZe",
+      "year": "2006",
+      "trial_id": "78",
+      "n_files": 2,
+      "total_bytes": 1078784,
+      "adam_tables": [],
+      "biological_relevance": "Colorec clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Colorec_Multipl_2006_251",
+    "type": "Trial",
+    "name": "Colorec trial Multipl 2006 (251)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Colorec_Multipl_2006_251",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Colorec_Multipl_2006_251: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Colorec_Multipl_2006_251"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec",
+      "sponsor": "Multipl",
+      "year": "2006",
+      "trial_id": "251",
+      "n_files": 2,
+      "total_bytes": 998103,
+      "adam_tables": [],
+      "biological_relevance": "Colorec clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Colorec_Pfizer_2007_114",
+    "type": "Trial",
+    "name": "Colorec trial Pfizer 2007 (114)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Colorec_Pfizer_2007_114",
+        "n_files": 21
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "Colorec_Pfizer_2007_114",
+        "tables_loaded": 20,
+        "worker": null
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Colorec_Pfizer_2007_114: 21 source files",
+      "API-created caslib",
+      "Extracted 20 ADaM tables: 379 patients, 0 arms, 518 AE terms, 6166 AE events (text_pt coding)"
+    ],
+    "cross_refs": {
+      "caslib": "Colorec_Pfizer_2007_114"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec",
+      "sponsor": "Pfizer",
+      "year": "2007",
+      "trial_id": "114",
+      "n_files": 21,
+      "total_bytes": 156042131,
+      "adam_tables": [
+        "adverse.sas7bdat",
+        "cd_b_p.sas7bdat",
+        "cn_6_p.sas7bdat",
+        "cn_7_p.sas7bdat",
+        "cn_8_p.sas7bdat",
+        "condrug.sas7bdat",
+        "contrt.sas7bdat",
+        "demog.sas7bdat",
+        "ecg.sas7bdat",
+        "final.sas7bdat",
+        "iota_p.sas7bdat",
+        "lab_safe.sas7bdat",
+        "pfm_p.sas7bdat",
+        "phyexam.sas7bdat",
+        "prevdis.sas7bdat",
+        "primdiag.sas7bdat",
+        "random.sas7bdat",
+        "testdrug.sas7bdat",
+        "tmm_p.sas7bdat",
+        "vitals.sas7bdat"
+      ],
+      "biological_relevance": "Colorec clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 20,
+      "n_patients": 379,
+      "n_arms": 0,
+      "arm_patient_counts": {},
+      "n_ae_terms": 518,
+      "ae_events": 6166,
+      "ae_coding": "text_pt",
+      "ae_grade_distribution": {
+        "1": 3872,
+        "2": 1638,
+        "4": 112,
+        "3": 525,
+        "5": 18
+      },
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Colorec_SanofiU_1998_128",
+    "type": "Trial",
+    "name": "Colorec trial SanofiU 1998 (128)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Colorec_SanofiU_1998_128",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Colorec_SanofiU_1998_128: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Colorec_SanofiU_1998_128"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec",
+      "sponsor": "SanofiU",
+      "year": "1998",
+      "trial_id": "128",
+      "n_files": 2,
+      "total_bytes": 162816,
+      "adam_tables": [],
+      "biological_relevance": "Colorec clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Colorec_SanofiU_2002_137",
+    "type": "Trial",
+    "name": "Colorec trial SanofiU 2002 (137)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Colorec_SanofiU_2002_137",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Colorec_SanofiU_2002_137: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Colorec_SanofiU_2002_137"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec",
+      "sponsor": "SanofiU",
+      "year": "2002",
+      "trial_id": "137",
+      "n_files": 2,
+      "total_bytes": 143872,
+      "adam_tables": [],
+      "biological_relevance": "Colorec clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Colorec_SanofiU_2005_136",
+    "type": "Trial",
+    "name": "Colorec trial SanofiU 2005 (136)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Colorec_SanofiU_2005_136",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Colorec_SanofiU_2005_136: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Colorec_SanofiU_2005_136"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec",
+      "sponsor": "SanofiU",
+      "year": "2005",
+      "trial_id": "136",
+      "n_files": 2,
+      "total_bytes": 155648,
+      "adam_tables": [],
+      "biological_relevance": "Colorec clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Colorec_SanofiU_2007_131",
+    "type": "Trial",
+    "name": "Colorec trial SanofiU 2007 (131)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Colorec_SanofiU_2007_131",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Colorec_SanofiU_2007_131: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Colorec_SanofiU_2007_131"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec",
+      "sponsor": "SanofiU",
+      "year": "2007",
+      "trial_id": "131",
+      "n_files": 2,
+      "total_bytes": 51248,
+      "adam_tables": [],
+      "biological_relevance": "Colorec clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Gastric_Multipl_1999_416",
+    "type": "Trial",
+    "name": "Gastric trial Multipl 1999 (416)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Gastric_Multipl_1999_416",
+        "n_files": 3
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Gastric_Multipl_1999_416: 3 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Gastric_Multipl_1999_416"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Gastric",
+      "sponsor": "Multipl",
+      "year": "1999",
+      "trial_id": "416",
+      "n_files": 3,
+      "total_bytes": 225487,
+      "adam_tables": [],
+      "biological_relevance": "Gastric clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Gastric_Multipl_2008_415",
+    "type": "Trial",
+    "name": "Gastric trial Multipl 2008 (415)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Gastric_Multipl_2008_415",
+        "n_files": 4
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Gastric_Multipl_2008_415: 4 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Gastric_Multipl_2008_415"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Gastric",
+      "sponsor": "Multipl",
+      "year": "2008",
+      "trial_id": "415",
+      "n_files": 4,
+      "total_bytes": 336242,
+      "adam_tables": [],
+      "biological_relevance": "Gastric clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Gastric_SanofiU_1999_143",
+    "type": "Trial",
+    "name": "Gastric trial SanofiU 1999 (143)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Gastric_SanofiU_1999_143",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Gastric_SanofiU_1999_143: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Gastric_SanofiU_1999_143"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Gastric",
+      "sponsor": "SanofiU",
+      "year": "1999",
+      "trial_id": "143",
+      "n_files": 2,
+      "total_bytes": 203264,
+      "adam_tables": [],
+      "biological_relevance": "Gastric clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Glioma_EMDSero_2008_441",
+    "type": "Trial",
+    "name": "Glioma trial EMDSero 2008 (441)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Glioma_EMDSero_2008_441",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Glioma_EMDSero_2008_441: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Glioma_EMDSero_2008_441"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Glioma",
+      "sponsor": "EMDSero",
+      "year": "2008",
+      "trial_id": "441",
+      "n_files": 1,
+      "total_bytes": 84290,
+      "adam_tables": [],
+      "biological_relevance": "Glioma clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Glioma_EMDSero_2009_440",
+    "type": "Trial",
+    "name": "Glioma trial EMDSero 2009 (440)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Glioma_EMDSero_2009_440",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Glioma_EMDSero_2009_440: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Glioma_EMDSero_2009_440"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Glioma",
+      "sponsor": "EMDSero",
+      "year": "2009",
+      "trial_id": "440",
+      "n_files": 1,
+      "total_bytes": 81077,
+      "adam_tables": [],
+      "biological_relevance": "Glioma clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:HeadNe_Amgen_2007_265",
+    "type": "Trial",
+    "name": "HeadNe trial Amgen 2007 (265)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "HeadNe_Amgen_2007_265",
+        "n_files": 19
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "HeadNe_Amgen_2007_265",
+        "tables_loaded": 18,
+        "worker": null
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib HeadNe_Amgen_2007_265: 19 source files",
+      "API-created caslib",
+      "Extracted 18 ADaM tables: 520 patients, 2 arms, 2389 AE terms, 9934 AE events (text_pt coding)"
+    ],
+    "cross_refs": {
+      "caslib": "HeadNe_Amgen_2007_265"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "HeadNe",
+      "sponsor": "Amgen",
+      "year": "2007",
+      "trial_id": "265",
+      "n_files": 19,
+      "total_bytes": 290394112,
+      "adam_tables": [
+        "ae.sas7bdat",
+        "aeendpt.sas7bdat",
+        "asendpt.sas7bdat",
+        "chemotx.sas7bdat",
+        "corevar.sas7bdat",
+        "death.sas7bdat",
+        "demo.sas7bdat",
+        "disposit.sas7bdat",
+        "eligcrit.sas7bdat",
+        "exposure.sas7bdat",
+        "lab.sas7bdat",
+        "lesion.sas7bdat",
+        "lesnprog.sas7bdat",
+        "medhist.sas7bdat",
+        "othcantx.sas7bdat",
+        "radiotx.sas7bdat",
+        "respeval.sas7bdat",
+        "surghist.sas7bdat"
+      ],
+      "biological_relevance": "HeadNe clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 18,
+      "n_patients": 520,
+      "n_arms": 2,
+      "arm_patient_counts": {
+        "2": 260,
+        "50": 260
+      },
+      "n_ae_terms": 2389,
+      "ae_events": 9934,
+      "ae_coding": "text_pt",
+      "ae_grade_distribution": {
+        "1": 5327,
+        "2": 2889,
+        "3": 1280,
+        "4": 356,
+        "5": 82
+      },
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:HeadNe_EliLill_2006_150",
+    "type": "Trial",
+    "name": "HeadNe trial EliLill 2006 (150)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "HeadNe_EliLill_2006_150",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib HeadNe_EliLill_2006_150: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "HeadNe_EliLill_2006_150"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "HeadNe",
+      "sponsor": "EliLill",
+      "year": "2006",
+      "trial_id": "150",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "HeadNe clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:HeadNe_SanofiU_1998_142",
+    "type": "Trial",
+    "name": "HeadNe trial SanofiU 1998 (142)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "HeadNe_SanofiU_1998_142",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib HeadNe_SanofiU_1998_142: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "HeadNe_SanofiU_1998_142"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "HeadNe",
+      "sponsor": "SanofiU",
+      "year": "1998",
+      "trial_id": "142",
+      "n_files": 2,
+      "total_bytes": 493863,
+      "adam_tables": [],
+      "biological_relevance": "HeadNe clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:HeadNe_SanofiU_2002_129",
+    "type": "Trial",
+    "name": "HeadNe trial SanofiU 2002 (129)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "HeadNe_SanofiU_2002_129",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib HeadNe_SanofiU_2002_129: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "HeadNe_SanofiU_2002_129"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "HeadNe",
+      "sponsor": "SanofiU",
+      "year": "2002",
+      "trial_id": "129",
+      "n_files": 2,
+      "total_bytes": 247296,
+      "adam_tables": [],
+      "biological_relevance": "HeadNe clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Kidney_BayerAG_2003_97",
+    "type": "Trial",
+    "name": "Kidney trial BayerAG 2003 (97)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Kidney_BayerAG_2003_97",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Kidney_BayerAG_2003_97: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Kidney_BayerAG_2003_97"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Kidney",
+      "sponsor": "BayerAG",
+      "year": "2003",
+      "trial_id": "97",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "Kidney clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Liver_Pfizer_2008_124",
+    "type": "Trial",
+    "name": "Liver trial Pfizer 2008 (124)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Liver_Pfizer_2008_124",
+        "n_files": 23
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "Liver_Pfizer_2008_124",
+        "tables_loaded": 22,
+        "worker": null
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Liver_Pfizer_2008_124: 23 source files",
+      "API-created caslib",
+      "Extracted 22 ADaM tables: 542 patients, 0 arms, 652 AE terms, 8114 AE events (text_pt coding)"
+    ],
+    "cross_refs": {
+      "caslib": "Liver_Pfizer_2008_124"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Liver",
+      "sponsor": "Pfizer",
+      "year": "2008",
+      "trial_id": "124",
+      "n_files": 23,
+      "total_bytes": 152880678,
+      "adam_tables": [
+        "adverse.sas7bdat",
+        "cd_b_p.sas7bdat",
+        "cn_6_p.sas7bdat",
+        "cn_7_p.sas7bdat",
+        "cn_9_p.sas7bdat",
+        "cn_a_p.sas7bdat",
+        "condrug.sas7bdat",
+        "contrt.sas7bdat",
+        "demog.sas7bdat",
+        "ecg.sas7bdat",
+        "final.sas7bdat",
+        "iota_p.sas7bdat",
+        "lab_safe.sas7bdat",
+        "pfm_p.sas7bdat",
+        "phyexam.sas7bdat",
+        "prevdis.sas7bdat",
+        "primdiag.sas7bdat",
+        "random.sas7bdat",
+        "srv_p.sas7bdat",
+        "testdrug.sas7bdat",
+        "tmm_p.sas7bdat",
+        "vitals.sas7bdat"
+      ],
+      "biological_relevance": "Liver clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 22,
+      "n_patients": 542,
+      "n_arms": 0,
+      "arm_patient_counts": {},
+      "n_ae_terms": 652,
+      "ae_events": 8114,
+      "ae_coding": "text_pt",
+      "ae_grade_distribution": {
+        "1": 4190,
+        "2": 2622,
+        "3": 1073,
+        "4": 133,
+        "5": 96
+      },
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:LungNo_Celgene_2007_108",
+    "type": "Trial",
+    "name": "LungNo trial Celgene 2007 (108)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "LungNo_Celgene_2007_108",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib LungNo_Celgene_2007_108: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "LungNo_Celgene_2007_108"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungNo",
+      "sponsor": "Celgene",
+      "year": "2007",
+      "trial_id": "108",
+      "n_files": 1,
+      "total_bytes": 74015,
+      "adam_tables": [],
+      "biological_relevance": "LungNo clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:LungNo_ELiLill_2006_116",
+    "type": "Trial",
+    "name": "LungNo trial ELiLill 2006 (116)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "LungNo_ELiLill_2006_116",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib LungNo_ELiLill_2006_116: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "LungNo_ELiLill_2006_116"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungNo",
+      "sponsor": "ELiLill",
+      "year": "2006",
+      "trial_id": "116",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "LungNo clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:LungNo_EliLill_2008_141",
+    "type": "Trial",
+    "name": "LungNo trial EliLill 2008 (141)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "LungNo_EliLill_2008_141",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib LungNo_EliLill_2008_141: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "LungNo_EliLill_2008_141"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungNo",
+      "sponsor": "EliLill",
+      "year": "2008",
+      "trial_id": "141",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "LungNo clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:LungNo_EliLill_2008_148",
+    "type": "Trial",
+    "name": "LungNo trial EliLill 2008 (148)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "LungNo_EliLill_2008_148",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib LungNo_EliLill_2008_148: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "LungNo_EliLill_2008_148"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungNo",
+      "sponsor": "EliLill",
+      "year": "2008",
+      "trial_id": "148",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "LungNo clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:LungNo_EliLill_2009_438",
+    "type": "Trial",
+    "name": "LungNo trial EliLill 2009 (438)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "LungNo_EliLill_2009_438",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib LungNo_EliLill_2009_438: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "LungNo_EliLill_2009_438"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungNo",
+      "sponsor": "EliLill",
+      "year": "2009",
+      "trial_id": "438",
+      "n_files": 1,
+      "total_bytes": 71083,
+      "adam_tables": [],
+      "biological_relevance": "LungNo clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:LungNo_EliLill_2010_272",
+    "type": "Trial",
+    "name": "LungNo trial EliLill 2010 (272)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "LungNo_EliLill_2010_272",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib LungNo_EliLill_2010_272: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "LungNo_EliLill_2010_272"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungNo",
+      "sponsor": "EliLill",
+      "year": "2010",
+      "trial_id": "272",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "LungNo clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:LungNo_MerckKG_2007_145",
+    "type": "Trial",
+    "name": "LungNo trial MerckKG 2007 (145)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "LungNo_MerckKG_2007_145",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib LungNo_MerckKG_2007_145: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "LungNo_MerckKG_2007_145"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungNo",
+      "sponsor": "MerckKG",
+      "year": "2007",
+      "trial_id": "145",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "LungNo clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:LungNo_Pfizer_2007_115",
+    "type": "Trial",
+    "name": "LungNo trial Pfizer 2007 (115)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "LungNo_Pfizer_2007_115",
+        "n_files": 21
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "LungNo_Pfizer_2007_115",
+        "tables_loaded": 20,
+        "worker": null
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib LungNo_Pfizer_2007_115: 21 source files",
+      "API-created caslib",
+      "Extracted 20 ADaM tables: 477 patients, 0 arms, 518 AE terms, 4339 AE events (text_pt coding)"
+    ],
+    "cross_refs": {
+      "caslib": "LungNo_Pfizer_2007_115"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungNo",
+      "sponsor": "Pfizer",
+      "year": "2007",
+      "trial_id": "115",
+      "n_files": 21,
+      "total_bytes": 78758806,
+      "adam_tables": [
+        "adverse.sas7bdat",
+        "cd_b_p.sas7bdat",
+        "cn_6_p.sas7bdat",
+        "cn_7_p.sas7bdat",
+        "cn_8_p.sas7bdat",
+        "condrug.sas7bdat",
+        "contrt.sas7bdat",
+        "demog.sas7bdat",
+        "ecg.sas7bdat",
+        "final.sas7bdat",
+        "iota_p.sas7bdat",
+        "lab_safe.sas7bdat",
+        "pfm_p.sas7bdat",
+        "phyexam.sas7bdat",
+        "prevdis.sas7bdat",
+        "primdiag.sas7bdat",
+        "random.sas7bdat",
+        "testdrug.sas7bdat",
+        "tmm_p.sas7bdat",
+        "vitals.sas7bdat"
+      ],
+      "biological_relevance": "LungNo clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 20,
+      "n_patients": 477,
+      "n_arms": 0,
+      "arm_patient_counts": {},
+      "n_ae_terms": 518,
+      "ae_events": 4339,
+      "ae_coding": "text_pt",
+      "ae_grade_distribution": {
+        "1": 2407,
+        "2": 1307,
+        "3": 437,
+        "4": 84,
+        "5": 103
+      },
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:LungNo_SanofiU_2007_133",
+    "type": "Trial",
+    "name": "LungNo trial SanofiU 2007 (133)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "LungNo_SanofiU_2007_133",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib LungNo_SanofiU_2007_133: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "LungNo_SanofiU_2007_133"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungNo",
+      "sponsor": "SanofiU",
+      "year": "2007",
+      "trial_id": "133",
+      "n_files": 2,
+      "total_bytes": 99840,
+      "adam_tables": [],
+      "biological_relevance": "LungNo clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:LungSm_Allianc_1998_261",
+    "type": "Trial",
+    "name": "LungSm trial Allianc 1998 (261)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "LungSm_Allianc_1998_261",
+        "n_files": 4
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib LungSm_Allianc_1998_261: 4 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "LungSm_Allianc_1998_261"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungSm",
+      "sponsor": "Allianc",
+      "year": "1998",
+      "trial_id": "261",
+      "n_files": 4,
+      "total_bytes": 10890676,
+      "adam_tables": [],
+      "biological_relevance": "LungSm clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:LungSm_Allianc_2007_218",
+    "type": "Trial",
+    "name": "LungSm trial Allianc 2007 (218)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "LungSm_Allianc_2007_218",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib LungSm_Allianc_2007_218: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "LungSm_Allianc_2007_218"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungSm",
+      "sponsor": "Allianc",
+      "year": "2007",
+      "trial_id": "218",
+      "n_files": 2,
+      "total_bytes": 10918,
+      "adam_tables": [],
+      "biological_relevance": "LungSm clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:LungSm_Amgen_2002_266",
+    "type": "Trial",
+    "name": "LungSm trial Amgen 2002 (266)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "LungSm_Amgen_2002_266",
+        "n_files": 26
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "LungSm_Amgen_2002_266",
+        "tables_loaded": 25,
+        "worker": null
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib LungSm_Amgen_2002_266: 26 source files",
+      "API-created caslib",
+      "Extracted 25 ADaM tables: 479 patients, 2 arms, 0 AE terms, 0 AE events (none coding)"
+    ],
+    "cross_refs": {
+      "caslib": "LungSm_Amgen_2002_266"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungSm",
+      "sponsor": "Amgen",
+      "year": "2002",
+      "trial_id": "266",
+      "n_files": 26,
+      "total_bytes": 76025856,
+      "adam_tables": [
+        "a_eendes.sas7bdat",
+        "a_eendfu.sas7bdat",
+        "a_eendpt.sas7bdat",
+        "a_lab.sas7bdat",
+        "a_qol.sas7bdat",
+        "a_sendpt.sas7bdat",
+        "c_ae.sas7bdat",
+        "c_bchar.sas7bdat",
+        "c_chem.sas7bdat",
+        "c_chemo.sas7bdat",
+        "c_conmed.sas7bdat",
+        "c_death.sas7bdat",
+        "c_diag.sas7bdat",
+        "c_disp.sas7bdat",
+        "c_doses.sas7bdat",
+        "c_entry.sas7bdat",
+        "c_hbscan.sas7bdat",
+        "c_hemat.sas7bdat",
+        "c_iron.sas7bdat",
+        "c_keyvar.sas7bdat",
+        "c_lesion.sas7bdat",
+        "c_medhis.sas7bdat",
+        "c_radio.sas7bdat",
+        "c_trans.sas7bdat",
+        "c_vitals.sas7bdat"
+      ],
+      "biological_relevance": "LungSm clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 25,
+      "n_patients": 479,
+      "n_arms": 2,
+      "arm_patient_counts": {
+        "PLACEBOQ3WK": 240,
+        "NESP300Q3WK": 239
+      },
+      "n_ae_terms": 0,
+      "ae_events": 0,
+      "ae_coding": "none",
+      "ae_grade_distribution": {},
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:LungSm_EliLill_2011_287",
+    "type": "Trial",
+    "name": "LungSm trial EliLill 2011 (287)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "LungSm_EliLill_2011_287",
+        "n_files": 38
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "LungSm_EliLill_2011_287",
+        "tables_loaded": 37,
+        "worker": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib LungSm_EliLill_2011_287: 38 source files",
+      "API-created caslib",
+      "Extracted 37 ADaM tables: 134 patients, 3 arms, 412 AE terms, 2629 AE events (text_pt coding)"
+    ],
+    "cross_refs": {
+      "caslib": "LungSm_EliLill_2011_287"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungSm",
+      "sponsor": "EliLill",
+      "year": "2011",
+      "trial_id": "287",
+      "n_files": 38,
+      "total_bytes": 119017472,
+      "adam_tables": [
+        "ae.sas7bdat",
+        "biomrkr.sas7bdat",
+        "cclm_cen.sas7bdat",
+        "chem_cen.sas7bdat",
+        "cm.sas7bdat",
+        "dm.sas7bdat",
+        "dor.sas7bdat",
+        "dosmod.sas7bdat",
+        "ds_fl.sas7bdat",
+        "ds_l.sas7bdat",
+        "ds_t.sas7bdat",
+        "ecg.sas7bdat",
+        "ex.sas7bdat",
+        "excomp.sas7bdat",
+        "exvial.sas7bdat",
+        "hema_cen.sas7bdat",
+        "immune.sas7bdat",
+        "lbcen.sas7bdat",
+        "mh.sas7bdat",
+        "os.sas7bdat",
+        "pe.sas7bdat",
+        "pfs.sas7bdat",
+        "pfs_ns.sas7bdat",
+        "pfs_sen.sas7bdat",
+        "pfsclin.sas7bdat",
+        "ph.sas7bdat",
+        "rs.sas7bdat",
+        "ta.sas7bdat",
+        "te.sas7bdat",
+        "thyp.sas7bdat",
+        "tissue.sas7bdat",
+        "tms.sas7bdat",
+        "tr.sas7bdat",
+        "tv.sas7bdat",
+        "urin_cen.sas7bdat",
+        "vs.sas7bdat",
+        "wbcm_cen.sas7bdat"
+      ],
+      "biological_relevance": "LungSm clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 37,
+      "n_patients": 134,
+      "n_arms": 3,
+      "arm_patient_counts": {
+        "Arm B": 46,
+        "Arm A": 48,
+        "SCRNFAIL": 36
+      },
+      "n_ae_terms": 412,
+      "ae_events": 2629,
+      "ae_coding": "text_pt",
+      "ae_grade_distribution": {
+        "1": 1415,
+        "2": 915,
+        "3": 226,
+        "4": 70,
+        "5": 3
+      },
+      "survival_status_n": 130,
+      "survival_event_col": "DTHFL",
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:LungSm_G1Thera_2015_433",
+    "type": "Trial",
+    "name": "LungSm trial G1Thera 2015 (433)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "LungSm_G1Thera_2015_433",
+        "n_files": 18
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "LungSm_G1Thera_2015_433",
+        "tables_loaded": 16,
+        "worker": 3
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib LungSm_G1Thera_2015_433: 18 source files",
+      "API-created caslib",
+      "Extracted 16 ADaM tables: 37 patients, 1 arms, 0 AE terms, 0 AE events (none coding)"
+    ],
+    "cross_refs": {
+      "caslib": "LungSm_G1Thera_2015_433"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungSm",
+      "sponsor": "G1Thera",
+      "year": "2015",
+      "trial_id": "433",
+      "n_files": 18,
+      "total_bytes": 46442610,
+      "adam_tables": [
+        "adae.sas7bdat",
+        "adcm.sas7bdat",
+        "addv.sas7bdat",
+        "adeg.sas7bdat",
+        "adex.sas7bdat",
+        "adex2.sas7bdat",
+        "adlb.sas7bdat",
+        "admh.sas7bdat",
+        "adpr.sas7bdat",
+        "adqs.sas7bdat",
+        "adrs.sas7bdat",
+        "adsl.sas7bdat",
+        "adtr.sas7bdat",
+        "adtr2.sas7bdat",
+        "adtte.sas7bdat",
+        "advs.sas7bdat"
+      ],
+      "biological_relevance": "LungSm clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 16,
+      "n_patients": 37,
+      "n_arms": 1,
+      "arm_patient_counts": {
+        "Part 2 Placebo": 37
+      },
+      "n_ae_terms": 0,
+      "ae_events": 0,
+      "ae_coding": "none",
+      "ae_grade_distribution": {},
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:LungSm_G1Thera_2015_434",
+    "type": "Trial",
+    "name": "LungSm trial G1Thera 2015 (434)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "LungSm_G1Thera_2015_434",
+        "n_files": 17
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "LungSm_G1Thera_2015_434",
+        "tables_loaded": 15,
+        "worker": 4
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib LungSm_G1Thera_2015_434: 17 source files",
+      "API-created caslib",
+      "Extracted 15 ADaM tables: 28 patients, 1 arms, 0 AE terms, 0 AE events (none coding)"
+    ],
+    "cross_refs": {
+      "caslib": "LungSm_G1Thera_2015_434"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungSm",
+      "sponsor": "G1Thera",
+      "year": "2015",
+      "trial_id": "434",
+      "n_files": 17,
+      "total_bytes": 11365424,
+      "adam_tables": [
+        "adae.sas7bdat",
+        "adcm.sas7bdat",
+        "addv.sas7bdat",
+        "adecog.sas7bdat",
+        "adeg.sas7bdat",
+        "adex.sas7bdat",
+        "adex2.sas7bdat",
+        "admh.sas7bdat",
+        "adpr.sas7bdat",
+        "adrs.sas7bdat",
+        "adsl.sas7bdat",
+        "adtr.sas7bdat",
+        "adtr2.sas7bdat",
+        "adtte.sas7bdat",
+        "advs.sas7bdat"
+      ],
+      "biological_relevance": "LungSm clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 15,
+      "n_patients": 28,
+      "n_arms": 1,
+      "arm_patient_counts": {
+        "Part 2 Placebo + Topotecan 1.5 mg/m2": 28
+      },
+      "n_ae_terms": 0,
+      "ae_events": 0,
+      "ae_coding": "none",
+      "ae_grade_distribution": {},
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Lymphom_Allianc_2006_212",
+    "type": "Trial",
+    "name": "Lymphom trial Allianc 2006 (212)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Lymphom_Allianc_2006_212",
+        "n_files": 2
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "Lymphom_Allianc_2006_212",
+        "tables_loaded": 2,
+        "worker": 0
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Lymphom_Allianc_2006_212: 2 source files",
+      "API-created caslib",
+      "Extracted 2 ADaM tables: 107 patients, 1 arms, 0 AE terms, 0 AE events (none coding)"
+    ],
+    "cross_refs": {
+      "caslib": "Lymphom_Allianc_2006_212"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Lymphom",
+      "sponsor": "Allianc",
+      "year": "2006",
+      "trial_id": "212",
+      "n_files": 2,
+      "total_bytes": 458752,
+      "adam_tables": [
+        "events.sas7bdat",
+        "outcome17mar24.sas7bdat"
+      ],
+      "biological_relevance": "Lymphom clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 2,
+      "n_patients": 107,
+      "n_arms": 1,
+      "arm_patient_counts": {
+        "A": 106
+      },
+      "n_ae_terms": 0,
+      "ae_events": 0,
+      "ae_coding": "none",
+      "ae_grade_distribution": {},
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Melanom_SyntaPh_2007_123",
+    "type": "Trial",
+    "name": "Melanom trial SyntaPh 2007 (123)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Melanom_SyntaPh_2007_123",
+        "n_files": 40
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "Melanom_SyntaPh_2007_123",
+        "tables_loaded": 39,
+        "worker": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Melanom_SyntaPh_2007_123: 40 source files",
+      "API-created caslib",
+      "Extracted 39 ADaM tables: 325 patients, 1 arms, 0 AE terms, 0 AE events (none coding)"
+    ],
+    "cross_refs": {
+      "caslib": "Melanom_SyntaPh_2007_123"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Melanom",
+      "sponsor": "SyntaPh",
+      "year": "2007",
+      "trial_id": "123",
+      "n_files": 40,
+      "total_bytes": 126702534,
+      "adam_tables": [
+        "ae.sas7bdat",
+        "aeae.sas7bdat",
+        "bdos.sas7bdat",
+        "cm.sas7bdat",
+        "cmcm.sas7bdat",
+        "dm.sas7bdat",
+        "ds.sas7bdat",
+        "ec.sas7bdat",
+        "eg.sas7bdat",
+        "exc.sas7bdat",
+        "im.sas7bdat",
+        "inc.sas7bdat",
+        "invs.sas7bdat",
+        "labd.sas7bdat",
+        "labdllab.sas7bdat",
+        "les.sas7bdat",
+        "lesles.sas7bdat",
+        "master.sas7bdat",
+        "mh.sas7bdat",
+        "mhmh.sas7bdat",
+        "ms.sas7bdat",
+        "pe.sas7bdat",
+        "pepe.sas7bdat",
+        "pkd.sas7bdat",
+        "pkdpkd.sas7bdat",
+        "plog.sas7bdat",
+        "plogplog.sas7bdat",
+        "qexc.sas7bdat",
+        "qtc.sas7bdat",
+        "qtceg.sas7bdat",
+        "rad.sas7bdat",
+        "radrad.sas7bdat",
+        "rsp.sas7bdat",
+        "srv.sas7bdat",
+        "tmr.sas7bdat",
+        "tmrphto.sas7bdat",
+        "vdt.sas7bdat",
+        "vs.sas7bdat",
+        "vsvs.sas7bdat"
+      ],
+      "biological_relevance": "Melanom clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 39,
+      "n_patients": 325,
+      "n_arms": 1,
+      "arm_patient_counts": {
+        "paclitaxel 80 mg/m2 alone": 325
+      },
+      "n_ae_terms": 0,
+      "ae_events": 0,
+      "ae_coding": "none",
+      "ae_grade_distribution": {},
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Multiple_Allianc_2002_202",
+    "type": "Trial",
+    "name": "Multiple trial Allianc 2002 (202)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Multiple_Allianc_2002_202",
+        "n_files": 9
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "Multiple_Allianc_2002_202",
+        "tables_loaded": 9,
+        "worker": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Multiple_Allianc_2002_202: 9 source files",
+      "API-created caslib",
+      "Extracted 9 ADaM tables: 1708 patients, 3 arms, 0 AE terms, 0 AE events (none coding)"
+    ],
+    "cross_refs": {
+      "caslib": "Multiple_Allianc_2002_202"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Multiple",
+      "sponsor": "Allianc",
+      "year": "2002",
+      "trial_id": "202",
+      "n_files": 9,
+      "total_bytes": 5242880,
+      "adam_tables": [
+        "casecrse.sas7bdat",
+        "chklist.sas7bdat",
+        "chklist2.sas7bdat",
+        "end_at.sas7bdat",
+        "fagerstm.sas7bdat",
+        "relapse.sas7bdat",
+        "smokehx.sas7bdat",
+        "visit.sas7bdat",
+        "wt_scale.sas7bdat"
+      ],
+      "biological_relevance": "Multiple clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 9,
+      "n_patients": 1708,
+      "n_arms": 3,
+      "arm_patient_counts": {
+        "B": 568,
+        "A": 572,
+        "C": 568
+      },
+      "n_ae_terms": 0,
+      "ae_events": 0,
+      "ae_coding": "none",
+      "ae_grade_distribution": {},
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Multiple_Allianc_2002_213",
+    "type": "Trial",
+    "name": "Multiple trial Allianc 2002 (213)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Multiple_Allianc_2002_213",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Multiple_Allianc_2002_213: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Multiple_Allianc_2002_213"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Multiple",
+      "sponsor": "Allianc",
+      "year": "2002",
+      "trial_id": "213",
+      "n_files": 2,
+      "total_bytes": 496500,
+      "adam_tables": [],
+      "biological_relevance": "Multiple clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Multiple_Amgen_2006_156",
+    "type": "Trial",
+    "name": "Multiple trial Amgen 2006 (156)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Multiple_Amgen_2006_156",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Multiple_Amgen_2006_156: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Multiple_Amgen_2006_156"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Multiple",
+      "sponsor": "Amgen",
+      "year": "2006",
+      "trial_id": "156",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "Multiple clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Multiple_Brigham_454",
+    "type": "Trial",
+    "name": "Multiple trial Brigham 454 (Multiple_Brigham_454)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Multiple_Brigham_454",
+        "n_files": 4
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Multiple_Brigham_454: 4 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Multiple_Brigham_454"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Multiple",
+      "sponsor": "Brigham",
+      "year": "454",
+      "trial_id": "Multiple_Brigham_454",
+      "n_files": 4,
+      "total_bytes": 16531565,
+      "adam_tables": [],
+      "biological_relevance": "Multiple clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Multiple_MerckKG_2008_441",
+    "type": "Trial",
+    "name": "Multiple trial MerckKG 2008 (441)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Multiple_MerckKG_2008_441",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Multiple_MerckKG_2008_441: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Multiple_MerckKG_2008_441"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Multiple",
+      "sponsor": "MerckKG",
+      "year": "2008",
+      "trial_id": "441",
+      "n_files": 1,
+      "total_bytes": 84290,
+      "adam_tables": [],
+      "biological_relevance": "Multiple clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Multiple_SanofiU_2008_119",
+    "type": "Trial",
+    "name": "Multiple trial SanofiU 2008 (119)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Multiple_SanofiU_2008_119",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Multiple_SanofiU_2008_119: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Multiple_SanofiU_2008_119"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Multiple",
+      "sponsor": "SanofiU",
+      "year": "2008",
+      "trial_id": "119",
+      "n_files": 2,
+      "total_bytes": 48273,
+      "adam_tables": [],
+      "biological_relevance": "Multiple clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Pancrea_Celgene_2008_132",
+    "type": "Trial",
+    "name": "Pancrea trial Celgene 2008 (132)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Pancrea_Celgene_2008_132",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Pancrea_Celgene_2008_132: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Pancrea_Celgene_2008_132"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Pancrea",
+      "sponsor": "Celgene",
+      "year": "2008",
+      "trial_id": "132",
+      "n_files": 1,
+      "total_bytes": 48423,
+      "adam_tables": [],
+      "biological_relevance": "Pancrea clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Pancrea_ClovisO_2010_186",
+    "type": "Trial",
+    "name": "Pancrea trial ClovisO 2010 (186)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Pancrea_ClovisO_2010_186",
+        "n_files": 16
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "Pancrea_ClovisO_2010_186",
+        "tables_loaded": 15,
+        "worker": 0
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Pancrea_ClovisO_2010_186: 16 source files",
+      "API-created caslib",
+      "Extracted 15 ADaM tables: 367 patients, 2 arms, 0 AE terms, 0 AE events (none coding)"
+    ],
+    "cross_refs": {
+      "caslib": "Pancrea_ClovisO_2010_186"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Pancrea",
+      "sponsor": "ClovisO",
+      "year": "2010",
+      "trial_id": "186",
+      "n_files": 16,
+      "total_bytes": 253030400,
+      "adam_tables": [
+        "adae.sas7bdat",
+        "adcm.sas7bdat",
+        "addur.sas7bdat",
+        "adef.sas7bdat",
+        "adeg.sas7bdat",
+        "adex.sas7bdat",
+        "adie.sas7bdat",
+        "adlb.sas7bdat",
+        "admh.sas7bdat",
+        "ador.sas7bdat",
+        "adpf.sas7bdat",
+        "adqs.sas7bdat",
+        "adsl.sas7bdat",
+        "adsv.sas7bdat",
+        "advs.sas7bdat"
+      ],
+      "biological_relevance": "Pancrea clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 15,
+      "n_patients": 367,
+      "n_arms": 2,
+      "arm_patient_counts": {
+        "Gemcitabine Elaidate": 182,
+        "Gemcitabine": 185
+      },
+      "n_ae_terms": 0,
+      "ae_events": 0,
+      "ae_coding": "none",
+      "ae_grade_distribution": {},
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Pancrea_EMDSero_2009_442",
+    "type": "Trial",
+    "name": "Pancrea trial EMDSero 2009 (442)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Pancrea_EMDSero_2009_442",
+        "n_files": 3
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Pancrea_EMDSero_2009_442: 3 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Pancrea_EMDSero_2009_442"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Pancrea",
+      "sponsor": "EMDSero",
+      "year": "2009",
+      "trial_id": "442",
+      "n_files": 3,
+      "total_bytes": 88028,
+      "adam_tables": [],
+      "biological_relevance": "Pancrea clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Pancrea_Multipl_2020_430",
+    "type": "Trial",
+    "name": "Pancrea trial Multipl 2020 (430)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Pancrea_Multipl_2020_430",
+        "n_files": 3
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Pancrea_Multipl_2020_430: 3 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Pancrea_Multipl_2020_430"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Pancrea",
+      "sponsor": "Multipl",
+      "year": "2020",
+      "trial_id": "430",
+      "n_files": 3,
+      "total_bytes": 222570,
+      "adam_tables": [],
+      "biological_relevance": "Pancrea clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Pancrea_Sanofi_2006_109",
+    "type": "Trial",
+    "name": "Pancrea trial Sanofi 2006 (109)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Pancrea_Sanofi_2006_109",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Pancrea_Sanofi_2006_109: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Pancrea_Sanofi_2006_109"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Pancrea",
+      "sponsor": "Sanofi",
+      "year": "2006",
+      "trial_id": "109",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "Pancrea clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Pancrea_SanofiU_2007_134",
+    "type": "Trial",
+    "name": "Pancrea trial SanofiU 2007 (134)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Pancrea_SanofiU_2007_134",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Pancrea_SanofiU_2007_134: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Pancrea_SanofiU_2007_134"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Pancrea",
+      "sponsor": "SanofiU",
+      "year": "2007",
+      "trial_id": "134",
+      "n_files": 2,
+      "total_bytes": 99840,
+      "adam_tables": [],
+      "biological_relevance": "Pancrea clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_Amgen_2004_154",
+    "type": "Trial",
+    "name": "Prostat trial Amgen 2004 (154)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_Amgen_2004_154",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_Amgen_2004_154: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_Amgen_2004_154"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "Amgen",
+      "year": "2004",
+      "trial_id": "154",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_Amgen_2006_155",
+    "type": "Trial",
+    "name": "Prostat trial Amgen 2006 (155)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_Amgen_2006_155",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_Amgen_2006_155: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_Amgen_2006_155"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "Amgen",
+      "year": "2006",
+      "trial_id": "155",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_AmgenI_2006_121",
+    "type": "Trial",
+    "name": "Prostat trial AmgenI 2006 (121)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_AmgenI_2006_121",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_AmgenI_2006_121: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_AmgenI_2006_121"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "AmgenI",
+      "year": "2006",
+      "trial_id": "121",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_Asociac_484",
+    "type": "Trial",
+    "name": "Prostat trial Asociac 484 (Prostat_Asociac_484)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_Asociac_484",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_Asociac_484: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_Asociac_484"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "Asociac",
+      "year": "484",
+      "trial_id": "Prostat_Asociac_484",
+      "n_files": 2,
+      "total_bytes": 44080549,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_AstraZe_1995_102",
+    "type": "Trial",
+    "name": "Prostat trial AstraZe 1995 (102)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_AstraZe_1995_102",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_AstraZe_1995_102: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_AstraZe_1995_102"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "AstraZe",
+      "year": "1995",
+      "trial_id": "102",
+      "n_files": 2,
+      "total_bytes": 67270,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_AstraZe_1995_105",
+    "type": "Trial",
+    "name": "Prostat trial AstraZe 1995 (105)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_AstraZe_1995_105",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_AstraZe_1995_105: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_AstraZe_1995_105"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "AstraZe",
+      "year": "1995",
+      "trial_id": "105",
+      "n_files": 2,
+      "total_bytes": 69838,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_AstraZe_1995_106",
+    "type": "Trial",
+    "name": "Prostat trial AstraZe 1995 (106)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_AstraZe_1995_106",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_AstraZe_1995_106: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_AstraZe_1995_106"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "AstraZe",
+      "year": "1995",
+      "trial_id": "106",
+      "n_files": 2,
+      "total_bytes": 71732,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_AstraZe_2009_144",
+    "type": "Trial",
+    "name": "Prostat trial AstraZe 2009 (144)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_AstraZe_2009_144",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_AstraZe_2009_144: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_AstraZe_2009_144"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "AstraZe",
+      "year": "2009",
+      "trial_id": "144",
+      "n_files": 2,
+      "total_bytes": 672963,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_Celgene_2009_90",
+    "type": "Trial",
+    "name": "Prostat trial Celgene 2009 (90)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_Celgene_2009_90",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_Celgene_2009_90: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_Celgene_2009_90"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "Celgene",
+      "year": "2009",
+      "trial_id": "90",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_Multipl_2008_406",
+    "type": "Trial",
+    "name": "Prostat trial Multipl 2008 (406)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_Multipl_2008_406",
+        "n_files": 3
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_Multipl_2008_406: 3 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_Multipl_2008_406"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "Multipl",
+      "year": "2008",
+      "trial_id": "406",
+      "n_files": 3,
+      "total_bytes": 12350269,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_Multipl_2008_420",
+    "type": "Trial",
+    "name": "Prostat trial Multipl 2008 (420)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_Multipl_2008_420",
+        "n_files": 3
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_Multipl_2008_420: 3 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_Multipl_2008_420"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "Multipl",
+      "year": "2008",
+      "trial_id": "420",
+      "n_files": 3,
+      "total_bytes": 9987540,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_Multipl_2009_417",
+    "type": "Trial",
+    "name": "Prostat trial Multipl 2009 (417)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_Multipl_2009_417",
+        "n_files": 3
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_Multipl_2009_417: 3 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_Multipl_2009_417"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "Multipl",
+      "year": "2009",
+      "trial_id": "417",
+      "n_files": 3,
+      "total_bytes": 2847534,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_Multipl_2018_234",
+    "type": "Trial",
+    "name": "Prostat trial Multipl 2018 (234)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_Multipl_2018_234",
+        "n_files": 2
+      },
+      {
+        "source": "SAS CAS ADaM extraction (5-worker parallel)",
+        "caslib": "Prostat_Multipl_2018_234",
+        "tables_loaded": 1,
+        "worker": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_Multipl_2018_234: 2 source files",
+      "API-created caslib",
+      "Extracted 1 ADaM tables: 394 patients, 0 arms, 0 AE terms, 0 AE events (none coding)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_Multipl_2018_234"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "Multipl",
+      "year": "2018",
+      "trial_id": "234",
+      "n_files": 2,
+      "total_bytes": 3684848,
+      "adam_tables": [
+        "linked_pds90_20171109.sas7bdat"
+      ],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "extracted",
+      "n_tables_loaded": 1,
+      "n_patients": 394,
+      "n_arms": 0,
+      "arm_patient_counts": {},
+      "n_ae_terms": 0,
+      "ae_events": 0,
+      "ae_coding": "none",
+      "ae_grade_distribution": {},
+      "survival_status_n": 0,
+      "survival_event_col": null,
+      "survival_time_col": null
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_na_2006_149",
+    "type": "Trial",
+    "name": "Prostat trial na 2006 (149)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_na_2006_149",
+        "n_files": 4
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_na_2006_149: 4 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_na_2006_149"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "na",
+      "year": "2006",
+      "trial_id": "149",
+      "n_files": 4,
+      "total_bytes": 43881,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_Pfizer_2008_81",
+    "type": "Trial",
+    "name": "Prostat trial Pfizer 2008 (81)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_Pfizer_2008_81",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_Pfizer_2008_81: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_Pfizer_2008_81"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "Pfizer",
+      "year": "2008",
+      "trial_id": "81",
+      "n_files": 2,
+      "total_bytes": 22681,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_Researc_2016_167",
+    "type": "Trial",
+    "name": "Prostat trial Researc 2016 (167)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_Researc_2016_167",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_Researc_2016_167: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_Researc_2016_167"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "Researc",
+      "year": "2016",
+      "trial_id": "167",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_Sanofi_2000_80",
+    "type": "Trial",
+    "name": "Prostat trial Sanofi 2000 (80)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_Sanofi_2000_80",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_Sanofi_2000_80: 1 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_Sanofi_2000_80"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "Sanofi",
+      "year": "2000",
+      "trial_id": "80",
+      "n_files": 1,
+      "total_bytes": 4096,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_Sanofi_2007_79",
+    "type": "Trial",
+    "name": "Prostat trial Sanofi 2007 (79)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_Sanofi_2007_79",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_Sanofi_2007_79: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_Sanofi_2007_79"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "Sanofi",
+      "year": "2007",
+      "trial_id": "79",
+      "n_files": 2,
+      "total_bytes": 8192,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Prostat_Sanofi_2007_83",
+    "type": "Trial",
+    "name": "Prostat trial Sanofi 2007 (83)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Prostat_Sanofi_2007_83",
+        "n_files": 2
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Prostat_Sanofi_2007_83: 2 source files",
+      "API-created caslib",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Prostat_Sanofi_2007_83"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Prostat",
+      "sponsor": "Sanofi",
+      "year": "2007",
+      "trial_id": "83",
+      "n_files": 2,
+      "total_bytes": 8192,
+      "adam_tables": [],
+      "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  }
+]

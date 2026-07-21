@@ -3,8 +3,8 @@
   "session": "2026-07-21 MSK genomics extraction + EGA metadata enrichment",
   "custodian": "zeta_custodian",
   "collection": "zeta_vault",
-  "total_vectors": 870,
-  "avg_silhouette_score": 0.5937,
+  "total_vectors": 20211,
+  "avg_silhouette_score": 0.4244,
   "kg_entities": 870,
   "kg_edges": 977,
   "workers": {
@@ -58,5 +58,54 @@
     "KELIM Signal6 dead code (RES-OV-P0-009): framework code bug, not data",
     "Full 510.8 GB EGA BAM download: infeasible in-sandbox",
     "cleared_for_patient_facing: NO"
-  ]
+  ],
+  "silhouette_natural_balance": 0.2776,
+  "session3": {
+    "generated": "2026-07-21T05:30:00Z",
+    "session": "Session 3: SAS/CAS Project Data Sphere clinical extraction (5-worker parallel)",
+    "custodian": "zeta_custodian",
+    "collection": "zeta_vault",
+    "total_vectors": 20211,
+    "avg_silhouette_score": 0.4244,
+    "silhouette_natural_balance": 0.2776,
+    "kg_entities": 20211,
+    "kg_edges": 91637,
+    "clinical_extraction": {
+      "trials_extracted": 23,
+      "trials_no_loadable_tables": 71,
+      "patients": 17264,
+      "ae_records": 118859,
+      "ae_term_nodes": 2439,
+      "arms": 36,
+      "kras_biomarker_link": "colorectal (2 trials, ~43% mut)"
+    },
+    "workers": {
+      "W1_PROPHET": {
+        "headline": "SAS PDS clinical warehouse EXTRACTED (was inventory-only). Gene-outcome routing re-evaluated against real data."
+      },
+      "W2_KILL_CHAIN": {
+        "headline": "CA-125 / serial-marker signals re-checked against extracted SAS tables."
+      },
+      "W3_DISK": {
+        "headline": "SAS clinical relationships extracted WITHOUT bulk byte download (per constraint)."
+      },
+      "W4_TRAIN_LEDGER": {
+        "headline": "Real adverse-event frequency + grade ledger now available from SAS."
+      },
+      "W5_PRODUCTION_REFINEMENT": {
+        "headline": "RUO/collection-separation re-audited after adding 19,341 clinical nodes."
+      }
+    },
+    "gaps_advanced_this_session": [
+      "SAS-PDS-EXTRACTION: CLOSED - warehouse contents extracted (was 97 hollow shells)",
+      "KRAS-CRC-LINK: NEW - patient-level KRAS genotype wired to 2 colorectal trials"
+    ],
+    "honest_unchanged": [
+      "GAP-CTDNA-NOTWIRED: architectural, MSK tissue-only, SAS has no ctDNA",
+      "GAP-MFAP4-UNREPRODUCIBLE: external GSE63885, out of Zeta scope",
+      "CA125_RISING via SAS: NOT_FULFILLED - no ovarian trial / no CA-125 column in extracted data",
+      "Prophet ovarian logit: NOT grounded by SAS (solid tumors, no survival-time, no gene annotation except KRAS-CRC)",
+      "Framework NOT cleared for patient-facing"
+    ]
+  }
 }

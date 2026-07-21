@@ -1,0 +1,902 @@
+[
+  {
+    "id": "arm:sas:Breast_Allianc_2002_194:1",
+    "type": "TreatmentArm",
+    "name": "Breast_Allianc_2002_194 arm 1",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Breast_Allianc_2002_194",
+        "n_patients": 140
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '1': 140 patients (trial Breast_Allianc_2002_194)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "1",
+      "n_patients": 140,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Breast_Allianc_2002_194:2",
+    "type": "TreatmentArm",
+    "name": "Breast_Allianc_2002_194 arm 2",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Breast_Allianc_2002_194",
+        "n_patients": 144
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '2': 144 patients (trial Breast_Allianc_2002_194)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "2",
+      "n_patients": 144,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Breast_Allianc_2002_194:4",
+    "type": "TreatmentArm",
+    "name": "Breast_Allianc_2002_194 arm 4",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Breast_Allianc_2002_194",
+        "n_patients": 141
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '4': 141 patients (trial Breast_Allianc_2002_194)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "4",
+      "n_patients": 141,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Breast_Allianc_2002_194:3",
+    "type": "TreatmentArm",
+    "name": "Breast_Allianc_2002_194 arm 3",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Breast_Allianc_2002_194",
+        "n_patients": 146
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '3': 146 patients (trial Breast_Allianc_2002_194)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "3",
+      "n_patients": 146,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Breast_Allianc_2002_194:6",
+    "type": "TreatmentArm",
+    "name": "Breast_Allianc_2002_194 arm 6",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Breast_Allianc_2002_194",
+        "n_patients": 645
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '6': 645 patients (trial Breast_Allianc_2002_194)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "6",
+      "n_patients": 645,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Breast_Allianc_2002_194:5",
+    "type": "TreatmentArm",
+    "name": "Breast_Allianc_2002_194 arm 5",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Breast_Allianc_2002_194",
+        "n_patients": 655
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '5': 655 patients (trial Breast_Allianc_2002_194)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "5",
+      "n_patients": 655,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Breast_Allianc_2002_194:7",
+    "type": "TreatmentArm",
+    "name": "Breast_Allianc_2002_194 arm 7",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Breast_Allianc_2002_194",
+        "n_patients": 652
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '7': 652 patients (trial Breast_Allianc_2002_194)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "7",
+      "n_patients": 652,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Breast_Allianc_2002_194:8",
+    "type": "TreatmentArm",
+    "name": "Breast_Allianc_2002_194 arm 8",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Breast_Allianc_2002_194",
+        "n_patients": 648
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '8': 648 patients (trial Breast_Allianc_2002_194)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "8",
+      "n_patients": 648,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Breast_Allianc_2002_200:37",
+    "type": "TreatmentArm",
+    "name": "Breast_Allianc_2002_200 arm 37",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Breast_Allianc_2002_200",
+        "n_patients": 2048
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '37': 2048 patients (trial Breast_Allianc_2002_200)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "37",
+      "n_patients": 2048,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Breast_Allianc_2002_200:1",
+    "type": "TreatmentArm",
+    "name": "Breast_Allianc_2002_200 arm 1",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Breast_Allianc_2002_200",
+        "n_patients": 1823
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '1': 1823 patients (trial Breast_Allianc_2002_200)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "1",
+      "n_patients": 1823,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Breast"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Colorec_Amgen_2004_310:panit_plus_best_supportive_care",
+    "type": "TreatmentArm",
+    "name": "Colorec_Amgen_2004_310 arm panit. plus best supportive care",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Colorec_Amgen_2004_310",
+        "n_patients": 183
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'panit. plus best supportive care': 183 patients (trial Colorec_Amgen_2004_310)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "panit. plus best supportive care",
+      "n_patients": 183,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Colorec_Amgen_2004_310:Best_supportive_care",
+    "type": "TreatmentArm",
+    "name": "Colorec_Amgen_2004_310 arm Best supportive care",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Colorec_Amgen_2004_310",
+        "n_patients": 187
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'Best supportive care': 187 patients (trial Colorec_Amgen_2004_310)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "Best supportive care",
+      "n_patients": 187,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Colorec_Amgen_2005_262:11",
+    "type": "TreatmentArm",
+    "name": "Colorec_Amgen_2005_262 arm 11",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Colorec_Amgen_2005_262",
+        "n_patients": 414
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '11': 414 patients (trial Colorec_Amgen_2005_262)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "11",
+      "n_patients": 414,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Colorec_Amgen_2005_262:12",
+    "type": "TreatmentArm",
+    "name": "Colorec_Amgen_2005_262 arm 12",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Colorec_Amgen_2005_262",
+        "n_patients": 428
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '12': 428 patients (trial Colorec_Amgen_2005_262)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "12",
+      "n_patients": 428,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Colorec_Amgen_2006_263:40",
+    "type": "TreatmentArm",
+    "name": "Colorec_Amgen_2006_263 arm 40",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Colorec_Amgen_2006_263",
+        "n_patients": 470
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '40': 470 patients (trial Colorec_Amgen_2006_263)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "40",
+      "n_patients": 470,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Colorec_Amgen_2006_263:41",
+    "type": "TreatmentArm",
+    "name": "Colorec_Amgen_2006_263 arm 41",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Colorec_Amgen_2006_263",
+        "n_patients": 476
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '41': 476 patients (trial Colorec_Amgen_2006_263)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "41",
+      "n_patients": 476,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Colorec_Amgen_2006_264:42",
+    "type": "TreatmentArm",
+    "name": "Colorec_Amgen_2006_264 arm 42",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Colorec_Amgen_2006_264",
+        "n_patients": 468
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '42': 468 patients (trial Colorec_Amgen_2006_264)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "42",
+      "n_patients": 468,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Colorec_Amgen_2006_264:43",
+    "type": "TreatmentArm",
+    "name": "Colorec_Amgen_2006_264 arm 43",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Colorec_Amgen_2006_264",
+        "n_patients": 467
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '43': 467 patients (trial Colorec_Amgen_2006_264)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "43",
+      "n_patients": 467,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Colorec_Amgen_2006_309:Panitumumab_FOLFOX",
+    "type": "TreatmentArm",
+    "name": "Colorec_Amgen_2006_309 arm Panitumumab + FOLFOX",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Colorec_Amgen_2006_309",
+        "n_patients": 468
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'Panitumumab + FOLFOX': 468 patients (trial Colorec_Amgen_2006_309)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "Panitumumab + FOLFOX",
+      "n_patients": 468,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Colorec_Amgen_2006_309:FOLFOX_alone",
+    "type": "TreatmentArm",
+    "name": "Colorec_Amgen_2006_309 arm FOLFOX alone",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Colorec_Amgen_2006_309",
+        "n_patients": 467
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'FOLFOX alone': 467 patients (trial Colorec_Amgen_2006_309)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "FOLFOX alone",
+      "n_patients": 467,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Colorec"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:HeadNe_Amgen_2007_265:2",
+    "type": "TreatmentArm",
+    "name": "HeadNe_Amgen_2007_265 arm 2",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "HeadNe_Amgen_2007_265",
+        "n_patients": 260
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '2': 260 patients (trial HeadNe_Amgen_2007_265)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "2",
+      "n_patients": 260,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "HeadNe"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:HeadNe_Amgen_2007_265:50",
+    "type": "TreatmentArm",
+    "name": "HeadNe_Amgen_2007_265 arm 50",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "HeadNe_Amgen_2007_265",
+        "n_patients": 260
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm '50': 260 patients (trial HeadNe_Amgen_2007_265)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "50",
+      "n_patients": 260,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "HeadNe"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:LungSm_Amgen_2002_266:PLACEBOQ3WK",
+    "type": "TreatmentArm",
+    "name": "LungSm_Amgen_2002_266 arm PLACEBOQ3WK",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "LungSm_Amgen_2002_266",
+        "n_patients": 240
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'PLACEBOQ3WK': 240 patients (trial LungSm_Amgen_2002_266)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "PLACEBOQ3WK",
+      "n_patients": 240,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungSm"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:LungSm_Amgen_2002_266:NESP300Q3WK",
+    "type": "TreatmentArm",
+    "name": "LungSm_Amgen_2002_266 arm NESP300Q3WK",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "LungSm_Amgen_2002_266",
+        "n_patients": 239
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'NESP300Q3WK': 239 patients (trial LungSm_Amgen_2002_266)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "NESP300Q3WK",
+      "n_patients": 239,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungSm"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:LungSm_EliLill_2011_287:Arm_B",
+    "type": "TreatmentArm",
+    "name": "LungSm_EliLill_2011_287 arm Arm B",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "LungSm_EliLill_2011_287",
+        "n_patients": 46
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'Arm B': 46 patients (trial LungSm_EliLill_2011_287)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "Arm B",
+      "n_patients": 46,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungSm"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:LungSm_EliLill_2011_287:Arm_A",
+    "type": "TreatmentArm",
+    "name": "LungSm_EliLill_2011_287 arm Arm A",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "LungSm_EliLill_2011_287",
+        "n_patients": 48
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'Arm A': 48 patients (trial LungSm_EliLill_2011_287)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "Arm A",
+      "n_patients": 48,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungSm"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:LungSm_EliLill_2011_287:SCRNFAIL",
+    "type": "TreatmentArm",
+    "name": "LungSm_EliLill_2011_287 arm SCRNFAIL",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "LungSm_EliLill_2011_287",
+        "n_patients": 36
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'SCRNFAIL': 36 patients (trial LungSm_EliLill_2011_287)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "SCRNFAIL",
+      "n_patients": 36,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungSm"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:LungSm_G1Thera_2015_433:Part_2_Placebo",
+    "type": "TreatmentArm",
+    "name": "LungSm_G1Thera_2015_433 arm Part 2 Placebo",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "LungSm_G1Thera_2015_433",
+        "n_patients": 37
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'Part 2 Placebo': 37 patients (trial LungSm_G1Thera_2015_433)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "Part 2 Placebo",
+      "n_patients": 37,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungSm"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:LungSm_G1Thera_2015_434:Part_2_Placebo_Topotecan_1_5_mg_m2",
+    "type": "TreatmentArm",
+    "name": "LungSm_G1Thera_2015_434 arm Part 2 Placebo + Topotecan 1.5 mg/m2",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "LungSm_G1Thera_2015_434",
+        "n_patients": 28
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'Part 2 Placebo + Topotecan 1.5 mg/m2': 28 patients (trial LungSm_G1Thera_2015_434)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "Part 2 Placebo + Topotecan 1.5 mg/m2",
+      "n_patients": 28,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "LungSm"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Lymphom_Allianc_2006_212:A",
+    "type": "TreatmentArm",
+    "name": "Lymphom_Allianc_2006_212 arm A",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Lymphom_Allianc_2006_212",
+        "n_patients": 106
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'A': 106 patients (trial Lymphom_Allianc_2006_212)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "A",
+      "n_patients": 106,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Lymphom"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Melanom_SyntaPh_2007_123:paclitaxel_80_mg_m2_alone",
+    "type": "TreatmentArm",
+    "name": "Melanom_SyntaPh_2007_123 arm paclitaxel 80 mg/m2 alone",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Melanom_SyntaPh_2007_123",
+        "n_patients": 325
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'paclitaxel 80 mg/m2 alone': 325 patients (trial Melanom_SyntaPh_2007_123)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "paclitaxel 80 mg/m2 alone",
+      "n_patients": 325,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Melanom"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Multiple_Allianc_2002_202:B",
+    "type": "TreatmentArm",
+    "name": "Multiple_Allianc_2002_202 arm B",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Multiple_Allianc_2002_202",
+        "n_patients": 568
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'B': 568 patients (trial Multiple_Allianc_2002_202)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "B",
+      "n_patients": 568,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Multiple"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Multiple_Allianc_2002_202:A",
+    "type": "TreatmentArm",
+    "name": "Multiple_Allianc_2002_202 arm A",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Multiple_Allianc_2002_202",
+        "n_patients": 572
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'A': 572 patients (trial Multiple_Allianc_2002_202)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "A",
+      "n_patients": 572,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Multiple"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Multiple_Allianc_2002_202:C",
+    "type": "TreatmentArm",
+    "name": "Multiple_Allianc_2002_202 arm C",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Multiple_Allianc_2002_202",
+        "n_patients": 568
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'C': 568 patients (trial Multiple_Allianc_2002_202)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "C",
+      "n_patients": 568,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Multiple"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Pancrea_ClovisO_2010_186:Gemcitabine_Elaidate",
+    "type": "TreatmentArm",
+    "name": "Pancrea_ClovisO_2010_186 arm Gemcitabine Elaidate",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Pancrea_ClovisO_2010_186",
+        "n_patients": 182
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'Gemcitabine Elaidate': 182 patients (trial Pancrea_ClovisO_2010_186)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "Gemcitabine Elaidate",
+      "n_patients": 182,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Pancrea"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  },
+  {
+    "id": "arm:sas:Pancrea_ClovisO_2010_186:Gemcitabine",
+    "type": "TreatmentArm",
+    "name": "Pancrea_ClovisO_2010_186 arm Gemcitabine",
+    "source_receipts": [
+      {
+        "source": "SAS CAS arm assignment",
+        "caslib": "Pancrea_ClovisO_2010_186",
+        "n_patients": 185
+      }
+    ],
+    "verbatim_evidence": [
+      "Treatment arm 'Gemcitabine': 185 patients (trial Pancrea_ClovisO_2010_186)"
+    ],
+    "cross_refs": {},
+    "attributes": {
+      "arm_code": "Gemcitabine",
+      "n_patients": 185,
+      "source_vault": "PDS_ProjectDataSphere",
+      "cancer_type": "Pancrea"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  }
+]
