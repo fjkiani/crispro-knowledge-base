@@ -1,0 +1,17 @@
+[
+  {
+    "id": "syn39607857",
+    "name": "cna.tsv",
+    "error": "SynapseAuthenticationError('You are not logged in and do not have access to a requested resource.')"
+  },
+  {
+    "id": "syn39607858",
+    "name": "cohort.maf",
+    "error": "SynapseAuthenticationError('You are not logged in and do not have access to a requested resource.')"
+  },
+  {
+    "id": "syn39607860",
+    "name": "segments.seg",
+    "error": "SynapseAuthenticationError('You are not logged in and do not have access to a requested resource.')"
+  }
+]

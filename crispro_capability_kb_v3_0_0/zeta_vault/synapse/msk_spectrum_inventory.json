@@ -1,0 +1,80 @@
+{
+  "syn33521770": {
+    "name": "Bulk WGS",
+    "n_children": 0,
+    "child_types": {},
+    "sample_children": []
+  },
+  "syn33521771": {
+    "name": "MSK-IMPACT",
+    "n_children": 0,
+    "child_types": {},
+    "sample_children": []
+  },
+  "syn33521743": {
+    "name": "scRNA",
+    "n_children": 0,
+    "child_types": {},
+    "sample_children": []
+  },
+  "syn33521762": {
+    "name": "H-E",
+    "n_children": 0,
+    "child_types": {},
+    "sample_children": []
+  },
+  "syn33520881": {
+    "name": "mpIF",
+    "n_children": 0,
+    "child_types": {},
+    "sample_children": []
+  },
+  "syn66309959": {
+    "name": "McPherson et al. Nature 2025",
+    "n_children": 1,
+    "child_types": {
+      "Folder": 1
+    },
+    "sample_children": [
+      {
+        "id": "syn66309960",
+        "type": "Folder",
+        "name": "IF"
+      }
+    ]
+  },
+  "syn52458607": {
+    "name": "Vazquez-Garcia, Uhlitz et al Nature 2022",
+    "n_children": 5,
+    "child_types": {
+      "Folder": 5
+    },
+    "sample_children": [
+      {
+        "id": "syn52458611",
+        "type": "Folder",
+        "name": "Bulk WGS"
+      },
+      {
+        "id": "syn52458615",
+        "type": "Folder",
+        "name": "H-E"
+      },
+      {
+        "id": "syn52458614",
+        "type": "Folder",
+        "name": "MSK-IMPACT"
+      },
+      {
+        "id": "syn52434142",
+        "type": "Folder",
+        "name": "mpIF"
+      },
+      {
+        "id": "syn52458609",
+        "type": "Folder",
+        "name": "scRNA"
+      }
+    ]
+  }
+}

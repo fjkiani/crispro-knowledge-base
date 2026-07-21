@@ -1,0 +1,76 @@
+{
+  "worker": "W2_KILL_CHAIN",
+  "timestamp": "2026-07-21T00:51:34Z",
+  "total_vectors": 20,
+  "avg_silhouette_score": 0.3212,
+  "patientid_keyword_port_verification": "N/A (signal-wiring layer; per-patient firing requires downloaded genomic/clinical bytes)",
+  "findings": {
+    "kill_chain_model": "2-of-3 concordance (CA-125 + HRD + ctDNA) per Harness C",
+    "signals": {
+      "CA125_RISING": {
+        "zeta_source": "SAS PDS serial CA-125 (ador/adef/adlb)",
+        "gap": "GAP-KELIM-SIM: real serial kinetics",
+        "status": "WIRED"
+      },
+      "HRD_BASELINE": {
+        "zeta_source": "EGA BriTROC-1 WGS (HRD/Sig3 from BAMs)",
+        "gap": "GAP-SIG7-BRITROC",
+        "status": "WIRED"
+      },
+      "SIGNAL_CTDNA_MRD": {
+        "zeta_source": "Synapse MSK SPECTRUM (plasma modality if present)",
+        "gap": "GAP-CTDNA-NOTWIRED",
+        "status": "ACCEPTED_BY_KC_NOT_WIRED_TO_PROPHET"
+      },
+      "KELIM_GENOTYPE_CONVERGENCE": {
+        "zeta_source": "SAS PDS serial markers + EGA genomics",
+        "gap": "GAP-KELIM-SIM + RES-OV-P0-009 dead code",
+        "status": "DEAD_CODE_SIGNAL6"
+      },
+      "TRANSCRIPTOMIC_RESISTANCE": {
+        "zeta_source": "NONE (MFAP4/GSE63885 external)",
+        "gap": "GAP-MFAP4-UNREPRODUCIBLE",
+        "status": "RNA_ONLY_EXTERNAL"
+      },
+      "CNA_AMPLIFICATION": {
+        "zeta_source": "Synapse cna.tsv/segments.seg (CCNE1)",
+        "gap": "TF2-SLOP-004 CCNE1 CNA gap",
+        "status": "GAP_OPEN"
+      }
+    },
+    "signals_wired": 2,
+    "signals_broken_or_gap": [
+      "SIGNAL_CTDNA_MRD",
+      "KELIM_GENOTYPE_CONVERGENCE",
+      "TRANSCRIPTOMIC_RESISTANCE",
+      "CNA_AMPLIFICATION"
+    ],
+    "bugs_flagged": [
+      {
+        "bug": "ctDNA_NOT_WIRED",
+        "issue_id": "RES-OV-P0-006",
+        "detail": "SIGNAL_CTDNA_MRD=True accepted by Kill Chain but ctdna_status=NOT_WIRED_INTO_PROPHET. ctDNA HIGH does not raise Prophet probability.",
+        "zeta_fix": "Synapse MSK plasma modality (UNKNOWN - pending valid token) to wire+calibrate"
+      },
+      {
+        "bug": "KELIM_Signal6_dead",
+        "issue_id": "RES-OV-P0-009",
+        "detail": "detect_kelim_genotype_convergence reads kelim_obj.kelim (always None). Signal 6 never fires.",
+        "zeta_fix": "Code fix (kelim->k) + SAS PDS real serial markers to validate firing"
+      },
+      {
+        "bug": "CCNE1_CNA_missed",
+        "issue_id": "TF2-SLOP-004",
+        "detail": "Prophet checks CCNE1 somatic mutations only; CNA amplification path missing.",
+        "zeta_fix": "Synapse cna.tsv/segments.seg provides CCNE1 CNA truth (READY_ON_TOKEN)"
+      },
+      {
+        "bug": "MAPK_BYPASS_priority",
+        "issue_id": "CHECKPOINT_FLAGGED",
+        "detail": "MAPK_BYPASS class priority ordering flagged for review in deterministic classifier (BRAF/KRAS/NRAS logit genes). Verify class-priority does not mis-rank MAPK bypass vs HRD reversion.",
+        "zeta_fix": "EGA+MSK genomic truth to empirically rank class priority instead of hardcoded order"
+      }
+    ],
+    "concordance_note": "2 signals (CA125_RISING, HRD_BASELINE) are WIRED. ctDNA accepted-not-wired; KELIM Signal6 dead; CCNE1 CNA gap; MAPK_BYPASS priority under review."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "gap:GAP-MSK-ESCAPE-N39",
+  "type": "KBGap",
+  "name": "GAP-MSK-ESCAPE-N39",
+  "source_receipts": [
+    {
+      "source": "GAP_MAP.json",
+      "gap_id": "GAP-MSK-ESCAPE-N39",
+      "method": "KB-audit vs Zeta mapping"
+    }
+  ],
+  "verbatim_evidence": [
+    "KB claim: MSK Spectrum 39 WGS profiles; escape run n_pairs=1/n_escape=0; backend MSK-Spectrum/ground_truth STRIPPED; Kill Chain cites escape rates from n=39 derived stub",
+    "Current tier: STRIPPED (backend), stub-only on disk",
+    "Zeta dataset: Synapse MSK SPECTRUM Bulk WGS (cna.tsv, cohort.maf, segments.seg) + 2022/2025 Nature releases"
+  ],
+  "cross_refs": {
+    "gap_id": "GAP-MSK-ESCAPE-N39"
+  },
+  "attributes": {
+    "current_tier": "STRIPPED (backend), stub-only on disk",
+    "role": "VALIDATE + RESTORE (the actual MSK Spectrum genomics)",
+    "how": "The public MSK SPECTRUM WGS release (cna/maf/seg) is the upstream source for the stripped backend features. Restores escape-pair copy-number + mutation truth directly, replacing the n=39 derived stub.",
+    "blocker": "File bytes blocked (invalid token); metadata + file IDs already catalogued.",
+    "closes_gap": "READY_ON_TOKEN - exact files identified; one valid token unblocks restore",
+    "zeta_dataset": "Synapse MSK SPECTRUM Bulk WGS (cna.tsv, cohort.maf, segments.seg) + 2022/2025 Nature releases",
+    "kb_claim": "MSK Spectrum 39 WGS profiles; escape run n_pairs=1/n_escape=0; backend MSK-Spectrum/ground_truth STRIPPED; Kill Chain cites escape rates from n=39 derived stub"
+  },
+  "_stream": "zeta_gapmap",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

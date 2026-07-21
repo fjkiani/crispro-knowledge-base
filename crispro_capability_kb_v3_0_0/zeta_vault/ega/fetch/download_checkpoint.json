@@ -1,0 +1,6141 @@
+{
+  "dataset": "EGAD00001011049",
+  "total_files": 679,
+  "total_bytes": 510797964805,
+  "measured_throughput_MBps": 1.1,
+  "est_full_download_hours": {
+    "1x": 127,
+    "3x": 42,
+    "6x": 21
+  },
+  "sandbox_wall_clock_hours": 24,
+  "disk_ceiling_gb": 512,
+  "feasibility": "INFEASIBLE_IN_SANDBOX_FULL",
+  "feasible_alternative": "htsget range-slice for targeted Sig7/HRD regions (no whole-BAM)",
+  "files": [
+    {
+      "egaf_id": "EGAF00008095623",
+      "filename": "JBLAB-4927.bam",
+      "bytes": 698709769,
+      "md5": "a9430a9b58057f11f45351433ba8c067",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095502",
+      "filename": "JBLAB-4184.bam",
+      "bytes": 419571750,
+      "md5": "c6cc4e088c4f7583d9312e044abc471f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095624",
+      "filename": "JBLAB-4928.bam",
+      "bytes": 568423002,
+      "md5": "0601edbb5eaf2454f507f18f8386cba9",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095503",
+      "filename": "JBLAB-4186.bam",
+      "bytes": 759614055,
+      "md5": "7afb29bd1d47b13c3e71085f5d1f87f1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095625",
+      "filename": "JBLAB-4929.bam",
+      "bytes": 573699414,
+      "md5": "e193b20988abbdcd731499123d78e803",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095504",
+      "filename": "JBLAB-4187.bam",
+      "bytes": 716648966,
+      "md5": "bb2dc4bd645214b25001e5b45d3e0c18",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095626",
+      "filename": "JBLAB-4931.bam",
+      "bytes": 674190107,
+      "md5": "92de04667106ba78c099846a9db5d895",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095505",
+      "filename": "JBLAB-4188.bam",
+      "bytes": 430334561,
+      "md5": "678a59ce0279506a5b0fdfadbf7f21e1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095620",
+      "filename": "JBLAB-4922.bam",
+      "bytes": 874295105,
+      "md5": "6d6c0f269b5c7699e01346a5bbebb245",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095621",
+      "filename": "JBLAB-4923.bam",
+      "bytes": 606581481,
+      "md5": "b02b3314e4cfb5c97b54b579d7bb81f3",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095500",
+      "filename": "JBLAB-4180.bam",
+      "bytes": 1103061531,
+      "md5": "6fec8162df56c62650603f3b5f026d4e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095622",
+      "filename": "JBLAB-4924.bam",
+      "bytes": 780774376,
+      "md5": "629ffc7ee5b966ffe5776b27e51a7998",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095501",
+      "filename": "JBLAB-4183.bam",
+      "bytes": 719278350,
+      "md5": "0920ef72763fc75d850bc7b844d9436a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095616",
+      "filename": "JBLAB-4918.bam",
+      "bytes": 437545411,
+      "md5": "a248b6e840f8b48956b435907d871071",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095617",
+      "filename": "JBLAB-4919.bam",
+      "bytes": 848710060,
+      "md5": "7bd04221378306300d7d043a0c1b8933",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095618",
+      "filename": "JBLAB-4920.bam",
+      "bytes": 1034677206,
+      "md5": "e1c7f5e4d36ef79fbb5a3cb1fa14a1f6",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095619",
+      "filename": "JBLAB-4921.bam",
+      "bytes": 542579004,
+      "md5": "13f973a1d4b10bb9e42e2d080f2bebaf",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095612",
+      "filename": "JBLAB-4913.bam",
+      "bytes": 816731453,
+      "md5": "0e7adbc237c148ad65efad4526fdc5d3",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095613",
+      "filename": "JBLAB-4914.bam",
+      "bytes": 942917845,
+      "md5": "f55cc270485e92488eb3dbcaee68d08b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095614",
+      "filename": "JBLAB-4915.bam",
+      "bytes": 950371686,
+      "md5": "f2dbccfefdcdedcc92b1907c314bce33",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095615",
+      "filename": "JBLAB-4916.bam",
+      "bytes": 843594391,
+      "md5": "536c2ab79c441f12012c081ea2d69e40",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095610",
+      "filename": "JBLAB-4910.bam",
+      "bytes": 679961000,
+      "md5": "4d18c4df1e96332fb135936e9d9dfaf7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095611",
+      "filename": "JBLAB-4912.bam",
+      "bytes": 681248474,
+      "md5": "af705b3557556e2a3d309df2a6a818d0",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095609",
+      "filename": "JBLAB-4909.bam",
+      "bytes": 1009653938,
+      "md5": "2a2d9121202674939edd2b93a4c79899",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095605",
+      "filename": "JBLAB-4902.bam",
+      "bytes": 833398912,
+      "md5": "e11fed00ea52dc8b0b7f9f1c4a06d52b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095606",
+      "filename": "JBLAB-4903.bam",
+      "bytes": 1064464461,
+      "md5": "295c48ae05349d5ee02a8e96951c8119",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095607",
+      "filename": "JBLAB-4904.bam",
+      "bytes": 656925397,
+      "md5": "07d64e9bf2da393e6b486de8f21424cf",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095608",
+      "filename": "JBLAB-4908.bam",
+      "bytes": 704804700,
+      "md5": "ef181c50466824867b6f81227811fb0a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095640",
+      "filename": "JBLAB-4950.bam",
+      "bytes": 686882341,
+      "md5": "b7c8fe76b5b0c80ecf8757a0ae061315",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095645",
+      "filename": "JBLAB-4956.bam",
+      "bytes": 531008353,
+      "md5": "d6073891122f97571549d2e94e639d11",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095524",
+      "filename": "JBLAB-4210.bam",
+      "bytes": 656621996,
+      "md5": "389a8973a50c9e930b5d560bde9dc0f1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095403",
+      "filename": "JBLAB-19311.bam",
+      "bytes": 504361783,
+      "md5": "a99d82f86dcbcd7a370e060daeb71957",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095646",
+      "filename": "JBLAB-4957.bam",
+      "bytes": 769906232,
+      "md5": "b015806dddbf65128fef38936ef8b421",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095525",
+      "filename": "JBLAB-4211.bam",
+      "bytes": 420544907,
+      "md5": "3bb0234575a853b7916bb525cbcc5d87",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095404",
+      "filename": "JBLAB-19312.bam",
+      "bytes": 799549383,
+      "md5": "00466972ab1f65a8bc60cad26a8464cd",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095647",
+      "filename": "JBLAB-4958.bam",
+      "bytes": 751869339,
+      "md5": "6d28ff239df0b53c44dce2ed8b253038",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095526",
+      "filename": "JBLAB-4212.bam",
+      "bytes": 1030940720,
+      "md5": "6d0303c9a62f42435fa80c55efcd2fe4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095405",
+      "filename": "JBLAB-19313.bam",
+      "bytes": 1024907680,
+      "md5": "220034ee667f6cff760773f477c140be",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095648",
+      "filename": "JBLAB-4959.bam",
+      "bytes": 750638524,
+      "md5": "e31c2ffd84b271229ae4c92fc856a14b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095527",
+      "filename": "JBLAB-4213.bam",
+      "bytes": 817422829,
+      "md5": "6514a2ace1dc4dc2993fbf0bda3132ea",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095406",
+      "filename": "JBLAB-19314.bam",
+      "bytes": 1247956579,
+      "md5": "302ae902e332b927223dea180c9ff945",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095641",
+      "filename": "JBLAB-4951.bam",
+      "bytes": 830854928,
+      "md5": "d6870c2a64690938d86299be349bec55",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095520",
+      "filename": "JBLAB-4205.bam",
+      "bytes": 499872013,
+      "md5": "fc50fc78c0cb9938cb96088fa33bcb5b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095642",
+      "filename": "JBLAB-4952.bam",
+      "bytes": 465581013,
+      "md5": "71f3ec9740e2410ea52b3e13709715e4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095521",
+      "filename": "JBLAB-4206.bam",
+      "bytes": 877596824,
+      "md5": "b54497e5f1aa0762f9eeeb30b1de684a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095400",
+      "filename": "JBLAB-19308.bam",
+      "bytes": 1373414714,
+      "md5": "6b0b242dc9277570cc3b4d7aa21ef22c",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095643",
+      "filename": "JBLAB-4953.bam",
+      "bytes": 643664530,
+      "md5": "5247ebbc041588c5560d57a98036177c",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095522",
+      "filename": "JBLAB-4207.bam",
+      "bytes": 1099100926,
+      "md5": "afcc8c9ff7dae8c1f8abbec9070db2b3",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095401",
+      "filename": "JBLAB-19309.bam",
+      "bytes": 972141961,
+      "md5": "49821e3d39934f4e0c4babf7d7f7aa6b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095644",
+      "filename": "JBLAB-4955.bam",
+      "bytes": 741505682,
+      "md5": "6d57ae4c46a95678696f957dee15ebc8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095523",
+      "filename": "JBLAB-4208.bam",
+      "bytes": 738393735,
+      "md5": "9e9bebb28759586091b09cb6dbc76383",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095402",
+      "filename": "JBLAB-19310.bam",
+      "bytes": 438365473,
+      "md5": "64d1511700adddd2afb43e6289199d5d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095638",
+      "filename": "JBLAB-4947.bam",
+      "bytes": 493299250,
+      "md5": "f7b42e4da75d90015f9ab2ce67b439ed",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095517",
+      "filename": "JBLAB-4202.bam",
+      "bytes": 805469780,
+      "md5": "5e70dcb72f24a56c27a755dba94d6f36",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095639",
+      "filename": "JBLAB-4949.bam",
+      "bytes": 1433741022,
+      "md5": "7cc735857a4391d16900e569163dc933",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095518",
+      "filename": "JBLAB-4203.bam",
+      "bytes": 413270832,
+      "md5": "45837a9428573f566fd57c56ec46a129",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095519",
+      "filename": "JBLAB-4204.bam",
+      "bytes": 1294024816,
+      "md5": "df69d5771c134fab4675d4d404bfec64",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095634",
+      "filename": "JBLAB-4941.bam",
+      "bytes": 532043028,
+      "md5": "d1a18ef2895cdbfc00df5d653ffe50ee",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095513",
+      "filename": "JBLAB-4197.bam",
+      "bytes": 1735299935,
+      "md5": "58d30b63a47187c7d53d57a0ad7b3c98",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095635",
+      "filename": "JBLAB-4943.bam",
+      "bytes": 639651851,
+      "md5": "1aba02b78e913e197fc2c8bf3f383ee5",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095514",
+      "filename": "JBLAB-4198.bam",
+      "bytes": 1209670606,
+      "md5": "6659b27718f6f1b6421656baba9ebb1c",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095636",
+      "filename": "JBLAB-4944.bam",
+      "bytes": 399709658,
+      "md5": "65079ca83dbd3043774f41216bfd80ee",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095515",
+      "filename": "JBLAB-4199.bam",
+      "bytes": 953132149,
+      "md5": "f5014c3ebf71b7eb5b62d0c8e29961a2",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095637",
+      "filename": "JBLAB-4945.bam",
+      "bytes": 760311279,
+      "md5": "2204da96ef78b5801ed45b8e3ba50600",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095516",
+      "filename": "JBLAB-4200.bam",
+      "bytes": 779119443,
+      "md5": "15d68262d32a725ee4319006703527b3",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095630",
+      "filename": "JBLAB-4936.bam",
+      "bytes": 619848428,
+      "md5": "0d41ef1c15a5cd9b36077a99a6e2dec4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095631",
+      "filename": "JBLAB-4938.bam",
+      "bytes": 698510153,
+      "md5": "76eee79fe240b28754b0a1cbcce1c098",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095510",
+      "filename": "JBLAB-4194.bam",
+      "bytes": 610511339,
+      "md5": "51a36daa49fe759c322db7985b289782",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095632",
+      "filename": "JBLAB-4939.bam",
+      "bytes": 854051769,
+      "md5": "c05a231f5060db34e02a5560b755276b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095511",
+      "filename": "JBLAB-4195.bam",
+      "bytes": 928985950,
+      "md5": "dc4a96af21d88d0447f4d9e60d06d757",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095633",
+      "filename": "JBLAB-4940.bam",
+      "bytes": 486761940,
+      "md5": "eaa9bdc6a0dd7cc492b394b528c63473",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095512",
+      "filename": "JBLAB-4196.bam",
+      "bytes": 856429407,
+      "md5": "e4a54ef34b5fcfc2e45dd6090a561bae",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095627",
+      "filename": "JBLAB-4932.bam",
+      "bytes": 695969019,
+      "md5": "0ee59edcc3ac4793b9c5b7a2afa9d0db",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095506",
+      "filename": "JBLAB-4189.bam",
+      "bytes": 595647429,
+      "md5": "15c2ddd4654dd32749bee4008d519b46",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095628",
+      "filename": "JBLAB-4933.bam",
+      "bytes": 574818997,
+      "md5": "6459eb0b68ecfc5536d9c29b55faaeb8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095507",
+      "filename": "JBLAB-4191.bam",
+      "bytes": 1218896053,
+      "md5": "6252948b0983eade1901354e00183164",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095629",
+      "filename": "JBLAB-4935.bam",
+      "bytes": 626092848,
+      "md5": "9d013de5a6c71fd129fa6c77d4661242",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095508",
+      "filename": "JBLAB-4192.bam",
+      "bytes": 583888215,
+      "md5": "c3f383a496de3936dab9ebbad4c376d9",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095509",
+      "filename": "JBLAB-4193.bam",
+      "bytes": 1306237599,
+      "md5": "e20f31b2f26adb0a1f8650c1fcd1da7b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095601",
+      "filename": "JBLAB-4298.bam",
+      "bytes": 531507604,
+      "md5": "d0ce0f884af6e699470ad8266610f7e7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095602",
+      "filename": "JBLAB-4299.bam",
+      "bytes": 669546164,
+      "md5": "3b6240d4dc9e0b19602aa532ca4d4700",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095603",
+      "filename": "JBLAB-4900.bam",
+      "bytes": 609893810,
+      "md5": "0114a9c7ab222d3c6d5f768193385c2c",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095604",
+      "filename": "JBLAB-4901.bam",
+      "bytes": 488000884,
+      "md5": "1156ff52f7e397a8b3728e85e1065cef",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095600",
+      "filename": "JBLAB-4297.bam",
+      "bytes": 275391920,
+      "md5": "7ec4e9510dde09acaa35b0f234b31fda",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095098",
+      "filename": "IM_169.bam",
+      "bytes": 640977292,
+      "md5": "f1f1d98d6cbdcd5f044af755c42d7b57",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095099",
+      "filename": "IM_170.bam",
+      "bytes": 788524652,
+      "md5": "222531943597799b184627ac5d01af58",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095094",
+      "filename": "IM_155.bam",
+      "bytes": 796073020,
+      "md5": "efe512ad36aa3b023652af0f4ff1425c",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095095",
+      "filename": "IM_16.bam",
+      "bytes": 616507088,
+      "md5": "47208fcc32075a348facf90d3d263f3a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095096",
+      "filename": "IM_165.bam",
+      "bytes": 910161597,
+      "md5": "312f2583ae3576618ae6fb2b0d43a8bc",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095097",
+      "filename": "IM_168.bam",
+      "bytes": 577826060,
+      "md5": "4e74f69a48ed9605b76f2c2a13fb9e69",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095090",
+      "filename": "IM_149.bam",
+      "bytes": 808826082,
+      "md5": "003891e511ac7df270d5b54ccb5e5fc9",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095091",
+      "filename": "IM_15.bam",
+      "bytes": 392400178,
+      "md5": "b8111e884136aa9a2381037bd850459e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095092",
+      "filename": "IM_152.bam",
+      "bytes": 1087364082,
+      "md5": "a1f76d9ced3023558a49d2beed8be042",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095093",
+      "filename": "IM_153.bam",
+      "bytes": 865011373,
+      "md5": "ac3749d51b1290def3932ba018826329",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095186",
+      "filename": "IM_262.bam",
+      "bytes": 351217151,
+      "md5": "c370bc096189e411c7ebec127dd19e34",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095065",
+      "filename": "IM_12.bam",
+      "bytes": 597476061,
+      "md5": "eabc2562af9d78b10be30e119fa0a1e4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095187",
+      "filename": "IM_263.bam",
+      "bytes": 612455622,
+      "md5": "3292e481cf22ee0624c220733d38b67e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095066",
+      "filename": "IM_120.bam",
+      "bytes": 687469297,
+      "md5": "7d336a69df76a1b95b3ad6ac7d6047fe",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095188",
+      "filename": "IM_264.bam",
+      "bytes": 911881770,
+      "md5": "08c0a2026f6fe63311ba7d541c2d5fbf",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095067",
+      "filename": "IM_121.bam",
+      "bytes": 513439081,
+      "md5": "f1a30989da633f83d98adf9c55b586a8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095189",
+      "filename": "IM_266.bam",
+      "bytes": 807501963,
+      "md5": "40b800e7bfbca51ab161be0c71852c81",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095068",
+      "filename": "IM_122.bam",
+      "bytes": 965062803,
+      "md5": "78d39e7038b47e00bc10c8763f2f0ddc",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095182",
+      "filename": "IM_258.bam",
+      "bytes": 485355488,
+      "md5": "14ffcf3f6bdb4d3053b96816b267cd7a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095061",
+      "filename": "IM_116.bam",
+      "bytes": 758242724,
+      "md5": "9dc1a637595e3e1e0367d3a013d94921",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095183",
+      "filename": "IM_259.bam",
+      "bytes": 1212045108,
+      "md5": "35fec249e78b861cccfecdb541466f39",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095062",
+      "filename": "IM_117.bam",
+      "bytes": 593567709,
+      "md5": "51007d5ac85cbcb7125fc5ccec36fdf2",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095184",
+      "filename": "IM_260.bam",
+      "bytes": 445873512,
+      "md5": "18d1bdf55fcb42ce85ac8ce3ab3d939b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095063",
+      "filename": "IM_118.bam",
+      "bytes": 392575899,
+      "md5": "13bb69be2eb25198e68e4e11294c7ccb",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095185",
+      "filename": "IM_261.bam",
+      "bytes": 270476486,
+      "md5": "97d533bda53478132106fc4c5f0032fa",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095064",
+      "filename": "IM_119.bam",
+      "bytes": 1074775589,
+      "md5": "559b76718ec670dd153ef6f26149a7bd",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095069",
+      "filename": "IM_123.bam",
+      "bytes": 674290019,
+      "md5": "9ef11832d294e15432b2a380617607ae",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095180",
+      "filename": "IM_256.bam",
+      "bytes": 612966896,
+      "md5": "626e3627c9eda139cb57bf8254abb121",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095181",
+      "filename": "IM_257.bam",
+      "bytes": 890123584,
+      "md5": "09ba168ad0ad333e3cd2d0be318effb9",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095060",
+      "filename": "IM_113.bam",
+      "bytes": 672722497,
+      "md5": "404eaa21a104a74cadf9b6626384394e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095296",
+      "filename": "IM_379.bam",
+      "bytes": 1394814490,
+      "md5": "e96954efd4050693085a9506ea667d00",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095175",
+      "filename": "IM_250.bam",
+      "bytes": 981693231,
+      "md5": "30059de30c71b10bd63c19ac8a389ac1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095054",
+      "filename": "IM_107.bam",
+      "bytes": 652677721,
+      "md5": "17af6898c6704447fcc629b12e69633a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095297",
+      "filename": "IM_38.bam",
+      "bytes": 474244270,
+      "md5": "454d172aac6e4d00a8a157554cd1ba12",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095176",
+      "filename": "IM_252.bam",
+      "bytes": 983638173,
+      "md5": "80ab8fac86497bcb6aaaaaf84ec7fd14",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095055",
+      "filename": "IM_108.bam",
+      "bytes": 830218285,
+      "md5": "27a67db08ff74d4075a268ca212d38dd",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095298",
+      "filename": "IM_380.bam",
+      "bytes": 1626437000,
+      "md5": "ec8d10f14eb62841fa0204cedf45bc5d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095177",
+      "filename": "IM_253.bam",
+      "bytes": 862141139,
+      "md5": "b02fd0ebd54d6309b4ffde329a2ba09d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095056",
+      "filename": "IM_11.bam",
+      "bytes": 962308115,
+      "md5": "e0fbcdb3c3c67ed9911dc8cf47fd2101",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095299",
+      "filename": "IM_381.bam",
+      "bytes": 1021056173,
+      "md5": "a238267944631c7003be51729a13d930",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095178",
+      "filename": "IM_254.bam",
+      "bytes": 335072180,
+      "md5": "41a5240dd0e5b7fa862cbd2b6b23e356",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095057",
+      "filename": "IM_110.bam",
+      "bytes": 525626963,
+      "md5": "9bd74121e5a620e4aa61965f712a0d0a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095292",
+      "filename": "IM_374.bam",
+      "bytes": 1083587245,
+      "md5": "6f406ea3a8e486aa6269ed119c1a36c5",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095171",
+      "filename": "IM_247.bam",
+      "bytes": 337509691,
+      "md5": "e01a4e1823688a312de569f7aa944e0e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095050",
+      "filename": "IM_102.bam",
+      "bytes": 826148821,
+      "md5": "53535e0fb3baebccf0c2fe62f71d2258",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095293",
+      "filename": "IM_375.bam",
+      "bytes": 1364903503,
+      "md5": "39f98dfa277fd874e8ff9e87ed9c10ee",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095172",
+      "filename": "IM_248.bam",
+      "bytes": 572927199,
+      "md5": "98f134a171684b3625e93c64c59eb5d6",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095051",
+      "filename": "IM_104.bam",
+      "bytes": 959835990,
+      "md5": "291664789a4a05231dfce27fff1ed410",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095294",
+      "filename": "IM_377.bam",
+      "bytes": 790061801,
+      "md5": "162ce903d0e2a367f8f1b21a10d7fc3a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095173",
+      "filename": "IM_249.bam",
+      "bytes": 349268902,
+      "md5": "ca53f72d529664fb0b0a27b5227b2bc9",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095052",
+      "filename": "IM_105.bam",
+      "bytes": 928105122,
+      "md5": "a5ef2ea9991a72e9ebd576042d17320e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095295",
+      "filename": "IM_378.bam",
+      "bytes": 1134974679,
+      "md5": "38a9745a505899ce615d9493fa974812",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095174",
+      "filename": "IM_25.bam",
+      "bytes": 717608530,
+      "md5": "8f5fd5b2234321da852d66982a44900e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095053",
+      "filename": "IM_106.bam",
+      "bytes": 1202359644,
+      "md5": "0114bd35afba21852a58501587aebbad",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095179",
+      "filename": "IM_255.bam",
+      "bytes": 878730592,
+      "md5": "65a1f1364646138187422d849a008e21",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095058",
+      "filename": "IM_111.bam",
+      "bytes": 977034932,
+      "md5": "3b0378130f77662d38ff3f5bf3e77312",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095059",
+      "filename": "IM_112.bam",
+      "bytes": 395191714,
+      "md5": "c94959a4ee255966d7ce6b368b21f98d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095290",
+      "filename": "IM_372.bam",
+      "bytes": 806683208,
+      "md5": "20e7655f134d27937baa66d2af21945e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095291",
+      "filename": "IM_373.bam",
+      "bytes": 273959939,
+      "md5": "3112ed3b883af2fa7335927a19c08da3",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095170",
+      "filename": "IM_246.bam",
+      "bytes": 152313345,
+      "md5": "6901de1aa47084a4acf3a064077cc7a0",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095087",
+      "filename": "IM_145.bam",
+      "bytes": 742052813,
+      "md5": "f6a3a1d6e01995a77208f0a69c386d02",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095088",
+      "filename": "IM_147.bam",
+      "bytes": 1564900262,
+      "md5": "5f60ae9ee4d186d4a93eebe1b6e77d9f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095089",
+      "filename": "IM_148.bam",
+      "bytes": 932245662,
+      "md5": "191c9fb6e9b531a560ad2b32f3690bf0",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095083",
+      "filename": "IM_139.bam",
+      "bytes": 434115794,
+      "md5": "fd9035da3766a68348cd16a3d4e7ab73",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095084",
+      "filename": "IM_14.bam",
+      "bytes": 475353497,
+      "md5": "f54adbf3e20c8e6f21cb20f4ae095964",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095085",
+      "filename": "IM_140.bam",
+      "bytes": 561001912,
+      "md5": "05ab04ba4e1835672fa542efe0c96cf5",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095086",
+      "filename": "IM_143.bam",
+      "bytes": 1002409561,
+      "md5": "6d958ff00f8aa3241a63c5b47414970f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095080",
+      "filename": "IM_135.bam",
+      "bytes": 912884252,
+      "md5": "3ae627de7f8c2d0e1e0241b3c6537782",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095081",
+      "filename": "IM_136.bam",
+      "bytes": 493867547,
+      "md5": "14260f8dcd51467daad6b57d23b6ab9d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095082",
+      "filename": "IM_138.bam",
+      "bytes": 993690605,
+      "md5": "48df441820df71a6952260e8d9951aa9",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095197",
+      "filename": "IM_274.bam",
+      "bytes": 376763725,
+      "md5": "bc6234f76bcc84eecb49462f168b96d6",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095076",
+      "filename": "IM_13.bam",
+      "bytes": 948193389,
+      "md5": "a1cf446eeab6600723ab597e89d1ec14",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095198",
+      "filename": "IM_275.bam",
+      "bytes": 1107528897,
+      "md5": "32604fcc2a3a27d26b088fa99fbcdc7a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095077",
+      "filename": "IM_130.bam",
+      "bytes": 674667994,
+      "md5": "7893f4e5ad477b5b11ab88ecc99fcbb6",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095199",
+      "filename": "IM_276.bam",
+      "bytes": 1027220955,
+      "md5": "903e111f2d3507710d9c2987b01fa230",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095078",
+      "filename": "IM_131.bam",
+      "bytes": 556777543,
+      "md5": "eec52d37e0761b8e5749af4d68d22338",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095079",
+      "filename": "IM_133.bam",
+      "bytes": 616104975,
+      "md5": "280921def702674cd83491e045c7309c",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095193",
+      "filename": "IM_27.bam",
+      "bytes": 998405209,
+      "md5": "f2df2436d64a626ace36782284be468a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095072",
+      "filename": "IM_126.bam",
+      "bytes": 513009652,
+      "md5": "7a213b2bfc75eb17111bba9b6c8d27ba",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095194",
+      "filename": "IM_270.bam",
+      "bytes": 884440309,
+      "md5": "18c6a3002139cdc41befa21838e826cb",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095073",
+      "filename": "IM_127.bam",
+      "bytes": 758966102,
+      "md5": "2e1b17c357a2e30af0d84099d54b8623",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095195",
+      "filename": "IM_271.bam",
+      "bytes": 370333483,
+      "md5": "517799b841f38b4f3b4b788b466b46c9",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095074",
+      "filename": "IM_128.bam",
+      "bytes": 1271286035,
+      "md5": "238f518e8fd4fef0f7171c9f4ed584fd",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095196",
+      "filename": "IM_272.bam",
+      "bytes": 598748402,
+      "md5": "477725a9fcbcdc6463b26f21356fc1ca",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095075",
+      "filename": "IM_129.bam",
+      "bytes": 741075114,
+      "md5": "f3ffdde48c01fef3ee5af6af5b56c3fd",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095190",
+      "filename": "IM_267.bam",
+      "bytes": 798114504,
+      "md5": "0abef7287ad102766d385a97c1bf4964",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095191",
+      "filename": "IM_268.bam",
+      "bytes": 735959723,
+      "md5": "fe9ef2617b6aeb267dc21c0c6e3eab6e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095070",
+      "filename": "IM_124.bam",
+      "bytes": 556042767,
+      "md5": "b8257dddea38f887c982f68306277552",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095192",
+      "filename": "IM_269.bam",
+      "bytes": 808625909,
+      "md5": "b7c898c094a89a5e66d67c8d0899ad13",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095071",
+      "filename": "IM_125.bam",
+      "bytes": 389406305,
+      "md5": "7e5e1435c835dc25b87f08037b8e8132",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096231",
+      "filename": "IM_189.bam",
+      "bytes": 1218439776,
+      "md5": "2326e67fc4395dd0969f3873881017c8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095384",
+      "filename": "IM_84.bam",
+      "bytes": 764647470,
+      "md5": "cc29eecb267bb3fecde534e8c99a51f7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095263",
+      "filename": "IM_341.bam",
+      "bytes": 336912657,
+      "md5": "ea1692bf7c276a895820ae2896e84d89",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095142",
+      "filename": "IM_22.bam",
+      "bytes": 930865637,
+      "md5": "f3a70cbd609c03173c2bce7a9175ff22",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096232",
+      "filename": "IM_198.bam",
+      "bytes": 1281709290,
+      "md5": "b1ee0034973187bc6c9f4fcdcdccc8ef",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095385",
+      "filename": "IM_85.bam",
+      "bytes": 1157695767,
+      "md5": "913d9caadd035e3131e68a1e6c1d7ce3",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095264",
+      "filename": "IM_342.bam",
+      "bytes": 751673844,
+      "md5": "1420c634ed4e3af5f5689d5cb4d9ea8b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095143",
+      "filename": "IM_220.bam",
+      "bytes": 566320111,
+      "md5": "1c1dcb8c17123f7f7e4ad9934416222d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096233",
+      "filename": "IM_199.bam",
+      "bytes": 1552035318,
+      "md5": "a2441be57bbe791e0f7f098d3b4fff01",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095386",
+      "filename": "IM_87.bam",
+      "bytes": 525904514,
+      "md5": "ae4692ee2f335c0e00219ea260f1e3fb",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095265",
+      "filename": "IM_344.bam",
+      "bytes": 990171796,
+      "md5": "c63b3e389225b8405fef256bf804d5e1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095144",
+      "filename": "IM_221.bam",
+      "bytes": 897632049,
+      "md5": "6afe26d7e156f820a648eecf8384879d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096234",
+      "filename": "IM_429.bam",
+      "bytes": 570046370,
+      "md5": "79dcc5308041999019058c2aa4704bcd",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095387",
+      "filename": "IM_88.bam",
+      "bytes": 561428910,
+      "md5": "09f51ecb41415c81538eb47cefdfb4f5",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095266",
+      "filename": "IM_345.bam",
+      "bytes": 1023640944,
+      "md5": "cfc9562a6b2b52714d6c73da3f370fca",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095145",
+      "filename": "IM_222.bam",
+      "bytes": 671465667,
+      "md5": "cfe1dc86f028777e316fdf29a4ca889b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095380",
+      "filename": "IM_80.bam",
+      "bytes": 722259287,
+      "md5": "176385889bada9c20694d1851d5eb356",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095381",
+      "filename": "IM_81.bam",
+      "bytes": 396005628,
+      "md5": "79a661f5819bf3e37f5a3c13fc72d970",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095260",
+      "filename": "IM_339.bam",
+      "bytes": 581195808,
+      "md5": "d17fbcdc33dcee9eee6fa812721b7a35",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095382",
+      "filename": "IM_82.bam",
+      "bytes": 360792203,
+      "md5": "54094afcad689fe0f1243e8f77dd3664",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095261",
+      "filename": "IM_34.bam",
+      "bytes": 756066726,
+      "md5": "893a400a2703990448f04d1d2a9f7f78",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095140",
+      "filename": "IM_218.bam",
+      "bytes": 1190291738,
+      "md5": "9c03421aabf32d03fdc6b6f02b868b08",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096230",
+      "filename": "IM_182.bam",
+      "bytes": 1144601206,
+      "md5": "60f06c01f96c372cab22944ee0c36a7b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095383",
+      "filename": "IM_83.bam",
+      "bytes": 527374857,
+      "md5": "70a8fbd9b882fc6dec19c57ef65f5017",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095262",
+      "filename": "IM_340.bam",
+      "bytes": 550383797,
+      "md5": "46a2cabd55a4d45bbd38a9103ab606c0",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095141",
+      "filename": "IM_219.bam",
+      "bytes": 319665891,
+      "md5": "c6008f97b416a407ed494bd8ca5161df",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096239",
+      "filename": "IM_434.bam",
+      "bytes": 1002389281,
+      "md5": "0ffd58f2c7ea2ce1c26cc17f4970e593",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096235",
+      "filename": "IM_430.bam",
+      "bytes": 1066924534,
+      "md5": "886b669e1b308ed7f18cdcf4ded2fee4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095388",
+      "filename": "IM_9.bam",
+      "bytes": 1460222219,
+      "md5": "fe2a78c5de8cd03e8a121443006e847b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095267",
+      "filename": "IM_346.bam",
+      "bytes": 990010999,
+      "md5": "51de64fbbe32e7f275ee435a4f644a5d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095146",
+      "filename": "IM_223.bam",
+      "bytes": 393617417,
+      "md5": "5441bcbddb3d086554996fd1821766be",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096236",
+      "filename": "IM_431.bam",
+      "bytes": 1347966068,
+      "md5": "e4c757ff7f5a175cdc8c20aa1c3e00b4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095389",
+      "filename": "IM_90.bam",
+      "bytes": 412004105,
+      "md5": "2694d0ea953977b33cbc78f3bf01cfdf",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095268",
+      "filename": "IM_348.bam",
+      "bytes": 899115334,
+      "md5": "6f47609269ae31e2d80425b2b67bb6cf",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095147",
+      "filename": "IM_224.bam",
+      "bytes": 180778654,
+      "md5": "06dad35801e3aeb339feaae3f9d63871",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096237",
+      "filename": "IM_432.bam",
+      "bytes": 782325527,
+      "md5": "e3bc706ff9f69698212cdab72f32e43e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095269",
+      "filename": "IM_349.bam",
+      "bytes": 972267564,
+      "md5": "26747a0aafa400b81be361336f47933f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095148",
+      "filename": "IM_225.bam",
+      "bytes": 961314827,
+      "md5": "3e664c4ed9993680babc9132f3b3a49b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096238",
+      "filename": "IM_433.bam",
+      "bytes": 797785478,
+      "md5": "c2e5e62742374942167e6b07cc2602e6",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095149",
+      "filename": "IM_226.bam",
+      "bytes": 780546749,
+      "md5": "679914c44842261445b38340958f05ac",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096220",
+      "filename": "IM_142.bam",
+      "bytes": 866320579,
+      "md5": "40e5809c7f665b8b9d97993f28c07754",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095494",
+      "filename": "JBLAB-4173.bam",
+      "bytes": 728384591,
+      "md5": "dfd93bea7e6d20484b03e4dfe00125f3",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095373",
+      "filename": "IM_73.bam",
+      "bytes": 636971487,
+      "md5": "1681f8b6d0ba7e84c3c11047d9ac867d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095252",
+      "filename": "IM_329.bam",
+      "bytes": 911834022,
+      "md5": "e1f41cd3dc772c414cfdac73407dd08d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095131",
+      "filename": "IM_208.bam",
+      "bytes": 1147737192,
+      "md5": "60417155a68fee1efa7a27a5541c501e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096221",
+      "filename": "IM_146.bam",
+      "bytes": 1022385156,
+      "md5": "1cdd25f8c84a0181a590ca80e42ddd93",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095495",
+      "filename": "JBLAB-4174.bam",
+      "bytes": 899179830,
+      "md5": "d93a188e12fed79a68110e852739b975",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095374",
+      "filename": "IM_74.bam",
+      "bytes": 586806533,
+      "md5": "589d7683ad19c68ca9cea63d19934757",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095253",
+      "filename": "IM_33.bam",
+      "bytes": 667882805,
+      "md5": "083c79a4a7b9d5e43d924f7907d9aaa6",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095132",
+      "filename": "IM_209.bam",
+      "bytes": 616705559,
+      "md5": "d3cb80c0b27fd386f31ce792b98b3096",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096222",
+      "filename": "IM_150.bam",
+      "bytes": 612172394,
+      "md5": "46f14b673e3de2b559afb99124900584",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095496",
+      "filename": "JBLAB-4175.bam",
+      "bytes": 725465184,
+      "md5": "c956887cc125fd44c1c51a6e1b008d4b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095375",
+      "filename": "IM_75.bam",
+      "bytes": 494024285,
+      "md5": "f0aceac7cb7bfc74369056a626b19e5a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095254",
+      "filename": "IM_331.bam",
+      "bytes": 954386944,
+      "md5": "2b15a639c6978edd93a20cca11a4b5be",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095133",
+      "filename": "IM_21.bam",
+      "bytes": 1122809115,
+      "md5": "46fe06301386bf4571c2c9b536411dd0",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096223",
+      "filename": "IM_154.bam",
+      "bytes": 1384269158,
+      "md5": "e48e64df5e9cdf82ff4e46de45df7e4d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095497",
+      "filename": "JBLAB-4177.bam",
+      "bytes": 1144032163,
+      "md5": "072b0d8b1aae7ce116f358a9a9efbdc9",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095376",
+      "filename": "IM_76.bam",
+      "bytes": 601134761,
+      "md5": "2931020ad91f76e1b1c0eb130453d895",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095255",
+      "filename": "IM_332.bam",
+      "bytes": 1265072199,
+      "md5": "1ffc7ae1b53c5513b95a3bdc9a8799ad",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095134",
+      "filename": "IM_210.bam",
+      "bytes": 333312118,
+      "md5": "cf7ccc469e1a7933218d04c32d9d7eb8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095490",
+      "filename": "JBLAB-4166.bam",
+      "bytes": 592017520,
+      "md5": "263ad9626d95b28b50d499b7358e276c",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095491",
+      "filename": "JBLAB-4168.bam",
+      "bytes": 716165221,
+      "md5": "c8af03ed050ad2421aee9578a75aa7f5",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095370",
+      "filename": "IM_7.bam",
+      "bytes": 917941229,
+      "md5": "f263c476c898ffd802fd10a2094f45aa",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095492",
+      "filename": "JBLAB-4171.bam",
+      "bytes": 1114915624,
+      "md5": "e11bd749ba490979bb2afbdbc3330973",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095371",
+      "filename": "IM_71.bam",
+      "bytes": 705616848,
+      "md5": "27c3096b8f351a2a36051471fab639de",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095250",
+      "filename": "IM_327.bam",
+      "bytes": 1162885711,
+      "md5": "a5535b86e23cab9854bf9cebdaf8d992",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095493",
+      "filename": "JBLAB-4172.bam",
+      "bytes": 572386870,
+      "md5": "c49a3afa5f1721f95ced9acf91838d34",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095372",
+      "filename": "IM_72.bam",
+      "bytes": 660959379,
+      "md5": "a124edad3220d64f7a712ea3534eefcc",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095251",
+      "filename": "IM_328.bam",
+      "bytes": 958331911,
+      "md5": "94007bdbd0c609a6cce4bd88cc3ee178",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095130",
+      "filename": "IM_207.bam",
+      "bytes": 954815362,
+      "md5": "be9c80bf9659ba12012b6b03696bf56d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096228",
+      "filename": "IM_167.bam",
+      "bytes": 1306416525,
+      "md5": "9b42fd4ce40df50d67a02d5ca805333f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095139",
+      "filename": "IM_216.bam",
+      "bytes": 794453826,
+      "md5": "9c10a446511d21006440c327fcf6d33a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096229",
+      "filename": "IM_180.bam",
+      "bytes": 1296959606,
+      "md5": "53a7f1b6b75bd4a760fe3af91e54b304",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096224",
+      "filename": "IM_158.bam",
+      "bytes": 1171330466,
+      "md5": "fed504925f26cc372be393be1004a149",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095498",
+      "filename": "JBLAB-4178.bam",
+      "bytes": 637189275,
+      "md5": "66ea1eab89999bf15b7a69648d43274e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095377",
+      "filename": "IM_77.bam",
+      "bytes": 521057533,
+      "md5": "3003e74a4c5e906f4f4fa82720faf4f7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095256",
+      "filename": "IM_334.bam",
+      "bytes": 816451729,
+      "md5": "2a35687539fc9e349f086237831b23af",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095135",
+      "filename": "IM_211.bam",
+      "bytes": 618250515,
+      "md5": "c1102e6a7d8f8b1b86c77f69283b2263",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096225",
+      "filename": "IM_159.bam",
+      "bytes": 1201617842,
+      "md5": "43929d538ccecc7b27e0eae431097477",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095499",
+      "filename": "JBLAB-4179.bam",
+      "bytes": 943953113,
+      "md5": "f7e8b9ef101a1c23bcb219b2bcd38871",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095378",
+      "filename": "IM_79.bam",
+      "bytes": 536516407,
+      "md5": "35353174f6684ec9fd0319f776eed059",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095257",
+      "filename": "IM_336.bam",
+      "bytes": 632114890,
+      "md5": "e4d07e569064483892adef1001cd2cd1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095136",
+      "filename": "IM_213.bam",
+      "bytes": 1362038461,
+      "md5": "6e97f6f9422b05bb34ace84cb54a2f18",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096226",
+      "filename": "IM_160.bam",
+      "bytes": 1732128729,
+      "md5": "a56a3e23a069907273b9f3efe09bcf3d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095379",
+      "filename": "IM_8.bam",
+      "bytes": 904010600,
+      "md5": "37cd7ffba8e883e0aec315410c6f3d28",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095258",
+      "filename": "IM_337.bam",
+      "bytes": 525448111,
+      "md5": "11039d9e77caea6d51ba197468fb0316",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095137",
+      "filename": "IM_214.bam",
+      "bytes": 1303024315,
+      "md5": "e9d6d0147c53d40f0d4f83990b7a1749",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096227",
+      "filename": "IM_166.bam",
+      "bytes": 399144459,
+      "md5": "803d2949d06c6c974ff71b51a976cd3c",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095259",
+      "filename": "IM_338.bam",
+      "bytes": 585073758,
+      "md5": "071352e658045c552bd260e2f39aaead",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095138",
+      "filename": "IM_215.bam",
+      "bytes": 561665738,
+      "md5": "4aa62234cfc847361b414b4c07984f9c",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096253",
+      "filename": "IM_449.bam",
+      "bytes": 853327523,
+      "md5": "e7f4f0bcdbfbeb84fd43876d1f6f60ca",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095285",
+      "filename": "IM_368.bam",
+      "bytes": 597888409,
+      "md5": "fc9e35342c192871869d26edc39a0bad",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095164",
+      "filename": "IM_240.bam",
+      "bytes": 851630204,
+      "md5": "a423bebc5c541128e4c47ffe4c51a4bf",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096254",
+      "filename": "IM_70.bam",
+      "bytes": 308306742,
+      "md5": "f1139f4919378568344671da2a9e4f85",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095286",
+      "filename": "IM_369.bam",
+      "bytes": 679416943,
+      "md5": "cad82b6d361292c30b12bc3c155db82e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095165",
+      "filename": "IM_241.bam",
+      "bytes": 722631551,
+      "md5": "494c4285494b12e0c6a58993708ceaf8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096255",
+      "filename": "IM_91.bam",
+      "bytes": 452885895,
+      "md5": "ae5214282edd1b13c04d587b8d4e779d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095287",
+      "filename": "IM_37.bam",
+      "bytes": 1264004459,
+      "md5": "ef758fbc457853f8a92aa8107d59f493",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095166",
+      "filename": "IM_242.bam",
+      "bytes": 616953963,
+      "md5": "93c1092d66bdfa85d149c357ab6820ce",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095288",
+      "filename": "IM_370.bam",
+      "bytes": 1047761637,
+      "md5": "d30107e3bbcadbf80a7a92dbec472134",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095167",
+      "filename": "IM_243.bam",
+      "bytes": 1545606138,
+      "md5": "3a4d764941c25fb8f7613dc7f8cfadc9",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095281",
+      "filename": "IM_362.bam",
+      "bytes": 1301784968,
+      "md5": "b6f003d41ab5b18a89d0ca9d1d286bd2",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095160",
+      "filename": "IM_236.bam",
+      "bytes": 929751567,
+      "md5": "ca406cdc4d611ed313f665ee76ddb279",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096250",
+      "filename": "IM_445.bam",
+      "bytes": 787381895,
+      "md5": "d4c20c3393fb22a475e529449598d1c3",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095282",
+      "filename": "IM_364.bam",
+      "bytes": 1031013594,
+      "md5": "ef8132df81d90e5a07c430f3f38f7cba",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095161",
+      "filename": "IM_237.bam",
+      "bytes": 766517205,
+      "md5": "c208a067c6eab8e64a20574081b6ecc4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096251",
+      "filename": "IM_446.bam",
+      "bytes": 730385218,
+      "md5": "8ca25f0958ec4b33491b9543d1c3ea53",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095283",
+      "filename": "IM_365.bam",
+      "bytes": 144171676,
+      "md5": "f22a759cc1c1841c10401b454b6f0d55",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095162",
+      "filename": "IM_238.bam",
+      "bytes": 392050532,
+      "md5": "c2e96143dc3cc5aa0a4acbb2247c9993",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096252",
+      "filename": "IM_448.bam",
+      "bytes": 753132282,
+      "md5": "564110087bb1cdbaba4bb6be0ab2d940",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095284",
+      "filename": "IM_367.bam",
+      "bytes": 899983360,
+      "md5": "4c96ab81a8323a16c89779083693d238",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095163",
+      "filename": "IM_239.bam",
+      "bytes": 905668083,
+      "md5": "1fc689020484620340984901260369dc",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095289",
+      "filename": "IM_371.bam",
+      "bytes": 1119625125,
+      "md5": "22eb71462db747529dc6e8ee65bf97bf",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095168",
+      "filename": "IM_244.bam",
+      "bytes": 1078344345,
+      "md5": "1a32557b0d56b76851406337c53f7913",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095047",
+      "filename": "IM_10.bam",
+      "bytes": 794705789,
+      "md5": "c4ddcc36f80d8ed53df3a6a0a9246228",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095169",
+      "filename": "IM_245.bam",
+      "bytes": 1106386043,
+      "md5": "c5e8130185f4ae6dd64cef640d71ea37",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095048",
+      "filename": "IM_100.bam",
+      "bytes": 849468996,
+      "md5": "f7ca45f03e68c3601701a9f1b700d597",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095049",
+      "filename": "IM_101.bam",
+      "bytes": 1283561990,
+      "md5": "f3789ee85386d6b7b762d6d46978efe4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095280",
+      "filename": "IM_361.bam",
+      "bytes": 1026257431,
+      "md5": "209212a8159308e8d2b26fb0b0dc5d9f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096242",
+      "filename": "IM_437.bam",
+      "bytes": 698798718,
+      "md5": "489c990e2f2eda9e8eed475ccfa3c4e1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095395",
+      "filename": "JBLAB-19302.bam",
+      "bytes": 1203982992,
+      "md5": "93503ce5f7259f202b622a6a4229078c",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095274",
+      "filename": "IM_353.bam",
+      "bytes": 1040701382,
+      "md5": "1d2bac949cf732dd7c7062b0e71505f1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095153",
+      "filename": "IM_23.bam",
+      "bytes": 781299002,
+      "md5": "0303c64a996fbf4793782c606ce26105",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096243",
+      "filename": "IM_438.bam",
+      "bytes": 946427772,
+      "md5": "b75c04d98f5578a0206bd81954e8e49f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095396",
+      "filename": "JBLAB-19303.bam",
+      "bytes": 829195285,
+      "md5": "8b0d6f1afa3bf09bcf847bef522299f0",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095275",
+      "filename": "IM_354.bam",
+      "bytes": 859458678,
+      "md5": "c00ced2c94b8f302bf2ca8b756a88670",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095154",
+      "filename": "IM_230.bam",
+      "bytes": 175232798,
+      "md5": "f94356ad1673b9a93bfe06330b17fd05",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096244",
+      "filename": "IM_439.bam",
+      "bytes": 558245802,
+      "md5": "32f13d26f56dc88fc7bd65836526a885",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095397",
+      "filename": "JBLAB-19304.bam",
+      "bytes": 1060125292,
+      "md5": "4ce5ad3e8bc2874e5105888decd1a007",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095276",
+      "filename": "IM_355.bam",
+      "bytes": 1025257530,
+      "md5": "05ed3a91067fce5d41967b3002bade77",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095155",
+      "filename": "IM_231.bam",
+      "bytes": 428436020,
+      "md5": "dda7da685f8d9674d4ea64df2e4e3d1a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096245",
+      "filename": "IM_440.bam",
+      "bytes": 615632933,
+      "md5": "645241c68613c438ecc0d285793e08e2",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095398",
+      "filename": "JBLAB-19305.bam",
+      "bytes": 815235192,
+      "md5": "7c7edbf6791a3e12e70743090ec19571",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095277",
+      "filename": "IM_357.bam",
+      "bytes": 798846486,
+      "md5": "524b759eb5648f3819a432bbf464c969",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095156",
+      "filename": "IM_232.bam",
+      "bytes": 670765197,
+      "md5": "a5db73fbce6528bb49fd6f53ad25f755",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095391",
+      "filename": "IM_95.bam",
+      "bytes": 453083280,
+      "md5": "f05db5deaf4d0968c109cac68ad6dd91",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095270",
+      "filename": "IM_35.bam",
+      "bytes": 548523916,
+      "md5": "fb8274b9d08ed326a33b5d26f45ecb23",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095392",
+      "filename": "IM_96.bam",
+      "bytes": 444127435,
+      "md5": "bcaf0a3c3d1f8d20af4481398cbd77e6",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095271",
+      "filename": "IM_350.bam",
+      "bytes": 1067948731,
+      "md5": "aa3bddd82b05616b1c5bd2f2f45247b1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095150",
+      "filename": "IM_227.bam",
+      "bytes": 632224658,
+      "md5": "5d83091744d1f37fb97b272cd422d631",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096240",
+      "filename": "IM_435.bam",
+      "bytes": 1035750084,
+      "md5": "b4c727c8210b4373c291c955c88e7f49",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095393",
+      "filename": "IM_98.bam",
+      "bytes": 531294845,
+      "md5": "51a14c004070d09790875e150b712ecd",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095272",
+      "filename": "IM_351.bam",
+      "bytes": 995471335,
+      "md5": "bb7b5f8efbe76a94b4165594b6ad2ae7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095151",
+      "filename": "IM_228.bam",
+      "bytes": 849789275,
+      "md5": "9b45e04651e9d7526d9a9908fd51fcd8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096241",
+      "filename": "IM_436.bam",
+      "bytes": 1100104096,
+      "md5": "8b5cfe1accc8261b543b9d50ebc9bb6d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095394",
+      "filename": "IM_99.bam",
+      "bytes": 898105521,
+      "md5": "312f5d35c207d5a348c57c840210db34",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095273",
+      "filename": "IM_352.bam",
+      "bytes": 1341002074,
+      "md5": "14db94b11cb2305c2f4393b42d6039a4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095152",
+      "filename": "IM_229.bam",
+      "bytes": 623439547,
+      "md5": "92b31cbfd77274ac98fe77615278fae4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096246",
+      "filename": "IM_441.bam",
+      "bytes": 381336370,
+      "md5": "eccc9aa7b80966dbd6aaef6a05482dbc",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095399",
+      "filename": "JBLAB-19306.bam",
+      "bytes": 1810359053,
+      "md5": "c12cd2d0a08408d095f12eea05196475",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095278",
+      "filename": "IM_358.bam",
+      "bytes": 762231184,
+      "md5": "964a44bfcbd42d01485552c4fd3bb5a8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095157",
+      "filename": "IM_233.bam",
+      "bytes": 1277437753,
+      "md5": "2c57a0cd2570ed831dd21b46b8dd0562",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096247",
+      "filename": "IM_442.bam",
+      "bytes": 606505639,
+      "md5": "3a7ff14db5b6e4f9ae976df77091635a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095279",
+      "filename": "IM_360.bam",
+      "bytes": 638681868,
+      "md5": "929d8b68570b95450541103fbf766280",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095158",
+      "filename": "IM_234.bam",
+      "bytes": 489059821,
+      "md5": "c5ef951d2dfd61c14eb10518a6606bd3",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096248",
+      "filename": "IM_443.bam",
+      "bytes": 708586278,
+      "md5": "dfd6e6c355246f9086e6104274392e2b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095159",
+      "filename": "IM_235.bam",
+      "bytes": 555460214,
+      "md5": "5942ddc5bc5b3384c7b36648bc974372",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096249",
+      "filename": "IM_444.bam",
+      "bytes": 778511538,
+      "md5": "62549dc897583cd05176644be3a6f30f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095390",
+      "filename": "IM_92.bam",
+      "bytes": 739784903,
+      "md5": "d70e8058ff1478a786f111788aa203c7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095582",
+      "filename": "JBLAB-4276.bam",
+      "bytes": 437813509,
+      "md5": "4bd4de7787743710c5364866d642b6b7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095461",
+      "filename": "JBLAB-4134.bam",
+      "bytes": 497154273,
+      "md5": "becdc248e2dd4e064fc514f47b4d7aae",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095340",
+      "filename": "IM_422.bam",
+      "bytes": 1265179093,
+      "md5": "0f87ecf1fa421bc0606dc5a02780966f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095583",
+      "filename": "JBLAB-4277.bam",
+      "bytes": 344726322,
+      "md5": "e6b2d5407a94beb705477ae82087a063",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095462",
+      "filename": "JBLAB-4135.bam",
+      "bytes": 455198385,
+      "md5": "d4cd61d5c05985b24eac4da131a51f5e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095341",
+      "filename": "IM_423.bam",
+      "bytes": 705174240,
+      "md5": "beadce4d2caad44f23d77b76165c9d52",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095220",
+      "filename": "IM_298.bam",
+      "bytes": 752510115,
+      "md5": "f7b031e4cde673101af62b1bd6e2e4ee",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095584",
+      "filename": "JBLAB-4278.bam",
+      "bytes": 261735653,
+      "md5": "8b465a54014ab62e15402c3c19884f1b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095463",
+      "filename": "JBLAB-4136.bam",
+      "bytes": 952606297,
+      "md5": "8926546a3c7861e6dbd0f84cc5946f91",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095342",
+      "filename": "IM_424.bam",
+      "bytes": 609196873,
+      "md5": "0f56bd26c909cfae56f12800edf58e84",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095221",
+      "filename": "IM_299.bam",
+      "bytes": 689846594,
+      "md5": "f0053604e84f6ab85c49841763adf3db",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095100",
+      "filename": "IM_171.bam",
+      "bytes": 593616781,
+      "md5": "cb0614aee1bb42e2349a921a84df04e9",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095585",
+      "filename": "JBLAB-4279.bam",
+      "bytes": 286719816,
+      "md5": "f8ff4b17db0c5754ac0817e3a9387d8a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095464",
+      "filename": "JBLAB-4137.bam",
+      "bytes": 664667598,
+      "md5": "bbf781a99c9d3ab2858987fe74fd4f91",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095343",
+      "filename": "IM_425.bam",
+      "bytes": 725994750,
+      "md5": "cef7fc579b5d0f0afadaa340109729a8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095222",
+      "filename": "IM_3.bam",
+      "bytes": 854493325,
+      "md5": "de6b4016a9f73c600073bd33499a74bf",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095101",
+      "filename": "IM_172.bam",
+      "bytes": 608092890,
+      "md5": "b3c140e53523434edcb76110529f5f79",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095580",
+      "filename": "JBLAB-4274.bam",
+      "bytes": 593615051,
+      "md5": "f670aac9eac00c8fb418d5dc2f142681",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095581",
+      "filename": "JBLAB-4275.bam",
+      "bytes": 441007643,
+      "md5": "8cb158622be954291907e00bb63a1663",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095460",
+      "filename": "JBLAB-4133.bam",
+      "bytes": 303486457,
+      "md5": "019b72142a5cf010bd23dca4c507dc06",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095469",
+      "filename": "JBLAB-4142.bam",
+      "bytes": 1394349690,
+      "md5": "72c882cb02be9ddd3e75acfd01ce9f67",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095348",
+      "filename": "IM_45.bam",
+      "bytes": 1251716691,
+      "md5": "d44a00b66f2fe0debe8d8da6a16f74f7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095227",
+      "filename": "IM_304.bam",
+      "bytes": 669314447,
+      "md5": "23dc70a1bbb394ef6d9a1018f877d7c2",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095106",
+      "filename": "IM_178.bam",
+      "bytes": 1004251497,
+      "md5": "12404d9b7e0a777caf5af9e0bcbc0ef1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095349",
+      "filename": "IM_46.bam",
+      "bytes": 951523073,
+      "md5": "52afa4cd1db87b2f3b43b7e766aeafea",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095228",
+      "filename": "IM_305.bam",
+      "bytes": 632441320,
+      "md5": "eac3e5296146a28becd15623b453ebe7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095107",
+      "filename": "IM_18.bam",
+      "bytes": 903531806,
+      "md5": "cb45c74fb127de8b9f68f360c6c3df4e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095229",
+      "filename": "IM_306.bam",
+      "bytes": 910120743,
+      "md5": "6065ebfff0fd2d423f0c4de1c2ba8249",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095108",
+      "filename": "IM_181.bam",
+      "bytes": 1213360135,
+      "md5": "2209390860b7ccb0a5055a44ae12ce10",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095109",
+      "filename": "IM_183.bam",
+      "bytes": 751324606,
+      "md5": "c09fd46afc47f32ed7228e54dc12c70a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095586",
+      "filename": "JBLAB-4280.bam",
+      "bytes": 383948692,
+      "md5": "3ff39f71bb17399f72e87b623be9488b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095465",
+      "filename": "JBLAB-4138.bam",
+      "bytes": 426978896,
+      "md5": "660ca8024efa112627da3114ced0f1a6",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095344",
+      "filename": "IM_426.bam",
+      "bytes": 588472246,
+      "md5": "b44ee2de9cbbda3feb44ba38609934ac",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095223",
+      "filename": "IM_30.bam",
+      "bytes": 814832660,
+      "md5": "f6a0a108aadfd4ac84bd57646dedfbbc",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095102",
+      "filename": "IM_174.bam",
+      "bytes": 422906254,
+      "md5": "a3b119bba76ae1ceb826107753990990",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095587",
+      "filename": "JBLAB-4281.bam",
+      "bytes": 264769804,
+      "md5": "a4ef33ce0ccf67d2684b666a18f87a45",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095466",
+      "filename": "JBLAB-4139.bam",
+      "bytes": 689219692,
+      "md5": "f589eac178f2e46526ed71672cfa6d3d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095345",
+      "filename": "IM_427.bam",
+      "bytes": 668143575,
+      "md5": "b623de674d55149d44ed5d52a87ce7da",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095224",
+      "filename": "IM_300.bam",
+      "bytes": 727542233,
+      "md5": "4bed864cd2af0879a66f50dbdf309373",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095103",
+      "filename": "IM_175.bam",
+      "bytes": 503349061,
+      "md5": "5d3c08883620f0a3d0295f066c05af61",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095588",
+      "filename": "JBLAB-4282.bam",
+      "bytes": 558868798,
+      "md5": "096c9d6484b0171b8392b7d31ff64757",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095467",
+      "filename": "JBLAB-4140.bam",
+      "bytes": 605657133,
+      "md5": "912e2736b4aef0b84620712f584307b5",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095346",
+      "filename": "IM_428.bam",
+      "bytes": 471538705,
+      "md5": "63a7b571dd33bad9917149395ae9ee5a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095225",
+      "filename": "IM_302.bam",
+      "bytes": 802080420,
+      "md5": "28e71da929b1fbb6a9f2d04819a59ac7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095104",
+      "filename": "IM_176.bam",
+      "bytes": 717370753,
+      "md5": "4b87149ecb8ca95439316649a081cd33",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095589",
+      "filename": "JBLAB-4283.bam",
+      "bytes": 693700374,
+      "md5": "95ba6a19e292641213e01b69a32ee4ee",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095468",
+      "filename": "JBLAB-4141.bam",
+      "bytes": 779420586,
+      "md5": "09eaecc0ef1a1a33754c27778415b2a8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095347",
+      "filename": "IM_43.bam",
+      "bytes": 932889764,
+      "md5": "6bf884cc1c81928ab0ea88a05d2b15bb",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095226",
+      "filename": "IM_303.bam",
+      "bytes": 1048925526,
+      "md5": "b4c3a519279990ab8644f1c951dffd8f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095105",
+      "filename": "IM_177.bam",
+      "bytes": 782657735,
+      "md5": "1eda5dd5c7d58609c5eac897e27a2a23",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095571",
+      "filename": "JBLAB-4264.bam",
+      "bytes": 474185260,
+      "md5": "c3f337c34378b1465f44ff4d9d848bd7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095450",
+      "filename": "JBLAB-4120.bam",
+      "bytes": 1505656092,
+      "md5": "99d492b6b4300352cd7ed87ad33a7951",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095572",
+      "filename": "JBLAB-4265.bam",
+      "bytes": 439802182,
+      "md5": "e0b4be7fe3614eafdef81de254994dbf",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095451",
+      "filename": "JBLAB-4121.bam",
+      "bytes": 663189689,
+      "md5": "bb28babe7ebec1e3fdb2faca29b5fd1d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095330",
+      "filename": "IM_413.bam",
+      "bytes": 487518554,
+      "md5": "f72b81fb3c15465124e6b764857371b0",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095573",
+      "filename": "JBLAB-4266.bam",
+      "bytes": 420699858,
+      "md5": "ced9d8e354666bbbfbab6c43e22c4f17",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095452",
+      "filename": "JBLAB-4122.bam",
+      "bytes": 954817047,
+      "md5": "7be4e410d094254a7b02d0e0abbfe4ca",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095331",
+      "filename": "IM_414.bam",
+      "bytes": 531341996,
+      "md5": "729a1f6bafe98f858d88edfb2cda92da",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095210",
+      "filename": "IM_288.bam",
+      "bytes": 943474249,
+      "md5": "cb66452570f5b7370a8ef69c04a5dc19",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095574",
+      "filename": "JBLAB-4267.bam",
+      "bytes": 316885615,
+      "md5": "ee44ea42f91385e3319580f084d812cb",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095453",
+      "filename": "JBLAB-4123.bam",
+      "bytes": 968243983,
+      "md5": "586e12b6c8df4eca5e0a24f3dbdb4095",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095332",
+      "filename": "IM_415.bam",
+      "bytes": 856625257,
+      "md5": "d3562117c421044fc26994486a0c7369",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095211",
+      "filename": "IM_289.bam",
+      "bytes": 511968040,
+      "md5": "95a2e2faf885b0d2fa65dcf7d4f6e55b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095570",
+      "filename": "JBLAB-4263.bam",
+      "bytes": 623249268,
+      "md5": "a0927d105c404832603f6059ca89720c",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095579",
+      "filename": "JBLAB-4273.bam",
+      "bytes": 904112026,
+      "md5": "0df0157d460bc10d8f47c838009b4fc9",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095458",
+      "filename": "JBLAB-4129.bam",
+      "bytes": 726595522,
+      "md5": "2927e61738f5f581740d0ef865df456b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095337",
+      "filename": "IM_42.bam",
+      "bytes": 843513576,
+      "md5": "aa5c10d60acc3198cc5b7ec54b03990f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095216",
+      "filename": "IM_293.bam",
+      "bytes": 727735734,
+      "md5": "ed8713f974d22a3991ac824e344473c4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095459",
+      "filename": "JBLAB-4132.bam",
+      "bytes": 464240909,
+      "md5": "27d5f220118e733ca698587b53155e70",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095338",
+      "filename": "IM_420.bam",
+      "bytes": 925266554,
+      "md5": "2c426a6728ebf1ae82297c5e0a35ff7f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095217",
+      "filename": "IM_294.bam",
+      "bytes": 502614425,
+      "md5": "552eaffc010e990fb209fe3e63df2195",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095339",
+      "filename": "IM_421.bam",
+      "bytes": 585010502,
+      "md5": "71a6ba965ca1ccd88b55e9cda7c2a526",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095218",
+      "filename": "IM_295.bam",
+      "bytes": 1454415928,
+      "md5": "2eefb6dbe6a147ab602a04386c51fa0f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095219",
+      "filename": "IM_296.bam",
+      "bytes": 137077972,
+      "md5": "42ecf14c99f9c6707fca36e56fd3aa72",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095575",
+      "filename": "JBLAB-4268.bam",
+      "bytes": 388989790,
+      "md5": "352a5d4dab5ec97929bd67ceb0744b29",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095454",
+      "filename": "JBLAB-4125.bam",
+      "bytes": 859213290,
+      "md5": "00e80c2494e780ed2795579400ced3bb",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095333",
+      "filename": "IM_416.bam",
+      "bytes": 1189017862,
+      "md5": "09eda3f47b23d77475f3e848330c808c",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095212",
+      "filename": "IM_29.bam",
+      "bytes": 774162813,
+      "md5": "5506b6b7f79fe60b6e343bec0c3537b7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095576",
+      "filename": "JBLAB-4269.bam",
+      "bytes": 395920101,
+      "md5": "b6ad44ddb6325f8d42221950e4470d1e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095455",
+      "filename": "JBLAB-4126.bam",
+      "bytes": 551439756,
+      "md5": "7a3d1ab3077be3b064e01df6ba3d1fda",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095334",
+      "filename": "IM_417.bam",
+      "bytes": 759054658,
+      "md5": "568384e3c71448867429e32dc47aaf92",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095213",
+      "filename": "IM_290.bam",
+      "bytes": 392824970,
+      "md5": "ead01218102e00c93d28dc39902c0337",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095577",
+      "filename": "JBLAB-4270.bam",
+      "bytes": 390957007,
+      "md5": "2b60a8ef50a502c1af7a0e0e54949142",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095456",
+      "filename": "JBLAB-4127.bam",
+      "bytes": 933675675,
+      "md5": "da6303e905cadaad676a19dda913238c",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095335",
+      "filename": "IM_418.bam",
+      "bytes": 413464633,
+      "md5": "9386c01318996d5f53317e13800ace08",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095214",
+      "filename": "IM_291.bam",
+      "bytes": 679774728,
+      "md5": "3be00f3c3f2ddc332599110c75468b3e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095578",
+      "filename": "JBLAB-4271.bam",
+      "bytes": 916528267,
+      "md5": "3bd64cd90181d8240d7b9b06d57a60a6",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095457",
+      "filename": "JBLAB-4128.bam",
+      "bytes": 592870139,
+      "md5": "e5a1749d145a08026c695f46eab43da5",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095336",
+      "filename": "IM_419.bam",
+      "bytes": 527009178,
+      "md5": "c083665ba07b7cf77a9ed813e8795c89",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095215",
+      "filename": "IM_292.bam",
+      "bytes": 772750052,
+      "md5": "eda4947549069486e56c3047aaeda2b8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095209",
+      "filename": "IM_287.bam",
+      "bytes": 952037530,
+      "md5": "c7d68f5f81e235144e1f07ec08dab9cf",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095483",
+      "filename": "JBLAB-4158.bam",
+      "bytes": 593440361,
+      "md5": "729160e88b0ffc1ce18c5cb7686b5630",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095362",
+      "filename": "IM_6.bam",
+      "bytes": 434825228,
+      "md5": "2a9f4f411a50d51d0f035d246aa9a3f4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095241",
+      "filename": "IM_319.bam",
+      "bytes": 612347029,
+      "md5": "a1fa0df9bce93a91dc381517d60691e8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095120",
+      "filename": "IM_194.bam",
+      "bytes": 597368238,
+      "md5": "7ced273df0241e4eb2ab98773f215bc8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095484",
+      "filename": "JBLAB-4159.bam",
+      "bytes": 360465202,
+      "md5": "06c0fa6452da23e8c984ce45b1bbe4de",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095363",
+      "filename": "IM_61.bam",
+      "bytes": 411500163,
+      "md5": "bf9297489bbca4cf2f233b2f5665dce3",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095242",
+      "filename": "IM_32.bam",
+      "bytes": 603729161,
+      "md5": "aa697ab37f55d7af5aa7cf055b25f302",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095121",
+      "filename": "IM_195.bam",
+      "bytes": 731771756,
+      "md5": "83df91078bba75a6554d437ee9276527",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095485",
+      "filename": "JBLAB-4160.bam",
+      "bytes": 367254340,
+      "md5": "17f725a1f861e8286542b7a72760a9eb",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095364",
+      "filename": "IM_62.bam",
+      "bytes": 919424711,
+      "md5": "9679d401fbd265bd9b504f34d194f120",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095243",
+      "filename": "IM_320.bam",
+      "bytes": 346376848,
+      "md5": "7ea0a23a8d18c59cb4441a434dad92ed",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095122",
+      "filename": "IM_196.bam",
+      "bytes": 410140748,
+      "md5": "c5fd3585d2f552cadd1c5a3db00f85fa",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095486",
+      "filename": "JBLAB-4161.bam",
+      "bytes": 594094178,
+      "md5": "77641bfaf74face4b627107698ec4007",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095365",
+      "filename": "IM_63.bam",
+      "bytes": 584728503,
+      "md5": "055b9dedf0da878f7445129f981b9f6a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095244",
+      "filename": "IM_321.bam",
+      "bytes": 547366067,
+      "md5": "1bcd4f96f846973ad5424a42ef84ae64",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095123",
+      "filename": "IM_197.bam",
+      "bytes": 1672089889,
+      "md5": "8bca6c2469b031d00ee89dfc9d4f6e53",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095480",
+      "filename": "JBLAB-4154.bam",
+      "bytes": 579197666,
+      "md5": "ec72964fbe82d510b8058162007b4844",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095481",
+      "filename": "JBLAB-4155.bam",
+      "bytes": 429497329,
+      "md5": "326f4541721b924eb04df3a1f433c634",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095360",
+      "filename": "IM_58.bam",
+      "bytes": 419203554,
+      "md5": "cd2091125793f92458e18611acf93f33",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095482",
+      "filename": "JBLAB-4157.bam",
+      "bytes": 666687511,
+      "md5": "b779d4e3502a0e20acc099f86dac8186",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095361",
+      "filename": "IM_59.bam",
+      "bytes": 1137692631,
+      "md5": "82fcfe01ec70025e35b9201b022effa0",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095240",
+      "filename": "IM_318.bam",
+      "bytes": 353473135,
+      "md5": "8b1e7c26b0f0200439a657e73c892466",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096217",
+      "filename": "IM_115.bam",
+      "bytes": 1729922769,
+      "md5": "4f5bd1459a96ed44680c0d84c9efee4d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095249",
+      "filename": "IM_326.bam",
+      "bytes": 815184081,
+      "md5": "d043d3ffd5bb580a3824700bf87521a4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095128",
+      "filename": "IM_205.bam",
+      "bytes": 414516274,
+      "md5": "e7e692cf1796889f0a1df3008822cc85",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096218",
+      "filename": "IM_132.bam",
+      "bytes": 770043765,
+      "md5": "b8aa37dc49dc0cd2728a5bf3708e37cc",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095129",
+      "filename": "IM_206.bam",
+      "bytes": 723246448,
+      "md5": "f0052526b017f4801e9a6d5227b3170d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008096219",
+      "filename": "IM_134.bam",
+      "bytes": 1079691170,
+      "md5": "9c5303b7784e83843db3f0c343a890a1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095487",
+      "filename": "JBLAB-4162.bam",
+      "bytes": 496189286,
+      "md5": "04b3001c1354ddd65fb0eb53c07b2916",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095366",
+      "filename": "IM_65.bam",
+      "bytes": 685414245,
+      "md5": "1bb363fe3ccbb39173241d4f94c8d266",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095245",
+      "filename": "IM_322.bam",
+      "bytes": 546272282,
+      "md5": "18ba1177a6a33029dbf0cd661823cab8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095124",
+      "filename": "IM_201.bam",
+      "bytes": 141089567,
+      "md5": "326d32e84addd114a4a2bd473f05e105",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095488",
+      "filename": "JBLAB-4163.bam",
+      "bytes": 493294911,
+      "md5": "0bec226e8df7bcb6b0fbb66641685b4b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095367",
+      "filename": "IM_66.bam",
+      "bytes": 1015640013,
+      "md5": "7f857407c4dbcd69da0e06662cf89474",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095246",
+      "filename": "IM_323.bam",
+      "bytes": 503773865,
+      "md5": "f37e7aba0317114dc26255736dc96789",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095125",
+      "filename": "IM_202.bam",
+      "bytes": 825581261,
+      "md5": "6d36b47a6098ee3763300ba31e69a826",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095489",
+      "filename": "JBLAB-4165.bam",
+      "bytes": 817402559,
+      "md5": "cfbf6de12aaaf472e278588b28696344",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095368",
+      "filename": "IM_67.bam",
+      "bytes": 608408777,
+      "md5": "55ab82f681e3c4e0e2acb0fe2eaeea71",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095247",
+      "filename": "IM_324.bam",
+      "bytes": 1099620420,
+      "md5": "c3c89af8f3a800240fb6c7073e4f75ba",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095126",
+      "filename": "IM_203.bam",
+      "bytes": 374433334,
+      "md5": "7d71292c7afa8c72cc33157fa1b86406",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095369",
+      "filename": "IM_68.bam",
+      "bytes": 469612893,
+      "md5": "f6b164a6e18b85fe8bbd0eb631bc3ed7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095248",
+      "filename": "IM_325.bam",
+      "bytes": 1177220597,
+      "md5": "0bd9b79e55f3f269c316fdb41464f992",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095127",
+      "filename": "IM_204.bam",
+      "bytes": 599881634,
+      "md5": "64453d4e7beb040a928e6624926fd503",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095593",
+      "filename": "JBLAB-4289.bam",
+      "bytes": 1338146640,
+      "md5": "74d818fde9fb98849c7bf9190b7dc368",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095472",
+      "filename": "JBLAB-4145.bam",
+      "bytes": 675868865,
+      "md5": "afabf12c857e82c769ed0d5edf797458",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095351",
+      "filename": "IM_48.bam",
+      "bytes": 1213427750,
+      "md5": "6ba9f0413b0a14c68d6bc1d1eae2a7db",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095230",
+      "filename": "IM_307.bam",
+      "bytes": 710297710,
+      "md5": "5e3116425963738da227c2aef74db704",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095594",
+      "filename": "JBLAB-4290.bam",
+      "bytes": 782755987,
+      "md5": "1f90f2fbb0bed5110e381975d87a55b7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095473",
+      "filename": "JBLAB-4147.bam",
+      "bytes": 1980439279,
+      "md5": "61bddd096eb47adee098bec2bbf9e19e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095352",
+      "filename": "IM_49.bam",
+      "bytes": 839738023,
+      "md5": "0f622e7586772c47bf1a1727f2e1b6ec",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095231",
+      "filename": "IM_308.bam",
+      "bytes": 761205965,
+      "md5": "4feea87560171ff91962300ebcebe5a4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095110",
+      "filename": "IM_184.bam",
+      "bytes": 517554708,
+      "md5": "7ec6d2ff7ea9a9afff3e0f2368b80495",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095595",
+      "filename": "JBLAB-4291.bam",
+      "bytes": 893798020,
+      "md5": "9803b4a64292b734c8f0a8b1f1b39fc2",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095474",
+      "filename": "JBLAB-4148.bam",
+      "bytes": 551961406,
+      "md5": "c8cf9268b299f04923ba838741aefae4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095353",
+      "filename": "IM_5.bam",
+      "bytes": 951605270,
+      "md5": "181e283577d58ab0bac0fd266e597ac8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095232",
+      "filename": "IM_309.bam",
+      "bytes": 1010212865,
+      "md5": "474edeb31ba1f5a706a72da7ed21dd64",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095111",
+      "filename": "IM_185.bam",
+      "bytes": 592593843,
+      "md5": "22106c681c5cac5c8c84e66c61a6edd7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095596",
+      "filename": "JBLAB-4292.bam",
+      "bytes": 593766799,
+      "md5": "afa86fedd9bf8e255f2afcbc9c7cf32b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095475",
+      "filename": "JBLAB-4149.bam",
+      "bytes": 479624485,
+      "md5": "94f003156c664e21cee6059c10c960fa",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095354",
+      "filename": "IM_50.bam",
+      "bytes": 1006110070,
+      "md5": "f8c348a5a13ef6724540b60ec0d55af9",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095233",
+      "filename": "IM_31.bam",
+      "bytes": 752330667,
+      "md5": "4ef2a8886b08a4a4cecb59857b78fbdf",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095112",
+      "filename": "IM_186.bam",
+      "bytes": 1889425262,
+      "md5": "dd731e7730f6d34f7f257495a6486c38",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095590",
+      "filename": "JBLAB-4284.bam",
+      "bytes": 659674597,
+      "md5": "bdd1a46ee6cb395ffa038d79ae60bba8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095591",
+      "filename": "JBLAB-4285.bam",
+      "bytes": 361849780,
+      "md5": "51d384ad1089db27ad4b2bdc0ebb0a44",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095470",
+      "filename": "JBLAB-4143.bam",
+      "bytes": 1650434970,
+      "md5": "76efa0973f5de85313ce01b1c0f100d2",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095592",
+      "filename": "JBLAB-4287.bam",
+      "bytes": 1704178499,
+      "md5": "40456012f418fc2a7dbf22b2d64ab4db",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095471",
+      "filename": "JBLAB-4144.bam",
+      "bytes": 740619644,
+      "md5": "7fc0b71e89966b6eeea952d88e688dc8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095350",
+      "filename": "IM_47.bam",
+      "bytes": 1075200577,
+      "md5": "1a210230498a8df8162018399b42988d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095359",
+      "filename": "IM_57.bam",
+      "bytes": 445159781,
+      "md5": "290121b0373d87e44e95b8e00817eeb3",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095238",
+      "filename": "IM_316.bam",
+      "bytes": 549446883,
+      "md5": "d5760523e7c542d59b4c743803d0bba7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095117",
+      "filename": "IM_191.bam",
+      "bytes": 582836316,
+      "md5": "8e72c59f506f625e410261e4179c9232",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095239",
+      "filename": "IM_317.bam",
+      "bytes": 597590579,
+      "md5": "92e82e4a4ad0a5c872dd6f9d97a93276",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095118",
+      "filename": "IM_192.bam",
+      "bytes": 710040480,
+      "md5": "d949c11250ab931fa4f348c040530192",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095119",
+      "filename": "IM_193.bam",
+      "bytes": 1008669299,
+      "md5": "1c4789d77adc273fa8b914c058b1dc5d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095597",
+      "filename": "JBLAB-4294.bam",
+      "bytes": 311283268,
+      "md5": "72389035a2e2157173786d13b9169ce0",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095476",
+      "filename": "JBLAB-4150.bam",
+      "bytes": 533658074,
+      "md5": "64260304218eeea29af81946e01962d7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095355",
+      "filename": "IM_52.bam",
+      "bytes": 752733839,
+      "md5": "1d8975359827e28d3d68fd144fff4b7a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095234",
+      "filename": "IM_311.bam",
+      "bytes": 711568005,
+      "md5": "b2780be308dd080723c58717bf6cd70e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095113",
+      "filename": "IM_187.bam",
+      "bytes": 1188993748,
+      "md5": "4ce1caf695348e524aeccd6fc0119785",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095598",
+      "filename": "JBLAB-4295.bam",
+      "bytes": 558383084,
+      "md5": "5574d6cc7ac21cd9cda88d4c6fdaf856",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095477",
+      "filename": "JBLAB-4151.bam",
+      "bytes": 708294446,
+      "md5": "6053ef77eae77db3b90a11497a7224d8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095356",
+      "filename": "IM_54.bam",
+      "bytes": 819254367,
+      "md5": "6b2c86b0203319ca987a359ec11a886e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095235",
+      "filename": "IM_312.bam",
+      "bytes": 628241161,
+      "md5": "ac1e4eaf9fe5cbcef400100e9adf3c4f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095114",
+      "filename": "IM_188.bam",
+      "bytes": 564077830,
+      "md5": "bd66f7d85c4d6d09317126953095f109",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095599",
+      "filename": "JBLAB-4296.bam",
+      "bytes": 679069186,
+      "md5": "40d56d3e49b11a7322b4a42526f8a1d1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095478",
+      "filename": "JBLAB-4152.bam",
+      "bytes": 699026917,
+      "md5": "45acc9bdef9fd6816e8cc006cc4c23d0",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095357",
+      "filename": "IM_55.bam",
+      "bytes": 516422743,
+      "md5": "f8f5eb719022042f0ccb3d04e28be131",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095236",
+      "filename": "IM_314.bam",
+      "bytes": 635433757,
+      "md5": "26279b390c042495abb5d5c5528cc5b3",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095115",
+      "filename": "IM_19.bam",
+      "bytes": 899486772,
+      "md5": "97206c50e9544bc0fed361a67ccd6dbb",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095479",
+      "filename": "JBLAB-4153.bam",
+      "bytes": 552711579,
+      "md5": "5cf90dd1daff6d268d5b3bd9c1342ba7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095358",
+      "filename": "IM_56.bam",
+      "bytes": 784379783,
+      "md5": "4debbaddb2e87becc634c81b24ce7814",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095237",
+      "filename": "IM_315.bam",
+      "bytes": 603397028,
+      "md5": "bd41d7af2a8571beef571b396f0e72b1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095116",
+      "filename": "IM_190.bam",
+      "bytes": 675742748,
+      "md5": "d6ef5f30d4f241e16a1adc6317bfcf63",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095660",
+      "filename": "JBLAB-4972.bam",
+      "bytes": 795690053,
+      "md5": "fcf820da1604c614b4517d54adb43521",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095661",
+      "filename": "JBLAB-4973.bam",
+      "bytes": 836403918,
+      "md5": "aa51648a5128b3bad954c262b6d0eba2",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095540",
+      "filename": "JBLAB-4227.bam",
+      "bytes": 289119727,
+      "md5": "072faf0f45f7488f6d18bd82210d566d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095662",
+      "filename": "JBLAB-4974.bam",
+      "bytes": 343697174,
+      "md5": "6f4ec2db1e4ba5ee0e38c49f93e6f207",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095541",
+      "filename": "JBLAB-4228.bam",
+      "bytes": 321059937,
+      "md5": "63cbd3019473313f1692a807eb23b81f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095420",
+      "filename": "JBLAB-19328.bam",
+      "bytes": 849204036,
+      "md5": "30fb8b96858863f0e44dec7c8fd88b86",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095667",
+      "filename": "JBLAB-4979.bam",
+      "bytes": 635750904,
+      "md5": "b2f054d297dc624ec1cc6d57fc80c1f2",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095546",
+      "filename": "JBLAB-4234.bam",
+      "bytes": 319988478,
+      "md5": "e696babd8425fb119c6e06f033881c4a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095425",
+      "filename": "JBLAB-19333.bam",
+      "bytes": 1719057760,
+      "md5": "b48a8a07c683e6a469d20d5bbef1f8a2",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095304",
+      "filename": "IM_387.bam",
+      "bytes": 347064922,
+      "md5": "f4d545e790b63a315f3445a124a61dd0",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095668",
+      "filename": "JBLAB-4980.bam",
+      "bytes": 581856570,
+      "md5": "1baf21cf15f72f0f86e6997e54226433",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095547",
+      "filename": "JBLAB-4235.bam",
+      "bytes": 188836782,
+      "md5": "702b272691bfadeaca912ea9926f4019",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095426",
+      "filename": "JBLAB-19334.bam",
+      "bytes": 1268408769,
+      "md5": "16cab91293483736417a1acb812cf065",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095305",
+      "filename": "IM_388.bam",
+      "bytes": 629132298,
+      "md5": "4f8c02948b5822993e69ae8f80e60737",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095669",
+      "filename": "JBLAB-4981.bam",
+      "bytes": 1044078256,
+      "md5": "15136d03331778c3a703cecbef2a9bdb",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095548",
+      "filename": "JBLAB-4236.bam",
+      "bytes": 1047974917,
+      "md5": "36a5c5dd95e3f67ae03cfa5596a6fdfb",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095427",
+      "filename": "JBLAB-19335.bam",
+      "bytes": 613504241,
+      "md5": "e7251cea81560c0517380e4bc3af6a8e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095306",
+      "filename": "IM_389.bam",
+      "bytes": 641166732,
+      "md5": "325e7a8170f90fd6aa48003ec43ba31e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095549",
+      "filename": "JBLAB-4238.bam",
+      "bytes": 1039205107,
+      "md5": "4c671141fb52afbba4afb9ebddc15f07",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095428",
+      "filename": "JBLAB-19336.bam",
+      "bytes": 650269397,
+      "md5": "9b03503d2294936d5deb69e0b84d8982",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095307",
+      "filename": "IM_39.bam",
+      "bytes": 748619343,
+      "md5": "9cf0e19698e05035f621e5d32f48554e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095663",
+      "filename": "JBLAB-4975.bam",
+      "bytes": 743098920,
+      "md5": "c1acdd545299dfab382547e6f06466d0",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095542",
+      "filename": "JBLAB-4229.bam",
+      "bytes": 338888757,
+      "md5": "e0401857a59af6fe05f3afcd4ca51b82",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095421",
+      "filename": "JBLAB-19329.bam",
+      "bytes": 577319000,
+      "md5": "25576d21858d3c139e33b81f0b9eb399",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095300",
+      "filename": "IM_382.bam",
+      "bytes": 1549851844,
+      "md5": "700ed3886f41624b731171b5f90741f3",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095664",
+      "filename": "JBLAB-4976.bam",
+      "bytes": 486452911,
+      "md5": "e406d1b4b7b4c4e147e036726438492e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095543",
+      "filename": "JBLAB-4230.bam",
+      "bytes": 268499392,
+      "md5": "c1ccc933ef0989e379837f577d9b8317",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095422",
+      "filename": "JBLAB-19330.bam",
+      "bytes": 560507304,
+      "md5": "5960e688e6c77f001abaf14f9f140ae1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095301",
+      "filename": "IM_383.bam",
+      "bytes": 1025121556,
+      "md5": "0362ffffd7fb01be202981acc30e5cd7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095665",
+      "filename": "JBLAB-4977.bam",
+      "bytes": 736926719,
+      "md5": "d414d840d1d539dc8b4f2e489e781a91",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095544",
+      "filename": "JBLAB-4231.bam",
+      "bytes": 338710991,
+      "md5": "7741e65e43a3b69ecd5e5b3b38d9c37e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095423",
+      "filename": "JBLAB-19331.bam",
+      "bytes": 752702001,
+      "md5": "aaa0ff8095dc72bd81ccac7df96506df",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095302",
+      "filename": "IM_385.bam",
+      "bytes": 514463561,
+      "md5": "e599cab5c7877fc415ad9e5c8f22cc32",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095666",
+      "filename": "JBLAB-4978.bam",
+      "bytes": 498660619,
+      "md5": "ced0c50ca2da75ea438f0e863a17ae70",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095545",
+      "filename": "JBLAB-4232.bam",
+      "bytes": 356080619,
+      "md5": "aceaf30bc6467ff0cc2c495c0c319a80",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095424",
+      "filename": "JBLAB-19332.bam",
+      "bytes": 1486907048,
+      "md5": "f8b2c5d883b2743c294ec692daa052ef",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095303",
+      "filename": "IM_386.bam",
+      "bytes": 601963869,
+      "md5": "4852dfab2815713d24777e27bb2865e5",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095539",
+      "filename": "JBLAB-4226.bam",
+      "bytes": 436113147,
+      "md5": "9e8dc7a495adb01bde1dc68261bf82c1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095418",
+      "filename": "JBLAB-19326.bam",
+      "bytes": 1403465006,
+      "md5": "530d3f179ca7245ba6eb317f89f166fc",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095419",
+      "filename": "JBLAB-19327.bam",
+      "bytes": 663385485,
+      "md5": "8c3a2581eeaba550f6331334fca1b804",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095650",
+      "filename": "JBLAB-4961.bam",
+      "bytes": 155542821,
+      "md5": "d345c352b7c2152b9b8347dfc14c5f03",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095651",
+      "filename": "JBLAB-4962.bam",
+      "bytes": 750944226,
+      "md5": "e12ba76308701f92291165a71bde79c5",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095530",
+      "filename": "JBLAB-4217.bam",
+      "bytes": 433749233,
+      "md5": "f1daec090e1fe1c854575d349365c8c0",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095656",
+      "filename": "JBLAB-4968.bam",
+      "bytes": 547281050,
+      "md5": "8bca93771670d432828c8927e912dc68",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095535",
+      "filename": "JBLAB-4222.bam",
+      "bytes": 476181366,
+      "md5": "2ec38aea31e72850efc49f37ed9bea26",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095414",
+      "filename": "JBLAB-19322.bam",
+      "bytes": 647744846,
+      "md5": "b43fb43caf81ca3ac8620780c4aa7b47",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095657",
+      "filename": "JBLAB-4969.bam",
+      "bytes": 1385996825,
+      "md5": "2213fe42594b0d08dacf38eaa31b9ee6",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095536",
+      "filename": "JBLAB-4223.bam",
+      "bytes": 527518061,
+      "md5": "8bb3a6e661c4c7681dc240f3494c1413",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095415",
+      "filename": "JBLAB-19323.bam",
+      "bytes": 552632870,
+      "md5": "b7adee255578e960ead7777fd290b855",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095658",
+      "filename": "JBLAB-4970.bam",
+      "bytes": 543662329,
+      "md5": "fd08716655ff7834b2493240a12e8e58",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095537",
+      "filename": "JBLAB-4224.bam",
+      "bytes": 464984297,
+      "md5": "f17f2c5f536b538fdbc5201239d7d5f7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095416",
+      "filename": "JBLAB-19324.bam",
+      "bytes": 1393719082,
+      "md5": "3fc97dbfd6dd937f8c7f9b754e9e156b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095659",
+      "filename": "JBLAB-4971.bam",
+      "bytes": 1037454197,
+      "md5": "e008725b8a167f58d56c28017f076da1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095538",
+      "filename": "JBLAB-4225.bam",
+      "bytes": 295666267,
+      "md5": "3b10bc9ff43491d40242beb375a07dbf",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095417",
+      "filename": "JBLAB-19325.bam",
+      "bytes": 1216216587,
+      "md5": "1a39eeba58166dd97de19582c0dafe0c",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095652",
+      "filename": "JBLAB-4964.bam",
+      "bytes": 683346928,
+      "md5": "28f1830108a15ce7d8d2f5fb254e8aef",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095531",
+      "filename": "JBLAB-4218.bam",
+      "bytes": 1217652302,
+      "md5": "5a73ed6ead2997d28e3acb946dca2162",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095410",
+      "filename": "JBLAB-19318.bam",
+      "bytes": 723322167,
+      "md5": "2d8dd5de57e8e7b6e93eb991def3c432",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095653",
+      "filename": "JBLAB-4965.bam",
+      "bytes": 841774979,
+      "md5": "25b88c691dfee13a99da15eaec5e032a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095532",
+      "filename": "JBLAB-4219.bam",
+      "bytes": 412569730,
+      "md5": "8f985866222d36e2ffbd3bd0f05188a6",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095411",
+      "filename": "JBLAB-19319.bam",
+      "bytes": 293403431,
+      "md5": "d9ebbe3b2f30ac3d2219331f58ad1122",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095654",
+      "filename": "JBLAB-4966.bam",
+      "bytes": 538018047,
+      "md5": "8858dba16e0a9d48c68c0da9cf69555e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095533",
+      "filename": "JBLAB-4220.bam",
+      "bytes": 1235255210,
+      "md5": "3417f4278caaf75ddf1e184e33aff198",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095412",
+      "filename": "JBLAB-19320.bam",
+      "bytes": 725542780,
+      "md5": "c230ce3b00bb28c92895d32165abc296",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095655",
+      "filename": "JBLAB-4967.bam",
+      "bytes": 1412939220,
+      "md5": "d4c06cbaced5e6a7ae385b3d71f112ec",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095534",
+      "filename": "JBLAB-4221.bam",
+      "bytes": 434429408,
+      "md5": "37cdba07f85f3fd69aa3c8d11476e44f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095413",
+      "filename": "JBLAB-19321.bam",
+      "bytes": 559867735,
+      "md5": "b1c7ad208ed14cc1d97c1c928cabc571",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095649",
+      "filename": "JBLAB-4960.bam",
+      "bytes": 900497542,
+      "md5": "74a5bb83d5f1a754fd4ba06519dc619d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095528",
+      "filename": "JBLAB-4214.bam",
+      "bytes": 478088271,
+      "md5": "ab09436f1383efe2f0fef0d3f9d61b93",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095407",
+      "filename": "JBLAB-19315.bam",
+      "bytes": 1363677037,
+      "md5": "b8c81c6a60cec0e6a64e4d0e30a945df",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095529",
+      "filename": "JBLAB-4216.bam",
+      "bytes": 386402111,
+      "md5": "a1309c43696a2bae35489a7d2a95a929",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095408",
+      "filename": "JBLAB-19316.bam",
+      "bytes": 952236529,
+      "md5": "c661133aef424d7fa64c8448c452b825",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095409",
+      "filename": "JBLAB-19317.bam",
+      "bytes": 717580447,
+      "md5": "cbccace06f41c8f319d9d09ac8754a4e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095681",
+      "filename": "JBLAB-4994.bam",
+      "bytes": 755123907,
+      "md5": "1d815770d486c01361f988c4306e01e6",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095560",
+      "filename": "JBLAB-4251.bam",
+      "bytes": 634604706,
+      "md5": "08cd6b9b4934e2f2085fa5fa4fc3a484",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095682",
+      "filename": "JBLAB-4995.bam",
+      "bytes": 572161391,
+      "md5": "ba4e05ac8061d8de5f973a3b8e4eb15f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095561",
+      "filename": "JBLAB-4252.bam",
+      "bytes": 181845349,
+      "md5": "bba7d3d5f65e909145eae78e826201de",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095440",
+      "filename": "JBLAB-4109.bam",
+      "bytes": 566334084,
+      "md5": "97a9d296cbd3f7ff850a6985aa390af1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095683",
+      "filename": "JBLAB-4996.bam",
+      "bytes": 746369245,
+      "md5": "5dacc563369fa57c52e421035449089f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095562",
+      "filename": "JBLAB-4253.bam",
+      "bytes": 869222920,
+      "md5": "0181cee02ca1b0d337c341552794776b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095441",
+      "filename": "JBLAB-4110.bam",
+      "bytes": 399018563,
+      "md5": "6b0d48d28f3248df0eb020d8f6bddcd7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095320",
+      "filename": "IM_403.bam",
+      "bytes": 1084181473,
+      "md5": "1d522e8ae39984e3d8a3cdafd887156e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095684",
+      "filename": "JBLAB-4997.bam",
+      "bytes": 569919061,
+      "md5": "cc8fbf8c1bfd7cb68c65e58ca09bb46a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095563",
+      "filename": "JBLAB-4254.bam",
+      "bytes": 387750523,
+      "md5": "6421fa69e936a6889adad20bac1d8f39",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095442",
+      "filename": "JBLAB-4111.bam",
+      "bytes": 836874079,
+      "md5": "b14ab47d119d400700ea578448f8ad6e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095321",
+      "filename": "IM_404.bam",
+      "bytes": 1144168355,
+      "md5": "fe345e240ce085e0d782197f6fd603e4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095200",
+      "filename": "IM_277.bam",
+      "bytes": 753477666,
+      "md5": "710dc41e4537412ea76e60abcb01013e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095680",
+      "filename": "JBLAB-4993.bam",
+      "bytes": 320678333,
+      "md5": "fe6d72dbaf9ae6ca34efc31123fcc0de",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095568",
+      "filename": "JBLAB-4260.bam",
+      "bytes": 733497478,
+      "md5": "75b8293f308650cd9d39e045b82cf9a8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095447",
+      "filename": "JBLAB-4116.bam",
+      "bytes": 941724614,
+      "md5": "18b4e8c264c9ccb9b28e8aa2bfb11c59",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095326",
+      "filename": "IM_409.bam",
+      "bytes": 989725944,
+      "md5": "d774202285a4a53c2fedfca0d5336479",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095205",
+      "filename": "IM_283.bam",
+      "bytes": 637579043,
+      "md5": "3110d3da0db4809e50c668b0a386056e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095569",
+      "filename": "JBLAB-4261.bam",
+      "bytes": 122927119,
+      "md5": "714c3c7583eb6deb60b7a10e5120436a",
+      "state": "DOWNLOADED_VERIFIED",
+      "local_path": "ega/britroc_data/EGAF00008095569/JBLAB-4261.bam",
+      "verified": true
+    },
+    {
+      "egaf_id": "EGAF00008095448",
+      "filename": "JBLAB-4118.bam",
+      "bytes": 288052168,
+      "md5": "2e2be9588b3a39fbc1d51ebd018b2b34",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095327",
+      "filename": "IM_410.bam",
+      "bytes": 527648368,
+      "md5": "ae456e9f8f604fc95c754ca44712237d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095206",
+      "filename": "IM_284.bam",
+      "bytes": 247656148,
+      "md5": "a4f88f94ce0e74a779c9730fad278bab",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095449",
+      "filename": "JBLAB-4119.bam",
+      "bytes": 1151541768,
+      "md5": "3f5e60978bba8187af05a5c37b1bd843",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095328",
+      "filename": "IM_411.bam",
+      "bytes": 573461994,
+      "md5": "a012feb359dd0ba52a7120c0dfb0aed9",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095207",
+      "filename": "IM_285.bam",
+      "bytes": 559330604,
+      "md5": "b145d36f58e35689405244258a7535e7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095329",
+      "filename": "IM_412.bam",
+      "bytes": 681779177,
+      "md5": "1692723872772d14100de33792f596d8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095208",
+      "filename": "IM_286.bam",
+      "bytes": 921154236,
+      "md5": "0871861c3c5a75daf3d4ea0108799af4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095685",
+      "filename": "JBLAB-4998.bam",
+      "bytes": 1121415171,
+      "md5": "3e19fcf0d91770093884dbe20f6c1ee3",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095564",
+      "filename": "JBLAB-4255.bam",
+      "bytes": 382384749,
+      "md5": "0fdb9109bb5a34e72759366fe7742b89",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095443",
+      "filename": "JBLAB-4112.bam",
+      "bytes": 289378009,
+      "md5": "71b9dbd74e99dbbbd99906b972fa1e9e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095322",
+      "filename": "IM_405.bam",
+      "bytes": 868562010,
+      "md5": "af2ab8d60d2cd5419f88d13ecf11a9fc",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095201",
+      "filename": "IM_279.bam",
+      "bytes": 794223153,
+      "md5": "8a3ca0443b05d6dec6a2172d3c9f9ffa",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095686",
+      "filename": "JBLAB-4999.bam",
+      "bytes": 673260741,
+      "md5": "6c61572b92b46b58155be51f1c1f6b89",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095565",
+      "filename": "JBLAB-4257.bam",
+      "bytes": 170005973,
+      "md5": "672df3942d01e7a6e1666e3fbc77d941",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095444",
+      "filename": "JBLAB-4113.bam",
+      "bytes": 598777046,
+      "md5": "6056584c5dd071a795c108cd8459527b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095323",
+      "filename": "IM_406.bam",
+      "bytes": 1098171304,
+      "md5": "d9f9ee85be0d21afd8075ff400c78d65",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095202",
+      "filename": "IM_28.bam",
+      "bytes": 674535685,
+      "md5": "9b6e2f03260008f1641546b743a130ef",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095566",
+      "filename": "JBLAB-4258.bam",
+      "bytes": 705447802,
+      "md5": "610b5107798530c5a353da0b0d7f0c17",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095445",
+      "filename": "JBLAB-4114.bam",
+      "bytes": 429293697,
+      "md5": "0f59899b0b4e8cd6ea77e090f814af07",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095324",
+      "filename": "IM_407.bam",
+      "bytes": 491454000,
+      "md5": "978edadc591c474fc51a47d896048786",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095203",
+      "filename": "IM_280.bam",
+      "bytes": 158718854,
+      "md5": "f5ae73a2120c5f860a9ac6acafb67c7a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095567",
+      "filename": "JBLAB-4259.bam",
+      "bytes": 702160060,
+      "md5": "82c8598c6922b3739a19d45f0dd97fe2",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095446",
+      "filename": "JBLAB-4115.bam",
+      "bytes": 770682467,
+      "md5": "8ef899c0462fc5f45e366e0b63614a37",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095325",
+      "filename": "IM_408.bam",
+      "bytes": 1100951081,
+      "md5": "fe3809b3f0e786178353ad96e42f69ae",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095204",
+      "filename": "IM_282.bam",
+      "bytes": 384304110,
+      "md5": "f12f2352e4e8ff35dc8c38665e80522c",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095319",
+      "filename": "IM_402.bam",
+      "bytes": 473406059,
+      "md5": "b58d5e3ee1a946d93b0854f9e41c156b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095670",
+      "filename": "JBLAB-4982.bam",
+      "bytes": 1005057805,
+      "md5": "806320ff99f5a1ee01182dca1d07ffa6",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095671",
+      "filename": "JBLAB-4983.bam",
+      "bytes": 817144773,
+      "md5": "196d07238fcd8fc459fde155cc93137a",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095550",
+      "filename": "JBLAB-4240.bam",
+      "bytes": 264013266,
+      "md5": "a3d1b88d58c6be08f789b54b62663612",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095672",
+      "filename": "JBLAB-4984.bam",
+      "bytes": 1038273100,
+      "md5": "8a547c5d336c54f77bcad8267e04b62e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095551",
+      "filename": "JBLAB-4241.bam",
+      "bytes": 331824589,
+      "md5": "ecef09f92440ea579c4b71072f94e5c8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095430",
+      "filename": "JBLAB-19338.bam",
+      "bytes": 821390187,
+      "md5": "575aac64ffd82798e3004141513978ad",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095673",
+      "filename": "JBLAB-4985.bam",
+      "bytes": 1634531619,
+      "md5": "80898dad6907af0fb3b735a20593ce96",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095552",
+      "filename": "JBLAB-4242.bam",
+      "bytes": 249376504,
+      "md5": "e4111f895fb0d412cfe1d10e5960cce3",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095431",
+      "filename": "JBLAB-19339.bam",
+      "bytes": 998148392,
+      "md5": "e5d89358115522b6f81e51e5d1923f2c",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095310",
+      "filename": "IM_392.bam",
+      "bytes": 849938652,
+      "md5": "323740c16a3b968215fe05b40f03f616",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095678",
+      "filename": "JBLAB-4990.bam",
+      "bytes": 890821540,
+      "md5": "c556676c2f3f4f4e48457db1030ab9ba",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095557",
+      "filename": "JBLAB-4248.bam",
+      "bytes": 286216541,
+      "md5": "148fe956b3f7d9e4c21a4b86439cf209",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095436",
+      "filename": "JBLAB-4104.bam",
+      "bytes": 571633643,
+      "md5": "d6c9a7879190e09221cfcf4e6ca604cc",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095315",
+      "filename": "IM_399.bam",
+      "bytes": 681884258,
+      "md5": "6f235a38a849e289a9e70ef1198d748b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095679",
+      "filename": "JBLAB-4991.bam",
+      "bytes": 571383086,
+      "md5": "e36b80435253c47ea0fdb0a8dbcecc4d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095558",
+      "filename": "JBLAB-4249.bam",
+      "bytes": 774730540,
+      "md5": "73df2885e70e764e52677e4440ec3e5c",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095437",
+      "filename": "JBLAB-4105.bam",
+      "bytes": 696498807,
+      "md5": "90390c8770b9d42044950d98337e42fd",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095316",
+      "filename": "IM_40.bam",
+      "bytes": 719155890,
+      "md5": "63e27b90e2a1360ef03f17718b898ce1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095559",
+      "filename": "JBLAB-4250.bam",
+      "bytes": 147742361,
+      "md5": "531dd1ba166734bcc0ee48154a6f4d21",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095438",
+      "filename": "JBLAB-4106.bam",
+      "bytes": 706965927,
+      "md5": "b785b62f35a07fe48f85dae404b20eaa",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095317",
+      "filename": "IM_400.bam",
+      "bytes": 450657408,
+      "md5": "e0b303c5271c93192c76f8033baa5032",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095439",
+      "filename": "JBLAB-4108.bam",
+      "bytes": 568467983,
+      "md5": "71d7315ad55f662b4531b658fcf65637",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095318",
+      "filename": "IM_401.bam",
+      "bytes": 695185707,
+      "md5": "2771df0babd8a386a55f9ca150b8b50e",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095674",
+      "filename": "JBLAB-4986.bam",
+      "bytes": 857472464,
+      "md5": "7977d2d2a373c11f2df519565b7471cb",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095553",
+      "filename": "JBLAB-4243.bam",
+      "bytes": 133890375,
+      "md5": "6f2aa65f22af28a05466cc581399fd8d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095432",
+      "filename": "JBLAB-19340.bam",
+      "bytes": 822989257,
+      "md5": "0c1b95676c182ff0dbfb1c25132970f7",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095311",
+      "filename": "IM_394.bam",
+      "bytes": 954961353,
+      "md5": "4a8fda6d13a1c5ba8059fbc6b773f68b",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095675",
+      "filename": "JBLAB-4987.bam",
+      "bytes": 879919343,
+      "md5": "f14988bf0276f6bfdad55f587645d9ec",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095554",
+      "filename": "JBLAB-4244.bam",
+      "bytes": 219454539,
+      "md5": "9926761069e1342d2eb07be94fb21da4",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095433",
+      "filename": "JBLAB-4101.bam",
+      "bytes": 582287838,
+      "md5": "0b3f3639b2113a121b71f5e5e9b89bb6",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095312",
+      "filename": "IM_395.bam",
+      "bytes": 752534848,
+      "md5": "7024741082fd47739238897cf5684876",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095676",
+      "filename": "JBLAB-4988.bam",
+      "bytes": 1020528333,
+      "md5": "7b05c32dc8ca8a17c0e64573c01bcb3f",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095555",
+      "filename": "JBLAB-4245.bam",
+      "bytes": 1871387990,
+      "md5": "ef9327f33608f12facff9d8689ce8c30",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095434",
+      "filename": "JBLAB-4102.bam",
+      "bytes": 650359758,
+      "md5": "adc0be63c5b133c8a3bda419096582b8",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095313",
+      "filename": "IM_396.bam",
+      "bytes": 1181030977,
+      "md5": "2f7d84c6053daae749f76a408d5df2cf",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095677",
+      "filename": "JBLAB-4989.bam",
+      "bytes": 1132629173,
+      "md5": "e135e99693c00d874b16fcb944a90756",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095556",
+      "filename": "JBLAB-4246.bam",
+      "bytes": 244125061,
+      "md5": "05476f21e5cd12509eb7b4805bb78b8d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095435",
+      "filename": "JBLAB-4103.bam",
+      "bytes": 699224484,
+      "md5": "09c9f1fe7d500da04788ac5d050b204d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095314",
+      "filename": "IM_397.bam",
+      "bytes": 1573859439,
+      "md5": "1cc41cbe616c2a52a43f9fada8491beb",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095429",
+      "filename": "JBLAB-19337.bam",
+      "bytes": 754833420,
+      "md5": "0bea724fbe809a639281ff1b72ebf16d",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095308",
+      "filename": "IM_390.bam",
+      "bytes": 642131372,
+      "md5": "4dfdef01112b8460bd132d07429710f1",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    },
+    {
+      "egaf_id": "EGAF00008095309",
+      "filename": "IM_391.bam",
+      "bytes": 615998946,
+      "md5": "1d65863c0b99c7c247ba6e07bf165c20",
+      "state": "PENDING",
+      "local_path": null,
+      "verified": false
+    }
+  ],
+  "htsget_slice_status": {
+    "attempted": true,
+    "endpoint": "https://ega.ebi.ac.uk:8443/v2/htsget/reads/{EGAF}",
+    "auth": "SUCCESS",
+    "result": "HTTP_500_SERVER_ERROR (both 'chr17' and '17' reference naming)",
+    "interpretation": "htsget range-slicing NOT SERVED for EGAD00001011049 on EGA archive backend (likely no server-side index registered for htsget, or htsget disabled for this dataset). Client + auth are correct.",
+    "consequence": "The FEASIBLE in-sandbox slice path is UNAVAILABLE for this dataset. Only full-BAM download works (infeasible in-sandbox per throughput+disk)."
+  },
+  "recommended_execution": {
+    "path": "resumable_fetch.py on EGA-adjacent (Europe) VM or HPC node with multi-TB scratch + parallel connections",
+    "why": "Full-BAM only (htsget slice unavailable); 510.8GB @ 1.1MB/s non-Europe = 1.8-5.3 days; needs Europe egress + big disk",
+    "labels_still_needed": "BriTROC-1 clinical map (PFI/platinum status) from publication supplement - NOT in EGA dataset"
+  }
+}

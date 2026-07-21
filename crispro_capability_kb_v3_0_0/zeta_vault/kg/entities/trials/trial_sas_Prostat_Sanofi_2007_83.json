@@ -1,0 +1,34 @@
+{
+  "id": "trial:sas:Prostat_Sanofi_2007_83",
+  "type": "Trial",
+  "name": "Prostat trial Sanofi 2007 (83)",
+  "source_receipts": [
+    {
+      "source": "SAS CAS fileinfo",
+      "caslib": "Prostat_Sanofi_2007_83",
+      "n_files": 2
+    }
+  ],
+  "verbatim_evidence": [
+    "CDISC ADaM caslib Prostat_Sanofi_2007_83: 2 source files",
+    "API-created caslib",
+    "table list unavailable"
+  ],
+  "cross_refs": {
+    "caslib": "Prostat_Sanofi_2007_83"
+  },
+  "attributes": {
+    "source_vault": "PDS_ProjectDataSphere",
+    "cancer_type": "Prostat",
+    "sponsor": "Sanofi",
+    "year": "2007",
+    "trial_id": "83",
+    "n_files": 2,
+    "total_bytes": 8192,
+    "adam_tables": [],
+    "biological_relevance": "Prostat clinical telemetry (labs/AE/dosing/serial markers)"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

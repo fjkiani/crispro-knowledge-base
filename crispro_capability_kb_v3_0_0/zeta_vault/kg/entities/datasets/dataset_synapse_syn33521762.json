@@ -1,0 +1,30 @@
+{
+  "id": "dataset:synapse:syn33521762",
+  "type": "Dataset",
+  "name": "H&E (MSK SPECTRUM)",
+  "source_receipts": [
+    {
+      "source": "Synapse metadata",
+      "syn_id": "syn33521762",
+      "project": "syn25569736"
+    }
+  ],
+  "verbatim_evidence": [
+    "H&E (MSK SPECTRUM): H&E whole-slide images",
+    "Access: metadata public, bytes blocked (token invalid)"
+  ],
+  "cross_refs": {
+    "synapse_id": "syn33521762",
+    "project": "syn25569736"
+  },
+  "attributes": {
+    "source_vault": "Synapse",
+    "dataset_name": "H&E (MSK SPECTRUM)",
+    "content": "H&E whole-slide images",
+    "biological_relevance": "histopathology",
+    "download_status": "BLOCKED_needs_valid_token"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

@@ -1,0 +1,64 @@
+{
+  "syn52458611": {
+    "label": "2022_BulkWGS",
+    "n": 3,
+    "items": [
+      {
+        "id": "syn39607857",
+        "type": "FileEntity",
+        "name": "cna.tsv"
+      },
+      {
+        "id": "syn39607858",
+        "type": "FileEntity",
+        "name": "cohort.maf"
+      },
+      {
+        "id": "syn39607860",
+        "type": "FileEntity",
+        "name": "segments.seg"
+      }
+    ]
+  },
+  "syn52458614": {
+    "label": "2022_MSK-IMPACT",
+    "n": 0,
+    "items": []
+  },
+  "syn66309960": {
+    "label": "2025_IF",
+    "n": 1,
+    "items": [
+      {
+        "id": "syn66310039",
+        "type": "FileEntity",
+        "name": "SPECTRUM-OV-053_S1_LEFT_FALLOPIAN_TUBE_cGAS-LSBio_cGAS-CST_panCK_DAPI_R1.ome.tiff"
+      }
+    ]
+  },
+  "syn33521770": {
+    "name": "Bulk WGS",
+    "n_items": 3,
+    "sample_item_ids": [
+      "syn39607857",
+      "syn39607858",
+      "syn39607860"
+    ]
+  },
+  "syn33521771": {
+    "name": "MSK-IMPACT",
+    "n_items": 0,
+    "sample_item_ids": []
+  },
+  "syn33521743": {
+    "name": "scRNA",
+    "n_items": 5,
+    "sample_item_ids": [
+      "syn51091849",
+      "syn51091851",
+      "syn51091852",
+      "syn51091853",
+      "syn51091882"
+    ]
+  }
+}

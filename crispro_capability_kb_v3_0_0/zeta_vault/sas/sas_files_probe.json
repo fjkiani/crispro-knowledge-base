@@ -1,0 +1,192 @@
+{
+  "caslib_count": 102,
+  "cancer_counts": {
+    "Breast": 17,
+    "Colorec": 16,
+    "Gastric": 4,
+    "Glioma": 2,
+    "HeadNe": 4,
+    "Kidney": 1,
+    "Liver": 1,
+    "LungNo": 9,
+    "LungSm": 6,
+    "Lymphom": 1,
+    "Melanom": 1,
+    "Multiple": 6,
+    "Myelody": 1,
+    "Pancrea": 6,
+    "Prostat": 19
+  },
+  "probed_files": {
+    "PDSSamples": [
+      {
+        "file": "DC_CORE_TABLE_PR.sashdat",
+        "size": 3140056
+      },
+      {
+        "file": "DC_CORE_TABLE.sashdat",
+        "size": 3175664
+      },
+      {
+        "file": "recent_user_activity_records.sashdat",
+        "size": 271616
+      }
+    ],
+    "PDSInfo": [
+      {
+        "file": "caslib_info.sas7bdat",
+        "size": 1187840
+      }
+    ],
+    "LungSm_G1Thera_2015_433": [
+      {
+        "file": "Data descriptors for SCLC 01.xlsx",
+        "size": 33446
+      },
+      {
+        "file": "Descriptive_Stats_G1T_NCT02499770.xlsx",
+        "size": 83404
+      },
+      {
+        "file": "adae.sas7bdat",
+        "size": 573440
+      },
+      {
+        "file": "adcm.sas7bdat",
+        "size": 1662976
+      },
+      {
+        "file": "addv.sas7bdat",
+        "size": 131072
+      },
+      {
+        "file": "adeg.sas7bdat",
+        "size": 516096
+      },
+      {
+        "file": "adex.sas7bdat",
+        "size": 851968
+      },
+      {
+        "file": "adex2.sas7bdat",
+        "size": 524288
+      },
+      {
+        "file": "adlb.sas7bdat",
+        "size": 28561408
+      },
+      {
+        "file": "admh.sas7bdat",
+        "size": 466944
+      },
+      {
+        "file": "adpr.sas7bdat",
+        "size": 327680
+      },
+      {
+        "file": "adqs.sas7bdat",
+        "size": 368640
+      },
+      {
+        "file": "adrs.sas7bdat",
+        "size": 1572864
+      },
+      {
+        "file": "adsl.sas7bdat",
+        "size": 155648
+      },
+      {
+        "file": "adtr.sas7bdat",
+        "size": 4902912
+      },
+      {
+        "file": "adtr2.sas7bdat",
+        "size": 278528
+      },
+      {
+        "file": "adtte.sas7bdat",
+        "size": 196608
+      },
+      {
+        "file": "advs.sas7bdat",
+        "size": 5234688
+      }
+    ],
+    "Pancrea_ClovisO_2010_186": [
+      {
+        "file": "dataFiles_1118",
+        "size": 4096
+      },
+      {
+        "file": "adae.sas7bdat",
+        "size": 5406720
+      },
+      {
+        "file": "adcm.sas7bdat",
+        "size": 8740864
+      },
+      {
+        "file": "addur.sas7bdat",
+        "size": 131072
+      },
+      {
+        "file": "adef.sas7bdat",
+        "size": 851968
+      },
+      {
+        "file": "adeg.sas7bdat",
+        "size": 48955392
+      },
+      {
+        "file": "adex.sas7bdat",
+        "size": 3538944
+      },
+      {
+        "file": "adie.sas7bdat",
+        "size": 131072
+      },
+      {
+        "file": "adlb.sas7bdat",
+        "size": 122486784
+      },
+      {
+        "file": "admh.sas7bdat",
+        "size": 2097152
+      },
+      {
+        "file": "ador.sas7bdat",
+        "size": 458752
+      },
+      {
+        "file": "adpf.sas7bdat",
+        "size": 327680
+      },
+      {
+        "file": "adqs.sas7bdat",
+        "size": 22151168
+      },
+      {
+        "file": "adsl.sas7bdat",
+        "size": 589824
+      },
+      {
+        "file": "adsv.sas7bdat",
+        "size": 12386304
+      },
+      {
+        "file": "advs.sas7bdat",
+        "size": 24772608
+      }
+    ],
+    "Prostat_AstraZe_2009_144": [
+      {
+        "file": "dataFiles_835",
+        "size": 8192
+      },
+      {
+        "file": "De indentification RDB standards STUDY14.xlsx",
+        "size": 664771
+      }
+    ]
+  }
+}

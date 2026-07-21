@@ -1,0 +1,29 @@
+{
+  "id": "file:synapse:syn39607857",
+  "type": "FileArtifact",
+  "name": "cna.tsv",
+  "source_receipts": [
+    {
+      "source": "Synapse metadata",
+      "syn_id": "syn39607857"
+    }
+  ],
+  "verbatim_evidence": [
+    "cna.tsv: copy-number alterations table; dataFileHandleId 107899554"
+  ],
+  "cross_refs": {
+    "synapse_id": "syn39607857",
+    "filename": "cna.tsv"
+  },
+  "attributes": {
+    "source_vault": "Synapse",
+    "filename": "cna.tsv",
+    "content": "copy-number alterations table",
+    "dataFileHandleId": 107899554,
+    "download_status": "READY_ON_TOKEN",
+    "gap_target": "GAP-MSK-ESCAPE-N39"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

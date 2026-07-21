@@ -1,0 +1,41 @@
+{
+  "generated": "2026-07-21T01:01:15Z",
+  "scope": "All Zeta Vault artifacts (KG, index, workers, fetch, gap-map)",
+  "checks": {
+    "ruo_contamination": {
+      "status": "PASS",
+      "method": "word-boundary regex (fixed substring-in-UUID/MD5 false positives)",
+      "unguarded_clinical_claims": [],
+      "note": "70 prior 'FDA' hits were substrings inside UUIDs/MD5 hashes (bfda/5fda/31fda) - not real claims. With word boundaries: 0 genuine contamination."
+    },
+    "tier_preservation": {
+      "status": "PASS",
+      "detail": {
+        "gene_universe_tiers": {
+          "VALIDATED": 12,
+          "LITERATURE_ONLY": 9,
+          "HEURISTIC": 1,
+          "LOGIT_MODEL_ONLY": 3
+        },
+        "mfap4_status": "UNREPRODUCIBLE - NOT falsely closed",
+        "logit_status": "PENDING_REAL_DATA / simulation-derived - preserved",
+        "verbatim_source": "CrisPRO production-readiness report 2025-07-14",
+        "mfap4_closes_gap_field": "NO - out of Zeta scope; flagged to prevent false closure"
+      }
+    },
+    "no_fabrication": {
+      "status": "PASS",
+      "temporal_marker_null_count": "797/797 (honestly null - no clinical map to derive day-from-diagnosis)",
+      "real_bam_downloaded": "1 (EGAF00008095569, MD5-verified)",
+      "htsget_empty_file": "deleted (500 server error - not passed off as data)",
+      "silhouette": "computed on REAL embeddings of REAL manifest entities"
+    },
+    "collection_separation": {
+      "status": "PASS",
+      "crispro_kb_v3_points": 1418,
+      "zeta_vault_points": 797,
+      "note": "zeta_vault is a SEPARATE collection; v3 untouched at 1418."
+    }
+  },
+  "overall_status": "PASS"
+}

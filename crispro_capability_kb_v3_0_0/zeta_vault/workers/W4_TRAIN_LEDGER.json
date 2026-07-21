@@ -1,0 +1,108 @@
+{
+  "worker": "W4_TRAIN_LEDGER",
+  "timestamp": "2026-07-21T00:52:23Z",
+  "total_vectors": 20,
+  "avg_silhouette_score": 0.3212,
+  "patientid_keyword_port_verification": "N/A (value-provenance ledger layer)",
+  "findings": {
+    "ledger": [
+      {
+        "component": "BriTROC Sig7 threshold=0.25",
+        "current": "HARDCODED (constants.py:29)",
+        "tier": "HEURISTIC",
+        "zeta_train_source": "EGA BriTROC-1 679 BAMs",
+        "action": "TRAIN threshold on real Sig exposures + outcomes",
+        "status": "PARTIAL - raw data available, needs HPC + external clinical map",
+        "gap": "GAP-SIG7-BRITROC"
+      },
+      {
+        "component": "Logit model coefficients",
+        "current": "SIMULATION-DERIVED (Colomban 2023 anchor)",
+        "tier": "PENDING_REAL_DATA",
+        "zeta_train_source": "EGA+SAS+MSK outcomes",
+        "action": "Re-fit logit on real patient outcomes",
+        "status": "BLOCKED - needs downloaded bytes + labels",
+        "gap": "multiple"
+      },
+      {
+        "component": "KELIM convergence betas",
+        "current": "N=500 SIMULATED (MC seed 42)",
+        "tier": "SIMULATION_ONLY",
+        "zeta_train_source": "SAS PDS serial CA-125 kinetics",
+        "action": "TRAIN on real serial-marker series",
+        "status": "PARTIAL - SAS feasible, needs ovarian/serial-CA125 trial located",
+        "gap": "GAP-KELIM-SIM"
+      },
+      {
+        "component": "23-gene DDR proxy panel",
+        "current": "AUROC 0.495 RANDOM on TCGA-OV",
+        "tier": "RANDOM",
+        "zeta_train_source": "EGA BriTROC + Synapse MSK maf/cna",
+        "action": "VALIDATE/refute on orthogonal genomic cohort",
+        "status": "PARTIAL - cohorts identified, access blockers",
+        "gap": "GAP-23GENE-PROXY"
+      },
+      {
+        "component": "MFAP4 AUROC=0.763",
+        "current": "UNREPRODUCIBLE (GSE63885 annotations stripped)",
+        "tier": "UNREPRODUCIBLE",
+        "zeta_train_source": "NONE (external GEO)",
+        "action": "NOT addressable by Zeta",
+        "status": "NO - out of scope, flagged to prevent false closure",
+        "gap": "GAP-MFAP4-UNREPRODUCIBLE"
+      },
+      {
+        "component": "MSK Spectrum escape n=39 (n_escape=0)",
+        "current": "STRIPPED backend stub",
+        "tier": "STRIPPED",
+        "zeta_train_source": "Synapse MSK WGS cna/maf/seg",
+        "action": "RESTORE escape-pair features",
+        "status": "READY_ON_TOKEN - exact files identified",
+        "gap": "GAP-MSK-ESCAPE-N39"
+      },
+      {
+        "component": "ctDNA -> Prophet wiring",
+        "current": "NOT_WIRED_INTO_PROPHET",
+        "tier": "NOT_WIRED",
+        "zeta_train_source": "Synapse MSK plasma (if present)",
+        "action": "Verify modality + wire MRD signal",
+        "status": "UNKNOWN - pending valid token",
+        "gap": "GAP-CTDNA-NOTWIRED"
+      },
+      {
+        "component": "SAE leakage (0.783->0.478 nested-CV)",
+        "current": "LEAKAGE_FLAGGED",
+        "tier": "LEAKAGE_FLAGGED",
+        "zeta_train_source": "SAS PDS labs/AE (adlb/adae)",
+        "action": "External leakage stress-test",
+        "status": "PARTIAL - does NOT restore stripped Tier3",
+        "gap": "GAP-SAE-LEAKAGE"
+      },
+      {
+        "component": "MBD4 tier",
+        "current": "HEURISTIC (Zeta_Protocol_Inference)",
+        "tier": "HEURISTIC",
+        "zeta_train_source": "EGA/SAS outcomes",
+        "action": "Ground heuristic in real cohort or keep labeled",
+        "status": "PARTIAL",
+        "gap": "none-direct"
+      }
+    ],
+    "n_hardcoded_or_simulated": 9,
+    "status_breakdown": {
+      "PARTIAL": 5,
+      "BLOCKED": 1,
+      "NO": 1,
+      "READY_ON_TOKEN": 1,
+      "UNKNOWN": 1
+    },
+    "trainable_partial": 5,
+    "ready_on_token": [
+      "MSK Spectrum escape n=39 (n_escape=0)"
+    ],
+    "not_addressable": [
+      "MFAP4 AUROC=0.763"
+    ],
+    "honest_summary": "9 hardcoded/simulated/stripped values ledgered. 0 fully closable in-sandbox now (all need downloaded bytes+labels or valid token). 1 READY_ON_TOKEN, 1 NOT addressable (MFAP4)."
+  }
+}

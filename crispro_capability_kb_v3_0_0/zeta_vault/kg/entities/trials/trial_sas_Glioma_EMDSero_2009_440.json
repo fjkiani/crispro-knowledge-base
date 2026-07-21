@@ -1,0 +1,34 @@
+{
+  "id": "trial:sas:Glioma_EMDSero_2009_440",
+  "type": "Trial",
+  "name": "Glioma trial EMDSero 2009 (440)",
+  "source_receipts": [
+    {
+      "source": "SAS CAS fileinfo",
+      "caslib": "Glioma_EMDSero_2009_440",
+      "n_files": 1
+    }
+  ],
+  "verbatim_evidence": [
+    "CDISC ADaM caslib Glioma_EMDSero_2009_440: 1 source files",
+    "API-created caslib",
+    "table list unavailable"
+  ],
+  "cross_refs": {
+    "caslib": "Glioma_EMDSero_2009_440"
+  },
+  "attributes": {
+    "source_vault": "PDS_ProjectDataSphere",
+    "cancer_type": "Glioma",
+    "sponsor": "EMDSero",
+    "year": "2009",
+    "trial_id": "440",
+    "n_files": 1,
+    "total_bytes": 81077,
+    "adam_tables": [],
+    "biological_relevance": "Glioma clinical telemetry (labs/AE/dosing/serial markers)"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

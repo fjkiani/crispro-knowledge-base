@@ -1,0 +1,136 @@
+{
+  "worker": "W1_PROPHET",
+  "timestamp": "2026-07-21T00:51:08Z",
+  "total_vectors": 20,
+  "avg_silhouette_score": 0.3212,
+  "patientid_keyword_port_verification": "N/A (gene-tier mapping layer; no per-patient vectors in scope)",
+  "findings": {
+    "gene_universe_size": 25,
+    "tier_distribution": {
+      "VALIDATED": 12,
+      "LITERATURE_ONLY": 9,
+      "HEURISTIC": 1,
+      "LOGIT_MODEL_ONLY": 3
+    },
+    "genes_with_zeta_route": 11,
+    "genes_not_addressable_by_zeta": [
+      "MFAP4"
+    ],
+    "genes_no_route_literature_only": [
+      "PALB2",
+      "TP53BP1",
+      "SHLD1",
+      "SHLD2",
+      "MAD2L2",
+      "PTEN",
+      "KEAP1",
+      "CUL3",
+      "SLC31A1",
+      "ABCB1",
+      "B2M",
+      "SLFN11",
+      "MBD4"
+    ],
+    "gene_to_zeta_routes": {
+      "BRCA1": [
+        [
+          "EGA BriTROC-1 WGS",
+          "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
+        ]
+      ],
+      "BRCA2": [
+        [
+          "EGA BriTROC-1 WGS",
+          "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
+        ]
+      ],
+      "RAD51C": [
+        [
+          "EGA BriTROC-1 WGS",
+          "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
+        ]
+      ],
+      "RAD51D": [
+        [
+          "EGA BriTROC-1 WGS",
+          "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
+        ]
+      ],
+      "PALB2": [],
+      "TP53BP1": [],
+      "SHLD1": [],
+      "SHLD2": [],
+      "MAD2L2": [],
+      "CCNE1": [
+        [
+          "EGA BriTROC-1 WGS",
+          "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
+        ],
+        [
+          "Synapse cna.tsv/segments.seg",
+          "CCNE1 CNA amplification -> TF2-SLOP-004"
+        ]
+      ],
+      "CDK12": [
+        [
+          "Synapse MSK WGS (cna/maf/seg)",
+          "expand n beyond 39 -> GAP-MSK-ESCAPE-N39"
+        ],
+        [
+          "EGA BriTROC-1 WGS",
+          "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
+        ]
+      ],
+      "PTEN": [],
+      "KEAP1": [],
+      "CUL3": [],
+      "SLC31A1": [],
+      "RB1": [
+        [
+          "Synapse MSK WGS (cna/maf/seg)",
+          "expand n beyond 39 -> GAP-MSK-ESCAPE-N39"
+        ],
+        [
+          "EGA BriTROC-1 WGS",
+          "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
+        ]
+      ],
+      "ABCB1": [],
+      "B2M": [],
+      "SLFN11": [],
+      "MBD4": [],
+      "NF1": [
+        [
+          "EGA BriTROC-1 WGS",
+          "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
+        ]
+      ],
+      "MFAP4": [
+        [
+          "NONE (GSE63885 external GEO)",
+          "GAP-MFAP4-UNREPRODUCIBLE - NOT addressable by Zeta"
+        ]
+      ],
+      "BRAF": [
+        [
+          "SAS PDS outcomes / EGA+MSK",
+          "replace simulation-derived logit coeffs with real outcome fit"
+        ]
+      ],
+      "KRAS": [
+        [
+          "SAS PDS outcomes / EGA+MSK",
+          "replace simulation-derived logit coeffs with real outcome fit"
+        ]
+      ],
+      "NRAS": [
+        [
+          "SAS PDS outcomes / EGA+MSK",
+          "replace simulation-derived logit coeffs with real outcome fit"
+        ]
+      ]
+    },
+    "heuristic_flag": "MBD4 tier=HEURISTIC (Zeta_Protocol_Inference, no external validation) - candidate for SAS/EGA outcome grounding",
+    "prophet_note": "Prophet logit coefficients PENDING_REAL_DATA (simulation-derived, anchored Colomban 2023). Zeta EGA+SAS outcomes are the real-data path."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "vault:ega_britroc1",
+  "type": "DataVault",
+  "name": "EGA BriTROC-1 WGS Vault",
+  "source_receipts": [
+    {
+      "source": "EGA API",
+      "accession": "EGAD00001011049",
+      "retrieved": "2026-07-21T00:42:06Z",
+      "n_files": 679
+    }
+  ],
+  "verbatim_evidence": [
+    "679 WGS BAM files, 510,797,964,805 bytes (510.8 GB), 679 unique MD5s",
+    "Authenticated download verified: EGAF00008095569 JBLAB-4261.bam MD5 714c3c7583eb6deb60b7a10e5120436a",
+    "Measured throughput 1.1 MB/s (non-Europe); BAM-only, no clinical/metadata file in dataset"
+  ],
+  "cross_refs": {
+    "ega_dataset": "EGAD00001011049",
+    "study": "BriTROC-1"
+  },
+  "attributes": {
+    "source_vault": "EGA",
+    "access": "AUTHENTICATED_OK",
+    "download": "WORKING_SLOW",
+    "n_files": 679,
+    "total_bytes": 510797964805,
+    "total_gb": 510.8,
+    "file_type": "BAM_ONLY",
+    "clinical_map_present": false,
+    "clinical_map_location": "BriTROC-1 publication supplement / separate accession",
+    "biological_relevance": "platinum sensitive/resistant HGSOC; mutational Sig7; CN breakpoints",
+    "specimen_namespaces": {
+      "JBLAB": 292,
+      "IM": 387
+    },
+    "n_specimens": 679
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

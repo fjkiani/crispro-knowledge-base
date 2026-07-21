@@ -1,0 +1,34 @@
+{
+  "id": "trial:sas:Formats",
+  "type": "DataResource",
+  "name": "SAS resource caslib Formats",
+  "source_receipts": [
+    {
+      "source": "SAS CAS fileinfo",
+      "caslib": "Formats",
+      "n_files": 1
+    }
+  ],
+  "verbatim_evidence": [
+    "CDISC ADaM caslib Formats: 1 source files",
+    "Stores user defined formats.",
+    "table list unavailable"
+  ],
+  "cross_refs": {
+    "caslib": "Formats"
+  },
+  "attributes": {
+    "source_vault": "PDS_ProjectDataSphere",
+    "sponsor": "Unknown",
+    "year": "Unknown",
+    "trial_id": "Formats",
+    "n_files": 1,
+    "total_bytes": 64680,
+    "adam_tables": [],
+    "biological_relevance": "Formats clinical telemetry (labs/AE/dosing/serial markers)",
+    "resource_kind": "sas_infrastructure_caslib"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

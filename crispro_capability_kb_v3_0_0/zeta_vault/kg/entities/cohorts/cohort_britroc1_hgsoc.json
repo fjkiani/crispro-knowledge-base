@@ -1,0 +1,36 @@
+{
+  "id": "cohort:britroc1_hgsoc",
+  "type": "PatientCohort",
+  "name": "BriTROC-1 HGSOC Cohort",
+  "source_receipts": [
+    {
+      "source": "EGA manifest",
+      "accession": "EGAD00001011049",
+      "n_files": 679
+    }
+  ],
+  "verbatim_evidence": [
+    "679 WGS BAM specimens: 292 JBLAB-prefixed + 387 IM-prefixed",
+    "Platinum-sensitive/resistant high-grade serous ovarian cancer (HGSOC)",
+    "Clinical outcome labels (PFI/platinum status) NOT in EGA dataset - external supplement required"
+  ],
+  "cross_refs": {
+    "ega_dataset": "EGAD00001011049",
+    "study": "BriTROC-1",
+    "disease": "HGSOC"
+  },
+  "attributes": {
+    "disease": "high-grade serous ovarian cancer",
+    "assay": "WGS (aligned BAM)",
+    "n_specimens": 679,
+    "n_jblab": 292,
+    "n_im": 387,
+    "namespace_note": "JBLAB and IM are distinct specimen ID namespaces; each BAM = 1 unique specimen/MD5",
+    "labels_available": false,
+    "label_source": "BriTROC-1 publication supplement (external)",
+    "role": "TRAIN+VALIDATE for Sig7 / CN-breakpoint models"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

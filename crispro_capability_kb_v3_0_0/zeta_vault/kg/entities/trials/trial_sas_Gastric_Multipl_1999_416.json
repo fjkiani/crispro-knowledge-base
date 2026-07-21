@@ -1,0 +1,34 @@
+{
+  "id": "trial:sas:Gastric_Multipl_1999_416",
+  "type": "Trial",
+  "name": "Gastric trial Multipl 1999 (416)",
+  "source_receipts": [
+    {
+      "source": "SAS CAS fileinfo",
+      "caslib": "Gastric_Multipl_1999_416",
+      "n_files": 3
+    }
+  ],
+  "verbatim_evidence": [
+    "CDISC ADaM caslib Gastric_Multipl_1999_416: 3 source files",
+    "API-created caslib",
+    "table list unavailable"
+  ],
+  "cross_refs": {
+    "caslib": "Gastric_Multipl_1999_416"
+  },
+  "attributes": {
+    "source_vault": "PDS_ProjectDataSphere",
+    "cancer_type": "Gastric",
+    "sponsor": "Multipl",
+    "year": "1999",
+    "trial_id": "416",
+    "n_files": 3,
+    "total_bytes": 225487,
+    "adam_tables": [],
+    "biological_relevance": "Gastric clinical telemetry (labs/AE/dosing/serial markers)"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

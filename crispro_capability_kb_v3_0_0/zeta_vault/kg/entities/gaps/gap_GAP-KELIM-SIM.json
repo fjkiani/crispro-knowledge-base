@@ -1,0 +1,32 @@
+{
+  "id": "gap:GAP-KELIM-SIM",
+  "type": "KBGap",
+  "name": "GAP-KELIM-SIM",
+  "source_receipts": [
+    {
+      "source": "GAP_MAP.json",
+      "gap_id": "GAP-KELIM-SIM",
+      "method": "KB-audit vs Zeta mapping"
+    }
+  ],
+  "verbatim_evidence": [
+    "KB claim: KELIM convergence model trained on N=500 SIMULATED (MC seed 42), 0 real patients; Model4 AUROC 0.828 but uplift +0.000 vs additive, -0.002 vs KELIM-only. Coeffs kelim_k=-3.2202 etc = sim, not fit",
+    "Current tier: SIMULATION_ONLY (no real patients)",
+    "Zeta dataset: SAS PDS trials with serial CA-125 / tumor-marker kinetics (ador/adef/adlb series) \u2014 analog to KELIM value path"
+  ],
+  "cross_refs": {
+    "gap_id": "GAP-KELIM-SIM"
+  },
+  "attributes": {
+    "current_tier": "SIMULATION_ONLY (no real patients)",
+    "role": "TRAIN (real serial-marker kinetics to replace simulated betas)",
+    "how": "PDS longitudinal marker series enable real KELIM-style kinetic modeling with actual outcomes, replacing the MC-seeded convergence betas. Only if a trial has CA-125-equivalent serial markers + platinum-type outcome.",
+    "blocker": "PDS is pan-cancer; need to locate ovarian/serial-CA125 trial. KELIM value path (Lyon API) already works; this targets the SIM convergence betas only.",
+    "closes_gap": "PARTIAL - real serial-marker training feasible if matching trial identified",
+    "zeta_dataset": "SAS PDS trials with serial CA-125 / tumor-marker kinetics (ador/adef/adlb series) \u2014 analog to KELIM value path",
+    "kb_claim": "KELIM convergence model trained on N=500 SIMULATED (MC seed 42), 0 real patients; Model4 AUROC 0.828 but uplift +0.000 vs additive, -0.002 vs KELIM-only. Coeffs kelim_k=-3.2202 etc = sim, not fit"
+  },
+  "_stream": "zeta_gapmap",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

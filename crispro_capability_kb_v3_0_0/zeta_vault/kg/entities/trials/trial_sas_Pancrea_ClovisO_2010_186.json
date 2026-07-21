@@ -1,0 +1,34 @@
+{
+  "id": "trial:sas:Pancrea_ClovisO_2010_186",
+  "type": "Trial",
+  "name": "Pancrea trial ClovisO 2010 (186)",
+  "source_receipts": [
+    {
+      "source": "SAS CAS fileinfo",
+      "caslib": "Pancrea_ClovisO_2010_186",
+      "n_files": 16
+    }
+  ],
+  "verbatim_evidence": [
+    "CDISC ADaM caslib Pancrea_ClovisO_2010_186: 16 source files",
+    "API-created caslib",
+    "table list unavailable"
+  ],
+  "cross_refs": {
+    "caslib": "Pancrea_ClovisO_2010_186"
+  },
+  "attributes": {
+    "source_vault": "PDS_ProjectDataSphere",
+    "cancer_type": "Pancrea",
+    "sponsor": "ClovisO",
+    "year": "2010",
+    "trial_id": "186",
+    "n_files": 16,
+    "total_bytes": 253030400,
+    "adam_tables": [],
+    "biological_relevance": "Pancrea clinical telemetry (labs/AE/dosing/serial markers)"
+  },
+  "_stream": "zeta_ingest",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

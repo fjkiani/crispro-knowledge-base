@@ -1,0 +1,98 @@
+{
+  "worker": "W5_PRODUCTION_REFINEMENT",
+  "timestamp": "2026-07-21T00:52:49Z",
+  "total_vectors": 797,
+  "avg_silhouette_score": 0.6579,
+  "patientid_keyword_port_verification": "679/679 specimen ports live for downstream per-patient training",
+  "findings": {
+    "refinement_plan": [
+      {
+        "priority": "P0",
+        "action": "Obtain valid Synapse token",
+        "unblocks": [
+          "GAP-MSK-ESCAPE-N39 (READY_ON_TOKEN)",
+          "GAP-CTDNA-NOTWIRED verification",
+          "GAP-23GENE-PROXY MSK arm"
+        ],
+        "effort": "external (user provides token)",
+        "feasible_in_sandbox": "YES once token valid (cna/maf/seg are small)",
+        "outcome": "Restore MSK escape-pair features (n=39->real); verify ctDNA modality"
+      },
+      {
+        "priority": "P0",
+        "action": "Download + parse SAS PDS (4.0GB, AUTH OK)",
+        "unblocks": [
+          "GAP-SAE-LEAKAGE stress-test",
+          "GAP-KELIM-SIM real serial markers"
+        ],
+        "effort": "~1-2h in-sandbox (4GB @ available speed)",
+        "feasible_in_sandbox": "YES",
+        "outcome": "Real serial CA-125 kinetics + labs/AE leakage replication"
+      },
+      {
+        "priority": "P1",
+        "action": "Fix code bugs (no data needed)",
+        "unblocks": [
+          "RES-OV-P0-009 KELIM dead code (kelim->k)",
+          "TF2-SLOP-004 CCNE1 CNA path",
+          "v3 T2/T12 test fixes"
+        ],
+        "effort": "code-only",
+        "feasible_in_sandbox": "YES (in backend repo, not this KB repo)",
+        "outcome": "Signal 6 fires; CCNE1 CNA detected; v3 production-eligible"
+      },
+      {
+        "priority": "P1",
+        "action": "EGA BriTROC Sig7 extraction",
+        "unblocks": [
+          "GAP-SIG7-BRITROC",
+          "GAP-23GENE-PROXY BriTROC arm"
+        ],
+        "effort": "HPC + Europe VM (1.8-5.3 days DL) OR htsget range-slice for targeted regions",
+        "feasible_in_sandbox": "NO (full) / PARTIAL (htsget slice)",
+        "outcome": "Real Sig7 threshold replacing hardcoded 0.25 - needs external clinical map for labels"
+      },
+      {
+        "priority": "P2",
+        "action": "ctDNA -> Prophet logit wiring",
+        "unblocks": [
+          "RES-OV-P0-006"
+        ],
+        "effort": "code + calibration cohort",
+        "feasible_in_sandbox": "conditional on Synapse plasma modality",
+        "outcome": "ctDNA HIGH raises Prophet probability (currently NOT_WIRED)"
+      },
+      {
+        "priority": "P3",
+        "action": "Re-fit logit coefficients on real outcomes",
+        "unblocks": [
+          "PENDING_REAL_DATA calibration"
+        ],
+        "effort": "requires assembled multi-cohort outcome table",
+        "feasible_in_sandbox": "NO (depends on P0/P1 data)",
+        "outcome": "Replace simulation-derived coeffs; clinical calibration"
+      },
+      {
+        "priority": "NEVER_WITHOUT_DATA",
+        "action": "MFAP4 0.763 restore",
+        "unblocks": [],
+        "effort": "requires GEO GSE63885 annotation restore",
+        "feasible_in_sandbox": "NO - out of Zeta scope",
+        "outcome": "Remains UNREPRODUCIBLE - flagged, not falsely closed"
+      }
+    ],
+    "production_gates": {
+      "cleared_for_patient_facing": "NO",
+      "reasons": [
+        "Logit coeffs simulation-derived (PENDING_REAL_DATA)",
+        "5 genes LITERATURE_ONLY (no OV cohort metric)",
+        "KELIM Signal 6 dead code (RES-OV-P0-009)",
+        "ctDNA NOT_WIRED_INTO_PROPHET (RES-OV-P0-006)",
+        "v3 T2/T12 pre-existing test failures"
+      ],
+      "zeta_contribution": "Zeta provides REAL-DATA training/validation paths for Sig7, KELIM, escape-pairs, DDR panel, SAE-leakage \u2014 but NONE closes in-sandbox today without token/HPC/labels.",
+      "ruo_contamination_check": "PASS - no RUO claims elevated to clinical; all tiers preserved verbatim; MFAP4 not falsely closed."
+    },
+    "sequencing": "P0(token+SAS) -> P1(code fixes+EGA slice) -> P2(ctDNA wire) -> P3(logit refit). MFAP4 never closable via Zeta."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "gap:GAP-SIG7-BRITROC",
+  "type": "KBGap",
+  "name": "GAP-SIG7-BRITROC",
+  "source_receipts": [
+    {
+      "source": "GAP_MAP.json",
+      "gap_id": "GAP-SIG7-BRITROC",
+      "method": "KB-audit vs Zeta mapping"
+    }
+  ],
+  "verbatim_evidence": [
+    "KB claim: BriTROC Sig7 platinum-resistance threshold=0.25 (constants.py:29); BRITROC_MASTER.csv 273pts on-disk but UNUSED at runtime; hardcoded midpoint heuristic",
+    "Current tier: HEURISTIC (threshold not fit to data)",
+    "Zeta dataset: EGA EGAD00001011049 (BriTROC-1) \u2014 679 BAMs / 292 patients / 510.8GB"
+  ],
+  "cross_refs": {
+    "gap_id": "GAP-SIG7-BRITROC"
+  },
+  "attributes": {
+    "current_tier": "HEURISTIC (threshold not fit to data)",
+    "role": "TRAIN + VALIDATE",
+    "how": "Extract SBS mutational signatures (incl. Sig7/HRD-associated) from tumor BAMs; derive per-patient Sig exposures; fit platinum sensitive/resistant classifier; nested-CV. Replaces hardcoded 0.25 with a data-derived, cross-validated threshold + CI.",
+    "blocker": "Full BAM processing = HPC + Europe VM (measured 1.1MB/s here -> 1.8-5.3 days DL alone). Clinical labels (PFI/platinum status) require BriTROC-1 supplement mapping BAM->patient->outcome (NOT in EGA dataset).",
+    "closes_gap": "PARTIAL - infrastructure + raw data available; needs HPC run + external clinical map",
+    "zeta_dataset": "EGA EGAD00001011049 (BriTROC-1) \u2014 679 BAMs / 292 patients / 510.8GB",
+    "kb_claim": "BriTROC Sig7 platinum-resistance threshold=0.25 (constants.py:29); BRITROC_MASTER.csv 273pts on-disk but UNUSED at runtime; hardcoded midpoint heuristic"
+  },
+  "_stream": "zeta_gapmap",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T00:42:06Z"
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "source": "file:synapse:syn39607857",
+    "relation": "part_of",
+    "target": "dataset:synapse:syn33521770",
+    "source_receipts": [
+      {
+        "source": "Synapse metadata",
+        "syn_id": "syn39607857"
+      }
+    ],
+    "attributes": {},
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "source": "file:synapse:syn39607858",
+    "relation": "part_of",
+    "target": "dataset:synapse:syn33521770",
+    "source_receipts": [
+      {
+        "source": "Synapse metadata",
+        "syn_id": "syn39607858"
+      }
+    ],
+    "attributes": {},
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "source": "file:synapse:syn39607860",
+    "relation": "part_of",
+    "target": "dataset:synapse:syn33521770",
+    "source_receipts": [
+      {
+        "source": "Synapse metadata",
+        "syn_id": "syn39607860"
+      }
+    ],
+    "attributes": {},
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  }
+]

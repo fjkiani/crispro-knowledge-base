@@ -1,0 +1,2756 @@
+{
+  "Breast_Allianc_2002_194": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "aeclean_finala.sas7bdat",
+        "size": 524288
+      },
+      {
+        "file": "eval46_3_finala.sas7bdat",
+        "size": 720896
+      }
+    ]
+  },
+  "Breast_Allianc_2002_200": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "aeclean_finalb.sas7bdat",
+        "size": 655360
+      },
+      {
+        "file": "all_finalb.sas7bdat",
+        "size": 786432
+      }
+    ]
+  },
+  "Breast_Allianc_2006_216": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "NCT00265759.csv",
+        "size": 48437
+      }
+    ]
+  },
+  "Breast_Allianc_2008_158": {
+    "description": "API-created caslib",
+    "n_files": 3,
+    "files": [
+      {
+        "file": "c40502_ae.csv",
+        "size": 758061
+      },
+      {
+        "file": "c40502_cycles.csv",
+        "size": 36050
+      },
+      {
+        "file": "c40502_efficacy.csv",
+        "size": 29229
+      }
+    ]
+  },
+  "Breast_Allianc_2009_162": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "aeclean.csv",
+        "size": 1508069
+      },
+      {
+        "file": "treated2.csv",
+        "size": 60649
+      }
+    ]
+  },
+  "Breast_Amgen_2004_153": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_896",
+        "size": 4096
+      }
+    ]
+  },
+  "Breast_AmgenI_2006_122": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_720",
+        "size": 4096
+      }
+    ]
+  },
+  "Breast_Celgene_2001_107": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "PDS_Data_Profile_Created_107.xlsx",
+        "size": 62480
+      }
+    ]
+  },
+  "Breast_EliLill_2008_168": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_1003",
+        "size": 4096
+      }
+    ]
+  },
+  "Breast_Multipl_2004_414": {
+    "description": "API-created caslib",
+    "n_files": 3,
+    "files": [
+      {
+        "file": "Dataset Contents and Variable Crosswalk.xlsx",
+        "size": 15394
+      },
+      {
+        "file": "Descriptive_Stats_Linked_Breast_SanofiU_2004_135.xlsx",
+        "size": 13865
+      },
+      {
+        "file": "linked_breast135.sas7bdat",
+        "size": 3145728
+      }
+    ]
+  },
+  "Breast_Pfizer_2006_111": {
+    "description": "API-created caslib",
+    "n_files": 22,
+    "files": [
+      {
+        "file": "A6181107_SPECS.xlsx",
+        "size": 17729
+      },
+      {
+        "file": "adverse.sas7bdat",
+        "size": 2629632
+      },
+      {
+        "file": "cd_b_p.sas7bdat",
+        "size": 1040384
+      },
+      {
+        "file": "cn_6_p.sas7bdat",
+        "size": 212992
+      },
+      {
+        "file": "cn_7_p.sas7bdat",
+        "size": 335872
+      },
+      {
+        "file": "cn_8_p.sas7bdat",
+        "size": 106496
+      },
+      {
+        "file": "condrug.sas7bdat",
+        "size": 1335296
+      },
+      {
+        "file": "contrt.sas7bdat",
+        "size": 172032
+      },
+      {
+        "file": "demog.sas7bdat",
+        "size": 73728
+      },
+      {
+        "file": "ecg.sas7bdat",
+        "size": 499712
+      },
+      {
+        "file": "final.sas7bdat",
+        "size": 131072
+      },
+      {
+        "file": "iota_p.sas7bdat",
+        "size": 172032
+      },
+      {
+        "file": "lab_safe.sas7bdat",
+        "size": 33226752
+      },
+      {
+        "file": "pfm_p.sas7bdat",
+        "size": 163840
+      },
+      {
+        "file": "phyexam.sas7bdat",
+        "size": 4136960
+      },
+      {
+        "file": "prevdis.sas7bdat",
+        "size": 548864
+      },
+      {
+        "file": "primdiag.sas7bdat",
+        "size": 57344
+      },
+      {
+        "file": "random.sas7bdat",
+        "size": 24576
+      },
+      {
+        "file": "srv_p.sas7bdat",
+        "size": 663552
+      },
+      {
+        "file": "testdrug.sas7bdat",
+        "size": 794624
+      },
+      {
+        "file": "tmm_p.sas7bdat",
+        "size": 1630208
+      },
+      {
+        "file": "vitals.sas7bdat",
+        "size": 1581056
+      }
+    ]
+  },
+  "Breast_Pfizer_2006_112": {
+    "description": "API-created caslib",
+    "n_files": 21,
+    "files": [
+      {
+        "file": "A6181094_SPECS.xlsx",
+        "size": 17334
+      },
+      {
+        "file": "adverse.sas7bdat",
+        "size": 6889472
+      },
+      {
+        "file": "cd_b_p.sas7bdat",
+        "size": 696320
+      },
+      {
+        "file": "cn_6_p.sas7bdat",
+        "size": 212992
+      },
+      {
+        "file": "cn_7_p.sas7bdat",
+        "size": 401408
+      },
+      {
+        "file": "cn_8_p.sas7bdat",
+        "size": 106496
+      },
+      {
+        "file": "condrug.sas7bdat",
+        "size": 13475840
+      },
+      {
+        "file": "contrt.sas7bdat",
+        "size": 303104
+      },
+      {
+        "file": "demog.sas7bdat",
+        "size": 73728
+      },
+      {
+        "file": "ecg.sas7bdat",
+        "size": 1933312
+      },
+      {
+        "file": "final.sas7bdat",
+        "size": 548864
+      },
+      {
+        "file": "iota_p.sas7bdat",
+        "size": 286720
+      },
+      {
+        "file": "lab_safe.sas7bdat",
+        "size": 80494592
+      },
+      {
+        "file": "pfm_p.sas7bdat",
+        "size": 253952
+      },
+      {
+        "file": "phyexam.sas7bdat",
+        "size": 5283840
+      },
+      {
+        "file": "prevdis.sas7bdat",
+        "size": 1040384
+      },
+      {
+        "file": "primdiag.sas7bdat",
+        "size": 57344
+      },
+      {
+        "file": "random.sas7bdat",
+        "size": 24576
+      },
+      {
+        "file": "testdrug.sas7bdat",
+        "size": 3874816
+      },
+      {
+        "file": "tmm_p.sas7bdat",
+        "size": 2121728
+      },
+      {
+        "file": "vitals.sas7bdat",
+        "size": 5513216
+      }
+    ]
+  },
+  "Breast_Pfizer_2007_113": {
+    "description": "API-created caslib",
+    "n_files": 21,
+    "files": [
+      {
+        "file": "A6181099_SPECS.xlsx",
+        "size": 17087
+      },
+      {
+        "file": "adverse.sas7bdat",
+        "size": 3350528
+      },
+      {
+        "file": "cd_b_p.sas7bdat",
+        "size": 892928
+      },
+      {
+        "file": "cn_6_p.sas7bdat",
+        "size": 212992
+      },
+      {
+        "file": "cn_7_p.sas7bdat",
+        "size": 368640
+      },
+      {
+        "file": "cn_8_p.sas7bdat",
+        "size": 106496
+      },
+      {
+        "file": "condrug.sas7bdat",
+        "size": 1581056
+      },
+      {
+        "file": "contrt.sas7bdat",
+        "size": 237568
+      },
+      {
+        "file": "demog.sas7bdat",
+        "size": 57344
+      },
+      {
+        "file": "ecg.sas7bdat",
+        "size": 1933312
+      },
+      {
+        "file": "final.sas7bdat",
+        "size": 212992
+      },
+      {
+        "file": "iota_p.sas7bdat",
+        "size": 385024
+      },
+      {
+        "file": "lab_safe.sas7bdat",
+        "size": 40804352
+      },
+      {
+        "file": "pfm_p.sas7bdat",
+        "size": 229376
+      },
+      {
+        "file": "phyexam.sas7bdat",
+        "size": 5111808
+      },
+      {
+        "file": "prevdis.sas7bdat",
+        "size": 647168
+      },
+      {
+        "file": "primdiag.sas7bdat",
+        "size": 57344
+      },
+      {
+        "file": "random.sas7bdat",
+        "size": 24576
+      },
+      {
+        "file": "testdrug.sas7bdat",
+        "size": 1155072
+      },
+      {
+        "file": "tmm_p.sas7bdat",
+        "size": 2023424
+      },
+      {
+        "file": "vitals.sas7bdat",
+        "size": 1908736
+      }
+    ]
+  },
+  "Breast_SanofiU_1997_120": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_740",
+        "size": 4096
+      }
+    ]
+  },
+  "Breast_SanofiU_1998_127": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_736",
+        "size": 4096
+      },
+      {
+        "file": "XRP6976_RP56976_PR_315_data_definition.xls",
+        "size": 122368
+      }
+    ]
+  },
+  "Breast_SanofiU_2000_118": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_661",
+        "size": 8192
+      },
+      {
+        "file": "sanofi_XRP6976_TAX_GMA_301_data_descriptors.xls",
+        "size": 164352
+      }
+    ]
+  },
+  "Breast_SanofiU_2004_135": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_801",
+        "size": 8192
+      },
+      {
+        "file": "sanofi_XRP9881_EFC6089_datasphere_data_definition.xls",
+        "size": 174592
+      }
+    ]
+  },
+  "Colorec_Allianc_1994_201": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "master.csv",
+        "size": 88525
+      }
+    ]
+  },
+  "Colorec_Allianc_1997_138": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_809",
+        "size": 4096
+      },
+      {
+        "file": "Data_Dictionary.xlsx",
+        "size": 16065
+      }
+    ]
+  },
+  "Colorec_Allianc_1997_182": {
+    "description": "API-created caslib",
+    "n_files": 6,
+    "files": [
+      {
+        "file": "outcome_other_baseline_data.xlsx",
+        "size": 57347
+      },
+      {
+        "file": "Data_Dictionary.xlsx",
+        "size": 16088
+      },
+      {
+        "file": "adverse_event_c272.xlsx",
+        "size": 320070
+      },
+      {
+        "file": "new_primary_c1001.xlsx",
+        "size": 10688
+      },
+      {
+        "file": "off_trt_c300.xlsx",
+        "size": 23423
+      },
+      {
+        "file": "onstudy_c437.xlsx",
+        "size": 355233
+      }
+    ]
+  },
+  "Colorec_Allianc_2004_161": {
+    "description": "API-created caslib",
+    "n_files": 3,
+    "files": [
+      {
+        "file": "characteristic.csv",
+        "size": 183319
+      },
+      {
+        "file": "objectives.csv",
+        "size": 70102
+      },
+      {
+        "file": "tox.csv",
+        "size": 42531
+      }
+    ]
+  },
+  "Colorec_Amgen_2004_310": {
+    "description": "",
+    "n_files": 10,
+    "files": [
+      {
+        "file": "dataFiles_4672",
+        "size": 4096
+      },
+      {
+        "file": "imageFiles",
+        "size": 28672
+      },
+      {
+        "file": "DDT_408_v2.xlsx",
+        "size": 22495
+      },
+      {
+        "file": "adae_pds2019.sas7bdat",
+        "size": 458752
+      },
+      {
+        "file": "adlb_pds2019.sas7bdat",
+        "size": 1572864
+      },
+      {
+        "file": "adls_pds2019.sas7bdat",
+        "size": 2162688
+      },
+      {
+        "file": "adpm_pds2019.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "adrsp_pds2019.sas7bdat",
+        "size": 1376256
+      },
+      {
+        "file": "adsl_pds2019.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "biomark_pds2019.sas7bdat",
+        "size": 524288
+      }
+    ]
+  },
+  "Colorec_Amgen_2005_262": {
+    "description": "API-created caslib",
+    "n_files": 18,
+    "files": [
+      {
+        "file": "dataFiles_3425",
+        "size": 4096
+      },
+      {
+        "file": "a_eendpt.sas7bdat",
+        "size": 1376256
+      },
+      {
+        "file": "a_sendpt.sas7bdat",
+        "size": 1638400
+      },
+      {
+        "file": "ae.sas7bdat",
+        "size": 63635456
+      },
+      {
+        "file": "chemotx.sas7bdat",
+        "size": 1966080
+      },
+      {
+        "file": "corevar.sas7bdat",
+        "size": 917504
+      },
+      {
+        "file": "death.sas7bdat",
+        "size": 720896
+      },
+      {
+        "file": "demo.sas7bdat",
+        "size": 983040
+      },
+      {
+        "file": "disposit.sas7bdat",
+        "size": 1441792
+      },
+      {
+        "file": "eligcrit.sas7bdat",
+        "size": 1114112
+      },
+      {
+        "file": "exposure.sas7bdat",
+        "size": 143917056
+      },
+      {
+        "file": "lab.sas7bdat",
+        "size": 162267136
+      },
+      {
+        "file": "lesion.sas7bdat",
+        "size": 44040192
+      },
+      {
+        "file": "medhist.sas7bdat",
+        "size": 20578304
+      },
+      {
+        "file": "radiotx.sas7bdat",
+        "size": 1048576
+      },
+      {
+        "file": "respeval.sas7bdat",
+        "size": 9502720
+      },
+      {
+        "file": "surghist.sas7bdat",
+        "size": 2621440
+      },
+      {
+        "file": "vitals_v.sas7bdat",
+        "size": 150536192
+      }
+    ]
+  },
+  "Colorec_Amgen_2006_263": {
+    "description": "API-created caslib",
+    "n_files": 21,
+    "files": [
+      {
+        "file": "dataFiles_3426",
+        "size": 4096
+      },
+      {
+        "file": "a_eendpt.sas7bdat",
+        "size": 1310720
+      },
+      {
+        "file": "a_endpt.sas7bdat",
+        "size": 2097152
+      },
+      {
+        "file": "a_sendpt.sas7bdat",
+        "size": 1900544
+      },
+      {
+        "file": "ae.sas7bdat",
+        "size": 30539776
+      },
+      {
+        "file": "chemotx.sas7bdat",
+        "size": 2752512
+      },
+      {
+        "file": "corevar.sas7bdat",
+        "size": 655360
+      },
+      {
+        "file": "death.sas7bdat",
+        "size": 851968
+      },
+      {
+        "file": "demo.sas7bdat",
+        "size": 1376256
+      },
+      {
+        "file": "disposit.sas7bdat",
+        "size": 1441792
+      },
+      {
+        "file": "eligcrit.sas7bdat",
+        "size": 786432
+      },
+      {
+        "file": "exposure.sas7bdat",
+        "size": 67239936
+      },
+      {
+        "file": "lab.sas7bdat",
+        "size": 459407360
+      },
+      {
+        "file": "lesion.sas7bdat",
+        "size": 79691776
+      },
+      {
+        "file": "lesnprog.sas7bdat",
+        "size": 196608
+      },
+      {
+        "file": "medhist.sas7bdat",
+        "size": 5373952
+      },
+      {
+        "file": "othcantx.sas7bdat",
+        "size": 2686976
+      },
+      {
+        "file": "radiotx.sas7bdat",
+        "size": 983040
+      },
+      {
+        "file": "respeval.sas7bdat",
+        "size": 22413312
+      },
+      {
+        "file": "surghist.sas7bdat",
+        "size": 1703936
+      },
+      {
+        "file": "vitals_v.sas7bdat",
+        "size": 61472768
+      }
+    ]
+  },
+  "Colorec_Amgen_2006_264": {
+    "description": "API-created caslib",
+    "n_files": 21,
+    "files": [
+      {
+        "file": "dataFiles_3427",
+        "size": 4096
+      },
+      {
+        "file": "a_eendpt.sas7bdat",
+        "size": 1179648
+      },
+      {
+        "file": "a_endpt.sas7bdat",
+        "size": 1638400
+      },
+      {
+        "file": "a_sendpt.sas7bdat",
+        "size": 1900544
+      },
+      {
+        "file": "ae.sas7bdat",
+        "size": 44040192
+      },
+      {
+        "file": "chemotx.sas7bdat",
+        "size": 327680
+      },
+      {
+        "file": "corevar.sas7bdat",
+        "size": 589824
+      },
+      {
+        "file": "death.sas7bdat",
+        "size": 655360
+      },
+      {
+        "file": "demo.sas7bdat",
+        "size": 983040
+      },
+      {
+        "file": "disposit.sas7bdat",
+        "size": 1310720
+      },
+      {
+        "file": "eligcrit.sas7bdat",
+        "size": 851968
+      },
+      {
+        "file": "exposure.sas7bdat",
+        "size": 123731968
+      },
+      {
+        "file": "lab.sas7bdat",
+        "size": 497483776
+      },
+      {
+        "file": "lesion.sas7bdat",
+        "size": 103219200
+      },
+      {
+        "file": "lesnprog.sas7bdat",
+        "size": 196608
+      },
+      {
+        "file": "medhist.sas7bdat",
+        "size": 4653056
+      },
+      {
+        "file": "othcantx.sas7bdat",
+        "size": 655360
+      },
+      {
+        "file": "radiotx.sas7bdat",
+        "size": 983040
+      },
+      {
+        "file": "respeval.sas7bdat",
+        "size": 33423360
+      },
+      {
+        "file": "surghist.sas7bdat",
+        "size": 1441792
+      },
+      {
+        "file": "vitals_v.sas7bdat",
+        "size": 64946176
+      }
+    ]
+  },
+  "Colorec_Amgen_2006_309": {
+    "description": "",
+    "n_files": 10,
+    "files": [
+      {
+        "file": "dataFiles_4668",
+        "size": 4096
+      },
+      {
+        "file": "imageFiles",
+        "size": 77824
+      },
+      {
+        "file": "DDT_203_v2.xlsx",
+        "size": 24445
+      },
+      {
+        "file": "adae_pds2019.sas7bdat",
+        "size": 1179648
+      },
+      {
+        "file": "adlb_pds2019.sas7bdat",
+        "size": 15138816
+      },
+      {
+        "file": "adls_pds2019.sas7bdat",
+        "size": 6160384
+      },
+      {
+        "file": "adpm_pds2019.sas7bdat",
+        "size": 1179648
+      },
+      {
+        "file": "adrsp_pds2019.sas7bdat",
+        "size": 6029312
+      },
+      {
+        "file": "adsl_pds2019.sas7bdat",
+        "size": 458752
+      },
+      {
+        "file": "biomark_pds2019.sas7bdat",
+        "size": 1310720
+      }
+    ]
+  },
+  "Colorec_AstraZe_2006_78": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_384",
+        "size": 8192
+      },
+      {
+        "file": "AstraZeneca Data Cediranib.xls",
+        "size": 1070592
+      }
+    ]
+  },
+  "Colorec_Multipl_2006_251": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "MEPS Variable Crosswalk.xlsx",
+        "size": 15063
+      },
+      {
+        "file": "linked_pds78_20180429_final.sas7bdat",
+        "size": 983040
+      }
+    ]
+  },
+  "Colorec_Pfizer_2007_114": {
+    "description": "API-created caslib",
+    "n_files": 21,
+    "files": [
+      {
+        "file": "A6181122_SPECS.xlsx",
+        "size": 17299
+      },
+      {
+        "file": "adverse.sas7bdat",
+        "size": 6692864
+      },
+      {
+        "file": "cd_b_p.sas7bdat",
+        "size": 745472
+      },
+      {
+        "file": "cn_6_p.sas7bdat",
+        "size": 212992
+      },
+      {
+        "file": "cn_7_p.sas7bdat",
+        "size": 466944
+      },
+      {
+        "file": "cn_8_p.sas7bdat",
+        "size": 172032
+      },
+      {
+        "file": "condrug.sas7bdat",
+        "size": 7675904
+      },
+      {
+        "file": "contrt.sas7bdat",
+        "size": 303104
+      },
+      {
+        "file": "demog.sas7bdat",
+        "size": 90112
+      },
+      {
+        "file": "ecg.sas7bdat",
+        "size": 10452992
+      },
+      {
+        "file": "final.sas7bdat",
+        "size": 581632
+      },
+      {
+        "file": "iota_p.sas7bdat",
+        "size": 385024
+      },
+      {
+        "file": "lab_safe.sas7bdat",
+        "size": 99991552
+      },
+      {
+        "file": "pfm_p.sas7bdat",
+        "size": 303104
+      },
+      {
+        "file": "phyexam.sas7bdat",
+        "size": 7520256
+      },
+      {
+        "file": "prevdis.sas7bdat",
+        "size": 745472
+      },
+      {
+        "file": "primdiag.sas7bdat",
+        "size": 90112
+      },
+      {
+        "file": "random.sas7bdat",
+        "size": 32768
+      },
+      {
+        "file": "testdrug.sas7bdat",
+        "size": 10166272
+      },
+      {
+        "file": "tmm_p.sas7bdat",
+        "size": 4210688
+      },
+      {
+        "file": "vitals.sas7bdat",
+        "size": 5185536
+      }
+    ]
+  },
+  "Colorec_SanofiU_1998_128": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_777",
+        "size": 4096
+      },
+      {
+        "file": "sanofi_SR96669_EFC3313_data_definition.xls",
+        "size": 158720
+      }
+    ]
+  },
+  "Colorec_SanofiU_2002_137": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_793",
+        "size": 4096
+      },
+      {
+        "file": "sanofi_SR57746A_EFC4972_data_definition.xls",
+        "size": 139776
+      }
+    ]
+  },
+  "Colorec_SanofiU_2005_136": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_788",
+        "size": 4096
+      },
+      {
+        "file": "sanofi_SR57746A_EFC5505_data_definition.xls",
+        "size": 151552
+      }
+    ]
+  },
+  "Colorec_SanofiU_2007_131": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_773",
+        "size": 4096
+      },
+      {
+        "file": "Sanofi_AVE0005_EFC10262_data_discriptors.xlsx",
+        "size": 47152
+      }
+    ]
+  },
+  "Formats": {
+    "description": "Stores user defined formats.",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "sassuppliedformats.sashdat",
+        "size": 64680
+      }
+    ]
+  },
+  "Gastric_Multipl_1999_416": {
+    "description": "API-created caslib",
+    "n_files": 3,
+    "files": [
+      {
+        "file": "Dataset Contents and Variable Crosswalk.xlsx",
+        "size": 15102
+      },
+      {
+        "file": "Descriptive_Stats_Linked_Gastric_SanofiU_1999_143.xlsx",
+        "size": 13777
+      },
+      {
+        "file": "linked_gastric143.sas7bdat",
+        "size": 196608
+      }
+    ]
+  },
+  "Gastric_Multipl_2008_415": {
+    "description": "API-created caslib",
+    "n_files": 4,
+    "files": [
+      {
+        "file": "Dataset Contents and Variable Crosswalk.xlsx",
+        "size": 15100
+      },
+      {
+        "file": "Descriptive_Stats_Linked_Gastric_MerckKG_2008_130.xlsx",
+        "size": 13751
+      },
+      {
+        "file": "PDS_DATA_PROFILE_CREATED_130.xlsx",
+        "size": 45247
+      },
+      {
+        "file": "linked_gastric130.sas7bdat",
+        "size": 262144
+      }
+    ]
+  },
+  "Gastric_SanofiU_1999_143": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_830",
+        "size": 4096
+      },
+      {
+        "file": "sanofi_XRP6976_TAX325_data_definition.xls",
+        "size": 199168
+      }
+    ]
+  },
+  "Glioma_EMDSero_2008_441": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "Descriptive_Stats_EMD121974_011.xlsx",
+        "size": 84290
+      }
+    ]
+  },
+  "Glioma_EMDSero_2009_440": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "Descriptive_Stats_EMD_121974_012.xlsx",
+        "size": 81077
+      }
+    ]
+  },
+  "HeadNe_Amgen_2007_265": {
+    "description": "API-created caslib",
+    "n_files": 19,
+    "files": [
+      {
+        "file": "dataFiles_3428",
+        "size": 4096
+      },
+      {
+        "file": "ae.sas7bdat",
+        "size": 21102592
+      },
+      {
+        "file": "aeendpt.sas7bdat",
+        "size": 720896
+      },
+      {
+        "file": "asendpt.sas7bdat",
+        "size": 655360
+      },
+      {
+        "file": "chemotx.sas7bdat",
+        "size": 524288
+      },
+      {
+        "file": "corevar.sas7bdat",
+        "size": 393216
+      },
+      {
+        "file": "death.sas7bdat",
+        "size": 458752
+      },
+      {
+        "file": "demo.sas7bdat",
+        "size": 786432
+      },
+      {
+        "file": "disposit.sas7bdat",
+        "size": 917504
+      },
+      {
+        "file": "eligcrit.sas7bdat",
+        "size": 589824
+      },
+      {
+        "file": "exposure.sas7bdat",
+        "size": 11206656
+      },
+      {
+        "file": "lab.sas7bdat",
+        "size": 236060672
+      },
+      {
+        "file": "lesion.sas7bdat",
+        "size": 8519680
+      },
+      {
+        "file": "lesnprog.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "medhist.sas7bdat",
+        "size": 3670016
+      },
+      {
+        "file": "othcantx.sas7bdat",
+        "size": 458752
+      },
+      {
+        "file": "radiotx.sas7bdat",
+        "size": 917504
+      },
+      {
+        "file": "respeval.sas7bdat",
+        "size": 1769472
+      },
+      {
+        "file": "surghist.sas7bdat",
+        "size": 1376256
+      }
+    ]
+  },
+  "HeadNe_EliLill_2006_150": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_867",
+        "size": 4096
+      }
+    ]
+  },
+  "HeadNe_SanofiU_1998_142": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_826",
+        "size": 4096
+      },
+      {
+        "file": "XRP6976_EFC6051_datasphere.xls",
+        "size": 489767
+      }
+    ]
+  },
+  "HeadNe_SanofiU_2002_129": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_797",
+        "size": 4096
+      },
+      {
+        "file": "sanofi_SR259075_EFC4690_data_definition.xls",
+        "size": 243200
+      }
+    ]
+  },
+  "Kidney_BayerAG_2003_97": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_439",
+        "size": 4096
+      }
+    ]
+  },
+  "Liver_Pfizer_2008_124": {
+    "description": "API-created caslib",
+    "n_files": 23,
+    "files": [
+      {
+        "file": "A6181170_SPECS.xlsx",
+        "size": 17958
+      },
+      {
+        "file": "adverse.sas7bdat",
+        "size": 8790016
+      },
+      {
+        "file": "cd_b_p.sas7bdat",
+        "size": 450560
+      },
+      {
+        "file": "cn_6_p.sas7bdat",
+        "size": 294912
+      },
+      {
+        "file": "cn_7_p.sas7bdat",
+        "size": 466944
+      },
+      {
+        "file": "cn_9_p.sas7bdat",
+        "size": 303104
+      },
+      {
+        "file": "cn_a_p.sas7bdat",
+        "size": 270336
+      },
+      {
+        "file": "condrug.sas7bdat",
+        "size": 6299648
+      },
+      {
+        "file": "contrt.sas7bdat",
+        "size": 598016
+      },
+      {
+        "file": "demog.sas7bdat",
+        "size": 122880
+      },
+      {
+        "file": "ecg.sas7bdat",
+        "size": 7053312
+      },
+      {
+        "file": "final.sas7bdat",
+        "size": 253952
+      },
+      {
+        "file": "iota_p.sas7bdat",
+        "size": 401408
+      },
+      {
+        "file": "lab_safe.sas7bdat",
+        "size": 99172352
+      },
+      {
+        "file": "pfm_p.sas7bdat",
+        "size": 458752
+      },
+      {
+        "file": "phyexam.sas7bdat",
+        "size": 11304960
+      },
+      {
+        "file": "prevdis.sas7bdat",
+        "size": 4628480
+      },
+      {
+        "file": "primdiag.sas7bdat",
+        "size": 122880
+      },
+      {
+        "file": "random.sas7bdat",
+        "size": 40960
+      },
+      {
+        "file": "srv_p.sas7bdat",
+        "size": 2105344
+      },
+      {
+        "file": "testdrug.sas7bdat",
+        "size": 2039808
+      },
+      {
+        "file": "tmm_p.sas7bdat",
+        "size": 3350528
+      },
+      {
+        "file": "vitals.sas7bdat",
+        "size": 4333568
+      }
+    ]
+  },
+  "LungNo_Celgene_2007_108": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "PDS_Data_Profile_Created_108.xlsx",
+        "size": 74015
+      }
+    ]
+  },
+  "LungNo_ELiLill_2006_116": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_655",
+        "size": 4096
+      }
+    ]
+  },
+  "LungNo_EliLill_2008_141": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_822",
+        "size": 4096
+      }
+    ]
+  },
+  "LungNo_EliLill_2008_148": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_853",
+        "size": 4096
+      }
+    ]
+  },
+  "LungNo_EliLill_2009_438": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "Descriptive_Stats_H3E_US_S130.xlsx",
+        "size": 71083
+      }
+    ]
+  },
+  "LungNo_EliLill_2010_272": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_3493",
+        "size": 4096
+      }
+    ]
+  },
+  "LungNo_MerckKG_2007_145": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_841",
+        "size": 4096
+      }
+    ]
+  },
+  "LungNo_Pfizer_2007_115": {
+    "description": "API-created caslib",
+    "n_files": 21,
+    "files": [
+      {
+        "file": "A6181087_SPECS.xlsx",
+        "size": 17302
+      },
+      {
+        "file": "adverse.sas7bdat",
+        "size": 4726784
+      },
+      {
+        "file": "cd_b_p.sas7bdat",
+        "size": 1089536
+      },
+      {
+        "file": "cn_6_p.sas7bdat",
+        "size": 294912
+      },
+      {
+        "file": "cn_7_p.sas7bdat",
+        "size": 434176
+      },
+      {
+        "file": "cn_8_p.sas7bdat",
+        "size": 204800
+      },
+      {
+        "file": "condrug.sas7bdat",
+        "size": 3153920
+      },
+      {
+        "file": "contrt.sas7bdat",
+        "size": 270336
+      },
+      {
+        "file": "demog.sas7bdat",
+        "size": 122880
+      },
+      {
+        "file": "ecg.sas7bdat",
+        "size": 6275072
+      },
+      {
+        "file": "final.sas7bdat",
+        "size": 827392
+      },
+      {
+        "file": "iota_p.sas7bdat",
+        "size": 237568
+      },
+      {
+        "file": "lab_safe.sas7bdat",
+        "size": 43098112
+      },
+      {
+        "file": "pfm_p.sas7bdat",
+        "size": 319488
+      },
+      {
+        "file": "phyexam.sas7bdat",
+        "size": 9011200
+      },
+      {
+        "file": "prevdis.sas7bdat",
+        "size": 1581056
+      },
+      {
+        "file": "primdiag.sas7bdat",
+        "size": 106496
+      },
+      {
+        "file": "random.sas7bdat",
+        "size": 40960
+      },
+      {
+        "file": "testdrug.sas7bdat",
+        "size": 1974272
+      },
+      {
+        "file": "tmm_p.sas7bdat",
+        "size": 2539520
+      },
+      {
+        "file": "vitals.sas7bdat",
+        "size": 2433024
+      }
+    ]
+  },
+  "LungNo_SanofiU_2007_133": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_781",
+        "size": 4096
+      },
+      {
+        "file": "sanofi_ave0005_efc10261_data_definition.xls",
+        "size": 95744
+      }
+    ]
+  },
+  "LungSm_Allianc_1998_261": {
+    "description": "API-created caslib",
+    "n_files": 4,
+    "files": [
+      {
+        "file": "c9732_demographic.sas7bdat",
+        "size": 327680
+      },
+      {
+        "file": "C9732_Dictionary.xlsx",
+        "size": 11700
+      },
+      {
+        "file": "c9732_ae.sas7bdat",
+        "size": 10420224
+      },
+      {
+        "file": "c9732_fmt.sas7bdat",
+        "size": 131072
+      }
+    ]
+  },
+  "LungSm_Allianc_2007_218": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "ae.csv",
+        "size": 2327
+      },
+      {
+        "file": "clinical.csv",
+        "size": 8591
+      }
+    ]
+  },
+  "LungSm_Amgen_2002_266": {
+    "description": "API-created caslib",
+    "n_files": 26,
+    "files": [
+      {
+        "file": "dataFiles_3424",
+        "size": 4096
+      },
+      {
+        "file": "a_eendes.sas7bdat",
+        "size": 524288
+      },
+      {
+        "file": "a_eendfu.sas7bdat",
+        "size": 524288
+      },
+      {
+        "file": "a_eendpt.sas7bdat",
+        "size": 524288
+      },
+      {
+        "file": "a_lab.sas7bdat",
+        "size": 43712512
+      },
+      {
+        "file": "a_qol.sas7bdat",
+        "size": 524288
+      },
+      {
+        "file": "a_sendpt.sas7bdat",
+        "size": 458752
+      },
+      {
+        "file": "c_ae.sas7bdat",
+        "size": 1900544
+      },
+      {
+        "file": "c_bchar.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "c_chem.sas7bdat",
+        "size": 1507328
+      },
+      {
+        "file": "c_chemo.sas7bdat",
+        "size": 1900544
+      },
+      {
+        "file": "c_conmed.sas7bdat",
+        "size": 10551296
+      },
+      {
+        "file": "c_death.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "c_diag.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "c_disp.sas7bdat",
+        "size": 393216
+      },
+      {
+        "file": "c_doses.sas7bdat",
+        "size": 2031616
+      },
+      {
+        "file": "c_entry.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "c_hbscan.sas7bdat",
+        "size": 393216
+      },
+      {
+        "file": "c_hemat.sas7bdat",
+        "size": 3670016
+      },
+      {
+        "file": "c_iron.sas7bdat",
+        "size": 524288
+      },
+      {
+        "file": "c_keyvar.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "c_lesion.sas7bdat",
+        "size": 983040
+      },
+      {
+        "file": "c_medhis.sas7bdat",
+        "size": 2621440
+      },
+      {
+        "file": "c_radio.sas7bdat",
+        "size": 589824
+      },
+      {
+        "file": "c_trans.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "c_vitals.sas7bdat",
+        "size": 1114112
+      }
+    ]
+  },
+  "LungSm_EliLill_2011_287": {
+    "description": "API-created caslib",
+    "n_files": 38,
+    "files": [
+      {
+        "file": "dataFiles_3663",
+        "size": 4096
+      },
+      {
+        "file": "ae.sas7bdat",
+        "size": 10092544
+      },
+      {
+        "file": "biomrkr.sas7bdat",
+        "size": 4194304
+      },
+      {
+        "file": "cclm_cen.sas7bdat",
+        "size": 1179648
+      },
+      {
+        "file": "chem_cen.sas7bdat",
+        "size": 15335424
+      },
+      {
+        "file": "cm.sas7bdat",
+        "size": 4456448
+      },
+      {
+        "file": "dm.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "dor.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "dosmod.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "ds_fl.sas7bdat",
+        "size": 393216
+      },
+      {
+        "file": "ds_l.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "ds_t.sas7bdat",
+        "size": 655360
+      },
+      {
+        "file": "ecg.sas7bdat",
+        "size": 393216
+      },
+      {
+        "file": "ex.sas7bdat",
+        "size": 3276800
+      },
+      {
+        "file": "excomp.sas7bdat",
+        "size": 3276800
+      },
+      {
+        "file": "exvial.sas7bdat",
+        "size": 393216
+      },
+      {
+        "file": "hema_cen.sas7bdat",
+        "size": 14417920
+      },
+      {
+        "file": "immune.sas7bdat",
+        "size": 786432
+      },
+      {
+        "file": "lbcen.sas7bdat",
+        "size": 39452672
+      },
+      {
+        "file": "mh.sas7bdat",
+        "size": 393216
+      },
+      {
+        "file": "os.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "pe.sas7bdat",
+        "size": 655360
+      },
+      {
+        "file": "pfs.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "pfs_ns.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "pfs_sen.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "pfsclin.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "ph.sas7bdat",
+        "size": 1310720
+      },
+      {
+        "file": "rs.sas7bdat",
+        "size": 655360
+      },
+      {
+        "file": "ta.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "te.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "thyp.sas7bdat",
+        "size": 393216
+      },
+      {
+        "file": "tissue.sas7bdat",
+        "size": 917504
+      },
+      {
+        "file": "tms.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "tr.sas7bdat",
+        "size": 4980736
+      },
+      {
+        "file": "tv.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "urin_cen.sas7bdat",
+        "size": 1179648
+      },
+      {
+        "file": "vs.sas7bdat",
+        "size": 6422528
+      },
+      {
+        "file": "wbcm_cen.sas7bdat",
+        "size": 393216
+      }
+    ]
+  },
+  "LungSm_G1Thera_2015_433": {
+    "description": "API-created caslib",
+    "n_files": 18,
+    "files": [
+      {
+        "file": "Data descriptors for SCLC 01.xlsx",
+        "size": 33446
+      },
+      {
+        "file": "Descriptive_Stats_G1T_NCT02499770.xlsx",
+        "size": 83404
+      },
+      {
+        "file": "adae.sas7bdat",
+        "size": 573440
+      },
+      {
+        "file": "adcm.sas7bdat",
+        "size": 1662976
+      },
+      {
+        "file": "addv.sas7bdat",
+        "size": 131072
+      },
+      {
+        "file": "adeg.sas7bdat",
+        "size": 516096
+      },
+      {
+        "file": "adex.sas7bdat",
+        "size": 851968
+      },
+      {
+        "file": "adex2.sas7bdat",
+        "size": 524288
+      },
+      {
+        "file": "adlb.sas7bdat",
+        "size": 28561408
+      },
+      {
+        "file": "admh.sas7bdat",
+        "size": 466944
+      },
+      {
+        "file": "adpr.sas7bdat",
+        "size": 327680
+      },
+      {
+        "file": "adqs.sas7bdat",
+        "size": 368640
+      },
+      {
+        "file": "adrs.sas7bdat",
+        "size": 1572864
+      },
+      {
+        "file": "adsl.sas7bdat",
+        "size": 155648
+      },
+      {
+        "file": "adtr.sas7bdat",
+        "size": 4902912
+      },
+      {
+        "file": "adtr2.sas7bdat",
+        "size": 278528
+      },
+      {
+        "file": "adtte.sas7bdat",
+        "size": 196608
+      },
+      {
+        "file": "advs.sas7bdat",
+        "size": 5234688
+      }
+    ]
+  },
+  "LungSm_G1Thera_2015_434": {
+    "description": "API-created caslib",
+    "n_files": 17,
+    "files": [
+      {
+        "file": "Data descriptors for SCLC 02.xlsx",
+        "size": 32934
+      },
+      {
+        "file": "Descriptive_Stats_G1T_NCT02514447.xlsx",
+        "size": 76682
+      },
+      {
+        "file": "adae.sas7bdat",
+        "size": 847872
+      },
+      {
+        "file": "adcm.sas7bdat",
+        "size": 1712128
+      },
+      {
+        "file": "addv.sas7bdat",
+        "size": 131072
+      },
+      {
+        "file": "adecog.sas7bdat",
+        "size": 360448
+      },
+      {
+        "file": "adeg.sas7bdat",
+        "size": 1130496
+      },
+      {
+        "file": "adex.sas7bdat",
+        "size": 983040
+      },
+      {
+        "file": "adex2.sas7bdat",
+        "size": 487424
+      },
+      {
+        "file": "admh.sas7bdat",
+        "size": 430080
+      },
+      {
+        "file": "adpr.sas7bdat",
+        "size": 491520
+      },
+      {
+        "file": "adrs.sas7bdat",
+        "size": 516096
+      },
+      {
+        "file": "adsl.sas7bdat",
+        "size": 163840
+      },
+      {
+        "file": "adtr.sas7bdat",
+        "size": 753664
+      },
+      {
+        "file": "adtr2.sas7bdat",
+        "size": 258048
+      },
+      {
+        "file": "adtte.sas7bdat",
+        "size": 196608
+      },
+      {
+        "file": "advs.sas7bdat",
+        "size": 2793472
+      }
+    ]
+  },
+  "Lymphom_Allianc_2006_212": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "events.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "outcome17mar24.sas7bdat",
+        "size": 196608
+      }
+    ]
+  },
+  "Melanom_SyntaPh_2007_123": {
+    "description": "API-created caslib",
+    "n_files": 40,
+    "files": [
+      {
+        "file": "Data_dictionary.xlsx",
+        "size": 30662
+      },
+      {
+        "file": "ae.sas7bdat",
+        "size": 107520
+      },
+      {
+        "file": "aeae.sas7bdat",
+        "size": 11944960
+      },
+      {
+        "file": "bdos.sas7bdat",
+        "size": 1770496
+      },
+      {
+        "file": "cm.sas7bdat",
+        "size": 701440
+      },
+      {
+        "file": "cmcm.sas7bdat",
+        "size": 64357376
+      },
+      {
+        "file": "dm.sas7bdat",
+        "size": 164864
+      },
+      {
+        "file": "ds.sas7bdat",
+        "size": 656384
+      },
+      {
+        "file": "ec.sas7bdat",
+        "size": 2524160
+      },
+      {
+        "file": "eg.sas7bdat",
+        "size": 394240
+      },
+      {
+        "file": "exc.sas7bdat",
+        "size": 50176
+      },
+      {
+        "file": "im.sas7bdat",
+        "size": 197632
+      },
+      {
+        "file": "inc.sas7bdat",
+        "size": 50176
+      },
+      {
+        "file": "invs.sas7bdat",
+        "size": 58368
+      },
+      {
+        "file": "labd.sas7bdat",
+        "size": 664576
+      },
+      {
+        "file": "labdllab.sas7bdat",
+        "size": 3523584
+      },
+      {
+        "file": "les.sas7bdat",
+        "size": 345088
+      },
+      {
+        "file": "lesles.sas7bdat",
+        "size": 2802688
+      },
+      {
+        "file": "master.sas7bdat",
+        "size": 99328
+      },
+      {
+        "file": "mh.sas7bdat",
+        "size": 50176
+      },
+      {
+        "file": "mhmh.sas7bdat",
+        "size": 5784576
+      },
+      {
+        "file": "ms.sas7bdat",
+        "size": 50176
+      },
+      {
+        "file": "pe.sas7bdat",
+        "size": 431104
+      },
+      {
+        "file": "pepe.sas7bdat",
+        "size": 22627328
+      },
+      {
+        "file": "pkd.sas7bdat",
+        "size": 160768
+      },
+      {
+        "file": "pkdpkd.sas7bdat",
+        "size": 234496
+      },
+      {
+        "file": "plog.sas7bdat",
+        "size": 148480
+      },
+      {
+        "file": "plogplog.sas7bdat",
+        "size": 689152
+      },
+      {
+        "file": "qexc.sas7bdat",
+        "size": 13312
+      },
+      {
+        "file": "qtc.sas7bdat",
+        "size": 9216
+      },
+      {
+        "file": "qtceg.sas7bdat",
+        "size": 13312
+      },
+      {
+        "file": "rad.sas7bdat",
+        "size": 173056
+      },
+      {
+        "file": "radrad.sas7bdat",
+        "size": 1115136
+      },
+      {
+        "file": "rsp.sas7bdat",
+        "size": 427008
+      },
+      {
+        "file": "srv.sas7bdat",
+        "size": 492544
+      },
+      {
+        "file": "tmr.sas7bdat",
+        "size": 91136
+      },
+      {
+        "file": "tmrphto.sas7bdat",
+        "size": 33792
+      },
+      {
+        "file": "vdt.sas7bdat",
+        "size": 394240
+      },
+      {
+        "file": "vs.sas7bdat",
+        "size": 1008640
+      },
+      {
+        "file": "vsvs.sas7bdat",
+        "size": 2311168
+      }
+    ]
+  },
+  "Models": {
+    "description": "Stores models created by Visual Analytics for use in other analytics or SAS Studio.",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "M4_DATASET_METADATA.sashdat",
+        "size": 818568
+      }
+    ]
+  },
+  "Multiple_Allianc_2002_202": {
+    "description": "API-created caslib",
+    "n_files": 9,
+    "files": [
+      {
+        "file": "casecrse.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "chklist.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "chklist2.sas7bdat",
+        "size": 196608
+      },
+      {
+        "file": "end_at.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "fagerstm.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "relapse.sas7bdat",
+        "size": 262144
+      },
+      {
+        "file": "smokehx.sas7bdat",
+        "size": 589824
+      },
+      {
+        "file": "visit.sas7bdat",
+        "size": 2883584
+      },
+      {
+        "file": "wt_scale.sas7bdat",
+        "size": 262144
+      }
+    ]
+  },
+  "Multiple_Allianc_2002_213": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "NCT00052910_D1_(EFFICACY).csv",
+        "size": 55433
+      },
+      {
+        "file": "NCT00052910_D2_(AE).csv",
+        "size": 441067
+      }
+    ]
+  },
+  "Multiple_Amgen_2006_156": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_902",
+        "size": 4096
+      }
+    ]
+  },
+  "Multiple_Brigham_454": {
+    "description": "API-created caslib",
+    "n_files": 4,
+    "files": [
+      {
+        "file": "PDS_DATA_PROFILE_CREATED_VITAL_trial_NEJM_2022.xlsx",
+        "size": 16493
+      },
+      {
+        "file": "VITAL_trial_NEJM_2022.sas7bdat",
+        "size": 15990784
+      },
+      {
+        "file": "vitalkneepain111623.sas7bdat",
+        "size": 393216
+      },
+      {
+        "file": "vitalstatin.sas7bdat",
+        "size": 131072
+      }
+    ]
+  },
+  "Multiple_MerckKG_2008_441": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "Descriptive_Stats_EMD121974_011.xlsx",
+        "size": 84290
+      }
+    ]
+  },
+  "Multiple_SanofiU_2008_119": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_676",
+        "size": 4096
+      },
+      {
+        "file": "sanofi_ave5026_efc6521.xlsx",
+        "size": 44177
+      }
+    ]
+  },
+  "Pancrea_Celgene_2008_132": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "PDS_Data_Profile_Created_132.xlsx",
+        "size": 48423
+      }
+    ]
+  },
+  "Pancrea_ClovisO_2010_186": {
+    "description": "API-created caslib",
+    "n_files": 16,
+    "files": [
+      {
+        "file": "dataFiles_1118",
+        "size": 4096
+      },
+      {
+        "file": "adae.sas7bdat",
+        "size": 5406720
+      },
+      {
+        "file": "adcm.sas7bdat",
+        "size": 8740864
+      },
+      {
+        "file": "addur.sas7bdat",
+        "size": 131072
+      },
+      {
+        "file": "adef.sas7bdat",
+        "size": 851968
+      },
+      {
+        "file": "adeg.sas7bdat",
+        "size": 48955392
+      },
+      {
+        "file": "adex.sas7bdat",
+        "size": 3538944
+      },
+      {
+        "file": "adie.sas7bdat",
+        "size": 131072
+      },
+      {
+        "file": "adlb.sas7bdat",
+        "size": 122486784
+      },
+      {
+        "file": "admh.sas7bdat",
+        "size": 2097152
+      },
+      {
+        "file": "ador.sas7bdat",
+        "size": 458752
+      },
+      {
+        "file": "adpf.sas7bdat",
+        "size": 327680
+      },
+      {
+        "file": "adqs.sas7bdat",
+        "size": 22151168
+      },
+      {
+        "file": "adsl.sas7bdat",
+        "size": 589824
+      },
+      {
+        "file": "adsv.sas7bdat",
+        "size": 12386304
+      },
+      {
+        "file": "advs.sas7bdat",
+        "size": 24772608
+      }
+    ]
+  },
+  "Pancrea_EMDSero_2009_442": {
+    "description": "API-created caslib",
+    "n_files": 3,
+    "files": [
+      {
+        "file": "dataFiles_6414",
+        "size": 4096
+      },
+      {
+        "file": "dataFiles_6611",
+        "size": 4096
+      },
+      {
+        "file": "Descriptive_Stats_EMR 200066-003.xlsx",
+        "size": 79836
+      }
+    ]
+  },
+  "Pancrea_Multipl_2020_430": {
+    "description": "API-created caslib",
+    "n_files": 3,
+    "files": [
+      {
+        "file": "Dataset Contents and Variable Crosswalk.xlsx",
+        "size": 15470
+      },
+      {
+        "file": "Descriptive_Stats_Linked_Pancrea_ClovisO_2010_186.xlsx",
+        "size": 10492
+      },
+      {
+        "file": "linked_pancrea186.sas7bdat",
+        "size": 196608
+      }
+    ]
+  },
+  "Pancrea_Sanofi_2006_109": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_528",
+        "size": 4096
+      }
+    ]
+  },
+  "Pancrea_SanofiU_2007_134": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_785",
+        "size": 4096
+      },
+      {
+        "file": "sanofi_ave0005_efc10547_data_definition.xls",
+        "size": 95744
+      }
+    ]
+  },
+  "PDSInfo": {
+    "description": "",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "caslib_info.sas7bdat",
+        "size": 1187840
+      }
+    ]
+  },
+  "PDSSamples": {
+    "description": "Data sets for use with PDS sample projects",
+    "n_files": 3,
+    "files": [
+      {
+        "file": "DC_CORE_TABLE_PR.sashdat",
+        "size": 3140056
+      },
+      {
+        "file": "DC_CORE_TABLE.sashdat",
+        "size": 3175664
+      },
+      {
+        "file": "recent_user_activity_records.sashdat",
+        "size": 271616
+      }
+    ]
+  },
+  "Prostat_Amgen_2004_154": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_898",
+        "size": 4096
+      }
+    ]
+  },
+  "Prostat_Amgen_2006_155": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_900",
+        "size": 4096
+      }
+    ]
+  },
+  "Prostat_AmgenI_2006_121": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_668",
+        "size": 4096
+      }
+    ]
+  },
+  "Prostat_Asociac_484": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "BBDD_Spain_IAD_v4.xlsx",
+        "size": 43982846
+      },
+      {
+        "file": "DataDescription_v1.xlsx",
+        "size": 97703
+      }
+    ]
+  },
+  "Prostat_AstraZe_1995_102": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_506",
+        "size": 4096
+      },
+      {
+        "file": "7054IL_0023 data variables.xlsx",
+        "size": 63174
+      }
+    ]
+  },
+  "Prostat_AstraZe_1995_105": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_513",
+        "size": 4096
+      },
+      {
+        "file": "7054IL_0024 data variables.xlsx",
+        "size": 65742
+      }
+    ]
+  },
+  "Prostat_AstraZe_1995_106": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_512",
+        "size": 4096
+      },
+      {
+        "file": "7054IL_0025 data variables.xlsx",
+        "size": 67636
+      }
+    ]
+  },
+  "Prostat_AstraZe_2009_144": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_835",
+        "size": 8192
+      },
+      {
+        "file": "De indentification RDB standards STUDY14.xlsx",
+        "size": 664771
+      }
+    ]
+  },
+  "Prostat_Celgene_2009_90": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_412",
+        "size": 4096
+      }
+    ]
+  },
+  "Prostat_Multipl_2008_406": {
+    "description": "API-created caslib",
+    "n_files": 3,
+    "files": [
+      {
+        "file": "Dataset Contents and Variable Crosswalk.xlsx",
+        "size": 15534
+      },
+      {
+        "file": "Descriptive_Stats_Linked_Prostat_AstraZe_2008_103.xlsx",
+        "size": 13967
+      },
+      {
+        "file": "linked_prostate103.sas7bdat",
+        "size": 12320768
+      }
+    ]
+  },
+  "Prostat_Multipl_2008_420": {
+    "description": "API-created caslib",
+    "n_files": 3,
+    "files": [
+      {
+        "file": "Dataset Contents and Variable Crosswalk.xlsx",
+        "size": 15434
+      },
+      {
+        "file": "Descriptive_Stats_Linked_Prostat_AstraZe_2008_104.xlsx",
+        "size": 10634
+      },
+      {
+        "file": "linked_prostate104.sas7bdat",
+        "size": 9961472
+      }
+    ]
+  },
+  "Prostat_Multipl_2009_417": {
+    "description": "API-created caslib",
+    "n_files": 3,
+    "files": [
+      {
+        "file": "Dataset Contents and Variable Crosswalk.xlsx",
+        "size": 15589
+      },
+      {
+        "file": "Descriptive_Stats_Linked_Prostat_AstraZe_2009_144.xlsx",
+        "size": 13897
+      },
+      {
+        "file": "linked_prostate144.sas7bdat",
+        "size": 2818048
+      }
+    ]
+  },
+  "Prostat_Multipl_2018_234": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "MEPS Variable Crosswalk_20171109.xlsx",
+        "size": 14832
+      },
+      {
+        "file": "linked_pds90_20171109.sas7bdat",
+        "size": 3670016
+      }
+    ]
+  },
+  "Prostat_na_2006_149": {
+    "description": "API-created caslib",
+    "n_files": 4,
+    "files": [
+      {
+        "file": "dataFiles_857",
+        "size": 4096
+      },
+      {
+        "file": "dataFiles_858",
+        "size": 4096
+      },
+      {
+        "file": "dataFiles_859",
+        "size": 4096
+      },
+      {
+        "file": "Challenge_data_dictionary v2.xlsx",
+        "size": 31593
+      }
+    ]
+  },
+  "Prostat_Pfizer_2008_81": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_394",
+        "size": 4096
+      },
+      {
+        "file": "Pfizer Data Descriptors Sunitinib.xlsx",
+        "size": 18585
+      }
+    ]
+  },
+  "Prostat_Researc_2016_167": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_996",
+        "size": 4096
+      }
+    ]
+  },
+  "Prostat_Sanofi_2000_80": {
+    "description": "API-created caslib",
+    "n_files": 1,
+    "files": [
+      {
+        "file": "dataFiles_397",
+        "size": 4096
+      }
+    ]
+  },
+  "Prostat_Sanofi_2007_79": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_398",
+        "size": 4096
+      },
+      {
+        "file": "dataFiles_399",
+        "size": 4096
+      }
+    ]
+  },
+  "Prostat_Sanofi_2007_83": {
+    "description": "API-created caslib",
+    "n_files": 2,
+    "files": [
+      {
+        "file": "dataFiles_402",
+        "size": 4096
+      },
+      {
+        "file": "dataFiles_403",
+        "size": 4096
+      }
+    ]
+  },
+  "Samples": {
+    "description": "Stores sample data, supplied by SAS.",
+    "n_files": 6,
+    "files": [
+      {
+        "file": "COSTCHANGE.sashdat",
+        "size": 9776
+      },
+      {
+        "file": "WATER_CLUSTER.sashdat",
+        "size": 525560
+      },
+      {
+        "file": "RAND_RETAILDEMO.sashdat",
+        "size": 42580544
+      },
+      {
+        "file": "SW_LAKE_RT_SENSOR_WATERQUALITY.sashdat",
+        "size": 230416
+      },
+      {
+        "file": "PROMO_EFFECTIVENESS_X_EFFECTS_2.sashdat",
+        "size": 9312
+      },
+      {
+        "file": "WARRANTY_CLAIMS_0117.sashdat",
+        "size": 13594688
+      }
+    ]
+  }
+}
