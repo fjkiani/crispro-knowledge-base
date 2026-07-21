@@ -12,7 +12,8 @@
   "verbatim_evidence": [
     "KB claim: BriTROC Sig7 platinum-resistance threshold=0.25 (constants.py:29); BRITROC_MASTER.csv 273pts on-disk but UNUSED at runtime; hardcoded midpoint heuristic",
     "Current tier: HEURISTIC (threshold not fit to data)",
-    "Zeta dataset: EGA EGAD00001011049 (BriTROC-1) \u2014 679 BAMs / 292 patients / 510.8GB"
+    "Zeta dataset: EGA EGAD00001011049 (BriTROC-1) \u2014 679 BAMs / 292 patients / 510.8GB",
+    "EGA metadata unblocks temporal stratification: diagnosis(385)/relapse(294) split now known"
   ],
   "cross_refs": {
     "gap_id": "GAP-SIG7-BRITROC"
@@ -24,7 +25,8 @@
     "blocker": "Full BAM processing = HPC + Europe VM (measured 1.1MB/s here -> 1.8-5.3 days DL alone). Clinical labels (PFI/platinum status) require BriTROC-1 supplement mapping BAM->patient->outcome (NOT in EGA dataset).",
     "closes_gap": "PARTIAL - infrastructure + raw data available; needs HPC run + external clinical map",
     "zeta_dataset": "EGA EGAD00001011049 (BriTROC-1) \u2014 679 BAMs / 292 patients / 510.8GB",
-    "kb_claim": "BriTROC Sig7 platinum-resistance threshold=0.25 (constants.py:29); BRITROC_MASTER.csv 273pts on-disk but UNUSED at runtime; hardcoded midpoint heuristic"
+    "kb_claim": "BriTROC Sig7 platinum-resistance threshold=0.25 (constants.py:29); BRITROC_MASTER.csv 273pts on-disk but UNUSED at runtime; hardcoded midpoint heuristic",
+    "temporal_axis_status": "AVAILABLE via metadata (385 diagnosis vs 294 relapse) - enables Sig7 diagnosis->relapse contrast without BAM download"
   },
   "_stream": "zeta_gapmap",
   "_mint_planner": "zeta_custodian",

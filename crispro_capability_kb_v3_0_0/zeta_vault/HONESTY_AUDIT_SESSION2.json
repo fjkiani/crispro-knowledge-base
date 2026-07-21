@@ -1,0 +1,28 @@
+{
+  "session": "2026-07-21T02:15:00Z",
+  "checks": {
+    "ruo_contamination": {
+      "status": "PASS",
+      "flags": [],
+      "note": "cleared_for_patient_facing=NO retained across W5+master; no unguarded clinical claims"
+    },
+    "tier_preservation": {
+      "status": "PASS",
+      "mfap4_not_addressable": true,
+      "logit_genes_upgraded_honestly": "BRAF/KRAS/NRAS upgraded ONLY where real MSK mutation evidence exists (BRAF: 1 mut confirmed)"
+    },
+    "no_fabrication": {
+      "status": "PASS",
+      "ega_specimen_temporal_null": true,
+      "note": "Individual EGA BAM specimens keep temporal_marker=null (API lacks EGAN<->EGAF link); temporal only at cohort/stratum. MSK MD5s all verified MATCH.",
+      "msk_md5_verified": "3/3 files MATCH Synapse checksums"
+    },
+    "collection_separation": {
+      "status": "PASS",
+      "crispro_kb_v3": 1418,
+      "zeta_vault": 870,
+      "neo4j_cross_links": 0
+    }
+  },
+  "overall": "PASS"
+}

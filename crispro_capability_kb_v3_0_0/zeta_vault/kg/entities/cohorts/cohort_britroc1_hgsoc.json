@@ -7,12 +7,18 @@
       "source": "EGA manifest",
       "accession": "EGAD00001011049",
       "n_files": 679
+    },
+    {
+      "source": "EGA metadata API",
+      "dataset": "EGAD00001011049",
+      "pulled": "2026-07-21T02:15:00Z"
     }
   ],
   "verbatim_evidence": [
     "679 WGS BAM specimens: 292 JBLAB-prefixed + 387 IM-prefixed",
     "Platinum-sensitive/resistant high-grade serous ovarian cancer (HGSOC)",
-    "Clinical outcome labels (PFI/platinum status) NOT in EGA dataset - external supplement required"
+    "Clinical outcome labels (PFI/platinum status) NOT in EGA dataset - external supplement required",
+    "sWGS; 679 samples / 265 subjects; 385 diagnosis + 294 relapse; longitudinal (up to 11 samples/subject)"
   ],
   "cross_refs": {
     "ega_dataset": "EGAD00001011049",
@@ -28,7 +34,24 @@
     "namespace_note": "JBLAB and IM are distinct specimen ID namespaces; each BAM = 1 unique specimen/MD5",
     "labels_available": false,
     "label_source": "BriTROC-1 publication supplement (external)",
-    "role": "TRAIN+VALIDATE for Sig7 / CN-breakpoint models"
+    "role": "TRAIN+VALIDATE for Sig7 / CN-breakpoint models",
+    "sequencing_strategy": "shallow WGS (sWGS)",
+    "platforms": [
+      "Illumina HiSeq 2500",
+      "Illumina HiSeq 4000"
+    ],
+    "n_samples_metadata": 679,
+    "n_unique_subjects": 265,
+    "temporal_split": {
+      "diagnosis": 385,
+      "relapse": 294
+    },
+    "temporal_evidence": "Sample titles: 385 'diagnosis tumour DNA' + 294 'relapse tumour DNA'",
+    "longitudinal": true,
+    "max_samples_per_subject": 11,
+    "phenotype": "High grade serous carcinoma (100%)",
+    "biological_sex": "female (100%)",
+    "note": "Per-sample temporal marker (diagnosis/relapse) available at EGAN sample level; direct EGAN<->EGAF(BAM) row linkage NOT exposed by metadata API, so temporal not mapped to individual BAM specimens (honest)"
   },
   "_stream": "zeta_ingest",
   "_mint_planner": "zeta_custodian",

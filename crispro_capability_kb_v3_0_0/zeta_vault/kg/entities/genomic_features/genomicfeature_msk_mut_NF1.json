@@ -1,0 +1,33 @@
+{
+  "id": "genomicfeature:msk:mut:NF1",
+  "type": "GenomicFeature",
+  "name": "NF1 oncogenic mutation (MSK)",
+  "source_receipts": [
+    "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+  ],
+  "verbatim_evidence": [
+    "NF1: 1 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+    "Variant classes: Splice_Site"
+  ],
+  "cross_refs": [
+    "NF1",
+    "p.X69_splice"
+  ],
+  "attributes": {
+    "gene": "NF1",
+    "feature_type": "somatic_mutation",
+    "n_mutations": 1,
+    "n_samples": 1,
+    "variant_classifications": [
+      "Splice_Site"
+    ],
+    "example_hgvsp": [
+      "p.X69_splice"
+    ],
+    "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+    "recurrence_pct": 2.5
+  },
+  "_stream": "synapse_msk_spectrum",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T02:15:00Z"
+}

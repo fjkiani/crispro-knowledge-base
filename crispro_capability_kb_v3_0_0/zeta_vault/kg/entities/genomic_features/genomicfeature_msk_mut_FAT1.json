@@ -1,0 +1,34 @@
+{
+  "id": "genomicfeature:msk:mut:FAT1",
+  "type": "GenomicFeature",
+  "name": "FAT1 oncogenic mutation (MSK)",
+  "source_receipts": [
+    "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+  ],
+  "verbatim_evidence": [
+    "FAT1: 2 oncogenic/likely-oncogenic somatic mutation(s) in 2 MSK samples",
+    "Variant classes: Frame_Shift_Del, Splice_Region"
+  ],
+  "cross_refs": [
+    "FAT1",
+    "p.I2008Qfs*7"
+  ],
+  "attributes": {
+    "gene": "FAT1",
+    "feature_type": "somatic_mutation",
+    "n_mutations": 2,
+    "n_samples": 2,
+    "variant_classifications": [
+      "Frame_Shift_Del",
+      "Splice_Region"
+    ],
+    "example_hgvsp": [
+      "p.I2008Qfs*7"
+    ],
+    "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+    "recurrence_pct": 5.0
+  },
+  "_stream": "synapse_msk_spectrum",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T02:15:00Z"
+}

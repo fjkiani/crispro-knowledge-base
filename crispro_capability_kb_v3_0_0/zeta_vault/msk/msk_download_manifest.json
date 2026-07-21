@@ -1,0 +1,29 @@
+{
+  "syn39607857": {
+    "filename": "cna.tsv",
+    "path": "/workspace/zeta_vault/msk/cna.tsv",
+    "size": 76831,
+    "md5_local": "30fac82238a685ab9acac5bbbb6d9134",
+    "md5_synapse": "30fac82238a685ab9acac5bbbb6d9134",
+    "synapse_id": "syn39607857",
+    "dataFileHandleId": "107899554"
+  },
+  "syn39607858": {
+    "filename": "cohort.maf",
+    "path": "/workspace/zeta_vault/msk/cohort.maf",
+    "size": 161618,
+    "md5_local": "85acba97650b6814fabb4532e3e19fc3",
+    "md5_synapse": "85acba97650b6814fabb4532e3e19fc3",
+    "synapse_id": "syn39607858",
+    "dataFileHandleId": "107899556"
+  },
+  "syn39607860": {
+    "filename": "segments.seg",
+    "path": "/workspace/zeta_vault/msk/segments.seg",
+    "size": 3357347,
+    "md5_local": "55746ffef5ceba75f1e335ae5337d759",
+    "md5_synapse": "55746ffef5ceba75f1e335ae5337d759",
+    "synapse_id": "syn39607860",
+    "dataFileHandleId": "107899559"
+  }
+}

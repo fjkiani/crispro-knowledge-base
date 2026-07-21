@@ -144,3 +144,46 @@ Each worker emits the mandated per-batch output (total vectors / silhouette / Pa
 4. **P1** — Run BriTROC Sig7 extraction on an EGA-adjacent/HPC node (+ obtain clinical map for labels).
 
 **Security:** All EGA/Synapse/SAS credentials were provided in plaintext — rotate after this session.
+
+
+---
+
+## SESSION 2 ADDENDUM (2026-07-21): MSK Genomics Extraction + EGA Metadata Enrichment
+
+**Trigger:** Valid Synapse Personal Access Token provided (authenticated as `fjkiani`, scopes view/download/modify). Directive: extract *relationships/metadata*, not the 500+ GB of raw BAMs.
+
+### MSK SPECTRUM genomics — EXTRACTED (real data, in-sandbox)
+The previously token-blocked `GAP-MSK-ESCAPE-N39` is now **ADDRESSED with real genomics**:
+- Downloaded + **MD5-verified** (all 3 MATCH Synapse): `cna.tsv` (756 genes × 40 samples), `cohort.maf` (87 somatic mutations, VEP+OncoKB), `segments.seg` (49,620 CN segments). Total 3.6 MB.
+- Cohort is **N=40 HGSOC patients** (the "N39" label was approximate; 39 carry somatic mutations).
+- Minted **+41 sample/cohort entities + 30 GenomicFeature nodes** (aggregated functional units, not 49k raw segments):
+  - **CCNE1 high-level amplification in 6/40 samples (15%)** — closes W2 Kill Chain gap TF2-SLOP-004
+  - **TP53 mutated in 39/40** (near-universal, HGSOC sanity check ✓); CDK12/RB1/BRCA1 oncogenic mutations
+  - BRCA1/BRCA2/RB1/NF1 copy-number loss profiles
+- **+135 relationship edges** (`harbors_mutation`, `harbors_cna`, `specimen_of`).
+
+### EGA BriTROC-1 — ENRICHED via metadata API (no BAM bytes)
+- Pulled dataset + 679 samples + 679 files from `metadata.ega-archive.org`. **100% MD5 overlap (679/679)** with existing manifest.
+- Newly established facts: **shallow WGS (sWGS)** on Illumina HiSeq 2500/4000; **all female HGSOC**; **265 unique subjects** (longitudinal, up to 11 samples/subject).
+- **Temporal axis recovered:** 385 `diagnosis` vs 294 `relapse` samples — minted as `CohortStratum` nodes; enables the Sig7 diagnosis→relapse resistance contrast **without downloading BAMs**.
+
+### Worker deltas (all 5 re-run)
+- **W1 Prophet:** 11 genes with *real* Zeta routes; BRAF/KRAS/NRAS (the hidden logit-model genes) upgraded by observed MSK mutation evidence. **MFAP4 still correctly NOT addressable.**
+- **W2 Kill Chain:** signals with data **2/6 → 3/6** (CCNE1 CNA gap closed). **ctDNA verified non-wirable** — MSK SPECTRUM is tissue-only, no ctDNA/cfDNA modality exists. KELIM Signal6 dead code (RES-OV-P0-009) unchanged (framework code bug, not data).
+- **W3 Disk:** MSK 3.6 MB downloaded+parsed; EGA 510.8 GB still blocked.
+- **W4 Train-ledger:** real MSK genomic frequencies logged (replace assumptions).
+- **W5 Refinement:** **`cleared_for_patient_facing` = NO** (unchanged — data enrichment does not change production-eligibility).
+
+### Stores after session 2
+- KG: **797 → 870 entities, 798 → 977 edges** (Neo4j `:ZetaVault` namespace, **0 cross-links** to v3).
+- Qdrant `zeta_vault`: **797 → 870 points** (dense+BM25); avg silhouette **0.594** (honest decrease from 0.658 — new HGSOC-overlapping types reduce inter-cluster separation). `crispro_kb_v3` untouched at 1418.
+- PatientID keyword ports: MSK 40/40 + EGA 53/53 spot-check = **100% addressable**.
+
+### Honesty audit (session 2): **PASS** (all 4 checks)
+RUO contamination 0 flags · MFAP4 tier preserved · no fabrication (EGA specimen temporal null; MSK MD5s verified) · collection separation intact.
+
+### Still honest / unchanged limitations
+- ctDNA gap remains architectural (framework wiring), not closable by Zeta.
+- MFAP4 out of scope (GSE63885 external GEO).
+- Full 510.8 GB EGA BAM download infeasible in-sandbox; htsget still HTTP 500 server-side.
+- Framework not cleared for patient-facing use.

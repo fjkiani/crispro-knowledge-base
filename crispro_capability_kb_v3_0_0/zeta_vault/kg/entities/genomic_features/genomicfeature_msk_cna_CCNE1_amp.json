@@ -1,0 +1,32 @@
+{
+  "id": "genomicfeature:msk:cna:CCNE1_amp",
+  "type": "GenomicFeature",
+  "name": "CCNE1 amplification (MSK)",
+  "source_receipts": [
+    "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+  ],
+  "verbatim_evidence": [
+    "CCNE1 amplification (CN>=1) in 6/40 MSK WGS samples; all high-level (=2)",
+    "CCNE1 amplification is an established driver of platinum/CDK4-6i resistance in HGSOC"
+  ],
+  "cross_refs": [
+    "CCNE1",
+    "SHAH_H000222_T01_07_WG01",
+    "SHAH_H000020_T07_02_WG01",
+    "SHAH_H000034_T07_01_WG01",
+    "SHAH_H000038_T14_01_WG01",
+    "SHAH_H000705_T02_03_WG01",
+    "SHAH_H000708_T06_01_WG01"
+  ],
+  "attributes": {
+    "gene": "CCNE1",
+    "feature_type": "copy_number_amplification",
+    "n_samples": 6,
+    "amp_pct": 15.0,
+    "all_high_level": true,
+    "wires_worker_signal": "W2 Kill Chain TF2-SLOP-004 (CCNE1 CNA gap)"
+  },
+  "_stream": "synapse_msk_spectrum",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T02:15:00Z"
+}

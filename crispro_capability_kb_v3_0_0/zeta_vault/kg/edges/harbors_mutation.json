@@ -1,0 +1,682 @@
+[
+  {
+    "source": "biospecimen:msk:SHAH_H000013_T17_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:ARID3A",
+    "attributes": {
+      "gene": "ARID3A"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000338_T05_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:BRAF",
+    "attributes": {
+      "gene": "BRAF"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H001753_T04_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:BRCA1",
+    "attributes": {
+      "gene": "BRCA1"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000340_T05_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:CDK12",
+    "attributes": {
+      "gene": "CDK12"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000036_T06_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:EPHA3",
+    "attributes": {
+      "gene": "EPHA3"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000041_T02_05_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:FAT1",
+    "attributes": {
+      "gene": "FAT1"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000706_T04_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:FAT1",
+    "attributes": {
+      "gene": "FAT1"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000339_T03_03_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:INPP4B",
+    "attributes": {
+      "gene": "INPP4B"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000020_T07_02_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:JARID2",
+    "attributes": {
+      "gene": "JARID2"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000338_T05_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:JARID2",
+    "attributes": {
+      "gene": "JARID2"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000707_T08_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:JARID2",
+    "attributes": {
+      "gene": "JARID2"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000039_T10_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:KDM5C",
+    "attributes": {
+      "gene": "KDM5C"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000020_T07_02_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:KMT2A",
+    "attributes": {
+      "gene": "KMT2A"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000338_T05_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:KMT2C",
+    "attributes": {
+      "gene": "KMT2C"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000041_T02_05_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:KMT2D",
+    "attributes": {
+      "gene": "KMT2D"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000025_T04_02_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:LATS1",
+    "attributes": {
+      "gene": "LATS1"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000213_T13_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:LATS1",
+    "attributes": {
+      "gene": "LATS1"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000033_T16_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:MGA",
+    "attributes": {
+      "gene": "MGA"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000013_T17_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:NF1",
+    "attributes": {
+      "gene": "NF1"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000036_T06_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:NOTCH2",
+    "attributes": {
+      "gene": "NOTCH2"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000036_T06_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:PBRM1",
+    "attributes": {
+      "gene": "PBRM1"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000039_T10_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:PHF6",
+    "attributes": {
+      "gene": "PHF6"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000026_T01_02_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:PIK3CA",
+    "attributes": {
+      "gene": "PIK3CA"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000005_T26_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:PIK3R2",
+    "attributes": {
+      "gene": "PIK3R2"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000222_T01_07_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:RASA1",
+    "attributes": {
+      "gene": "RASA1"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000021_T07_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:RB1",
+    "attributes": {
+      "gene": "RB1"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000013_T17_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:SDHA",
+    "attributes": {
+      "gene": "SDHA"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000011_T08_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:SPEN",
+    "attributes": {
+      "gene": "SPEN"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000708_T06_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TOP1",
+    "attributes": {
+      "gene": "TOP1"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000004_T09_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000005_T26_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000006_T15_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000009_T15_02_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000011_T08_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000013_T17_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000019_T10_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000020_T07_02_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000021_T07_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000022_T10_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000024_T08_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000025_T04_02_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000026_T01_02_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000031_T08_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000033_T16_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000034_T07_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000035_T13_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000036_T06_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000037_T18_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000038_T14_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000039_T10_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000041_T02_05_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000149_T02_02_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000180_T02_02_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000181_T10_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000213_T13_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000214_T11_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000222_T01_07_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000338_T05_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000339_T03_03_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000340_T05_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000342_T04_03_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000705_T02_03_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000706_T04_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000707_T08_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000708_T06_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H001749_T06_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H001753_T04_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:TP53",
+    "attributes": {
+      "gene": "TP53"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "biospecimen:msk:SHAH_H000019_T10_01_WG01",
+    "relation": "harbors_mutation",
+    "target": "genomicfeature:msk:mut:WT1",
+    "attributes": {
+      "gene": "WT1"
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  }
+]

@@ -22,3 +22,35 @@ METADATA FINGERPRINT (per chunk): primary_key / source_vault / biological_state 
                                   genomic_signature / temporal_marker
 VAULT_INVENTORY:                  797 entries, 679 with real Source_File_MD5, STALE-flagging armed
 ============================================================================
+
+
+
+================= HYBRID INGESTION BATCH REPORT (Session 2026-07-21) =================
+BATCH: MSK-SPECTRUM-GENOMICS + EGA-METADATA-ENRICHMENT
+
+[1] TOTAL VECTORS
+    zeta_vault collection total : 870
+      - prior baseline           : 797
+      - new this batch (MSK+strata): 73
+      - re-indexed (EGA enriched): 680 (updated in place, deterministic IDs)
+    crispro_kb_v3 (untouched)    : 1418
+
+[2] AVG SILHOUETTE SCORE (by entity_type, cosine)
+    current  : 0.5937
+    prior    : 0.6579
+    delta    : -0.0642  (expected decrease: +30 GenomicFeature + 40 MSK specimens
+               semantically overlap existing HGSOC/WGS clusters; honest metric, not regression)
+    n_clusters (entity types): 10
+
+[3] PATIENT/SAMPLE ID -> KEYWORD PORT VERIFICATION
+    MSK sample_ids exact-addressable (fingerprint.primary_key) : 40/40  (100%)
+    EGA sample_ids exact-addressable (spot-check n=53)          : 53/53  (100%)
+    Anchor MD5 714c3c75...436a -> primary_key 'JBLAB-4261'      : VERIFIED
+    Total specimen PatientIDs in collection                    : 719 (679 EGA + 40 MSK)
+
+[4] METADATA FINGERPRINT (every chunk)
+    fields: primary_key / source_vault / biological_state / genomic_signature / temporal_marker
+    NEW: temporal_marker now populated at CohortStratum/cohort level (diagnosis/relapse)
+         -> individual EGA BAM specimens remain temporal_marker=null (API lacks EGAN<->EGAF row link; honest)
+    source_vaults present: ['EGA', 'KB', 'Synapse']
+=====================================================================================

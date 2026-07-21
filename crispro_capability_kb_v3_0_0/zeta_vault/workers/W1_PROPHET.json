@@ -17,6 +17,7 @@
       "MFAP4"
     ],
     "genes_no_route_literature_only": [
+      "RAD51B",
       "PALB2",
       "TP53BP1",
       "SHLD1",
@@ -36,12 +37,24 @@
         [
           "EGA BriTROC-1 WGS",
           "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
+        ],
+        [
+          "MSK SPECTRUM WGS (syn25569736)",
+          "oncogenic somatic mutation observed: 2 mut in 1 samples -> GAP-MSK-ESCAPE-N39"
+        ],
+        [
+          "MSK SPECTRUM WGS",
+          "CN loss in 38/40 samples -> DDR/HRD context, GAP-MSK-ESCAPE-N39"
         ]
       ],
       "BRCA2": [
         [
           "EGA BriTROC-1 WGS",
           "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
+        ],
+        [
+          "MSK SPECTRUM WGS",
+          "CN loss in 23/40 samples -> DDR/HRD context, GAP-MSK-ESCAPE-N39"
         ]
       ],
       "RAD51C": [
@@ -69,6 +82,10 @@
         [
           "Synapse cna.tsv/segments.seg",
           "CCNE1 CNA amplification -> TF2-SLOP-004"
+        ],
+        [
+          "MSK SPECTRUM WGS",
+          "CCNE1 amplification in 6/40 samples (high-level) -> resistance driver, GAP-MSK-ESCAPE-N39"
         ]
       ],
       "CDK12": [
@@ -79,6 +96,10 @@
         [
           "EGA BriTROC-1 WGS",
           "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
+        ],
+        [
+          "MSK SPECTRUM WGS (syn25569736)",
+          "oncogenic somatic mutation observed: 2 mut in 1 samples -> GAP-MSK-ESCAPE-N39"
         ]
       ],
       "PTEN": [],
@@ -93,6 +114,14 @@
         [
           "EGA BriTROC-1 WGS",
           "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
+        ],
+        [
+          "MSK SPECTRUM WGS (syn25569736)",
+          "oncogenic somatic mutation observed: 2 mut in 1 samples -> GAP-MSK-ESCAPE-N39"
+        ],
+        [
+          "MSK SPECTRUM WGS",
+          "CN loss in 29/40 samples -> DDR/HRD context, GAP-MSK-ESCAPE-N39"
         ]
       ],
       "ABCB1": [],
@@ -103,6 +132,14 @@
         [
           "EGA BriTROC-1 WGS",
           "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
+        ],
+        [
+          "MSK SPECTRUM WGS (syn25569736)",
+          "oncogenic somatic mutation observed: 1 mut in 1 samples -> GAP-MSK-ESCAPE-N39"
+        ],
+        [
+          "MSK SPECTRUM WGS",
+          "CN loss in 39/40 samples -> DDR/HRD context, GAP-MSK-ESCAPE-N39"
         ]
       ],
       "MFAP4": [
@@ -115,6 +152,10 @@
         [
           "SAS PDS outcomes / EGA+MSK",
           "replace simulation-derived logit coeffs with real outcome fit"
+        ],
+        [
+          "MSK SPECTRUM WGS (syn25569736)",
+          "oncogenic somatic mutation observed: 1 mut in 1 samples -> GAP-MSK-ESCAPE-N39"
         ]
       ],
       "KRAS": [
@@ -128,9 +169,45 @@
           "SAS PDS outcomes / EGA+MSK",
           "replace simulation-derived logit coeffs with real outcome fit"
         ]
+      ],
+      "TP53": [
+        [
+          "MSK SPECTRUM WGS (syn25569736)",
+          "oncogenic somatic mutation observed: 48 mut in 38 samples -> GAP-MSK-ESCAPE-N39"
+        ]
       ]
     },
     "heuristic_flag": "MBD4 tier=HEURISTIC (Zeta_Protocol_Inference, no external validation) - candidate for SAS/EGA outcome grounding",
-    "prophet_note": "Prophet logit coefficients PENDING_REAL_DATA (simulation-derived, anchored Colomban 2023). Zeta EGA+SAS outcomes are the real-data path."
+    "prophet_note": "Prophet logit coefficients PENDING_REAL_DATA (simulation-derived, anchored Colomban 2023). Zeta EGA+SAS outcomes are the real-data path.",
+    "genes_with_zeta_route_list": [
+      "BRAF",
+      "BRCA1",
+      "BRCA2",
+      "CCNE1",
+      "CDK12",
+      "KRAS",
+      "NF1",
+      "NRAS",
+      "RAD51C",
+      "RB1",
+      "TP53"
+    ],
+    "integrity_note": "MFAP4 excluded from routed genes: its only entry is an explicit NOT-addressable placeholder (GSE63885 external GEO, out of Zeta scope). Verified absent from MSK CNA+MAF.",
+    "genes_newly_routed_via_msk": [
+      "BRCA1",
+      "BRCA2",
+      "CCNE1",
+      "CDK12",
+      "RB1",
+      "NF1",
+      "TP53",
+      "BRAF"
+    ],
+    "logit_genes_upgraded_by_msk": [
+      "BRAF",
+      "KRAS",
+      "NRAS",
+      "TP53"
+    ]
   }
 }

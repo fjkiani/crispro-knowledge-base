@@ -40,5 +40,35 @@
     "attributes": {},
     "_mint_planner": "zeta_custodian",
     "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "source": "cohort:msk_spectrum_hgsoc",
+    "relation": "part_of",
+    "target": "vault:synapse_msk_spectrum",
+    "attributes": {},
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "cohortstratum:britroc1:diagnosis",
+    "relation": "part_of",
+    "target": "cohort:britroc1_hgsoc",
+    "attributes": {
+      "temporal_marker": "diagnosis",
+      "n_samples": 385
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "source": "cohortstratum:britroc1:relapse",
+    "relation": "part_of",
+    "target": "cohort:britroc1_hgsoc",
+    "attributes": {
+      "temporal_marker": "relapse",
+      "n_samples": 294
+    },
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
   }
 ]

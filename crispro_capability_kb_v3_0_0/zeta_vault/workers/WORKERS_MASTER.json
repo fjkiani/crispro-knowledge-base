@@ -1,512 +1,62 @@
 {
-  "generated": "2026-07-21T00:53:00Z",
-  "custodian": "Zeta Research Vault",
-  "framework_ref": "CrisPRO Resistance Framework (production-readiness report 2025-07-14)",
+  "generated": "2026-07-21T02:15:00Z",
+  "session": "2026-07-21 MSK genomics extraction + EGA metadata enrichment",
+  "custodian": "zeta_custodian",
+  "collection": "zeta_vault",
+  "total_vectors": 870,
+  "avg_silhouette_score": 0.5937,
+  "kg_entities": 870,
+  "kg_edges": 977,
   "workers": {
     "W1_PROPHET": {
-      "worker": "W1_PROPHET",
-      "timestamp": "2026-07-21T00:51:08Z",
-      "total_vectors": 20,
-      "avg_silhouette_score": 0.3212,
-      "patientid_keyword_port_verification": "N/A (gene-tier mapping layer; no per-patient vectors in scope)",
-      "findings": {
-        "gene_universe_size": 25,
-        "tier_distribution": {
-          "VALIDATED": 12,
-          "LITERATURE_ONLY": 9,
-          "HEURISTIC": 1,
-          "LOGIT_MODEL_ONLY": 3
-        },
-        "genes_with_zeta_route": 11,
-        "genes_not_addressable_by_zeta": [
-          "MFAP4"
-        ],
-        "genes_no_route_literature_only": [
-          "PALB2",
-          "TP53BP1",
-          "SHLD1",
-          "SHLD2",
-          "MAD2L2",
-          "PTEN",
-          "KEAP1",
-          "CUL3",
-          "SLC31A1",
-          "ABCB1",
-          "B2M",
-          "SLFN11",
-          "MBD4"
-        ],
-        "gene_to_zeta_routes": {
-          "BRCA1": [
-            [
-              "EGA BriTROC-1 WGS",
-              "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
-            ]
-          ],
-          "BRCA2": [
-            [
-              "EGA BriTROC-1 WGS",
-              "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
-            ]
-          ],
-          "RAD51C": [
-            [
-              "EGA BriTROC-1 WGS",
-              "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
-            ]
-          ],
-          "RAD51D": [
-            [
-              "EGA BriTROC-1 WGS",
-              "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
-            ]
-          ],
-          "PALB2": [],
-          "TP53BP1": [],
-          "SHLD1": [],
-          "SHLD2": [],
-          "MAD2L2": [],
-          "CCNE1": [
-            [
-              "EGA BriTROC-1 WGS",
-              "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
-            ],
-            [
-              "Synapse cna.tsv/segments.seg",
-              "CCNE1 CNA amplification -> TF2-SLOP-004"
-            ]
-          ],
-          "CDK12": [
-            [
-              "Synapse MSK WGS (cna/maf/seg)",
-              "expand n beyond 39 -> GAP-MSK-ESCAPE-N39"
-            ],
-            [
-              "EGA BriTROC-1 WGS",
-              "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
-            ]
-          ],
-          "PTEN": [],
-          "KEAP1": [],
-          "CUL3": [],
-          "SLC31A1": [],
-          "RB1": [
-            [
-              "Synapse MSK WGS (cna/maf/seg)",
-              "expand n beyond 39 -> GAP-MSK-ESCAPE-N39"
-            ],
-            [
-              "EGA BriTROC-1 WGS",
-              "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
-            ]
-          ],
-          "ABCB1": [],
-          "B2M": [],
-          "SLFN11": [],
-          "MBD4": [],
-          "NF1": [
-            [
-              "EGA BriTROC-1 WGS",
-              "derive somatic/CNA + Sig exposures -> GAP-SIG7-BRITROC/GAP-23GENE-PROXY"
-            ]
-          ],
-          "MFAP4": [
-            [
-              "NONE (GSE63885 external GEO)",
-              "GAP-MFAP4-UNREPRODUCIBLE - NOT addressable by Zeta"
-            ]
-          ],
-          "BRAF": [
-            [
-              "SAS PDS outcomes / EGA+MSK",
-              "replace simulation-derived logit coeffs with real outcome fit"
-            ]
-          ],
-          "KRAS": [
-            [
-              "SAS PDS outcomes / EGA+MSK",
-              "replace simulation-derived logit coeffs with real outcome fit"
-            ]
-          ],
-          "NRAS": [
-            [
-              "SAS PDS outcomes / EGA+MSK",
-              "replace simulation-derived logit coeffs with real outcome fit"
-            ]
-          ]
-        },
-        "heuristic_flag": "MBD4 tier=HEURISTIC (Zeta_Protocol_Inference, no external validation) - candidate for SAS/EGA outcome grounding",
-        "prophet_note": "Prophet logit coefficients PENDING_REAL_DATA (simulation-derived, anchored Colomban 2023). Zeta EGA+SAS outcomes are the real-data path."
-      }
+      "genes_routed": 11,
+      "newly_msk_routed": [
+        "BRCA1",
+        "BRCA2",
+        "CCNE1",
+        "CDK12",
+        "RB1",
+        "NF1",
+        "TP53",
+        "BRAF"
+      ],
+      "not_addressable": [
+        "MFAP4"
+      ],
+      "logit_genes_upgraded": [
+        "BRAF",
+        "KRAS",
+        "NRAS",
+        "TP53"
+      ]
     },
     "W2_KILL_CHAIN": {
-      "worker": "W2_KILL_CHAIN",
-      "timestamp": "2026-07-21T00:51:34Z",
-      "total_vectors": 20,
-      "avg_silhouette_score": 0.3212,
-      "patientid_keyword_port_verification": "N/A (signal-wiring layer; per-patient firing requires downloaded genomic/clinical bytes)",
-      "findings": {
-        "kill_chain_model": "2-of-3 concordance (CA-125 + HRD + ctDNA) per Harness C",
-        "signals": {
-          "CA125_RISING": {
-            "zeta_source": "SAS PDS serial CA-125 (ador/adef/adlb)",
-            "gap": "GAP-KELIM-SIM: real serial kinetics",
-            "status": "WIRED"
-          },
-          "HRD_BASELINE": {
-            "zeta_source": "EGA BriTROC-1 WGS (HRD/Sig3 from BAMs)",
-            "gap": "GAP-SIG7-BRITROC",
-            "status": "WIRED"
-          },
-          "SIGNAL_CTDNA_MRD": {
-            "zeta_source": "Synapse MSK SPECTRUM (plasma modality if present)",
-            "gap": "GAP-CTDNA-NOTWIRED",
-            "status": "ACCEPTED_BY_KC_NOT_WIRED_TO_PROPHET"
-          },
-          "KELIM_GENOTYPE_CONVERGENCE": {
-            "zeta_source": "SAS PDS serial markers + EGA genomics",
-            "gap": "GAP-KELIM-SIM + RES-OV-P0-009 dead code",
-            "status": "DEAD_CODE_SIGNAL6"
-          },
-          "TRANSCRIPTOMIC_RESISTANCE": {
-            "zeta_source": "NONE (MFAP4/GSE63885 external)",
-            "gap": "GAP-MFAP4-UNREPRODUCIBLE",
-            "status": "RNA_ONLY_EXTERNAL"
-          },
-          "CNA_AMPLIFICATION": {
-            "zeta_source": "Synapse cna.tsv/segments.seg (CCNE1)",
-            "gap": "TF2-SLOP-004 CCNE1 CNA gap",
-            "status": "GAP_OPEN"
-          }
-        },
-        "signals_wired": 2,
-        "signals_broken_or_gap": [
-          "SIGNAL_CTDNA_MRD",
-          "KELIM_GENOTYPE_CONVERGENCE",
-          "TRANSCRIPTOMIC_RESISTANCE",
-          "CNA_AMPLIFICATION"
-        ],
-        "bugs_flagged": [
-          {
-            "bug": "ctDNA_NOT_WIRED",
-            "issue_id": "RES-OV-P0-006",
-            "detail": "SIGNAL_CTDNA_MRD=True accepted by Kill Chain but ctdna_status=NOT_WIRED_INTO_PROPHET. ctDNA HIGH does not raise Prophet probability.",
-            "zeta_fix": "Synapse MSK plasma modality (UNKNOWN - pending valid token) to wire+calibrate"
-          },
-          {
-            "bug": "KELIM_Signal6_dead",
-            "issue_id": "RES-OV-P0-009",
-            "detail": "detect_kelim_genotype_convergence reads kelim_obj.kelim (always None). Signal 6 never fires.",
-            "zeta_fix": "Code fix (kelim->k) + SAS PDS real serial markers to validate firing"
-          },
-          {
-            "bug": "CCNE1_CNA_missed",
-            "issue_id": "TF2-SLOP-004",
-            "detail": "Prophet checks CCNE1 somatic mutations only; CNA amplification path missing.",
-            "zeta_fix": "Synapse cna.tsv/segments.seg provides CCNE1 CNA truth (READY_ON_TOKEN)"
-          },
-          {
-            "bug": "MAPK_BYPASS_priority",
-            "issue_id": "CHECKPOINT_FLAGGED",
-            "detail": "MAPK_BYPASS class priority ordering flagged for review in deterministic classifier (BRAF/KRAS/NRAS logit genes). Verify class-priority does not mis-rank MAPK bypass vs HRD reversion.",
-            "zeta_fix": "EGA+MSK genomic truth to empirically rank class priority instead of hardcoded order"
-          }
-        ],
-        "concordance_note": "2 signals (CA125_RISING, HRD_BASELINE) are WIRED. ctDNA accepted-not-wired; KELIM Signal6 dead; CCNE1 CNA gap; MAPK_BYPASS priority under review."
-      }
+      "signals_with_data": 3,
+      "ccne1_gap": "CLOSED (6/40 amp)",
+      "ctdna": "non-wirable (no modality)"
     },
     "W3_DISK": {
-      "worker": "W3_DISK",
-      "timestamp": "2026-07-21T00:51:56Z",
-      "total_vectors": 797,
-      "avg_silhouette_score": 0.6579,
-      "patientid_keyword_port_verification": "679/679 specimen PatientIDs registered in VAULT_INVENTORY",
-      "findings": {
-        "physical_inventory": {
-          "EGA_BriTROC1": {
-            "location": "EGA EGAD00001011049",
-            "access": "AUTHENTICATED_OK",
-            "download": "WORKING_1.1MBps",
-            "n_files": 679,
-            "bytes": 510797964805,
-            "gb": 510.8,
-            "type": "WGS_BAM_ONLY",
-            "downloaded_here": [
-              "EGAF00008095569 / JBLAB-4261.bam (123MB, MD5 verified)"
-            ],
-            "clinical_map": "ABSENT (external: BriTROC-1 supplement)",
-            "in_sandbox_feasible": "NO - 1.8-5.3 days DL + 512GB disk ceiling"
-          },
-          "Synapse_MSK_SPECTRUM": {
-            "location": "syn25569736",
-            "access": "TOKEN_INVALID_401",
-            "download": "BLOCKED",
-            "metadata": "PUBLIC_READABLE",
-            "key_files": [
-              "cna.tsv/syn39607857",
-              "cohort.maf/syn39607858",
-              "segments.seg/syn39607860"
-            ],
-            "datasets": 7,
-            "downloaded_here": [],
-            "in_sandbox_feasible": "NO - needs valid token"
-          },
-          "SAS_PDS": {
-            "location": "mpmprodvdmml.ondemand.sas.com",
-            "access": "AUTHENTICATED_OK",
-            "download": "AVAILABLE",
-            "n_caslibs": 102,
-            "n_trials": 92,
-            "n_files": 543,
-            "bytes": 4009157902,
-            "gb": 4.0,
-            "type": "CDISC_ADaM_clinical",
-            "cancer_types": 14,
-            "downloaded_here": [],
-            "in_sandbox_feasible": "YES - 4.0GB fits; download+parse feasible next"
-          },
-          "local_v3_KB": {
-            "location": "/workspace/crispro-knowledge-base/crispro_capability_kb_v3_0_0",
-            "access": "ON_DISK",
-            "entities": "30 types",
-            "note": "existing KB (668 entities/1239 edges per checkpoint)"
-          },
-          "zeta_KG": {
-            "location": "/workspace/zeta_vault/kg + /mnt/results/zeta_vault/kg",
-            "entities": 797,
-            "edges": 798,
-            "access": "ON_DISK"
-          },
-          "zeta_vault_qdrant": {
-            "collection": "zeta_vault",
-            "points": 797,
-            "towers": "dense(2048)+bm25",
-            "access": "LIVE"
-          }
-        },
-        "total_characterized_gb": 514.8,
-        "in_sandbox_downloadable_now_gb": 4.0,
-        "blocked_gb": 510.8,
-        "blocked_reason": "EGA slow+disk ceiling (infeasible in-sandbox); Synapse token invalid",
-        "honest_status": "514.8 GB characterized; only 4.0 GB (SAS) is in-sandbox-actionable now."
-      }
+      "msk_downloaded_mb": 3.6,
+      "ega_blocked_gb": 510.8
     },
     "W4_TRAIN_LEDGER": {
-      "worker": "W4_TRAIN_LEDGER",
-      "timestamp": "2026-07-21T00:52:23Z",
-      "total_vectors": 20,
-      "avg_silhouette_score": 0.3212,
-      "patientid_keyword_port_verification": "N/A (value-provenance ledger layer)",
-      "findings": {
-        "ledger": [
-          {
-            "component": "BriTROC Sig7 threshold=0.25",
-            "current": "HARDCODED (constants.py:29)",
-            "tier": "HEURISTIC",
-            "zeta_train_source": "EGA BriTROC-1 679 BAMs",
-            "action": "TRAIN threshold on real Sig exposures + outcomes",
-            "status": "PARTIAL - raw data available, needs HPC + external clinical map",
-            "gap": "GAP-SIG7-BRITROC"
-          },
-          {
-            "component": "Logit model coefficients",
-            "current": "SIMULATION-DERIVED (Colomban 2023 anchor)",
-            "tier": "PENDING_REAL_DATA",
-            "zeta_train_source": "EGA+SAS+MSK outcomes",
-            "action": "Re-fit logit on real patient outcomes",
-            "status": "BLOCKED - needs downloaded bytes + labels",
-            "gap": "multiple"
-          },
-          {
-            "component": "KELIM convergence betas",
-            "current": "N=500 SIMULATED (MC seed 42)",
-            "tier": "SIMULATION_ONLY",
-            "zeta_train_source": "SAS PDS serial CA-125 kinetics",
-            "action": "TRAIN on real serial-marker series",
-            "status": "PARTIAL - SAS feasible, needs ovarian/serial-CA125 trial located",
-            "gap": "GAP-KELIM-SIM"
-          },
-          {
-            "component": "23-gene DDR proxy panel",
-            "current": "AUROC 0.495 RANDOM on TCGA-OV",
-            "tier": "RANDOM",
-            "zeta_train_source": "EGA BriTROC + Synapse MSK maf/cna",
-            "action": "VALIDATE/refute on orthogonal genomic cohort",
-            "status": "PARTIAL - cohorts identified, access blockers",
-            "gap": "GAP-23GENE-PROXY"
-          },
-          {
-            "component": "MFAP4 AUROC=0.763",
-            "current": "UNREPRODUCIBLE (GSE63885 annotations stripped)",
-            "tier": "UNREPRODUCIBLE",
-            "zeta_train_source": "NONE (external GEO)",
-            "action": "NOT addressable by Zeta",
-            "status": "NO - out of scope, flagged to prevent false closure",
-            "gap": "GAP-MFAP4-UNREPRODUCIBLE"
-          },
-          {
-            "component": "MSK Spectrum escape n=39 (n_escape=0)",
-            "current": "STRIPPED backend stub",
-            "tier": "STRIPPED",
-            "zeta_train_source": "Synapse MSK WGS cna/maf/seg",
-            "action": "RESTORE escape-pair features",
-            "status": "READY_ON_TOKEN - exact files identified",
-            "gap": "GAP-MSK-ESCAPE-N39"
-          },
-          {
-            "component": "ctDNA -> Prophet wiring",
-            "current": "NOT_WIRED_INTO_PROPHET",
-            "tier": "NOT_WIRED",
-            "zeta_train_source": "Synapse MSK plasma (if present)",
-            "action": "Verify modality + wire MRD signal",
-            "status": "UNKNOWN - pending valid token",
-            "gap": "GAP-CTDNA-NOTWIRED"
-          },
-          {
-            "component": "SAE leakage (0.783->0.478 nested-CV)",
-            "current": "LEAKAGE_FLAGGED",
-            "tier": "LEAKAGE_FLAGGED",
-            "zeta_train_source": "SAS PDS labs/AE (adlb/adae)",
-            "action": "External leakage stress-test",
-            "status": "PARTIAL - does NOT restore stripped Tier3",
-            "gap": "GAP-SAE-LEAKAGE"
-          },
-          {
-            "component": "MBD4 tier",
-            "current": "HEURISTIC (Zeta_Protocol_Inference)",
-            "tier": "HEURISTIC",
-            "zeta_train_source": "EGA/SAS outcomes",
-            "action": "Ground heuristic in real cohort or keep labeled",
-            "status": "PARTIAL",
-            "gap": "none-direct"
-          }
-        ],
-        "n_hardcoded_or_simulated": 9,
-        "status_breakdown": {
-          "PARTIAL": 5,
-          "BLOCKED": 1,
-          "NO": 1,
-          "READY_ON_TOKEN": 1,
-          "UNKNOWN": 1
-        },
-        "trainable_partial": 5,
-        "ready_on_token": [
-          "MSK Spectrum escape n=39 (n_escape=0)"
-        ],
-        "not_addressable": [
-          "MFAP4 AUROC=0.763"
-        ],
-        "honest_summary": "9 hardcoded/simulated/stripped values ledgered. 0 fully closable in-sandbox now (all need downloaded bytes+labels or valid token). 1 READY_ON_TOKEN, 1 NOT addressable (MFAP4)."
-      }
+      "msk_real_frequencies": "logged (CCNE1/TP53/BRCA)"
     },
     "W5_PRODUCTION_REFINEMENT": {
-      "worker": "W5_PRODUCTION_REFINEMENT",
-      "timestamp": "2026-07-21T00:52:49Z",
-      "total_vectors": 797,
-      "avg_silhouette_score": 0.6579,
-      "patientid_keyword_port_verification": "679/679 specimen ports live for downstream per-patient training",
-      "findings": {
-        "refinement_plan": [
-          {
-            "priority": "P0",
-            "action": "Obtain valid Synapse token",
-            "unblocks": [
-              "GAP-MSK-ESCAPE-N39 (READY_ON_TOKEN)",
-              "GAP-CTDNA-NOTWIRED verification",
-              "GAP-23GENE-PROXY MSK arm"
-            ],
-            "effort": "external (user provides token)",
-            "feasible_in_sandbox": "YES once token valid (cna/maf/seg are small)",
-            "outcome": "Restore MSK escape-pair features (n=39->real); verify ctDNA modality"
-          },
-          {
-            "priority": "P0",
-            "action": "Download + parse SAS PDS (4.0GB, AUTH OK)",
-            "unblocks": [
-              "GAP-SAE-LEAKAGE stress-test",
-              "GAP-KELIM-SIM real serial markers"
-            ],
-            "effort": "~1-2h in-sandbox (4GB @ available speed)",
-            "feasible_in_sandbox": "YES",
-            "outcome": "Real serial CA-125 kinetics + labs/AE leakage replication"
-          },
-          {
-            "priority": "P1",
-            "action": "Fix code bugs (no data needed)",
-            "unblocks": [
-              "RES-OV-P0-009 KELIM dead code (kelim->k)",
-              "TF2-SLOP-004 CCNE1 CNA path",
-              "v3 T2/T12 test fixes"
-            ],
-            "effort": "code-only",
-            "feasible_in_sandbox": "YES (in backend repo, not this KB repo)",
-            "outcome": "Signal 6 fires; CCNE1 CNA detected; v3 production-eligible"
-          },
-          {
-            "priority": "P1",
-            "action": "EGA BriTROC Sig7 extraction",
-            "unblocks": [
-              "GAP-SIG7-BRITROC",
-              "GAP-23GENE-PROXY BriTROC arm"
-            ],
-            "effort": "HPC + Europe VM (1.8-5.3 days DL) OR htsget range-slice for targeted regions",
-            "feasible_in_sandbox": "NO (full) / PARTIAL (htsget slice)",
-            "outcome": "Real Sig7 threshold replacing hardcoded 0.25 - needs external clinical map for labels"
-          },
-          {
-            "priority": "P2",
-            "action": "ctDNA -> Prophet logit wiring",
-            "unblocks": [
-              "RES-OV-P0-006"
-            ],
-            "effort": "code + calibration cohort",
-            "feasible_in_sandbox": "conditional on Synapse plasma modality",
-            "outcome": "ctDNA HIGH raises Prophet probability (currently NOT_WIRED)"
-          },
-          {
-            "priority": "P3",
-            "action": "Re-fit logit coefficients on real outcomes",
-            "unblocks": [
-              "PENDING_REAL_DATA calibration"
-            ],
-            "effort": "requires assembled multi-cohort outcome table",
-            "feasible_in_sandbox": "NO (depends on P0/P1 data)",
-            "outcome": "Replace simulation-derived coeffs; clinical calibration"
-          },
-          {
-            "priority": "NEVER_WITHOUT_DATA",
-            "action": "MFAP4 0.763 restore",
-            "unblocks": [],
-            "effort": "requires GEO GSE63885 annotation restore",
-            "feasible_in_sandbox": "NO - out of Zeta scope",
-            "outcome": "Remains UNREPRODUCIBLE - flagged, not falsely closed"
-          }
-        ],
-        "production_gates": {
-          "cleared_for_patient_facing": "NO",
-          "reasons": [
-            "Logit coeffs simulation-derived (PENDING_REAL_DATA)",
-            "5 genes LITERATURE_ONLY (no OV cohort metric)",
-            "KELIM Signal 6 dead code (RES-OV-P0-009)",
-            "ctDNA NOT_WIRED_INTO_PROPHET (RES-OV-P0-006)",
-            "v3 T2/T12 pre-existing test failures"
-          ],
-          "zeta_contribution": "Zeta provides REAL-DATA training/validation paths for Sig7, KELIM, escape-pairs, DDR panel, SAE-leakage \u2014 but NONE closes in-sandbox today without token/HPC/labels.",
-          "ruo_contamination_check": "PASS - no RUO claims elevated to clinical; all tiers preserved verbatim; MFAP4 not falsely closed."
-        },
-        "sequencing": "P0(token+SAS) -> P1(code fixes+EGA slice) -> P2(ctDNA wire) -> P3(logit refit). MFAP4 never closable via Zeta."
-      }
+      "cleared_for_patient_facing": "NO",
+      "ruo_check": "PASS"
     }
   },
-  "cross_worker_summary": {
-    "gene_universe": 25,
-    "kill_chain_bugs_flagged": 4,
-    "total_data_gb": 514.8,
-    "in_sandbox_actionable_gb": 4.0,
-    "hardcoded_values_ledgered": 9,
-    "gaps_ready_on_token": 1,
-    "gaps_not_addressable": 1,
-    "cleared_patient_facing": "NO",
-    "ruo_contamination": "PASS"
-  }
+  "gaps_advanced_this_session": [
+    "GAP-MSK-ESCAPE-N39: ADDRESSED (real genomics in vault)",
+    "GAP-SIG7-BRITROC: temporal axis AVAILABLE (385 diag/294 relapse)",
+    "TF2-SLOP-004 (CCNE1 CNA): CLOSED for MSK cohort"
+  ],
+  "honest_unchanged": [
+    "GAP-CTDNA-NOTWIRED: architectural (RES-OV-P0-006); MSK has no ctDNA modality",
+    "GAP-MFAP4-UNREPRODUCIBLE: out of Zeta scope (GSE63885 external)",
+    "KELIM Signal6 dead code (RES-OV-P0-009): framework code bug, not data",
+    "Full 510.8 GB EGA BAM download: infeasible in-sandbox",
+    "cleared_for_patient_facing: NO"
+  ]
 }

@@ -1,0 +1,46 @@
+{
+  "id": "genomicfeature:msk:mut:TP53",
+  "type": "GenomicFeature",
+  "name": "TP53 oncogenic mutation (MSK)",
+  "source_receipts": [
+    "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+  ],
+  "verbatim_evidence": [
+    "TP53: 48 oncogenic/likely-oncogenic somatic mutation(s) in 38 MSK samples",
+    "Variant classes: Frame_Shift_Del, Frame_Shift_Ins, In_Frame_Del, Missense_Mutation, Nonsense_Mutation, Splice_Site"
+  ],
+  "cross_refs": [
+    "TP53",
+    "p.A159Hfs*21",
+    "p.A159V",
+    "p.A161Pfs*9",
+    "p.A70Cfs*79",
+    "p.C135del"
+  ],
+  "attributes": {
+    "gene": "TP53",
+    "feature_type": "somatic_mutation",
+    "n_mutations": 48,
+    "n_samples": 38,
+    "variant_classifications": [
+      "Frame_Shift_Del",
+      "Frame_Shift_Ins",
+      "In_Frame_Del",
+      "Missense_Mutation",
+      "Nonsense_Mutation",
+      "Splice_Site"
+    ],
+    "example_hgvsp": [
+      "p.A159Hfs*21",
+      "p.A159V",
+      "p.A161Pfs*9",
+      "p.A70Cfs*79",
+      "p.C135del"
+    ],
+    "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+    "recurrence_pct": 95.0
+  },
+  "_stream": "synapse_msk_spectrum",
+  "_mint_planner": "zeta_custodian",
+  "_mint_timestamp": "2026-07-21T02:15:00Z"
+}
