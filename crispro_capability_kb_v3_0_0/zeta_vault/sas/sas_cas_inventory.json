@@ -1,4 +1,4 @@
 {
-  "cas_url": "https://mpmprodvdmml.ondemand.sas.com/cas-shared-default-http/",
+  "cas_url": "https://<SAS_CAS_HOST_REDACTED>/cas-shared-default-http/",
   "caslibs": {}
 }

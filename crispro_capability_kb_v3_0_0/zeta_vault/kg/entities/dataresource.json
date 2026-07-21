@@ -1,0 +1,182 @@
+[
+  {
+    "id": "trial:sas:Formats",
+    "type": "DataResource",
+    "name": "SAS resource caslib Formats",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Formats",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Formats: 1 source files",
+      "Stores user defined formats.",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Formats"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "sponsor": "Unknown",
+      "year": "Unknown",
+      "trial_id": "Formats",
+      "n_files": 1,
+      "total_bytes": 64680,
+      "adam_tables": [],
+      "biological_relevance": "Formats clinical telemetry (labs/AE/dosing/serial markers)",
+      "resource_kind": "sas_infrastructure_caslib",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Models",
+    "type": "DataResource",
+    "name": "SAS resource caslib Models",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Models",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Models: 1 source files",
+      "Stores models created by Visual Analytics for use in other analytics or SAS Studio.",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Models"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "sponsor": "Unknown",
+      "year": "Unknown",
+      "trial_id": "Models",
+      "n_files": 1,
+      "total_bytes": 818568,
+      "adam_tables": [],
+      "biological_relevance": "Models clinical telemetry (labs/AE/dosing/serial markers)",
+      "resource_kind": "sas_infrastructure_caslib",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:PDSInfo",
+    "type": "DataResource",
+    "name": "SAS resource caslib PDSInfo",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "PDSInfo",
+        "n_files": 1
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib PDSInfo: 1 source files",
+      "PDSInfo oncology clinical trial (Unknown, Unknown)",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "PDSInfo"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "sponsor": "Unknown",
+      "year": "Unknown",
+      "trial_id": "PDSInfo",
+      "n_files": 1,
+      "total_bytes": 1187840,
+      "adam_tables": [],
+      "biological_relevance": "PDSInfo clinical telemetry (labs/AE/dosing/serial markers)",
+      "resource_kind": "sas_infrastructure_caslib",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:PDSSamples",
+    "type": "DataResource",
+    "name": "SAS resource caslib PDSSamples",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "PDSSamples",
+        "n_files": 3
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib PDSSamples: 3 source files",
+      "Data sets for use with PDS sample projects",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "PDSSamples"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "sponsor": "Unknown",
+      "year": "Unknown",
+      "trial_id": "PDSSamples",
+      "n_files": 3,
+      "total_bytes": 6587336,
+      "adam_tables": [],
+      "biological_relevance": "PDSSamples clinical telemetry (labs/AE/dosing/serial markers)",
+      "resource_kind": "sas_infrastructure_caslib",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "trial:sas:Samples",
+    "type": "DataResource",
+    "name": "SAS resource caslib Samples",
+    "source_receipts": [
+      {
+        "source": "SAS CAS fileinfo",
+        "caslib": "Samples",
+        "n_files": 6
+      }
+    ],
+    "verbatim_evidence": [
+      "CDISC ADaM caslib Samples: 6 source files",
+      "Stores sample data, supplied by SAS.",
+      "no loadable ADaM tables (files error on CAS load)"
+    ],
+    "cross_refs": {
+      "caslib": "Samples"
+    },
+    "attributes": {
+      "source_vault": "PDS_ProjectDataSphere",
+      "sponsor": "Unknown",
+      "year": "Unknown",
+      "trial_id": "Samples",
+      "n_files": 6,
+      "total_bytes": 56950296,
+      "adam_tables": [],
+      "biological_relevance": "Samples clinical telemetry (labs/AE/dosing/serial markers)",
+      "resource_kind": "sas_infrastructure_caslib",
+      "extraction_status": "no_loadable_tables",
+      "extraction_note": "Caslib inventoried but source files are not loadable SAS tables (HDFS blob/image/data-file paths); no patient-level content extractable."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  }
+]

@@ -1,8 +1,8 @@
 {
   "worker": "W4_TRAIN_LEDGER",
   "timestamp": "2026-07-21T02:15:00Z",
-  "total_vectors": 870,
-  "avg_silhouette_score": 0.5937,
+  "total_vectors": 20211,
+  "avg_silhouette_score": 0.4244,
   "patientid_keyword_port_verification": "N/A (value-provenance ledger layer)",
   "findings": {
     "ledger": [
@@ -112,6 +112,40 @@
         "BRCA1/2 CNA loss frequencies extracted (REAL)"
       ],
       "note": "N=40 MSK WGS cohort provides real genomic frequencies; these are observed values, not simulated/hardcoded."
+    }
+  },
+  "silhouette_natural_balance": 0.2776,
+  "session3_sas_update": {
+    "timestamp": "2026-07-21T07:30:00Z",
+    "summary": "Real adverse-event frequency + grade ledger now available from SAS.",
+    "findings": {
+      "real_ae_frequency_top10": {
+        "NAUSEA": 5016,
+        "NEUTROPENIA": 4658,
+        "FATIGUE": 4020,
+        "DIARRHEA": 3452,
+        "DIARRHOEA": 2646,
+        "VOMITING": 2564,
+        "10029363.0": 2159,
+        "RASH": 2003,
+        "PALMAR-PLANTAR ERYTHRODYSAESTHESIA SYNDROME": 1890,
+        "CONSTIPATION": 1781
+      },
+      "real_ae_grade_ledger": {
+        "1": 32901,
+        "2": 14461,
+        "3": 9503,
+        "4": 1813,
+        "5": 289
+      },
+      "real_kras_frequency_crc": {
+        "wildtype": 884,
+        "mutant": 667,
+        "mutation_rate_pct": 43.0,
+        "external_validity": "matches known ~40% CRC KRAS prevalence"
+      },
+      "msk_frequencies_unchanged": "CCNE1/TP53/BRCA logged in Session 2",
+      "note": "Ledger now carries empirical AE frequencies/grades across 23 trials + KRAS genotype rates. These are real observed counts, not simulation."
     }
   }
 }

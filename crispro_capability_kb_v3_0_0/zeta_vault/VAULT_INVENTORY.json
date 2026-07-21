@@ -1,12 +1,12 @@
 {
   "manifest": "zeta_vault hybrid index (dense nemotron 2048 + BM25 sparse, RRF)",
   "collection": "zeta_vault",
-  "generated": "2026-07-21T02:15:00Z",
+  "generated": "2026-07-21T07:25:51Z",
   "dense_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
   "dense_dim": 2048,
   "sparse_model": "Qdrant/bm25 (IDF)",
   "fusion": "RRF",
-  "total_vectors": 870,
+  "total_vectors": 20211,
   "stale_policy": "stale=true if source_file_md5 present and NOT verified against live source. EGA BAM MD5s carried from manifest (only 1 BAM byte-verified: JBLAB-4261). MSK files byte-verified but MD5 stored on cohort/file provenance, not per-specimen vectors.",
   "source_verification_this_session": {
     "ega_bam_byte_verified": [
@@ -6981,5 +6981,55 @@
       "primary_key": "IM_180",
       "verification": "metadata_crosschecked_not_byte_downloaded"
     }
-  ]
+  ],
+  "session3": {
+    "note": "SAS/CAS Project Data Sphere clinical extraction. Vault grew to 20,211 vectors (KG 20,211 entities / 91,637 edges; Neo4j :ZetaVault 20,211/91,637; Qdrant zeta_vault 20,211). crispro_kb_v3 untouched at 1418.",
+    "prior_total_vectors": 870,
+    "entity_type_counts": {
+      "TrialPatient": 16865,
+      "AdverseEventTerm": 2439,
+      "Biospecimen": 719,
+      "Trial": 92,
+      "TreatmentArm": 36,
+      "GenomicFeature": 31,
+      "Dataset": 7,
+      "KBGap": 7,
+      "DataResource": 5,
+      "DataVault": 3,
+      "FileArtifact": 3,
+      "PatientCohort": 2,
+      "CohortStratum": 2
+    },
+    "edge_relation_counts": {
+      "experienced_ae": 58987,
+      "enrolled_in": 16865,
+      "assigned_arm": 14770,
+      "specimen_of": 719,
+      "drawn_from": 105,
+      "harbors_mutation": 68,
+      "harbors_cna": 67,
+      "arm_of": 36,
+      "addresses_gap": 12,
+      "part_of": 6,
+      "stratified_by_biomarker": 2
+    },
+    "clinical_extraction": {
+      "caslibs_inventoried": 94,
+      "caslibs_with_loadable_tables": 33,
+      "trials_with_patient_data": 23,
+      "trials_no_loadable_tables_annotated": 69,
+      "patients": 17264,
+      "ae_records": 118859,
+      "ae_term_nodes_tiered": 2439,
+      "arms": 36,
+      "kras_crc_link": {
+        "wildtype": 884,
+        "mutant": 667,
+        "mutation_rate_pct": 43.0
+      }
+    },
+    "silhouette_stratified": 0.4244,
+    "silhouette_natural_balance": 0.2776,
+    "note_entries_field": "'entries' list (870 rows) is the pre-S3 per-vector inventory retained for the genomic/dataset layer; the authoritative full entity set is in kg/zeta_entities.json (20,211). Per-patient rows are not individually inventoried here to keep the file tractable."
+  }
 }

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "cohortstratum:britroc1:diagnosis",
+    "type": "CohortStratum",
+    "name": "BriTROC-1 diagnosis stratum (n=385)",
+    "source_receipts": [
+      "EGA metadata API metadata.ega-archive.org/datasets/EGAD00001011049 (dataset+samples+files) pulled 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "385 'diagnosis tumour DNA' samples in EGAD00001011049",
+      "Sample collected near point of diagnosis (majority primary)"
+    ],
+    "cross_refs": [
+      "EGAD00001011049"
+    ],
+    "attributes": {
+      "stratum": "diagnosis",
+      "n_samples": 385,
+      "temporal_marker": "diagnosis",
+      "cancer_type": "HGSOC",
+      "assay": "shallow WGS",
+      "cohort": "BriTROC-1"
+    },
+    "_stream": "ega_britroc1",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "cohortstratum:britroc1:relapse",
+    "type": "CohortStratum",
+    "name": "BriTROC-1 relapse stratum (n=294)",
+    "source_receipts": [
+      "EGA metadata API metadata.ega-archive.org/datasets/EGAD00001011049 (dataset+samples+files) pulled 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "294 'relapse tumour DNA' samples in EGAD00001011049",
+      "Sample collected after patient relapse, at/after study entry"
+    ],
+    "cross_refs": [
+      "EGAD00001011049"
+    ],
+    "attributes": {
+      "stratum": "relapse",
+      "n_samples": 294,
+      "temporal_marker": "relapse",
+      "cancer_type": "HGSOC",
+      "assay": "shallow WGS",
+      "cohort": "BriTROC-1"
+    },
+    "_stream": "ega_britroc1",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  }
+]

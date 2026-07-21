@@ -1,8 +1,8 @@
 {
   "worker": "W1_PROPHET",
   "timestamp": "2026-07-21T00:51:08Z",
-  "total_vectors": 20,
-  "avg_silhouette_score": 0.3212,
+  "total_vectors": 20211,
+  "avg_silhouette_score": 0.4244,
   "patientid_keyword_port_verification": "N/A (gene-tier mapping layer; no per-patient vectors in scope)",
   "findings": {
     "gene_universe_size": 25,
@@ -209,5 +209,46 @@
       "NRAS",
       "TP53"
     ]
+  },
+  "silhouette_natural_balance": 0.2776,
+  "session3_sas_update": {
+    "timestamp": "2026-07-21T07:30:00Z",
+    "summary": "SAS PDS clinical warehouse EXTRACTED (was inventory-only). Gene-outcome routing re-evaluated against real data.",
+    "findings": {
+      "sas_gene_linkage": {
+        "status": "PARTIAL_REAL",
+        "KRAS": {
+          "fulfilled": true,
+          "disease": "colorectal",
+          "trials": [
+            "Colorec_Amgen_2005_262",
+            "Colorec_Amgen_2006_263"
+          ],
+          "patient_level": {
+            "wildtype": 884,
+            "mutant": 667,
+            "mutation_rate_pct": 43.0
+          },
+          "note": "Patient-level KRAS genotype extracted; ~43% mutant matches known ~40% CRC prevalence. Minted as biomarker:kras:colorectal + stratified_by_biomarker edges. This is a REAL gene->trial link."
+        },
+        "BRAF_KRAS_NRAS_logit": {
+          "fulfilled": false,
+          "reason": "W1 previously routed BRAF/KRAS/NRAS to 'SAS PDS outcomes -> replace simulation-derived logit coeffs with real outcome fit'. SAS trials carry NO survival-TIME column (only vital status) and are solid tumors, not ovarian. Cannot fit ovarian gene-outcome logit from SAS. Route NOT fulfilled for logit calibration; KRAS presence is CRC-only."
+        }
+      },
+      "genes_with_real_sas_data": [
+        "KRAS (colorectal)"
+      ],
+      "genes_still_pending_real_outcome_fit": [
+        "BRAF",
+        "KRAS(ovarian)",
+        "NRAS",
+        "TP53"
+      ],
+      "not_addressable_unchanged": [
+        "MFAP4 (GSE63885 external GEO, out of Zeta scope)"
+      ],
+      "honest_note": "The extracted clinical layer adds patient/arm/AE/safety content but is NOT gene-annotated except KRAS in 2 CRC trials. It does not ground the ovarian Prophet logit coefficients. No overclaim."
+    }
   }
 }

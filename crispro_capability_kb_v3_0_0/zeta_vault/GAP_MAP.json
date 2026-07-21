@@ -22,7 +22,10 @@
       "role": "TEST (external replication of SAE-style serial-marker leakage)",
       "how": "PDS trials carry serial safety labs + AE timelines. Can test whether serial-biomarker 'escalation' features generalize out-of-sample vs leak \u2014 the exact failure mode flagged for SAE. Independent cohorts break the leakage.",
       "blocker": "PDS is pan-cancer clinical-trial data, not the exact SAE ovarian cohort; serves as external stress-test, not a like-for-like restore of Tier3.",
-      "closes_gap": "PARTIAL - enables independent leakage stress-test; does NOT restore stripped Tier3 cohort"
+      "closes_gap": "PARTIAL - enables independent leakage stress-test; does NOT restore stripped Tier3 cohort",
+      "status": "PARTIAL->EXTRACTED_NO_OVARIAN",
+      "resolution": "SAS PDS warehouse EXTRACTED (23 trials / 17,264 patients / 118,859 AE records / 58,967 graded-AE edges). Serial-lab (LB/adlb) tables present in 17 trials. However the extracted trials are solid tumors (CRC/breast/lung/etc.) with NO ovarian SAE cohort and NO survival-time column, so this remains an external stress-test surface, NOT a like-for-like restore of the stripped Tier3 ovarian SAE cohort. Real graded-AE safety layer now queryable.",
+      "session": "2026-07-21 (S3)"
     },
     {
       "gap_id": "GAP-23GENE-PROXY",
@@ -65,7 +68,10 @@
       "role": "TRAIN (real serial-marker kinetics to replace simulated betas)",
       "how": "PDS longitudinal marker series enable real KELIM-style kinetic modeling with actual outcomes, replacing the MC-seeded convergence betas. Only if a trial has CA-125-equivalent serial markers + platinum-type outcome.",
       "blocker": "PDS is pan-cancer; need to locate ovarian/serial-CA125 trial. KELIM value path (Lyon API) already works; this targets the SIM convergence betas only.",
-      "closes_gap": "PARTIAL - real serial-marker training feasible if matching trial identified"
+      "closes_gap": "PARTIAL - real serial-marker training feasible if matching trial identified",
+      "status": "PARTIAL->NOT_FULFILLED_BY_SAS",
+      "resolution": "SAS PDS EXTRACTED. NO CA-125 column exists in any of the 23 extracted trials (all solid tumors; zero ovarian trials had loadable tables). 17 trials carry serial-lab machinery (LBTEST/PARAM/AVAL/VISIT) but not the CA-125 analyte. Cannot supply real ovarian serial-CA125 kinetics to replace the simulated KELIM convergence betas. Gap NOT closed by SAS.",
+      "session": "2026-07-21 (S3)"
     },
     {
       "gap_id": "GAP-MSK-ESCAPE-N39",
@@ -79,6 +85,18 @@
       "status": "ADDRESSED",
       "resolution": "MSK SPECTRUM WGS extracted (N=40): cna.tsv+cohort.maf+segments.seg downloaded+MD5-verified; 40 samples + 30 genomic-feature nodes minted (CCNE1 amp 6/40, TP53 49 muts, BRCA1/2/RB1/NF1 CNA). Genomics now IN vault.",
       "session": "2026-07-21"
+    },
+    {
+      "gap_id": "GAP-KRAS-CRC-LINK",
+      "kb_claim": "N/A - new capability discovered during SAS extraction (not a pre-existing KB gap)",
+      "current_tier": "REAL_PATIENT_LEVEL",
+      "zeta_dataset": "SAS PDS colorectal trials Colorec_Amgen_2005_262 + Colorec_Amgen_2006_263",
+      "role": "REAL_GENE_TRIAL_LINK",
+      "how": "Two CRC trials carry patient-level KRAS genotype columns. Extracted distinct-patient counts: combined WT 884 / Mut 667 = ~43% mutant, matching known ~40% CRC KRAS prevalence (external-validity check). Minted biomarker:kras:colorectal (disease_context='colorectal', NOT merged with ovarian MSK gene nodes) + 2 stratified_by_biomarker edges.",
+      "blocker": "CRC-specific; does not generalize to the ovarian Prophet logit (different indication, no survival-time).",
+      "closes_gap": "NEW - real gene->trial stratification link added; does not close ovarian gaps",
+      "session": "2026-07-21 (S3)"
     }
-  ]
+  ],
+  "session3_note": "SAS/CAS Project Data Sphere warehouse extracted (was inventory-only): 23 trials / 17,264 patients / 118,859 AE records propagated to KG(20,211/91,637) + Qdrant(20,211) + Neo4j(20,211). 69 no-loadable-table trials annotated, not fabricated. One real gene link (KRAS-CRC). No forced cross-links to ovarian genomics. Honesty audit S3 = PASS."
 }

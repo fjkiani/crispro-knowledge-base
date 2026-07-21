@@ -29,7 +29,7 @@ patient-facing use**, and MFAP4's unreproducible metric is flagged — not false
 |---|---|---|---|---|---|
 | **EGA BriTROC-1** | EGAD00001011049 | ✅ AUTH OK (slow) | 679 WGS BAMs (HGSOC) | 510.8 GB | ❌ full DL infeasible |
 | **Synapse MSK SPECTRUM** | syn25569736 | ⚠️ TOKEN INVALID (401) | 7 multi-modal datasets | metadata only | ❌ needs valid token |
-| **SAS Project Data Sphere** | mpmprodvdmml | ✅ AUTH OK | 92 CDISC ADaM trials | 4.0 GB | ✅ actionable now |
+| **SAS Project Data Sphere** | [SAS-PDS] | ✅ AUTH OK | 92 CDISC ADaM trials | 4.0 GB | ✅ actionable now |
 
 - **EGA:** 679 unique BAMs = 679 unique MD5s across 2 specimen namespaces (JBLAB 292 + IM 387).
   1 BAM downloaded + **MD5-verified** (EGAF00008095569). **No clinical map in the dataset** —
@@ -187,3 +187,106 @@ RUO contamination 0 flags · MFAP4 tier preserved · no fabrication (EGA specime
 - MFAP4 out of scope (GSE63885 external GEO).
 - Full 510.8 GB EGA BAM download infeasible in-sandbox; htsget still HTTP 500 server-side.
 - Framework not cleared for patient-facing use.
+
+
+---
+
+## SESSION 3 ADDENDUM (2026-07-21): SAS/CAS Project Data Sphere Clinical Extraction
+
+**Trigger:** The SAS/CAS warehouse had been *inventoried* (92 hollow `trial:sas:*` shells,
+`adam_tables=[]`, evidence "table list unavailable") but **never extracted**. Directive:
+extract the warehouse contents into the Zeta KG and propagate to all 3 stores. Parallelized
+across **5 workers** (worker-0..4) per user instruction.
+
+### What was extracted (real data, in-sandbox, 0 GB raw bytes)
+Ran a robust CAS extractor across **94 caslibs**, checkpointing per caslib (resumable).
+Two critical extractor bugs were found and fixed before the authoritative run:
+- **1000-row truncation:** `conn.fetch(table, to=n)` silently caps at 1000 rows. Fixed with
+  `CASTable[varlist].to_frame()` (pulls all rows). This is why corrected counts (17,264 patients /
+  118,859 AE records) far exceed the earlier buggy pass.
+- **Narrow harmonization dict:** widened to evidence-based CDISC/sponsor-specific column maps
+  from an empirical column survey (Pfizer trials use `PID_A`/`PREFTEXT`/`AEGRADE`/`SEXC`, etc.).
+
+**Coverage (honest ceiling):**
+| Stage | Count |
+|---|---|
+| Caslibs inventoried | 94 |
+| Caslibs with loadable tables | 33 |
+| Clinical trials with patient data | 23 |
+| Trial nodes annotated `no_loadable_tables` (not fabricated) | 69 |
+
+61 caslibs returned `no_table_files` (HDFS blob/image/data-file path errors on CAS load — genuinely
+no loadable SAS tables). The 69 clinical-trial nodes with no loadable tables are **annotated with an
+explanatory note — their contents are NOT fabricated**. (92 `Trial` nodes = 23 extracted + 69 no-load;
+5 additional non-clinical SAS-resource caslibs are typed `DataResource`.)
+
+**Extraction aggregate:** 17,264 patients · 118,859 adverse-event records · 2,439 tiered
+AE-term nodes · 36 treatment arms. Cancer types with data: Colorectal (6), Breast (5),
+Lung small-cell (4), + Prostate / Liver / Head&Neck / Melanoma / Lymphoma / Multiple myeloma /
+Pancreatic / Lung non-small-cell (1 each). **No ovarian trial had loadable tables.**
+
+### The one real gene→trial link (defensible, not forced)
+Two colorectal trials (`Colorec_Amgen_2005_262`, `Colorec_Amgen_2006_263`) carry **patient-level
+KRAS genotype** columns. Combined **wild-type 884 / mutant 667 = ~43% mutant**, matching the known
+~40% CRC KRAS prevalence (external-validity check ✓). Minted `biomarker:kras:colorectal`
+(GenomicFeature, `disease_context='colorectal'`, **NOT merged** with the ovarian MSK gene nodes)
++ 2 `stratified_by_biomarker` edges. **No `same_indication`/`measures_gene`/`targets_drug` edges
+were forced** between these solid-tumor trials and the ovarian HGSOC genomics cohorts.
+
+### Tiering decisions (no fabrication)
+- **AE-term nodes tiered:** of 14,635 distinct AE strings (~10,300 are free-text investigator
+  verbatim noise), minted nodes ONLY for terms with **≥2 trials OR ≥10 events → 2,439 nodes**
+  (165 MedDRA-code + 2,274 text-PT). Excluded 12,196 singletons (16,968 events) are **still counted
+  in trial/arm rollups**, not dropped.
+- **Patient nodes:** 97.7% (16,865) carry ≥1 real attribute; 399 bare-ID patients skipped.
+- **AE grade rollup** (canonical, on `experienced_ae` edges): G1 32,901 · G2 14,461 · G3 9,503 ·
+  G4 1,813 · G5 289 (plausible severity pyramid; 289 fatal events).
+- **AE coding kept mixed** (2 trials MedDRA-numeric, 11 text-PT, 10 none). Stored both; **no
+  cross-mapping invented** (needs licensed MedDRA dictionary).
+
+### Data-quality caveats (must-read before use)
+- **Demographics NOT harmonized:** age is literal years in some trials but age-GROUP codes in
+  others (e.g. `age=4` = age-group 4, not 4 years). Race/sex mix text + codes. Stored VERBATIM —
+  **do not compare across trials.**
+- **Survival = status WITHOUT duration:** event/status columns found (SURVSTAT, DTHFL) but **no
+  matching time column → 0 patients have `os_time`.** OS-duration analysis is NOT supported.
+- **Arm codes** are mostly numeric/trial-local; assigned_arm edges (14,770) reconcile exactly with
+  arm-bearing patients (0 missing arm nodes).
+- **CA-125:** absent from every extracted trial (ovarian marker, wrong tumor types). 17 trials do
+  have serial-lab (LB/adlb) tables — the machinery is present, the analyte is not.
+
+### Worker deltas (all 5 re-run)
+- **W1 Prophet:** SAS gene linkage = **PARTIAL_REAL**. KRAS-CRC **fulfilled** (real patient-level,
+  ~43% mut). BRAF/KRAS(ovarian)/NRAS/TP53 logit-outcome fit **NOT fulfilled** (SAS has no
+  survival-time, solid tumors, no gene annotation except KRAS-CRC).
+- **W2 Kill Chain:** `CA125_RISING` = **NOT_FULFILLED** (corrected from an earlier aspirational
+  "WIRED via SAS"). KELIM = still dead code. Added a **new graded-AE safety layer** (118,859
+  records) — orthogonal to the ovarian kill-chain. CCNE1/ctDNA unchanged.
+- **W3 Disk:** **0 GB** raw bytes downloaded (honored the constraint); captured relationships only.
+- **W4 Train-ledger:** real AE frequency top-10 + grade ledger + KRAS-CRC rates now available.
+- **W5 Refinement:** `cleared_for_patient_facing` = **NO** (unchanged); RUO check PASS; patient
+  nodes de-identified (masked subject IDs, no PHI).
+
+### Stores after Session 3
+- KG: **870 → 20,211 entities, 977 → 91,637 edges** (new: TrialPatient 16,865, AdverseEventTerm
+  2,439, TreatmentArm 36, +1 KRAS GenomicFeature; edges enrolled_in 16,865, assigned_arm 14,770,
+  arm_of 36, experienced_ae 58,987, stratified_by_biomarker 2). Neo4j `:ZetaVault` = 20,211 / 91,637,
+  **0 cross-links** to non-Zeta.
+- Qdrant `zeta_vault`: **870 → 20,211 points** (dense+BM25). `crispro_kb_v3` untouched at **1418**.
+  Silhouette: **0.4244 stratified / 0.2776 natural-balance** — an *honest decrease* from 0.594
+  (83% of points are now near-homogeneous patient nodes; expected, not a regression).
+
+### Honesty audit (Session 3): **PASS** (all 4 checks)
+RUO contamination PASS (kb_v3=1418 untouched) · evidence-tier preservation PASS (0 entities missing
+evidence/receipts; genomics 31 GenomicFeature / 719 Biospecimen preserved) · no fabrication PASS
+(69 no-load trials annotated with 0 fabricated content; AE singletons pooled; 0 forced cross-links;
+only 2 KRAS-CRC edges) · collection separation PASS (0 Neo4j cross-links; 691 non-Zeta nodes preserved).
+
+### Still honest / unchanged limitations
+- ctDNA gap remains architectural (MSK tissue-only; SAS has no ctDNA) — not closable by Zeta.
+- MFAP4 out of scope (GSE63885 external GEO).
+- Full 510.8 GB EGA BAM download infeasible in-sandbox; htsget still HTTP 500 server-side.
+- **Framework NOT cleared for patient-facing use.**
+- SAS survival-duration analysis not supported (status without time); demographics non-harmonized.
+
+**Security:** SAS/Synapse/EGA/GitHub credentials were provided in plaintext — **rotate after this session.**

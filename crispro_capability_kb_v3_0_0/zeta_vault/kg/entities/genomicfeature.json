@@ -1,0 +1,1021 @@
+[
+  {
+    "id": "genomicfeature:msk:mut:ARID3A",
+    "type": "GenomicFeature",
+    "name": "ARID3A oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "ARID3A: 1 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Splice_Region"
+    ],
+    "cross_refs": [
+      "ARID3A"
+    ],
+    "attributes": {
+      "gene": "ARID3A",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 1,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Splice_Region"
+      ],
+      "example_hgvsp": [],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:BRAF",
+    "type": "GenomicFeature",
+    "name": "BRAF oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "BRAF: 1 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Missense_Mutation"
+    ],
+    "cross_refs": [
+      "BRAF",
+      "p.G469V"
+    ],
+    "attributes": {
+      "gene": "BRAF",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 1,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Missense_Mutation"
+      ],
+      "example_hgvsp": [
+        "p.G469V"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:BRCA1",
+    "type": "GenomicFeature",
+    "name": "BRCA1 oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "BRCA1: 2 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Frame_Shift_Del"
+    ],
+    "cross_refs": [
+      "BRCA1",
+      "p.R78Lfs*9",
+      "p.R78Sfs*10"
+    ],
+    "attributes": {
+      "gene": "BRCA1",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 2,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Frame_Shift_Del"
+      ],
+      "example_hgvsp": [
+        "p.R78Lfs*9",
+        "p.R78Sfs*10"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:CDK12",
+    "type": "GenomicFeature",
+    "name": "CDK12 oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "CDK12: 2 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Frame_Shift_Del"
+    ],
+    "cross_refs": [
+      "CDK12",
+      "p.R185Gfs*6"
+    ],
+    "attributes": {
+      "gene": "CDK12",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 2,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Frame_Shift_Del"
+      ],
+      "example_hgvsp": [
+        "p.R185Gfs*6"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:EPHA3",
+    "type": "GenomicFeature",
+    "name": "EPHA3 oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "EPHA3: 1 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Splice_Region"
+    ],
+    "cross_refs": [
+      "EPHA3"
+    ],
+    "attributes": {
+      "gene": "EPHA3",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 1,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Splice_Region"
+      ],
+      "example_hgvsp": [],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:FAT1",
+    "type": "GenomicFeature",
+    "name": "FAT1 oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "FAT1: 2 oncogenic/likely-oncogenic somatic mutation(s) in 2 MSK samples",
+      "Variant classes: Frame_Shift_Del, Splice_Region"
+    ],
+    "cross_refs": [
+      "FAT1",
+      "p.I2008Qfs*7"
+    ],
+    "attributes": {
+      "gene": "FAT1",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 2,
+      "n_samples": 2,
+      "variant_classifications": [
+        "Frame_Shift_Del",
+        "Splice_Region"
+      ],
+      "example_hgvsp": [
+        "p.I2008Qfs*7"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 5.0
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:INPP4B",
+    "type": "GenomicFeature",
+    "name": "INPP4B oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "INPP4B: 1 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Nonsense_Mutation"
+    ],
+    "cross_refs": [
+      "INPP4B",
+      "p.Q40*"
+    ],
+    "attributes": {
+      "gene": "INPP4B",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 1,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Nonsense_Mutation"
+      ],
+      "example_hgvsp": [
+        "p.Q40*"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:JARID2",
+    "type": "GenomicFeature",
+    "name": "JARID2 oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "JARID2: 4 oncogenic/likely-oncogenic somatic mutation(s) in 3 MSK samples",
+      "Variant classes: Frame_Shift_Ins, Splice_Region"
+    ],
+    "cross_refs": [
+      "JARID2",
+      "p.F1100Afs*88"
+    ],
+    "attributes": {
+      "gene": "JARID2",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 4,
+      "n_samples": 3,
+      "variant_classifications": [
+        "Frame_Shift_Ins",
+        "Splice_Region"
+      ],
+      "example_hgvsp": [
+        "p.F1100Afs*88"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 7.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:KDM5C",
+    "type": "GenomicFeature",
+    "name": "KDM5C oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "KDM5C: 2 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Splice_Region"
+    ],
+    "cross_refs": [
+      "KDM5C"
+    ],
+    "attributes": {
+      "gene": "KDM5C",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 2,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Splice_Region"
+      ],
+      "example_hgvsp": [],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:KMT2A",
+    "type": "GenomicFeature",
+    "name": "KMT2A oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "KMT2A: 1 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Splice_Region"
+    ],
+    "cross_refs": [
+      "KMT2A"
+    ],
+    "attributes": {
+      "gene": "KMT2A",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 1,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Splice_Region"
+      ],
+      "example_hgvsp": [],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:KMT2C",
+    "type": "GenomicFeature",
+    "name": "KMT2C oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "KMT2C: 1 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Nonsense_Mutation"
+    ],
+    "cross_refs": [
+      "KMT2C",
+      "p.S3627*"
+    ],
+    "attributes": {
+      "gene": "KMT2C",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 1,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Nonsense_Mutation"
+      ],
+      "example_hgvsp": [
+        "p.S3627*"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:KMT2D",
+    "type": "GenomicFeature",
+    "name": "KMT2D oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "KMT2D: 1 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Nonsense_Mutation"
+    ],
+    "cross_refs": [
+      "KMT2D",
+      "p.R4536*"
+    ],
+    "attributes": {
+      "gene": "KMT2D",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 1,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Nonsense_Mutation"
+      ],
+      "example_hgvsp": [
+        "p.R4536*"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:LATS1",
+    "type": "GenomicFeature",
+    "name": "LATS1 oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "LATS1: 2 oncogenic/likely-oncogenic somatic mutation(s) in 2 MSK samples",
+      "Variant classes: Nonsense_Mutation, Splice_Site"
+    ],
+    "cross_refs": [
+      "LATS1",
+      "p.Q632*",
+      "p.X865_splice"
+    ],
+    "attributes": {
+      "gene": "LATS1",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 2,
+      "n_samples": 2,
+      "variant_classifications": [
+        "Nonsense_Mutation",
+        "Splice_Site"
+      ],
+      "example_hgvsp": [
+        "p.Q632*",
+        "p.X865_splice"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 5.0
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:MGA",
+    "type": "GenomicFeature",
+    "name": "MGA oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "MGA: 1 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Nonsense_Mutation"
+    ],
+    "cross_refs": [
+      "MGA",
+      "p.Q604*"
+    ],
+    "attributes": {
+      "gene": "MGA",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 1,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Nonsense_Mutation"
+      ],
+      "example_hgvsp": [
+        "p.Q604*"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:NF1",
+    "type": "GenomicFeature",
+    "name": "NF1 oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "NF1: 1 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Splice_Site"
+    ],
+    "cross_refs": [
+      "NF1",
+      "p.X69_splice"
+    ],
+    "attributes": {
+      "gene": "NF1",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 1,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Splice_Site"
+      ],
+      "example_hgvsp": [
+        "p.X69_splice"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:NOTCH2",
+    "type": "GenomicFeature",
+    "name": "NOTCH2 oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "NOTCH2: 1 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Nonsense_Mutation"
+    ],
+    "cross_refs": [
+      "NOTCH2",
+      "p.S462*"
+    ],
+    "attributes": {
+      "gene": "NOTCH2",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 1,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Nonsense_Mutation"
+      ],
+      "example_hgvsp": [
+        "p.S462*"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:PBRM1",
+    "type": "GenomicFeature",
+    "name": "PBRM1 oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "PBRM1: 1 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Nonsense_Mutation"
+    ],
+    "cross_refs": [
+      "PBRM1",
+      "p.Y738*"
+    ],
+    "attributes": {
+      "gene": "PBRM1",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 1,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Nonsense_Mutation"
+      ],
+      "example_hgvsp": [
+        "p.Y738*"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:PHF6",
+    "type": "GenomicFeature",
+    "name": "PHF6 oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "PHF6: 2 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Frame_Shift_Del"
+    ],
+    "cross_refs": [
+      "PHF6",
+      "p.K299Rfs*52"
+    ],
+    "attributes": {
+      "gene": "PHF6",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 2,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Frame_Shift_Del"
+      ],
+      "example_hgvsp": [
+        "p.K299Rfs*52"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:PIK3CA",
+    "type": "GenomicFeature",
+    "name": "PIK3CA oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "PIK3CA: 1 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Missense_Mutation"
+    ],
+    "cross_refs": [
+      "PIK3CA",
+      "p.E545K"
+    ],
+    "attributes": {
+      "gene": "PIK3CA",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 1,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Missense_Mutation"
+      ],
+      "example_hgvsp": [
+        "p.E545K"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:PIK3R2",
+    "type": "GenomicFeature",
+    "name": "PIK3R2 oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "PIK3R2: 1 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Nonsense_Mutation"
+    ],
+    "cross_refs": [
+      "PIK3R2",
+      "p.E62*"
+    ],
+    "attributes": {
+      "gene": "PIK3R2",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 1,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Nonsense_Mutation"
+      ],
+      "example_hgvsp": [
+        "p.E62*"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:RASA1",
+    "type": "GenomicFeature",
+    "name": "RASA1 oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "RASA1: 2 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Frame_Shift_Del"
+    ],
+    "cross_refs": [
+      "RASA1",
+      "p.E5Rfs*2"
+    ],
+    "attributes": {
+      "gene": "RASA1",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 2,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Frame_Shift_Del"
+      ],
+      "example_hgvsp": [
+        "p.E5Rfs*2"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:RB1",
+    "type": "GenomicFeature",
+    "name": "RB1 oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "RB1: 2 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Frame_Shift_Del"
+    ],
+    "cross_refs": [
+      "RB1",
+      "p.V378Ifs*10"
+    ],
+    "attributes": {
+      "gene": "RB1",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 2,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Frame_Shift_Del"
+      ],
+      "example_hgvsp": [
+        "p.V378Ifs*10"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:SDHA",
+    "type": "GenomicFeature",
+    "name": "SDHA oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "SDHA: 1 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Splice_Region"
+    ],
+    "cross_refs": [
+      "SDHA",
+      "p.R207="
+    ],
+    "attributes": {
+      "gene": "SDHA",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 1,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Splice_Region"
+      ],
+      "example_hgvsp": [
+        "p.R207="
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:SPEN",
+    "type": "GenomicFeature",
+    "name": "SPEN oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "SPEN: 1 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Nonsense_Mutation"
+    ],
+    "cross_refs": [
+      "SPEN",
+      "p.R702*"
+    ],
+    "attributes": {
+      "gene": "SPEN",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 1,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Nonsense_Mutation"
+      ],
+      "example_hgvsp": [
+        "p.R702*"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:TOP1",
+    "type": "GenomicFeature",
+    "name": "TOP1 oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "TOP1: 1 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Splice_Region"
+    ],
+    "cross_refs": [
+      "TOP1"
+    ],
+    "attributes": {
+      "gene": "TOP1",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 1,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Splice_Region"
+      ],
+      "example_hgvsp": [],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:TP53",
+    "type": "GenomicFeature",
+    "name": "TP53 oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "TP53: 48 oncogenic/likely-oncogenic somatic mutation(s) in 38 MSK samples",
+      "Variant classes: Frame_Shift_Del, Frame_Shift_Ins, In_Frame_Del, Missense_Mutation, Nonsense_Mutation, Splice_Site"
+    ],
+    "cross_refs": [
+      "TP53",
+      "p.A159Hfs*21",
+      "p.A159V",
+      "p.A161Pfs*9",
+      "p.A70Cfs*79",
+      "p.C135del"
+    ],
+    "attributes": {
+      "gene": "TP53",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 48,
+      "n_samples": 38,
+      "variant_classifications": [
+        "Frame_Shift_Del",
+        "Frame_Shift_Ins",
+        "In_Frame_Del",
+        "Missense_Mutation",
+        "Nonsense_Mutation",
+        "Splice_Site"
+      ],
+      "example_hgvsp": [
+        "p.A159Hfs*21",
+        "p.A159V",
+        "p.A161Pfs*9",
+        "p.A70Cfs*79",
+        "p.C135del"
+      ],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 95.0
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:mut:WT1",
+    "type": "GenomicFeature",
+    "name": "WT1 oncogenic mutation (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "WT1: 2 oncogenic/likely-oncogenic somatic mutation(s) in 1 MSK samples",
+      "Variant classes: Splice_Region"
+    ],
+    "cross_refs": [
+      "WT1"
+    ],
+    "attributes": {
+      "gene": "WT1",
+      "feature_type": "somatic_mutation",
+      "n_mutations": 2,
+      "n_samples": 1,
+      "variant_classifications": [
+        "Splice_Region"
+      ],
+      "example_hgvsp": [],
+      "oncogenicity": "Oncogenic/Likely Oncogenic (OncoKB)",
+      "recurrence_pct": 2.5
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:cna:CCNE1_amp",
+    "type": "GenomicFeature",
+    "name": "CCNE1 amplification (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "CCNE1 amplification (CN>=1) in 6/40 MSK WGS samples; all high-level (=2)",
+      "CCNE1 amplification is an established driver of platinum/CDK4-6i resistance in HGSOC"
+    ],
+    "cross_refs": [
+      "CCNE1",
+      "SHAH_H000222_T01_07_WG01",
+      "SHAH_H000020_T07_02_WG01",
+      "SHAH_H000034_T07_01_WG01",
+      "SHAH_H000038_T14_01_WG01",
+      "SHAH_H000705_T02_03_WG01",
+      "SHAH_H000708_T06_01_WG01"
+    ],
+    "attributes": {
+      "gene": "CCNE1",
+      "feature_type": "copy_number_amplification",
+      "n_samples": 6,
+      "amp_pct": 15.0,
+      "all_high_level": true,
+      "wires_worker_signal": "W2 Kill Chain TF2-SLOP-004 (CCNE1 CNA gap)"
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:cna:BRCA1_loss",
+    "type": "GenomicFeature",
+    "name": "BRCA1 copy-number loss (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "BRCA1 copy-number loss (CN<=-1) in 38/40 MSK WGS samples"
+    ],
+    "cross_refs": [
+      "BRCA1"
+    ],
+    "attributes": {
+      "gene": "BRCA1",
+      "feature_type": "copy_number_loss",
+      "n_samples": 38,
+      "loss_pct": 95.0,
+      "context": "HRD/DDR"
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "genomicfeature:msk:cna:BRCA2_loss",
+    "type": "GenomicFeature",
+    "name": "BRCA2 copy-number loss (MSK)",
+    "source_receipts": [
+      "synapse:syn25569736 (MSK SPECTRUM); files syn39607857/58/60 downloaded+MD5-verified 2026-07-21"
+    ],
+    "verbatim_evidence": [
+      "BRCA2 copy-number loss (CN<=-1) in 23/40 MSK WGS samples"
+    ],
+    "cross_refs": [
+      "BRCA2"
+    ],
+    "attributes": {
+      "gene": "BRCA2",
+      "feature_type": "copy_number_loss",
+      "n_samples": 23,
+      "loss_pct": 57.5,
+      "context": "HRD/DDR"
+    },
+    "_stream": "synapse_msk_spectrum",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T02:15:00Z"
+  },
+  {
+    "id": "biomarker:kras:colorectal",
+    "type": "GenomicFeature",
+    "name": "KRAS mutation status (colorectal, PDS trials)",
+    "source_receipts": [
+      {
+        "source": "SAS CAS ADaM KRAS genotype column",
+        "trials": [
+          "Colorec_Amgen_2005_262",
+          "Colorec_Amgen_2006_263"
+        ]
+      }
+    ],
+    "verbatim_evidence": [
+      "KRAS mutation status extracted from 2 colorectal trials: 884 wild-type, 667 mutant (43.0% mutant, consistent with ~40% CRC KRAS prevalence)"
+    ],
+    "cross_refs": {
+      "gene_symbol": "KRAS"
+    },
+    "attributes": {
+      "gene": "KRAS",
+      "disease_context": "colorectal",
+      "source_vault": "PDS_ProjectDataSphere",
+      "total_wildtype": 884,
+      "total_mutant": 667,
+      "mutation_rate_pct": 43.0,
+      "per_trial": {
+        "Colorec_Amgen_2005_262": {
+          "Wild-type": 410,
+          "Mutant": 286,
+          "Failed": 83,
+          "Unknown": 63
+        },
+        "Colorec_Amgen_2006_263": {
+          "Wild-type": 474,
+          "Mutant": 381,
+          "Failed": 30,
+          "Unknown": 61
+        }
+      },
+      "note": "Patient-level KRAS genotype; disease-scoped to colorectal (NOT linked to ovarian MSK gene nodes - different biology)."
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T05:00:00Z"
+  }
+]

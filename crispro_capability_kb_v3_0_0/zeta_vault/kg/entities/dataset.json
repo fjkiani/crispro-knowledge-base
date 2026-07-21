@@ -1,0 +1,212 @@
+[
+  {
+    "id": "dataset:synapse:syn33521770",
+    "type": "Dataset",
+    "name": "Bulk WGS (MSK SPECTRUM)",
+    "source_receipts": [
+      {
+        "source": "Synapse metadata",
+        "syn_id": "syn33521770",
+        "project": "syn25569736"
+      }
+    ],
+    "verbatim_evidence": [
+      "Bulk WGS (MSK SPECTRUM): WGS: cna.tsv, cohort.maf, segments.seg",
+      "Access: metadata public, bytes blocked (token invalid)"
+    ],
+    "cross_refs": {
+      "synapse_id": "syn33521770",
+      "project": "syn25569736"
+    },
+    "attributes": {
+      "source_vault": "Synapse",
+      "dataset_name": "Bulk WGS (MSK SPECTRUM)",
+      "content": "WGS: cna.tsv, cohort.maf, segments.seg",
+      "biological_relevance": "CCNE1 CNA, escape-pair genomics",
+      "download_status": "BLOCKED_needs_valid_token"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "dataset:synapse:syn33521771",
+    "type": "Dataset",
+    "name": "MSK-IMPACT (MSK SPECTRUM)",
+    "source_receipts": [
+      {
+        "source": "Synapse metadata",
+        "syn_id": "syn33521771",
+        "project": "syn25569736"
+      }
+    ],
+    "verbatim_evidence": [
+      "MSK-IMPACT (MSK SPECTRUM): targeted panel sequencing",
+      "Access: metadata public, bytes blocked (token invalid)"
+    ],
+    "cross_refs": {
+      "synapse_id": "syn33521771",
+      "project": "syn25569736"
+    },
+    "attributes": {
+      "source_vault": "Synapse",
+      "dataset_name": "MSK-IMPACT (MSK SPECTRUM)",
+      "content": "targeted panel sequencing",
+      "biological_relevance": "actionable mutations",
+      "download_status": "BLOCKED_needs_valid_token"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "dataset:synapse:syn33521743",
+    "type": "Dataset",
+    "name": "scRNA (MSK SPECTRUM)",
+    "source_receipts": [
+      {
+        "source": "Synapse metadata",
+        "syn_id": "syn33521743",
+        "project": "syn25569736"
+      }
+    ],
+    "verbatim_evidence": [
+      "scRNA (MSK SPECTRUM): single-cell RNA-seq (5 items)",
+      "Access: metadata public, bytes blocked (token invalid)"
+    ],
+    "cross_refs": {
+      "synapse_id": "syn33521743",
+      "project": "syn25569736"
+    },
+    "attributes": {
+      "source_vault": "Synapse",
+      "dataset_name": "scRNA (MSK SPECTRUM)",
+      "content": "single-cell RNA-seq (5 items)",
+      "biological_relevance": "tumor microenvironment states",
+      "download_status": "BLOCKED_needs_valid_token"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "dataset:synapse:syn33521762",
+    "type": "Dataset",
+    "name": "H&E (MSK SPECTRUM)",
+    "source_receipts": [
+      {
+        "source": "Synapse metadata",
+        "syn_id": "syn33521762",
+        "project": "syn25569736"
+      }
+    ],
+    "verbatim_evidence": [
+      "H&E (MSK SPECTRUM): H&E whole-slide images",
+      "Access: metadata public, bytes blocked (token invalid)"
+    ],
+    "cross_refs": {
+      "synapse_id": "syn33521762",
+      "project": "syn25569736"
+    },
+    "attributes": {
+      "source_vault": "Synapse",
+      "dataset_name": "H&E (MSK SPECTRUM)",
+      "content": "H&E whole-slide images",
+      "biological_relevance": "histopathology",
+      "download_status": "BLOCKED_needs_valid_token"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "dataset:synapse:syn33520881",
+    "type": "Dataset",
+    "name": "mpIF (MSK SPECTRUM)",
+    "source_receipts": [
+      {
+        "source": "Synapse metadata",
+        "syn_id": "syn33520881",
+        "project": "syn25569736"
+      }
+    ],
+    "verbatim_evidence": [
+      "mpIF (MSK SPECTRUM): multiplex immunofluorescence",
+      "Access: metadata public, bytes blocked (token invalid)"
+    ],
+    "cross_refs": {
+      "synapse_id": "syn33520881",
+      "project": "syn25569736"
+    },
+    "attributes": {
+      "source_vault": "Synapse",
+      "dataset_name": "mpIF (MSK SPECTRUM)",
+      "content": "multiplex immunofluorescence",
+      "biological_relevance": "spatial immune phenotyping",
+      "download_status": "BLOCKED_needs_valid_token"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "dataset:synapse:syn66309959",
+    "type": "Dataset",
+    "name": "McPherson Nature 2025",
+    "source_receipts": [
+      {
+        "source": "Synapse metadata",
+        "syn_id": "syn66309959",
+        "project": "syn25569736"
+      }
+    ],
+    "verbatim_evidence": [
+      "McPherson Nature 2025: published multi-modal release",
+      "Access: metadata public, bytes blocked (token invalid)"
+    ],
+    "cross_refs": {
+      "synapse_id": "syn66309959",
+      "project": "syn25569736"
+    },
+    "attributes": {
+      "source_vault": "Synapse",
+      "dataset_name": "McPherson Nature 2025",
+      "content": "published multi-modal release",
+      "biological_relevance": "HGSOC evolution",
+      "download_status": "BLOCKED_needs_valid_token"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  },
+  {
+    "id": "dataset:synapse:syn52458607",
+    "type": "Dataset",
+    "name": "Vazquez-Garcia/Uhlitz Nature 2022",
+    "source_receipts": [
+      {
+        "source": "Synapse metadata",
+        "syn_id": "syn52458607",
+        "project": "syn25569736"
+      }
+    ],
+    "verbatim_evidence": [
+      "Vazquez-Garcia/Uhlitz Nature 2022: published multi-modal release",
+      "Access: metadata public, bytes blocked (token invalid)"
+    ],
+    "cross_refs": {
+      "synapse_id": "syn52458607",
+      "project": "syn25569736"
+    },
+    "attributes": {
+      "source_vault": "Synapse",
+      "dataset_name": "Vazquez-Garcia/Uhlitz Nature 2022",
+      "content": "published multi-modal release",
+      "biological_relevance": "HGSOC multi-region",
+      "download_status": "BLOCKED_needs_valid_token"
+    },
+    "_stream": "zeta_ingest",
+    "_mint_planner": "zeta_custodian",
+    "_mint_timestamp": "2026-07-21T00:42:06Z"
+  }
+]
